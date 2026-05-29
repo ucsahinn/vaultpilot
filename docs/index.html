@@ -9,51 +9,149 @@
     <link rel="stylesheet" href="../assets/styles.css">
   </head>
   <body>
-    <div class="page-shell">
-      <nav class="floating-nav" aria-label="Primary navigation">
-        <a class="brand" href="../index.html"><img src="../assets/favicon.svg" alt=""><span>PassMan Docs</span></a>
-        <div class="nav-links">
-          <a href="../index.html">Product</a>
-          <a href="#turkish">TR</a>
-          <a href="#english">EN</a>
+    <div class="site-shell">
+      <header class="repo-topbar">
+        <a class="repo-brand" href="../index.html" aria-label="PassMan home">
+          <img src="../assets/favicon.svg" alt="">
+          <span>
+            <strong>PassMan Docs</strong>
+            <small>Operator documentation</small>
+          </span>
+        </a>
+        <nav class="repo-nav" aria-label="Primary navigation">
+          <a href="../index.html">Hub</a>
           <a href="../kb/index.html">KB</a>
           <a href="../RELEASES.md">Releases</a>
-        </div>
-      </nav>
-      <header class="section" data-reveal>
-        <span class="eyebrow">Documentation Hub</span>
-        <h1>Install, operate and troubleshoot PassMan.</h1>
-        <p class="lead">Choose Turkish or English guides. Every page is public-safe and avoids real tokens, customer data, secrets, private keys and database files.</p>
+          <a href="../SECURITY.md">Security</a>
+        </nav>
+        <button class="menu-button" type="button" aria-label="Toggle navigation" aria-expanded="false" data-menu-toggle>
+          <span></span>
+          <span></span>
+        </button>
       </header>
-      <main>
-        <section id="turkish" class="section">
-          <div class="section-head" data-reveal>
-            <div><span class="eyebrow">TR</span><h2>Türkçe rehberler</h2></div>
+
+      <div class="mobile-drawer" hidden data-mobile-menu>
+        <a href="../index.html">Hub</a>
+        <a href="../kb/index.html">Knowledge Base</a>
+        <a href="../RELEASES.md">Release Notes</a>
+        <a href="../SECURITY.md">Security</a>
+      </div>
+
+      <main class="repo-layout">
+        <aside class="repo-sidebar">
+          <div class="repo-card compact">
+            <div class="repo-avatar" aria-hidden="true">D</div>
+            <div>
+              <p class="eyebrow">Docs index</p>
+              <h1>Public guides</h1>
+            </div>
           </div>
-          <div class="doc-grid">
-            <a class="doc-card" href="tr/overview.md"><span class="tag">Başlangıç</span><h3>Genel bakış</h3><p>Ürün, bileşenler ve ilk okunacak rehberler.</p></a>
-            <a class="doc-card" href="tr/install-windows-server.md"><span class="tag">Kurulum</span><h3>Windows Server</h3><p>MSI, servis, port, log ve doğrulama adımları.</p></a>
-            <a class="doc-card" href="tr/update-center.md"><span class="tag">Operasyon</span><h3>Güncelleme Merkezi</h3><p>Manifest, SHA-256, signer pin ve MSI update modeli.</p></a>
-            <a class="doc-card" href="tr/active-directory-agent.md"><span class="tag">Entegrasyon</span><h3>AD Agent</h3><p>Servis kurulumu, status, tail-log, repair ve sync ağacı.</p></a>
-            <a class="doc-card" href="tr/sharing-and-offline-decrypter.md"><span class="tag">Paylaşım</span><h3>Offline Decrypter</h3><p>Expiry, kullanım limiti, dosya kaydı ve local-only açma.</p></a>
-            <a class="doc-card" href="tr/troubleshooting.md"><span class="tag">Destek</span><h3>Sorun giderme</h3><p>MSI, servis, extension, agent ve update durumları.</p></a>
-          </div>
-        </section>
-        <section id="english" class="section">
-          <div class="section-head" data-reveal>
-            <div><span class="eyebrow">EN</span><h2>English guides</h2></div>
-          </div>
-          <div class="doc-grid">
-            <a class="doc-card" href="en/overview.md"><span class="tag">Start</span><h3>Overview</h3><p>Product, components and first reading path.</p></a>
-            <a class="doc-card" href="en/install-windows-server.md"><span class="tag">Install</span><h3>Windows Server</h3><p>MSI, service, port, logs and verification steps.</p></a>
-            <a class="doc-card" href="en/update-center.md"><span class="tag">Operate</span><h3>Update Center</h3><p>Manifest, SHA-256, signer pin and MSI update model.</p></a>
-            <a class="doc-card" href="en/active-directory-agent.md"><span class="tag">Integrate</span><h3>AD Agent</h3><p>Service install, status, tail-log, repair and sync tree.</p></a>
-            <a class="doc-card" href="en/sharing-and-offline-decrypter.md"><span class="tag">Share</span><h3>Offline Decrypter</h3><p>Expiry, usage limits, file records and local-only opening.</p></a>
-            <a class="doc-card" href="en/troubleshooting.md"><span class="tag">Support</span><h3>Troubleshooting</h3><p>MSI, service, extension, agent and update states.</p></a>
-          </div>
+          <nav class="side-nav" aria-label="Documentation sections">
+            <a href="#start">Start</a>
+            <a href="#english">English</a>
+            <a href="#turkish">Turkish</a>
+            <a href="#operations">Operations</a>
+          </nav>
+        </aside>
+
+        <section class="repo-main">
+          <section id="start" class="readme-panel">
+            <div class="readme-header">
+              <div>
+                <p class="eyebrow">Documentation</p>
+                <h2>Install, operate and troubleshoot PassMan</h2>
+              </div>
+              <a class="button secondary" href="../README.md">Repository README</a>
+            </div>
+            <p class="lead">
+              Use these public-safe guides for Windows Server installation, first run, license activation,
+              HTTPS, updates, browser extension rollout, Active Directory sync, backup and recovery.
+            </p>
+            <div class="badge-row">
+              <span class="badge">Public-safe examples</span>
+              <span class="badge">TR + EN parity</span>
+              <span class="badge">No real tokens</span>
+              <span class="badge">Operator-focused</span>
+            </div>
+          </section>
+
+          <section id="english" class="repo-card">
+            <div class="section-title">
+              <div>
+                <p class="eyebrow">EN</p>
+                <h2>English guides</h2>
+              </div>
+              <a class="inline-link" href="en/overview.md">Start with overview</a>
+            </div>
+            <div class="link-grid">
+              <a href="en/overview.md"><strong>Overview</strong><span>Product map, runtime model and first reading path.</span></a>
+              <a href="en/install-windows-server.md"><strong>Windows Server installation</strong><span>MSI install, service, port and validation checklist.</span></a>
+              <a href="en/first-run-owner-license.md"><strong>First run, owner and license</strong><span>Initial profile, owner role and offline license flow.</span></a>
+              <a href="en/public-host-https-certificate.md"><strong>Public host and HTTPS</strong><span>Host binding, certificate files and browser trust.</span></a>
+              <a href="en/update-center.md"><strong>Update Center</strong><span>Signed manifest verification and update surfaces.</span></a>
+              <a href="en/browser-extension.md"><strong>Browser extension</strong><span>Pairing, badge counts, autofill and managed deployment.</span></a>
+              <a href="en/active-directory-agent.md"><strong>Active Directory agent</strong><span>PassMan DC Agent Service setup and sync tree.</span></a>
+              <a href="en/sharing-and-offline-decrypter.md"><strong>Sharing and offline decrypter</strong><span>Selected records, files, expiry and usage limits.</span></a>
+              <a href="en/backups-and-restore.md"><strong>Backups and restore</strong><span>Encrypted export, integrity and restore checks.</span></a>
+              <a href="en/audit-and-security-posture.md"><strong>Audit and security posture</strong><span>Audit chain, risks and posture actions.</span></a>
+              <a href="en/troubleshooting.md"><strong>Troubleshooting</strong><span>Common installation, update and runtime states.</span></a>
+              <a href="en/faq.md"><strong>FAQ</strong><span>Short answers for operators and admins.</span></a>
+            </div>
+          </section>
+
+          <section id="turkish" class="repo-card">
+            <div class="section-title">
+              <div>
+                <p class="eyebrow">TR</p>
+                <h2>Turkish guides</h2>
+              </div>
+              <a class="inline-link" href="tr/overview.md">Genel bakis</a>
+            </div>
+            <div class="link-grid">
+              <a href="tr/overview.md"><strong>Genel bakis</strong><span>Urun haritasi, calisma modeli ve ilk okuma yolu.</span></a>
+              <a href="tr/install-windows-server.md"><strong>Windows Server kurulumu</strong><span>MSI, servis, port ve dogrulama adimlari.</span></a>
+              <a href="tr/first-run-owner-license.md"><strong>Ilk acilis, sahip ve lisans</strong><span>Ilk profil, sahip rolu ve offline lisans akisi.</span></a>
+              <a href="tr/public-host-https-certificate.md"><strong>Public host ve HTTPS</strong><span>Host baglama, sertifika dosyalari ve tarayici guveni.</span></a>
+              <a href="tr/update-center.md"><strong>Guncelleme Merkezi</strong><span>Imzali manifest ve guncelleme yuzeyleri.</span></a>
+              <a href="tr/browser-extension.md"><strong>Tarayici eklentisi</strong><span>Esleme, site rozeti, otomatik doldurma ve yonetilen kurulum.</span></a>
+              <a href="tr/active-directory-agent.md"><strong>Active Directory ajani</strong><span>PassMan DC Agent Service kurulumu ve sync agaci.</span></a>
+              <a href="tr/sharing-and-offline-decrypter.md"><strong>Paylasim ve offline decrypter</strong><span>Secili kayitlar, dosyalar, sure ve kullanim limitleri.</span></a>
+              <a href="tr/backups-and-restore.md"><strong>Yedekleme ve geri yukleme</strong><span>Sifreli export, butunluk ve restore kontrolleri.</span></a>
+              <a href="tr/audit-and-security-posture.md"><strong>Denetim ve guvenlik durusu</strong><span>Denetim zinciri, riskler ve aksiyonlar.</span></a>
+              <a href="tr/troubleshooting.md"><strong>Sorun giderme</strong><span>Kurulum, update ve runtime durumlari.</span></a>
+              <a href="tr/faq.md"><strong>SSS</strong><span>Operator ve yoneticiler icin kisa cevaplar.</span></a>
+            </div>
+          </section>
+
+          <section id="operations" class="grid two">
+            <article class="repo-card">
+              <p class="eyebrow">Common flow</p>
+              <h2>Recommended reading order</h2>
+              <ol class="ordered-list">
+                <li>Install Windows Server runtime.</li>
+                <li>Create owner profile and apply license.</li>
+                <li>Configure HTTPS before wider access.</li>
+                <li>Pair extension and configure AD sync if needed.</li>
+                <li>Review backup, audit and update procedures.</li>
+              </ol>
+            </article>
+            <article class="repo-card">
+              <p class="eyebrow">Troubleshooting</p>
+              <h2>Use KB for incidents</h2>
+              <p>
+                The knowledge base is optimized for fast operator triage. It separates user-facing symptoms from
+                sensitive data and gives redaction-safe evidence to collect.
+              </p>
+              <a class="button secondary" href="../kb/index.html">Open KB</a>
+            </article>
+          </section>
         </section>
       </main>
-      <footer class="footer"><p>PassMan public documentation hub.</p></footer>
+
+      <footer class="repo-footer">
+        <span>PassMan documentation hub</span>
+        <span>Public-safe guides for licensed operators</span>
+      </footer>
     </div>
     <script src="../assets/site.js"></script>
   </body>

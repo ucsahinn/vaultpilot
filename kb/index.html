@@ -9,36 +9,168 @@
     <link rel="stylesheet" href="../assets/styles.css">
   </head>
   <body>
-    <div class="page-shell">
-      <nav class="floating-nav" aria-label="Primary navigation">
-        <a class="brand" href="../index.html"><img src="../assets/favicon.svg" alt=""><span>PassMan KB</span></a>
-        <div class="nav-links">
-          <a href="../index.html">Product</a>
+    <div class="site-shell">
+      <header class="repo-topbar">
+        <a class="repo-brand" href="../index.html" aria-label="PassMan home">
+          <img src="../assets/favicon.svg" alt="">
+          <span>
+            <strong>PassMan KB</strong>
+            <small>Operational support</small>
+          </span>
+        </a>
+        <nav class="repo-nav" aria-label="Primary navigation">
+          <a href="../index.html">Hub</a>
           <a href="../docs/index.html">Docs</a>
           <a href="../RELEASES.md">Releases</a>
           <a href="../SUPPORT.md">Support</a>
-        </div>
-      </nav>
-      <header class="section" data-reveal>
-        <span class="eyebrow">Knowledge Base</span>
-        <h1>Fast operator answers, without leaking secrets.</h1>
-        <p class="lead">Use these public-safe entries to diagnose common installation, update, AD sync, extension, certificate, audit and license states.</p>
+        </nav>
+        <button class="menu-button" type="button" aria-label="Toggle navigation" aria-expanded="false" data-menu-toggle>
+          <span></span>
+          <span></span>
+        </button>
       </header>
-      <main class="section">
-        <div class="kb-grid">
-          <a class="kb-card" href="en/msi-installation-fails.md"><span class="tag">MSI</span><h3>Installation fails</h3><p>Check admin context, port ownership, service state and installer logs.</p></a>
-          <a class="kb-card" href="en/update-stuck-76.md"><span class="tag">Update</span><h3>Update stays around 76%</h3><p>Understand service restart reconciliation and verbose MSI log review.</p></a>
-          <a class="kb-card" href="en/dc-agent-service.md"><span class="tag">AD Agent</span><h3>Service cannot connect</h3><p>Verify URL reachability, bind username format, redacted logs and repair mode.</p></a>
-          <a class="kb-card" href="en/extension-pairing.md"><span class="tag">Extension</span><h3>Pairing remains pending</h3><p>Review pair code lifetime, username, unlocked vault state and device approval.</p></a>
-          <a class="kb-card" href="en/certificate-warning.md"><span class="tag">HTTPS</span><h3>Certificate warning</h3><p>Check host/SAN match, PFX/P12 path, server ACL and firewall route.</p></a>
-          <a class="kb-card" href="en/audit-chain-partial.md"><span class="tag">Audit</span><h3>Audit chain is partial</h3><p>Inspect related events with advanced filters and treat unexplained breaks as incidents.</p></a>
-          <a class="kb-card" href="en/license-read-only.md"><span class="tag">License</span><h3>Read-only state</h3><p>Review trial expiry, license signature, active user count and activation status.</p></a>
-          <a class="kb-card" href="en/external-share-fails.md"><span class="tag">Share</span><h3>External package fails</h3><p>Separate wrong passphrase, expired package, exhausted usage and tampered metadata.</p></a>
-          <a class="kb-card" href="../SECURITY.md"><span class="tag">Safety</span><h3>What can I send to support?</h3><p>Use redacted logs and metadata only; never send secrets, tokens, DB files or private keys.</p></a>
-          <a class="kb-card" href="tr/msi-installation-fails.md"><span class="tag">TR</span><h3>Türkçe KB</h3><p>MSI, update, DC Agent, extension, sertifika, audit, lisans ve paylaşım sorunları.</p></a>
-        </div>
+
+      <div class="mobile-drawer" hidden data-mobile-menu>
+        <a href="../index.html">Hub</a>
+        <a href="../docs/index.html">Docs</a>
+        <a href="../RELEASES.md">Release Notes</a>
+        <a href="../SUPPORT.md">Support</a>
+      </div>
+
+      <main class="repo-layout">
+        <aside class="repo-sidebar">
+          <div class="repo-card compact">
+            <div class="repo-avatar" aria-hidden="true">KB</div>
+            <div>
+              <p class="eyebrow">Knowledge base</p>
+              <h1>Operator triage</h1>
+            </div>
+          </div>
+          <nav class="side-nav" aria-label="Knowledge base sections">
+            <a href="#critical">Critical paths</a>
+            <a href="#install">Install and update</a>
+            <a href="#integrations">Integrations</a>
+            <a href="#safety">Support safety</a>
+          </nav>
+        </aside>
+
+        <section class="repo-main">
+          <section id="critical" class="readme-panel">
+            <div class="readme-header">
+              <div>
+                <p class="eyebrow">Public KB</p>
+                <h2>Fast answers without leaking secrets</h2>
+              </div>
+              <a class="button secondary" href="../SUPPORT.md">Support policy</a>
+            </div>
+            <p class="lead">
+              These entries are written for operators diagnosing PassMan installs, updates, browser extension pairing,
+              Active Directory sync, certificates, audit state and external shares. Use placeholders in every shared command.
+            </p>
+            <div class="badge-row">
+              <span class="badge">Redaction-first</span>
+              <span class="badge">Version aware</span>
+              <span class="badge">TR + EN entries</span>
+              <span class="badge">No secret uploads</span>
+            </div>
+          </section>
+
+          <section id="install" class="repo-card">
+            <div class="section-title">
+              <div>
+                <p class="eyebrow">Install and update</p>
+                <h2>Server runtime issues</h2>
+              </div>
+              <a class="inline-link" href="../docs/en/troubleshooting.md">Troubleshooting guide</a>
+            </div>
+            <div class="issue-list">
+              <a href="en/msi-installation-fails.md">
+                <span class="label danger">MSI</span>
+                <strong>Installation fails</strong>
+                <small>Admin context, port ownership, service state and installer logs.</small>
+              </a>
+              <a href="en/update-stuck-76.md">
+                <span class="label warning">Update</span>
+                <strong>Update stays around 76%</strong>
+                <small>Quiet MSI launch, restart reconciliation and verbose log review.</small>
+              </a>
+              <a href="en/certificate-warning.md">
+                <span class="label info">HTTPS</span>
+                <strong>Certificate warning</strong>
+                <small>Host/SAN match, PFX/P12 path, ACL and firewall route.</small>
+              </a>
+              <a href="en/license-read-only.md">
+                <span class="label warning">License</span>
+                <strong>Read-only state</strong>
+                <small>Trial expiry, signature, user capacity and activation state.</small>
+              </a>
+            </div>
+          </section>
+
+          <section id="integrations" class="repo-card">
+            <div class="section-title">
+              <div>
+                <p class="eyebrow">Integrations</p>
+                <h2>Extension, AD and sharing paths</h2>
+              </div>
+              <a class="inline-link" href="../docs/en/browser-extension.md">Extension docs</a>
+            </div>
+            <div class="issue-list">
+              <a href="en/extension-pairing.md">
+                <span class="label info">Extension</span>
+                <strong>Pairing remains pending</strong>
+                <small>Pair code lifetime, username, unlocked vault and device approval.</small>
+              </a>
+              <a href="en/dc-agent-service.md">
+                <span class="label info">AD Agent</span>
+                <strong>Service cannot connect</strong>
+                <small>URL reachability, bind username format, repair mode and redacted logs.</small>
+              </a>
+              <a href="en/audit-chain-partial.md">
+                <span class="label warning">Audit</span>
+                <strong>Audit chain is partial</strong>
+                <small>Related events, advanced filters and incident handling.</small>
+              </a>
+              <a href="en/external-share-fails.md">
+                <span class="label danger">Share</span>
+                <strong>External package fails</strong>
+                <small>Wrong passphrase, expired package, exhausted usage or tampering.</small>
+              </a>
+            </div>
+          </section>
+
+          <section id="safety" class="grid two">
+            <article class="repo-card">
+              <p class="eyebrow">TR KB</p>
+              <h2>Turkish entries</h2>
+              <div class="compact-links">
+                <a href="tr/msi-installation-fails.md">MSI kurulumu basarisiz</a>
+                <a href="tr/update-stuck-76.md">Guncelleme 76 civarinda kaliyor</a>
+                <a href="tr/dc-agent-service.md">DC Agent servisi baglanamiyor</a>
+                <a href="tr/extension-pairing.md">Eklenti esleme bekliyor</a>
+                <a href="tr/audit-chain-partial.md">Denetim zinciri kismi</a>
+                <a href="tr/external-share-fails.md">Dis paylasim paketi acilmiyor</a>
+              </div>
+            </article>
+            <article class="repo-card">
+              <p class="eyebrow">Support safety</p>
+              <h2>Never send sensitive artifacts</h2>
+              <ul class="check-list">
+                <li>No master passwords, secret values or passphrases.</li>
+                <li>No AD bind passwords, agent tokens or license private keys.</li>
+                <li>No databases, backups, PFX/P12 files or private keys.</li>
+                <li>No screenshots that reveal secret records.</li>
+              </ul>
+              <a class="button secondary" href="../SECURITY.md">Read security policy</a>
+            </article>
+          </section>
+        </section>
       </main>
-      <footer class="footer"><p>PassMan public knowledge base.</p></footer>
+
+      <footer class="repo-footer">
+        <span>PassMan knowledge base</span>
+        <span>Redaction-first operational support</span>
+      </footer>
     </div>
     <script src="../assets/site.js"></script>
   </body>
