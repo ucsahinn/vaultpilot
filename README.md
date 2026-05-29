@@ -10,6 +10,8 @@ This public repository contains product documentation, knowledge-base articles, 
 - Documentation hub: https://ucsahinn.github.io/passman-releases/docs/
 - Knowledge base: https://ucsahinn.github.io/passman-releases/kb/
 
+GitHub Pages is deployed from `.github/workflows/pages.yml`. The workflow can enable Pages automatically when the repository provides a `PASSMAN_PAGES_ADMIN_TOKEN` secret with Pages administration rights; otherwise Pages must be enabled once in repository settings with the source set to GitHub Actions.
+
 ## Current Stable Release
 
 **PassMan 1.5.3**
