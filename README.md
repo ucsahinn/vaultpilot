@@ -30,7 +30,7 @@
 </p>
 
 <p align="center">
-  <code>Stable 1.6.2</code>
+  <code>Stable 1.7.0</code>
   &nbsp;
   <code>Windows MSI</code>
   &nbsp;
@@ -135,7 +135,7 @@ This repository does not contain private source code, internal signing material,
 
 | Type | Asset | Purpose | Delivery |
 | --- | --- | --- | --- |
-| ![Windows icon](assets/icons/windows.svg) | [PassMan-1.6.2-x64.msi](https://github.com/ucsahinn/passman/releases/latest/download/PassMan-1.6.2-x64.msi) | Installs or upgrades PassMan Server on Windows. | GitHub Release |
+| ![Windows icon](assets/icons/windows.svg) | [PassMan-1.7.0-x64.msi](https://github.com/ucsahinn/passman/releases/latest/download/PassMan-1.7.0-x64.msi) | Installs or upgrades PassMan Server on Windows. | GitHub Release |
 | ![Update icon](assets/icons/update.svg) | [passman-update.json](https://github.com/ucsahinn/passman/releases/latest/download/passman-update.json) | Signed update manifest verified by PassMan. | GitHub Release |
 | ![Extension icon](assets/icons/extension.svg) | [passman-chromium-extension.zip](https://github.com/ucsahinn/passman/releases/latest/download/passman-chromium-extension.zip) | Browser extension fallback package. | GitHub Release |
 | ![Share icon](assets/icons/share.svg) | [passman-share-decrypter.zip](https://github.com/ucsahinn/passman/releases/latest/download/passman-share-decrypter.zip) | Offline external-share opening tool. | GitHub Release |
@@ -147,7 +147,7 @@ PassMan-managed updates verify the signed manifest, release asset metadata, SHA-
 
 | Component | Version | Update path |
 | --- | ---: | --- |
-| PassMan Enterprise Vault Console | 1.6.2 | Windows MSI / Update Center |
+| PassMan Enterprise Vault Console | 1.7.0 | Windows MSI / Update Center |
 | Chromium Browser Extension | 1.3.1 | Managed rollout or ZIP fallback |
 | Offline Share Decrypter | 1.2.0 | Bundled support component and release ZIP |
 | PassMan DC Agent Service | 1.1.0 | Bundled support component and release script |

@@ -32,7 +32,7 @@ PassMan şunları doğrular:
 
 Güncel public release şunları içerir:
 
-- `PassMan-1.6.2-x64.msi`
+- `PassMan-1.7.0-x64.msi`
 - `passman-update.json`
 - `passman-chromium-extension.zip`
 - `passman-share-decrypter.zip`

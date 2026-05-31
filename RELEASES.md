@@ -1,8 +1,31 @@
 # PassMan Release Notes
 
-Latest public release: **PassMan Enterprise Vault Console 1.6.2**
+Latest public release: **PassMan Enterprise Vault Console 1.7.0**
 
-Release page: https://github.com/ucsahinn/passman/releases/tag/v1.6.2
+Release page: https://github.com/ucsahinn/passman/releases/tag/v1.7.0
+
+## PassMan 1.7.0
+
+### Console 1.7.0
+
+- Adds the enterprise credential operations UI pass: default light mode with green accent, clearer shell hierarchy, token-led light/dark surfaces, improved login layout, and real comfortable/normal/compact density settings.
+- Adds credential bulk actions for existing PassMan secret workflows: template download, Excel import preview, selected export, category/tag assignment, archive, revoke/disable, security check, audit report, and guarded delete.
+- Adds an Excel import template based on the actual PassMan secret form and supported categories: Passwords, Credentials, API Keys, Secure Notes, and Certificates.
+- Adds row validation, duplicate handling, import preview, partial-result summary, and no-secret-logging behavior before records are created or updated.
+- Expands AD-synced credential visibility with source, domain, DN/path, account, status, risk, owner, tags, last seen, and last synced metadata while keeping sensitive values masked.
+- Keeps the MSI maintenance fixes for same-version Repair/Remove, upgrade sequencing, reboot prompt suppression, and manifest-locked update verification.
+
+### Release Assets
+
+- `PassMan-1.7.0-x64.msi`
+- `passman-update.json`
+- `passman-chromium-extension.zip`
+- `passman-share-decrypter.zip`
+- `passman-ad-agent.ps1`
+
+### Verification Summary
+
+- Lint, TypeScript, Vitest, Next standalone build, browser UI smoke checks, Windows MSI packaging, dev signing, update manifest issue/verify, MSI scenario verification, npm audit, and pre-commit security guard passed before publication.
 
 ## PassMan 1.6.2
 
