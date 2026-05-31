@@ -1,8 +1,30 @@
 # PassMan Release Notes
 
-Latest public release: **PassMan Enterprise Vault Console 1.6.0**
+Latest public release: **PassMan Enterprise Vault Console 1.6.1**
 
-Release page: https://github.com/ucsahinn/passman-releases/releases/tag/v1.6.0
+Release page: https://github.com/ucsahinn/passman-releases/releases/tag/v1.6.1
+
+## PassMan 1.6.1
+
+### Console 1.6.1
+
+- Fixes the automatic MSI update handoff so PassMan queues a detached `PassManServer` restart helper after Windows Installer completes. This prevents the old server process from continuing to serve the previous version.
+- Reloads open web consoles after the service responds on the target version, using in-memory state and live status checks instead of browser persistent storage.
+- Suppresses unnecessary Windows reboot prompts in both manual MSI and in-app silent MSI flows.
+- Uses a version-stable MSI ProductCode so re-running the same MSI version enters the expected maintenance or repair behavior, while newer versions still upgrade through the stable UpgradeCode.
+- Keeps the 1.6.0 enterprise console work: refresh-safe sessions, dashboard cleanup, notifications, leak checks, sharing, Update Center, Server System, navigation, extension flow and AD agent improvements.
+
+### Release Assets
+
+- `PassMan-1.6.1-x64.msi`
+- `passman-update.json`
+- `passman-chromium-extension.zip`
+- `passman-share-decrypter.zip`
+- `passman-ad-agent.ps1`
+
+### Verification Summary
+
+- Lint, TypeScript, Vitest, Next standalone build, extension package, share decrypter package, DC Agent package, Windows MSI packaging, MSI scenario verification, update manifest issue/verify, release evidence audit, `npm audit`, pre-commit Gitleaks and source-focused secret scan passed before publication.
 
 ## PassMan 1.6.0
 
