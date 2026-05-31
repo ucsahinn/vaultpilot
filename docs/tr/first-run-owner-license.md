@@ -13,7 +13,7 @@
 
 ## Lisans
 
-PassMan offline lisans modeli kullanır. Sunucu lisans kodunu public doğrulama anahtarıyla doğrular; private license issuer anahtarı müşteri sunucusuna konmaz.
+PassMan offline lisans modeli kullanır. Sunucu lisans kodunu public doğrulama anahtarıyla doğrular; private imza materyali müşteri sunucusuna konmaz.
 
 Lisans ekranında:
 

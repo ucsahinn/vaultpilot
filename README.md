@@ -118,7 +118,7 @@ Use this repository as the front desk for PassMan. It should answer the first op
 
 This is the public GitHub home for PassMan Enterprise Vault Console. It contains customer-safe documentation, how-to guides, knowledge-base articles, sanitized product screenshots, release notes and links to GitHub Release assets.
 
-This repository does not contain private source code, license issuer material, update signing private keys, customer data, databases, backups, certificates or release binaries committed into git.
+This repository does not contain private source code, internal signing material, customer data, databases, backups, certificates or release binaries committed into git.
 
 ## Operator Path
 

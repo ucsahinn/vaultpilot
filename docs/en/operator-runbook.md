@@ -6,7 +6,7 @@ This runbook is the recurring operating rhythm for PassMan after go-live. It is 
 
 - Treat the PassMan server as a local security system, not as a cloud dependency.
 - Verify health from the console first, then collect redacted server evidence only when needed.
-- Keep private source code, signing keys, license issuer keys, customer backups and databases out of this public repository.
+- Keep private source code, signing keys, customer backups and databases out of this public repository.
 - Use GitHub Releases for public downloads; use the signed manifest to trust update assets.
 - Prefer a small number of well-owned routines over broad manual inspection.
 

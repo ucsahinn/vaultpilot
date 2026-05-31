@@ -13,7 +13,7 @@ Recommendations:
 
 ## License
 
-PassMan uses offline license verification. The server verifies the license code with a public verification key; the private license issuer key is never installed on customer servers.
+PassMan uses offline license verification. The server verifies the license code with a public verification key; private signing material is never installed on customer servers.
 
 The License screen shows:
 

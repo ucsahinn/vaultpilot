@@ -6,7 +6,7 @@ Bu runbook, go-live sonrası PassMan işletimi için tekrar edilebilir enterpris
 
 - PassMan sunucusunu bulut bağımlılığı değil, lokal güvenlik sistemi olarak yönet.
 - Sağlık durumunu önce konsoldan doğrula; gerekiyorsa yalnızca redakte edilmiş sunucu kanıtı topla.
-- Private source code, signing key, license issuer key, customer backup ve database dosyalarını bu public repodan uzak tut.
+- Private source code, signing key, customer backup ve database dosyalarını bu public repodan uzak tut.
 - Public indirmeler için GitHub Releases kullan; update asset güveni için imzalı manifesti esas al.
 - Geniş manuel kontroller yerine sahipliği belli rutinler uygula.
 
