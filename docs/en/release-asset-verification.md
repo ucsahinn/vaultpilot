@@ -31,7 +31,7 @@ The git tree should not contain MSI, ZIP, EXE, PFX, P12, DB, SQLite, backup or s
 3. Download `passman-update.json`.
 4. Confirm the manifest lists server version `1.6.2`.
 5. Confirm the MSI filename is `PassMan-1.6.2-x64.msi`.
-6. Confirm each asset URL uses the public `ucsahinn/passman-releases` GitHub Release host.
+6. Confirm each asset URL uses the public `ucsahinn/passman` GitHub Release host.
 7. Confirm the downloaded MSI file size and SHA-256 match the manifest.
 8. Confirm the MSI Authenticode signer metadata matches the manifest signer thumbprint.
 9. Confirm extension, decrypter and DC Agent package hashes match the manifest before redistribution.

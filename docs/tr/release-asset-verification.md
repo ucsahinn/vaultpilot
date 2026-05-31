@@ -31,7 +31,7 @@ Git tree içinde MSI, ZIP, EXE, PFX, P12, DB, SQLite, backup veya signing-key do
 3. `passman-update.json` indir.
 4. Manifestin server version olarak `1.6.2` gösterdiğini doğrula.
 5. MSI filename değerinin `PassMan-1.6.2-x64.msi` olduğunu doğrula.
-6. Asset URL'lerinin public `ucsahinn/passman-releases` GitHub Release hostunu kullandığını doğrula.
+6. Asset URL'lerinin public `ucsahinn/passman` GitHub Release hostunu kullandığını doğrula.
 7. İndirilen MSI boyutu ve SHA-256 değerini manifest ile karşılaştır.
 8. MSI Authenticode signer metadata değerini manifest signer thumbprint ile karşılaştır.
 9. Extension, decrypter ve DC Agent package hash değerlerini kurum içinde dağıtmadan önce doğrula.

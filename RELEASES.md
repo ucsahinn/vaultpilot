@@ -2,7 +2,7 @@
 
 Latest public release: **PassMan Enterprise Vault Console 1.6.2**
 
-Release page: https://github.com/ucsahinn/passman-releases/releases/tag/v1.6.2
+Release page: https://github.com/ucsahinn/passman/releases/tag/v1.6.2
 
 ## PassMan 1.6.2
 

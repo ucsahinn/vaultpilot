@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/ucsahinn/passman-releases/releases/latest"><strong>Latest Release</strong></a>
+  <a href="https://github.com/ucsahinn/passman/releases/latest"><strong>Latest Release</strong></a>
   |
   <a href="docs/en/README.md"><strong>Docs EN</strong></a>
   |
@@ -21,7 +21,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/ucsahinn/passman-releases/releases/latest"><img alt="Latest PassMan release" src="https://img.shields.io/github/v/release/ucsahinn/passman-releases?label=latest%20release&color=0f766e"></a>
+  <a href="https://github.com/ucsahinn/passman/releases/latest"><img alt="Latest PassMan release" src="https://img.shields.io/github/v/release/ucsahinn/passman?label=latest%20release&color=0f766e"></a>
   <a href="docs/en/README.md"><img alt="Documentation language coverage" src="https://img.shields.io/badge/docs-EN%20%2B%20TR-2563eb"></a>
   <a href="SECURITY.md"><img alt="Security policy" src="https://img.shields.io/badge/security-public%20policy-b91c1c"></a>
   <a href="SUPPORT.md"><img alt="Support evidence pack" src="https://img.shields.io/badge/support-evidence%20pack-7c3aed"></a>
@@ -44,7 +44,7 @@
 <table>
   <tr>
     <td align="center" width="25%">
-      <a href="https://github.com/ucsahinn/passman-releases/releases/latest"><img src="assets/icons/download.svg" width="46" alt="Download icon"><br><strong>Download release</strong></a><br>
+      <a href="https://github.com/ucsahinn/passman/releases/latest"><img src="assets/icons/download.svg" width="46" alt="Download icon"><br><strong>Download release</strong></a><br>
       <sub>MSI, manifest and support packages.</sub>
     </td>
     <td align="center" width="25%">
@@ -135,11 +135,11 @@ This repository does not contain private source code, internal signing material,
 
 | Type | Asset | Purpose | Delivery |
 | --- | --- | --- | --- |
-| ![Windows icon](assets/icons/windows.svg) | [PassMan-1.6.2-x64.msi](https://github.com/ucsahinn/passman-releases/releases/latest/download/PassMan-1.6.2-x64.msi) | Installs or upgrades PassMan Server on Windows. | GitHub Release |
-| ![Update icon](assets/icons/update.svg) | [passman-update.json](https://github.com/ucsahinn/passman-releases/releases/latest/download/passman-update.json) | Signed update manifest verified by PassMan. | GitHub Release |
-| ![Extension icon](assets/icons/extension.svg) | [passman-chromium-extension.zip](https://github.com/ucsahinn/passman-releases/releases/latest/download/passman-chromium-extension.zip) | Browser extension fallback package. | GitHub Release |
-| ![Share icon](assets/icons/share.svg) | [passman-share-decrypter.zip](https://github.com/ucsahinn/passman-releases/releases/latest/download/passman-share-decrypter.zip) | Offline external-share opening tool. | GitHub Release |
-| ![Directory icon](assets/icons/directory.svg) | [passman-ad-agent.ps1](https://github.com/ucsahinn/passman-releases/releases/latest/download/passman-ad-agent.ps1) | PassMan DC Agent Service installer and repair script. | GitHub Release |
+| ![Windows icon](assets/icons/windows.svg) | [PassMan-1.6.2-x64.msi](https://github.com/ucsahinn/passman/releases/latest/download/PassMan-1.6.2-x64.msi) | Installs or upgrades PassMan Server on Windows. | GitHub Release |
+| ![Update icon](assets/icons/update.svg) | [passman-update.json](https://github.com/ucsahinn/passman/releases/latest/download/passman-update.json) | Signed update manifest verified by PassMan. | GitHub Release |
+| ![Extension icon](assets/icons/extension.svg) | [passman-chromium-extension.zip](https://github.com/ucsahinn/passman/releases/latest/download/passman-chromium-extension.zip) | Browser extension fallback package. | GitHub Release |
+| ![Share icon](assets/icons/share.svg) | [passman-share-decrypter.zip](https://github.com/ucsahinn/passman/releases/latest/download/passman-share-decrypter.zip) | Offline external-share opening tool. | GitHub Release |
+| ![Directory icon](assets/icons/directory.svg) | [passman-ad-agent.ps1](https://github.com/ucsahinn/passman/releases/latest/download/passman-ad-agent.ps1) | PassMan DC Agent Service installer and repair script. | GitHub Release |
 
 PassMan-managed updates verify the signed manifest, release asset metadata, SHA-256 checksum and MSI signer thumbprint before starting the MSI flow. A global CA chain is not required for PassMan-managed update trust when the signed manifest pins the local release signer thumbprint. CA-backed or trusted-signing certificates remain recommended for Windows reputation and broad OS-level trust.
 

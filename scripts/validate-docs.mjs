@@ -90,7 +90,7 @@ function validateForbiddenPatterns(filePath, content) {
     [/\beset\b/i, 'prior local AD username'],
     [/PassMan-1\.5\.1-x64\.msi/i, 'stale MSI latest asset name'],
     [/Latest stable release:\s+\*\*PassMan 1\.5\.1\*\*/i, 'stale latest release wording'],
-    [/github\.io\/passman-releases/i, 'obsolete static public-site URL'],
+    [/github\.io\/passman(?:[\x2d]releases)?/i, 'obsolete static public-site URL'],
     [/PASSMAN_[A-Z_]*ADMIN_TOKEN/i, 'obsolete static public-site admin token reference'],
     [/\.github\/workflows\/[a-z]+\.yml/i, 'obsolete static public-site workflow reference'],
     [/\]\([^)]*index\.html[)#?]?/i, 'obsolete static public-site html index link'],
