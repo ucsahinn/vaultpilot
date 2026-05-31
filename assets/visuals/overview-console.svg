@@ -37,11 +37,9 @@
   <text x="296" y="164" fill="#f7f2e8" font-family="Segoe UI, sans-serif" font-size="48" font-weight="760">Güvenlik duruşu</text>
   <text x="296" y="198" fill="#95a2ad" font-family="Segoe UI, sans-serif" font-size="18">Sistem sağlığı, riskler ve ilk eylem tek ekranda görünür.</text>
   <rect x="296" y="230" width="512" height="260" rx="30" fill="#101820" stroke="#30414f"/>
-  <circle cx="412" cy="360" r="82" fill="none" stroke="#27313a" stroke-width="20"/>
-  <path d="M412 278a82 82 0 0 1 82 82" fill="none" stroke="url(#amber)" stroke-width="20" stroke-linecap="round" filter="url(#glow)"/>
-  <text x="372" y="354" fill="#fff5df" font-family="Segoe UI, sans-serif" font-size="44" font-weight="800">25</text>
-  <text x="432" y="356" fill="#93a0aa" font-family="Segoe UI, sans-serif" font-size="22">/100</text>
-  <text x="346" y="394" fill="#f0b35c" font-family="Segoe UI, sans-serif" font-size="17">3 risk bekliyor</text>
+  <circle cx="412" cy="360" r="82" fill="#0f211b" stroke="#5cc8d7" stroke-width="6" filter="url(#glow)"/>
+  <path d="M374 362l28 28 54-62" fill="none" stroke="#f0b35c" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="342" y="462" fill="#f0b35c" font-family="Segoe UI, sans-serif" font-size="17">Kontroller temiz</text>
   <text x="534" y="310" fill="#f7f2e8" font-family="Segoe UI, sans-serif" font-size="26" font-weight="720">İlk üç aksiyon</text>
   <g font-family="Segoe UI, sans-serif" font-size="16">
     <rect x="534" y="334" width="220" height="46" rx="16" fill="#1d211d" stroke="#f0b35c"/>
@@ -56,7 +54,7 @@
     <text x="862" y="276" fill="#f7f2e8" font-family="Segoe UI, sans-serif" font-size="34" font-weight="760">15</text>
     <text x="862" y="306" fill="#9da8b3" font-family="Segoe UI, sans-serif" font-size="17">Son 7 günde 15 yeni kayıt</text>
     <rect x="834" y="372" width="278" height="118" rx="26" fill="#101820" stroke="#30414f"/>
-    <text x="862" y="418" fill="#f7f2e8" font-family="Segoe UI, sans-serif" font-size="34" font-weight="760">1/25</text>
+    <text x="862" y="418" fill="#f7f2e8" font-family="Segoe UI, sans-serif" font-size="34" font-weight="760">4%</text>
     <text x="862" y="448" fill="#9da8b3" font-family="Segoe UI, sans-serif" font-size="17">Kapasite kullanımı %4</text>
   </g>
   <g>

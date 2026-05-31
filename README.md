@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/visuals/social-preview.svg" alt="PassMan Enterprise Vault Console" width="100%">
+  <img src="assets/visuals/social-preview.svg?v=20260531-2" alt="PassMan Enterprise Vault Console" width="100%">
 </p>
 
 <h1 align="center">PassMan Enterprise Vault Console</h1>
@@ -82,16 +82,6 @@
 | ![Evidence icon](assets/icons/evidence.svg) | Operator evidence is safe by default | Support paths ask for redacted evidence packs and forbid plaintext secrets, private keys, database files and customer data. |
 | ![Documentation icon](assets/icons/docs.svg) | TR/EN docs stay paired | Validation checks paired Turkish and English docs plus local links before publication. |
 
-## Visual Operator Map
-
-| Surface | Why it matters | Visual |
-| --- | --- | --- |
-| ![Vault icon](assets/icons/vault.svg)<br>Security posture | Shows the first operational health view after unlock. | [overview-security-posture.png](assets/screenshots/overview-security-posture.png) |
-| ![Update icon](assets/icons/update.svg)<br>Update Center | Makes the release verification path visible before operators upgrade. | [update-center.png](assets/screenshots/update-center.png) |
-| ![Extension icon](assets/icons/extension.svg)<br>Browser extension | Shows pairing, managed browser behavior and extension administration. | [browser-extension-management.png](assets/screenshots/browser-extension-management.png) |
-| ![Directory icon](assets/icons/directory.svg)<br>Active Directory sync | Documents how AD scope appears without exposing AD password values. | [active-directory-sync-tree.png](assets/screenshots/active-directory-sync-tree.png) |
-| ![Share icon](assets/icons/share.svg)<br>External sharing | Shows selected-record packaging and offline decrypter handoff. | [sharing-package-flow.png](assets/screenshots/sharing-package-flow.png) |
-
 ## Start Here
 
 Use this repository as the front desk for PassMan. It should answer the first operational question without exposing source code, secrets, signing material or customer data.
@@ -127,18 +117,6 @@ Use this repository as the front desk for PassMan. It should answer the first op
 This is the public GitHub home for PassMan Enterprise Vault Console. It contains customer-safe documentation, how-to guides, knowledge-base articles, sanitized product screenshots, release notes and links to GitHub Release assets.
 
 This repository does not contain private source code, license issuer material, update signing private keys, customer data, databases, backups, certificates or release binaries committed into git.
-
-## Product Snapshot
-
-| Area | Operator value |
-| --- | --- |
-| ![Vault icon](assets/icons/vault.svg)<br>Enterprise vault console | Passwords, API keys, credentials, secure notes, certificates and file-backed secrets in one self-hosted console. |
-| ![Security icon](assets/icons/security.svg)<br>Zero-knowledge model | Secret payloads are encrypted before storage; unlock material stays in the active browser session. |
-| ![Evidence icon](assets/icons/evidence.svg)<br>Security posture | 2FA, audit chain, extension health, license state, update status and priority actions are visible from the overview. |
-| ![Share icon](assets/icons/share.svg)<br>Selected sharing | Only selected records and files are packaged; operators set expiry, maximum opens and recipient handling. |
-| ![Extension icon](assets/icons/extension.svg)<br>Browser extension | Pairing, active-site record count, autofill, save-login and update-login prompts for paired devices. |
-| ![Directory icon](assets/icons/directory.svg)<br>Directory integration | PassMan DC Agent Service runs as a Windows service and syncs AD OU, group, user and computer metadata without collecting AD password values. |
-| ![Update icon](assets/icons/update.svg)<br>Operations | Offline licensing, signed updates, backups, diagnostics, HTTPS certificate upload and support-safe logs. |
 
 ## Operator Path
 
