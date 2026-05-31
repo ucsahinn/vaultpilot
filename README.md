@@ -1,11 +1,7 @@
-<p align="center">
-  <img src="assets/visuals/social-preview.svg?v=20260531-3" alt="PassMan Enterprise Vault Console" width="100%">
-</p>
-
 <h1 align="center">PassMan Enterprise Vault Console</h1>
 
 <p align="center">
-  <strong>Public product hub, operator documentation, knowledge base and release center for PassMan.</strong>
+  <strong>Customer-safe release hub, operator wiki, knowledge base and support boundary for PassMan.</strong>
 </p>
 
 <p align="center">
@@ -49,26 +45,32 @@
   <tr>
     <td align="center" width="25%">
       <a href="https://github.com/ucsahinn/passman-releases/releases/latest"><img src="assets/icons/download.svg" width="46" alt="Download icon"><br><strong>Download release</strong></a><br>
-      <sub>MSI, manifest, extension, decrypter and AD agent assets.</sub>
+      <sub>MSI, manifest and support packages.</sub>
     </td>
     <td align="center" width="25%">
       <a href="docs/en/README.md"><img src="assets/icons/docs.svg" width="46" alt="Documentation icon"><br><strong>Read operator docs</strong></a><br>
-      <sub>Install, verify, operate and recover in EN or TR.</sub>
+      <sub>Install, verify, operate and recover.</sub>
     </td>
     <td align="center" width="25%">
       <a href="SECURITY.md"><img src="assets/icons/security.svg" width="46" alt="Security icon"><br><strong>Check trust boundary</strong></a><br>
-      <sub>Public-safe repository scope, release trust and secret rules.</sub>
+      <sub>Public scope, release trust and secret rules.</sub>
     </td>
     <td align="center" width="25%">
       <a href="SUPPORT.md"><img src="assets/icons/support.svg" width="46" alt="Support icon"><br><strong>Prepare support evidence</strong></a><br>
-      <sub>Redacted evidence packs without secrets or customer data.</sub>
+      <sub>Redacted handoff without secrets.</sub>
     </td>
   </tr>
 </table>
 
 ---
 
-![PassMan security posture dashboard](assets/screenshots/overview-security-posture.png)
+<p align="center">
+  <img src="assets/screenshots/overview-security-posture.png" alt="PassMan security posture dashboard" width="92%">
+</p>
+
+<p align="center">
+  <sub>Sanitized product screenshot. Release binaries stay in GitHub Releases; private source code, signing material and customer data stay out of this repository.</sub>
+</p>
 
 ## Release Trust Path
 
