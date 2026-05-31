@@ -1,8 +1,29 @@
 # PassMan Release Notes
 
-Latest public release: **PassMan Enterprise Vault Console 1.6.1**
+Latest public release: **PassMan Enterprise Vault Console 1.6.2**
 
-Release page: https://github.com/ucsahinn/passman-releases/releases/tag/v1.6.1
+Release page: https://github.com/ucsahinn/passman-releases/releases/tag/v1.6.2
+
+## PassMan 1.6.2
+
+### Console 1.6.2
+
+- Adds the independent Windows license generator path for release operators, replacing issuer-facing naming with generator-facing naming in scripts, UI copy and release gates.
+- Keeps the license private signing key on the operator profile and keeps customer delivery limited to the generated license code.
+- Adds the operator-only generator build command and release-gate checklist entry for `dist\license-generator\PassManLicenseGenerator.exe`.
+- Keeps the 1.6.1 MSI restart/update reliability fixes, including detached restart handoff after Windows Installer completes.
+
+### Release Assets
+
+- `PassMan-1.6.2-x64.msi`
+- `passman-update.json`
+- `passman-chromium-extension.zip`
+- `passman-share-decrypter.zip`
+- `passman-ad-agent.ps1`
+
+### Verification Summary
+
+- Windows MSI packaging completed, the update manifest was issued for `v1.6.2`, asset hashes match the manifest, MSI Authenticode status is valid, and public documentation validation plus Gitleaks checks passed before publication.
 
 ## PassMan 1.6.1
 

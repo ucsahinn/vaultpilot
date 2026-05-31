@@ -32,7 +32,7 @@ A global CA chain is not required for PassMan-managed update trust when the sign
 
 The current public release contains:
 
-- `PassMan-1.6.1-x64.msi`
+- `PassMan-1.6.2-x64.msi`
 - `passman-update.json`
 - `passman-chromium-extension.zip`
 - `passman-share-decrypter.zip`
