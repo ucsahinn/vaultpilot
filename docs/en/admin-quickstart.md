@@ -6,10 +6,10 @@ Use this guide when the goal is to move from public release download to a health
 
 | Step | Action | Proof |
 | --- | --- | --- |
-| 1 | Download `PassMan-1.7.4-x64.msi` from the latest GitHub Release. | File name, file size and release tag match [release assets](release-asset-verification.md). |
-| 2 | Verify the signed update manifest before trusting the package. | `passman-update.json` lists version `1.7.4`, MSI hash, size and signer thumbprint. |
+| 1 | Download `PassMan-1.7.5-x64.msi` from the latest GitHub Release. | File name, file size and release tag match [release assets](release-asset-verification.md). |
+| 2 | Verify the signed update manifest before trusting the package. | `passman-update.json` lists version `1.7.5`, MSI hash, size and signer thumbprint. |
 | 3 | Install the MSI from an elevated Windows session. | `PassMan Server` service exists and is running. |
-| 4 | Open `http://<SERVER_HOST>:1903`. | The server responds; plain HTTP IP access may show the secure-context warning. |
+| 4 | Open `https://<SERVER_HOST>:1903`. | The server responds; managed self-signed HTTPS may show a browser certificate warning until a trusted certificate is configured. |
 | 5 | Create the first owner profile and unlock the default vault through HTTPS or `localhost`. | Owner appears in Users and the first vault is available. |
 | 6 | Apply the license. | License page shows active state, capacity and expiry. |
 | 7 | Configure public host and HTTPS. | Browser reaches the intended host without a mismatch warning. |
@@ -44,7 +44,7 @@ Collect only redacted command output if support is needed. Do not upload databas
 Stop and move to the knowledge base if:
 
 - The MSI does not create the service.
-- The service runs but the browser cannot reach `http://<SERVER_HOST>:1903`.
+- The service runs but the browser cannot reach `https://<SERVER_HOST>:1903`.
 - The first owner cannot unlock after profile creation.
 - The license page is read-only unexpectedly.
 - The browser shows an HTTPS name mismatch after certificate upload.

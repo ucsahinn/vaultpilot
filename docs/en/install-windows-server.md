@@ -14,20 +14,20 @@ This runbook covers a normal PassMan Server installation or in-place upgrade on 
 
 ## Install
 
-1. Download `PassMan-1.7.4-x64.msi` from the latest GitHub Release.
+1. Download `PassMan-1.7.5-x64.msi` from the latest GitHub Release.
 2. Verify the filename, source, checksum and signer before running it. Use [release asset verification](release-asset-verification.md) when you need the full checklist.
 3. Run the MSI as Administrator.
 4. The installer prepares the standalone server, bundled Node runtime, Prisma/SQLite runtime files, Windows service, firewall rule, data directory and log directory.
 5. Open PassMan from the server first:
 
 ```text
-http://127.0.0.1:1903
+https://127.0.0.1:1903
 ```
 
 Then validate remote access:
 
 ```text
-http://<SERVER_HOST>:1903
+https://<SERVER_HOST>:1903
 ```
 
 First-run profile creation and vault unlock require browser Web Crypto. Use HTTPS or `localhost` for those crypto operations; plain HTTP server-IP access should show the secure-context warning instead of a generic profile creation error.
@@ -41,7 +41,7 @@ First-run profile creation and vault unlock require browser Web Crypto. Use HTTP
 | Data directory | `C:\ProgramData\PassMan` |
 | Log directory | `C:\ProgramData\PassMan\logs` |
 | Default port | `1903` |
-| Browser entry | `http://<SERVER_HOST>:1903` before HTTPS is configured |
+| Browser entry | `https://<SERVER_HOST>:1903` with managed self-signed HTTPS until a trusted certificate is configured |
 
 ## Post-Install Validation
 
@@ -52,7 +52,7 @@ sc.exe query PassManServer
 ```
 
 ```text
-http://127.0.0.1:1903/api/profile
+https://127.0.0.1:1903/api/profile
 ```
 
 Expected result:

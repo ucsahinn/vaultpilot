@@ -11,7 +11,7 @@ Kontrol edin:
 
 ## Sunucu açılmıyor
 
-1. Sunucuda `http://127.0.0.1:1903/api/profile` kontrol edin.
+1. Sunucuda `https://127.0.0.1:1903/api/profile` kontrol edin.
 2. `PassManServer` servis durumunu kontrol edin.
 3. Firewall ve port yönlendirmesini doğrulayın.
 4. Server loglarını redacted olarak inceleyin.

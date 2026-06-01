@@ -11,7 +11,7 @@ Check:
 
 ## Server does not open
 
-1. Check `http://127.0.0.1:1903/api/profile` on the server.
+1. Check `https://127.0.0.1:1903/api/profile` on the server.
 2. Check the `PassManServer` service state.
 3. Verify firewall and port routing.
 4. Review server logs with sensitive values redacted.

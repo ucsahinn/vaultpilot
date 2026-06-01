@@ -30,7 +30,7 @@
 </p>
 
 <p align="center">
-  <code>Stable 1.7.4</code>
+  <code>Stable 1.7.5</code>
   &nbsp;
   <code>Windows MSI</code>
   &nbsp;
@@ -124,8 +124,8 @@ This repository does not contain private source code, internal signing material,
 
 1. Download the latest MSI from GitHub Releases.
 2. Install it as Administrator on the approved Windows host.
-3. Open `http://<SERVER_HOST>:1903` to verify the service responds; use HTTPS or `localhost` for first-run profile creation and unlock because browser Web Crypto requires a secure context.
-4. Apply the license and configure public host plus HTTPS.
+3. Open `https://<SERVER_HOST>:1903` to verify the service responds. If no trusted certificate is configured yet, expect a managed self-signed certificate warning until the operator installs a PFX/P12 package.
+4. Apply the license and confirm the public host plus HTTPS settings.
 5. Enable 2FA, confirm audit-chain health and review the overview action queue.
 6. Pair the Chromium extension for approved browsers.
 7. Configure PassMan DC Agent Service if AD scope is needed.
@@ -135,7 +135,7 @@ This repository does not contain private source code, internal signing material,
 
 | Type | Asset | Purpose | Delivery |
 | --- | --- | --- | --- |
-| ![Windows icon](assets/icons/windows.svg) | [PassMan-1.7.4-x64.msi](https://github.com/ucsahinn/passman/releases/latest/download/PassMan-1.7.4-x64.msi) | Installs or upgrades PassMan Server on Windows. | GitHub Release |
+| ![Windows icon](assets/icons/windows.svg) | [PassMan-1.7.5-x64.msi](https://github.com/ucsahinn/passman/releases/latest/download/PassMan-1.7.5-x64.msi) | Installs or upgrades PassMan Server on Windows. | GitHub Release |
 | ![Update icon](assets/icons/update.svg) | [passman-update.json](https://github.com/ucsahinn/passman/releases/latest/download/passman-update.json) | Signed update manifest verified by PassMan. | GitHub Release |
 | ![Extension icon](assets/icons/extension.svg) | [passman-chromium-extension.zip](https://github.com/ucsahinn/passman/releases/latest/download/passman-chromium-extension.zip) | Browser extension fallback package. | GitHub Release |
 | ![Share icon](assets/icons/share.svg) | [passman-share-decrypter.zip](https://github.com/ucsahinn/passman/releases/latest/download/passman-share-decrypter.zip) | Offline external-share opening tool. | GitHub Release |
@@ -147,7 +147,7 @@ PassMan-managed updates verify the signed manifest, release asset metadata, SHA-
 
 | Component | Version | Update path |
 | --- | ---: | --- |
-| PassMan Enterprise Vault Console | 1.7.4 | Windows MSI / Update Center |
+| PassMan Enterprise Vault Console | 1.7.5 | Windows MSI / Update Center |
 | Chromium Browser Extension | 1.3.1 | Managed rollout or ZIP fallback |
 | Offline Share Decrypter | 1.2.0 | Bundled support component and release ZIP |
 | PassMan DC Agent Service | 1.1.0 | Bundled support component and release script |

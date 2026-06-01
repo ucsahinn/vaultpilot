@@ -1,8 +1,31 @@
 # PassMan Release Notes
 
-Latest public release: **PassMan Enterprise Vault Console 1.7.4**
+Latest public release: **PassMan Enterprise Vault Console 1.7.5**
 
-Release page: https://github.com/ucsahinn/passman/releases/tag/v1.7.4
+Release page: https://github.com/ucsahinn/passman/releases/tag/v1.7.5
+
+## PassMan 1.7.5
+
+### Console 1.7.5
+
+- Makes installed server access HTTPS-only on the public port. If no operator PFX/P12 is configured, PassMan generates a managed self-signed HTTPS certificate instead of exposing the console over HTTP.
+- Fixes automatic MSI update jobs that could stay visually stuck around the installer step by detecting missing helper startup signals and writing clearer spawn, exit and launch-error evidence.
+- Verifies the installed `package.json` payload version after Windows Installer success before moving to restart, so misleading MSI success events no longer hide stale installed files.
+- Passes the current install directory and per-machine context into automatic MSI runs with `INSTALLFOLDER` and `ALLUSERS=1`.
+- Repairs ProgramData operator evidence visibility: logs and update-job files are readable by local Users, while databases, config, certificates and secret-bearing data stay hardened.
+- Uses Secure session cookies by default for HTTPS server access, with non-secure cookies available only through an explicit local-development override.
+
+### Release Assets
+
+- `PassMan-1.7.5-x64.msi`
+- `passman-update.json`
+- `passman-chromium-extension.zip`
+- `passman-share-decrypter.zip`
+- `passman-ad-agent.ps1`
+
+### Verification Summary
+
+- Lint, TypeScript, Vitest, HTTPS browser UI smoke checks, Windows MSI packaging, dev signing, update manifest issue/verify, MSI scenario verification, npm audit, diff check, and pre-commit Gitleaks guard passed before publication.
 
 ## PassMan 1.7.4
 
