@@ -1,6 +1,6 @@
 # PassMan Genel Bakış
 
-PassMan Enterprise Vault Console, Windows Server üzerine MSI ile kurulan self-hosted ve zero-knowledge bir kurumsal kasa konsoludur. Kullanıcılar PassMan'a sunucu IP adresi veya DNS adı üzerinden tarayıcıyla erişir.
+PassMan Enterprise Vault Console, Windows Server üzerine MSI ile kurulan self-hosted ve zero-knowledge bir kurumsal kasa konsoludur. Kullanıcılar PassMan'a sunucu IP adresi veya DNS adı üzerinden tarayıcıyla erişir. İlk profil oluşturma ve kasa kilidi açma için HTTPS veya `localhost` gerekir; düz HTTP sunucu IP erişimi HTTPS yapılandırılana kadar yalnızca erişilebilirlik kontrolüdür.
 
 ## Temel İlkeler
 

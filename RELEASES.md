@@ -1,8 +1,30 @@
 # PassMan Release Notes
 
-Latest public release: **PassMan Enterprise Vault Console 1.7.3**
+Latest public release: **PassMan Enterprise Vault Console 1.7.4**
 
-Release page: https://github.com/ucsahinn/passman/releases/tag/v1.7.3
+Release page: https://github.com/ucsahinn/passman/releases/tag/v1.7.4
+
+## PassMan 1.7.4
+
+### Console 1.7.4
+
+- Fixes the remaining Update Center state issue where a browser session could keep showing the old 82% RUNNING progress after the silent MSI helper and service restart completed.
+- Shows a clear secure-context warning on fresh servers opened through plain HTTP IP addresses instead of falling back to the generic profile creation error; profile create and unlock stay disabled until HTTPS or localhost exposes Web Crypto.
+- Repairs ProgramData log visibility by granting local Users only the root traversal needed to reach readable app/installer logs while keeping database, config and secret-bearing child paths hardened.
+- Keeps the login surface fixed to the dark emerald vault identity before unlock, flattens the Update Center main application package card, and tightens credential quick filters plus sharing category headers.
+- Keeps the 1.7.3 installed-version registry fix and the 1.7.2 automatic MSI safety gate.
+
+### Release Assets
+
+- `PassMan-1.7.4-x64.msi`
+- `passman-update.json`
+- `passman-chromium-extension.zip`
+- `passman-share-decrypter.zip`
+- `passman-ad-agent.ps1`
+
+### Verification Summary
+
+- Lint, TypeScript, Vitest, Next standalone build, browser UI smoke checks, Windows MSI packaging, dev signing, update manifest issue/verify, MSI scenario verification, MSI evidence audit, npm audit, and pre-commit Gitleaks guard passed before publication.
 
 ## PassMan 1.7.3
 

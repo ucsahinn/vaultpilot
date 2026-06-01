@@ -1,6 +1,6 @@
 # PassMan Overview
 
-PassMan Enterprise Vault Console is a self-hosted, zero-knowledge enterprise vault console installed on Windows Server with an MSI. Users access it from a browser through the server IP address or DNS name.
+PassMan Enterprise Vault Console is a self-hosted, zero-knowledge enterprise vault console installed on Windows Server with an MSI. Users access it from a browser through the server IP address or DNS name. First-run profile creation and vault unlock require HTTPS or `localhost` so the browser exposes Web Crypto; plain HTTP server-IP access is only a reachability check until HTTPS is configured.
 
 ## Principles
 

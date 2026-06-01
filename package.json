@@ -1,6 +1,6 @@
 {
   "name": "passman-public-docs",
-  "version": "1.7.3",
+  "version": "1.7.4",
   "private": true,
   "description": "Public GitHub documentation and release hub for PassMan Enterprise Vault Console.",
   "scripts": {

@@ -6,11 +6,11 @@ Use this guide when the goal is to move from public release download to a health
 
 | Step | Action | Proof |
 | --- | --- | --- |
-| 1 | Download `PassMan-1.7.3-x64.msi` from the latest GitHub Release. | File name, file size and release tag match [release assets](release-asset-verification.md). |
-| 2 | Verify the signed update manifest before trusting the package. | `passman-update.json` lists version `1.7.3`, MSI hash, size and signer thumbprint. |
+| 1 | Download `PassMan-1.7.4-x64.msi` from the latest GitHub Release. | File name, file size and release tag match [release assets](release-asset-verification.md). |
+| 2 | Verify the signed update manifest before trusting the package. | `passman-update.json` lists version `1.7.4`, MSI hash, size and signer thumbprint. |
 | 3 | Install the MSI from an elevated Windows session. | `PassMan Server` service exists and is running. |
-| 4 | Open `http://<SERVER_HOST>:1903`. | The lock or first-run page loads from the server host. |
-| 5 | Create the first owner profile and unlock the default vault. | Owner appears in Users and the first vault is available. |
+| 4 | Open `http://<SERVER_HOST>:1903`. | The server responds; plain HTTP IP access may show the secure-context warning. |
+| 5 | Create the first owner profile and unlock the default vault through HTTPS or `localhost`. | Owner appears in Users and the first vault is available. |
 | 6 | Apply the license. | License page shows active state, capacity and expiry. |
 | 7 | Configure public host and HTTPS. | Browser reaches the intended host without a mismatch warning. |
 | 8 | Enable 2FA for the owner. | Lock and unlock require master password plus authenticator code. |
