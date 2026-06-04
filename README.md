@@ -98,6 +98,7 @@ Use this repository as the front desk for the supported PassMan application. It 
 | Fix an operational issue | [EN knowledge base](kb/en/README.md) / [TR bilgi bankası](kb/tr/README.md) | Safe evidence and diagnosis path are available. |
 | Update PassMan or verify release assets | [EN release asset verification](docs/en/release-asset-verification.md) / [TR asset doğrulama](docs/tr/release-asset-verification.md) | Manifest, checksum, MSI signer and component notes are verified. |
 | Pair or troubleshoot the browser extension | [EN extension](docs/en/browser-extension.md) / [TR eklenti](docs/tr/browser-extension.md) | Badge count, autofill, save/update login and device pairing behavior are clear. |
+| Review browser extension privacy handling | [Privacy policy](PRIVACY.md) | Chrome/Edge extension data categories, limited-use disclosure and remote-code boundary are documented. |
 | Sync Active Directory | [EN DC Agent](docs/en/active-directory-agent.md) / [TR DC Agent](docs/tr/active-directory-agent.md) | Service install, repair, logs and OU tree sync are documented. |
 | Open or diagnose external shares | [EN sharing](docs/en/sharing-and-offline-decrypter.md) / [TR paylasim](docs/tr/sharing-and-offline-decrypter.md) | Selected records, files, expiry, max opens and offline decrypter flow are clear. |
 | Prepare a clean support handoff | [EN support evidence pack](docs/en/support-evidence-pack.md) / [TR destek kanıt paketi](docs/tr/support-evidence-pack.md) | Operators know exactly what to collect and what never to send. |
