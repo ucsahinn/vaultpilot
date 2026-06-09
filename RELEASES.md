@@ -1,8 +1,25 @@
 # PassMan Release Notes
 
-Latest public release: **PassMan Enterprise Vault Console 1.8.20**
+Latest public release: **PassMan Enterprise Vault Console 1.8.21**
 
-Release page: https://github.com/ucsahinn/passman/releases/tag/v1.8.20
+Release page: https://github.com/ucsahinn/passman/releases/tag/v1.8.21
+
+## PassMan 1.8.21
+
+### Console 1.8.21
+
+- Reduces SQLite lock contention during high-frequency directory-agent polling by applying runtime WAL/busy-timeout tuning.
+- Avoids unnecessary heartbeat writes when the directory agent has already reported recently.
+- Keeps unchanged directory sync payloads from rewriting large object snapshots while preserving command completion metadata.
+- Makes installer helper bootstrap logging best-effort so a locked local log file cannot interrupt scheduled-task startup.
+
+### Release assets
+
+- `PassMan-1.8.21-x64.msi`
+- `passman-update.json`
+- `passman-chromium-extension.zip`
+- `passman-share-decrypter.zip`
+- `passman-ad-agent.ps1`
 
 ## PassMan 1.8.20
 
