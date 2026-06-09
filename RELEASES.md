@@ -1,8 +1,29 @@
 # PassMan Release Notes
 
-Latest public release: **PassMan Enterprise Vault Console 1.8.21**
+Latest public release: **PassMan Enterprise Vault Console 1.8.22**
 
-Release page: https://github.com/ucsahinn/passman/releases/tag/v1.8.21
+Release page: https://github.com/ucsahinn/passman/releases/tag/v1.8.22
+
+## PassMan 1.8.22
+
+### Console 1.8.22
+
+- Keeps repeated same-message notification errors visible again and highlights notification reasons/results for operators.
+- Removes browser backup import/export controls so backup and restore stay on PassMan Backup Tool.
+- Keeps runtime CSP nonce-based and avoids broad inline-style allowances while preserving packaged UI behavior.
+- Keeps vault, sharing, extension, update and DC agent command contracts unchanged.
+
+### Release assets
+
+- `PassMan-1.8.22-x64.msi`
+- `passman-update.json`
+- `passman-chromium-extension.zip`
+- `passman-share-decrypter.zip`
+- `passman-ad-agent.ps1`
+
+### Verification Summary
+
+- Lint, TypeScript, Vitest, Next standalone build, browser UI smoke checks, Windows MSI packaging, dev signing, update manifest issue/verify, MSI scenario verification, MSI sandbox package, MSI evidence audit, npm audit, pre-commit Gitleaks guard and source Gitleaks scan passed before publication.
 
 ## PassMan 1.8.21
 
