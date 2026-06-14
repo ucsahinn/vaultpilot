@@ -1,65 +1,155 @@
-# PassMan Enterprise Vault Console
+# &#128274; PassMan Enterprise Vault Console - README completa en español
 
-<p align="center">
-  <a href="README.de.md">&#127465;&#127466; Deutsch</a> ? <a href="README.es.md">&#127466;&#127480; Espa&ntilde;ol</a> ? <a href="README.md">&#127468;&#127463; English</a> ? <a href="README.pt-BR.md">&#127463;&#127479; Portugu&ecirc;s (Brasil)</a> ? <a href="README.tr.md">&#127481;&#127479; T&uuml;rk&ccedil;e</a> ? <a href="README.fr.md">&#127467;&#127479; French</a>
-</p>
+[&#127468;&#127463; English](README.md) | [&#127465;&#127466; Deutsch](README.de.md) | [&#127466;&#127480; Español](README.es.md) | [&#127463;&#127479; Português (Brasil)](README.pt-BR.md) | [&#127481;&#127479; Türkçe](README.tr.md) | [&#127467;&#127479; Français](README.fr.md)
 
-Hub publico de releases, documentacion de operador, knowledge base y soporte para un password manager empresarial autohospedado.
+> Este archivo es una portada completa en español, no un resumen corto. Cubre propósito, límites, uso, validación, seguridad y publicación.
+>
+> README canónico en inglés: [README.md](README.md)
 
-## Por que existe este repositorio
+Public documentation and release hub for the PassMan enterprise password manager.
 
-Hub publico de releases, documentacion de operador, knowledge base y soporte para un password manager empresarial autohospedado.
+Empieza por el README canónico si necesitas la descripción inglesa más actual. Usa esta página cuando quieras el mismo contrato operativo en español.
 
-Esta portada localizada se mantiene para que el lector entienda el repositorio sin depender de una etiqueta de idioma corta. La referencia canonica profunda sigue en README.md; esta pagina contiene suficiente contexto para elegir el punto de entrada, el limite de seguridad y la verificacion correcta.
+## Estado y señales de confianza
 
-## Para quien es
+|Área | Detalle|
+|--- | ---|
+|Estado | Public repository: ucsahinn/passman|
+|Fuente de verdad | [README canónico en inglés](README.md)|
+|Usuarios | Enterprise operators installing or reviewing PassMan.; Admins checking update, backup, AD and browser extension workflows.|
+|Validación | English and Turkish doc indexes remain reachable.; Screenshots and visual assets referenced by README exist.|
+|Seguridad | Documents enterprise operating contract and release trust path.; Provides English and Turkish documentation trees plus knowledge base articles.|
 
-Admins, operadores, security reviewers y equipos de soporte que necesitan instalacion, operacion, verificacion de release o evidencia de soporte.
+## Qué es este repositorio
 
-## Inicio rapido
+- A public documentation hub for PassMan Enterprise Vault Console.
+- A release and verification gateway for users checking public assets.
+- A documentation map for admin quickstart, Windows Server install, AD agent, backups, browser extension, sharing, update center and troubleshooting.
+- A safe public surface for product explanation without exposing private source or customer vault data.
 
-| Si necesitas... | Abre |
-| --- | --- |
-| Latest release | [https://github.com/ucsahinn/passman/releases/latest](https://github.com/ucsahinn/passman/releases/latest) |
-| Docs EN | [docs/en/README.md](docs/en/README.md) |
-| Docs TR | [docs/tr/README.md](docs/tr/README.md) |
-| KB EN | [kb/en/README.md](kb/en/README.md) |
-| KB TR | [kb/tr/README.md](kb/tr/README.md) |
-| Security policy | [SECURITY.md](SECURITY.md) |
-| Support policy | [SUPPORT.md](SUPPORT.md) |
-| Release notes | [RELEASES.md](RELEASES.md) |
+## Qué no es
+
+- Not the private application source repository.
+- Not a vault, credential store or customer tenant.
+- Not a place for signing keys, license secrets, update keys or private support bundles.
+- Not a replacement for validating downloaded release assets.
+
+## Para quién es
+
+- Enterprise operators installing or reviewing PassMan.
+- Admins checking update, backup, AD and browser extension workflows.
+- Security reviewers checking trust model and release verification.
+- Support users looking for public troubleshooting and evidence-pack guidance.
+
+## Inicio rápido
+
+1. Clona o actualiza el repositorio.
+2. Lee README, seguridad y el mapa de documentación.
+3. Ejecuta las validaciones adecuadas.
+4. Prepara solo los archivos cambiados de forma explícita.
+5. Antes de push o release, revisa remoto, secretos y enlaces otra vez.
+
+## Guía de decisión
+
+- Need overview -> docs/en/overview.md or docs/tr/overview.md.
+- Need install -> docs/en/install-windows-server.md or docs/tr/install-windows-server.md.
+- Need release verification -> docs/en/release-asset-verification.md.
+- Need troubleshooting -> docs/en/troubleshooting.md or kb articles.
+- Need public security posture -> docs/en/security-and-trust-model.md and SECURITY.md.
 
 ## Mapa del repositorio
 
-- README.md - release hub landing page
-- docs/en/README.md / docs/tr/README.md - operator documentation
-- kb/en/README.md / kb/tr/README.md - support knowledge base
-- RELEASES.md - public release history
-- SECURITY.md / SUPPORT.md / PRIVACY.md - trust and support policies
-- assets/ - sanitized visuals and icons
+|Ruta | Por qué importa|
+|--- | ---|
+|`docs/en/ and docs/tr/` | main product documentation|
+|`kb/en/ and kb/tr/` | knowledge base troubleshooting articles|
+|[assets/screenshots/](assets/screenshots/) | public screenshots|
+|[assets/visuals/](assets/visuals/) | public SVG diagrams|
+|[RELEASES.md](RELEASES.md) | release and asset notes|
+|[PRIVACY.md](PRIVACY.md) | privacy policy|
+|[scripts/validate-docs.mjs](scripts/validate-docs.mjs) | documentation validator|
+|[SECURITY.md](SECURITY.md) | security disclosure policy|
 
-## Validacion e higiene de release
+## Flujo de trabajo
 
-Antes de commit o publicacion, revisa links, Markdown, validacion existente del repo y Gitleaks.
+1. Update docs in both language trees when the product contract changes.
+2. Keep release notes and verification guidance aligned with actual public assets.
+3. Validate docs and links before commit.
+4. Run secret scan before push.
+5. Verify remote HEAD and GitHub release/page rendering after publication.
 
-Ruta recomendada de release/readiness:
+## Comandos y validación
 
-1. Revisar el README relevante y los documentos enlazados.
-2. Ejecutar la validacion del repositorio cuando exista un comando.
-3. Comprobar links Markdown y assets locales.
-4. Ejecutar Gitleaks o el secret scan configurado.
-5. Verificar origin/main despues del push antes de afirmar que la publicacion termino.
+Ejecuta estos comandos solo después de clonar el repositorio y entender qué escriben o verifican.
 
-## Limite de seguridad y alcance publico
+```powershell
+npm run validate
+node scripts/validate-docs.mjs
+git diff --check
+gitleaks dir . --no-banner --redact
+```
 
-Codigo privado, material de firma, datos de clientes, secretos, logs e instaladores no van en Git. Los binarios se publican via GitHub Releases.
+## Lista de verificación
 
-## Contribucion y mantenimiento
+- English and Turkish doc indexes remain reachable.
+- Screenshots and visual assets referenced by README exist.
+- No private vault data, customer names, licenses, signing keys or update secrets appear.
+- Release verification wording matches RELEASES.md.
+- Remote HEAD is verified after push.
 
-Mant?n las paginas localizadas alineadas con el README canonico cuando cambien el alcance, los pasos de instalacion, las reglas de release o los limites de seguridad. No agregues afirmaciones que no esten respaldadas por el repositorio, docs live del producto o evidencia publica de release.
+## Límite de seguridad
 
-## Estandar de completitud
+- Documents enterprise operating contract and release trust path.
+- Provides English and Turkish documentation trees plus knowledge base articles.
+- Keeps release assets and update trust chain documented.
+- Includes screenshots, visual assets and validation scripts for public docs.
 
-Este README localizado no es una nota corta. Explica proposito, entrada, superficies del repositorio, validacion, limite de seguridad y referencias canonicas.
+Public-safe rule: do not add secrets, tokens, cookies, private keys, private prompts, customer data, local-only auth files, generated logs, archives or build outputs unless the canonical README explicitly says they belong in the public repo.
 
-Referencia canonica: [README.md](README.md).
+## Higiene de release y publicación
+
+- Publish installers and archives through GitHub Releases, not source commits.
+- Do not commit build output, private support packs or signing material.
+- Update documentation before announcing public release status.
+- Check release asset names, versions and remote HEAD after push/release.
+
+## Mantenimiento
+
+- Keep this localized README aligned with README.md when the repo contract changes.
+- Prefer factual repo links over marketing claims.
+- Do not invent install commands, metrics, users, releases or support promises.
+- If a command is version-sensitive, re-check it before documenting it.
+- When a localized file cannot be updated fully, leave a clear note instead of a partial translation.
+
+## Ruta de contribución
+
+- Open a focused change against the smallest set of files.
+- Read AGENTS.md or CONTRIBUTING.md when present before editing.
+- Run the repo validation commands listed above.
+- Review staged diffs explicitly before commit.
+- Use security disclosure paths instead of public issues for sensitive reports.
+
+## Definición de terminado
+
+Terminado significa: contenido completo, enlaces correctos, límites de seguridad claros, validación ejecutada, Git limpio y remote HEAD verificado después del push.
+
+|Recomendación | Por qué importa|
+|--- | ---|
+|Content | Public documentation and release hub for the PassMan enterprise password manager.|
+|Links | All referenced local files must exist and resolve from the repository root.|
+|Security | No private vault data, customer names, licenses, signing keys or update secrets appear.|
+|Verification | Valida estructura, enlaces, Markdown, secretos, scripts relevantes y remote HEAD antes de afirmar que algo está publicado.|
+|Remote | After push, compare local HEAD with origin/main and GitHub remote HEAD.|
+
+## Enlaces importantes
+
+|Ruta | Por qué importa|
+|--- | ---|
+|[Canonical README](README.md) | README.md|
+|[English docs](docs/en/README.md) | docs/en/README.md|
+|[Turkish docs](docs/tr/README.md) | docs/tr/README.md|
+|[English knowledge base](kb/en/README.md) | kb/en/README.md|
+|[Turkish knowledge base](kb/tr/README.md) | kb/tr/README.md|
+|[Release notes](RELEASES.md) | RELEASES.md|
+|[Privacy](PRIVACY.md) | PRIVACY.md|
+|[Security policy](SECURITY.md) | SECURITY.md|
