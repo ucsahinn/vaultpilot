@@ -6,12 +6,12 @@
 
 <p align="center">
   🌐 <strong>Languages:</strong>
-  🇩🇪 Deutsch ·
-  🇪🇸 Español ·
-  <a href="docs/en/README.md">🇬🇧 English</a> ·
-  🇧🇷 Português (Brasil) ·
-  <a href="docs/tr/README.md">🇹🇷 Türkçe</a> ·
-  🇫🇷 French
+  <a href="README.de.md">🇩🇪 Deutsch</a> ·
+  <a href="README.es.md">🇪🇸 Español</a> ·
+  <a href="README.md">🇬🇧 English</a> ·
+  <a href="README.pt-BR.md">🇧🇷 Português (Brasil)</a> ·
+  <a href="README.tr.md">🇹🇷 Türkçe</a> ·
+  <a href="README.fr.md">🇫🇷 French</a>
 </p>
 
 <p align="center">
