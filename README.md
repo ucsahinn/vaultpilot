@@ -14,6 +14,23 @@
   <a href="README.fr.md"><img src="https://flagcdn.com/w20/fr.png" alt="Fran&#231;ais" width="20"></a>
 </p>
 
+<!-- bilingual-welcome:start -->
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><img src="https://flagcdn.com/w20/gb.png" alt="English" width="20"> English welcome</h3>
+      <p>PassMan public docs is the release hub, operator wiki, knowledge base, support boundary, and trust surface for the self-hosted enterprise vault.</p>
+      <p><strong>Start here:</strong> [English docs home](docs/en/README.md) is the operator entry point.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3><img src="https://flagcdn.com/w20/tr.png" alt="Turkce" width="20"> T&#252;rk&#231;e kar&#351;&#305;lama</h3>
+      <p>PassMan public docs; self-hosted enterprise vault icin release merkezi, operator wiki, bilgi bankasi, destek siniri ve guven yuzeyidir.</p>
+      <p><strong>Buradan ba&#351;la:</strong> [Turkce dokuman ana sayfasi](docs/tr/README.md) kurulum ve operasyon akislarini toplar.</p>
+    </td>
+  </tr>
+</table>
+<!-- bilingual-welcome:end -->
+
 <p align="center">
   <a href="https://github.com/ucsahinn/passman/releases/latest"><strong>Latest Release</strong></a>
   |
