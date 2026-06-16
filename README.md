@@ -20,12 +20,12 @@
     <td width="50%" valign="top">
       <h3><img src="https://flagcdn.com/w20/gb.png" alt="English" width="20"> English welcome</h3>
       <p>PassMan public docs is the release hub, operator wiki, knowledge base, support boundary, and trust surface for the self-hosted enterprise vault.</p>
-      <p><strong>Start here:</strong> [English docs home](docs/en/README.md) is the operator entry point.</p>
+      <p><strong>Start here:</strong> <a href="docs/en/README.md">English docs home</a> is the operator entry point.</p>
     </td>
     <td width="50%" valign="top">
-      <h3><img src="https://flagcdn.com/w20/tr.png" alt="Turkce" width="20"> T&#252;rk&#231;e kar&#351;&#305;lama</h3>
-      <p>PassMan public docs; self-hosted enterprise vault icin release merkezi, operator wiki, bilgi bankasi, destek siniri ve guven yuzeyidir.</p>
-      <p><strong>Buradan ba&#351;la:</strong> [Turkce dokuman ana sayfasi](docs/tr/README.md) kurulum ve operasyon akislarini toplar.</p>
+      <h3><img src="https://flagcdn.com/w20/tr.png" alt="Türkçe" width="20"> Türkçe karşılama</h3>
+      <p>PassMan için public release ve dokümantasyon merkezi. Kurulum, operasyon, bilgi bankası, destek paketi ve güvenlik sınırları burada; private kaynak kod ve hassas operasyon verisi bu repoya girmez.</p>
+      <p><strong>Buradan başla:</strong> Türkçe operasyon akışı <a href="docs/tr/README.md">docs/tr</a>; İngilizce ekipler için <a href="docs/en/README.md">docs/en</a>.</p>
     </td>
   </tr>
 </table>
