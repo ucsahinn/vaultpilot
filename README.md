@@ -1,11 +1,11 @@
-<h1 align="center">PassMan Enterprise Vault Console</h1>
+<h1 align="center"><img src="assets/icons/vault.svg" width="34" alt=""> PassMan Enterprise Vault Console</h1>
 
 <p align="center">
   <strong>Production-ready self-hosted password manager release hub, operator wiki, knowledge base and support boundary for PassMan.</strong>
 </p>
 
 <p align="center">
-  &#127760; <strong>Languages:</strong>
+  <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f310.svg" alt="" aria-hidden="true" width="20"> <strong>Languages:</strong>
   <a href="README.de.md"><img src="https://flagcdn.com/w20/de.png" alt="Deutsch" width="20"></a> |
   <a href="README.es.md"><img src="https://flagcdn.com/w20/es.png" alt="Espa&#241;ol" width="20"></a> |
   <a href="README.md"><img src="https://flagcdn.com/w20/gb.png" alt="English" width="20"></a> |
@@ -32,19 +32,19 @@
 <!-- bilingual-welcome:end -->
 
 <p align="center">
-  <a href="https://github.com/ucsahinn/passman/releases/latest"><strong>Latest Release</strong></a>
+  <a href="https://github.com/ucsahinn/passman/releases/latest"><img src="assets/icons/download.svg" width="18" alt=""> <strong>Latest Release</strong></a>
   |
-  <a href="docs/en/README.md"><strong>Docs EN</strong></a>
+  <a href="docs/en/README.md"><img src="assets/icons/docs.svg" width="18" alt=""> <strong>Docs EN</strong></a>
   |
-  <a href="docs/tr/README.md"><strong>Docs TR</strong></a>
+  <a href="docs/tr/README.md"><img src="assets/icons/docs.svg" width="18" alt=""> <strong>Docs TR</strong></a>
   |
-  <a href="kb/en/README.md"><strong>KB EN</strong></a>
+  <a href="kb/en/README.md"><img src="assets/icons/support.svg" width="18" alt=""> <strong>KB EN</strong></a>
   |
-  <a href="kb/tr/README.md"><strong>KB TR</strong></a>
+  <a href="kb/tr/README.md"><img src="assets/icons/support.svg" width="18" alt=""> <strong>KB TR</strong></a>
   |
-  <a href="SECURITY.md"><strong>Security</strong></a>
+  <a href="SECURITY.md"><img src="assets/icons/security.svg" width="18" alt=""> <strong>Security</strong></a>
   |
-  <a href="SUPPORT.md"><strong>Support</strong></a>
+  <a href="SUPPORT.md"><img src="assets/icons/evidence.svg" width="18" alt=""> <strong>Support</strong></a>
 </p>
 
 <p align="center">
@@ -100,17 +100,17 @@
   <sub>Sanitized product screenshot. Release binaries stay in GitHub Releases; private source code, signing material and customer data stay out of this repository.</sub>
 </p>
 
-## Enterprise Operating Contract
+## <img src="assets/icons/vault.svg" width="22" alt=""> Enterprise Operating Contract
 
 | Contract | How this repository enforces it |
 | --- | --- |
-| Customer-safe public surface | Only docs, sanitized screenshots, release links, knowledge-base articles and public policies live here. |
-| Release assets outside git | MSI files, ZIP packages, manifests and support scripts are delivered through GitHub Releases or the Chrome Web Store. |
-| Operator-first navigation | Quickstart, runbooks, update checks, extension flows, AD agent setup and support evidence paths are linked from the first screen. |
-| TR/EN parity | Turkish and English operator docs are kept as paired routes and validated before publication. |
-| Evidence without secrets | Support handoff asks for redacted context and blocks plaintext credentials, keys, databases, backups and customer data. |
+| <img src="assets/icons/security.svg" width="20" alt=""> Customer-safe public surface | Only docs, sanitized screenshots, release links, knowledge-base articles and public policies live here. |
+| <img src="assets/icons/release.svg" width="20" alt=""> Release assets outside git | MSI files, ZIP packages, manifests and support scripts are delivered through GitHub Releases or the Chrome Web Store. |
+| <img src="assets/icons/docs.svg" width="20" alt=""> Operator-first navigation | Quickstart, runbooks, update checks, extension flows, AD agent setup and support evidence paths are linked from the first screen. |
+| <img src="assets/icons/docs.svg" width="20" alt=""> TR/EN parity | Turkish and English operator docs are kept as paired routes and validated before publication. |
+| <img src="assets/icons/evidence.svg" width="20" alt=""> Evidence without secrets | Support handoff asks for redacted context and blocks plaintext credentials, keys, databases, backups and customer data. |
 
-## Release Trust Path
+## <img src="assets/icons/release.svg" width="22" alt=""> Release Trust Path
 
 ![PassMan signed update trust chain](assets/visuals/update-trust-chain.svg)
 
@@ -122,7 +122,7 @@
 | ![Evidence icon](assets/icons/evidence.svg) | Operator evidence is safe by default | Support paths ask for redacted evidence packs and forbid plaintext secrets, private keys, database files and customer data. |
 | ![Documentation icon](assets/icons/docs.svg) | TR/EN docs stay paired | Validation checks paired Turkish and English docs plus local links before publication. |
 
-## Start Here
+## <img src="assets/icons/download.svg" width="22" alt=""> Start Here
 
 Use this repository as the front desk for the supported PassMan application. It should answer the first operational question without exposing source code, secrets, signing material or customer data.
 
@@ -141,7 +141,7 @@ Use this repository as the front desk for the supported PassMan application. It 
 | Open or diagnose external shares | [EN sharing](docs/en/sharing-and-offline-decrypter.md) / [TR paylasim](docs/tr/sharing-and-offline-decrypter.md) | Selected records, files, expiry, max opens and offline decrypter flow are clear. |
 | Prepare a clean support handoff | [EN support evidence pack](docs/en/support-evidence-pack.md) / [TR destek kanıt paketi](docs/tr/support-evidence-pack.md) | Operators know exactly what to collect and what never to send. |
 
-## Enterprise Wiki Map
+## <img src="assets/icons/docs.svg" width="22" alt=""> Enterprise Wiki Map
 
 ![PassMan operator lifecycle](assets/visuals/operator-lifecycle.svg)
 
@@ -153,13 +153,13 @@ Use this repository as the front desk for the supported PassMan application. It 
 | Identity operator | [DC Agent](docs/en/active-directory-agent.md), [extension](docs/en/browser-extension.md), [operator runbook](docs/en/operator-runbook.md) | Are AD sync, browser pairing and user scope healthy? |
 | Turkish operator | [TR hızlı başlangıç](docs/tr/admin-quickstart.md), [TR runbook](docs/tr/operator-runbook.md), [TR bilgi bankası](kb/tr/README.md) | Aynı operasyon yolu Türkçe doküman setinde izlenir. |
 
-## What This Repository Is
+## <img src="assets/icons/vault.svg" width="22" alt=""> What This Repository Is
 
 This is the public GitHub home for PassMan Enterprise Vault Console. PassMan is now treated as a stable self-hosted Windows Server application, not an alpha or proof build. This repository contains customer-safe documentation, how-to guides, knowledge-base articles, sanitized product screenshots, release notes and links to GitHub Release assets.
 
 This repository does not contain private source code, internal signing material, customer data, databases, backups, certificates or release binaries committed into git.
 
-## Operator Path
+## <img src="assets/icons/update.svg" width="22" alt=""> Operator Path
 
 1. Download the latest MSI from GitHub Releases.
 2. Install it as Administrator on the approved Windows host.
@@ -170,7 +170,7 @@ This repository does not contain private source code, internal signing material,
 7. Configure PassMan DC Agent Service if AD scope is needed.
 8. Review backup, restore, update and support-evidence procedures.
 
-## Current Release Assets
+## <img src="assets/icons/release.svg" width="22" alt=""> Current Release Assets
 
 | Type | Asset | Purpose | Delivery |
 | --- | --- | --- | --- |
@@ -183,7 +183,7 @@ This repository does not contain private source code, internal signing material,
 
 PassMan-managed updates verify the signed manifest, release asset metadata, SHA-256 checksum and MSI signer thumbprint before starting the MSI flow. A global CA chain is not required for PassMan-managed update trust when the signed manifest pins the local release signer thumbprint. CA-backed or trusted-signing certificates remain recommended for Windows reputation and broad OS-level trust.
 
-## Component Versions
+## <img src="assets/icons/update.svg" width="22" alt=""> Component Versions
 
 | Component | Version | Update path |
 | --- | ---: | --- |
@@ -192,7 +192,7 @@ PassMan-managed updates verify the signed manifest, release asset metadata, SHA-
 | Offline Share Decrypter | 1.2.0 | Bundled support component and release ZIP |
 | PassMan DC Agent Service | 1.2.10 | Bundled support component and release script |
 
-## Documentation Gateway
+## <img src="assets/icons/docs.svg" width="22" alt=""> Documentation Gateway
 
 | Area | English | Turkish |
 | --- | --- | --- |
@@ -215,7 +215,7 @@ PassMan-managed updates verify the signed manifest, release asset metadata, SHA-
 | Support evidence pack | [Support evidence pack](docs/en/support-evidence-pack.md) | [Destek kanıt paketi](docs/tr/support-evidence-pack.md) |
 | FAQ | [FAQ](docs/en/faq.md) | [SSS](docs/tr/faq.md) |
 
-## Knowledge Base Gateway
+## <img src="assets/icons/support.svg" width="22" alt=""> Knowledge Base Gateway
 
 | Incident | English | Turkish |
 | --- | --- | --- |
@@ -229,7 +229,7 @@ PassMan-managed updates verify the signed manifest, release asset metadata, SHA-
 | External share package fails | [EN](kb/en/external-share-fails.md) | [TR](kb/tr/external-share-fails.md) |
 | Login creates 401 or 403 noise after unlock | [EN](kb/en/session-401-after-login.md) | [TR](kb/tr/session-401-after-login.md) |
 
-## Product Walkthrough
+## <img src="assets/icons/vault.svg" width="22" alt=""> Product Walkthrough
 
 All screenshots are captured from the actual PassMan application with sanitized demo data.
 
@@ -257,7 +257,7 @@ All screenshots are captured from the actual PassMan application with sanitized 
 
 </details>
 
-## Public Safety Boundary
+## <img src="assets/icons/security.svg" width="22" alt=""> Public Safety Boundary
 
 Never upload or paste these materials into this repository, public issues, comments or support threads:
 
@@ -268,7 +268,7 @@ Never upload or paste these materials into this repository, public issues, comme
 
 Use placeholders such as `<PASSMAN_URL>`, `<SERVER_HOST>`, `<AGENT_ID>`, `<AGENT_TOKEN>` and `<LICENSE_CODE>` in public examples.
 
-## Repository Validation
+## <img src="assets/icons/evidence.svg" width="22" alt=""> Repository Validation
 
 Run before publishing public documentation changes:
 
