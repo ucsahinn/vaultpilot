@@ -1,18 +1,18 @@
 # MSI kurulumu başarısız
 
-PassMan MSI tamamlanmıyor veya kurulum sonrası servis başlamıyorsa bu kontrol listesini kullanın.
+VaultPilot MSI tamamlanmıyor veya kurulum sonrası servis başlamıyorsa bu kontrol listesini kullanın.
 
 ## Kontroller
 
 1. MSI'ın Administrator olarak çalıştırıldığını doğrulayın.
 2. Yapılandırılan portun başka süreç tarafından kullanılmadığını kontrol edin.
-3. `PassManServer` Windows servis durumunu inceleyin.
-4. PassMan log dizinindeki installer loglarını kontrol edin.
+3. `VaultPilotServer` Windows servis durumunu inceleyin; yükseltilmiş hostlarda `PassManServer` legacy alias olarak görünebilir.
+4. VaultPilot log dizinindeki installer loglarını kontrol edin.
 5. Önceki servis durumu anlaşılmadan tekrar kurulum denemesi yapmayın.
 
 ## Support için güvenli veri
 
-- PassMan versiyonu.
+- VaultPilot versiyonu, yalnızca yükseltilmiş kurulumlarda legacy PassMan versiyonu.
 - Windows versiyonu.
 - MSI dosya adı ve imza durumu.
 - Redacted installer log bölümü.

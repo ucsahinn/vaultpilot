@@ -1,29 +1,33 @@
-# Active Directory and PassMan DC Agent Service
+# Active Directory and VaultPilot DC Agent Service
 
-PassMan DC Agent Service runs near the domain controller and synchronizes directory metadata into PassMan. It does not send the AD bind password or AD user passwords to PassMan.
+VaultPilot DC Agent Service runs near the domain controller and synchronizes directory metadata into VaultPilot. It does not send the AD bind password or AD user passwords to VaultPilot.
 
-![PassMan Active Directory sync tree](../../assets/screenshots/active-directory-sync-tree.png)
+![VaultPilot Active Directory sync tree](../../assets/screenshots/active-directory-sync-tree.png)
+
+Screenshot note: this capture is retained from the PassMan compatibility line as a temporary layout reference. It is not VaultPilot 2.0 release or branding evidence until the final 2.0 screenshots are recaptured.
 
 ## Service Identity
 
 | Item | Value |
 | --- | --- |
-| Service name | `PassManDCAgent` |
-| Display name | `PassMan DC Agent Service` |
-| Config file | `%ProgramData%\PassMan\ad-agent\passman-dc-agent.json` |
-| Service log | `%ProgramData%\PassMan\ad-agent\passman-dc-agent-service.log` |
-| Agent log | `%ProgramData%\PassMan\ad-agent\passman-dc-agent.log` |
+| Service name | `VaultPilotDCAgent` |
+| Display name | `VaultPilot DC Agent Service` |
+| Config file | `%ProgramData%\VaultPilot\ad-agent\vaultpilot-dc-agent.json` |
+| Service log | `%ProgramData%\VaultPilot\ad-agent\vaultpilot-dc-agent-service.log` |
+| Agent log | `%ProgramData%\VaultPilot\ad-agent\vaultpilot-dc-agent.log` |
 
 ## Enrollment Flow
 
-1. Open PassMan: Integrations -> Active Directory.
+1. Open VaultPilot: Integrations -> Active Directory.
 2. Create an agent record.
-3. Download `passman-ad-agent.ps1` from the release assets or the UI.
+3. Download `vaultpilot-dc-agent.ps1` from the release assets or the UI.
 4. Run the install command on the agent machine from an Administrator PowerShell.
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File "$env:USERPROFILE\Downloads\passman-ad-agent.ps1" -InstallService -PassManUrl "<PASSMAN_URL>" -AgentId "<AGENT_ID>" -AgentToken "<AGENT_TOKEN>" -TrustPassManCertificate
+powershell -NoProfile -ExecutionPolicy Bypass -File "$env:USERPROFILE\Downloads\vaultpilot-dc-agent.ps1" -InstallService -PassManUrl "<VAULTPILOT_URL>" -AgentId "<AGENT_ID>" -AgentToken "<AGENT_TOKEN>" -TrustPassManCertificate
 ```
+
+The generated 2.0 command may still use `-PassManUrl` and `-TrustPassManCertificate`. Treat those as compatibility flag names from the current agent script surface; do not rename them unless the release script adds VaultPilot aliases.
 
 The script asks for:
 
@@ -31,29 +35,29 @@ The script asks for:
 - AD bind username.
 - AD bind password through the local terminal prompt.
 
-The password is captured locally, not written to logs, and never posted to PassMan.
+The password is captured locally, not written to logs, and never posted to VaultPilot.
 
 ## Operations Commands
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\passman-ad-agent.ps1 -Status
+powershell -ExecutionPolicy Bypass -File .\vaultpilot-dc-agent.ps1 -Status
 ```
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\passman-ad-agent.ps1 -TailLog
+powershell -ExecutionPolicy Bypass -File .\vaultpilot-dc-agent.ps1 -TailLog
 ```
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\passman-ad-agent.ps1 -RepairService
+powershell -ExecutionPolicy Bypass -File .\vaultpilot-dc-agent.ps1 -RepairService
 ```
 
-For an installed service, use the Rotate token command from the existing provider card. The generated repair command keeps the same Windows service and can preserve or update the DC host and bind username. In PassMan 1.8.19 and newer, freshly generated or rotated agent tokens are authorized independently of server-secret/data-directory context drift on the server.
+For an installed service, use the Rotate token command from the existing provider card. The generated repair command keeps the same Windows service and can preserve or update the DC host and bind username. On published or internally approved VaultPilot 2.0.0 builds and newer, freshly generated or rotated agent tokens are authorized independently of server-secret/data-directory context drift on the server; the same fix first landed in the PassMan 1.8.19 compatibility line.
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\passman-ad-agent.ps1 -UninstallService
+powershell -ExecutionPolicy Bypass -File .\vaultpilot-dc-agent.ps1 -UninstallService
 ```
 
-## What Appears In PassMan
+## What Appears In VaultPilot
 
 After sync, the Active Directory tab shows:
 
@@ -69,15 +73,15 @@ After sync, the Active Directory tab shows:
 - Use a delegated account with the narrowest read scope that meets the sync need.
 - Keep the agent on a controlled Windows host close to the DC.
 - Rotate the agent token if the setup command was copied into an unsafe channel.
-- Use the PassMan UI to revoke or recreate the agent record when rebuilding the agent machine.
+- Use the VaultPilot UI to revoke or recreate the agent record when rebuilding the agent machine.
 
 ## Troubleshooting
 
 | Symptom | Action |
 | --- | --- |
 | Service does not install | Run Administrator PowerShell and inspect the service log. |
-| Wrapper compile fails | Use the latest `passman-ad-agent.ps1`; repair stops the old service and rebuilds the wrapper safely. |
-| PassMan URL unreachable | Test the URL from the agent machine and verify firewall/DNS. |
-| Install or repair returns 401 Unauthorized | Upgrade the PassMan server to 1.8.19 or newer, rotate the provider token, and rerun the displayed command. If it still fails, check the server log for the redacted reason: `provider_not_found`, `token_revoked`, `token_missing` or `token_mismatch`. |
+| Wrapper compile fails | Use the latest `vaultpilot-dc-agent.ps1`; repair stops the old service and rebuilds the wrapper safely. |
+| VaultPilot URL unreachable | Test the URL from the agent machine and verify firewall/DNS. |
+| Install or repair returns 401 Unauthorized | On the prepared 2.0 line, use a published or internally approved VaultPilot 2.0.0 or newer build. On older compatibility deployments, use PassMan 1.8.19 or newer. Then rotate the provider token and rerun the displayed command. If it still fails, check the server log for the redacted reason: `provider_not_found`, `token_revoked`, `token_missing` or `token_mismatch`. |
 | Sync shows zero objects | Confirm bind account scope and base DN. |
 | Agent connected but tree stale | Use Sync now, then check service and agent logs. |

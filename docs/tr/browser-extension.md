@@ -1,8 +1,10 @@
 # Chrome Web Store Eklentisi
 
-PassMan Chromium eklentisi; eşleştirilmiş cihazlarda kullanıcı aksiyonuyla autofill, login kaydetme, login güncelleme ve aktif site kayıt sayısı rozeti sağlar.
+VaultPilot Browser Vault Extension; eşleştirilmiş cihazlarda kullanıcı aksiyonuyla autofill, login kaydetme, login güncelleme ve aktif site kayıt sayısı rozeti sağlar.
 
-![PassMan browser extension management](../../assets/screenshots/browser-extension-management.png)
+![VaultPilot browser extension management](../../assets/screenshots/browser-extension-management.png)
+
+Screenshot notu: bu görsel PassMan compatibility line'dan geçici layout referansı olarak tutulur. Final 2.0 screenshotları yeniden alınana kadar VaultPilot 2.0 release veya branding kanıtı değildir.
 
 ## Chrome Web Store'dan Kurulum
 
@@ -16,13 +18,13 @@ Release ZIP yalnızca release arşivi, lab doğrulama, lokal geliştirme ve acil
 
 ## Eşleştirme Akışı
 
-1. PassMan Enterprise Vault Extension'ı Chrome Web Store'dan kurun.
+1. VaultPilot Browser Vault Extension'ı Chrome Web Store'dan kurun.
 2. Eklenti popup'ını açın.
-3. PassMan server origin değerini girin.
+3. VaultPilot server origin değerini girin.
 4. Kullanıcı adı, cihaz adı ve eklenti PIN'i girin.
 5. Eklenti kısa ömürlü bir pairing code üretir.
-6. Cihazı PassMan -> Tarayıcı eklentisi ekranından onaylayın.
-7. PassMan vault erişimini eklenti public key'i için wrap eder.
+6. Cihazı VaultPilot -> Tarayıcı eklentisi ekranından onaylayın.
+7. VaultPilot vault erişimini eklenti public key'i için wrap eder.
 
 ## Kullanıcı Deneyimi
 
@@ -40,7 +42,7 @@ Release ZIP yalnızca release arşivi, lab doğrulama, lokal geliştirme ve acil
 - Kalıcı eklenti storage'ı plaintext secret içermez.
 - Autofill snapshot'ları encrypted payload ve eklentiye wrap edilmiş key içerir.
 - Plaintext yalnızca kullanıcı aksiyonundan sonra aktif eklenti oturumunda çözülür.
-- Kaybolan veya güvenilmeyen cihazlar PassMan panelinden iptal edilmelidir.
+- Kaybolan veya güvenilmeyen cihazlar VaultPilot panelinden iptal edilmelidir.
 
 ## Operasyon Kontrol Listesi
 

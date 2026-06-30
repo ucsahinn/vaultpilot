@@ -4,7 +4,7 @@ Use this article when operators see repeated protected API responses such as `/a
 
 ## Expected Behavior In 1.6.0
 
-PassMan 1.6.0 verifies `/api/auth/me` after login before treating the vault as unlocked and keeps the authenticated browser session valid across refreshes for the intended 15-minute window. Protected workspace queries should start only after the browser session cookie is visible to the server. If the session cannot be verified, the UI locks and clears cached protected queries instead of retrying them repeatedly.
+VaultPilot keeps the compatibility behavior introduced in PassMan 1.6.0: it verifies `/api/auth/me` after login before treating the vault as unlocked and keeps the authenticated browser session valid across refreshes for the intended 15-minute window. Protected workspace queries should start only after the browser session cookie is visible to the server. If the session cannot be verified, the UI locks and clears cached protected queries instead of retrying them repeatedly.
 
 ## First Checks
 
@@ -14,7 +14,7 @@ PassMan 1.6.0 verifies `/api/auth/me` after login before treating the vault as u
 | Login response | `/api/auth/login` returns `200`. |
 | Session verification | `/api/auth/me` returns `200` after login. |
 | Protected APIs | Audit, secrets, extension, update, users and integrations return `200` after `/api/auth/me`. |
-| Browser mode | Cookies are not blocked for the PassMan host. |
+| Browser mode | Cookies are not blocked for the VaultPilot host. |
 | URL consistency | Login and workspace use the same host, scheme and port. |
 
 ## Common Causes
@@ -27,7 +27,7 @@ PassMan 1.6.0 verifies `/api/auth/me` after login before treating the vault as u
 
 ## Safe Evidence To Collect
 
-- PassMan version.
+- VaultPilot version, plus legacy PassMan version only for upgraded installs.
 - Host shape with the real host replaced by `<SERVER_HOST>`.
 - Whether `/api/auth/me` returns `200` after login.
 - Redacted sequence of API status codes.
@@ -39,8 +39,8 @@ Do not send master passwords, cookies, session token values, screenshots with re
 ## Resolution Path
 
 1. Upgrade to `1.6.0` or newer.
-2. Log out, close stale tabs and open PassMan from one canonical URL.
-3. Confirm browser cookies are allowed for the PassMan host.
+2. Log out, close stale tabs and open VaultPilot from one canonical URL.
+3. Confirm browser cookies are allowed for the VaultPilot host.
 4. Log in again and check whether `/api/auth/me` is `200` before protected routes.
 5. If a proxy is used, confirm it preserves host, scheme and cookie behavior.
 6. If the issue continues, send the safe evidence pack through a private support channel.

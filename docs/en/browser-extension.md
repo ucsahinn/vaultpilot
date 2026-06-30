@@ -1,8 +1,10 @@
-# Chrome Web Store Extension
+# VaultPilot Browser Vault Extension
 
-PassMan Chromium Extension provides paired-device access to vault records through user-action autofill, save-login prompts, update-login prompts and active-site record-count badges.
+VaultPilot Browser Vault Extension provides paired-device access to vault records through user-action autofill, save-login prompts, update-login prompts and active-site record-count badges.
 
-![PassMan browser extension management](../../assets/screenshots/browser-extension-management.png)
+![VaultPilot browser extension management](../../assets/screenshots/browser-extension-management.png)
+
+Screenshot note: this capture is retained from the PassMan compatibility line as a temporary layout reference. It is not VaultPilot 2.0 release or branding evidence until the final 2.0 screenshots are recaptured.
 
 ## Install From Chrome Web Store
 
@@ -16,13 +18,13 @@ The release ZIP is kept only for release archives, lab validation, local develop
 
 ## Pairing Flow
 
-1. Install PassMan Enterprise Vault Extension from the Chrome Web Store.
+1. Install VaultPilot Browser Vault Extension from the Chrome Web Store.
 2. Open the extension popup.
-3. Enter the PassMan server origin.
+3. Enter the VaultPilot server origin.
 4. Enter username, device name and extension PIN.
 5. The extension creates a short-lived pairing code.
-6. Approve the device in PassMan: Browser extension.
-7. PassMan wraps vault access for the extension public key.
+6. Approve the device in VaultPilot: Browser extension.
+7. VaultPilot wraps vault access for the extension public key.
 
 ## User Experience
 
@@ -40,7 +42,7 @@ The release ZIP is kept only for release archives, lab validation, local develop
 - Persistent extension storage does not contain plaintext secrets.
 - Autofill snapshots contain encrypted payloads and extension-wrapped keys.
 - Plaintext is decrypted only in the active extension session after user action.
-- Lost or untrusted devices should be revoked from the PassMan panel.
+- Lost or untrusted devices should be revoked from the VaultPilot panel.
 
 ## Operations Checklist
 

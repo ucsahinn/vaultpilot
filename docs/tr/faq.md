@@ -1,8 +1,8 @@
 # SSS
 
-## PassMan bulut servisi mi?
+## VaultPilot bulut servisi mi?
 
-Hayır. PassMan self-hosted Windows Server uygulamasıdır.
+Hayır. VaultPilot self-hosted Windows Server uygulamasıdır.
 
 ## Ana parola sunucuya gider mi?
 
@@ -14,7 +14,7 @@ Hayır. Public repo dokümantasyon, release notları ve GitHub Release asset'ler
 
 ## Local signer güvenli mi?
 
-PassMan-managed update zinciri için imzalı manifest MSI signer thumbprint'ini pin'liyorsa local signer kabul edilebilir. Windows SmartScreen itibarı için CA-backed veya trusted signing önerilir.
+VaultPilot-managed update zinciri için imzalı manifest MSI signer thumbprint'ini pin'liyorsa local signer kabul edilebilir. Windows SmartScreen itibarı için CA-backed veya trusted signing önerilir.
 
 ## Dosyalar paylaşılabilir mi?
 

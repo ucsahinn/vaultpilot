@@ -6,7 +6,7 @@ Use this checklist to prepare a clean, public-safe support handoff. It keeps the
 
 | Field | Example format |
 | --- | --- |
-| PassMan version | `1.8.22` |
+| VaultPilot version | `2.0.0` or the exact published version shown in the console |
 | Surface | Login, installer, update, extension, AD sync, sharing, backup, license, HTTPS or audit. |
 | Environment | Windows Server version and browser family. |
 | Impact | One user, all users, one vault, one extension device, one AD provider, one update job. |
@@ -29,7 +29,7 @@ Use this checklist to prepare a clean, public-safe support handoff. It keeps the
 
 Replace real values with placeholders:
 
-- `<PASSMAN_URL>`
+- `<VAULTPILOT_URL>`
 - `<SERVER_HOST>`
 - `<USER>`
 - `<VAULT>`

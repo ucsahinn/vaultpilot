@@ -1,10 +1,10 @@
 # Operasyon Runbook
 
-Bu runbook, go-live sonrası PassMan işletimi için tekrar edilebilir enterprise operasyon ritmini tanımlar.
+Bu runbook, go-live sonrası VaultPilot işletimi için tekrar edilebilir enterprise operasyon ritmini tanımlar.
 
 ## Operasyon İlkeleri
 
-- PassMan sunucusunu bulut bağımlılığı değil, lokal güvenlik sistemi olarak yönet.
+- VaultPilot sunucusunu bulut bağımlılığı değil, lokal güvenlik sistemi olarak yönet.
 - Sağlık durumunu önce konsoldan doğrula; gerekiyorsa yalnızca redakte edilmiş sunucu kanıtı topla.
 - Private source code, signing key, customer backup ve database dosyalarını bu public repodan uzak tut.
 - Public indirmeler için GitHub Releases kullan; update asset güveni için imzalı manifesti esas al.
@@ -14,7 +14,7 @@ Bu runbook, go-live sonrası PassMan işletimi için tekrar edilebilir enterpris
 
 | Kontrol | Nerede | Sağlıklı sinyal |
 | --- | --- | --- |
-| Servis erişimi | Tarayıcı ve Windows service state | Konsol yüklenir ve `PassMan Server` çalışır. |
+| Servis erişimi | Tarayıcı ve Windows service state | Konsol yüklenir ve `VaultPilot Server` çalışır. |
 | Güvenlik duruşu | Overview | Aksiyonlar kapalıdır veya sahiplenilmiştir. |
 | Audit zinciri | Audit view | Son olaylar beklenen chain durumunu gösterir. |
 | Lisans | License ekranı | Aktif durum, kapasite ve süre beklenendir. |

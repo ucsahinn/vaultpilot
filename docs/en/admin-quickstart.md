@@ -6,11 +6,11 @@ Use this guide when the goal is to move from public release download to a health
 
 | Step | Action | Proof |
 | --- | --- | --- |
-| 1 | Download `PassMan-1.8.22-x64.msi` from the latest GitHub Release. | File name, file size and release tag match [release assets](release-asset-verification.md). |
-| 2 | Verify the signed update manifest before trusting the package. | `passman-update.json` lists version `1.8.22`, MSI hash, size and signer thumbprint. |
-| 3 | Install the MSI from an elevated Windows session. | `PassMan Server` service exists and is running. |
+| 1 | Download `VaultPilot-2.0.0-x64.msi` from the `v2.0.0` GitHub Release after publication. | File name, file size and release tag match [release assets](release-asset-verification.md). |
+| 2 | Verify the signed update manifest before trusting the package. | `vaultpilot-update.json` lists version `2.0.0`, MSI hash, size and signer thumbprint. |
+| 3 | Install the MSI from an elevated Windows session. | `VaultPilot Server` service exists and is running; upgraded hosts may still expose legacy PassMan aliases for compatibility. |
 | 4 | Open `https://<SERVER_HOST>:1903`. | The server responds; managed self-signed HTTPS may show a browser certificate warning until a trusted certificate is configured. |
-| 5 | Create the first owner profile and unlock the default vault through HTTPS or `localhost`. | Owner appears in Users and the first vault is available. |
+| 5 | Create the first owner profile and unlock the default vault through HTTPS. `localhost` is acceptable only for local server validation. | Owner appears in Users and the first vault is available. |
 | 6 | Apply the license. | License page shows active state, capacity and expiry. |
 | 7 | Configure public host and HTTPS. | Browser reaches the intended host without a mismatch warning. |
 | 8 | Enable 2FA for the owner. | Lock and unlock require master password plus authenticator code. |
@@ -22,10 +22,10 @@ Use this guide when the goal is to move from public release download to a health
 | Requirement | Baseline |
 | --- | --- |
 | Host | Windows Server or approved Windows service host. |
-| Port | Default HTTP port `1903`, reachable by intended operators. |
+| Port | Default public HTTPS port `1903`, reachable by intended operators. |
 | Browser | Chromium-family browser for extension pairing; modern browser for console use. |
 | Permissions | Administrator rights for MSI install and update. |
-| Data model | Local PassMan data directory; do not place the database in this public repo. |
+| Data model | Local VaultPilot data directory; do not place the database in this public repo. Legacy PassMan data paths remain upgrade aliases. |
 | Backup | Operator-controlled encrypted backup location outside the install directory. |
 
 ## First Validation Commands
@@ -33,7 +33,7 @@ Use this guide when the goal is to move from public release download to a health
 Run these from an elevated PowerShell session on the server:
 
 ```powershell
-sc.exe query PassManServer
+sc.exe query VaultPilotServer
 netstat -ano | findstr ":1903"
 ```
 

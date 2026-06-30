@@ -1,18 +1,18 @@
 # MSI installation fails
 
-Use this checklist when the PassMan MSI does not complete or the service does not start after install.
+Use this checklist when the VaultPilot MSI does not complete or the service does not start after install.
 
 ## Checks
 
 1. Confirm the MSI was launched as Administrator.
 2. Confirm the configured port is not already in use.
-3. Check the `PassManServer` Windows service state.
-4. Review installer logs under the PassMan log directory.
+3. Check the `VaultPilotServer` Windows service state; upgraded hosts may still expose `PassManServer` as a legacy alias.
+4. Review installer logs under `C:\ProgramData\VaultPilot\logs`; upgraded hosts may still have legacy `C:\ProgramData\PassMan\logs` evidence.
 5. Re-run only after the previous service state is understood.
 
 ## Safe data for support
 
-- PassMan version.
+- VaultPilot version, plus the legacy PassMan version only for upgraded installs.
 - Windows version.
 - MSI file name and signature status.
 - Redacted installer log excerpt.

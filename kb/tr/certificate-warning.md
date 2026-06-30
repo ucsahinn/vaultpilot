@@ -5,7 +5,7 @@ HTTPS etkinleştiğinde kullanıcılar tarayıcı uyarısı görüyorsa bunu kul
 ## Kontroller
 
 1. Kullanıcıların açtığı host adı sertifika SAN içinde yer almalı.
-2. PFX/P12 paketi PassMan servisi tarafından okunabilir olmalı.
+2. PFX/P12 paketi VaultPilot servisi tarafından okunabilir olmalı.
 3. Yapılandırılan port açık olmalı.
 4. Sertifika süresi dolmamış olmalı.
 5. Private sertifika materyali doküman, log veya ticket içine konmamalı.

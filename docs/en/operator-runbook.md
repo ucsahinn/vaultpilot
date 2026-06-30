@@ -1,10 +1,10 @@
 # Operator Runbook
 
-This runbook is the recurring operating rhythm for PassMan after go-live. It is written for teams that need a repeatable enterprise routine rather than ad hoc checks.
+This runbook is the recurring operating rhythm for VaultPilot after go-live. It is written for teams that need a repeatable enterprise routine rather than ad hoc checks.
 
 ## Operating Principles
 
-- Treat the PassMan server as a local security system, not as a cloud dependency.
+- Treat the VaultPilot server as a local security system, not as a cloud dependency.
 - Verify health from the console first, then collect redacted server evidence only when needed.
 - Keep private source code, signing keys, customer backups and databases out of this public repository.
 - Use GitHub Releases for public downloads; use the signed manifest to trust update assets.
@@ -14,7 +14,7 @@ This runbook is the recurring operating rhythm for PassMan after go-live. It is 
 
 | Check | Where | Healthy signal |
 | --- | --- | --- |
-| Service reachability | Browser and Windows service state | Console loads and `PassMan Server` is running. |
+| Service reachability | Browser and Windows service state | Console loads and `VaultPilot Server` is running. |
 | Security posture | Overview | Known actions are either closed or owned. |
 | Audit chain | Audit view | Latest events show expected chain state. |
 | License | License page | Active state, capacity and expiry are expected. |

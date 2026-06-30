@@ -1,9 +1,10 @@
 {
-  "name": "passman-public-docs",
-  "version": "1.8.22",
+  "name": "vaultpilot-public-docs",
+  "version": "2.0.0",
   "private": true,
-  "description": "Public GitHub documentation and release hub for PassMan Enterprise Vault Console.",
+  "description": "Public GitHub documentation and release hub for VaultPilot Enterprise Vault Console.",
   "scripts": {
-    "validate": "node scripts/validate-docs.mjs"
+    "validate": "node scripts/validate-docs.mjs",
+    "validate:staged": "node scripts/validate-docs.mjs --staged"
   }
 }

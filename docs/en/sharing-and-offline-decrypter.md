@@ -1,12 +1,14 @@
 # Sharing and Offline Decrypter
 
-PassMan sharing is selected-record first. Operators do not need to share an entire vault; only the chosen records and files are packaged.
+VaultPilot sharing is selected-record first. Operators do not need to share an entire vault; only the chosen records and files are packaged.
 
-![PassMan sharing package flow](../../assets/screenshots/sharing-package-flow.png)
+![VaultPilot sharing package flow](../../assets/screenshots/sharing-package-flow.png)
+
+Screenshot note: captures on this page are retained from the PassMan compatibility line as temporary layout references. They are not VaultPilot 2.0 release or branding evidence until the final 2.0 screenshots are recaptured.
 
 ## Internal Sharing
 
-Internal sharing is for registered PassMan users.
+Internal sharing is for registered VaultPilot users.
 
 - Recipient identity and public-key state are checked.
 - Selected records are wrapped for the recipient.
@@ -15,7 +17,7 @@ Internal sharing is for registered PassMan users.
 
 ## External Sharing
 
-External sharing creates an offline package for recipients outside the PassMan server.
+External sharing creates an offline package for recipients outside the VaultPilot server.
 
 Required policy decisions:
 
@@ -39,9 +41,9 @@ After a package is completed, the Sharing screen should remain actionable:
 
 ## Offline Decrypter
 
-![PassMan offline share decrypter](../../assets/screenshots/offline-share-decrypter.png)
+![VaultPilot offline share decrypter](../../assets/screenshots/offline-share-decrypter.png)
 
-The HTML tool inside `passman-share-decrypter.zip` runs fully in the browser.
+The HTML tool inside `vaultpilot-share-decrypter.zip` runs fully in the browser.
 
 Trust indicators:
 

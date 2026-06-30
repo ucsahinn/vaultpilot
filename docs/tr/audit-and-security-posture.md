@@ -1,6 +1,6 @@
 # Denetim ve Güvenlik Duruşu
 
-PassMan Genel Bakış ekranı sistem sağlığı, güvenlik skoru ve aksiyon gereken riskleri gösterir.
+VaultPilot Genel Bakış ekranı sistem sağlığı, güvenlik skoru ve aksiyon gereken riskleri gösterir.
 
 ## Skor Sinyalleri
 

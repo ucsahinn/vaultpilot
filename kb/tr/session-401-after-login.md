@@ -4,7 +4,7 @@ Operatörler girişten hemen sonra `/api/audit`, `/api/secrets/list`, `/api/upda
 
 ## 1.6.0 İçin Beklenen Davranış
 
-PassMan 1.6.0, girişten sonra kasayı açık saymadan önce `/api/auth/me` doğrulaması yapar ve yenileme sonrası authenticated browser session değerini hedeflenen 15 dakikalık pencere boyunca korur. Protected workspace queryleri, tarayıcı session cookie sunucu tarafından görüldükten sonra başlamalıdır. Session doğrulanamazsa UI kilitlenir ve cached protected queryler temizlenir; aynı istekler tekrar tekrar retry edilmez.
+VaultPilot, PassMan 1.6.0 ile gelen uyumluluk davranışını korur: girişten sonra kasayı açık saymadan önce `/api/auth/me` doğrulaması yapar ve yenileme sonrası authenticated browser session değerini hedeflenen 15 dakikalık pencere boyunca korur. Protected workspace queryleri, tarayıcı session cookie sunucu tarafından görüldükten sonra başlamalıdır. Session doğrulanamazsa UI kilitlenir ve cached protected queryler temizlenir; aynı istekler tekrar tekrar retry edilmez.
 
 ## İlk Kontroller
 
@@ -14,7 +14,7 @@ PassMan 1.6.0, girişten sonra kasayı açık saymadan önce `/api/auth/me` doğ
 | Login response | `/api/auth/login` `200` döner. |
 | Session doğrulama | Login sonrası `/api/auth/me` `200` döner. |
 | Protected API'ler | Audit, secrets, extension, update, users ve integrations `/api/auth/me` sonrası `200` döner. |
-| Browser modu | PassMan hostu için cookie engellenmez. |
+| Browser modu | VaultPilot hostu için cookie engellenmez. |
 | URL tutarlılığı | Login ve workspace aynı host, scheme ve port üzerinden kullanılır. |
 
 ## Yaygın Nedenler
@@ -27,7 +27,7 @@ PassMan 1.6.0, girişten sonra kasayı açık saymadan önce `/api/auth/me` doğ
 
 ## Güvenli Kanıt
 
-- PassMan version.
+- VaultPilot versiyonu, yalnızca yükseltilmiş kurulumlarda legacy PassMan versiyonu.
 - Gerçek host yerine `<SERVER_HOST>` kullanılan host şekli.
 - Login sonrası `/api/auth/me` sonucu `200` mü.
 - Redakte edilmiş API status sırası.
@@ -39,8 +39,8 @@ Ana parola, cookie, session token değeri, gerçek kayıt içeren screenshot vey
 ## Çözüm Yolu
 
 1. `1.6.0` veya daha yeni sürüme yükselt.
-2. Logout yap, stale tabları kapat ve PassMan'i tek canonical URL üzerinden aç.
-3. Browser'ın PassMan hostu için cookie kabul ettiğini doğrula.
+2. Logout yap, stale tabları kapat ve VaultPilot'? tek canonical URL üzerinden aç.
+3. Browser'ın VaultPilot hostu için cookie kabul ettiğini doğrula.
 4. Tekrar login ol ve protected route öncesi `/api/auth/me` `200` mü kontrol et.
 5. Proxy kullanılıyorsa host, scheme ve cookie davranışını koruduğunu doğrula.
 6. Sorun sürerse güvenli kanıt paketini private support kanalından ilet.

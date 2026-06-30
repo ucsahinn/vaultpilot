@@ -6,7 +6,7 @@ Bu checklist, temiz ve public-safe support aktarımı hazırlamak için kullanı
 
 | Alan | Örnek format |
 | --- | --- |
-| PassMan version | `1.8.22` |
+| VaultPilot version | `2.0.0` veya konsolda görünen kesin yayınlı sürüm |
 | Yüzey | Login, installer, update, extension, AD sync, sharing, backup, license, HTTPS veya audit. |
 | Ortam | Windows Server version ve browser family. |
 | Etki | Tek kullanıcı, tüm kullanıcılar, tek vault, tek extension device, tek AD provider, tek update job. |
@@ -29,7 +29,7 @@ Bu checklist, temiz ve public-safe support aktarımı hazırlamak için kullanı
 
 Gerçek değerleri placeholder ile değiştir:
 
-- `<PASSMAN_URL>`
+- `<VAULTPILOT_URL>`
 - `<SERVER_HOST>`
 - `<USER>`
 - `<VAULT>`

@@ -6,19 +6,19 @@ Check:
 
 - Is the MSI running as Administrator?
 - Is the port already in use?
-- Is there an installer log under `C:\ProgramData\PassMan\logs`?
+- Is there an installer log under `C:\ProgramData\VaultPilot\logs`? Upgraded hosts may also have legacy `C:\ProgramData\PassMan\logs` evidence.
 - What is the Windows service state?
 
 ## Server does not open
 
 1. Check `https://127.0.0.1:1903/api/profile` on the server.
-2. Check the `PassManServer` service state.
+2. Check the `VaultPilotServer` service state; upgraded hosts may still expose `PassManServer` as a legacy alias.
 3. Verify firewall and port routing.
 4. Review server logs with sensitive values redacted.
 
 ## DC Agent cannot connect
 
-- Test `<PASSMAN_URL>` from the agent machine.
+- Test `<VAULTPILOT_URL>` from the agent machine.
 - Use `-Status` to view config, service, and log state.
 - Use a domain-qualified bind username.
 - Do not write token or password values to logs.
@@ -28,7 +28,7 @@ Check:
 - The pairing code may have expired.
 - The wrong username may have been entered.
 - The user may not have an unlocked vault.
-- The device may still be waiting for approval in PassMan.
+- The device may still be waiting for approval in VaultPilot.
 
 ## Update stays around 76 percent
 

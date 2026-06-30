@@ -1,8 +1,8 @@
-# PassMan Documentation Gateway
+# VaultPilot Documentation Gateway
 
-This folder is the public-safe operator wiki for PassMan Enterprise Vault Console. Choose a language home first, then follow the lifecycle path that matches the job.
+This folder is the public-safe operator wiki for VaultPilot Enterprise Vault Console. Choose a language home first, then follow the lifecycle path that matches the job.
 
-Current supported public release: **PassMan Enterprise Vault Console 1.8.22**.
+Prepared release: **VaultPilot Enterprise Vault Console 2.0.0**. As of June 30, 2026, the latest verified published GitHub Release is still **PassMan Enterprise Vault Console 1.8.21**.
 
 | Language | Home | Best for |
 | --- | --- | --- |
@@ -11,7 +11,7 @@ Current supported public release: **PassMan Enterprise Vault Console 1.8.22**.
 
 ## Operator Lifecycle
 
-![PassMan operator lifecycle](../assets/visuals/operator-lifecycle.svg)
+![VaultPilot operator lifecycle](../assets/visuals/operator-lifecycle.svg)
 
 | Stage | English | Turkish |
 | --- | --- | --- |
@@ -19,7 +19,7 @@ Current supported public release: **PassMan Enterprise Vault Console 1.8.22**.
 | Install | [Admin quickstart](en/admin-quickstart.md), [Windows Server installation](en/install-windows-server.md), [First run, owner and license](en/first-run-owner-license.md) | [Yönetici hızlı başlangıç](tr/admin-quickstart.md), [Windows Server kurulumu](tr/install-windows-server.md), [İlk kurulum, owner ve lisans](tr/first-run-owner-license.md) |
 | Publish | [Public host and HTTPS](en/public-host-https-certificate.md), [Browser extension](en/browser-extension.md) | [Public host ve HTTPS](tr/public-host-https-certificate.md), [Tarayıcı eklentisi](tr/browser-extension.md) |
 | Secure | [Audit and security posture](en/audit-and-security-posture.md), [Active Directory agent](en/active-directory-agent.md) | [Denetim ve güvenlik duruşu](tr/audit-and-security-posture.md), [Active Directory ajanı](tr/active-directory-agent.md) |
-| Operate | [Operator runbook](en/operator-runbook.md), [Sharing and offline decrypter](en/sharing-and-offline-decrypter.md), [Backups and restore](en/backups-and-restore.md), [Update Center](en/update-center.md) | [Operasyon runbook](tr/operator-runbook.md), [Paylaşım ve offline decrypter](tr/sharing-and-offline-decrypter.md), [Yedekleme ve geri yükleme](tr/backups-and-restore.md), [Güncelleme Merkezi](tr/update-center.md) |
+| Operate | [Operator runbook](en/operator-runbook.md), [Sharing and offline decrypter](en/sharing-and-offline-decrypter.md), [Backups and restore](en/backups-and-restore.md), [Uninstall and rollback](en/uninstall-rollback-data-retention.md), [Update Center](en/update-center.md) | [Operasyon runbook](tr/operator-runbook.md), [Paylaşım ve offline decrypter](tr/sharing-and-offline-decrypter.md), [Yedekleme ve geri yükleme](tr/backups-and-restore.md), [Kaldırma ve rollback](tr/uninstall-rollback-data-retention.md), [Güncelleme Merkezi](tr/update-center.md) |
 | Verify release | [Release asset verification](en/release-asset-verification.md), [Release notes](../RELEASES.md) | [Release asset doğrulama](tr/release-asset-verification.md), [Release notları](../RELEASES.md) |
 | Diagnose | [Support evidence pack](en/support-evidence-pack.md), [Troubleshooting](en/troubleshooting.md), [Knowledge base](../kb/en/README.md), [Support policy](../SUPPORT.md) | [Destek kanıt paketi](tr/support-evidence-pack.md), [Sorun giderme](tr/troubleshooting.md), [Bilgi bankası](../kb/tr/README.md), [Destek politikası](../SUPPORT.md) |
 
@@ -34,8 +34,9 @@ Current supported public release: **PassMan Enterprise Vault Console 1.8.22**.
 | Public host and HTTPS | [EN](en/public-host-https-certificate.md) | [TR](tr/public-host-https-certificate.md) | Hostname, certificate package upload and browser validation. |
 | Update Center | [EN](en/update-center.md) | [TR](tr/update-center.md) | Signed manifest, MSI updates and component release notes. |
 | Release asset verification | [EN](en/release-asset-verification.md) | [TR](tr/release-asset-verification.md) | Manual release asset, checksum, signer and manifest verification. |
+| Uninstall, data retention and rollback | [EN](en/uninstall-rollback-data-retention.md) | [TR](tr/uninstall-rollback-data-retention.md) | Safe service removal, data preservation, purge boundary and rollback checks. |
 | Browser extension | [EN](en/browser-extension.md) | [TR](tr/browser-extension.md) | Pairing, badge counts, autofill and save/update prompts. |
-| Active Directory agent | [EN](en/active-directory-agent.md) | [TR](tr/active-directory-agent.md) | PassMan DC Agent Service install, repair, logs and sync tree. |
+| Active Directory agent | [EN](en/active-directory-agent.md) | [TR](tr/active-directory-agent.md) | VaultPilot DC Agent Service install, repair, logs and sync tree. |
 | Sharing and offline decrypter | [EN](en/sharing-and-offline-decrypter.md) | [TR](tr/sharing-and-offline-decrypter.md) | Internal sharing, external packages, files, expiry and usage limits. |
 | Backups and restore | [EN](en/backups-and-restore.md) | [TR](tr/backups-and-restore.md) | Encrypted backup export, integrity and restore checks. |
 | Operator runbook | [EN](en/operator-runbook.md) | [TR](tr/operator-runbook.md) | Daily, weekly, monthly and incident operating rhythm. |
@@ -47,6 +48,8 @@ Current supported public release: **PassMan Enterprise Vault Console 1.8.22**.
 
 ## Visual References
 
+Screenshots marked as fresh 2.0 captures were taken from an isolated local VaultPilot 2.0 runtime on June 30, 2026 with synthetic data only. Remaining screenshots are legacy PassMan compatibility-line temporary layout references and must not be used as 2.0 release or asset evidence.
+
 | Surface | Asset |
 | --- | --- |
 | ![Documentation icon](../assets/icons/docs.svg)<br>Operator lifecycle | [operator-lifecycle.svg](../assets/visuals/operator-lifecycle.svg) |
@@ -55,8 +58,9 @@ Current supported public release: **PassMan Enterprise Vault Console 1.8.22**.
 | ![Extension icon](../assets/icons/extension.svg)<br>Browser extension demo | [extension-demo.svg](../assets/visuals/extension-demo.svg) |
 | ![Directory icon](../assets/icons/directory.svg)<br>Active Directory topology | [ad-sync-tree.svg](../assets/visuals/ad-sync-tree.svg) |
 | ![Share icon](../assets/icons/share.svg)<br>Share lifecycle | [share-lifecycle.svg](../assets/visuals/share-lifecycle.svg) |
-| ![Vault icon](../assets/icons/vault.svg)<br>Security dashboard | [overview-security-posture.png](../assets/screenshots/overview-security-posture.png) |
-| ![Vault icon](../assets/icons/vault.svg)<br>Secret records | [passwords-record-list.png](../assets/screenshots/passwords-record-list.png) |
+| ![Vault icon](../assets/icons/vault.svg)<br>Login lock screen (fresh 2.0 capture) | [login-lock-screen.png](../assets/screenshots/login-lock-screen.png) |
+| ![Vault icon](../assets/icons/vault.svg)<br>Security dashboard (fresh 2.0 capture) | [overview-security-posture.png](../assets/screenshots/overview-security-posture.png) |
+| ![Vault icon](../assets/icons/vault.svg)<br>Secret records (fresh 2.0 capture) | [passwords-record-list.png](../assets/screenshots/passwords-record-list.png) |
 | ![Share icon](../assets/icons/share.svg)<br>Sharing lifecycle | [sharing-package-flow.png](../assets/screenshots/sharing-package-flow.png) |
 | ![Directory icon](../assets/icons/directory.svg)<br>AD sync tree | [active-directory-sync-tree.png](../assets/screenshots/active-directory-sync-tree.png) |
 | ![Evidence icon](../assets/icons/evidence.svg)<br>Offline decrypter | [offline-share-decrypter.png](../assets/screenshots/offline-share-decrypter.png) |

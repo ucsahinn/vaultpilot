@@ -4,7 +4,7 @@
 
 Collect only redacted operational information:
 
-- PassMan version.
+- VaultPilot/PassMan version shown in the console.
 - Windows Server version.
 - MSI file name and signature status.
 - Configured host and port.

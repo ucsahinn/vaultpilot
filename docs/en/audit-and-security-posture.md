@@ -1,6 +1,6 @@
 # Audit and Security Posture
 
-The PassMan Overview screen shows system health, security score, and risks that need action.
+The VaultPilot Overview screen shows system health, security score, and risks that need action.
 
 ## Score Signals
 

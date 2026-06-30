@@ -2,7 +2,7 @@
 
 ## İlk Owner Profili
 
-İlk profil PassMan owner hesabıdır. Bu hesap kullanıcı, lisans, güvenlik ve sistem ayarlarını yönetir.
+İlk profil VaultPilot owner hesabıdır. Bu hesap kullanıcı, lisans, güvenlik ve sistem ayarlarını yönetir.
 
 Öneriler:
 
@@ -13,7 +13,7 @@
 
 ## Lisans
 
-PassMan offline lisans modeli kullanır. Sunucu lisans kodunu public doğrulama anahtarıyla doğrular; private imza materyali müşteri sunucusuna konmaz.
+VaultPilot offline lisans modeli kullanır. Sunucu lisans kodunu public doğrulama anahtarıyla doğrular; private imza materyali müşteri sunucusuna konmaz.
 
 Lisans ekranında:
 

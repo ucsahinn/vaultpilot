@@ -2,7 +2,7 @@
 
 ## First Owner Profile
 
-The first profile becomes the PassMan owner account. This account manages users, license, security, and system settings.
+The first profile becomes the VaultPilot owner account. This account manages users, license, security, and system settings.
 
 Recommendations:
 
@@ -13,7 +13,7 @@ Recommendations:
 
 ## License
 
-PassMan uses offline license verification. The server verifies the license code with a public verification key; private signing material is never installed on customer servers.
+VaultPilot uses offline license verification. The server verifies the license code with a public verification key; private signing material is never installed on customer servers.
 
 The License screen shows:
 

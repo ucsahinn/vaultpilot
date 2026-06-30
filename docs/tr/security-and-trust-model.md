@@ -1,19 +1,19 @@
 # Güvenlik Ve Güven Modeli
 
-Bu public sayfa, private implementasyon veya kaynak kod açığa çıkarmadan PassMan güvenlik modelini operatör seviyesinde açıklar.
+Bu public sayfa, private implementasyon veya kaynak kod açığa çıkarmadan VaultPilot güvenlik modelini operatör seviyesinde açıklar.
 
 ## Güven Sınırları
 
 | Sınır | Üzerinden geçen veri | Operatör kuralı |
 | --- | --- | --- |
-| Tarayıcıdan PassMan sunucusuna | Authenticated API istekleri ve şifreli vault materyali. | Production erişimde HTTPS kullan; tarayıcı oturumunu gözetimsiz bırakma. |
-| PassMan sunucusundan SQLite'a | Şifreli secret payloadları ve operasyonel metadata. | Database kopyalama veya public paylaşım yapma; şifreli backup akışını kullan. |
+| Tarayıcıdan VaultPilot sunucusuna | Authenticated API istekleri ve şifreli vault materyali. | Production erişimde HTTPS kullan; tarayıcı oturumunu gözetimsiz bırakma. |
+| VaultPilot sunucusundan SQLite'a | Şifreli secret payloadları ve operasyonel metadata. | Database kopyalama veya public paylaşım yapma; şifreli backup akışını kullan. |
 | Update Center'dan GitHub Releases'a | İmzalı manifest ve release assetleri. | Yalnızca manifest imzası, hash, boyut ve signer metadata doğrulanan assetlere güven. |
 | Browser extension'dan sunucuya | Pairing code, wrapped vault key ve şifreli snapshot. | Yalnızca onaylı cihazları eşleştir; eski cihazları revoke et. |
 | DC Agent'dan sunucuya | Directory metadata ve agent heartbeat. | AD bind parolası agent setup akışında lokal kalır; public support'a gönderilmez. |
 | Dış paylaşım | Şifreli seçili kayıt paketi ve passphrase korumalı açma akışı. | Yalnızca seçili kayıtları paylaş; passphrase'i ayrı kanaldan ilet. |
 
-## PassMan Neyi Korur
+## VaultPilot Neyi Korur
 
 - Parola kayıtları, credential, API key, güvenli not, sertifika ve dosya tabanlı secretlar.
 - Aktif tarayıcı oturumu boyunca vault unlock materyali.
@@ -33,14 +33,14 @@ Bu public sayfa, private implementasyon veya kaynak kod açığa çıkarmadan Pa
 
 ## Update Güven Zinciri
 
-1. Operatör `passman-update.json` dosyasını indirir veya kontrol eder.
-2. PassMan manifest imzasını doğrular.
-3. PassMan release URL'lerinin izinli GitHub release hostlarında kaldığını doğrular.
-4. PassMan MSI SHA-256 ve dosya boyutunu karşılaştırır.
-5. PassMan manifestteki MSI signer thumbprint değerini doğrular.
-6. Ancak bundan sonra MSI, PassMan-managed update yolu için güvenilir kabul edilir.
+1. Operatör `vaultpilot-update.json` dosyasını indirir veya kontrol eder.
+2. VaultPilot manifest imzasını doğrular.
+3. VaultPilot release URL'lerinin izinli GitHub release hostlarında kaldığını doğrular.
+4. VaultPilot MSI SHA-256 ve dosya boyutunu karşılaştırır.
+5. VaultPilot manifestteki MSI signer thumbprint değerini doğrular.
+6. Ancak bundan sonra MSI, VaultPilot-managed update yolu için güvenilir kabul edilir.
 
-CA-backed veya trusted-signing sertifikalar Windows reputation için önerilir. PassMan-managed update güveni, imzalı manifest local signer thumbprint değerini pinlediğinde local signer kabul edebilir.
+CA-backed veya trusted-signing sertifikalar Windows reputation için önerilir. VaultPilot-managed update güveni, imzalı manifest local signer thumbprint değerini pinlediğinde local signer kabul edebilir.
 
 ## Public Kanıt Kuralı
 

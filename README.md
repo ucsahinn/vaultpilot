@@ -1,28 +1,56 @@
-<h1 align="center">PassMan Enterprise Vault Console</h1>
+<h1 align="center"><img src="assets/icons/vault.svg" width="34" alt=""> VaultPilot Enterprise Vault Console</h1>
 
 <p align="center">
-  <strong>Production-ready self-hosted password manager release hub, operator wiki, knowledge base and support boundary for PassMan.</strong>
+  <strong>Public release hub, operator wiki, knowledge base and support boundary for the self-hosted VaultPilot password and secrets manager.</strong>
 </p>
 
 <p align="center">
-  <a href="https://github.com/ucsahinn/passman/releases/latest"><strong>Latest Release</strong></a>
+  <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f310.svg" alt="" aria-hidden="true" width="20"> <strong>Languages:</strong>
+  <a href="README.de.md"><img src="https://flagcdn.com/w20/de.png" alt="Deutsch" width="20"></a> |
+  <a href="README.es.md"><img src="https://flagcdn.com/w20/es.png" alt="Espa&#241;ol" width="20"></a> |
+  <a href="README.md"><img src="https://flagcdn.com/w20/gb.png" alt="English" width="20"></a> |
+  <a href="README.pt-BR.md"><img src="https://flagcdn.com/w20/br.png" alt="Portugu&#234;s (Brasil)" width="20"></a> |
+  <a href="README.tr.md"><img src="https://flagcdn.com/w20/tr.png" alt="T&#252;rk&#231;e" width="20"></a> |
+  <a href="README.fr.md"><img src="https://flagcdn.com/w20/fr.png" alt="Fran&#231;ais" width="20"></a>
+</p>
+
+<!-- bilingual-welcome:start -->
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><img src="https://flagcdn.com/w20/gb.png" alt="English" width="20"> English welcome</h3>
+      <p>VaultPilot public docs is the release hub, operator wiki, knowledge base, support boundary, and trust surface for the self-hosted enterprise vault.</p>
+      <p><strong>Start here:</strong> <a href="docs/en/README.md">English docs home</a> is the operator entry point.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3><img src="https://flagcdn.com/w20/tr.png" alt="Türkçe" width="20"> Türkçe karşılama</h3>
+      <p>VaultPilot için public release ve dokümantasyon merkezi. Kurulum, operasyon, bilgi bankası, destek paketi ve güvenlik sınırları burada; private kaynak kod ve hassas operasyon verisi bu repoya girmez.</p>
+      <p><strong>Buradan başla:</strong> Türkçe operasyon akışı <a href="docs/tr/README.md">docs/tr</a>; İngilizce ekipler için <a href="docs/en/README.md">docs/en</a>.</p>
+    </td>
+  </tr>
+</table>
+<!-- bilingual-welcome:end -->
+
+<p align="center">
+  <a href="https://github.com/ucsahinn/vaultpilot/releases/latest"><img src="assets/icons/download.svg" width="18" alt=""> <strong>Latest Published Release</strong></a>
   |
-  <a href="docs/en/README.md"><strong>Docs EN</strong></a>
+  <a href="docs/en/README.md"><img src="assets/icons/docs.svg" width="18" alt=""> <strong>Docs EN</strong></a>
   |
-  <a href="docs/tr/README.md"><strong>Docs TR</strong></a>
+  <a href="docs/tr/README.md"><img src="assets/icons/docs.svg" width="18" alt=""> <strong>Docs TR</strong></a>
   |
-  <a href="kb/en/README.md"><strong>KB EN</strong></a>
+  <a href="kb/en/README.md"><img src="assets/icons/support.svg" width="18" alt=""> <strong>KB EN</strong></a>
   |
-  <a href="kb/tr/README.md"><strong>KB TR</strong></a>
+  <a href="kb/tr/README.md"><img src="assets/icons/support.svg" width="18" alt=""> <strong>KB TR</strong></a>
   |
-  <a href="SECURITY.md"><strong>Security</strong></a>
+  <a href="SECURITY.md"><img src="assets/icons/security.svg" width="18" alt=""> <strong>Security</strong></a>
   |
-  <a href="SUPPORT.md"><strong>Support</strong></a>
+  <a href="SUPPORT.md"><img src="assets/icons/evidence.svg" width="18" alt=""> <strong>Support</strong></a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/ucsahinn/passman/releases/latest"><img alt="Latest PassMan release" src="https://img.shields.io/github/v/release/ucsahinn/passman?label=latest%20release&color=0f766e"></a>
+  <a href="https://github.com/ucsahinn/vaultpilot/releases/latest"><img alt="Latest published release" src="https://img.shields.io/github/v/release/ucsahinn/vaultpilot?label=latest%20published&color=0f766e"></a>
   <a href="docs/en/README.md"><img alt="Documentation language coverage" src="https://img.shields.io/badge/docs-EN%20%2B%20TR-2563eb"></a>
+  <a href="README.md"><img alt="README language coverage" src="https://img.shields.io/badge/README-6%20languages-0f766e"></a>
   <a href="SECURITY.md"><img alt="Security policy" src="https://img.shields.io/badge/security-public%20policy-b91c1c"></a>
   <a href="SUPPORT.md"><img alt="Support evidence pack" src="https://img.shields.io/badge/support-evidence%20pack-7c3aed"></a>
   <img alt="Platform" src="https://img.shields.io/badge/platform-Windows%20MSI-111827">
@@ -30,7 +58,11 @@
 </p>
 
 <p align="center">
-  <code>Stable 1.8.22</code>
+  <strong>Publication state:</strong> the VaultPilot 2.0.0 documentation set is prepared, but the latest verified GitHub Release is still PassMan 1.8.21 until the v2.0.0 release assets, manifest, signatures and hashes are published and verified.
+</p>
+
+<p align="center">
+  <code>Prepared 2.0.0</code>
   &nbsp;
   <code>Windows MSI</code>
   &nbsp;
@@ -44,8 +76,8 @@
 <table>
   <tr>
     <td align="center" width="25%">
-      <a href="https://github.com/ucsahinn/passman/releases/latest"><img src="assets/icons/download.svg" width="46" alt="Download icon"><br><strong>Download release</strong></a><br>
-      <sub>MSI, manifest and support packages.</sub>
+      <a href="https://github.com/ucsahinn/vaultpilot/releases/latest"><img src="assets/icons/download.svg" width="46" alt="Download icon"><br><strong>Open latest published release</strong></a><br>
+      <sub>Currently v1.8.21 until the v2.0.0 gate publishes final assets.</sub>
     </td>
     <td align="center" width="25%">
       <a href="docs/en/README.md"><img src="assets/icons/docs.svg" width="46" alt="Documentation icon"><br><strong>Read operator docs</strong></a><br>
@@ -65,57 +97,58 @@
 ---
 
 <p align="center">
-  <img src="assets/screenshots/overview-security-posture.png" alt="PassMan security posture dashboard" width="92%">
+  <img src="assets/screenshots/overview-security-posture.png" alt="VaultPilot security posture dashboard" width="92%">
 </p>
 
 <p align="center">
-  <sub>Sanitized product screenshot. Release binaries stay in GitHub Releases; private source code, signing material and customer data stay out of this repository.</sub>
+  <sub>Sanitized VaultPilot 2.0 screenshot captured from an isolated local runtime on June 30, 2026. It shows UI state only; release binaries stay in GitHub Releases and asset hashes remain release-gate evidence. Private source code, signing material and customer data stay out of this repository.</sub>
 </p>
 
-## Enterprise Operating Contract
+## <img src="assets/icons/vault.svg" width="22" alt=""> Enterprise Operating Contract
 
 | Contract | How this repository enforces it |
 | --- | --- |
-| Customer-safe public surface | Only docs, sanitized screenshots, release links, knowledge-base articles and public policies live here. |
-| Release assets outside git | MSI files, ZIP packages, manifests and support scripts are delivered through GitHub Releases or the Chrome Web Store. |
-| Operator-first navigation | Quickstart, runbooks, update checks, extension flows, AD agent setup and support evidence paths are linked from the first screen. |
-| TR/EN parity | Turkish and English operator docs are kept as paired routes and validated before publication. |
-| Evidence without secrets | Support handoff asks for redacted context and blocks plaintext credentials, keys, databases, backups and customer data. |
+| <img src="assets/icons/security.svg" width="20" alt=""> Customer-safe public surface | Only docs, sanitized screenshots, release links, knowledge-base articles and public policies live here. |
+| <img src="assets/icons/release.svg" width="20" alt=""> Release assets outside git | MSI files, ZIP packages, manifests and support scripts are delivered through GitHub Releases or the Chrome Web Store. |
+| <img src="assets/icons/docs.svg" width="20" alt=""> Operator-first navigation | Quickstart, runbooks, update checks, extension flows, AD agent setup and support evidence paths are linked from the first screen. |
+| <img src="assets/icons/docs.svg" width="20" alt=""> TR/EN parity | Turkish and English operator docs are kept as paired routes and validated before publication. |
+| <img src="assets/icons/evidence.svg" width="20" alt=""> Evidence without secrets | Support handoff asks for redacted context and blocks plaintext credentials, keys, databases, backups and customer data. |
 
-## Release Trust Path
+## <img src="assets/icons/release.svg" width="22" alt=""> Release Trust Path
 
-![PassMan signed update trust chain](assets/visuals/update-trust-chain.svg)
+![VaultPilot signed update trust chain](assets/visuals/update-trust-chain.svg)
 
 | Signal | Trust signal | Public proof |
 | --- | --- | --- |
 | ![Release icon](assets/icons/release.svg) | Release assets stay out of git | MSI, release fallback ZIPs, manifest and agent script are linked from GitHub Releases only; browser extension installs use Chrome Web Store. |
-| ![Update icon](assets/icons/update.svg) | Update flow is manifest-led | PassMan verifies the signed manifest, release metadata, SHA-256 checksum and MSI signer before update execution. |
+| ![Update icon](assets/icons/update.svg) | Update flow is manifest-led | VaultPilot verifies the signed manifest, release metadata, SHA-256 checksum and MSI signer before update execution. |
 | ![Vault icon](assets/icons/vault.svg) | Source boundary is explicit | This public repository contains docs, sanitized screenshots and release links; private product code and signing material are not published here. |
 | ![Evidence icon](assets/icons/evidence.svg) | Operator evidence is safe by default | Support paths ask for redacted evidence packs and forbid plaintext secrets, private keys, database files and customer data. |
 | ![Documentation icon](assets/icons/docs.svg) | TR/EN docs stay paired | Validation checks paired Turkish and English docs plus local links before publication. |
 
-## Start Here
+## <img src="assets/icons/download.svg" width="22" alt=""> Start Here
 
-Use this repository as the front desk for the supported PassMan application. It should answer the first operational question without exposing source code, secrets, signing material or customer data.
+Use this repository as the front desk for the supported VaultPilot application. It should answer the first operational question without exposing source code, secrets, signing material or customer data.
 
 | I need to... | Open this | Outcome |
 | --- | --- | --- |
 | Take the shortest safe path from download to first healthy vault | [EN admin quickstart](docs/en/admin-quickstart.md) / [TR hızlı başlangıç](docs/tr/admin-quickstart.md) | Day-0 install, owner, license, HTTPS, 2FA and backup are sequenced. |
-| Run PassMan after go-live | [EN operator runbook](docs/en/operator-runbook.md) / [TR operasyon runbook](docs/tr/operator-runbook.md) | Daily, weekly, monthly and incident routines are clear. |
-| Install PassMan on Windows Server | [EN install](docs/en/install-windows-server.md) / [TR kurulum](docs/tr/install-windows-server.md) | MSI installed, service running, first URL verified. |
+| Run VaultPilot after go-live | [EN operator runbook](docs/en/operator-runbook.md) / [TR operasyon runbook](docs/tr/operator-runbook.md) | Daily, weekly, monthly and incident routines are clear. |
+| Install VaultPilot on Windows Server | [EN install](docs/en/install-windows-server.md) / [TR kurulum](docs/tr/install-windows-server.md) | MSI installed, service running, first URL verified. |
 | Create the first owner and apply license | [EN first run](docs/en/first-run-owner-license.md) / [TR ilk kurulum](docs/tr/first-run-owner-license.md) | Owner profile, license state and first vault path are clear. |
 | Configure public host and HTTPS | [EN HTTPS](docs/en/public-host-https-certificate.md) / [TR HTTPS](docs/tr/public-host-https-certificate.md) | Required certificate package and browser validation are understood. |
 | Fix an operational issue | [EN knowledge base](kb/en/README.md) / [TR bilgi bankası](kb/tr/README.md) | Safe evidence and diagnosis path are available. |
-| Update PassMan or verify release assets | [EN release asset verification](docs/en/release-asset-verification.md) / [TR asset doğrulama](docs/tr/release-asset-verification.md) | Manifest, checksum, MSI signer and component notes are verified. |
+| Update VaultPilot or verify release assets | [EN release asset verification](docs/en/release-asset-verification.md) / [TR asset doğrulama](docs/tr/release-asset-verification.md) | Manifest, checksum, MSI signer and component notes are verified. |
+| Uninstall, preserve data or roll back | [EN uninstall and rollback](docs/en/uninstall-rollback-data-retention.md) / [TR kaldırma ve rollback](docs/tr/uninstall-rollback-data-retention.md) | Service removal, data retention, purge boundaries and rollback checks are explicit. |
 | Pair or troubleshoot the browser extension | [EN extension](docs/en/browser-extension.md) / [TR eklenti](docs/tr/browser-extension.md) | Badge count, autofill, save/update login and device pairing behavior are clear. |
 | Review browser extension privacy handling | [Privacy policy](PRIVACY.md) | Chrome/Edge extension data categories, limited-use disclosure and remote-code boundary are documented. |
 | Sync Active Directory | [EN DC Agent](docs/en/active-directory-agent.md) / [TR DC Agent](docs/tr/active-directory-agent.md) | Service install, repair, logs and OU tree sync are documented. |
-| Open or diagnose external shares | [EN sharing](docs/en/sharing-and-offline-decrypter.md) / [TR paylasim](docs/tr/sharing-and-offline-decrypter.md) | Selected records, files, expiry, max opens and offline decrypter flow are clear. |
+| Open or diagnose external shares | [EN sharing](docs/en/sharing-and-offline-decrypter.md) / [TR paylaşım](docs/tr/sharing-and-offline-decrypter.md) | Selected records, files, expiry, max opens and offline decrypter flow are clear. |
 | Prepare a clean support handoff | [EN support evidence pack](docs/en/support-evidence-pack.md) / [TR destek kanıt paketi](docs/tr/support-evidence-pack.md) | Operators know exactly what to collect and what never to send. |
 
-## Enterprise Wiki Map
+## <img src="assets/icons/docs.svg" width="22" alt=""> Enterprise Wiki Map
 
-![PassMan operator lifecycle](assets/visuals/operator-lifecycle.svg)
+![VaultPilot operator lifecycle](assets/visuals/operator-lifecycle.svg)
 
 | Role | Primary path | Decision point |
 | --- | --- | --- |
@@ -125,46 +158,48 @@ Use this repository as the front desk for the supported PassMan application. It 
 | Identity operator | [DC Agent](docs/en/active-directory-agent.md), [extension](docs/en/browser-extension.md), [operator runbook](docs/en/operator-runbook.md) | Are AD sync, browser pairing and user scope healthy? |
 | Turkish operator | [TR hızlı başlangıç](docs/tr/admin-quickstart.md), [TR runbook](docs/tr/operator-runbook.md), [TR bilgi bankası](kb/tr/README.md) | Aynı operasyon yolu Türkçe doküman setinde izlenir. |
 
-## What This Repository Is
+## <img src="assets/icons/vault.svg" width="22" alt=""> What This Repository Is
 
-This is the public GitHub home for PassMan Enterprise Vault Console. PassMan is now treated as a stable self-hosted Windows Server application, not an alpha or proof build. This repository contains customer-safe documentation, how-to guides, knowledge-base articles, sanitized product screenshots, release notes and links to GitHub Release assets.
+This is the public GitHub home for VaultPilot Enterprise Vault Console. VaultPilot is the current product name for new releases; PassMan remains a compatibility name for older installed services, data paths, environment variables, cookies, headers, update aliases and extension protocol names. This repository contains customer-safe documentation, how-to guides, knowledge-base articles, sanitized product screenshots, release notes and links to GitHub Release assets.
 
 This repository does not contain private source code, internal signing material, customer data, databases, backups, certificates or release binaries committed into git.
 
-## Operator Path
+## <img src="assets/icons/update.svg" width="22" alt=""> Operator Path
 
-1. Download the latest MSI from GitHub Releases.
+1. Download the published MSI from GitHub Releases. If you are following the prepared 2.0.0 path, wait until the `v2.0.0` release assets are published and verified.
 2. Install it as Administrator on the approved Windows host.
 3. Open `https://<SERVER_HOST>:1903` to verify the service responds. If no trusted certificate is configured yet, expect a managed self-signed certificate warning until the operator installs a PFX/P12 package.
 4. Apply the license and confirm the public host plus HTTPS settings.
 5. Enable 2FA, confirm audit-chain health and review the overview action queue.
 6. Install the Chrome Web Store extension, then pair approved browsers.
-7. Configure PassMan DC Agent Service if AD scope is needed.
+7. Configure VaultPilot DC Agent Service if AD scope is needed.
 8. Review backup, restore, update and support-evidence procedures.
 
-## Current Release Assets
+## <img src="assets/icons/release.svg" width="22" alt=""> Prepared 2.0.0 Release Assets
 
 | Type | Asset | Purpose | Delivery |
 | --- | --- | --- | --- |
-| ![Windows icon](assets/icons/windows.svg) | [PassMan-1.8.22-x64.msi](https://github.com/ucsahinn/passman/releases/download/v1.8.22/PassMan-1.8.22-x64.msi) | Installs or upgrades PassMan Server on Windows. | GitHub Release |
-| ![Update icon](assets/icons/update.svg) | [passman-update.json](https://github.com/ucsahinn/passman/releases/latest/download/passman-update.json) | Signed update manifest verified by PassMan. | GitHub Release |
+| ![Windows icon](assets/icons/windows.svg) | `VaultPilot-2.0.0-x64.msi` | Installs or upgrades VaultPilot Server on Windows. | GitHub Release after publication |
+| ![Update icon](assets/icons/update.svg) | `vaultpilot-update.json` | Signed update manifest verified by VaultPilot. | GitHub Release after publication |
 | ![Extension icon](assets/icons/extension.svg) | [Chrome Web Store listing](https://chromewebstore.google.com/detail/passman-enterprise-vault/hjkbedlaieikhkoplgpiohlaakgebobi?hl=tr) | Primary browser extension install and update channel. | Chrome Web Store |
-| ![Extension icon](assets/icons/extension.svg) | [passman-chromium-extension.zip](https://github.com/ucsahinn/passman/releases/latest/download/passman-chromium-extension.zip) | Release archive and development fallback only. | GitHub Release |
-| ![Share icon](assets/icons/share.svg) | [passman-share-decrypter.zip](https://github.com/ucsahinn/passman/releases/latest/download/passman-share-decrypter.zip) | Offline external-share opening tool. | GitHub Release |
-| ![Directory icon](assets/icons/directory.svg) | [passman-ad-agent.ps1](https://github.com/ucsahinn/passman/releases/latest/download/passman-ad-agent.ps1) | PassMan DC Agent Service installer and repair script. | GitHub Release |
+| ![Extension icon](assets/icons/extension.svg) | `vaultpilot-browser-vault-extension.zip` | Release archive and development fallback only. | GitHub Release after publication |
+| ![Share icon](assets/icons/share.svg) | `vaultpilot-share-decrypter.zip` | Offline external-share opening tool. | GitHub Release after publication |
+| ![Directory icon](assets/icons/directory.svg) | `vaultpilot-dc-agent.ps1` | VaultPilot DC Agent Service installer and repair script. | GitHub Release after publication |
 
-PassMan-managed updates verify the signed manifest, release asset metadata, SHA-256 checksum and MSI signer thumbprint before starting the MSI flow. A global CA chain is not required for PassMan-managed update trust when the signed manifest pins the local release signer thumbprint. CA-backed or trusted-signing certificates remain recommended for Windows reputation and broad OS-level trust.
+VaultPilot-managed updates verify the signed manifest, release asset metadata, SHA-256 checksum and MSI signer thumbprint before starting the MSI flow. A global CA chain is not required for VaultPilot-managed update trust when the signed manifest pins the local release signer thumbprint. CA-backed or trusted-signing certificates remain recommended for Windows reputation and broad OS-level trust.
 
-## Component Versions
+Remote publication note: as of June 30, 2026, the latest verified GitHub Release is still `v1.8.21`. Do not treat `v2.0.0` assets, hashes or manifests as public proof until the release gate publishes and verifies them.
+
+## <img src="assets/icons/update.svg" width="22" alt=""> Component Versions
 
 | Component | Version | Update path |
 | --- | ---: | --- |
-| PassMan Enterprise Vault Console | 1.8.22 | Windows MSI / Update Center |
+| VaultPilot Enterprise Vault Console | 2.0.0 | Windows MSI / Update Center |
 | Chromium Browser Extension | 1.3.1 | Chrome Web Store |
 | Offline Share Decrypter | 1.2.0 | Bundled support component and release ZIP |
-| PassMan DC Agent Service | 1.2.10 | Bundled support component and release script |
+| VaultPilot DC Agent Service | 1.2.10 | Bundled support component and release script |
 
-## Documentation Gateway
+## <img src="assets/icons/docs.svg" width="22" alt=""> Documentation Gateway
 
 | Area | English | Turkish |
 | --- | --- | --- |
@@ -187,7 +222,7 @@ PassMan-managed updates verify the signed manifest, release asset metadata, SHA-
 | Support evidence pack | [Support evidence pack](docs/en/support-evidence-pack.md) | [Destek kanıt paketi](docs/tr/support-evidence-pack.md) |
 | FAQ | [FAQ](docs/en/faq.md) | [SSS](docs/tr/faq.md) |
 
-## Knowledge Base Gateway
+## <img src="assets/icons/support.svg" width="22" alt=""> Knowledge Base Gateway
 
 | Incident | English | Turkish |
 | --- | --- | --- |
@@ -201,19 +236,19 @@ PassMan-managed updates verify the signed manifest, release asset metadata, SHA-
 | External share package fails | [EN](kb/en/external-share-fails.md) | [TR](kb/tr/external-share-fails.md) |
 | Login creates 401 or 403 noise after unlock | [EN](kb/en/session-401-after-login.md) | [TR](kb/tr/session-401-after-login.md) |
 
-## Product Walkthrough
+## <img src="assets/icons/vault.svg" width="22" alt=""> Product Walkthrough
 
-All screenshots are captured from the actual PassMan application with sanitized demo data.
+Fresh 2.0 captures: `login-lock-screen.png`, `overview-security-posture.png` and `passwords-record-list.png` were captured from an isolated local VaultPilot 2.0 runtime on June 30, 2026 with synthetic data only. Remaining walkthrough captures are legacy PassMan compatibility-line layout references until the final licensed or gated 2.0 screens are recaptured. Use the release asset verification pages for release proof.
 
 <details open>
 <summary>Core console surfaces</summary>
 
 | Surface | Screenshot |
 | --- | --- |
-| Login / lock screen | ![PassMan login lock screen](assets/screenshots/login-lock-screen.png) |
-| Security posture overview | ![PassMan overview dashboard](assets/screenshots/overview-security-posture.png) |
-| Password record list | ![PassMan password record list](assets/screenshots/passwords-record-list.png) |
-| Sharing package flow | ![PassMan sharing flow](assets/screenshots/sharing-package-flow.png) |
+| Login / lock screen | ![VaultPilot login lock screen](assets/screenshots/login-lock-screen.png) |
+| Security posture overview | ![VaultPilot overview dashboard](assets/screenshots/overview-security-posture.png) |
+| Password record list | ![VaultPilot password record list](assets/screenshots/passwords-record-list.png) |
+| Sharing package flow | ![VaultPilot sharing flow](assets/screenshots/sharing-package-flow.png) |
 
 </details>
 
@@ -222,14 +257,14 @@ All screenshots are captured from the actual PassMan application with sanitized 
 
 | Surface | Screenshot |
 | --- | --- |
-| Update Center | ![PassMan update center](assets/screenshots/update-center.png) |
-| Browser extension management | ![PassMan browser extension management](assets/screenshots/browser-extension-management.png) |
-| Active Directory sync tree | ![PassMan Active Directory sync tree](assets/screenshots/active-directory-sync-tree.png) |
-| Offline share decrypter | ![PassMan offline share decrypter](assets/screenshots/offline-share-decrypter.png) |
+| Update Center | ![VaultPilot update center](assets/screenshots/update-center.png) |
+| Browser extension management | ![VaultPilot browser extension management](assets/screenshots/browser-extension-management.png) |
+| Active Directory sync tree | ![VaultPilot Active Directory sync tree](assets/screenshots/active-directory-sync-tree.png) |
+| Offline share decrypter | ![VaultPilot offline share decrypter](assets/screenshots/offline-share-decrypter.png) |
 
 </details>
 
-## Public Safety Boundary
+## <img src="assets/icons/security.svg" width="22" alt=""> Public Safety Boundary
 
 Never upload or paste these materials into this repository, public issues, comments or support threads:
 
@@ -238,14 +273,15 @@ Never upload or paste these materials into this repository, public issues, comme
 - Databases, backups, PFX/P12 files, private keys or logs with sensitive values.
 - Screenshots showing real secret records, users, customer URLs or internal infrastructure.
 
-Use placeholders such as `<PASSMAN_URL>`, `<SERVER_HOST>`, `<AGENT_ID>`, `<AGENT_TOKEN>` and `<LICENSE_CODE>` in public examples.
+Use placeholders such as `<VAULTPILOT_URL>`, `<SERVER_HOST>`, `<AGENT_ID>`, `<AGENT_TOKEN>` and `<LICENSE_CODE>` in public examples.
 
-## Repository Validation
+## <img src="assets/icons/evidence.svg" width="22" alt=""> Repository Validation
 
 Run before publishing public documentation changes:
 
 ```powershell
 npm run validate
+npm run validate:staged
 ```
 
-The validation checks local links, TR/EN doc parity, required visual assets, real screenshots, stale release wording, forbidden public-site leftovers, large release binaries, secret-like public patterns and encoding artifacts.
+The validation checks local links, TR/EN doc parity, required visual and screenshot assets, stale release wording, forbidden public-site leftovers, large release binaries, release support artifacts, secret-like public patterns and encoding artifacts. Use `validate:staged` before commit so the git index, not only the working tree, is checked.

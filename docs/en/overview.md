@@ -1,6 +1,8 @@
-# PassMan Overview
+# VaultPilot Overview
 
-PassMan Enterprise Vault Console is a self-hosted, zero-knowledge enterprise vault console installed on Windows Server with an MSI. Users access it from a browser through the server IP address or DNS name. First-run profile creation and vault unlock require HTTPS or `localhost` so the browser exposes Web Crypto; plain HTTP server-IP access is only a reachability check until HTTPS is configured.
+VaultPilot Enterprise Vault Console is a self-hosted, zero-knowledge enterprise vault console installed on Windows Server with an MSI. Users access it from a browser through the server IP address or DNS name over HTTPS. First-run profile creation and vault unlock require browser Web Crypto; the installed server exposes managed self-signed HTTPS until a trusted PFX/P12 certificate is configured.
+
+VaultPilot is the current product identity for the 2.0 line. PassMan remains a compatibility name for older services, data paths, update aliases, protocol strings, and historical release artifacts only.
 
 ## Principles
 
@@ -14,10 +16,10 @@ PassMan Enterprise Vault Console is a self-hosted, zero-knowledge enterprise vau
 
 | Component | Purpose |
 | --- | --- |
-| PassMan Server | Main Windows service and browser application. |
+| VaultPilot Server | Main Windows service and browser application. |
 | Chromium Extension | Autofill, save/update login prompts, and active-site badge counts. |
 | Offline Share Decrypter | Opens external share packages fully in the browser. |
-| PassMan DC Agent Service | Synchronizes Active Directory objects into PassMan. |
+| VaultPilot DC Agent Service | Synchronizes Active Directory metadata into VaultPilot. |
 
 ## Start Here
 
@@ -26,3 +28,7 @@ PassMan Enterprise Vault Console is a self-hosted, zero-knowledge enterprise vau
 - [Public host, HTTPS and certificates](public-host-https-certificate.md)
 - [Update Center](update-center.md)
 - [Troubleshooting](troubleshooting.md)
+
+## In-App Documentation Button
+
+VaultPilot 2.0 adds a topbar help button with a question-mark icon. It opens the GitHub documentation page that matches the current screen, and the target language follows the console language: English screens open `docs/en/...`, Turkish screens open `docs/tr/...`.

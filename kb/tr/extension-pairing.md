@@ -1,14 +1,14 @@
 # Extension eşleşmesi pending kalıyor
 
-Chromium extension kurulu ama PassMan paneli cihazı onaylamıyor veya sync başlamıyorsa bunu kullanın.
+Chromium extension kurulu ama VaultPilot paneli cihazı onaylamıyor veya sync başlamıyorsa bunu kullanın.
 
 ## Kontroller
 
-1. Extension server origin değeri PassMan host ve scheme ile eşleşmeli.
+1. Extension server origin değeri VaultPilot host ve scheme ile eşleşmeli.
 2. Pairing code süresi dolduysa eşleştirmeyi yeniden başlatın.
-3. Extension içindeki username PassMan hesabıyla eşleşmeli.
-4. PassMan web UI içinde en az bir kasa açık olmalı.
-5. Cihaz PassMan Extension ekranından onaylanmalı.
+3. Extension içindeki username VaultPilot hesabıyla eşleşmeli.
+4. VaultPilot web UI içinde en az bir kasa açık olmalı.
+5. Cihaz VaultPilot Browser Extension ekranından onaylanmalı.
 6. Eski veya duplicate cihazları revoke edip yeniden deneyin.
 
 ## Güvenlik

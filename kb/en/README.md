@@ -1,6 +1,6 @@
-# PassMan English Knowledge Base
+# VaultPilot English Knowledge Base
 
-Use this navigator when PassMan is installed but an operator needs a safe diagnosis path. Each article lists the symptom, first checks, safe evidence and what not to send publicly.
+Use this navigator when VaultPilot is installed but an operator needs a safe diagnosis path. Each article lists the symptom, first checks, safe evidence and what not to send publicly.
 
 ## Incident Index
 
@@ -8,7 +8,7 @@ Use this navigator when PassMan is installed but an operator needs a safe diagno
 | --- | --- | --- |
 | MSI installation fails | [MSI installation fails](msi-installation-fails.md) | MSI name, admin context and Windows service state. |
 | Update stays around 76 percent | [Update stuck near 76 percent](update-stuck-76.md) | Update job JSON, MSI signature line and Windows Installer event log. |
-| DC Agent service cannot connect or returns 401 | [DC Agent service troubleshooting](dc-agent-service.md) | Service status, agent log, PassMan URL reachability and redacted server auth reason. |
+| DC Agent service cannot connect or returns 401 | [DC Agent service troubleshooting](dc-agent-service.md) | Service status, agent log, VaultPilot URL reachability and redacted server auth reason. |
 | Extension pairing remains pending | [Extension pairing remains pending](extension-pairing.md) | Pairing code state, device row and browser profile mode. |
 | Login creates 401 or 403 noise after unlock | [Login session 401/403 noise](session-401-after-login.md) | Login time, affected endpoint list and whether `/api/auth/me` returns 200. |
 | HTTPS certificate warning | [HTTPS certificate warning](certificate-warning.md) | Hostname, SAN and uploaded certificate package. |

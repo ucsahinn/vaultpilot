@@ -1,6 +1,6 @@
 # Lisans read-only durumu
 
-PassMan login ve okuma izni veriyor ama yazma, kullanıcı değişikliği, paylaşım, pairing veya update install aksiyonlarını engelliyorsa bunu kullanın.
+VaultPilot login ve okuma izni veriyor ama yazma, kullanıcı değişikliği, paylaşım, pairing veya update install aksiyonlarını engelliyorsa bunu kullanın.
 
 ## Kontroller
 

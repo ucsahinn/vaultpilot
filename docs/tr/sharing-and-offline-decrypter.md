@@ -1,12 +1,14 @@
 # Paylaşım ve Offline Decrypter
 
-PassMan paylaşımı seçili kayıt odaklıdır. Operatörlerin tüm kasayı paylaşmasına gerek yoktur; yalnızca seçilen kayıtlar ve dosyalar paketlenir.
+VaultPilot paylaşımı seçili kayıt odaklıdır. Operatörlerin tüm kasayı paylaşmasına gerek yoktur; yalnızca seçilen kayıtlar ve dosyalar paketlenir.
 
-![PassMan sharing package flow](../../assets/screenshots/sharing-package-flow.png)
+![VaultPilot sharing package flow](../../assets/screenshots/sharing-package-flow.png)
+
+Screenshot notu: bu sayfadaki görseller PassMan compatibility line'dan geçici layout referansı olarak tutulur. Final 2.0 screenshotları yeniden alınana kadar VaultPilot 2.0 release veya branding kanıtı değildir.
 
 ## İç Paylaşım
 
-İç paylaşım PassMan'a kayıtlı kullanıcılar içindir.
+İç paylaşım VaultPilot'a kayıtlı kullanıcılar içindir.
 
 - Alıcı kimliği ve public-key durumu kontrol edilir.
 - Seçili kayıtlar alıcı için wrap edilir.
@@ -15,7 +17,7 @@ PassMan paylaşımı seçili kayıt odaklıdır. Operatörlerin tüm kasayı pay
 
 ## Dış Paylaşım
 
-Dış paylaşım, PassMan sunucusu dışındaki alıcılar için offline paket üretir.
+Dış paylaşım, VaultPilot sunucusu dışındaki alıcılar için offline paket üretir.
 
 Zorunlu politika kararları:
 
@@ -39,9 +41,9 @@ Paket tamamlandıktan sonra Paylaşım ekranı aksiyonel kalmalıdır:
 
 ## Offline Decrypter
 
-![PassMan offline share decrypter](../../assets/screenshots/offline-share-decrypter.png)
+![VaultPilot offline share decrypter](../../assets/screenshots/offline-share-decrypter.png)
 
-`passman-share-decrypter.zip` içindeki HTML araç tamamen tarayıcı içinde çalışır.
+`vaultpilot-share-decrypter.zip` içindeki HTML araç tamamen tarayıcı içinde çalışır.
 
 Güven göstergeleri:
 

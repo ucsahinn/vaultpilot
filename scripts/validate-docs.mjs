@@ -1,7 +1,26 @@
-import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs'
+import { execFileSync } from 'node:child_process'
+import { existsSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, statSync } from 'node:fs'
+import os from 'node:os'
 import path from 'node:path'
 
-const root = process.cwd()
+const workspaceRoot = process.cwd()
+const validateStaged = process.argv.includes('--staged')
+let stagedTempRoot = null
+let root = workspaceRoot
+
+if (validateStaged) {
+  stagedTempRoot = mkdtempSync(path.join(os.tmpdir(), 'vaultpilot-public-staged-'))
+  root = path.join(stagedTempRoot, 'tree')
+  mkdirSync(root, { recursive: true })
+  execFileSync('git', ['checkout-index', '-a', `--prefix=${root}${path.sep}`], { cwd: workspaceRoot, stdio: 'pipe' })
+}
+
+process.on('exit', () => {
+  if (stagedTempRoot) {
+    rmSync(stagedTempRoot, { force: true, recursive: true })
+  }
+})
+
 const errors = []
 const warnings = []
 
@@ -91,10 +110,34 @@ function validateForbiddenPatterns(filePath, content) {
     [/PassMan-1\.5\.1-x64\.msi/i, 'stale MSI latest asset name'],
     [/Latest stable release:\s+\*\*PassMan 1\.5\.1\*\*/i, 'stale latest release wording'],
     [/github\.io\/passman(?:[\x2d]releases)?/i, 'obsolete static public-site URL'],
+    [/github\.com\/ucsahinn\/passman(?:[/?#]|$)/i, 'obsolete PassMan GitHub repository URL'],
+    [/github\.com\/ucsahinn\/passman-releases(?:[/?#]|$)/i, 'obsolete PassMan release repository URL'],
     [/PASSMAN_[A-Z_]*ADMIN_TOKEN/i, 'obsolete static public-site admin token reference'],
     [/\.github\/workflows\/[a-z]+\.yml/i, 'obsolete static public-site workflow reference'],
     [/\]\([^)]*index\.html[)#?]?/i, 'obsolete static public-site html index link'],
     [/\bassets\/(?:styles\.css|site\.js)\b/i, 'obsolete static public-site asset reference'],
+    [/<<<<<<<|=======|>>>>>>>/, 'merge conflict marker'],
+    [/\bworkspace pass\b/i, 'internal workspace-pass wording'],
+    [/\bdocumentation pass\b/i, 'internal documentation-pass wording'],
+    [/doküman geçişinde/i, 'internal documentation-pass wording'],
+    [/\b(?:yaln|y|g|d|ba|a)\?[a-z]/i, 'question-mark mojibake encoding artifact'],
+    [/\?\?/, 'double-question-mark mojibake encoding artifact'],
+    [/\bAll screenshots are captured from the actual VaultPilot application\b/i, 'overstated current screenshot claim'],
+    [/\bCurrent public release:\s+\*\*VaultPilot Enterprise Vault Console 2\.0\.0\*\*/i, 'unverified VaultPilot 2.0 current-release claim'],
+    [/\bCurrent supported public release:\s+\*\*VaultPilot Enterprise Vault Console 2\.0\.0\*\*/i, 'unverified VaultPilot 2.0 supported-release claim'],
+    [/\bLatest published GitHub Release\b[^\n]*\b2\.0\.0\b/i, 'unverified VaultPilot 2.0 latest-published claim'],
+    [/\blatest verified published GitHub Release\b[^\n]*\b2\.0\.0\b/i, 'unverified VaultPilot 2.0 latest-verified-published claim'],
+    [/\bv2\.0\.0\b[^\n]*(?:has been|is|was)\s+published/i, 'unverified VaultPilot 2.0 published claim'],
+    [/\b2\.0\.0\b[^\n]*public proof\b(?![^\n]*(?:not|Do not|do not|must not|until))/i, 'unverified VaultPilot 2.0 public-proof claim'],
+    [/\bVaultPilot remains a compatibility name\b/i, 'incorrect compatibility-name subject'],
+    [/\blegacy VaultPilot (?:service|data|log|path|alias)/i, 'incorrect legacy VaultPilot alias wording'],
+    [/\bVaultPilotServer\b[^\n]*\bVaultPilotServer\b[^\n]*\blegacy alias\b/i, 'incorrect VaultPilotServer legacy alias wording'],
+    [/\bUpgrade the VaultPilot server to 1\.8\.19\b/i, 'stale VaultPilot version wording'],
+    [/\bUse PassMan 1\.8\.19 or newer, rotate\b/i, 'stale DC agent compatibility wording'],
+    [/\bDownload 1\.6\.1\b/i, 'stale visual release CTA'],
+    [/\bPassMan public release hub preview\b/i, 'stale social preview title'],
+    [/\bPassMan (?:enterprise vault console overview|browser extension demo|zero knowledge flow|update trust chain|offline sharing lifecycle)\b/i, 'stale visual PassMan label'],
+    [/[\u00c3\u00c4\u00c5\u00c2\ufffd]/, 'mojibake or replacement-character encoding artifact'],
     [/[ÃÄÅÂ�]/, 'mojibake or replacement-character encoding artifact']
   ]
 
@@ -210,9 +253,13 @@ function validateRemovedSiteFiles() {
 
 function validateNoLargeReleaseAssets(files) {
   const blocked = /\.(msi|zip|exe|pfx|p12|db|sqlite)$/i
+  const blockedReleaseSupport = /(?:^|[/\\])(?:vaultpilot|passman)-(?:update\.json|dc-agent\.ps1|ad-agent\.ps1)$/i
   for (const file of files) {
     if (blocked.test(file)) {
       fail(`release or sensitive binary must not be in git tree: ${relative(file)}`)
+    }
+    if (blockedReleaseSupport.test(relative(file))) {
+      fail(`release support artifact must be published through GitHub Releases, not committed: ${relative(file)}`)
     }
   }
 }
@@ -268,4 +315,5 @@ if (errors.length > 0) {
 }
 
 const totalBytes = files.reduce((sum, file) => sum + statSync(file).size, 0)
-console.log(`Validated ${files.length} files (${totalBytes} bytes).`)
+const target = validateStaged ? 'staged index' : 'working tree'
+console.log(`Validated ${target}: ${files.length} files (${totalBytes} bytes).`)

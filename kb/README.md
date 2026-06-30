@@ -1,8 +1,8 @@
-# PassMan Knowledge Base Gateway
+# VaultPilot Knowledge Base Gateway
 
-This knowledge base is the public-safe incident navigator for PassMan Enterprise Vault Console. It is designed for fast diagnosis without exposing customer data, secret values, license material or local infrastructure.
+This knowledge base is the public-safe incident navigator for VaultPilot Enterprise Vault Console. It is designed for fast diagnosis without exposing customer data, secret values, license material or local infrastructure.
 
-Current supported public release: **PassMan Enterprise Vault Console 1.8.21**.
+Prepared release: **VaultPilot Enterprise Vault Console 2.0.0**. As of June 30, 2026, the latest verified published GitHub Release is still **PassMan Enterprise Vault Console 1.8.21**.
 
 | Language | Incident navigator |
 | --- | --- |
@@ -15,7 +15,7 @@ Current supported public release: **PassMan Enterprise Vault Console 1.8.21**.
 | --- | --- | --- | --- |
 | MSI installation fails | [EN](en/msi-installation-fails.md) | [TR](tr/msi-installation-fails.md) | MSI name, installer log, Windows service state. |
 | Update stays around 76 percent | [EN](en/update-stuck-76.md) | [TR](tr/update-stuck-76.md) | Update job JSON, MSI signature line, Windows Installer event. |
-| DC Agent service cannot connect or returns 401 | [EN](en/dc-agent-service.md) | [TR](tr/dc-agent-service.md) | Service status, agent log, PassMan URL reachability, redacted server auth reason. |
+| DC Agent service cannot connect or returns 401 | [EN](en/dc-agent-service.md) | [TR](tr/dc-agent-service.md) | Service status, agent log, VaultPilot URL reachability, redacted server auth reason. |
 | Extension pairing remains pending | [EN](en/extension-pairing.md) | [TR](tr/extension-pairing.md) | Pairing code state, device row, browser profile mode. |
 | Login creates 401 or 403 noise after unlock | [EN](en/session-401-after-login.md) | [TR](tr/session-401-after-login.md) | Login time, affected endpoint list, whether `/api/auth/me` returns 200. |
 | Certificate warning | [EN](en/certificate-warning.md) | [TR](tr/certificate-warning.md) | Hostname, certificate SAN, uploaded package type. |
@@ -27,7 +27,7 @@ Current supported public release: **PassMan Enterprise Vault Console 1.8.21**.
 
 Collect only redacted, support-safe information:
 
-- PassMan server version and component versions.
+- VaultPilot server version and component versions.
 - Windows Server version.
 - MSI filename and signature status.
 - Configured host, port and HTTPS state.
@@ -45,7 +45,7 @@ Do not share:
 - Database files, backups, PFX/P12 files or private keys.
 - Screenshots that reveal real secret records, users, internal URLs or customer data.
 
-Use placeholders such as `<PASSMAN_URL>`, `<SERVER_HOST>`, `<AGENT_ID>`, `<AGENT_TOKEN>`, `<LICENSE_CODE>` and `<REDACTED>`.
+Use placeholders such as `<VAULTPILOT_URL>`, `<SERVER_HOST>`, `<AGENT_ID>`, `<AGENT_TOKEN>`, `<LICENSE_CODE>` and `<REDACTED>`.
 
 Related surfaces:
 

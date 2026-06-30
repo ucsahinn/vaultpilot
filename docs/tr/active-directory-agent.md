@@ -1,29 +1,33 @@
-# Active Directory ve PassMan DC Agent Service
+# Active Directory ve VaultPilot DC Agent Service
 
-PassMan DC Agent Service domain controller'a yakın bir Windows host üzerinde çalışır ve dizin metadata'sını PassMan'a senkronize eder. AD bind parolasını veya AD kullanıcı parolalarını PassMan'a göndermez.
+VaultPilot DC Agent Service domain controller'a yakın bir Windows host üzerinde çalışır ve dizin metadata'sını VaultPilot'a senkronize eder. AD bind parolasını veya AD kullanıcı parolalarını VaultPilot'a göndermez.
 
-![PassMan Active Directory sync tree](../../assets/screenshots/active-directory-sync-tree.png)
+![VaultPilot Active Directory sync tree](../../assets/screenshots/active-directory-sync-tree.png)
+
+Screenshot notu: bu görsel PassMan compatibility line'dan geçici layout referansı olarak tutulur. Final 2.0 screenshotları yeniden alınana kadar VaultPilot 2.0 release veya branding kanıtı değildir.
 
 ## Servis Kimliği
 
 | Öğe | Değer |
 | --- | --- |
-| Servis adı | `PassManDCAgent` |
-| Görünen ad | `PassMan DC Agent Service` |
-| Config dosyası | `%ProgramData%\PassMan\ad-agent\passman-dc-agent.json` |
-| Servis logu | `%ProgramData%\PassMan\ad-agent\passman-dc-agent-service.log` |
-| Agent logu | `%ProgramData%\PassMan\ad-agent\passman-dc-agent.log` |
+| Servis adı | `VaultPilotDCAgent` |
+| Görünen ad | `VaultPilot DC Agent Service` |
+| Config dosyası | `%ProgramData%\VaultPilot\ad-agent\vaultpilot-dc-agent.json` |
+| Servis logu | `%ProgramData%\VaultPilot\ad-agent\vaultpilot-dc-agent-service.log` |
+| Agent logu | `%ProgramData%\VaultPilot\ad-agent\vaultpilot-dc-agent.log` |
 
 ## Kayıt Akışı
 
-1. PassMan'da Entegrasyonlar -> Active Directory ekranını açın.
+1. VaultPilot'ta Entegrasyonlar -> Active Directory ekranını açın.
 2. Ajan kaydı oluşturun.
-3. Release asset'lerinden veya UI üzerinden `passman-ad-agent.ps1` dosyasını indirin.
+3. Release asset'lerinden veya UI üzerinden `vaultpilot-dc-agent.ps1` dosyasını indirin.
 4. Ajan makinesinde Administrator PowerShell ile kurulum komutunu çalıştırın.
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\passman-ad-agent.ps1 -InstallService -PassManUrl "<PASSMAN_URL>" -AgentId "<AGENT_ID>" -AgentToken "<AGENT_TOKEN>"
+powershell -ExecutionPolicy Bypass -File .\vaultpilot-dc-agent.ps1 -InstallService -PassManUrl "<VAULTPILOT_URL>" -AgentId "<AGENT_ID>" -AgentToken "<AGENT_TOKEN>"
 ```
+
+Üretilen 2.0 komutu hâlâ `-PassManUrl` ve `-TrustPassManCertificate` gibi flag adları kullanabilir. Bunları mevcut agent script yüzeyinden gelen compatibility flag adları olarak ele alın; release script VaultPilot alias'ları eklemeden bu adları elle değiştirmeyin.
 
 Script şu bilgileri ister:
 
@@ -31,27 +35,29 @@ Script şu bilgileri ister:
 - AD bind kullanıcı adı.
 - Lokal terminal prompt'u üzerinden AD bind parolası.
 
-Parola lokalde alınır, loglara yazılmaz ve PassMan'a post edilmez.
+Parola lokalde alınır, loglara yazılmaz ve VaultPilot'a post edilmez.
 
 ## Operasyon Komutları
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\passman-ad-agent.ps1 -Status
+powershell -ExecutionPolicy Bypass -File .\vaultpilot-dc-agent.ps1 -Status
 ```
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\passman-ad-agent.ps1 -TailLog
+powershell -ExecutionPolicy Bypass -File .\vaultpilot-dc-agent.ps1 -TailLog
 ```
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\passman-ad-agent.ps1 -RepairService
+powershell -ExecutionPolicy Bypass -File .\vaultpilot-dc-agent.ps1 -RepairService
 ```
+
+Kurulu servis için mevcut provider kartındaki token döndürme komutunu kullanın. Üretilen repair komutu aynı Windows servisini korur, DC host ve bind kullanıcı adını koruyabilir veya güncelleyebilir. Yayınlanmış veya içeride onaylanmış VaultPilot 2.0.0 buildleri ve sonrasında yeni üretilen veya döndürülen agent token'ları sunucudaki server-secret/data-directory bağlam kaymasından bağımsız yetkilendirilir; aynı düzeltme ilk olarak PassMan 1.8.19 compatibility line içinde yayımlandı.
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\passman-ad-agent.ps1 -UninstallService
+powershell -ExecutionPolicy Bypass -File .\vaultpilot-dc-agent.ps1 -UninstallService
 ```
 
-## PassMan'da Görünenler
+## VaultPilot'ta Görünenler
 
 Senkron sonrası Active Directory sekmesi şunları gösterir:
 
@@ -67,14 +73,15 @@ Senkron sonrası Active Directory sekmesi şunları gösterir:
 - Senkron ihtiyacını karşılayan en dar yetkili delegated hesabı kullanın.
 - Ajanı DC'ye yakın, kontrollü bir Windows host üzerinde çalıştırın.
 - Kurulum komutu güvenli olmayan bir kanala kopyalandıysa agent token'ı döndürün.
-- Ajan makinesi yeniden kuruluyorsa kaydı PassMan UI üzerinden iptal edip yeniden oluşturun.
+- Ajan makinesi yeniden kuruluyorsa kaydı VaultPilot UI üzerinden iptal edip yeniden oluşturun.
 
 ## Sorun Giderme
 
 | Belirti | Aksiyon |
 | --- | --- |
 | Servis kurulmuyor | Administrator PowerShell kullanın ve servis logunu inceleyin. |
-| Wrapper compile hatası | En güncel `passman-ad-agent.ps1` kullanın; repair akışı eski servisi durdurup wrapper'ı güvenli şekilde yeniden oluşturur. |
-| PassMan URL erişilemiyor | Ajan makinesinden URL'yi test edin, firewall/DNS yolunu doğrulayın. |
+| Wrapper compile hatası | En güncel `vaultpilot-dc-agent.ps1` kullanın; repair akışı eski servisi durdurup wrapper'ı güvenli şekilde yeniden oluşturur. |
+| VaultPilot URL erişilemiyor | Ajan makinesinden URL'yi test edin, firewall/DNS yolunu doğrulayın. |
+| Kurulum veya repair 401 Unauthorized döndürüyor | Hazırlanan 2.0 hattında yayınlanmış veya içeride onaylanmış VaultPilot 2.0.0 veya daha yeni build kullanın. Eski compatibility kurulumlarında PassMan 1.8.19 veya daha yeni sürümü kullanın. Sonra provider token'ını döndürüp gösterilen komutu tekrar çalıştırın. Devam ederse server logunda redakte edilmiş `provider_not_found`, `token_revoked`, `token_missing` veya `token_mismatch` sebebini kontrol edin. |
 | Senkron sıfır nesne gösteriyor | Bind hesap kapsamını ve base DN değerini kontrol edin. |
 | Ajan bağlı ama ağaç bayat | Şimdi senkronize et aksiyonunu kullanın, sonra servis ve ajan loglarına bakın. |

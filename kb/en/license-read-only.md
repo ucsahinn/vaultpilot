@@ -1,6 +1,6 @@
 # License read-only state
 
-Use this when PassMan allows login and reading but blocks writes, user changes, sharing, pairing or update install actions.
+Use this when VaultPilot allows login and reading but blocks writes, user changes, sharing, pairing or update install actions.
 
 ## Checks
 

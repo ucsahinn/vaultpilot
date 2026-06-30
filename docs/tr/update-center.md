@@ -1,12 +1,14 @@
 # Güncelleme Merkezi
 
-PassMan Güncelleme Merkezi ana Windows MSI paketini yönetir. Tarayıcı eklentisi Chrome Web Store üzerinden kurulur ve güncellenir; Offline Share Decrypter ve PassMan DC Agent Service bileşenleri release notlarında izlenir ve MSI veya belgelenmiş release asset'leriyle yenilenir.
+VaultPilot Güncelleme Merkezi ana Windows MSI paketini yönetir. Tarayıcı eklentisi Chrome Web Store üzerinden kurulur ve güncellenir; Offline Share Decrypter ve VaultPilot DC Agent Service bileşenleri release notlarında izlenir ve MSI veya belgelenmiş release asset'leriyle yenilenir.
 
-![PassMan update center](../../assets/screenshots/update-center.png)
+![VaultPilot update center](../../assets/screenshots/update-center.png)
+
+Screenshot notu: bu görsel PassMan compatibility line'dan geçici layout referansı olarak tutulur. Final 2.0 screenshotları yeniden alınana kadar VaultPilot 2.0 release veya branding kanıtı değildir.
 
 ## Güvenli Güncelleme Modeli
 
-PassMan şunları doğrular:
+VaultPilot şunları doğrular:
 
 - İmzalı update manifesti.
 - Paket URL'si ve dosya adı.
@@ -14,7 +16,7 @@ PassMan şunları doğrular:
 - MSI Authenticode signer thumbprint.
 - Dosya boyutu ve release metadata'sı.
 
-İmzalı manifest lokal release signer thumbprint'ini pin'lediğinde PassMan-managed update trust için global CA chain zorunlu değildir. Windows SmartScreen itibarı ve geniş OS-level güven için CA-backed veya trusted-signing sertifika hâlâ önerilir.
+İmzalı manifest lokal release signer thumbprint'ini pin'lediğinde VaultPilot-managed update trust için global CA chain zorunlu değildir. Windows SmartScreen itibarı ve geniş OS-level güven için CA-backed veya trusted-signing sertifika hâlâ önerilir.
 
 ## Normal Güncelleme Akışı
 
@@ -23,21 +25,23 @@ PassMan şunları doğrular:
 3. Güncellemeleri kontrol edin.
 4. Sürüm, notlar, signer ve checksum bilgisini inceleyin.
 5. Güncellemeyi başlatın.
-6. PassMan MSI'ı sunucuda indirir ve doğrular.
+6. VaultPilot MSI'ı sunucuda indirir ve doğrular.
 7. Quiet Windows Installer akışı çalışır.
-8. PassMan servisi yeniden başlar.
+8. VaultPilot servisi yeniden başlar.
 9. Konsolu yeniden açıp sürüm ve sağlık durumunu doğrulayın.
 
 ## Release Asset'leri
 
-Güncel public release şunları içerir:
+Hazırlanan 2.0.0 release asset seti şunları içerir:
 
-- `PassMan-1.8.22-x64.msi`
-- `passman-update.json`
+- `VaultPilot-2.0.0-x64.msi`
+- `vaultpilot-update.json`
 - Chrome Web Store eklenti listelemesi: `https://chromewebstore.google.com/detail/passman-enterprise-vault/hjkbedlaieikhkoplgpiohlaakgebobi?hl=tr`
-- `passman-chromium-extension.zip` yalnızca release arşivi ve geliştirme fallback çıktısı
-- `passman-share-decrypter.zip`
-- `passman-ad-agent.ps1`
+- `vaultpilot-browser-vault-extension.zip` yalnızca release arşivi ve geliştirme fallback çıktısı
+- `vaultpilot-share-decrypter.zip`
+- `vaultpilot-dc-agent.ps1`
+
+Bu seti `v2.0.0` GitHub Release, manifest, imzalar, boyutlar ve hash degerleri dogrulanmadan public kanit olarak kullanmayin.
 
 Manuel doğrulama gerektiğinde kurulumdan veya iç dağıtımdan önce [release asset doğrulama](release-asset-verification.md) sayfasını kullanın.
 
@@ -51,5 +55,5 @@ Güncelleme Merkezi tarayıcı eklentisi için ayrı installer akışı açmamal
 | --- | --- |
 | Güncelleme yüzde 76 civarında duruyor | MSI imzası ve Windows Installer event log. |
 | Checksum uyuşmuyor | İndirilen MSI'ı silip release asset üzerinden tekrar deneyin. |
-| Servis yeniden başlamıyor | `PassManServer` durumunu sorgulayın ve installer loglarını inceleyin. |
+| Servis yeniden başlamıyor | `VaultPilotServer` durumunu sorgulayın ve installer loglarını inceleyin. |
 | Sürüm değişmedi | MSI'ın tamamlandığını doğrulayın, sonra servisi yeniden başlatın. |

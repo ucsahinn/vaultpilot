@@ -1,6 +1,6 @@
 # Windows Server Installation
 
-This runbook covers a normal PassMan Server installation or in-place upgrade on Windows. Use it before opening the server to other users.
+This runbook covers a normal VaultPilot Server installation or in-place upgrade on Windows. Use it before opening the server to other users.
 
 ## Requirements
 
@@ -14,11 +14,11 @@ This runbook covers a normal PassMan Server installation or in-place upgrade on 
 
 ## Install
 
-1. Download `PassMan-1.8.22-x64.msi` from the latest GitHub Release.
+1. Download `VaultPilot-2.0.0-x64.msi` from the `v2.0.0` GitHub Release after publication.
 2. Verify the filename, source, checksum and signer before running it. Use [release asset verification](release-asset-verification.md) when you need the full checklist.
 3. Run the MSI as Administrator.
 4. The installer prepares the standalone server, bundled Node runtime, Prisma/SQLite runtime files, Windows service, firewall rule, data directory and log directory.
-5. Open PassMan from the server first:
+5. Open VaultPilot from the server first:
 
 ```text
 https://127.0.0.1:1903
@@ -30,16 +30,16 @@ Then validate remote access:
 https://<SERVER_HOST>:1903
 ```
 
-First-run profile creation and vault unlock require browser Web Crypto. Use HTTPS or `localhost` for those crypto operations; plain HTTP server-IP access should show the secure-context warning instead of a generic profile creation error.
+First-run profile creation and vault unlock require browser Web Crypto. The installed server exposes the public browser entry over HTTPS on port `1903` by default, using a managed self-signed certificate until a trusted PFX/P12 is configured. Plain HTTP is only for internal upstream or local development paths and should not be documented as the operator entry point.
 
 ## Installed Surfaces
 
 | Surface | Value |
 | --- | --- |
-| Windows service | `PassManServer` |
-| Display name | `PassMan Server` |
-| Data directory | `C:\ProgramData\PassMan` |
-| Log directory | `C:\ProgramData\PassMan\logs` |
+| Windows service | `VaultPilotServer`; legacy `PassManServer` may appear only as an upgrade alias |
+| Display name | `VaultPilot Server` |
+| Data directory | `C:\ProgramData\VaultPilot`; legacy `C:\ProgramData\PassMan` remains an upgrade alias |
+| Log directory | `C:\ProgramData\VaultPilot\logs`; legacy PassMan log paths remain upgrade aliases |
 | Default port | `1903` |
 | Browser entry | `https://<SERVER_HOST>:1903` with managed self-signed HTTPS until a trusted certificate is configured |
 
@@ -48,7 +48,7 @@ First-run profile creation and vault unlock require browser Web Crypto. Use HTTP
 Run these checks before creating broad access:
 
 ```powershell
-sc.exe query PassManServer
+sc.exe query VaultPilotServer
 ```
 
 ```text
@@ -61,7 +61,7 @@ Expected result:
 - The local API responds.
 - The remote URL opens from an approved workstation.
 - The firewall rule allows only the intended network path.
-- No installer error remains in the PassMan log folder.
+- No installer error remains in the VaultPilot log folder; upgraded hosts may also have legacy PassMan log evidence.
 
 ## First Login Path
 
@@ -80,12 +80,18 @@ After service validation:
 - The offline decrypter and DC agent script are refreshed by the MSI and also documented in release notes.
 - Do not manually replace files under the installed server directory unless support explicitly asks for that diagnostic step.
 
+## Upgrade From PassMan-Branded Installs
+
+Before upgrading, export a server backup and record the current service name, data directory, port, and running version. Run the VaultPilot 2.0 MSI as Administrator. Do not manually rename `C:\ProgramData\PassMan` or existing service entries.
+
+After upgrade, verify `VaultPilotServer`, the data directory, Update Center, extension pairing, license state, audit retention, and Server System diagnostics. Legacy PassMan aliases may remain only for compatibility and rollback.
+
 ## Public Evidence For Support
 
 Safe to share after redaction:
 
 - MSI filename.
-- PassMan server version.
+- VaultPilot server version.
 - Windows service status.
 - Redacted installer log excerpt.
 - Browser URL shape, with real host replaced by `<SERVER_HOST>`.

@@ -1,8 +1,8 @@
 # FAQ
 
-## Is PassMan a cloud service?
+## Is VaultPilot a cloud service?
 
-No. PassMan is a self-hosted Windows Server application.
+No. VaultPilot is a self-hosted Windows Server application.
 
 ## Is the master password sent to the server?
 
@@ -14,7 +14,7 @@ No. The public repository contains documentation, release notes, and GitHub Rele
 
 ## Is a local signer safe?
 
-For the PassMan-managed update chain, a local signer can be accepted when the signed manifest pins the MSI signer thumbprint. CA-backed or trusted signing is recommended for Windows SmartScreen reputation.
+For the VaultPilot-managed update chain, a local signer can be accepted when the signed manifest pins the MSI signer thumbprint. CA-backed or trusted signing is recommended for Windows SmartScreen reputation.
 
 ## Can files be shared?
 
