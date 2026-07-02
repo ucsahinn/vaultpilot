@@ -26,7 +26,7 @@ powershell -ExecutionPolicy Bypass -File .\vaultpilot-dc-agent.ps1 -RepairServic
 
 ## 401 Unauthorized during install or repair
 
-If the endpoint is reachable but the script prints `Directory agent authorization failed`, treat it as an agent authorization issue, not an AD bind issue. On the prepared 2.0 line, use a published or internally approved VaultPilot 2.0.0 or newer build. On older compatibility deployments, use PassMan 1.8.19 or newer. Then rotate the token on the existing provider card and rerun the displayed repair command.
+If the endpoint is reachable but the script prints `Directory agent authorization failed`, treat it as an agent authorization issue, not an AD bind issue. On VaultPilot 2.0.0 and newer, use the published release or an internally approved build. On older compatibility deployments, use PassMan 1.8.19 or newer. Then rotate the token on the existing provider card and rerun the displayed repair command.
 
 If the failure remains, inspect the VaultPilot server log for the redacted reason:
 

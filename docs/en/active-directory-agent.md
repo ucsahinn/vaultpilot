@@ -51,7 +51,7 @@ powershell -ExecutionPolicy Bypass -File .\vaultpilot-dc-agent.ps1 -TailLog
 powershell -ExecutionPolicy Bypass -File .\vaultpilot-dc-agent.ps1 -RepairService
 ```
 
-For an installed service, use the Rotate token command from the existing provider card. The generated repair command keeps the same Windows service and can preserve or update the DC host and bind username. On published or internally approved VaultPilot 2.0.0 builds and newer, freshly generated or rotated agent tokens are authorized independently of server-secret/data-directory context drift on the server; the same fix first landed in the PassMan 1.8.19 compatibility line.
+For an installed service, use the Rotate token command from the existing provider card. The generated repair command keeps the same Windows service and can preserve or update the DC host and bind username. On VaultPilot 2.0.0 and newer, freshly generated or rotated agent tokens are authorized independently of server-secret/data-directory context drift on the server; the same fix first landed in the PassMan 1.8.19 compatibility line.
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\vaultpilot-dc-agent.ps1 -UninstallService
@@ -82,6 +82,6 @@ After sync, the Active Directory tab shows:
 | Service does not install | Run Administrator PowerShell and inspect the service log. |
 | Wrapper compile fails | Use the latest `vaultpilot-dc-agent.ps1`; repair stops the old service and rebuilds the wrapper safely. |
 | VaultPilot URL unreachable | Test the URL from the agent machine and verify firewall/DNS. |
-| Install or repair returns 401 Unauthorized | On the prepared 2.0 line, use a published or internally approved VaultPilot 2.0.0 or newer build. On older compatibility deployments, use PassMan 1.8.19 or newer. Then rotate the provider token and rerun the displayed command. If it still fails, check the server log for the redacted reason: `provider_not_found`, `token_revoked`, `token_missing` or `token_mismatch`. |
+| Install or repair returns 401 Unauthorized | On VaultPilot 2.0.0 and newer, use the published release or an internally approved build. On older compatibility deployments, use PassMan 1.8.19 or newer. Then rotate the provider token and rerun the displayed command. If it still fails, check the server log for the redacted reason: `provider_not_found`, `token_revoked`, `token_missing` or `token_mismatch`. |
 | Sync shows zero objects | Confirm bind account scope and base DN. |
 | Agent connected but tree stale | Use Sync now, then check service and agent logs. |

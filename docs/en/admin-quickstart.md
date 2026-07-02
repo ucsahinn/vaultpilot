@@ -6,7 +6,7 @@ Use this guide when the goal is to move from public release download to a health
 
 | Step | Action | Proof |
 | --- | --- | --- |
-| 1 | Download `VaultPilot-2.0.0-x64.msi` from the `v2.0.0` GitHub Release after publication. | File name, file size and release tag match [release assets](release-asset-verification.md). |
+| 1 | Download `VaultPilot-2.0.0-x64.msi` from GitHub Release `v2.0.0`. | File name, file size, SHA-256 and release tag match [release assets](release-asset-verification.md). |
 | 2 | Verify the signed update manifest before trusting the package. | `vaultpilot-update.json` lists version `2.0.0`, MSI hash, size and signer thumbprint. |
 | 3 | Install the MSI from an elevated Windows session. | `VaultPilot Server` service exists and is running; upgraded hosts may still expose legacy PassMan aliases for compatibility. |
 | 4 | Open `https://<SERVER_HOST>:1903`. | The server responds; managed self-signed HTTPS may show a browser certificate warning until a trusted certificate is configured. |

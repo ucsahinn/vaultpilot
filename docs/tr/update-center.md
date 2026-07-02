@@ -32,18 +32,19 @@ VaultPilot şunları doğrular:
 
 ## Release Asset'leri
 
-Hazırlanan 2.0.0 release asset seti şunları içerir:
+Güncel 2.0.0 GitHub Release asset seti şunları içerir:
 
 - `VaultPilot-2.0.0-x64.msi`
 - `vaultpilot-update.json`
 - Chrome Web Store eklenti listelemesi: `https://chromewebstore.google.com/detail/passman-enterprise-vault/hjkbedlaieikhkoplgpiohlaakgebobi?hl=tr`
 - `vaultpilot-browser-vault-extension.zip` yalnızca release arşivi ve geliştirme fallback çıktısı
+- `vaultpilot-extension-update.json`
 - `vaultpilot-share-decrypter.zip`
+- `vaultpilot-share-decrypter.json`
 - `vaultpilot-dc-agent.ps1`
+- `vaultpilot-dc-agent.json`
 
-Bu seti `v2.0.0` GitHub Release, manifest, imzalar, boyutlar ve hash degerleri dogrulanmadan public kanit olarak kullanmayin.
-
-Manuel doğrulama gerektiğinde kurulumdan veya iç dağıtımdan önce [release asset doğrulama](release-asset-verification.md) sayfasını kullanın.
+Manuel doğrulama gerektiğinde kurulumdan veya iç dağıtımdan önce [release asset doğrulama](release-asset-verification.md) sayfasını kullanın. Asset adlarını, boyutları ve SHA-256 değerlerini local rebuild klasörleriyle değil GitHub Release `v2.0.0` ile karşılaştırın.
 
 ## Bileşen Notları
 

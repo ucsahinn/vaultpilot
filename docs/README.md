@@ -2,7 +2,7 @@
 
 This folder is the public-safe operator wiki for VaultPilot Enterprise Vault Console. Choose a language home first, then follow the lifecycle path that matches the job.
 
-Prepared release: **VaultPilot Enterprise Vault Console 2.0.0**. As of June 30, 2026, the latest verified published GitHub Release is still **PassMan Enterprise Vault Console 1.8.21**.
+Current verified public release: **VaultPilot Enterprise Vault Console 2.0.0**, published as GitHub Release [`v2.0.0`](https://github.com/ucsahinn/vaultpilot/releases/tag/v2.0.0) on June 30, 2026.
 
 | Language | Home | Best for |
 | --- | --- | --- |
@@ -34,6 +34,8 @@ Prepared release: **VaultPilot Enterprise Vault Console 2.0.0**. As of June 30, 
 | Public host and HTTPS | [EN](en/public-host-https-certificate.md) | [TR](tr/public-host-https-certificate.md) | Hostname, certificate package upload and browser validation. |
 | Update Center | [EN](en/update-center.md) | [TR](tr/update-center.md) | Signed manifest, MSI updates and component release notes. |
 | Release asset verification | [EN](en/release-asset-verification.md) | [TR](tr/release-asset-verification.md) | Manual release asset, checksum, signer and manifest verification. |
+| Integration API clients | [EN](en/api-clients.md) | [TR](tr/api-clients.md) | Scoped API client creation and encrypted snapshot access. |
+| License lifecycle | [EN](en/license-lifecycle.md) | [TR](tr/license-lifecycle.md) | Trial, renewal, replacement, expiry and read-only planning. |
 | Uninstall, data retention and rollback | [EN](en/uninstall-rollback-data-retention.md) | [TR](tr/uninstall-rollback-data-retention.md) | Safe service removal, data preservation, purge boundary and rollback checks. |
 | Browser extension | [EN](en/browser-extension.md) | [TR](tr/browser-extension.md) | Pairing, badge counts, autofill and save/update prompts. |
 | Active Directory agent | [EN](en/active-directory-agent.md) | [TR](tr/active-directory-agent.md) | VaultPilot DC Agent Service install, repair, logs and sync tree. |

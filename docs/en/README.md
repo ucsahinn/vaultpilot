@@ -2,7 +2,7 @@
 
 Use this page as the English operator map for VaultPilot Enterprise Vault Console. It is written for administrators, security operators and support teams who need a direct path from install to secure operation.
 
-Prepared release: **VaultPilot Enterprise Vault Console 2.0.0**. As of June 30, 2026, the latest verified published GitHub Release is still **PassMan Enterprise Vault Console 1.8.21**.
+Current verified public release: **VaultPilot Enterprise Vault Console 2.0.0**. It was published as GitHub Release [`v2.0.0`](https://github.com/ucsahinn/vaultpilot/releases/tag/v2.0.0) on June 30, 2026.
 
 ## Recommended Order
 
@@ -21,7 +21,9 @@ Prepared release: **VaultPilot Enterprise Vault Console 2.0.0**. As of June 30, 
 | 11 | [Backups and restore](backups-and-restore.md) | Prepare encrypted backup, integrity and restore procedures. |
 | 12 | [Uninstall, data retention and rollback](uninstall-rollback-data-retention.md) | Remove service files safely, preserve data by default and run rollback only with verified assets. |
 | 13 | [Update Center](update-center.md) and [release asset verification](release-asset-verification.md) | Verify signed manifest, release assets, checksum and MSI signer. |
-| 14 | [Operator runbook](operator-runbook.md) | Run daily, weekly, monthly and incident routines after go-live. |
+| 14 | [Integration API clients](api-clients.md) | Create scoped API clients and read encrypted secret snapshots safely. |
+| 15 | [License lifecycle](license-lifecycle.md) | Plan trial, renewal, expiry, read-only and replacement steps. |
+| 16 | [Operator runbook](operator-runbook.md) | Run daily, weekly, monthly and incident routines after go-live. |
 
 ## Need An Answer Now
 
@@ -35,6 +37,8 @@ Prepared release: **VaultPilot Enterprise Vault Console 2.0.0**. As of June 30, 
 | How do I uninstall without losing data? | [Uninstall, data retention and rollback](uninstall-rollback-data-retention.md) |
 | Why is the DC Agent service not connecting? | [Knowledge base: DC Agent](../../kb/en/dc-agent-service.md) |
 | Why do I see 401 or 403 responses after login? | [Knowledge base: login session noise](../../kb/en/session-401-after-login.md) |
+| Why does an integration API client get 401 or no secrets? | [Knowledge base: API client access](../../kb/en/api-client-401.md) |
+| What happens when the license expires or is replaced? | [License lifecycle](license-lifecycle.md) |
 | What can I safely send to support? | [Support evidence pack](support-evidence-pack.md), [Troubleshooting](troubleshooting.md) and [Support policy](../../SUPPORT.md) |
 
 ## Public Safety

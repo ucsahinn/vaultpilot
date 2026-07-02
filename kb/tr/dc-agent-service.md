@@ -26,7 +26,7 @@ powershell -ExecutionPolicy Bypass -File .\vaultpilot-dc-agent.ps1 -RepairServic
 
 ## Kurulum veya repair sırasında 401 Unauthorized
 
-Endpoint erişilebilir olduğu halde script `Directory agent authorization failed` yazıyorsa bunu AD bind hatası değil, ajan yetkilendirme hatası olarak ele alın. Hazırlanan 2.0 hattında yayınlanmış veya içeride onaylanmış VaultPilot 2.0.0 veya daha yeni build kullanın. Eski compatibility kurulumlarında PassMan 1.8.19 veya daha yeni sürümü kullanın. Sonra mevcut provider kartından token yenileyin ve gösterilen repair komutunu tekrar çalıştırın.
+Endpoint erişilebilir olduğu halde script `Directory agent authorization failed` yazıyorsa bunu AD bind hatası değil, ajan yetkilendirme hatası olarak ele alın. VaultPilot 2.0.0 ve daha yeni sürümlerde yayınlanmış release veya içeride onaylanmış build kullanın. Eski compatibility kurulumlarında PassMan 1.8.19 veya daha yeni sürümü kullanın. Sonra mevcut provider kartından token yenileyin ve gösterilen repair komutunu tekrar çalıştırın.
 
 Hata devam ederse VaultPilot server logunda redakte edilmiş sebebi kontrol edin:
 

@@ -2,7 +2,7 @@
 
 This knowledge base is the public-safe incident navigator for VaultPilot Enterprise Vault Console. It is designed for fast diagnosis without exposing customer data, secret values, license material or local infrastructure.
 
-Prepared release: **VaultPilot Enterprise Vault Console 2.0.0**. As of June 30, 2026, the latest verified published GitHub Release is still **PassMan Enterprise Vault Console 1.8.21**.
+Current verified public release: **VaultPilot Enterprise Vault Console 2.0.0**, published as GitHub Release [`v2.0.0`](https://github.com/ucsahinn/vaultpilot/releases/tag/v2.0.0) on June 30, 2026.
 
 | Language | Incident navigator |
 | --- | --- |
@@ -18,6 +18,7 @@ Prepared release: **VaultPilot Enterprise Vault Console 2.0.0**. As of June 30, 
 | DC Agent service cannot connect or returns 401 | [EN](en/dc-agent-service.md) | [TR](tr/dc-agent-service.md) | Service status, agent log, VaultPilot URL reachability, redacted server auth reason. |
 | Extension pairing remains pending | [EN](en/extension-pairing.md) | [TR](tr/extension-pairing.md) | Pairing code state, device row, browser profile mode. |
 | Login creates 401 or 403 noise after unlock | [EN](en/session-401-after-login.md) | [TR](tr/session-401-after-login.md) | Login time, affected endpoint list, whether `/api/auth/me` returns 200. |
+| Integration API client gets 401 or no secrets | [EN](en/api-client-401.md) | [TR](tr/api-client-401.md) | Client status, `SECRETS_READ` scope, assigned vault count. |
 | Certificate warning | [EN](en/certificate-warning.md) | [TR](tr/certificate-warning.md) | Hostname, certificate SAN, uploaded package type. |
 | Audit chain is partial | [EN](en/audit-chain-partial.md) | [TR](tr/audit-chain-partial.md) | Audit screen filters, latest chain status, recent restore/update events. |
 | License is read-only | [EN](en/license-read-only.md) | [TR](tr/license-read-only.md) | License state, plan limits, active users, license expiry. |

@@ -14,7 +14,7 @@ Bu runbook, VaultPilot Server'ın Windows üzerinde normal kurulumu veya yerinde
 
 ## Kurulum
 
-1. `v2.0.0` GitHub Release yayınlandıktan sonra `VaultPilot-2.0.0-x64.msi` dosyasını indirin.
+1. `VaultPilot-2.0.0-x64.msi` dosyasını GitHub Release `v2.0.0` üzerinden indirin.
 2. Çalıştırmadan önce dosya adını, kaynağı, checksum değerini ve signer bilgisini doğrulayın. Tam kontrol listesi için [release asset doğrulama](release-asset-verification.md) sayfasını kullanın.
 3. MSI'ı Administrator olarak çalıştırın.
 4. Kurulum; standalone server, gömülü Node runtime, Prisma/SQLite runtime dosyaları, Windows servisi, firewall kuralı, data dizini ve log dizinini hazırlar.

@@ -23,8 +23,8 @@ Empieza por el README canónico si necesitas la descripción inglesa más actual
 |Área | Detalle|
 |--- | ---|
 |Estado | Repositorio público: ucsahinn/vaultpilot|
-|Release preparada | La documentación pública de VaultPilot 2.0.0 está preparada; no trates v2.0.0 como prueba publicada hasta que los assets finales, hashes y manifiesto estén publicados y verificados.|
-|Última release pública verificada | A 30 de junio de 2026: PassMan 1.8.21 en la página GitHub Releases de ucsahinn/vaultpilot.|
+|Release pública actual | VaultPilot 2.0.0 se publicó el 30 de junio de 2026 como GitHub Release `v2.0.0`.|
+|Compatibilidad | El nombre PassMan se conserva para servicios antiguos, rutas de datos, variables de entorno, cookies, headers, strings de protocolo, alias de update y decisiones de rollback.|
 |Fuente de verdad | [README canónico en inglés](README.md)|
 |Usuarios | Operadores enterprise que instalan o revisan VaultPilot; administradores que verifican flujos de update, backup, AD y extensión de navegador.|
 |Validación | Los índices de documentación en inglés y turco siguen accesibles; existen los screenshots y assets visuales referenciados por README.|
@@ -36,6 +36,7 @@ Empieza por el README canónico si necesitas la descripción inglesa más actual
 - Puerta de release y verificación para usuarios que revisan assets públicos.
 - Mapa documental para quickstart de admin, instalación en Windows Server, AD agent, backups, extensión del navegador, sharing, update center y troubleshooting.
 - Superficie pública segura para explicar el producto sin exponer código privado ni datos de vault de clientes.
+- Dirige los assets actuales de VaultPilot a GitHub Releases y no presenta builds antiguos de PassMan como ruta de instalación nueva.
 
 ## Qué no es
 

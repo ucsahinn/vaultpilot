@@ -1,8 +1,8 @@
 # VaultPilot / PassMan Release Notes
 
-Latest prepared release note: **VaultPilot 2.0.0**.
+Latest public release: **VaultPilot 2.0.0**.
 
-Latest published GitHub Release verified in this workspace: **PassMan 1.8.21**.
+Latest published GitHub Release verified in this workspace: **VaultPilot 2.0.0**.
 
 VaultPilot is the canonical product name for new work. PassMan remains the compatibility name for older installed services, data paths, environment variables, cookies, headers, update aliases, extension protocol names, and release artifacts that existing customers may still depend on.
 
@@ -19,13 +19,13 @@ VaultPilot is the canonical product name for new work. PassMan remains the compa
 
 ## VaultPilot 2.0.0
 
-Release date: 2026-06-28
+Release date: 2026-06-30
 
 Type: major product transition with compatible upgrade/rollback contracts.
 
 Audience: Windows server operators, browser extension users, support operators, and teams upgrading from PassMan-branded installs.
 
-Publication status: this release note is ready as the local/public-doc source for a GitHub Release body. Do not treat `v2.0.0` as published until the GitHub Release, final assets, manifest, signatures, and SHA-256 evidence are verified.
+GitHub Release: https://github.com/ucsahinn/vaultpilot/releases/tag/v2.0.0
 
 ### Highlights
 
@@ -81,7 +81,7 @@ Publication status: this release note is ready as the local/public-doc source fo
 - Existing installs may still rely on `PassManServer`, `PassMan Server`, `C:\ProgramData\PassMan`, `PASSMAN_*`, `passman_session`, `x-passman-request`, `passman-update.json`, and legacy package names.
 - Extension protocol names, cookies, headers, environment variables, update aliases, and MSI aliases remain available for old clients and rollback paths.
 
-### Browser Vault Extension 1.3.1
+### Browser Vault Extension 1.3.2
 
 - Changed: popup, content panel, README text, package output names, and store/enterprise deployment language now use VaultPilot Browser Vault Extension identity.
 - Changed: Chrome Web Store remains the primary install and update channel. ZIP output is retained only for archive, local development, and emergency fallback.
@@ -101,17 +101,22 @@ Publication status: this release note is ready as the local/public-doc source fo
 - Fixed: repair and token validation work with the new VaultPilot id/token wording while still carrying legacy PassMan agent configuration forward.
 - Compatibility: older installed agents can be repaired without creating a second provider.
 
-### Expected release assets
+### Published release assets
 
-Final asset names and hashes must come from the release gate. The expected component set is:
+The public GitHub Release `v2.0.0` contains these customer-safe delivery assets. Use the GitHub release metadata as the public source of truth; local rebuild artifacts are not release evidence until they are uploaded and verified in the release.
 
-- `VaultPilot-2.0.0-x64.msi` plus legacy MSI aliases only when the public release lane still needs them.
-- `vaultpilot-update.json` plus the legacy `passman-update.json` alias.
-- `vaultpilot-browser-vault-extension.zip` plus the legacy Chromium extension ZIP alias.
-- `vaultpilot-share-decrypter.zip` plus the legacy share-decrypter ZIP alias.
-- `vaultpilot-dc-agent.ps1` plus the legacy AD-agent script alias.
+| Asset | Size | SHA-256 |
+| --- | ---: | --- |
+| `VaultPilot-2.0.0-x64.msi` | 66,118,490 | `c3c3189572fc5936f30e0f14e5d12b2ed4702e3db0efd32a1c8d2eba65b67842` |
+| `vaultpilot-update.json` | 1,430 | `a6610b266c4a3bee2d689615e5f1b2bccf15067af3d8c0094832b10d67fb9351` |
+| `vaultpilot-browser-vault-extension.zip` | 181,103 | `7f95df52d796c8bb73196569dc77cfc220aadd7e971ca323825d505e947c02aa` |
+| `vaultpilot-extension-update.json` | 257 | `de3b30a3cdc2a58188d6421f96d8e164ead5406ebbee614e1569ac20eec69f55` |
+| `vaultpilot-share-decrypter.zip` | 102,632 | `b6cd0cdc8cd2bd670348fca2587f7ad6d54604d2fa3c9d159e6a35c15301ed8a` |
+| `vaultpilot-share-decrypter.json` | 219 | `7dca1ad23057223a221eaa0058b6ae8a5dfa4d12cbbcdf73b4249545cd34211b` |
+| `vaultpilot-dc-agent.ps1` | 98,891 | `de8c4df43ff69b9a277e2cfaf4cb14f553512cf13b318eec45b725db1113e0fc` |
+| `vaultpilot-dc-agent.json` | 212 | `9082376283457eeddbffd3aee8d4e6ed1b46674d498d027467a9eff6308f7f4e` |
 
-### Verification before publishing
+### Verification gates for a new release
 
 - `npm run lint`
 - `npm run test`
@@ -285,4 +290,4 @@ Type: self-hosted Windows server foundation.
 
 ## Older public history
 
-Earlier 1.0.x through 1.4.x builds established the self-hosted MSI baseline, offline licensing, selected-secret sharing, browser extension management, update manifests, file vault work, RBAC, audit hardening, and enterprise UI polish. Public downloads for retired builds should not be used for new deployments; use the latest published GitHub Release or the latest verified VaultPilot release once it is published.
+Earlier 1.0.x through 1.4.x builds established the self-hosted MSI baseline, offline licensing, selected-secret sharing, browser extension management, update manifests, file vault work, RBAC, audit hardening, and enterprise UI polish. Public downloads for retired builds should not be used for new deployments; use the latest published VaultPilot GitHub Release.

@@ -39,7 +39,7 @@ Ana parola, cookie, session token değeri, gerçek kayıt içeren screenshot vey
 ## Çözüm Yolu
 
 1. `1.6.0` veya daha yeni sürüme yükselt.
-2. Logout yap, stale tabları kapat ve VaultPilot'? tek canonical URL üzerinden aç.
+2. Logout yap, stale tabları kapat ve VaultPilot'u tek canonical URL üzerinden aç.
 3. Browser'ın VaultPilot hostu için cookie kabul ettiğini doğrula.
 4. Tekrar login ol ve protected route öncesi `/api/auth/me` `200` mü kontrol et.
 5. Proxy kullanılıyorsa host, scheme ve cookie davranışını koruduğunu doğrula.

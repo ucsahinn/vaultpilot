@@ -51,7 +51,7 @@ powershell -ExecutionPolicy Bypass -File .\vaultpilot-dc-agent.ps1 -TailLog
 powershell -ExecutionPolicy Bypass -File .\vaultpilot-dc-agent.ps1 -RepairService
 ```
 
-Kurulu servis için mevcut provider kartındaki token döndürme komutunu kullanın. Üretilen repair komutu aynı Windows servisini korur, DC host ve bind kullanıcı adını koruyabilir veya güncelleyebilir. Yayınlanmış veya içeride onaylanmış VaultPilot 2.0.0 buildleri ve sonrasında yeni üretilen veya döndürülen agent token'ları sunucudaki server-secret/data-directory bağlam kaymasından bağımsız yetkilendirilir; aynı düzeltme ilk olarak PassMan 1.8.19 compatibility line içinde yayımlandı.
+Kurulu servis için mevcut provider kartındaki token döndürme komutunu kullanın. Üretilen repair komutu aynı Windows servisini korur, DC host ve bind kullanıcı adını koruyabilir veya güncelleyebilir. VaultPilot 2.0.0 ve daha yeni sürümlerde yeni üretilen veya döndürülen agent token'ları sunucudaki server-secret/data-directory bağlam kaymasından bağımsız yetkilendirilir; aynı düzeltme ilk olarak PassMan 1.8.19 compatibility line içinde yayımlandı.
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\vaultpilot-dc-agent.ps1 -UninstallService
@@ -82,6 +82,6 @@ Senkron sonrası Active Directory sekmesi şunları gösterir:
 | Servis kurulmuyor | Administrator PowerShell kullanın ve servis logunu inceleyin. |
 | Wrapper compile hatası | En güncel `vaultpilot-dc-agent.ps1` kullanın; repair akışı eski servisi durdurup wrapper'ı güvenli şekilde yeniden oluşturur. |
 | VaultPilot URL erişilemiyor | Ajan makinesinden URL'yi test edin, firewall/DNS yolunu doğrulayın. |
-| Kurulum veya repair 401 Unauthorized döndürüyor | Hazırlanan 2.0 hattında yayınlanmış veya içeride onaylanmış VaultPilot 2.0.0 veya daha yeni build kullanın. Eski compatibility kurulumlarında PassMan 1.8.19 veya daha yeni sürümü kullanın. Sonra provider token'ını döndürüp gösterilen komutu tekrar çalıştırın. Devam ederse server logunda redakte edilmiş `provider_not_found`, `token_revoked`, `token_missing` veya `token_mismatch` sebebini kontrol edin. |
+| Kurulum veya repair 401 Unauthorized döndürüyor | VaultPilot 2.0.0 ve daha yeni sürümlerde yayınlanmış release veya içeride onaylanmış build kullanın. Eski compatibility kurulumlarında PassMan 1.8.19 veya daha yeni sürümü kullanın. Sonra provider token'ını döndürüp gösterilen komutu tekrar çalıştırın. Devam ederse server logunda redakte edilmiş `provider_not_found`, `token_revoked`, `token_missing` veya `token_mismatch` sebebini kontrol edin. |
 | Senkron sıfır nesne gösteriyor | Bind hesap kapsamını ve base DN değerini kontrol edin. |
 | Ajan bağlı ama ağaç bayat | Şimdi senkronize et aksiyonunu kullanın, sonra servis ve ajan loglarına bakın. |

@@ -58,11 +58,11 @@
 </p>
 
 <p align="center">
-  <strong>Publication state:</strong> the VaultPilot 2.0.0 documentation set is prepared, but the latest verified GitHub Release is still PassMan 1.8.21 until the v2.0.0 release assets, manifest, signatures and hashes are published and verified.
+  <strong>Current verified public release:</strong> VaultPilot Enterprise Vault Console 2.0.0, published as GitHub Release <a href="https://github.com/ucsahinn/vaultpilot/releases/tag/v2.0.0">v2.0.0</a> on June 30, 2026.
 </p>
 
 <p align="center">
-  <code>Prepared 2.0.0</code>
+  <code>VaultPilot 2.0.0</code>
   &nbsp;
   <code>Windows MSI</code>
   &nbsp;
@@ -77,7 +77,7 @@
   <tr>
     <td align="center" width="25%">
       <a href="https://github.com/ucsahinn/vaultpilot/releases/latest"><img src="assets/icons/download.svg" width="46" alt="Download icon"><br><strong>Open latest published release</strong></a><br>
-      <sub>Currently v1.8.21 until the v2.0.0 gate publishes final assets.</sub>
+      <sub>Current public release: VaultPilot 2.0.0.</sub>
     </td>
     <td align="center" width="25%">
       <a href="docs/en/README.md"><img src="assets/icons/docs.svg" width="46" alt="Documentation icon"><br><strong>Read operator docs</strong></a><br>
@@ -101,7 +101,7 @@
 </p>
 
 <p align="center">
-  <sub>Sanitized VaultPilot 2.0 screenshot captured from an isolated local runtime on June 30, 2026. It shows UI state only; release binaries stay in GitHub Releases and asset hashes remain release-gate evidence. Private source code, signing material and customer data stay out of this repository.</sub>
+  <sub>Sanitized VaultPilot 2.0 screenshot captured from an isolated local runtime on June 30, 2026. It shows UI state only; release binaries stay in GitHub Releases and published asset hashes remain release evidence. Private source code, signing material and customer data stay out of this repository.</sub>
 </p>
 
 ## <img src="assets/icons/vault.svg" width="22" alt=""> Enterprise Operating Contract
@@ -118,7 +118,7 @@
 
 ![VaultPilot signed update trust chain](assets/visuals/update-trust-chain.svg)
 
-| Signal | Trust signal | Public proof |
+| Signal | Trust signal | Public evidence |
 | --- | --- | --- |
 | ![Release icon](assets/icons/release.svg) | Release assets stay out of git | MSI, release fallback ZIPs, manifest and agent script are linked from GitHub Releases only; browser extension installs use Chrome Web Store. |
 | ![Update icon](assets/icons/update.svg) | Update flow is manifest-led | VaultPilot verifies the signed manifest, release metadata, SHA-256 checksum and MSI signer before update execution. |
@@ -166,7 +166,7 @@ This repository does not contain private source code, internal signing material,
 
 ## <img src="assets/icons/update.svg" width="22" alt=""> Operator Path
 
-1. Download the published MSI from GitHub Releases. If you are following the prepared 2.0.0 path, wait until the `v2.0.0` release assets are published and verified.
+1. Download the published MSI from GitHub Release `v2.0.0`.
 2. Install it as Administrator on the approved Windows host.
 3. Open `https://<SERVER_HOST>:1903` to verify the service responds. If no trusted certificate is configured yet, expect a managed self-signed certificate warning until the operator installs a PFX/P12 package.
 4. Apply the license and confirm the public host plus HTTPS settings.
@@ -175,27 +175,30 @@ This repository does not contain private source code, internal signing material,
 7. Configure VaultPilot DC Agent Service if AD scope is needed.
 8. Review backup, restore, update and support-evidence procedures.
 
-## <img src="assets/icons/release.svg" width="22" alt=""> Prepared 2.0.0 Release Assets
+## <img src="assets/icons/release.svg" width="22" alt=""> VaultPilot 2.0.0 Release Assets
 
 | Type | Asset | Purpose | Delivery |
 | --- | --- | --- | --- |
-| ![Windows icon](assets/icons/windows.svg) | `VaultPilot-2.0.0-x64.msi` | Installs or upgrades VaultPilot Server on Windows. | GitHub Release after publication |
-| ![Update icon](assets/icons/update.svg) | `vaultpilot-update.json` | Signed update manifest verified by VaultPilot. | GitHub Release after publication |
+| ![Windows icon](assets/icons/windows.svg) | `VaultPilot-2.0.0-x64.msi` | Installs or upgrades VaultPilot Server on Windows. | GitHub Release `v2.0.0` |
+| ![Update icon](assets/icons/update.svg) | `vaultpilot-update.json` | Signed update manifest verified by VaultPilot. | GitHub Release `v2.0.0` |
 | ![Extension icon](assets/icons/extension.svg) | [Chrome Web Store listing](https://chromewebstore.google.com/detail/passman-enterprise-vault/hjkbedlaieikhkoplgpiohlaakgebobi?hl=tr) | Primary browser extension install and update channel. | Chrome Web Store |
-| ![Extension icon](assets/icons/extension.svg) | `vaultpilot-browser-vault-extension.zip` | Release archive and development fallback only. | GitHub Release after publication |
-| ![Share icon](assets/icons/share.svg) | `vaultpilot-share-decrypter.zip` | Offline external-share opening tool. | GitHub Release after publication |
-| ![Directory icon](assets/icons/directory.svg) | `vaultpilot-dc-agent.ps1` | VaultPilot DC Agent Service installer and repair script. | GitHub Release after publication |
+| ![Extension icon](assets/icons/extension.svg) | `vaultpilot-browser-vault-extension.zip` | Release archive and development fallback only. | GitHub Release `v2.0.0` |
+| ![Extension icon](assets/icons/extension.svg) | `vaultpilot-extension-update.json` | Browser extension update metadata for managed validation. | GitHub Release `v2.0.0` |
+| ![Share icon](assets/icons/share.svg) | `vaultpilot-share-decrypter.zip` | Offline external-share opening tool. | GitHub Release `v2.0.0` |
+| ![Share icon](assets/icons/share.svg) | `vaultpilot-share-decrypter.json` | Offline decrypter update metadata. | GitHub Release `v2.0.0` |
+| ![Directory icon](assets/icons/directory.svg) | `vaultpilot-dc-agent.ps1` | VaultPilot DC Agent Service installer and repair script. | GitHub Release `v2.0.0` |
+| ![Directory icon](assets/icons/directory.svg) | `vaultpilot-dc-agent.json` | DC Agent release metadata. | GitHub Release `v2.0.0` |
 
 VaultPilot-managed updates verify the signed manifest, release asset metadata, SHA-256 checksum and MSI signer thumbprint before starting the MSI flow. A global CA chain is not required for VaultPilot-managed update trust when the signed manifest pins the local release signer thumbprint. CA-backed or trusted-signing certificates remain recommended for Windows reputation and broad OS-level trust.
 
-Remote publication note: as of June 30, 2026, the latest verified GitHub Release is still `v1.8.21`. Do not treat `v2.0.0` assets, hashes or manifests as public proof until the release gate publishes and verifies them.
+Before internal redistribution, verify the GitHub asset list, manifest, SHA-256 values, MSI signer evidence and file sizes against the release page.
 
 ## <img src="assets/icons/update.svg" width="22" alt=""> Component Versions
 
 | Component | Version | Update path |
 | --- | ---: | --- |
 | VaultPilot Enterprise Vault Console | 2.0.0 | Windows MSI / Update Center |
-| Chromium Browser Extension | 1.3.1 | Chrome Web Store |
+| Chromium Browser Extension | 1.3.2 | Chrome Web Store |
 | Offline Share Decrypter | 1.2.0 | Bundled support component and release ZIP |
 | VaultPilot DC Agent Service | 1.2.10 | Bundled support component and release script |
 
@@ -213,6 +216,8 @@ Remote publication note: as of June 30, 2026, the latest verified GitHub Release
 | Public host and HTTPS | [Public host and HTTPS](docs/en/public-host-https-certificate.md) | [Public host ve HTTPS](docs/tr/public-host-https-certificate.md) |
 | Update Center | [Update Center](docs/en/update-center.md) | [Güncelleme Merkezi](docs/tr/update-center.md) |
 | Release asset verification | [Release asset verification](docs/en/release-asset-verification.md) | [Release asset doğrulama](docs/tr/release-asset-verification.md) |
+| Integration API clients | [Integration API clients](docs/en/api-clients.md) | [Integration API client'ları](docs/tr/api-clients.md) |
+| License lifecycle | [License lifecycle](docs/en/license-lifecycle.md) | [Lisans yaşam döngüsü](docs/tr/license-lifecycle.md) |
 | Browser extension | [Browser extension](docs/en/browser-extension.md) | [Tarayıcı eklentisi](docs/tr/browser-extension.md) |
 | Active Directory agent | [Active Directory agent](docs/en/active-directory-agent.md) | [Active Directory ajanı](docs/tr/active-directory-agent.md) |
 | Sharing and decrypter | [Sharing and offline decrypter](docs/en/sharing-and-offline-decrypter.md) | [Paylaşım ve offline decrypter](docs/tr/sharing-and-offline-decrypter.md) |
@@ -233,12 +238,13 @@ Remote publication note: as of June 30, 2026, the latest verified GitHub Release
 | Certificate warning | [EN](kb/en/certificate-warning.md) | [TR](kb/tr/certificate-warning.md) |
 | Audit chain is partial | [EN](kb/en/audit-chain-partial.md) | [TR](kb/tr/audit-chain-partial.md) |
 | License is read-only | [EN](kb/en/license-read-only.md) | [TR](kb/tr/license-read-only.md) |
+| Integration API client gets 401 or no secrets | [EN](kb/en/api-client-401.md) | [TR](kb/tr/api-client-401.md) |
 | External share package fails | [EN](kb/en/external-share-fails.md) | [TR](kb/tr/external-share-fails.md) |
 | Login creates 401 or 403 noise after unlock | [EN](kb/en/session-401-after-login.md) | [TR](kb/tr/session-401-after-login.md) |
 
 ## <img src="assets/icons/vault.svg" width="22" alt=""> Product Walkthrough
 
-Fresh 2.0 captures: `login-lock-screen.png`, `overview-security-posture.png` and `passwords-record-list.png` were captured from an isolated local VaultPilot 2.0 runtime on June 30, 2026 with synthetic data only. Remaining walkthrough captures are legacy PassMan compatibility-line layout references until the final licensed or gated 2.0 screens are recaptured. Use the release asset verification pages for release proof.
+Fresh 2.0 captures: `login-lock-screen.png`, `overview-security-posture.png` and `passwords-record-list.png` were captured from an isolated local VaultPilot 2.0 runtime on June 30, 2026 with synthetic data only. Remaining walkthrough captures are legacy PassMan compatibility-line layout references until they are recaptured for the current VaultPilot surface. Use the release asset verification pages for release evidence.
 
 <details open>
 <summary>Core console surfaces</summary>

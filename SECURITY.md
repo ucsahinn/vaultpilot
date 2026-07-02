@@ -2,7 +2,9 @@
 
 ## Supported Release
 
-Only the latest verified public VaultPilot/PassMan release is supported for new installations and updates. The prepared major release is **VaultPilot Enterprise Vault Console 2.0.0**, but as of June 30, 2026, the latest verified GitHub Release is still **PassMan Enterprise Vault Console 1.8.21**. Do not treat `2.0.0` assets as public proof until the release gate publishes and verifies the final MSI, manifest, signatures and hashes.
+Only the latest verified public VaultPilot release is supported for new installations and updates. The current supported public release is **VaultPilot Enterprise Vault Console 2.0.0**, published as GitHub Release [`v2.0.0`](https://github.com/ucsahinn/vaultpilot/releases/tag/v2.0.0) on June 30, 2026.
+
+PassMan remains a legacy compatibility name for older installed service names, data paths, environment variables, cookies, headers, update aliases, extension protocol strings and rollback decisions. Do not use older PassMan releases for new installations unless support has explicitly approved a rollback.
 
 ## Reporting Security Issues
 

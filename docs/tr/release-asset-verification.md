@@ -4,47 +4,48 @@ Bir VaultPilot public release assetini kurmadan veya kurum içinde dağıtmadan 
 
 ## Release Durumu
 
-30 Haziran 2026 itibarıyla doğrulanan son yayınlı GitHub Release hâlâ `v1.8.21`. Aşağıdaki tablo hazırlanan VaultPilot 2.0.0 asset setidir; `v2.0.0` GitHub Release, final assetler, manifest, imzalar ve hashler yayınlanıp doğrulanmadan public kanıt sayılmamalıdır.
+Güncel doğrulanmış public release, 30 Haziran 2026'da yayınlanan GitHub Release [`v2.0.0`](https://github.com/ucsahinn/vaultpilot/releases/tag/v2.0.0).
 
-## Hazırlanan 2.0.0 Asset Seti
+Public kaynak olarak GitHub Release asset metadata'sını esas al. Local rebuild dosyaları, kopyalanmış paketler, support ekleri veya chat üzerinden gelen dosyalar release kanıtı değildir.
+
+## VaultPilot 2.0.0 Bileşenleri
 
 | Bileşen | Sürüm | Asset |
 | --- | ---: | --- |
-| VaultPilot Enterprise Vault Console | 2.0.0 | `VaultPilot-2.0.0-x64.msi` yayın sonrası |
-| Chromium Browser Extension | 1.3.1 | Chrome Web Store listing; `vaultpilot-browser-vault-extension.zip` release arşivi |
+| VaultPilot Enterprise Vault Console | 2.0.0 | `VaultPilot-2.0.0-x64.msi` |
+| Chromium Browser Extension | 1.3.2 | Chrome Web Store listing; `vaultpilot-browser-vault-extension.zip` release arşivi |
 | Offline Share Decrypter | 1.2.0 | `vaultpilot-share-decrypter.zip` |
-| VaultPilot DC Agent Service | 1.2.10 | `vaultpilot-dc-agent.ps1` yayın sonrası |
-| Update manifest | 2.0.0 channel metadata | `vaultpilot-update.json` yayın sonrası |
+| VaultPilot DC Agent Service | 1.2.10 | `vaultpilot-dc-agent.ps1` |
+| Update manifest | 2.0.0 channel metadata | `vaultpilot-update.json` |
 
 ## Public Asset Seti
 
-Public GitHub Release yalnızca müşteri güvenli delivery assetlerini içermelidir:
+Public GitHub Release şu müşteri güvenli delivery assetlerini içerir:
 
-- `VaultPilot-2.0.0-x64.msi`
-- `vaultpilot-update.json`
-- `vaultpilot-browser-vault-extension.zip`
-- `vaultpilot-share-decrypter.zip`
-- `vaultpilot-dc-agent.ps1`
+| Asset | Boyut | SHA-256 |
+| --- | ---: | --- |
+| `VaultPilot-2.0.0-x64.msi` | 66,118,490 | `c3c3189572fc5936f30e0f14e5d12b2ed4702e3db0efd32a1c8d2eba65b67842` |
+| `vaultpilot-update.json` | 1,430 | `a6610b266c4a3bee2d689615e5f1b2bccf15067af3d8c0094832b10d67fb9351` |
+| `vaultpilot-browser-vault-extension.zip` | 181,103 | `7f95df52d796c8bb73196569dc77cfc220aadd7e971ca323825d505e947c02aa` |
+| `vaultpilot-extension-update.json` | 257 | `de3b30a3cdc2a58188d6421f96d8e164ead5406ebbee614e1569ac20eec69f55` |
+| `vaultpilot-share-decrypter.zip` | 102,632 | `b6cd0cdc8cd2bd670348fca2587f7ad6d54604d2fa3c9d159e6a35c15301ed8a` |
+| `vaultpilot-share-decrypter.json` | 219 | `7dca1ad23057223a221eaa0058b6ae8a5dfa4d12cbbcdf73b4249545cd34211b` |
+| `vaultpilot-dc-agent.ps1` | 98,891 | `de8c4df43ff69b9a277e2cfaf4cb14f553512cf13b318eec45b725db1113e0fc` |
+| `vaultpilot-dc-agent.json` | 212 | `9082376283457eeddbffd3aee8d4e6ed1b46674d498d027467a9eff6308f7f4e` |
 
 Chrome Web Store listelemesi tarayıcı eklentisi için birincil müşteri kurulum ve güncelleme kanalıdır. Eklenti ZIP'i yalnızca release arşivi, lab doğrulama paketi, lokal geliştirme paketi veya acil fallback çıktısı olarak tutulur.
 
 Git tree içinde MSI, ZIP, EXE, PFX, P12, DB, SQLite, backup veya signing-key dosyası bulunmamalıdır.
 
-## 2.0.0 Asset Metadata Durumu
-
-Final 2.0.0 boyut ve SHA-256 değerleri burada özellikle yazılmadı. Bu değerler `npm run build:windows`, manifest issue/verify, MSI doğrulama ve yayın kanıtı tamamlandıktan sonra release gate çıktısından alınmalıdır.
-
-30 Haziran 2026 itibarıyla doğrulanan son GitHub Release hâlâ `v1.8.21`; eski `1.8.22` boyut veya hash değerleri 2.0.0 kanıtı olarak yeniden kullanılmamalıdır.
-
 ## Doğrulama Adımları
 
-1. `v2.0.0` GitHub Release sayfasını yalnızca yayın sonrasında aç. Release yoksa bu sayfayı sadece yayın öncesi checklist olarak kullan.
+1. GitHub Release [`v2.0.0`](https://github.com/ucsahinn/vaultpilot/releases/tag/v2.0.0) sayfasını aç.
 2. Release tag değerinin `v2.0.0` olduğunu ve kurum politikanız özellikle izin vermedikçe draft/prerelease olmadığını doğrula.
 3. O release içinden `vaultpilot-update.json` indir.
 4. Manifestin server version olarak `2.0.0` gösterdiğini doğrula.
 5. MSI filename değerinin `VaultPilot-2.0.0-x64.msi` olduğunu doğrula.
 6. Asset URL'lerinin onaylı public GitHub Release hostunu kullandığını doğrula.
-7. İndirilen MSI boyutu ve SHA-256 değerini manifest ile karşılaştır.
+7. İndirilen dosya boyutlarını ve SHA-256 değerlerini yukarıdaki tabloyla ve ilgili bileşen manifestte yer alıyorsa manifest ile karşılaştır.
 8. MSI Authenticode signer metadata değerini manifest signer thumbprint ile karşılaştır.
 9. Extension release arşivi, decrypter ve DC Agent package hash değerlerini kurum içinde dağıtmadan önce doğrula; tarayıcı kullanıcıları eklentiyi Chrome Web Store'dan kurup güncellemelidir.
 

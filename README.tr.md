@@ -23,8 +23,8 @@ En güncel İngilizce anlatım için kanonik README ile başlayın. Aynı operas
 |Alan | Detay|
 |--- | ---|
 |Durum | Public repository: ucsahinn/vaultpilot|
-|Hazırlanan release | VaultPilot 2.0.0 public docs hazır; final asset, hash ve manifest yayınlanıp doğrulanmadan v2.0.0 public kanıt sayılmamalı.|
-|Doğrulanan son public release | 30 Haziran 2026 itibarıyla GitHub Releases sayfasında PassMan 1.8.21.|
+|Güncel public release | VaultPilot 2.0.0, 30 Haziran 2026'da GitHub Release `v2.0.0` olarak yayınlandı.|
+|Compatibility notu | PassMan adı eski servisler, data path'ler, env var'lar, cookie/header/protocol string'leri, update alias'ları ve rollback kararları için korunur.|
 |Doğru kaynak | [Kanonik İngilizce README](README.md)|
 |Kullanıcılar | VaultPilot kuran veya inceleyen enterprise operatörleri; update, backup, AD ve tarayıcı eklentisi akışlarını kontrol eden adminler.|
 |Doğrulama | İngilizce ve Türkçe doküman indeksleri erişilebilir kalır; README'de referans verilen screenshot ve görsel assetler vardır.|
@@ -36,6 +36,7 @@ En güncel İngilizce anlatım için kanonik README ile başlayın. Aynı operas
 - Public assetleri kontrol eden kullanıcılar için release ve doğrulama geçidi.
 - Admin quickstart, Windows Server kurulumu, AD agent, backup, tarayıcı eklentisi, paylaşım, update center ve troubleshooting için doküman haritası.
 - Private source veya müşteri kasa verisi yayınlamadan ürünü anlatan güvenli public yüzey.
+- Güncel VaultPilot release assetleri için GitHub Releases sayfasına yönlendirir; eski PassMan buildlerini yeni kurulum yolu gibi sunmaz.
 
 ## Ne değildir
 

@@ -29,7 +29,7 @@
   <text x="123" y="348" fill="#c8d3db" font-family="Segoe UI, Arial, sans-serif" font-size="23">Zero-knowledge vault for Windows Server operators.</text>
 
   <rect x="124" y="394" width="230" height="58" rx="29" fill="#f0b35c"/>
-  <text x="156" y="431" fill="#05070a" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="850">Prepared 2.0.0</text>
+  <text x="156" y="431" fill="#05070a" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="850">VaultPilot 2.0.0</text>
   <rect x="376" y="394" width="176" height="58" rx="29" fill="none" stroke="#5cc8d7" stroke-opacity=".92"/>
   <text x="419" y="431" fill="#dff7fb" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="760">Docs EN+TR</text>
 

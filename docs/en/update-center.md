@@ -32,18 +32,19 @@ A global CA chain is not required for VaultPilot-managed update trust when the s
 
 ## Release Assets
 
-The prepared 2.0.0 release asset set is:
+The current 2.0.0 GitHub Release asset set is:
 
 - `VaultPilot-2.0.0-x64.msi`
 - `vaultpilot-update.json`
 - Chrome Web Store extension listing: `https://chromewebstore.google.com/detail/passman-enterprise-vault/hjkbedlaieikhkoplgpiohlaakgebobi?hl=tr`
 - `vaultpilot-browser-vault-extension.zip` release archive and development fallback only
+- `vaultpilot-extension-update.json`
 - `vaultpilot-share-decrypter.zip`
+- `vaultpilot-share-decrypter.json`
 - `vaultpilot-dc-agent.ps1`
+- `vaultpilot-dc-agent.json`
 
-Do not treat this set as public proof until the `v2.0.0` GitHub Release, manifest, signatures, sizes and hashes are verified.
-
-For manual verification, use [release asset verification](release-asset-verification.md) before installing or forwarding assets internally.
+For manual verification, use [release asset verification](release-asset-verification.md) before installing or forwarding assets internally. Compare asset names, sizes and SHA-256 values against GitHub Release `v2.0.0`, not against local rebuild folders.
 
 ## Component Notes
 

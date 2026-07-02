@@ -2,7 +2,7 @@
 
 Bu sayfa VaultPilot Enterprise Vault Console için Türkçe operatör haritasıdır. Kurulumdan güvenli işletime kadar en kısa yolu göstermek için hazırlanmıştır.
 
-Hazırlanan release: **VaultPilot Enterprise Vault Console 2.0.0**. 30 Haziran 2026 itibarıyla doğrulanan son yayınlı GitHub Release hâlâ **PassMan Enterprise Vault Console 1.8.21**.
+Güncel doğrulanmış public release: **VaultPilot Enterprise Vault Console 2.0.0**. GitHub Release [`v2.0.0`](https://github.com/ucsahinn/vaultpilot/releases/tag/v2.0.0) 30 Haziran 2026'da yayınlandı.
 
 ## Önerilen Sıra
 
@@ -21,7 +21,9 @@ Hazırlanan release: **VaultPilot Enterprise Vault Console 2.0.0**. 30 Haziran 2
 | 11 | [Yedekleme ve geri yükleme](backups-and-restore.md) | Şifreli yedek, bütünlük ve geri yükleme prosedürü hazırlanır. |
 | 12 | [Kaldırma, veri saklama ve rollback](uninstall-rollback-data-retention.md) | Servis dosyaları güvenli kaldırılır, veri varsayılan olarak korunur ve rollback yalnızca doğrulanmış assetlerle yapılır. |
 | 13 | [Güncelleme Merkezi](update-center.md) ve [release asset doğrulama](release-asset-verification.md) | İmzalı manifest, release asset'leri, checksum ve MSI imzası doğrulanır. |
-| 14 | [Operasyon runbook](operator-runbook.md) | Canlı kullanım sonrası günlük, haftalık, aylık ve olay rutinleri yürütülür. |
+| 14 | [Integration API client'ları](api-clients.md) | Scoped API client oluşturulur ve encrypted secret snapshot güvenli okunur. |
+| 15 | [Lisans yaşam döngüsü](license-lifecycle.md) | Trial, yenileme, expiry, read-only ve lisans değişimi planlanır. |
+| 16 | [Operasyon runbook](operator-runbook.md) | Canlı kullanım sonrası günlük, haftalık, aylık ve olay rutinleri yürütülür. |
 
 ## Hemen Cevap Gerekiyorsa
 
@@ -35,6 +37,8 @@ Hazırlanan release: **VaultPilot Enterprise Vault Console 2.0.0**. 30 Haziran 2
 | Veri kaybetmeden nasıl kaldırırım? | [Kaldırma, veri saklama ve rollback](uninstall-rollback-data-retention.md) |
 | DC Agent servisi neden bağlanmıyor? | [Bilgi bankası: DC Agent](../../kb/tr/dc-agent-service.md) |
 | Girişten sonra neden 401 veya 403 cevapları görüyorum? | [Bilgi bankası: login session gürültüsü](../../kb/tr/session-401-after-login.md) |
+| Integration API client neden 401 alıyor veya secret görmüyor? | [Bilgi bankası: API client erişimi](../../kb/tr/api-client-401.md) |
+| Lisans biterse veya değiştirilirse ne olur? | [Lisans yaşam döngüsü](license-lifecycle.md) |
 | Support'a ne gönderebilirim? | [Destek kanıt paketi](support-evidence-pack.md), [Sorun giderme](troubleshooting.md) ve [Destek politikası](../../SUPPORT.md) |
 
 ## Public Güvenlik Sınırı

@@ -6,7 +6,7 @@ Bu rehber, public release indirmesinden sağlıklı ilk kasaya kadar en kısa g�
 
 | Adım | Aksiyon | Kanıt |
 | --- | --- | --- |
-| 1 | `v2.0.0` GitHub Release yayınlandıktan sonra `VaultPilot-2.0.0-x64.msi` dosyasını indir. | Dosya adı, boyut ve release tag [asset doğrulama](release-asset-verification.md) sayfasıyla uyumlu. |
+| 1 | `VaultPilot-2.0.0-x64.msi` dosyasını GitHub Release `v2.0.0` üzerinden indir. | Dosya adı, boyut, SHA-256 ve release tag [asset doğrulama](release-asset-verification.md) sayfasıyla uyumlu. |
 | 2 | Pakete güvenmeden önce imzalı update manifestini doğrula. | `vaultpilot-update.json` içinde `2.0.0`, MSI hash, boyut ve signer thumbprint görünür. |
 | 3 | MSI dosyasını elevated Windows oturumundan kur. | `VaultPilot Server` servisi oluşur ve çalışır. |
 | 4 | `https://<SERVER_HOST>:1903` adresini aç. | Sunucu cevap verir; trusted PFX/P12 kurulana kadar managed self-signed sertifika uyarısı görülebilir. |
