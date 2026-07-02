@@ -21,7 +21,7 @@ Güncel doğrulanmış public release: **VaultPilot Enterprise Vault Console 2.0
 | 11 | [Yedekleme ve geri yükleme](backups-and-restore.md) | Şifreli yedek, bütünlük ve geri yükleme prosedürü hazırlanır. |
 | 12 | [Kaldırma, veri saklama ve rollback](uninstall-rollback-data-retention.md) | Servis dosyaları güvenli kaldırılır, veri varsayılan olarak korunur ve rollback yalnızca doğrulanmış assetlerle yapılır. |
 | 13 | [Güncelleme Merkezi](update-center.md) ve [release asset doğrulama](release-asset-verification.md) | İmzalı manifest, release asset'leri, checksum ve MSI imzası doğrulanır. |
-| 14 | [Integration API client'ları](api-clients.md) | Scoped API client oluşturulur ve encrypted secret snapshot güvenli okunur. |
+| 14 | [Integration API client'ları](api-clients.md) | Encrypted secret snapshot ile server, directory ve update status için scoped API client oluşturulur. |
 | 15 | [Lisans yaşam döngüsü](license-lifecycle.md) | Trial, yenileme, expiry, read-only ve lisans değişimi planlanır. |
 | 16 | [Operasyon runbook](operator-runbook.md) | Canlı kullanım sonrası günlük, haftalık, aylık ve olay rutinleri yürütülür. |
 

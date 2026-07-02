@@ -34,7 +34,7 @@ Current verified public release: **VaultPilot Enterprise Vault Console 2.0.0**, 
 | Public host and HTTPS | [EN](en/public-host-https-certificate.md) | [TR](tr/public-host-https-certificate.md) | Hostname, certificate package upload and browser validation. |
 | Update Center | [EN](en/update-center.md) | [TR](tr/update-center.md) | Signed manifest, MSI updates and component release notes. |
 | Release asset verification | [EN](en/release-asset-verification.md) | [TR](tr/release-asset-verification.md) | Manual release asset, checksum, signer and manifest verification. |
-| Integration API clients | [EN](en/api-clients.md) | [TR](tr/api-clients.md) | Scoped API client creation and encrypted snapshot access. |
+| Integration API clients | [EN](en/api-clients.md) | [TR](tr/api-clients.md) | Scoped API client creation for encrypted snapshots and read-only status endpoints. |
 | License lifecycle | [EN](en/license-lifecycle.md) | [TR](tr/license-lifecycle.md) | Trial, renewal, replacement, expiry and read-only planning. |
 | Uninstall, data retention and rollback | [EN](en/uninstall-rollback-data-retention.md) | [TR](tr/uninstall-rollback-data-retention.md) | Safe service removal, data preservation, purge boundary and rollback checks. |
 | Browser extension | [EN](en/browser-extension.md) | [TR](tr/browser-extension.md) | Pairing, badge counts, autofill and save/update prompts. |

@@ -64,7 +64,7 @@ GitHub Release: https://github.com/ucsahinn/vaultpilot/releases/tag/v2.0.0
 
 - Same-version MSI repair no longer removes runtime helper files before the repair path needs them.
 - Overview and Server System layouts use stricter wrapping and grid rules so long real-world labels do not collide.
-- Browser-console backup import/export controls are removed from the daily UI. Backup and restore remain a server-admin workflow through VaultPilot Backup Tool.
+- Daily record screens no longer expose backup import/export as normal vault work. Server backup import remains an administrator recovery action through the current console import panel, and it accepts VaultPilot Backup Tool ZIP archives or encrypted JSON exports after validation.
 
 #### Security
 

@@ -11,7 +11,7 @@ VaultPilot kurulu olduğu halde operatör hızlı ve güvenli bir teşhis yolu a
 | DC Agent servisi bağlanmıyor veya 401 dönüyor | [DC Agent servis sorunları](dc-agent-service.md) | Servis durumu, agent logu, VaultPilot URL erişimi ve redakte server auth sebebi. |
 | Eklenti eşleşmesi pending kalıyor | [Extension eşleşmesi pending kalıyor](extension-pairing.md) | Pairing code durumu, device satırı ve browser profil modu. |
 | Girişten sonra 401 veya 403 log gürültüsü oluşuyor | [Login session 401/403 gürültüsü](session-401-after-login.md) | Login zamanı, etkilenen endpoint listesi ve `/api/auth/me` sonucunun 200 olup olmadığı. |
-| Integration API client 401 alıyor veya secret göremiyor | [Integration API client erişimi](api-client-401.md) | Client durumu, `SECRETS_READ` scope'u ve atanmış vault sayısı. |
+| Integration API client 401, scope denied veya boş veri dönüyor | [Integration API client erişimi](api-client-401.md) | Client durumu, endpoint scope'u ve `SECRETS_READ` kullanılıyorsa atanmış vault sayısı. |
 | HTTPS sertifika uyarısı | [HTTPS sertifika uyarısı](certificate-warning.md) | Hostname, SAN ve yüklenen sertifika paketi. |
 | Denetim zinciri kısmi | [Denetim zinciri kısmi veya tutarsız](audit-chain-partial.md) | Audit filtreleri, zincir durumu ve son restore/update olayları. |
 | Lisans read-only | [Lisans read-only durumu](license-read-only.md) | Lisans durumu, plan limitleri, aktif kullanıcılar ve bitiş tarihi. |

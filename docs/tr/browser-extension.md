@@ -12,6 +12,8 @@ Desteklenen müşteri kurulum yolu Chrome Web Store listelemesidir:
 
 `https://chromewebstore.google.com/detail/passman-enterprise-vault/hjkbedlaieikhkoplgpiohlaakgebobi?hl=tr`
 
+URL tarihsel mağaza slug'ını taşıyabilir. Desteklenen eklenti kimliği yayınlanmış extension ID değeridir: `hjkbedlaieikhkoplgpiohlaakgebobi`.
+
 Merkezi yönetilen cihazlarda bu Web Store eklenti ID'sini Chrome veya Edge policy ile dağıtın. Chrome eklenti güncellemelerini Web Store üzerinden otomatik kontrol eder. Eklentinin Hakkında ekranı Web Store güncelleme kontrolü isteyebilir; ancak Chromium kontrolleri sınırlayabilir ve güncelleme yalnızca tarayıcı tarafından hazır bildirildiğinde uygulanır.
 
 Release ZIP yalnızca release arşivi, lab doğrulama, lokal geliştirme ve acil fallback için tutulur. ZIP'i normal müşteri kurulum yolu olarak kullanmayın.

@@ -12,6 +12,8 @@ The supported customer install path is the Chrome Web Store listing:
 
 `https://chromewebstore.google.com/detail/passman-enterprise-vault/hjkbedlaieikhkoplgpiohlaakgebobi?hl=tr`
 
+The URL may retain the historical store slug. The supported extension identity is the published extension ID `hjkbedlaieikhkoplgpiohlaakgebobi`.
+
 For managed fleets, deploy that Web Store extension ID through Chrome or Edge policy. Chrome handles automatic extension update checks from the Web Store. The extension About view can request a Web Store update check, but Chromium may throttle checks and only applies an update when the browser reports one as available.
 
 The release ZIP is kept only for release archives, lab validation, local development, and emergency fallback. Do not use the ZIP as the normal customer installation path.

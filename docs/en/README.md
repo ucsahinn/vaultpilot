@@ -21,7 +21,7 @@ Current verified public release: **VaultPilot Enterprise Vault Console 2.0.0**. 
 | 11 | [Backups and restore](backups-and-restore.md) | Prepare encrypted backup, integrity and restore procedures. |
 | 12 | [Uninstall, data retention and rollback](uninstall-rollback-data-retention.md) | Remove service files safely, preserve data by default and run rollback only with verified assets. |
 | 13 | [Update Center](update-center.md) and [release asset verification](release-asset-verification.md) | Verify signed manifest, release assets, checksum and MSI signer. |
-| 14 | [Integration API clients](api-clients.md) | Create scoped API clients and read encrypted secret snapshots safely. |
+| 14 | [Integration API clients](api-clients.md) | Create scoped API clients for encrypted secret snapshots and read-only server, directory and update status. |
 | 15 | [License lifecycle](license-lifecycle.md) | Plan trial, renewal, expiry, read-only and replacement steps. |
 | 16 | [Operator runbook](operator-runbook.md) | Run daily, weekly, monthly and incident routines after go-live. |
 

@@ -191,6 +191,8 @@ This repository does not contain private source code, internal signing material,
 
 VaultPilot-managed updates verify the signed manifest, release asset metadata, SHA-256 checksum and MSI signer thumbprint before starting the MSI flow. A global CA chain is not required for VaultPilot-managed update trust when the signed manifest pins the local release signer thumbprint. CA-backed or trusted-signing certificates remain recommended for Windows reputation and broad OS-level trust.
 
+The Chrome Web Store URL may retain the historical store slug, but the supported extension identity is the published extension ID `hjkbedlaieikhkoplgpiohlaakgebobi`.
+
 Before internal redistribution, verify the GitHub asset list, manifest, SHA-256 values, MSI signer evidence and file sizes against the release page.
 
 ## <img src="assets/icons/update.svg" width="22" alt=""> Component Versions
@@ -238,7 +240,7 @@ Before internal redistribution, verify the GitHub asset list, manifest, SHA-256 
 | Certificate warning | [EN](kb/en/certificate-warning.md) | [TR](kb/tr/certificate-warning.md) |
 | Audit chain is partial | [EN](kb/en/audit-chain-partial.md) | [TR](kb/tr/audit-chain-partial.md) |
 | License is read-only | [EN](kb/en/license-read-only.md) | [TR](kb/tr/license-read-only.md) |
-| Integration API client gets 401 or no secrets | [EN](kb/en/api-client-401.md) | [TR](kb/tr/api-client-401.md) |
+| Integration API client gets 401, scope denied, or no data | [EN](kb/en/api-client-401.md) | [TR](kb/tr/api-client-401.md) |
 | External share package fails | [EN](kb/en/external-share-fails.md) | [TR](kb/tr/external-share-fails.md) |
 | Login creates 401 or 403 noise after unlock | [EN](kb/en/session-401-after-login.md) | [TR](kb/tr/session-401-after-login.md) |
 

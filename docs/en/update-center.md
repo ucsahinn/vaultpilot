@@ -38,6 +38,8 @@ The current 2.0.0 GitHub Release asset set is:
 - `vaultpilot-update.json`
 - Chrome Web Store extension listing: `https://chromewebstore.google.com/detail/passman-enterprise-vault/hjkbedlaieikhkoplgpiohlaakgebobi?hl=tr`
 - `vaultpilot-browser-vault-extension.zip` release archive and development fallback only
+
+The Chrome Web Store listing URL may retain the historical store slug; validate the published extension ID `hjkbedlaieikhkoplgpiohlaakgebobi`.
 - `vaultpilot-extension-update.json`
 - `vaultpilot-share-decrypter.zip`
 - `vaultpilot-share-decrypter.json`

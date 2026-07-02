@@ -18,7 +18,7 @@ Current verified public release: **VaultPilot Enterprise Vault Console 2.0.0**, 
 | DC Agent service cannot connect or returns 401 | [EN](en/dc-agent-service.md) | [TR](tr/dc-agent-service.md) | Service status, agent log, VaultPilot URL reachability, redacted server auth reason. |
 | Extension pairing remains pending | [EN](en/extension-pairing.md) | [TR](tr/extension-pairing.md) | Pairing code state, device row, browser profile mode. |
 | Login creates 401 or 403 noise after unlock | [EN](en/session-401-after-login.md) | [TR](tr/session-401-after-login.md) | Login time, affected endpoint list, whether `/api/auth/me` returns 200. |
-| Integration API client gets 401 or no secrets | [EN](en/api-client-401.md) | [TR](tr/api-client-401.md) | Client status, `SECRETS_READ` scope, assigned vault count. |
+| Integration API client gets 401, scope denied, or no data | [EN](en/api-client-401.md) | [TR](tr/api-client-401.md) | Client status, endpoint scope, assigned vault count when `SECRETS_READ` is used. |
 | Certificate warning | [EN](en/certificate-warning.md) | [TR](tr/certificate-warning.md) | Hostname, certificate SAN, uploaded package type. |
 | Audit chain is partial | [EN](en/audit-chain-partial.md) | [TR](tr/audit-chain-partial.md) | Audit screen filters, latest chain status, recent restore/update events. |
 | License is read-only | [EN](en/license-read-only.md) | [TR](tr/license-read-only.md) | License state, plan limits, active users, license expiry. |

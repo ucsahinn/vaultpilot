@@ -38,6 +38,8 @@ Güncel 2.0.0 GitHub Release asset seti şunları içerir:
 - `vaultpilot-update.json`
 - Chrome Web Store eklenti listelemesi: `https://chromewebstore.google.com/detail/passman-enterprise-vault/hjkbedlaieikhkoplgpiohlaakgebobi?hl=tr`
 - `vaultpilot-browser-vault-extension.zip` yalnızca release arşivi ve geliştirme fallback çıktısı
+
+Chrome Web Store listeleme URL'si tarihsel mağaza slug'ını taşıyabilir; yayınlanmış extension ID `hjkbedlaieikhkoplgpiohlaakgebobi` değerini doğrulayın.
 - `vaultpilot-extension-update.json`
 - `vaultpilot-share-decrypter.zip`
 - `vaultpilot-share-decrypter.json`
