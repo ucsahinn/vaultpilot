@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-07-09",
+  "screenshots": [
+    {
+      "path": "assets/screenshots/active-directory-sync-tree-vaultpilot-2.png",
+      "surface": "Active Directory sync tree",
+      "fixtureNote": "Synthetic VaultPilot 2.0 documentation fixture captured from an isolated local runtime; no customer data, real secrets, release binaries, signing material, or production host evidence is present.",
+      "width": 1440,
+      "height": 960,
+      "bytes": 338271,
+      "sha256": "6CF91CA9721356BF4DB0169A3D5B60680D19B8E70A96AD9D7DF73B3B3DF412DB"
+    },
+    {
+      "path": "assets/screenshots/browser-extension-management-vaultpilot-2.png",
+      "surface": "Browser extension management",
+      "fixtureNote": "Synthetic VaultPilot 2.0 documentation fixture captured from an isolated local runtime; no customer data, real secrets, release binaries, signing material, or production host evidence is present.",
+      "width": 1440,
+      "height": 960,
+      "bytes": 277091,
+      "sha256": "FD89ED2C15A0C7B2291D56F715997E15FFC207075C5EB72DE54C35ABD6AD0522"
+    },
+    {
+      "path": "assets/screenshots/discovery-findings.png",
+      "surface": "Discovery findings review queue",
+      "fixtureNote": "Synthetic VaultPilot 2.0 documentation fixture captured from an isolated local runtime; no customer data, real secrets, release binaries, signing material, or production host evidence is present.",
+      "width": 1440,
+      "height": 960,
+      "bytes": 301134,
+      "sha256": "71393D3B480785CE2D150EEBA92A19FD61A0A84ADE4E837CDA8258C215330E14"
+    },
+    {
+      "path": "assets/screenshots/discovery-import.png",
+      "surface": "Discovery import candidates",
+      "fixtureNote": "Synthetic VaultPilot 2.0 documentation fixture captured from an isolated local runtime; no customer data, real secrets, release binaries, signing material, or production host evidence is present.",
+      "width": 1440,
+      "height": 960,
+      "bytes": 265828,
+      "sha256": "16CCC0B8FB491F5595D2815FB617E7F61B7B8C36498E0D99B36986AAB59160AE"
+    },
+    {
+      "path": "assets/screenshots/discovery-run.png",
+      "surface": "Discovery run scope and status",
+      "fixtureNote": "Synthetic VaultPilot 2.0 documentation fixture captured from an isolated local runtime; no customer data, real secrets, release binaries, signing material, or production host evidence is present.",
+      "width": 1440,
+      "height": 960,
+      "bytes": 341811,
+      "sha256": "931425D7354FCB09C7B8614D0054BCAE2DFA27CE07358C236B480825AE7007E1"
+    },
+    {
+      "path": "assets/screenshots/login-lock-screen.png",
+      "surface": "Login lock screen",
+      "fixtureNote": "Synthetic VaultPilot 2.0 documentation fixture captured from an isolated local runtime; no customer data, real secrets, release binaries, signing material, or production host evidence is present.",
+      "width": 1440,
+      "height": 960,
+      "bytes": 558858,
+      "sha256": "E0DAB8873B92DC7BE1DA247299A946C5F14D341606B37D976B6C4BCDC27A8980"
+    },
+    {
+      "path": "assets/screenshots/overview-security-posture.png",
+      "surface": "Security posture dashboard",
+      "fixtureNote": "Synthetic VaultPilot 2.0 documentation fixture captured from an isolated local runtime; no customer data, real secrets, release binaries, signing material, or production host evidence is present.",
+      "width": 1440,
+      "height": 960,
+      "bytes": 285235,
+      "sha256": "364A5F23A7CAE8168E58A4539A3969D1D7A62AE3D1B3235D74266E8AAB3F3043"
+    },
+    {
+      "path": "assets/screenshots/passwords-record-list.png",
+      "surface": "Secret records list",
+      "fixtureNote": "Synthetic VaultPilot 2.0 documentation fixture captured from an isolated local runtime; no customer data, real secrets, release binaries, signing material, or production host evidence is present.",
+      "width": 1440,
+      "height": 960,
+      "bytes": 329246,
+      "sha256": "375CE8C840A130CA5257BB9BCAAAA69553FDEF7FE545F90BD28FB85080C99125"
+    },
+    {
+      "path": "assets/screenshots/server-settings.png",
+      "surface": "Server System settings",
+      "fixtureNote": "Synthetic VaultPilot 2.0 documentation fixture captured from an isolated local runtime; no customer data, real secrets, release binaries, signing material, or production host evidence is present.",
+      "width": 1440,
+      "height": 960,
+      "bytes": 218034,
+      "sha256": "2972DD1EA0BC1E8314A96FF23536BB2944A6B6416BE1644C512CE113F2978ADB"
+    },
+    {
+      "path": "assets/screenshots/sharing-package-flow-vaultpilot-2.png",
+      "surface": "Sharing package flow",
+      "fixtureNote": "Synthetic VaultPilot 2.0 documentation fixture captured from an isolated local runtime; no customer data, real secrets, release binaries, signing material, or production host evidence is present.",
+      "width": 1440,
+      "height": 960,
+      "bytes": 275447,
+      "sha256": "34E3983E5A75AE05B593F7A2DE519AB703BD02CBC6C3AF3E0B8779BFE89EDAB3"
+    },
+    {
+      "path": "assets/screenshots/update-center-vaultpilot-2.png",
+      "surface": "Update Center",
+      "fixtureNote": "Synthetic VaultPilot 2.0 documentation fixture captured from an isolated local runtime; no customer data, real secrets, release binaries, signing material, or production host evidence is present.",
+      "width": 1440,
+      "height": 960,
+      "bytes": 207864,
+      "sha256": "7523C2D7C1EA8ACBD39BA5C2870FA533D9410A4E499913AD51093DF32CC70C42"
+    }
+  ]
+}

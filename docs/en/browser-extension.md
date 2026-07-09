@@ -2,21 +2,23 @@
 
 VaultPilot Browser Vault Extension provides paired-device access to vault records through user-action autofill, save-login prompts, update-login prompts and active-site record-count badges.
 
-![VaultPilot browser extension management](../../assets/screenshots/browser-extension-management.png)
+![VaultPilot browser extension management](../../assets/screenshots/browser-extension-management-vaultpilot-2.png)
 
-Screenshot note: this capture is retained from the PassMan compatibility line as a temporary layout reference. It is not VaultPilot 2.0 release or branding evidence until the final 2.0 screenshots are recaptured.
+This sanitized UI capture uses synthetic data and shows Chrome Web Store distribution, approved-device count, pairing steps, and device approval controls. Visible device names, counts, codes and timestamps are documentation fixtures, not production guidance.
 
 ## Install From Chrome Web Store
 
 The supported customer install path is the Chrome Web Store listing:
 
-`https://chromewebstore.google.com/detail/passman-enterprise-vault/hjkbedlaieikhkoplgpiohlaakgebobi?hl=tr`
+`https://chromewebstore.google.com/detail/vaultpilot-browser-vault/hjkbedlaieikhkoplgpiohlaakgebobi`
 
-The URL may retain the historical store slug. The supported extension identity is the published extension ID `hjkbedlaieikhkoplgpiohlaakgebobi`.
+Older store URLs may redirect from a historical slug. The supported extension identity is the published extension ID `hjkbedlaieikhkoplgpiohlaakgebobi`.
 
 For managed fleets, deploy that Web Store extension ID through Chrome or Edge policy. Chrome handles automatic extension update checks from the Web Store. The extension About view can request a Web Store update check, but Chromium may throttle checks and only applies an update when the browser reports one as available.
 
 The release ZIP is kept only for release archives, lab validation, local development, and emergency fallback. Do not use the ZIP as the normal customer installation path.
+
+Store listing text, privacy practice answers, permission justifications, and screenshot rules are maintained in [Chrome Web Store listing and privacy](chrome-web-store-listing.md).
 
 ## Pairing Flow
 

@@ -19,3 +19,10 @@ Use this checklist when the VaultPilot MSI does not complete or the service does
 - Port number and service state.
 
 Do not send database files, master passwords, secret values, license private keys, certificates or screenshots showing secrets.
+
+## Related
+
+- [Windows Server installation](../../docs/en/install-windows-server.md)
+- [Admin quickstart](../../docs/en/admin-quickstart.md)
+- [Troubleshooting](../../docs/en/troubleshooting.md)
+- [Support evidence pack](../../docs/en/support-evidence-pack.md)

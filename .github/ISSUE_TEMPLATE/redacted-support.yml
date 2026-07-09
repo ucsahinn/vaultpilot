@@ -1,0 +1,56 @@
+name: Redacted support question
+description: Ask a public-safe operational question without secrets, logs, binaries, or customer data.
+title: "Support: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Public issues are not a place for secrets, exploit details, raw logs, database files, certificates, screenshots with real vault records, or customer-sensitive evidence. Use placeholders such as `<VAULTPILOT_URL>`, `<SERVER_HOST>`, `<AGENT_ID>`, `<AGENT_TOKEN>`, `<LICENSE_CODE>`, and `<REDACTED>`. Before posting, check [support evidence pack](https://github.com/ucsahinn/vaultpilot/blob/main/docs/en/support-evidence-pack.md), [public repository boundary](https://github.com/ucsahinn/vaultpilot/blob/main/docs/en/public-repository-boundary.md), and [public issue redaction](https://github.com/ucsahinn/vaultpilot/blob/main/kb/en/public-issue-redaction.md). Security vulnerabilities, exploit paths, or suspected secret exposure must use the private security report link instead of this public template.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Installation
+        - Login and unlock
+        - License
+        - Browser extension
+        - Chrome Web Store or privacy listing
+        - Active Directory agent
+        - Discovery
+        - Sharing and offline decrypter
+        - Backup and restore
+        - Update Center
+        - Public documentation or repository metadata
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: VaultPilot version
+      placeholder: "2.0.0"
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Public-safe summary
+      description: Describe the symptom without raw logs, real hostnames, usernames, tokens, passwords, customer names, or vault contents.
+    validations:
+      required: true
+  - type: textarea
+    id: checked
+    attributes:
+      label: Docs or KB already checked
+      description: List any docs or KB pages you already used.
+      placeholder: docs/en/chrome-web-store-listing.md, kb/en/chrome-web-store-review.md, kb/en/public-issue-redaction.md
+    validations:
+      required: false
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Public safety check
+      options:
+        - label: This issue contains only redacted, public-safe information and no secrets, raw logs, binaries, databases, certificates, or screenshots with real secret records.
+          required: true

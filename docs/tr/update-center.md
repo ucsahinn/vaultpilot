@@ -2,9 +2,9 @@
 
 VaultPilot Güncelleme Merkezi ana Windows MSI paketini yönetir. Tarayıcı eklentisi Chrome Web Store üzerinden kurulur ve güncellenir; Offline Share Decrypter ve VaultPilot DC Agent Service bileşenleri release notlarında izlenir ve MSI veya belgelenmiş release asset'leriyle yenilenir.
 
-![VaultPilot update center](../../assets/screenshots/update-center.png)
+![VaultPilot Güncelleme Merkezi](../../assets/screenshots/update-center-vaultpilot-2.png)
 
-Screenshot notu: bu görsel PassMan compatibility line'dan geçici layout referansı olarak tutulur. Final 2.0 screenshotları yeniden alınana kadar VaultPilot 2.0 release veya branding kanıtı değildir.
+Bu yayıma uygun hale getirilmiş UI görseli yalnızca sentetik veri içerir. Sunucu güncelleme hattını, manifest kontrollü MSI asset'ini, bileşen notlarını ve manuel repair package ayrımını gösterir. Görseldeki dosya adı, paket boyutu, manifest URL'si ve SHA-256 benzeri değerler dokümantasyon örneğidir; yayın asset adlarını, boyutlarını ve hash değerlerini doğrulamak için release asset doğrulama sayfasını kullanın.
 
 ## Güvenli Güncelleme Modeli
 
@@ -36,17 +36,17 @@ Güncel 2.0.0 GitHub Release asset seti şunları içerir:
 
 - `VaultPilot-2.0.0-x64.msi`
 - `vaultpilot-update.json`
-- Chrome Web Store eklenti listelemesi: `https://chromewebstore.google.com/detail/passman-enterprise-vault/hjkbedlaieikhkoplgpiohlaakgebobi?hl=tr`
+- Chrome Web Store eklenti listelemesi: `https://chromewebstore.google.com/detail/vaultpilot-browser-vault/hjkbedlaieikhkoplgpiohlaakgebobi?hl=tr`
 - `vaultpilot-browser-vault-extension.zip` yalnızca release arşivi ve geliştirme fallback çıktısı
 
-Chrome Web Store listeleme URL'si tarihsel mağaza slug'ını taşıyabilir; yayınlanmış extension ID `hjkbedlaieikhkoplgpiohlaakgebobi` değerini doğrulayın.
+Eski Chrome Web Store URL'leri tarihsel mağaza slug'ından yönlenebilir; yayınlanmış extension ID `hjkbedlaieikhkoplgpiohlaakgebobi` değerini doğrulayın.
 - `vaultpilot-extension-update.json`
 - `vaultpilot-share-decrypter.zip`
 - `vaultpilot-share-decrypter.json`
 - `vaultpilot-dc-agent.ps1`
 - `vaultpilot-dc-agent.json`
 
-Manuel doğrulama gerektiğinde kurulumdan veya iç dağıtımdan önce [release asset doğrulama](release-asset-verification.md) sayfasını kullanın. Asset adlarını, boyutları ve SHA-256 değerlerini local rebuild klasörleriyle değil GitHub Release `v2.0.0` ile karşılaştırın.
+Manuel doğrulama gerektiğinde kurulumdan veya iç dağıtımdan önce [release asset doğrulama](release-asset-verification.md) sayfasını kullanın. Asset adlarını, boyutları ve SHA-256 değerlerini yayınlanmamış build çıktısıyla değil GitHub Release `v2.0.0` ile karşılaştırın.
 
 ## Bileşen Notları
 

@@ -23,6 +23,21 @@ PFX / P12
 
 Sertifika, kullanıcıların tarayıcıda açtığı host ile eşleşmelidir. Subject veya SAN içinde yapılandırılan host adı bulunmalıdır.
 
+## Yükleme Sınırı ve Hata Kodları
+
+Sertifika yükleme Owner-only bir server ayarıdır. Tam olarak bir `.pfx` veya `.p12` paketi yükleyin. Dosya 0 byte'tan büyük ve en fazla 2 MB olmalıdır. Upload denemeleri 10 dakikada 6 deneme ile rate-limit edilir.
+
+Browser upload isteği `Content-Length` içermelidir; scripted client `CONTENT_LENGTH_REQUIRED` alırsa UI üzerinden yeniden deneyin veya doğru length header'ını gönderin. Upload kabul edilen zarfı aşarsa VaultPilot `PAYLOAD_TOO_LARGE` döndürür.
+
+| API kodu | Anlamı | Operatör aksiyonu |
+| --- | --- | --- |
+| `UNSUPPORTED_CERTIFICATE_FILE` | Seçilen dosya `.pfx` veya `.p12` paketi değil. | Sertifika ve private key içeren PFX/P12 paketi export edip onu yükleyin. |
+| `CERTIFICATE_FILE_SIZE` | Seçilen paket boş veya 2 MB üstünde. | Sertifika paketini yeniden export edin ve yüklemeden önce boyutunu doğrulayın. |
+| `CONTENT_LENGTH_REQUIRED` | Upload isteğinde `Content-Length` yok. | VaultPilot UI'ı veya bu header'ı gönderen bir client kullanın. |
+| `PAYLOAD_TOO_LARGE` | Multipart request server upload limitini aşıyor. | Paketin en fazla 2 MB olduğunu doğrulayın ve tam olarak bir sertifika dosyasıyla yeniden deneyin. |
+
+Sertifika paketini, sertifika parolasını, private key materyalini veya private host detaylarını public issue, doküman veya ekran görüntüsüne koymayın.
+
 ## Üretim Kontrol Listesi
 
 1. İlk erişimi `https://<SERVER_HOST>:1903` veya yapılandırdığınız public HTTPS portu üzerinden doğrulayın.

@@ -36,3 +36,10 @@ Hata devam ederse VaultPilot server logunda redakte edilmiş sebebi kontrol edin
 - `token_mismatch`: komut eski veya yanlış token kullanıyor.
 
 Gerçek `pma_` agent id veya `pmt_` token değerini public support kanalına yapıştırmayın. Placeholder kullanın ve token ifşa olduysa yenileyin.
+
+## İlgili
+
+- [Active Directory ajanı](../../docs/tr/active-directory-agent.md)
+- [Etki alanı dashboard'u](../../docs/tr/screen-domain-dashboard.md)
+- [Active Directory kayıtları ekranı](../../docs/tr/screen-active-directory-records.md)
+- [Public issue redaction](public-issue-redaction.md)

@@ -10,7 +10,7 @@ No. The master password is used in the browser; the plaintext master password is
 
 ## Does this public repo contain source code?
 
-No. The public repository contains documentation, release notes, and GitHub Release assets. Source code remains in the private repository.
+No. The git tree contains documentation, release notes, knowledge-base articles, public policies, and sanitized visual assets. Customer delivery files are attached to GitHub Releases or distributed through Chrome Web Store; source code remains in the private repository.
 
 ## Is a local signer safe?
 
@@ -19,3 +19,10 @@ For the VaultPilot-managed update chain, a local signer can be accepted when the
 ## Can files be shared?
 
 Yes. Selected file records can be included in external share packages. Expiry and maximum usage should be configured.
+
+## Related
+
+- [Admin quickstart](admin-quickstart.md)
+- [First run, owner and license](first-run-owner-license.md)
+- [Security and trust model](security-and-trust-model.md)
+- [Support evidence pack](support-evidence-pack.md)

@@ -5,25 +5,25 @@
 </p>
 
 <p align="center">
-  <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f310.svg" alt="" aria-hidden="true" width="20"> <strong>Languages:</strong>
-  <a href="README.de.md"><img src="https://flagcdn.com/w20/de.png" alt="Deutsch" width="20"></a> |
-  <a href="README.es.md"><img src="https://flagcdn.com/w20/es.png" alt="Espa&#241;ol" width="20"></a> |
-  <a href="README.md"><img src="https://flagcdn.com/w20/gb.png" alt="English" width="20"></a> |
-  <a href="README.pt-BR.md"><img src="https://flagcdn.com/w20/br.png" alt="Portugu&#234;s (Brasil)" width="20"></a> |
-  <a href="README.tr.md"><img src="https://flagcdn.com/w20/tr.png" alt="T&#252;rk&#231;e" width="20"></a> |
-  <a href="README.fr.md"><img src="https://flagcdn.com/w20/fr.png" alt="Fran&#231;ais" width="20"></a>
+  <strong>Languages:</strong>
+  <a href="README.de.md">Deutsch</a> |
+  <a href="README.es.md">Espa&#241;ol</a> |
+  <a href="README.md">English</a> |
+  <a href="README.pt-BR.md">Portugu&#234;s (Brasil)</a> |
+  <a href="README.tr.md">T&#252;rk&#231;e</a> |
+  <a href="README.fr.md">Fran&#231;ais</a>
 </p>
 
 <!-- bilingual-welcome:start -->
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3><img src="https://flagcdn.com/w20/gb.png" alt="English" width="20"> English welcome</h3>
+      <h3>English welcome</h3>
       <p>VaultPilot public docs is the release hub, operator wiki, knowledge base, support boundary, and trust surface for the self-hosted enterprise vault.</p>
       <p><strong>Start here:</strong> <a href="docs/en/README.md">English docs home</a> is the operator entry point.</p>
     </td>
     <td width="50%" valign="top">
-      <h3><img src="https://flagcdn.com/w20/tr.png" alt="Türkçe" width="20"> Türkçe karşılama</h3>
+      <h3>Türkçe karşılama</h3>
       <p>VaultPilot için public release ve dokümantasyon merkezi. Kurulum, operasyon, bilgi bankası, destek paketi ve güvenlik sınırları burada; private kaynak kod ve hassas operasyon verisi bu repoya girmez.</p>
       <p><strong>Buradan başla:</strong> Türkçe operasyon akışı <a href="docs/tr/README.md">docs/tr</a>; İngilizce ekipler için <a href="docs/en/README.md">docs/en</a>.</p>
     </td>
@@ -44,7 +44,11 @@
   |
   <a href="SECURITY.md"><img src="assets/icons/security.svg" width="18" alt=""> <strong>Security</strong></a>
   |
+  <a href="docs/en/public-repository-boundary.md"><img src="assets/icons/evidence.svg" width="18" alt=""> <strong>Boundary</strong></a>
+  |
   <a href="SUPPORT.md"><img src="assets/icons/evidence.svg" width="18" alt=""> <strong>Support</strong></a>
+  |
+  <a href="CONTRIBUTING.md"><strong>Contributing</strong></a>
 </p>
 
 <p align="center">
@@ -101,7 +105,7 @@
 </p>
 
 <p align="center">
-  <sub>Sanitized VaultPilot 2.0 screenshot captured from an isolated local runtime on June 30, 2026. It shows UI state only; release binaries stay in GitHub Releases and published asset hashes remain release evidence. Private source code, signing material and customer data stay out of this repository.</sub>
+  <sub>Sanitized VaultPilot 2.0 screenshot captured from an isolated documentation runtime on July 9, 2026 with synthetic enterprise data only. It shows UI state only; release binaries stay in GitHub Releases and published asset hashes remain release evidence. Private source code, signing material and customer data stay out of this repository.</sub>
 </p>
 
 ## <img src="assets/icons/vault.svg" width="22" alt=""> Enterprise Operating Contract
@@ -111,7 +115,7 @@
 | <img src="assets/icons/security.svg" width="20" alt=""> Customer-safe public surface | Only docs, sanitized screenshots, release links, knowledge-base articles and public policies live here. |
 | <img src="assets/icons/release.svg" width="20" alt=""> Release assets outside git | MSI files, ZIP packages, manifests and support scripts are delivered through GitHub Releases or the Chrome Web Store. |
 | <img src="assets/icons/docs.svg" width="20" alt=""> Operator-first navigation | Quickstart, runbooks, update checks, extension flows, AD agent setup and support evidence paths are linked from the first screen. |
-| <img src="assets/icons/docs.svg" width="20" alt=""> TR/EN parity | Turkish and English operator docs are kept as paired routes and validated before publication. |
+| <img src="assets/icons/docs.svg" width="20" alt=""> TR/EN paired docs | Turkish and English operator docs are kept as paired routes; validation checks paired file presence and key public references before publication. |
 | <img src="assets/icons/evidence.svg" width="20" alt=""> Evidence without secrets | Support handoff asks for redacted context and blocks plaintext credentials, keys, databases, backups and customer data. |
 
 ## <img src="assets/icons/release.svg" width="22" alt=""> Release Trust Path
@@ -124,39 +128,22 @@
 | ![Update icon](assets/icons/update.svg) | Update flow is manifest-led | VaultPilot verifies the signed manifest, release metadata, SHA-256 checksum and MSI signer before update execution. |
 | ![Vault icon](assets/icons/vault.svg) | Source boundary is explicit | This public repository contains docs, sanitized screenshots and release links; private product code and signing material are not published here. |
 | ![Evidence icon](assets/icons/evidence.svg) | Operator evidence is safe by default | Support paths ask for redacted evidence packs and forbid plaintext secrets, private keys, database files and customer data. |
-| ![Documentation icon](assets/icons/docs.svg) | TR/EN docs stay paired | Validation checks paired Turkish and English docs plus local links before publication. |
+| ![Documentation icon](assets/icons/docs.svg) | TR/EN docs stay paired | Validation checks paired Turkish and English file presence, required public references and local links before publication. |
 
 ## <img src="assets/icons/download.svg" width="22" alt=""> Start Here
 
-Use this repository as the front desk for the supported VaultPilot application. It should answer the first operational question without exposing source code, secrets, signing material or customer data.
+Use this repository as the public front desk for the supported VaultPilot application. It should answer the first operational question without exposing source code, secrets, signing material or customer data.
 
-| I need to... | Open this | Outcome |
+| Need | Primary route | Why it matters |
 | --- | --- | --- |
-| Take the shortest safe path from download to first healthy vault | [EN admin quickstart](docs/en/admin-quickstart.md) / [TR hızlı başlangıç](docs/tr/admin-quickstart.md) | Day-0 install, owner, license, HTTPS, 2FA and backup are sequenced. |
-| Run VaultPilot after go-live | [EN operator runbook](docs/en/operator-runbook.md) / [TR operasyon runbook](docs/tr/operator-runbook.md) | Daily, weekly, monthly and incident routines are clear. |
-| Install VaultPilot on Windows Server | [EN install](docs/en/install-windows-server.md) / [TR kurulum](docs/tr/install-windows-server.md) | MSI installed, service running, first URL verified. |
-| Create the first owner and apply license | [EN first run](docs/en/first-run-owner-license.md) / [TR ilk kurulum](docs/tr/first-run-owner-license.md) | Owner profile, license state and first vault path are clear. |
-| Configure public host and HTTPS | [EN HTTPS](docs/en/public-host-https-certificate.md) / [TR HTTPS](docs/tr/public-host-https-certificate.md) | Required certificate package and browser validation are understood. |
-| Fix an operational issue | [EN knowledge base](kb/en/README.md) / [TR bilgi bankası](kb/tr/README.md) | Safe evidence and diagnosis path are available. |
-| Update VaultPilot or verify release assets | [EN release asset verification](docs/en/release-asset-verification.md) / [TR asset doğrulama](docs/tr/release-asset-verification.md) | Manifest, checksum, MSI signer and component notes are verified. |
-| Uninstall, preserve data or roll back | [EN uninstall and rollback](docs/en/uninstall-rollback-data-retention.md) / [TR kaldırma ve rollback](docs/tr/uninstall-rollback-data-retention.md) | Service removal, data retention, purge boundaries and rollback checks are explicit. |
-| Pair or troubleshoot the browser extension | [EN extension](docs/en/browser-extension.md) / [TR eklenti](docs/tr/browser-extension.md) | Badge count, autofill, save/update login and device pairing behavior are clear. |
-| Review browser extension privacy handling | [Privacy policy](PRIVACY.md) | Chrome/Edge extension data categories, limited-use disclosure and remote-code boundary are documented. |
-| Sync Active Directory | [EN DC Agent](docs/en/active-directory-agent.md) / [TR DC Agent](docs/tr/active-directory-agent.md) | Service install, repair, logs and OU tree sync are documented. |
-| Open or diagnose external shares | [EN sharing](docs/en/sharing-and-offline-decrypter.md) / [TR paylaşım](docs/tr/sharing-and-offline-decrypter.md) | Selected records, files, expiry, max opens and offline decrypter flow are clear. |
-| Prepare a clean support handoff | [EN support evidence pack](docs/en/support-evidence-pack.md) / [TR destek kanıt paketi](docs/tr/support-evidence-pack.md) | Operators know exactly what to collect and what never to send. |
-
-## <img src="assets/icons/docs.svg" width="22" alt=""> Enterprise Wiki Map
-
-![VaultPilot operator lifecycle](assets/visuals/operator-lifecycle.svg)
-
-| Role | Primary path | Decision point |
-| --- | --- | --- |
-| Server administrator | [Quickstart](docs/en/admin-quickstart.md), [installation](docs/en/install-windows-server.md), [public host and HTTPS](docs/en/public-host-https-certificate.md) | Is the Windows service reachable, signed and backed up? |
-| Security owner | [Security model](docs/en/security-and-trust-model.md), [audit posture](docs/en/audit-and-security-posture.md), [release verification](docs/en/release-asset-verification.md) | Are secrets encrypted before storage and are updates trusted by manifest plus hash? |
-| Support engineer | [Support evidence pack](docs/en/support-evidence-pack.md), [troubleshooting](docs/en/troubleshooting.md), [KB](kb/en/README.md) | Can the issue be reproduced with redacted evidence only? |
-| Identity operator | [DC Agent](docs/en/active-directory-agent.md), [extension](docs/en/browser-extension.md), [operator runbook](docs/en/operator-runbook.md) | Are AD sync, browser pairing and user scope healthy? |
-| Turkish operator | [TR hızlı başlangıç](docs/tr/admin-quickstart.md), [TR runbook](docs/tr/operator-runbook.md), [TR bilgi bankası](kb/tr/README.md) | Aynı operasyon yolu Türkçe doküman setinde izlenir. |
+| Download or verify the supported release | [Latest release](https://github.com/ucsahinn/vaultpilot/releases/latest), [release notes](RELEASES.md), [asset verification](docs/en/release-asset-verification.md) | Operators can verify the MSI, manifest, hashes, signer evidence and component assets before internal redistribution. |
+| Install and operate VaultPilot | [Documentation gateway](docs/README.md), [EN docs](docs/en/README.md), [TR docs](docs/tr/README.md) | Full install, owner, HTTPS, Server System, Discovery, extension, AD, sharing, backup and update paths live in the wiki. |
+| Open the right in-app `?` help | [Screen help index](docs/en/in-app-screen-help.md), [TR ekran yardımı](docs/tr/in-app-screen-help.md), [screen help target manifest](docs/screen-help-targets.json) | Every topbar help route maps to a dedicated EN/TR screen page with states, pre-action checks and safe evidence guidance. |
+| Diagnose an incident | [Knowledge base](kb/README.md), [EN KB](kb/en/README.md), [TR KB](kb/tr/README.md) | Public-safe diagnosis paths stay grouped by symptom. |
+| Prepare support evidence | [Support policy](SUPPORT.md), [EN evidence pack](docs/en/support-evidence-pack.md), [TR kanıt paketi](docs/tr/support-evidence-pack.md) | Evidence is useful without leaking secrets, logs, databases, certificates or customer data. |
+| Understand the public boundary | [EN boundary](docs/en/public-repository-boundary.md), [TR boundary](docs/tr/public-repository-boundary.md), [public issue redaction](kb/en/public-issue-redaction.md) / [TR](kb/tr/public-issue-redaction.md) | Public issues and docs stay safe; private-source and licensed-support boundaries stay explicit. |
+| Prepare publication safely | [Publication runbook](docs/en/publication-runbook.md), [TR yayın runbook'u](docs/tr/publication-runbook.md), [validation failure KB](kb/en/public-validation-fails.md) / [TR](kb/tr/public-validation-fails.md) | Working tree, staged tree, secrets, release assets and owner/account gates are checked before public changes move forward. |
+| Maintain repo discoverability | [GitHub repository profile](docs/en/github-repository-profile.md), [discoverability](docs/en/public-discoverability.md), [llms.txt](llms.txt), [TR repo profili](docs/tr/github-repository-profile.md), [TR keşfedilebilirlik](docs/tr/public-discoverability.md), [language glossary](docs/en/public-language-glossary.md) / [TR](docs/tr/public-language-glossary.md) | Description, topics, social preview, search/AI index limits, issue intake, AI/LLM index hints and Turkish/English wording stay aligned. |
 
 ## <img src="assets/icons/vault.svg" width="22" alt=""> What This Repository Is
 
@@ -169,7 +156,7 @@ This repository does not contain private source code, internal signing material,
 1. Download the published MSI from GitHub Release `v2.0.0`.
 2. Install it as Administrator on the approved Windows host.
 3. Open `https://<SERVER_HOST>:1903` to verify the service responds. If no trusted certificate is configured yet, expect a managed self-signed certificate warning until the operator installs a PFX/P12 package.
-4. Apply the license and confirm the public host plus HTTPS settings.
+4. Apply the license and confirm the public host, HTTPS and Server System settings.
 5. Enable 2FA, confirm audit-chain health and review the overview action queue.
 6. Install the Chrome Web Store extension, then pair approved browsers.
 7. Configure VaultPilot DC Agent Service if AD scope is needed.
@@ -181,7 +168,7 @@ This repository does not contain private source code, internal signing material,
 | --- | --- | --- | --- |
 | ![Windows icon](assets/icons/windows.svg) | `VaultPilot-2.0.0-x64.msi` | Installs or upgrades VaultPilot Server on Windows. | GitHub Release `v2.0.0` |
 | ![Update icon](assets/icons/update.svg) | `vaultpilot-update.json` | Signed update manifest verified by VaultPilot. | GitHub Release `v2.0.0` |
-| ![Extension icon](assets/icons/extension.svg) | [Chrome Web Store listing](https://chromewebstore.google.com/detail/passman-enterprise-vault/hjkbedlaieikhkoplgpiohlaakgebobi?hl=tr) | Primary browser extension install and update channel. | Chrome Web Store |
+| ![Extension icon](assets/icons/extension.svg) | [Chrome Web Store listing](https://chromewebstore.google.com/detail/vaultpilot-browser-vault/hjkbedlaieikhkoplgpiohlaakgebobi) | Primary browser extension install and update channel. | Chrome Web Store |
 | ![Extension icon](assets/icons/extension.svg) | `vaultpilot-browser-vault-extension.zip` | Release archive and development fallback only. | GitHub Release `v2.0.0` |
 | ![Extension icon](assets/icons/extension.svg) | `vaultpilot-extension-update.json` | Browser extension update metadata for managed validation. | GitHub Release `v2.0.0` |
 | ![Share icon](assets/icons/share.svg) | `vaultpilot-share-decrypter.zip` | Offline external-share opening tool. | GitHub Release `v2.0.0` |
@@ -191,9 +178,7 @@ This repository does not contain private source code, internal signing material,
 
 VaultPilot-managed updates verify the signed manifest, release asset metadata, SHA-256 checksum and MSI signer thumbprint before starting the MSI flow. A global CA chain is not required for VaultPilot-managed update trust when the signed manifest pins the local release signer thumbprint. CA-backed or trusted-signing certificates remain recommended for Windows reputation and broad OS-level trust.
 
-The Chrome Web Store URL may retain the historical store slug, but the supported extension identity is the published extension ID `hjkbedlaieikhkoplgpiohlaakgebobi`.
-
-Before internal redistribution, verify the GitHub asset list, manifest, SHA-256 values, MSI signer evidence and file sizes against the release page.
+Older Chrome Web Store URLs may redirect from a historical store slug, but the supported extension identity is the published extension ID `hjkbedlaieikhkoplgpiohlaakgebobi`. Before internal redistribution, verify the GitHub asset list, manifest, SHA-256 values, MSI signer evidence and file sizes against the release page.
 
 ## <img src="assets/icons/update.svg" width="22" alt=""> Component Versions
 
@@ -204,73 +189,27 @@ Before internal redistribution, verify the GitHub asset list, manifest, SHA-256 
 | Offline Share Decrypter | 1.2.0 | Bundled support component and release ZIP |
 | VaultPilot DC Agent Service | 1.2.10 | Bundled support component and release script |
 
-## <img src="assets/icons/docs.svg" width="22" alt=""> Documentation Gateway
+## <img src="assets/icons/docs.svg" width="22" alt=""> Full Wiki, KB, And Visual References
 
-| Area | English | Turkish |
+The detailed operator map lives in [docs/README.md](docs/README.md), and the symptom navigator lives in [kb/README.md](kb/README.md). Those gateway pages carry the complete guide list, visual reference table, and paired English/Turkish routes.
+
+| Surface | English | Turkish |
 | --- | --- | --- |
-| Language home | [EN docs home](docs/en/README.md) | [TR doküman ana sayfa](docs/tr/README.md) |
-| Admin quickstart | [Admin quickstart](docs/en/admin-quickstart.md) | [Yönetici hızlı başlangıç](docs/tr/admin-quickstart.md) |
-| Operator runbook | [Operator runbook](docs/en/operator-runbook.md) | [Operasyon runbook](docs/tr/operator-runbook.md) |
-| Overview | [Overview](docs/en/overview.md) | [Genel bakış](docs/tr/overview.md) |
-| Security model | [Security and trust model](docs/en/security-and-trust-model.md) | [Güvenlik ve güven modeli](docs/tr/security-and-trust-model.md) |
-| Install | [Windows Server installation](docs/en/install-windows-server.md) | [Windows Server kurulumu](docs/tr/install-windows-server.md) |
-| First run and license | [First run, owner and license](docs/en/first-run-owner-license.md) | [İlk kurulum, owner ve lisans](docs/tr/first-run-owner-license.md) |
-| Public host and HTTPS | [Public host and HTTPS](docs/en/public-host-https-certificate.md) | [Public host ve HTTPS](docs/tr/public-host-https-certificate.md) |
-| Update Center | [Update Center](docs/en/update-center.md) | [Güncelleme Merkezi](docs/tr/update-center.md) |
-| Release asset verification | [Release asset verification](docs/en/release-asset-verification.md) | [Release asset doğrulama](docs/tr/release-asset-verification.md) |
-| Integration API clients | [Integration API clients](docs/en/api-clients.md) | [Integration API client'ları](docs/tr/api-clients.md) |
-| License lifecycle | [License lifecycle](docs/en/license-lifecycle.md) | [Lisans yaşam döngüsü](docs/tr/license-lifecycle.md) |
-| Browser extension | [Browser extension](docs/en/browser-extension.md) | [Tarayıcı eklentisi](docs/tr/browser-extension.md) |
-| Active Directory agent | [Active Directory agent](docs/en/active-directory-agent.md) | [Active Directory ajanı](docs/tr/active-directory-agent.md) |
-| Sharing and decrypter | [Sharing and offline decrypter](docs/en/sharing-and-offline-decrypter.md) | [Paylaşım ve offline decrypter](docs/tr/sharing-and-offline-decrypter.md) |
-| Backups and restore | [Backups and restore](docs/en/backups-and-restore.md) | [Yedekleme ve geri yükleme](docs/tr/backups-and-restore.md) |
-| Audit and posture | [Audit and security posture](docs/en/audit-and-security-posture.md) | [Denetim ve güvenlik duruşu](docs/tr/audit-and-security-posture.md) |
-| Troubleshooting | [Troubleshooting](docs/en/troubleshooting.md) | [Sorun giderme](docs/tr/troubleshooting.md) |
-| Support evidence pack | [Support evidence pack](docs/en/support-evidence-pack.md) | [Destek kanıt paketi](docs/tr/support-evidence-pack.md) |
-| FAQ | [FAQ](docs/en/faq.md) | [SSS](docs/tr/faq.md) |
+| Documentation home | [docs/en](docs/en/README.md) | [docs/tr](docs/tr/README.md) |
+| Knowledge base | [kb/en](kb/en/README.md) | [kb/tr](kb/tr/README.md) |
+| Release verification | [EN](docs/en/release-asset-verification.md) | [TR](docs/tr/release-asset-verification.md) |
+| Public API reference | [EN](docs/en/public-api-reference.md) | [TR](docs/tr/public-api-reference.md) |
+| In-app screen help | [EN](docs/en/in-app-screen-help.md) | [TR](docs/tr/in-app-screen-help.md) |
+| Public repo boundary | [EN](docs/en/public-repository-boundary.md) | [TR](docs/tr/public-repository-boundary.md) |
+| Publication runbook | [EN](docs/en/publication-runbook.md) | [TR](docs/tr/publication-runbook.md) |
+| External public surface drift | [EN](docs/en/public-external-surface-drift.md) | [TR](docs/tr/public-external-surface-drift.md) |
+| Public issue redaction | [EN](kb/en/public-issue-redaction.md) | [TR](kb/tr/public-issue-redaction.md) |
+| Public screenshot standards | [EN](docs/en/public-screenshot-standards.md), [KB](kb/en/public-screenshot-redaction.md) | [TR](docs/tr/public-screenshot-standards.md), [KB](kb/tr/public-screenshot-redaction.md) |
+| Public validation failure | [EN](kb/en/public-validation-fails.md) | [TR](kb/tr/public-validation-fails.md) |
+| GitHub profile and wording | [Profile](docs/en/github-repository-profile.md), [discoverability](docs/en/public-discoverability.md), [glossary](docs/en/public-language-glossary.md) | [Profil](docs/tr/github-repository-profile.md), [keşfedilebilirlik](docs/tr/public-discoverability.md), [sözlük](docs/tr/public-language-glossary.md) |
+| Visual references | [Sanitized screenshot catalog](docs/README.md#visual-references) | [Public ekran görüntüsü standartları](docs/tr/public-screenshot-standards.md) |
 
-## <img src="assets/icons/support.svg" width="22" alt=""> Knowledge Base Gateway
-
-| Incident | English | Turkish |
-| --- | --- | --- |
-| MSI installation fails | [EN](kb/en/msi-installation-fails.md) | [TR](kb/tr/msi-installation-fails.md) |
-| Update stays around 76 percent | [EN](kb/en/update-stuck-76.md) | [TR](kb/tr/update-stuck-76.md) |
-| DC Agent service cannot connect | [EN](kb/en/dc-agent-service.md) | [TR](kb/tr/dc-agent-service.md) |
-| Extension pairing remains pending | [EN](kb/en/extension-pairing.md) | [TR](kb/tr/extension-pairing.md) |
-| Certificate warning | [EN](kb/en/certificate-warning.md) | [TR](kb/tr/certificate-warning.md) |
-| Audit chain is partial | [EN](kb/en/audit-chain-partial.md) | [TR](kb/tr/audit-chain-partial.md) |
-| License is read-only | [EN](kb/en/license-read-only.md) | [TR](kb/tr/license-read-only.md) |
-| Integration API client gets 401, scope denied, or no data | [EN](kb/en/api-client-401.md) | [TR](kb/tr/api-client-401.md) |
-| External share package fails | [EN](kb/en/external-share-fails.md) | [TR](kb/tr/external-share-fails.md) |
-| Login creates 401 or 403 noise after unlock | [EN](kb/en/session-401-after-login.md) | [TR](kb/tr/session-401-after-login.md) |
-
-## <img src="assets/icons/vault.svg" width="22" alt=""> Product Walkthrough
-
-Fresh 2.0 captures: `login-lock-screen.png`, `overview-security-posture.png` and `passwords-record-list.png` were captured from an isolated local VaultPilot 2.0 runtime on June 30, 2026 with synthetic data only. Remaining walkthrough captures are legacy PassMan compatibility-line layout references until they are recaptured for the current VaultPilot surface. Use the release asset verification pages for release evidence.
-
-<details open>
-<summary>Core console surfaces</summary>
-
-| Surface | Screenshot |
-| --- | --- |
-| Login / lock screen | ![VaultPilot login lock screen](assets/screenshots/login-lock-screen.png) |
-| Security posture overview | ![VaultPilot overview dashboard](assets/screenshots/overview-security-posture.png) |
-| Password record list | ![VaultPilot password record list](assets/screenshots/passwords-record-list.png) |
-| Sharing package flow | ![VaultPilot sharing flow](assets/screenshots/sharing-package-flow.png) |
-
-</details>
-
-<details>
-<summary>Operations and support surfaces</summary>
-
-| Surface | Screenshot |
-| --- | --- |
-| Update Center | ![VaultPilot update center](assets/screenshots/update-center.png) |
-| Browser extension management | ![VaultPilot browser extension management](assets/screenshots/browser-extension-management.png) |
-| Active Directory sync tree | ![VaultPilot Active Directory sync tree](assets/screenshots/active-directory-sync-tree.png) |
-| Offline share decrypter | ![VaultPilot offline share decrypter](assets/screenshots/offline-share-decrypter.png) |
-
-</details>
+Sanitized UI captures were generated from isolated VaultPilot runtimes with synthetic data only. Visible hosts, users, counts, paths, filenames, hashes, package sizes and statuses are documentation fixtures, not release evidence or production guidance. Legacy PassMan compatibility-line screenshots are no longer embedded as walkthrough evidence.
 
 ## <img src="assets/icons/security.svg" width="22" alt=""> Public Safety Boundary
 
@@ -285,11 +224,15 @@ Use placeholders such as `<VAULTPILOT_URL>`, `<SERVER_HOST>`, `<AGENT_ID>`, `<AG
 
 ## <img src="assets/icons/evidence.svg" width="22" alt=""> Repository Validation
 
+Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a public issue or pull request. Public issues and PRs must stay documentation-focused and must not contain secrets, customer data, raw logs, release binaries, databases, certificates or screenshots with real vault records.
+
 Run before publishing public documentation changes:
 
 ```powershell
 npm run validate
 npm run validate:staged
+git diff --check
+gitleaks detect --no-git --redact --verbose --source .
 ```
 
-The validation checks local links, TR/EN doc parity, required visual and screenshot assets, stale release wording, forbidden public-site leftovers, large release binaries, release support artifacts, secret-like public patterns and encoding artifacts. Use `validate:staged` before commit so the git index, not only the working tree, is checked.
+The validation checks local links, TR/EN paired file presence, required public references, required visual and screenshot assets, screenshot standards references, stale release wording, forbidden public-site leftovers, large release binaries, release support artifacts, secret-like public patterns and encoding artifacts. Use `validate:staged` before commit so the git index, not only the working tree, is checked. The prepared GitHub workflow runs the repository validator, whitespace check and Gitleaks scan after it is committed to `main`; run Gitleaks locally before commit or publication.

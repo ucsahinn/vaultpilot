@@ -9,7 +9,7 @@ Bu public sayfa, private implementasyon veya kaynak kod açığa çıkarmadan Va
 | Tarayıcıdan VaultPilot sunucusuna | Authenticated API istekleri ve şifreli vault materyali. | Production erişimde HTTPS kullan; tarayıcı oturumunu gözetimsiz bırakma. |
 | VaultPilot sunucusundan SQLite'a | Şifreli secret payloadları ve operasyonel metadata. | Database kopyalama veya public paylaşım yapma; şifreli backup akışını kullan. |
 | Update Center'dan GitHub Releases'a | İmzalı manifest ve release assetleri. | Yalnızca manifest imzası, hash, boyut ve signer metadata doğrulanan assetlere güven. |
-| Browser extension'dan sunucuya | Pairing code, wrapped vault key ve şifreli snapshot. | Yalnızca onaylı cihazları eşleştir; eski cihazları revoke et. |
+| Tarayıcı eklentisinden sunucuya | Eşleştirme kodu, sarılmış kasa anahtarı ve şifreli snapshot. | Yalnızca onaylı cihazları eşleştir; eski cihazların erişimini iptal et. |
 | DC Agent'dan sunucuya | Directory metadata ve agent heartbeat. | AD bind parolası agent setup akışında lokal kalır; public support'a gönderilmez. |
 | Dış paylaşım | Şifreli seçili kayıt paketi ve passphrase korumalı açma akışı. | Yalnızca seçili kayıtları paylaş; passphrase'i ayrı kanaldan ilet. |
 
@@ -56,6 +56,6 @@ Plaintext secret, ana parola, license private materyali, AD bind parolası, data
 
 İlgili sayfalar:
 
-- [Release asset doğrulama](release-asset-verification.md)
+- [Yayın dosyası doğrulama](release-asset-verification.md)
 - [Denetim ve güvenlik duruşu](audit-and-security-posture.md)
 - [Destek kanıt paketi](support-evidence-pack.md)

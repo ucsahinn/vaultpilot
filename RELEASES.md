@@ -1,10 +1,12 @@
-# VaultPilot / PassMan Release Notes
+# VaultPilot Release Notes
 
 Latest public release: **VaultPilot 2.0.0**.
 
-Latest published GitHub Release verified in this workspace: **VaultPilot 2.0.0**.
+Latest published GitHub Release: **VaultPilot 2.0.0**.
 
 VaultPilot is the canonical product name for new work. PassMan remains the compatibility name for older installed services, data paths, environment variables, cookies, headers, update aliases, extension protocol names, and release artifacts that existing customers may still depend on.
+
+This page is a selected public release history for customer-facing milestones and compatibility notes. The GitHub Releases page remains the public source of truth for every retired patch build, asset upload, timestamp, and digest.
 
 ## Release label guide
 
@@ -71,7 +73,7 @@ GitHub Release: https://github.com/ucsahinn/vaultpilot/releases/tag/v2.0.0
 - Zero-knowledge boundaries are unchanged: vault keys, master-derived keys, plaintext secrets, API keys, private keys, and master passwords are not persisted or logged.
 - Server API payload validation, RBAC checks, CSRF header expectations, extension pairing, and signed update manifest verification remain active.
 - Legacy fast-unlock remnants are cleaned through a delete-only path. Current unlock behavior keeps sensitive material out of localStorage, sessionStorage, cookies, logs, and server persistence.
-- Browser extension decrypted vault snapshots stay in runtime memory only; background-worker restart or suspension locks the extension again.
+- Browser extension decrypted vault snapshots stay in extension worker memory plus trusted `chrome.storage.session` for the 15-minute TTL only. They are not written to persistent extension storage, browser localStorage, browser sessionStorage, cookies, logs, or server persistence; closing the browser profile or passing the TTL locks the extension again.
 - Additional hardening covers integration API organization scope, database singleton URL alignment, Authorization-header log redaction, active-session listing, and TOTP management.
 - Diagnostics remain redacted and non-destructive. The console does not clear logs, caches, browser history, databases, update jobs, or customer data.
 
@@ -80,12 +82,13 @@ GitHub Release: https://github.com/ucsahinn/vaultpilot/releases/tag/v2.0.0
 - New installs prefer `VaultPilotServer`, `VaultPilot Server`, `C:\ProgramData\VaultPilot`, `VAULTPILOT_*`, `vaultpilot-update.json`, and VaultPilot package names.
 - Existing installs may still rely on `PassManServer`, `PassMan Server`, `C:\ProgramData\PassMan`, `PASSMAN_*`, `passman_session`, `x-passman-request`, `passman-update.json`, and legacy package names.
 - Extension protocol names, cookies, headers, environment variables, update aliases, and MSI aliases remain available for old clients and rollback paths.
+- PassMan-named compatibility files can exist in installed environments, rollback paths or source build output for legacy clients. They are not public release assets unless they appear on the GitHub Release being verified.
 
 ### Browser Vault Extension 1.3.2
 
 - Changed: popup, content panel, README text, package output names, and store/enterprise deployment language now use VaultPilot Browser Vault Extension identity.
 - Changed: Chrome Web Store remains the primary install and update channel. ZIP output is retained only for archive, local development, and emergency fallback.
-- Security: decrypted vault snapshots are held only in extension runtime memory. If Chromium suspends or restarts the background worker, the extension locks again.
+- Security: decrypted vault snapshots are held only in extension worker memory plus trusted `chrome.storage.session` for the 15-minute TTL. They are not written to persistent extension storage, browser localStorage, browser sessionStorage, cookies, logs, or server persistence.
 - Compatibility: legacy extension origin and environment aliases remain accepted for managed Chrome installs, enterprise policy distribution, and ZIP fallback flows.
 
 ### Offline Share Decrypter 1.2.0
@@ -103,7 +106,7 @@ GitHub Release: https://github.com/ucsahinn/vaultpilot/releases/tag/v2.0.0
 
 ### Published release assets
 
-The public GitHub Release `v2.0.0` contains these customer-safe delivery assets. Use the GitHub release metadata as the public source of truth; local rebuild artifacts are not release evidence until they are uploaded and verified in the release.
+The public GitHub Release `v2.0.0` contains these customer-safe delivery assets. The table below was checked against GitHub Release metadata on July 8, 2026. Use the GitHub release metadata as the public source of truth; unpublished build output is not release evidence until it is uploaded and verified in the release.
 
 | Asset | Size | SHA-256 |
 | --- | ---: | --- |
@@ -116,20 +119,20 @@ The public GitHub Release `v2.0.0` contains these customer-safe delivery assets.
 | `vaultpilot-dc-agent.ps1` | 98,891 | `de8c4df43ff69b9a277e2cfaf4cb14f553512cf13b318eec45b725db1113e0fc` |
 | `vaultpilot-dc-agent.json` | 212 | `9082376283457eeddbffd3aee8d4e6ed1b46674d498d027467a9eff6308f7f4e` |
 
-### Verification gates for a new release
+### Public verification path
 
-- `npm run lint`
-- `npm run test`
-- `npm run build:windows`
-- `npm run update:manifest:issue -- --version 2.0.0 --tag v2.0.0`
-- `npm run update:manifest:verify -- --manifest public\downloads\vaultpilot-update.json`
-- `npm run update:manifest:verify-assets -- --manifest public\downloads\vaultpilot-update.json --manifest public\downloads\passman-update.json`
-- `npm run ui:smoke`
-- `npm run msi:verify`
-- `npm run msi:sandbox-package -- -AllowUnsignedDevMsi`
-- `npm run msi:evidence`
-- `npm audit --audit-level=high`
-- Secret scan the source and public-doc surfaces before pushing or publishing.
+This public repository verifies documentation, public links, release metadata, screenshot hygiene, and secret-safety boundaries. Private source-repository build, packaging, manifest-signing, MSI, and audit gates are not repeated here as runnable public commands.
+
+For public documentation changes, run:
+
+```powershell
+npm run validate
+npm run validate:staged
+git diff --check
+gitleaks detect --no-git --redact --verbose --source .
+```
+
+For release consumption, use [release asset verification](docs/en/release-asset-verification.md) and compare the asset names, sizes, SHA-256 values, manifest details, and signer evidence against the GitHub Release page.
 
 ## PassMan 1.8.21
 
@@ -190,9 +193,35 @@ GitHub Release: https://github.com/ucsahinn/vaultpilot/releases/tag/v1.8.20
 - Vault, pairing, MSI runtime, zero-knowledge storage, autofill, save/update, and update trust contracts remain unchanged.
 - Extension ZIP remains available as a release archive, not as the recommended customer channel.
 
+## PassMan 1.8.19
+
+Release date: 2026-06-04
+
+Type: Active Directory agent authorization patch.
+
+GitHub Release: https://github.com/ucsahinn/vaultpilot/releases/tag/v1.8.19
+
+### Highlights
+
+- Fixes AD agent install and repair authorization when a real server install reads the same SQLite provider record through a different server-secret or data-directory context.
+- Stores newly generated directory-agent bearer tokens with a portable SHA-256 verifier while still accepting existing server-secret HMAC token records for upgrade compatibility.
+- Adds redacted directory-agent authorization failure reasons in server logs so operators can distinguish missing providers, revoked tokens, empty token hashes, and token mismatches without logging token values.
+
+### Action required
+
+- Upgrade older compatibility deployments that use the DC Agent before rotating provider tokens.
+- Rotate any agent token that was pasted into support chats, terminals, screenshots, or public issue text.
+
+### Security and compatibility
+
+- The DC Agent script contract does not change. Existing install and repair commands keep the generated `pma_` agent id and `pmt_` token format.
+- The fix is carried forward by VaultPilot 2.0.0 and newer releases.
+
 ## PassMan 1.8.0
 
-Release date: 2026-06-20 in the local product timeline.
+Release date: 2026-06-01.
+
+GitHub Release: https://github.com/ucsahinn/vaultpilot/releases/tag/v1.8.0
 
 Type: minor milestone.
 

@@ -4,9 +4,11 @@ Use integration API clients when an approved system needs read-only VaultPilot d
 
 ## Public API Surface
 
+For the endpoint, credential-format, cache and status-code contract, keep [Public API reference](public-api-reference.md) open beside this operator guide.
+
 `GET /api/public/v1/secrets` returns an encrypted snapshot for the vaults assigned to the API client. The response includes vault metadata, encrypted vault names, secret IDs, secret types, encrypted payloads, timestamps and the `ENCRYPTED_SNAPSHOT` mode. It does not return plaintext passwords or decrypted vault data.
 
-`GET /api/public/v1/secrets/{secretId}` returns one encrypted secret from the same allowed snapshot. If the ID is malformed, outside the client's allowed vault list, or missing, the API answers as not found.
+`GET /api/public/v1/secrets/{secretId}` returns one encrypted secret from the same allowed snapshot. If the ID is malformed, missing, deleted, or outside the client's allowed vault list, VaultPilot intentionally returns `403 Integration authorization failed.` so unauthorized clients cannot distinguish hidden records from bad IDs.
 
 The same API client model also supports read-only operational status endpoints. These endpoints never decrypt vault data and do not require vault assignment unless the client also has `SECRETS_READ`.
 
@@ -64,6 +66,8 @@ Invoke-RestMethod -Headers @{ Authorization = "Basic $basic" } -Uri "https://<SE
 
 Use placeholders in public examples. Real values belong only in the consuming system's approved secret store.
 
+Run commands containing real `$pair` or `$basic` only in a private operator shell. Never paste those values into public issues, screenshots, transcripts or docs.
+
 ## Expected Errors
 
 | Symptom | Meaning | Operator action |
@@ -71,10 +75,11 @@ Use placeholders in public examples. Real values belong only in the consuming sy
 | 401 or auth failure | Client ID/secret is missing, malformed, wrong or revoked. | Rotate the client secret by creating a new client, update the consuming system, then revoke the old client. |
 | Scope denied | The client does not have the scope required by the endpoint. | Add the intended scope or create a new least-privilege client. |
 | Empty vault list | The client has no vaults assigned for secret snapshot access. This matters only for `SECRETS_READ`. | Assign only the vaults the integration needs, or remove `SECRETS_READ` for status-only clients. |
-| Secret not found | The secret ID is malformed, deleted or outside the client's allowed vaults. | Confirm the secret ID from an allowed snapshot. |
+| Hidden or invalid secret ID | The secret ID is malformed, deleted or outside the client's allowed vaults; VaultPilot returns `403 Integration authorization failed.` | Confirm the secret ID from an allowed encrypted snapshot, then verify `SECRETS_READ`, vault assignment and client scope. |
 
 Related:
 
+- [Public API reference](public-api-reference.md)
 - [Security and trust model](security-and-trust-model.md)
 - [Audit and security posture](audit-and-security-posture.md)
 - [Knowledge base: API client access](../../kb/en/api-client-401.md)

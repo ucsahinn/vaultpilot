@@ -19,6 +19,8 @@ The current console can import either a VaultPilot Backup Tool ZIP archive or an
 
 If the ZIP contains a Backup Tool database archive, VaultPilot requires the Backup Tool manifest before converting the server database into the encrypted local backup shape. Raw database files, WAL/SHM companions, customer backups and support archives still do not belong in this public repository or public issue text.
 
+If import fails with `PAYLOAD_TOO_LARGE`, `CONTENT_LENGTH_REQUIRED`, `BACKUP_ARCHIVE_INVALID` or `BACKUP_ARCHIVE_UNSUPPORTED`, use [Backup import fails or closes sessions](../../kb/en/backup-import-fails.md) before retrying.
+
 For uninstall, data retention, rollback and purge boundaries, use [Uninstall, data retention and rollback](uninstall-rollback-data-retention.md). Normal uninstall should preserve the data directory unless an explicit private purge approval exists.
 
 ## Integrity

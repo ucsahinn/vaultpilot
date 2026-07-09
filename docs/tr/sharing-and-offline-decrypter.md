@@ -2,9 +2,9 @@
 
 VaultPilot paylaşımı seçili kayıt odaklıdır. Operatörlerin tüm kasayı paylaşmasına gerek yoktur; yalnızca seçilen kayıtlar ve dosyalar paketlenir.
 
-![VaultPilot sharing package flow](../../assets/screenshots/sharing-package-flow.png)
+![VaultPilot paylaşım paket akışı](../../assets/screenshots/sharing-package-flow-vaultpilot-2.png)
 
-Screenshot notu: bu sayfadaki görseller PassMan compatibility line'dan geçici layout referansı olarak tutulur. Final 2.0 screenshotları yeniden alınana kadar VaultPilot 2.0 release veya branding kanıtı değildir.
+Bu yayıma uygun hale getirilmiş UI görseli yalnızca sentetik veri içerir. Seçili kayıtları, iç alıcı seçimini, dış paket politikasını, süre sonunu, kullanım limitini ve decrypter indirme rehberini gösterir. Görünen sayılar, politikalar ve paket etiketleri dokümantasyon örneğidir. Görseldeki `PMShare/JSON` etiketi eski paket türleriyle uyumluluğu anlatır; yeni dağıtım asset'i `vaultpilot-share-decrypter.zip` olarak doğrulanır.
 
 ## İç Paylaşım
 
@@ -40,8 +40,6 @@ Paket tamamlandıktan sonra Paylaşım ekranı aksiyonel kalmalıdır:
 - Alıcı akışı offline decrypter'a bağlanır.
 
 ## Offline Decrypter
-
-![VaultPilot offline share decrypter](../../assets/screenshots/offline-share-decrypter.png)
 
 `vaultpilot-share-decrypter.zip` içindeki HTML araç tamamen tarayıcı içinde çalışır.
 

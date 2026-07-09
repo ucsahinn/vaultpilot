@@ -1,16 +1,16 @@
 # Girişten Sonra 401 Veya 403 Log Gürültüsü
 
-Operatörler girişten hemen sonra `/api/audit`, `/api/secrets/list`, `/api/update/jobs`, `/api/users/list` veya `/api/extension/devices` gibi protected API uçlarında tekrarlı `401` veya `403` görüyorsa bu makaleyi kullan.
+Operatörler girişten hemen sonra `/api/audit`, `/api/secrets/list`, `/api/update/jobs`, `/api/users/list` veya `/api/extension/devices` gibi protected API uçlarında tekrarlı `401` veya `403` görüyorsa bu makaleyi kullanın.
 
-## 1.6.0 İçin Beklenen Davranış
+## VaultPilot 2.0.0 İçin Beklenen Davranış
 
-VaultPilot, PassMan 1.6.0 ile gelen uyumluluk davranışını korur: girişten sonra kasayı açık saymadan önce `/api/auth/me` doğrulaması yapar ve yenileme sonrası authenticated browser session değerini hedeflenen 15 dakikalık pencere boyunca korur. Protected workspace queryleri, tarayıcı session cookie sunucu tarafından görüldükten sonra başlamalıdır. Session doğrulanamazsa UI kilitlenir ve cached protected queryler temizlenir; aynı istekler tekrar tekrar retry edilmez.
+VaultPilot, girişten sonra kasayı açık saymadan önce `/api/auth/me` doğrulaması yapar ve yenileme sonrası authenticated browser session değerini hedeflenen 15 dakikalık pencere boyunca korur. Protected workspace queryleri, tarayıcı session cookie sunucu tarafından görüldükten sonra başlamalıdır. Session doğrulanamazsa UI kilitlenir ve cached protected queryler temizlenir; aynı istekler tekrar tekrar retry edilmez.
 
 ## İlk Kontroller
 
 | Kontrol | Sağlıklı sonuç |
 | --- | --- |
-| Kurulu version | Konsol `1.6.0` veya daha yeni gösterir. |
+| Kurulu version | Konsol VaultPilot `2.0.0` veya daha yeni gösterir. Yükseltilmiş compatibility kurulumları support triage öncesi güncel yayınlanmış release'e taşınmalıdır. |
 | Login response | `/api/auth/login` `200` döner. |
 | Session doğrulama | Login sonrası `/api/auth/me` `200` döner. |
 | Protected API'ler | Audit, secrets, extension, update, users ve integrations `/api/auth/me` sonrası `200` döner. |
@@ -38,7 +38,7 @@ Ana parola, cookie, session token değeri, gerçek kayıt içeren screenshot vey
 
 ## Çözüm Yolu
 
-1. `1.6.0` veya daha yeni sürüme yükselt.
+1. Yayınlanmış VaultPilot `2.0.0` release'ini veya daha yeni sürümü kurun ya da yükseltin.
 2. Logout yap, stale tabları kapat ve VaultPilot'u tek canonical URL üzerinden aç.
 3. Browser'ın VaultPilot hostu için cookie kabul ettiğini doğrula.
 4. Tekrar login ol ve protected route öncesi `/api/auth/me` `200` mü kontrol et.

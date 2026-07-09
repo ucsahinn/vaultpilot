@@ -24,6 +24,7 @@ VaultPilot Enterprise Vault Console, Windows Server üzerine MSI ile kurulan sel
 - [Windows Server kurulumu](install-windows-server.md)
 - [İlk kurulum, owner ve lisans](first-run-owner-license.md)
 - [Public host, HTTPS ve sertifika](public-host-https-certificate.md)
+- [Server System ayarları](server-system.md)
 - [Güncelleme merkezi](update-center.md)
 - [Sorun giderme](troubleshooting.md)
 

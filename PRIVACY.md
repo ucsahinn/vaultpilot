@@ -1,10 +1,12 @@
 # VaultPilot Browser Vault Extension Privacy Policy
 
-Last updated: June 5, 2026
+Last updated: July 8, 2026
 
 This privacy policy applies to the VaultPilot Browser Vault Extension for Chrome and Edge.
 
 VaultPilot Browser Vault Extension is a browser-side helper for users and administrators of a self-hosted VaultPilot server. Its single purpose is to connect an approved browser profile to a user-configured VaultPilot server for encrypted vault sync, autofill, secure copy, password generation, optional password exposure checks, and Chrome Web Store deployment support.
+
+The current public extension listing uses extension ID `hjkbedlaieikhkoplgpiohlaakgebobi`. The normal customer installation and update channel is Chrome Web Store; release ZIP files are retained only for release evidence, lab validation, local development, and emergency fallback.
 
 ## Data The Extension May Handle
 
@@ -12,9 +14,9 @@ The extension may handle the following categories of user data only for the Vaul
 
 - Personally identifiable information, such as VaultPilot usernames, saved login usernames, email-like usernames, device names, and server/account metadata.
 - Authentication information, such as passwords, credentials, generated passwords, extension PIN-protected pairing material, encrypted vault snapshots, and approved vault login records.
-- Website content, such as login form fields, page URLs, page titles, and page context needed to detect login forms, match the active site to VaultPilot vault entries, provide autofill, and offer save or update prompts.
+- Web history, limited to the active tab URL or host and page context needed to detect login forms, match the active site to VaultPilot vault entries, provide autofill, and offer save or update prompts.
 
-The extension does not collect health information, financial or payment information for payment processing, personal communications, precise location, full browsing history, mouse movement, scrolling behavior, keylogging data, or unrelated user activity.
+The extension does not collect health information, financial or payment information for payment processing, personal communications, precise location, full browsing-history profiles, mouse movement, scrolling behavior, keylogging data, or unrelated user activity.
 
 ## How Data Is Used
 
@@ -55,7 +57,9 @@ The extension does not load, execute, eval, or import remotely hosted JavaScript
 
 ## Limited Use Disclosure
 
-The extension's use of user data complies with the Chrome Web Store User Data Policy, including the Limited Use requirements. User data is used only to provide or improve the extension's single purpose and user-facing features. User data is not used or transferred for advertising, unrelated purposes, or creditworthiness or lending decisions.
+The extension's use of user data complies with the Chrome Web Store User Data Policy, including the Limited Use requirements. User data is used only to provide or improve the extension's single purpose and user-facing features. User data is not used or transferred for advertising, unrelated purposes, profiling, creditworthiness, or lending decisions.
+
+Chrome Web Store privacy practice disclosures for this extension should match this policy, the packaged extension behavior, and the public store listing. If those surfaces disagree, they must be aligned before publication or update submission.
 
 ## Contact
 

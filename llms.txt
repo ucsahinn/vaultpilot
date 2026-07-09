@@ -1,0 +1,98 @@
+# VaultPilot Public Documentation
+
+> VaultPilot is a self-hosted, zero-knowledge password and secrets manager installed on Windows Server by MSI and accessed from user browsers through the server host.
+
+This file is a curated map for tools and agents that read `/llms.txt`-style indexes. It points to public-safe Markdown only. This repository is the release, documentation, knowledge-base, support, security and privacy hub for VaultPilot; it does not contain private product source code, signing material, customer data, databases, backups, or release binaries committed into git.
+
+## Use Order
+
+Use release facts from `RELEASES.md` and the release verification guides. Use operator tasks from `docs/en/README.md` or `docs/tr/README.md`. Use incident diagnosis from `kb/en/README.md` or `kb/tr/README.md`. Use `docs/en/public-external-surface-drift.md` or `docs/tr/public-external-surface-drift.md` for account-side work that this repository cannot complete by itself. Never infer source availability, license rights, Chrome Web Store dashboard state, customer deployment state, or release-asset contents only from this index.
+
+## Primary Pages
+
+- [Repository home](README.md): canonical public front door, current release, docs map, support boundary and release trust path.
+- [Turkish repository home](README.tr.md): Turkish quick entry for operators.
+- [German repository home](README.de.md): localized quick entry that routes back to canonical public docs.
+- [Spanish repository home](README.es.md): localized quick entry that routes back to canonical public docs.
+- [French repository home](README.fr.md): localized quick entry that routes back to canonical public docs.
+- [Portuguese Brazil repository home](README.pt-BR.md): localized quick entry that routes back to canonical public docs.
+- [Release notes](RELEASES.md): current public release summary and component version history.
+- [Security policy](SECURITY.md): public vulnerability reporting boundary and security contact path.
+- [Support policy](SUPPORT.md): support evidence rules and public issue limits.
+- [Contribution rules](CONTRIBUTING.md): public-safe contribution and validation rules.
+- [Pull request checklist](.github/PULL_REQUEST_TEMPLATE.md): public PR safety and validation checklist.
+- [Redacted support issue template](.github/ISSUE_TEMPLATE/redacted-support.yml): public-safe support intake form.
+- [Documentation correction issue template](.github/ISSUE_TEMPLATE/documentation.yml): public documentation correction intake form.
+- [Browser extension privacy policy](PRIVACY.md): Chrome Web Store privacy-policy target.
+- [Public repository boundary EN](docs/en/public-repository-boundary.md) / [TR](docs/tr/public-repository-boundary.md): what belongs in git, releases, private support and public issues.
+- [Publication runbook EN](docs/en/publication-runbook.md) / [TR](docs/tr/publication-runbook.md): validation, staging and owner-gated publication sequence.
+- [Public external surface drift EN](docs/en/public-external-surface-drift.md) / [TR](docs/tr/public-external-surface-drift.md): account-side GitHub and Chrome Web Store follow-up register.
+- [Public screenshot standards EN](docs/en/public-screenshot-standards.md) / [TR](docs/tr/public-screenshot-standards.md): approved screenshot manifest and redaction rules.
+- [Screenshot manifest](assets/screenshots/MANIFEST.json): machine-readable inventory of approved public screenshots, dimensions, byte sizes, SHA-256 hashes and synthetic fixture notes.
+- [GitHub repository profile EN](docs/en/github-repository-profile.md) / [TR](docs/tr/github-repository-profile.md): desired repository description, topics, social preview and issue policy.
+- [Public discoverability EN](docs/en/public-discoverability.md) / [TR](docs/tr/public-discoverability.md): GitHub discovery, Google Search and AI/LLM context checklist.
+- [Public language glossary EN](docs/en/public-language-glossary.md) / [TR](docs/tr/public-language-glossary.md): product, compatibility, support and redaction wording.
+- [In-app screen help EN](docs/en/in-app-screen-help.md) / [TR](docs/tr/in-app-screen-help.md): index of every topbar `?` screen-specific help target.
+- [Screen help target manifest](docs/screen-help-targets.json): machine-readable contract between app workspace views and public `?` help pages.
+- [Documentation gateway](docs/README.md): complete operator guide map.
+- [Knowledge base gateway](kb/README.md): public-safe incident navigator.
+
+## Operator Documentation
+
+- [Documentation homes EN](docs/en/README.md) / [TR](docs/tr/README.md): recommended reading order for operators.
+- [Admin quickstart EN](docs/en/admin-quickstart.md) / [TR](docs/tr/admin-quickstart.md): shortest safe day-0 path.
+- [Windows Server installation EN](docs/en/install-windows-server.md) / [TR](docs/tr/install-windows-server.md): MSI, service, port and first browser check.
+- [First run, owner and license EN](docs/en/first-run-owner-license.md) / [TR](docs/tr/first-run-owner-license.md): owner creation, license state and first unlock.
+- [Public host and HTTPS certificate EN](docs/en/public-host-https-certificate.md) / [TR](docs/tr/public-host-https-certificate.md): hostname and certificate package guidance.
+- [Server System settings EN](docs/en/server-system.md) / [TR](docs/tr/server-system.md): host, HTTPS, notifications, retention and maintenance boundaries.
+- [Security and trust model EN](docs/en/security-and-trust-model.md) / [TR](docs/tr/security-and-trust-model.md): trust boundaries and operator responsibilities.
+- [Audit and security posture EN](docs/en/audit-and-security-posture.md) / [TR](docs/tr/audit-and-security-posture.md): posture score, audit chain and risk actions.
+- [Discovery EN](docs/en/discovery.md) / [TR](docs/tr/discovery.md): exposure review workflow with redacted evidence.
+- [Browser extension EN](docs/en/browser-extension.md) / [TR](docs/tr/browser-extension.md): pairing, autofill and Chrome Web Store update behavior.
+- [Chrome Web Store listing and privacy EN](docs/en/chrome-web-store-listing.md) / [TR](docs/tr/chrome-web-store-listing.md): publisher copy, privacy categories and permission reasons.
+- [Active Directory agent EN](docs/en/active-directory-agent.md) / [TR](docs/tr/active-directory-agent.md): DC Agent Service setup, repair and sync tree.
+- [Sharing and offline decrypter EN](docs/en/sharing-and-offline-decrypter.md) / [TR](docs/tr/sharing-and-offline-decrypter.md): internal sharing and external package opening.
+- [Backups and restore EN](docs/en/backups-and-restore.md) / [TR](docs/tr/backups-and-restore.md): encrypted backup and restore checks.
+- [Update Center EN](docs/en/update-center.md) / [TR](docs/tr/update-center.md): signed manifest and managed update flow.
+- [Release asset verification EN](docs/en/release-asset-verification.md) / [TR](docs/tr/release-asset-verification.md): asset list, checksums, sizes and signer checks.
+- [Integration API clients EN](docs/en/api-clients.md) / [TR](docs/tr/api-clients.md): scoped encrypted snapshot clients.
+- [Public API reference EN](docs/en/public-api-reference.md) / [TR](docs/tr/public-api-reference.md): endpoint, auth, cache and status-code contract for read-only integrations.
+- [In-app screen help EN](docs/en/in-app-screen-help.md) / [TR](docs/tr/in-app-screen-help.md): screen-by-screen operator help opened from the app topbar `?`.
+- [License lifecycle EN](docs/en/license-lifecycle.md) / [TR](docs/tr/license-lifecycle.md): trial, renewal, read-only and replacement states.
+- [Operator runbook EN](docs/en/operator-runbook.md) / [TR](docs/tr/operator-runbook.md): daily, weekly, monthly and incident routines.
+- [Troubleshooting EN](docs/en/troubleshooting.md) / [TR](docs/tr/troubleshooting.md): common operational failure states.
+- [Support evidence pack EN](docs/en/support-evidence-pack.md) / [TR](docs/tr/support-evidence-pack.md): redacted private-support handoff.
+
+## Knowledge Base
+
+- [KB homes EN](kb/en/README.md) / [TR](kb/tr/README.md): symptom index and standard evidence checklist.
+- [MSI installation fails EN](kb/en/msi-installation-fails.md) / [TR](kb/tr/msi-installation-fails.md): installer and service startup checks.
+- [Update stuck near 76 percent EN](kb/en/update-stuck-76.md) / [TR](kb/tr/update-stuck-76.md): MSI restart-stage diagnosis.
+- [DC Agent service troubleshooting EN](kb/en/dc-agent-service.md) / [TR](kb/tr/dc-agent-service.md): service, URL and auth evidence checks.
+- [Extension pairing remains pending EN](kb/en/extension-pairing.md) / [TR](kb/tr/extension-pairing.md): pairing code and browser-profile checks.
+- [Chrome Web Store review or privacy mismatch EN](kb/en/chrome-web-store-review.md) / [TR](kb/tr/chrome-web-store-review.md): extension review and privacy-practice mismatch response.
+- [Login session 401/403 noise EN](kb/en/session-401-after-login.md) / [TR](kb/tr/session-401-after-login.md): post-login auth noise triage.
+- [Integration API client access EN](kb/en/api-client-401.md) / [TR](kb/tr/api-client-401.md): scoped API client 401 or empty-data diagnosis.
+- [HTTPS certificate warning EN](kb/en/certificate-warning.md) / [TR](kb/tr/certificate-warning.md): hostname, SAN and package checks.
+- [Server settings restart and maintenance EN](kb/en/server-settings-restart-maintenance.md) / [TR](kb/tr/server-settings-restart-maintenance.md): host, HTTPS, notifications and retention review.
+- [Audit chain partial EN](kb/en/audit-chain-partial.md) / [TR](kb/tr/audit-chain-partial.md): audit filters and chain state checks.
+- [License read-only state EN](kb/en/license-read-only.md) / [TR](kb/tr/license-read-only.md): license state and capacity diagnosis.
+- [Discovery finding review EN](kb/en/discovery-finding-review.md) / [TR](kb/tr/discovery-finding-review.md): approved finding and import-review path.
+- [Public issue redaction EN](kb/en/public-issue-redaction.md) / [TR](kb/tr/public-issue-redaction.md): public evidence safety decision.
+- [Public screenshot redaction EN](kb/en/public-screenshot-redaction.md) / [TR](kb/tr/public-screenshot-redaction.md): unsafe image handling.
+- [Public validation fails EN](kb/en/public-validation-fails.md) / [TR](kb/tr/public-validation-fails.md): validator failure recovery.
+- [External share package fails EN](kb/en/external-share-fails.md) / [TR](kb/tr/external-share-fails.md): package, expiry and passphrase diagnosis.
+
+## Public Safety Rules
+
+- Do not publish plaintext secrets, master passwords, API keys, private keys, vault keys, license private material, cookies, databases, backups, PFX/P12 files, raw support logs, or screenshots with real customer data.
+- Use placeholders such as `<VAULTPILOT_URL>`, `<SERVER_HOST>`, `<AGENT_ID>`, `<AGENT_TOKEN>`, `<LICENSE_CODE>` and `<REDACTED>`.
+- Release binaries, MSI files, ZIP archives, update manifests and support scripts are delivered through GitHub Releases or approved extension channels, not committed into this repository.
+
+## Optional
+
+- [Social preview SVG](assets/visuals/social-preview.svg): source visual for repository social preview.
+- [Social preview PNG](assets/visuals/social-preview.png): owner-uploaded GitHub social preview target.
+- [Screenshot manifest](assets/screenshots/MANIFEST.json): approved public screenshot inventory for validation and visual review.
+- [Overview console visual](assets/visuals/overview-console.svg): public-safe high-level product visual.
+- [Update trust chain visual](assets/visuals/update-trust-chain.svg): signed update trust diagram.

@@ -1,18 +1,20 @@
-# Integration API Client'ları
+# Entegrasyon API Client'ları
 
-Onaylı bir sistem VaultPilot public API üzerinden read-only veri okuyacaksa integration API client kullanın. Client'ı dar tutun: yalnız gerekli endpoint scope'larını ve gerekiyorsa gerekli kasaları verin, sahibini kaydedin, entegrasyon bittiğinde revoke edin.
+Onaylı bir sistem VaultPilot public API üzerinden sadece okuma amaçlı veri alacaksa entegrasyon API client'ı kullanın. Client'ı dar tutun: yalnız gerekli endpoint kapsamlarını ve gerekiyorsa gerekli kasaları verin, sahibini kaydedin, entegrasyon bittiğinde erişimini iptal edin.
 
 ## Public API Yüzeyi
 
-`GET /api/public/v1/secrets`, API client'a atanmış kasalar için encrypted snapshot döndürür. Yanıtta vault metadata, encrypted vault name, secret ID, secret type, encrypted payload, timestamp ve `ENCRYPTED_SNAPSHOT` mode bulunur. Plaintext parola veya decrypted vault data dönmez.
+Endpoint, credential formatı, cache ve status-code sözleşmesi için bu operatör rehberinin yanında [Public API referansı](public-api-reference.md) sayfasını açık tutun.
 
-`GET /api/public/v1/secrets/{secretId}`, aynı izinli snapshot içinden tek encrypted secret döndürür. ID formatı hatalıysa, client'ın izinli vault listesi dışındaysa veya kayıt yoksa API not found döner.
+`GET /api/public/v1/secrets`, API client'a atanmış kasalar için şifreli snapshot döndürür. Yanıtta vault metadata, encrypted vault name, secret ID, secret type, encrypted payload, timestamp ve `ENCRYPTED_SNAPSHOT` mode bulunur. Plaintext parola veya decrypted vault data dönmez.
 
-Aynı client modeli read-only operasyon status endpoint'lerini de destekler. Bu endpoint'ler kasa datasını decrypt etmez ve client'ta `SECRETS_READ` yoksa vault assignment gerektirmez.
+`GET /api/public/v1/secrets/{secretId}`, aynı izinli snapshot içinden tek şifreli secret döndürür. ID formatı hatalıysa, kayıt yoksa, silinmişse veya client'ın izinli vault listesi dışındaysa VaultPilot bilerek `403 Integration authorization failed.` döndürür; yetkisiz client'lar gizli kayıt ile hatalı ID'yi ayırt edemez.
+
+Aynı client modeli sadece okuma yapan operasyon status endpoint'lerini de destekler. Bu endpoint'ler kasa datasını decrypt etmez ve client'ta `SECRETS_READ` yoksa vault assignment gerektirmez.
 
 | Scope | Endpoint | Dönen bilgi |
 | --- | --- | --- |
-| `SECRETS_READ` | `GET /api/public/v1/secrets` ve `GET /api/public/v1/secrets/{secretId}` | Atanmış kasalar için encrypted vault ve secret snapshot. |
+| `SECRETS_READ` | `GET /api/public/v1/secrets` ve `GET /api/public/v1/secrets/{secretId}` | Atanmış kasalar için şifreli vault ve secret snapshot. |
 | `SERVER_STATUS_READ` | `GET /api/public/v1/server/status` | App version, uptime, vault count, active API client count ve directory provider count. |
 | `DIRECTORY_STATUS_READ` | `GET /api/public/v1/directory/status` | Directory provider health, obje sayıları, seçili login/credential sayıları ve last seen/sync zamanları. |
 | `UPDATE_STATUS_READ` | `GET /api/public/v1/updates/status` | Konsolda görülen Update Center status bilgisinin read-only monitoring çıktısı. |
@@ -21,11 +23,11 @@ Aynı client modeli read-only operasyon status endpoint'lerini de destekler. Bu 
 
 1. Owner olarak giriş yapın.
 2. Integrations veya API client yüzeyini açın.
-3. Tüketen sistemin gerçekten ihtiyaç duyduğu endpoint scope'larını seçin.
+3. Tüketen sistemin gerçekten ihtiyaç duyduğu endpoint kapsamlarını seçin.
 4. `SECRETS_READ` seçildiyse minimum vault listesini atayın. Status-only client için vault scope gerekmez.
 5. Client'ı net bir isimle oluşturun.
 6. Client secret değerini yalnız bir kez kopyalayın ve tüketen sistemin onaylı secret store'una koyun.
-7. Sahip, amaç, izinli vault'lar, scope'lar ve review tarihini kaydedin.
+7. Sahip, amaç, izinli vault'lar, kapsamlar ve review tarihini kaydedin.
 
 Client secret sunucuda hashlenmiş olarak saklanır. Kaybedilirse yeni client oluşturun ve eskisini revoke edin.
 
@@ -62,19 +64,22 @@ $basic = [Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes($pair))
 Invoke-RestMethod -Headers @{ Authorization = "Basic $basic" } -Uri "https://<SERVER_HOST>:1903/api/public/v1/server/status"
 ```
 
-Public örneklerde placeholder kullanın. Gerçek değerler yalnız tüketen sistemin onaylı secret store'unda kalmalıdır.
+Public örneklerde yer tutucu kullanın. Gerçek değerler yalnız tüketen sistemin onaylı secret store'unda kalmalıdır.
+
+Gerçek `$pair` veya `$basic` içeren komutları yalnız private operator shell içinde çalıştırın. Bu değerleri public issue, ekran görüntüsü, transcript veya dokümana yapıştırmayın.
 
 ## Beklenen Hatalar
 
 | Belirti | Anlamı | Operatör aksiyonu |
 | --- | --- | --- |
 | 401 veya auth failure | Client ID/secret eksik, formatı hatalı, yanlış veya revoke edilmiş. | Yeni client oluşturup tüketen sistemi güncelleyin, sonra eski client'ı revoke edin. |
-| Scope denied | Client'ta endpoint'in istediği scope yok. | Amaçlanan scope'u ekleyin veya yeni least-privilege client oluşturun. |
-| Boş vault listesi | Secret snapshot erişimi için client'a vault atanmamış. Bu yalnız `SECRETS_READ` için önemlidir. | Yalnız entegrasyonun ihtiyaç duyduğu vault'ları atayın veya status-only client'tan `SECRETS_READ` scope'unu kaldırın. |
-| Secret not found | Secret ID hatalı formatta, silinmiş veya izinli vault dışındadır. | Secret ID'yi izinli snapshot içinden doğrulayın. |
+| Kapsam reddedildi | Client kaydında endpoint'in istediği kapsam yok. | Amaçlanan kapsamı ekleyin veya yalnız gereken yetkiye sahip yeni bir client oluşturun. |
+| Boş vault listesi | Secret snapshot erişimi için client'a vault atanmamış. Bu yalnız `SECRETS_READ` için önemlidir. | Yalnız entegrasyonun ihtiyaç duyduğu vault'ları atayın veya status-only client'tan `SECRETS_READ` kapsamını kaldırın. |
+| Gizli veya geçersiz secret ID | Secret ID hatalı formatta, silinmiş veya client'ın izinli vault'ları dışındadır; VaultPilot `403 Integration authorization failed.` döndürür. | ID'yi izinli encrypted snapshot içinden doğrulayın, sonra `SECRETS_READ`, vault assignment ve client kapsamını kontrol edin. |
 
 İlgili:
 
+- [Public API referansı](public-api-reference.md)
 - [Güvenlik ve güven modeli](security-and-trust-model.md)
 - [Denetim ve güvenlik duruşu](audit-and-security-posture.md)
 - [Bilgi bankası: API client erişimi](../../kb/tr/api-client-401.md)

@@ -23,6 +23,18 @@ Lisans ekranında:
 - İmza doğrulama durumu.
 - Plan yetenekleri gösterilir.
 
-## Trial ve Read-only
+## Deneme ve Salt Okunur
 
-Trial veya lisans süresi bittiğinde okuma ve yedek dışa aktarma erişimi korunabilir; yazma, kullanıcı ekleme, paylaşım, eklenti eşleştirme ve update install aksiyonları kısıtlanır.
+Deneme veya lisans süresi bittiğinde okuma ve yedek dışa aktarma erişimi korunabilir; yazma, kullanıcı ekleme, paylaşım, eklenti eşleştirme ve güncelleme kurulum aksiyonları kısıtlanır.
+
+## Kurtarma İpuçları
+
+Son owner hesabını kaldırmayın. Lisans süresi biterse veya yeni lisans doğrulanmazsa owner erişimini koruyun, arayüz izin veriyorsa yedek dışa aktarın ve kapasite veya kullanıcı değiştirmeden önce lisans salt okunur kurtarma yolunu izleyin.
+
+## İlgili
+
+- [Lisans yaşam döngüsü](license-lifecycle.md)
+- [Giriş güvenliği ekranı](screen-sign-in-security.md)
+- [Lisans ekranı](screen-license.md)
+- [Lisans salt okunur bilgi bankası](../../kb/tr/license-read-only.md)
+- [Destek kanıt paketi](support-evidence-pack.md)

@@ -23,6 +23,21 @@ PFX / P12
 
 The certificate must match the host users open in the browser. The subject or SAN should contain the configured host name.
 
+## Upload Boundary And Errors
+
+Certificate upload is an Owner-only server setting. Upload exactly one `.pfx` or `.p12` package. The file must be larger than 0 bytes and no larger than 2 MB. Upload attempts are rate-limited to 6 attempts per 10 minutes.
+
+Browser uploads must include `Content-Length`; if a scripted client receives `CONTENT_LENGTH_REQUIRED`, retry through the UI or send the correct length header. If the upload exceeds the accepted envelope, VaultPilot returns `PAYLOAD_TOO_LARGE`.
+
+| API code | Meaning | Operator action |
+| --- | --- | --- |
+| `UNSUPPORTED_CERTIFICATE_FILE` | The selected file is not a `.pfx` or `.p12` package. | Export a PFX/P12 package that contains the certificate and private key, then upload that package. |
+| `CERTIFICATE_FILE_SIZE` | The selected package is empty or larger than 2 MB. | Re-export the certificate package and confirm its size before uploading. |
+| `CONTENT_LENGTH_REQUIRED` | The upload request omitted `Content-Length`. | Use the VaultPilot UI or a client that sends the header. |
+| `PAYLOAD_TOO_LARGE` | The multipart request exceeds the server upload limit. | Confirm the package is at most 2 MB and retry with exactly one certificate file. |
+
+Never post the certificate package, certificate password, private key material or private host details in public issues, docs or screenshots.
+
 ## Production Checklist
 
 1. Confirm first access at `https://<SERVER_HOST>:1903` or your configured public HTTPS port.

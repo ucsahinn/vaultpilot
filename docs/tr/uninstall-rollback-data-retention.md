@@ -66,5 +66,5 @@ Restore testini uninstall işleminden ayrı yapın:
 
 - [Yedekleme ve geri yükleme](backups-and-restore.md)
 - [Windows Server kurulumu](install-windows-server.md)
-- [Release asset doğrulama](release-asset-verification.md)
+- [Yayın dosyası doğrulama](release-asset-verification.md)
 - [Destek kanıt paketi](support-evidence-pack.md)

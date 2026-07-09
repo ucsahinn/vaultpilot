@@ -37,6 +37,7 @@ Bu runbook, go-live sonrası VaultPilot işletimi için tekrar edilebilir enterp
 | Alan | Kanıt |
 | --- | --- |
 | Sertifika yaşam döngüsü | Expiry tarihi, SAN kapsamı ve tarayıcı doğrulaması. |
+| Server System ayarları | Public host, port, HTTPS durumu, bildirim testi, log retention ve audit retention. |
 | Lisans yaşam döngüsü | Expiry, user cap ve read-only riski. |
 | Update güveni | Güncel release için manifest imzası, asset hash ve signer thumbprint. |
 | Incident hazırlığı | Destek kanıt paketi mevcut ortama uyuyor. |
@@ -57,6 +58,7 @@ Bu runbook, go-live sonrası VaultPilot işletimi için tekrar edilebilir enterp
 
 - MSI upgrade.
 - Public host veya certificate değişimi.
+- Server System host, bildirim, retention veya bakım değişimi.
 - License değişimi.
 - AD provider veya DC Agent değişimi.
 - Chrome Web Store eklenti dağıtımı değişimi.
@@ -66,7 +68,8 @@ Değişiklikten önce backup al, mevcut version, service state ve support contac
 
 İlgili sayfalar:
 
-- [Release asset doğrulama](release-asset-verification.md)
+- [Yayın dosyası doğrulama](release-asset-verification.md)
+- [Server System ayarları](server-system.md)
 - [Güncelleme Merkezi](update-center.md)
 - [Yedekleme ve geri yükleme](backups-and-restore.md)
 - [Sorun giderme](troubleshooting.md)

@@ -2,9 +2,9 @@
 
 VaultPilot DC Agent Service runs near the domain controller and synchronizes directory metadata into VaultPilot. It does not send the AD bind password or AD user passwords to VaultPilot.
 
-![VaultPilot Active Directory sync tree](../../assets/screenshots/active-directory-sync-tree.png)
+![VaultPilot Active Directory sync tree](../../assets/screenshots/active-directory-sync-tree-vaultpilot-2.png)
 
-Screenshot note: this capture is retained from the PassMan compatibility line as a temporary layout reference. It is not VaultPilot 2.0 release or branding evidence until the final 2.0 screenshots are recaptured.
+This sanitized UI capture uses synthetic data and shows provider health, base DN, OU/group/user selection, login scope, credential import scope, and agent actions. Visible users, domains, counts, timestamps and action states are documentation fixtures, not production guidance.
 
 ## Service Identity
 
@@ -14,7 +14,9 @@ Screenshot note: this capture is retained from the PassMan compatibility line as
 | Display name | `VaultPilot DC Agent Service` |
 | Config file | `%ProgramData%\VaultPilot\ad-agent\vaultpilot-dc-agent.json` |
 | Service log | `%ProgramData%\VaultPilot\ad-agent\vaultpilot-dc-agent-service.log` |
-| Agent log | `%ProgramData%\VaultPilot\ad-agent\vaultpilot-dc-agent.log` |
+| Agent log | `%ProgramData%\VaultPilot\ad-agent\vaultpilot-ad-agent.log` |
+
+If `%ProgramData%` is not writable during fallback execution, the script writes the agent log under `%LOCALAPPDATA%\VaultPilot\ad-agent\vaultpilot-ad-agent.log`.
 
 ## Enrollment Flow
 

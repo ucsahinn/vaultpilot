@@ -1,33 +1,33 @@
 # Destek Kanıt Paketi
 
-Bu checklist, temiz ve public-safe support aktarımı hazırlamak için kullanılır. Amaç, vakayı teknik olarak faydalı hale getirirken secret veya müşteri ortamı sızdırmamaktır.
+Bu kontrol listesi, destek ekibine temiz ve herkese açık paylaşım için güvenli bir vaka aktarımı hazırlamak için kullanılır. Amaç, vakayı teknik olarak faydalı hale getirirken secret veya müşteri ortamı sızdırmamaktır.
 
 ## Zorunlu Vaka Başlığı
 
 | Alan | Örnek format |
 | --- | --- |
-| VaultPilot version | `2.0.0` veya konsolda görünen kesin yayınlı sürüm |
+| VaultPilot sürümü | `2.0.0` veya konsolda görünen kesin yayınlı sürüm. |
 | Yüzey | Login, installer, update, extension, AD sync, sharing, backup, license, HTTPS veya audit. |
-| Ortam | Windows Server version ve browser family. |
-| Etki | Tek kullanıcı, tüm kullanıcılar, tek vault, tek extension device, tek AD provider, tek update job. |
-| Son sağlıklı durum | Biliniyorsa tarih/saat ve önceki version. |
-| Mevcut blocker | Kullanıcının gördüğü hatayı tek cümleyle anlat. |
+| Ortam | Windows Server sürümü ve tarayıcı ailesi. |
+| Etki | Tek kullanıcı, tüm kullanıcılar, tek kasa, tek eklenti cihazı, tek AD sağlayıcısı veya tek update job. |
+| Son sağlıklı durum | Biliniyorsa tarih/saat ve önceki sürüm. |
+| Mevcut engel | Kullanıcının gördüğü hatayı tek cümleyle anlat. |
 
 ## Yüzeye Göre Kanıt
 
 | Yüzey | Topla | Toplama |
 | --- | --- | --- |
-| Installer | MSI filename, signature status, service state, redakte edilmiş installer error. | Redakte edilmemiş customer path veya credential içeren MSI logları. |
-| Login | Browser family, session state, `/api/auth/me` status, redakte edilmiş timestamp. | Ana parola, TOTP secret, recovery materyali. |
-| Update | Manifest version, hash, signer status, update job state. | Signing private key veya internal download credential. |
-| Extension | Extension version, pair state, device row status, browser profile mode. | Plaintext credential veya extension PIN. |
-| AD sync | Service status, redakte edilmiş agent log, provider health. | AD bind parolası, agent token, tam directory dump. |
-| Sharing | Package expiry, max opens, decrypter error name. | Share passphrase, plaintext package içeriği. |
-| Backup | Export/import status ve integrity result. | Private kanal açıkça istemedikçe backup dosyasının kendisi. |
+| Installer | MSI dosya adı, imza durumu, servis durumu, redakte edilmiş installer hatası. | Redakte edilmemiş müşteri yolu veya credential içeren MSI logları. |
+| Login | Tarayıcı ailesi, oturum durumu, `/api/auth/me` status değeri, redakte edilmiş zaman damgası. | Ana parola, TOTP secret, kurtarma materyali. |
+| Update | Manifest sürümü, hash, signer durumu, update job durumu. | İmzalama private key'i veya internal download credential. |
+| Extension | Eklenti sürümü, eşleştirme durumu, cihaz satırı durumu, tarayıcı profil modu. | Plaintext credential veya extension PIN. |
+| AD sync | Servis durumu, redakte edilmiş agent logu, sağlayıcı sağlığı. | AD bind parolası, agent token, tam directory dump. |
+| Sharing | Paket süre sonu, maksimum açma sayısı, decrypter hata adı. | Share passphrase, plaintext package içeriği. |
+| Backup | Export/import durumu ve bütünlük sonucu. | Private kanal açıkça istemedikçe backup dosyasının kendisi. |
 
-## Redaction Kuralları
+## Redaksiyon Kuralları
 
-Gerçek değerleri placeholder ile değiştir:
+Gerçek değerleri yer tutucu ile değiştir:
 
 - `<VAULTPILOT_URL>`
 - `<SERVER_HOST>`
@@ -38,14 +38,14 @@ Gerçek değerleri placeholder ile değiştir:
 - `<LICENSE_CODE>`
 - `<REDACTED>`
 
-## Escalation Kalite Eşiği
+## Eskalasyon Kalite Eşiği
 
 İyi bir vaka şunları içerir:
 
-- Tek net symptom.
+- Tek net belirti.
 - Etkilenen yüzey.
-- Version ve component versionları.
-- Kısa timeline.
+- Sürüm ve bileşen sürümleri.
+- Kısa zaman çizelgesi.
 - Eşleşen KB makalesinden redakte edilmiş kanıt.
 - Hata öncesi değişiklik.
 - Backup, login ve audit hâlâ erişilebilir mi bilgisi.

@@ -19,8 +19,10 @@ Mevcut konsol, server-backup import panelinden VaultPilot Backup Tool ZIP arşiv
 
 ZIP içinde Backup Tool database archive varsa VaultPilot, server database'i encrypted local backup şekline çevirmeden önce Backup Tool manifest ister. Raw database dosyaları, WAL/SHM companion dosyaları, müşteri backup'ları ve support arşivleri bu public repoya veya public issue metnine girmez.
 
+Import `PAYLOAD_TOO_LARGE`, `CONTENT_LENGTH_REQUIRED`, `BACKUP_ARCHIVE_INVALID` veya `BACKUP_ARCHIVE_UNSUPPORTED` ile başarısız olursa yeniden denemeden önce [Backup import başarısız veya oturumları kapatıyor](../../kb/tr/backup-import-fails.md) makalesini kullanın.
+
 Uninstall, veri saklama, rollback ve purge sınırları için [Kaldırma, veri saklama ve rollback](uninstall-rollback-data-retention.md) sayfasını kullanın. Normal uninstall, açık private purge onayı yoksa data dizinini korumalıdır.
 
 ## Integrity
 
-Encrypted JSON import sırasında SHA-256 integrity manifest ve item count doğrulanır. ZIP archive handling bozuk arşivleri, unsafe entry name'leri ve desteklenmeyen payload'ları restore öncesi reddeder. Bir değer uyuşmuyorsa veya kaynak net değilse import'u durdurun ve private support kanalını kullanın.
+Encrypted JSON import sırasında SHA-256 integrity manifest ve item count doğrulanır. ZIP archive handling bozuk arşivleri, güvensiz entry name'leri ve desteklenmeyen payload'ları restore öncesi reddeder. Bir değer uyuşmuyorsa veya kaynak net değilse import'u durdurun ve private support kanalını kullanın.

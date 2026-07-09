@@ -36,3 +36,10 @@ If the failure remains, inspect the VaultPilot server log for the redacted reaso
 - `token_mismatch`: the command uses an old or wrong token.
 
 Do not paste the real `pma_` agent id or `pmt_` token into public support channels. Use placeholders and rotate the token if it was exposed.
+
+## Related
+
+- [Active Directory agent](../../docs/en/active-directory-agent.md)
+- [Domain dashboard screen](../../docs/en/screen-domain-dashboard.md)
+- [Active Directory records screen](../../docs/en/screen-active-directory-records.md)
+- [Public issue redaction](public-issue-redaction.md)

@@ -2,9 +2,9 @@
 
 VaultPilot sharing is selected-record first. Operators do not need to share an entire vault; only the chosen records and files are packaged.
 
-![VaultPilot sharing package flow](../../assets/screenshots/sharing-package-flow.png)
+![VaultPilot sharing package flow](../../assets/screenshots/sharing-package-flow-vaultpilot-2.png)
 
-Screenshot note: captures on this page are retained from the PassMan compatibility line as temporary layout references. They are not VaultPilot 2.0 release or branding evidence until the final 2.0 screenshots are recaptured.
+This sanitized UI capture uses synthetic data and shows selected records, internal recipient selection, external package policy, expiry, usage limit, and decrypter download guidance. Visible counts, policies and package labels are documentation fixtures. The visible `PMShare/JSON` label represents compatibility with older external-share package types; the current distribution asset is `vaultpilot-share-decrypter.zip`.
 
 ## Internal Sharing
 
@@ -40,8 +40,6 @@ After a package is completed, the Sharing screen should remain actionable:
 - The recipient workflow links to the offline decrypter.
 
 ## Offline Decrypter
-
-![VaultPilot offline share decrypter](../../assets/screenshots/offline-share-decrypter.png)
 
 The HTML tool inside `vaultpilot-share-decrypter.zip` runs fully in the browser.
 

@@ -8,7 +8,9 @@ PassMan remains a legacy compatibility name for older installed service names, d
 
 ## Reporting Security Issues
 
-Report security issues privately to the VaultPilot maintainer or licensed support channel. Do not open public issues that include secrets, exploit payloads, customer data, logs with sensitive values, screenshots containing secret records, agent tokens, license private keys, certificates, or database files.
+Report security issues privately through the repository security policy page or the licensed support channel. Do not open public issues that include secrets, exploit payloads, customer data, logs with sensitive values, screenshots containing secret records, agent tokens, license private keys, certificates, or database files.
+
+Use: https://github.com/ucsahinn/vaultpilot/security/policy
 
 ## Public Repository Boundaries
 
@@ -26,4 +28,4 @@ This repository may contain public documentation and public release notes. Custo
 
 VaultPilot-managed updates verify a signed manifest, asset SHA-256 hashes, release metadata, and MSI signer thumbprints. A local release signer can be accepted by VaultPilot when the signed manifest pins that signer. CA-backed or trusted signing is still recommended for Windows reputation.
 
-Use [release asset verification](docs/en/release-asset-verification.md) before manual installation, mirror, or internal redistribution. Use the [security and trust model](docs/en/security-and-trust-model.md) to understand which boundaries VaultPilot enforces and which controls remain operator-owned.
+Use [release asset verification](docs/en/release-asset-verification.md) before manual installation, mirror, or internal redistribution. Use the [security and trust model](docs/en/security-and-trust-model.md) to understand which boundaries VaultPilot enforces and which controls remain operator-owned. Use the [public repository boundary](docs/en/public-repository-boundary.md) before opening public issues or pull requests.

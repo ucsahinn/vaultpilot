@@ -2,21 +2,23 @@
 
 VaultPilot Browser Vault Extension; eşleştirilmiş cihazlarda kullanıcı aksiyonuyla autofill, login kaydetme, login güncelleme ve aktif site kayıt sayısı rozeti sağlar.
 
-![VaultPilot browser extension management](../../assets/screenshots/browser-extension-management.png)
+![VaultPilot tarayıcı eklentisi yönetimi](../../assets/screenshots/browser-extension-management-vaultpilot-2.png)
 
-Screenshot notu: bu görsel PassMan compatibility line'dan geçici layout referansı olarak tutulur. Final 2.0 screenshotları yeniden alınana kadar VaultPilot 2.0 release veya branding kanıtı değildir.
+Bu yayıma uygun hale getirilmiş UI görseli yalnızca sentetik veri içerir. Chrome Web Store dağıtımını, onaylı cihaz sayısını, eşleştirme adımlarını ve cihaz onay kontrollerini gösterir. Görünen cihaz adları, sayılar, kodlar ve zaman damgaları dokümantasyon örneğidir; production rehberi değildir.
 
 ## Chrome Web Store'dan Kurulum
 
 Desteklenen müşteri kurulum yolu Chrome Web Store listelemesidir:
 
-`https://chromewebstore.google.com/detail/passman-enterprise-vault/hjkbedlaieikhkoplgpiohlaakgebobi?hl=tr`
+`https://chromewebstore.google.com/detail/vaultpilot-browser-vault/hjkbedlaieikhkoplgpiohlaakgebobi?hl=tr`
 
-URL tarihsel mağaza slug'ını taşıyabilir. Desteklenen eklenti kimliği yayınlanmış extension ID değeridir: `hjkbedlaieikhkoplgpiohlaakgebobi`.
+Eski mağaza URL'leri tarihsel slug üzerinden yönlenebilir. Desteklenen eklenti kimliği yayınlanmış extension ID değeridir: `hjkbedlaieikhkoplgpiohlaakgebobi`.
 
 Merkezi yönetilen cihazlarda bu Web Store eklenti ID'sini Chrome veya Edge policy ile dağıtın. Chrome eklenti güncellemelerini Web Store üzerinden otomatik kontrol eder. Eklentinin Hakkında ekranı Web Store güncelleme kontrolü isteyebilir; ancak Chromium kontrolleri sınırlayabilir ve güncelleme yalnızca tarayıcı tarafından hazır bildirildiğinde uygulanır.
 
 Release ZIP yalnızca release arşivi, lab doğrulama, lokal geliştirme ve acil fallback için tutulur. ZIP'i normal müşteri kurulum yolu olarak kullanmayın.
+
+Store listing metni, privacy practice cevapları, permission gerekçeleri ve screenshot kuralları [Chrome Web Store listeleme ve privacy](chrome-web-store-listing.md) sayfasında tutulur.
 
 ## Eşleştirme Akışı
 

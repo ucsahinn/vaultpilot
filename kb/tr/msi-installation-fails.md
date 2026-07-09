@@ -19,3 +19,10 @@ VaultPilot MSI tamamlanmıyor veya kurulum sonrası servis başlamıyorsa bu kon
 - Port ve servis durumu.
 
 Database dosyası, ana parola, secret değeri, license private key, sertifika private key veya secret görünen screenshot göndermeyin.
+
+## İlgili
+
+- [Windows Server kurulumu](../../docs/tr/install-windows-server.md)
+- [Yönetici hızlı başlangıç](../../docs/tr/admin-quickstart.md)
+- [Sorun giderme](../../docs/tr/troubleshooting.md)
+- [Support evidence pack](../../docs/tr/support-evidence-pack.md)

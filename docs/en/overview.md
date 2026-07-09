@@ -26,6 +26,7 @@ VaultPilot is the current product identity for the 2.0 line. PassMan remains a c
 - [Windows Server installation](install-windows-server.md)
 - [First run, owner and license](first-run-owner-license.md)
 - [Public host, HTTPS and certificates](public-host-https-certificate.md)
+- [Server System settings](server-system.md)
 - [Update Center](update-center.md)
 - [Troubleshooting](troubleshooting.md)
 

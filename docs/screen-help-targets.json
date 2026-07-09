@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "source": "src/components/PassmanApp.tsx WORKSPACE_DOCS_PAGE_BY_VIEW",
+  "targets": {
+    "dashboardCommand": "screen-security-command-center.md",
+    "dashboardSecurity": "screen-security-dashboard.md",
+    "dashboardDomain": "screen-domain-dashboard.md",
+    "dashboardCertificates": "screen-certificate-dashboard.md",
+    "dashboardChanges": "screen-rotation-dashboard.md",
+    "new": "screen-new-item.md",
+    "passwords": "screen-passwords.md",
+    "api": "screen-api-keys.md",
+    "notes": "screen-secure-notes.md",
+    "certificates": "screen-certificates.md",
+    "files": "screen-files.md",
+    "credentials": "screen-active-directory-records.md",
+    "sharing": "screen-sharing.md",
+    "security": "screen-sign-in-security.md",
+    "discovery": "screen-discovery.md",
+    "users": "screen-users.md",
+    "license": "screen-license.md",
+    "audit": "screen-audit-log.md",
+    "integrations": "screen-integrations.md",
+    "notifications": "screen-notifications.md",
+    "executions": "screen-executions.md",
+    "updates": "screen-updates.md",
+    "diagnostics": "screen-server-settings.md",
+    "extension": "screen-browser-extension.md"
+  }
+}

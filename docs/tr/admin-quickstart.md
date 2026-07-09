@@ -46,7 +46,7 @@ Support gerekiyorsa yalnızca redakte edilmiş çıktı paylaş. Database, backu
 - MSI servis oluşturmuyor.
 - Servis çalışıyor ama tarayıcı `https://<SERVER_HOST>:1903` adresine erişemiyor.
 - İlk owner profilinden sonra kasa açılamıyor.
-- License beklenmedik şekilde read-only.
+- Lisans beklenmedik şekilde salt okunur.
 - Certificate upload sonrası tarayıcı HTTPS isim uyuşmazlığı gösteriyor.
 - Update Center manifest, checksum veya signer uyuşmazlığı gösteriyor.
 
@@ -55,5 +55,5 @@ Support gerekiyorsa yalnızca redakte edilmiş çıktı paylaş. Database, backu
 - [Windows Server kurulumu](install-windows-server.md)
 - [İlk kurulum, owner ve lisans](first-run-owner-license.md)
 - [Public host ve HTTPS](public-host-https-certificate.md)
-- [Release asset doğrulama](release-asset-verification.md)
+- [Yayın dosyası doğrulama](release-asset-verification.md)
 - [Destek kanıt paketi](support-evidence-pack.md)

@@ -3,6 +3,28 @@
   "version": "2.0.0",
   "private": true,
   "description": "Public GitHub documentation and release hub for VaultPilot Enterprise Vault Console.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ucsahinn/vaultpilot.git"
+  },
+  "homepage": "https://github.com/ucsahinn/vaultpilot#readme",
+  "bugs": {
+    "url": "https://github.com/ucsahinn/vaultpilot/blob/main/SUPPORT.md"
+  },
+  "keywords": [
+    "vaultpilot",
+    "password-manager",
+    "secrets-manager",
+    "zero-knowledge",
+    "self-hosted",
+    "windows-server",
+    "msi",
+    "enterprise-security",
+    "browser-extension",
+    "active-directory",
+    "documentation",
+    "knowledge-base"
+  ],
   "scripts": {
     "validate": "node scripts/validate-docs.mjs",
     "validate:staged": "node scripts/validate-docs.mjs --staged"

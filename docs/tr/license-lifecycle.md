@@ -6,15 +6,15 @@ VaultPilot offline lisans doğrulaması kullanır. Sunucu lisans kodunu public d
 
 | Aşama | Operatörün gördüğü | Aksiyon |
 | --- | --- | --- |
-| Trial | VaultPilot trial limitleri ve expiry tarihiyle çalışır. | Production kullanımdan önce deployment, backup, HTTPS ve owner erişimini doğrulayın. |
-| Aktif lisans | License ekranı plan, kapasite, expiry, imza durumu ve açık modülleri gösterir. | Aylık operasyonda kapasite ve expiry tarihini kontrol edin. |
-| Yenileme penceresi | Expiry yaklaşmıştır ve replacement planlanır. | Onaylı support kanalı üzerinden yeni offline lisans kodunu isteyin. |
-| Değişim | Yeni kod License ekranına girilir. | İmza doğrulama, kapasite, expiry ve modül durumunu kontrol edin. |
-| Süre bitimi veya kapasite aşımı | VaultPilot güvenli okuma ve backup-export yollarını korurken write aksiyonlarını kısıtlayabilir. | Kullanımı düşürün, geçerli lisans uygulayın veya yeni kullanıcı/workflow açmadan support ile ilerleyin. |
+| Deneme | VaultPilot deneme limitleri ve expiry tarihiyle çalışır. | Üretim kullanımından önce kurulum, yedek, HTTPS ve owner erişimini doğrulayın. |
+| Aktif lisans | Lisans ekranı plan, kapasite, expiry, imza durumu ve açık modülleri gösterir. | Aylık operasyonda kapasite ve expiry tarihini kontrol edin. |
+| Yenileme penceresi | Expiry yaklaşmıştır ve değişim planlanır. | Onaylı support kanalı üzerinden yeni offline lisans kodunu isteyin. |
+| Değişim | Yeni kod lisans ekranına girilir. | İmza doğrulama, kapasite, expiry ve modül durumunu kontrol edin. |
+| Süre bitimi veya kapasite aşımı | VaultPilot güvenli okuma ve backup-export yollarını korurken yazma aksiyonlarını kısıtlayabilir. | Kullanımı düşürün, geçerli lisans uygulayın veya yeni kullanıcı/workflow açmadan support ile ilerleyin. |
 
-## Read-only Davranışı
+## Salt Okunur Davranış
 
-Trial veya lisans süresi bittiğinde VaultPilot login, secret viewing, audit review ve backup export erişimini koruyabilir; yazma, kullanıcı ekleme, paylaşım, eklenti pairing ve update install aksiyonlarını engelleyebilir. Amaç encrypted dataya erişimi kesmeden lisanssız genişlemeyi durdurmaktır.
+Deneme veya lisans süresi bittiğinde VaultPilot giriş, secret görüntüleme, audit review ve backup export erişimini koruyabilir; yazma, kullanıcı ekleme, paylaşım, eklenti eşleştirme ve güncelleme kurulum aksiyonlarını engelleyebilir. Amaç encrypted dataya erişimi kesmeden lisanssız genişlemeyi durdurmaktır.
 
 ## Ne Kaydedilir
 
@@ -22,7 +22,7 @@ Trial veya lisans süresi bittiğinde VaultPilot login, secret viewing, audit re
 - Aktif kullanıcı sayısı ve kapasite.
 - İmza doğrulama durumu.
 - Açık veya unavailable modüller.
-- Replacement tarihi ve onaylayan kişi.
+- Değişim tarihi ve onaylayan kişi.
 
 Lisans kodlarını, issuer private materyalini veya müşteri verisi içeren ekran görüntülerini public ticket içine koymayın.
 
@@ -30,5 +30,5 @@ Lisans kodlarını, issuer private materyalini veya müşteri verisi içeren ekr
 
 - [İlk kurulum, owner ve lisans](first-run-owner-license.md)
 - [Operasyon runbook](operator-runbook.md)
-- [Bilgi bankası: lisans read-only](../../kb/tr/license-read-only.md)
+- [Bilgi bankası: lisans salt okunur](../../kb/tr/license-read-only.md)
 - [Destek kanıt paketi](support-evidence-pack.md)

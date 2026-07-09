@@ -23,9 +23,9 @@ Kontrol edin:
 - Bind username formatını domain ile birlikte kullanın.
 - Token veya password değerlerini loga yazmayın.
 
-## Extension eşleşmesi pending kalıyor
+## Eklenti eşleşmesi beklemede kalıyor
 
-- Pairing code süresi dolmuş olabilir.
+- Eşleştirme kodunun süresi dolmuş olabilir.
 - Yanlış kullanıcı adı girilmiş olabilir.
 - Kullanıcının açık kasası olmayabilir.
 - Cihaz VaultPilot panelinde onay bekliyor olabilir.

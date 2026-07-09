@@ -1,166 +1,44 @@
-# &#128274; VaultPilot Enterprise Vault Console - README d'entrée français
+# &#128274; VaultPilot Enterprise Vault Console - entr&eacute;e fran&ccedil;aise
 
-<p align="center">
-  &#127760; <strong>Documentation:</strong>
-  <a href="README.de.md"><img src="https://flagcdn.com/w20/de.png" alt="Deutsch" width="20"></a> |
-  <a href="README.es.md"><img src="https://flagcdn.com/w20/es.png" alt="Espa&#241;ol" width="20"></a> |
-  <a href="README.md"><img src="https://flagcdn.com/w20/gb.png" alt="English" width="20"></a> |
-  <a href="README.pt-BR.md"><img src="https://flagcdn.com/w20/br.png" alt="Portugu&#234;s (Brasil)" width="20"></a> |
-  <a href="README.tr.md"><img src="https://flagcdn.com/w20/tr.png" alt="T&#252;rk&#231;e" width="20"></a> |
-  <a href="README.fr.md"><img src="https://flagcdn.com/w20/fr.png" alt="Fran&#231;ais" width="20"></a>
-</p>
+Documentation: [English](README.md) | [Türkçe](README.tr.md) | [Deutsch](README.de.md) | [Español](README.es.md) | [Français](README.fr.md) | [Português (Brasil)](README.pt-BR.md)
 
-> Ce fichier est une page d’entrée française, pas un court résumé. Il couvre objectif, limites, usage, validation, sécurité et publication.
->
-> README canonique en anglais: [README.md](README.md)
+> Cette page est une entr&eacute;e courte en fran&ccedil;ais. Pour la description publique canonique et la documentation compl&egrave;te, utilisez [README.md](README.md).
 
-Centre public de documentation et de releases pour VaultPilot password and secrets manager.
+VaultPilot est un gestionnaire self-hosted et zero-knowledge de mots de passe et de secrets. Il s'installe par MSI sur Windows Server et s'utilise depuis les navigateurs des utilisateurs via l'h&ocirc;te serveur. Ce d&eacute;p&ocirc;t public n'est pas le d&eacute;p&ocirc;t source; c'est la surface de release, documentation op&eacute;rateur, knowledge base, s&eacute;curit&eacute; et support.
 
-Commencez par le README canonique si vous voulez la description anglaise la plus actuelle. Utilisez cette page pour lire le même contrat opérationnel en français.
+## Statut
 
-## Statut et signaux de confiance
+| Zone | D&eacute;tail |
+| --- | --- |
+| Release publique actuelle | VaultPilot Enterprise Vault Console 2.0.0, GitHub Release [v2.0.0](https://github.com/ucsahinn/vaultpilot/releases/tag/v2.0.0). |
+| Canal d'installation | MSI et artefacts de support via GitHub Releases; extension navigateur via Chrome Web Store. |
+| Nom canonique | VaultPilot pour les nouvelles documentations et releases. |
+| Nom de compatibilit&eacute; | PassMan reste uniquement pour les anciens services, chemins de donn&eacute;es, variables d'environnement, cookies, headers, cha&icirc;nes de protocole, alias d'update et contextes de rollback. |
 
-|Zone | Détail|
-|--- | ---|
-|Statut | Dépôt public: ucsahinn/vaultpilot|
-|Release publique actuelle | VaultPilot 2.0.0 a été publié le 30 juin 2026 sous GitHub Release `v2.0.0`.|
-|Compatibilité | Le nom PassMan reste conservé pour les anciens services, chemins de données, variables d'environnement, cookies, headers, chaînes de protocole, alias d'update et décisions de rollback.|
-|Source de vérité | [README canonique en anglais](README.md)|
-|Utilisateurs | Opérateurs enterprise qui installent ou vérifient VaultPilot; admins qui contrôlent les flux update, backup, AD et extension navigateur.|
-|Validation | Les index de documentation anglais et turcs restent accessibles; les screenshots et assets visuels référencés par README existent.|
-|Sécurité | Documente le contrat opérationnel enterprise et le chemin de confiance des releases; fournit les arbres documentaires anglais/turcs et les articles KB.|
+## Commencer
 
-## Ce que contient ce dépôt
+| Besoin | Lien |
+| --- | --- |
+| Carte publique du d&eacute;p&ocirc;t | [README canonique](README.md) |
+| Documentation op&eacute;rateur anglaise | [docs/en/README.md](docs/en/README.md) |
+| Documentation op&eacute;rateur turque | [docs/tr/README.md](docs/tr/README.md) |
+| Knowledge base anglaise | [kb/en/README.md](kb/en/README.md) |
+| Knowledge base turque | [kb/tr/README.md](kb/tr/README.md) |
+| Notes de release | [RELEASES.md](RELEASES.md) |
+| V&eacute;rification des assets | [docs/en/release-asset-verification.md](docs/en/release-asset-verification.md) |
+| Politique de s&eacute;curit&eacute; | [SECURITY.md](SECURITY.md) |
+| Support et preuves redigees | [SUPPORT.md](SUPPORT.md) |
+| Limite du d&eacute;p&ocirc;t public | [docs/en/public-repository-boundary.md](docs/en/public-repository-boundary.md) |
+| Chrome Web Store et formulaire de confidentialit&eacute; | [docs/en/chrome-web-store-listing.md](docs/en/chrome-web-store-listing.md), [PRIVACY.md](PRIVACY.md) |
+| Runbook de publication et drift externe | [docs/en/publication-runbook.md](docs/en/publication-runbook.md), [docs/en/public-external-surface-drift.md](docs/en/public-external-surface-drift.md) |
+| R&egrave;gles de screenshots et discoverability | [docs/en/public-screenshot-standards.md](docs/en/public-screenshot-standards.md), [docs/en/public-discoverability.md](docs/en/public-discoverability.md) |
 
-- Hub public de documentation pour VaultPilot Enterprise Vault Console.
-- Passerelle de release et de vérification pour les utilisateurs qui contrôlent les assets publics.
-- Carte documentaire pour admin quickstart, installation Windows Server, agent AD, backups, extension navigateur, partage, update center et troubleshooting.
-- Surface publique sûre pour expliquer le produit sans exposer source privé ni données de vault client.
-- Oriente les assets VaultPilot actuels vers GitHub Releases et ne présente pas les anciens builds PassMan comme chemin de nouvelle installation.
+## Limite Publique de S&eacute;curit&eacute;
 
-## Ce que ce dépôt n’est pas
+N'ajoutez pas de vrais secrets, master passwords, contenus de vault, API keys, agent tokens, mat&eacute;riel priv&eacute; de licence, private keys, fichiers PFX/P12, bases de donn&eacute;es, backups, raw logs ou screenshots avec donn&eacute;es client r&eacute;elles.
 
-- Ce n'est pas le dépôt source privé de l'application.
-- Ce n'est pas un vault, un credential store ou un tenant client.
-- Ce n'est pas un emplacement pour signing keys, secrets de licence, update keys ou bundles support privés.
-- Cela ne remplace pas la validation des assets de release téléchargés.
+Utilisez des placeholders comme &lt;VAULTPILOT_URL&gt;, &lt;SERVER_HOST&gt;, &lt;AGENT_ID&gt;, &lt;AGENT_TOKEN&gt;, &lt;LICENSE_CODE&gt; et &lt;REDACTED&gt;. Avant d'ouvrir une issue publique, consultez [public issue redaction](kb/en/public-issue-redaction.md).
 
-## Public visé
+## Contribution
 
-- Opérateurs enterprise qui installent ou vérifient VaultPilot.
-- Admins qui contrôlent les flux update, backup, AD et extension navigateur.
-- Revues sécurité qui vérifient le trust model et la validation de release.
-- Utilisateurs support qui cherchent troubleshooting public et guide evidence pack.
-
-## Démarrage rapide
-
-1. Clonez ou mettez à jour le dépôt.
-2. Lisez README, sécurité et carte documentaire.
-3. Lancez les validations adaptées.
-4. Stagez uniquement les fichiers explicitement modifiés.
-5. Avant push ou release, revérifiez remote, secrets et liens.
-
-## Guide de décision
-
-- Besoin d'overview -> docs/en/overview.md ou docs/tr/overview.md.
-- Besoin d'installation -> docs/en/install-windows-server.md ou docs/tr/install-windows-server.md.
-- Besoin de vérification de release -> docs/en/release-asset-verification.md ou docs/tr/release-asset-verification.md.
-- Besoin de troubleshooting -> docs/en/troubleshooting.md, docs/tr/troubleshooting.md ou articles KB.
-- Besoin de posture sécurité publique -> docs/en/security-and-trust-model.md, docs/tr/security-and-trust-model.md et SECURITY.md.
-
-## Carte du dépôt
-
-|Chemin | Pourquoi c’est important|
-|--- | ---|
-|`docs/en/` et `docs/tr/` | documentation produit principale|
-|`kb/en/` et `kb/tr/` | articles KB de troubleshooting|
-|[assets/screenshots/](assets/screenshots/) | screenshots publics|
-|[assets/visuals/](assets/visuals/) | diagrammes SVG publics|
-|[RELEASES.md](RELEASES.md) | notes de release et d'assets|
-|[PRIVACY.md](PRIVACY.md) | politique de confidentialité|
-|[scripts/validate-docs.mjs](scripts/validate-docs.mjs) | validateur de documentation|
-|[SECURITY.md](SECURITY.md) | politique de disclosure sécurité|
-
-## Flux de travail
-
-1. Mettez à jour les deux arbres de langue quand le contrat produit change.
-2. Gardez les release notes et la vérification alignées avec les assets publics réels.
-3. Validez les documents et liens avant commit.
-4. Lancez un secret scan avant push.
-5. Vérifiez remote HEAD et le rendu GitHub release/page après publication.
-
-## Commandes et validation
-
-Exécutez ces commandes seulement après avoir cloné le dépôt et compris ce qu’elles vérifient ou modifient.
-
-```powershell
-npm run validate
-node scripts/validate-docs.mjs
-git diff --check
-gitleaks dir . --no-banner --redact
-```
-
-## Liste de vérification
-
-- Les index documentaires anglais et turcs sont accessibles.
-- Les screenshots et assets visuels référencés par README existent.
-- Aucune donnée vault privée, nom client, licence, signing key ou update secret n'apparaît.
-- Le wording de vérification de release correspond à RELEASES.md.
-- Remote HEAD est vérifié après push.
-
-## Limite de sécurité
-
-- Documente le contrat opérationnel enterprise et le chemin de confiance des releases.
-- Fournit les arbres documentaires anglais et turcs plus les articles KB.
-- Garde les release assets et l'update trust chain documentés.
-- Inclut screenshots, assets visuels et scripts de validation pour docs publiques.
-
-Règle public-safe: n'ajoutez pas secrets, tokens, cookies, private keys, prompts privés, données client, fichiers auth locaux, logs générés, archives ou build outputs sauf si le README canonique dit explicitement qu'ils appartiennent au repo public.
-
-## Hygiène de release et publication
-
-- Publiez les installateurs et archives via GitHub Releases, pas dans les commits source.
-- Ne committez pas build output, packs support privés ou signing material.
-- Mettez la documentation à jour avant d'annoncer un statut de release publique.
-- Vérifiez noms d'assets, versions et remote HEAD après push/release.
-
-## Maintenance
-
-- Gardez ce README localisé aligné avec README.md quand le contrat du repo change.
-- Préférez les liens factuels du repo aux claims marketing.
-- N'inventez pas commandes d'installation, métriques, utilisateurs, releases ou promesses support.
-- If a command is version-sensitive, re-check it before documenting it.
-- When a localized file cannot be updated fully, leave a clear note instead of a partial translation.
-
-## Chemin de contribution
-
-- Ouvrez une modification ciblée sur le plus petit ensemble de fichiers.
-- Lisez AGENTS.md ou CONTRIBUTING.md avant d'éditer quand ils existent.
-- Lancez les commandes de validation du repo listées ci-dessus.
-- Relisez explicitement les staged diffs avant commit.
-- Utilisez les chemins de security disclosure, pas les issues publiques, pour les rapports sensibles.
-
-## Définition de terminé
-
-Terminé signifie: contenu complet, liens corrects, limites de sécurité claires, validation exécutée, Git propre et remote HEAD vérifié après le push.
-
-|Recommandation | Pourquoi c’est important|
-|--- | ---|
-|Contenu | Centre public de documentation et de releases pour VaultPilot password and secrets manager.|
-|Liens | Tous les fichiers locaux référencés doivent exister et se résoudre depuis la racine du dépôt.|
-|Sécurité | Aucune donnée vault privée, nom client, licence, signing key ou update secret ne doit apparaître.|
-|Verification | Validez structure, liens, Markdown, secrets, scripts pertinents et remote HEAD avant toute annonce publique.|
-|Remote | Après push, comparez local HEAD avec origin/main et GitHub remote HEAD.|
-
-## Liens importants
-
-|Chemin | Pourquoi c’est important|
-|--- | ---|
-|[Canonical README](README.md) | README.md|
-|[English docs](docs/en/README.md) | docs/en/README.md|
-|[Turkish docs](docs/tr/README.md) | docs/tr/README.md|
-|[English knowledge base](kb/en/README.md) | kb/en/README.md|
-|[Turkish knowledge base](kb/tr/README.md) | kb/tr/README.md|
-|[Release notes](RELEASES.md) | RELEASES.md|
-|[Privacy](PRIVACY.md) | PRIVACY.md|
-|[Security policy](SECURITY.md) | SECURITY.md|
+Lisez [CONTRIBUTING.md](CONTRIBUTING.md) avant de corriger documentation, KB, liens, traductions ou screenshots public-safe. Les binaries de release, le source priv&eacute;, le signing material et les packs d'evidence client ne doivent pas &ecirc;tre ajout&eacute;s &agrave; ce d&eacute;p&ocirc;t.

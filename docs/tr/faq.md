@@ -10,7 +10,7 @@ Hayır. Ana parola tarayıcıda kullanılır; sunucuya plaintext ana parola gön
 
 ## Public repo kaynak kod içeriyor mu?
 
-Hayır. Public repo dokümantasyon, release notları ve GitHub Release asset'leri içindir. Kaynak kod private repoda kalır.
+Hayır. Git tree dokümantasyon, release notları, knowledge-base makaleleri, public policy'ler ve yayına uygun hale getirilmiş görsel asset'leri içerir. Müşteri delivery dosyaları GitHub Releases üzerinde ek olarak veya Chrome Web Store üzerinden dağıtılır; kaynak kod private repoda kalır.
 
 ## Local signer güvenli mi?
 
@@ -19,3 +19,10 @@ VaultPilot-managed update zinciri için imzalı manifest MSI signer thumbprint'i
 ## Dosyalar paylaşılabilir mi?
 
 Evet. Seçilen dosya kayıtları dış paylaşım paketine dahil edilebilir. Expiry ve kullanım limiti belirlenmelidir.
+
+## İlgili
+
+- [Yönetici hızlı başlangıç](admin-quickstart.md)
+- [İlk kurulum, owner ve lisans](first-run-owner-license.md)
+- [Güvenlik ve güven modeli](security-and-trust-model.md)
+- [Destek kanıt paketi](support-evidence-pack.md)

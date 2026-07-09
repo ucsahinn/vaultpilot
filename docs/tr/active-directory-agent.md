@@ -2,9 +2,9 @@
 
 VaultPilot DC Agent Service domain controller'a yakın bir Windows host üzerinde çalışır ve dizin metadata'sını VaultPilot'a senkronize eder. AD bind parolasını veya AD kullanıcı parolalarını VaultPilot'a göndermez.
 
-![VaultPilot Active Directory sync tree](../../assets/screenshots/active-directory-sync-tree.png)
+![VaultPilot Active Directory eşitleme ağacı](../../assets/screenshots/active-directory-sync-tree-vaultpilot-2.png)
 
-Screenshot notu: bu görsel PassMan compatibility line'dan geçici layout referansı olarak tutulur. Final 2.0 screenshotları yeniden alınana kadar VaultPilot 2.0 release veya branding kanıtı değildir.
+Bu yayıma uygun hale getirilmiş UI görseli yalnızca sentetik veri içerir. Provider sağlığını, base DN bilgisini, OU/grup/kullanıcı seçimini, login kapsamını, credential import kapsamını ve ajan aksiyonlarını gösterir. Görünen kullanıcılar, domain'ler, sayılar, zaman damgaları ve aksiyon durumları dokümantasyon örneğidir; production rehberi değildir.
 
 ## Servis Kimliği
 
@@ -14,7 +14,9 @@ Screenshot notu: bu görsel PassMan compatibility line'dan geçici layout refera
 | Görünen ad | `VaultPilot DC Agent Service` |
 | Config dosyası | `%ProgramData%\VaultPilot\ad-agent\vaultpilot-dc-agent.json` |
 | Servis logu | `%ProgramData%\VaultPilot\ad-agent\vaultpilot-dc-agent-service.log` |
-| Agent logu | `%ProgramData%\VaultPilot\ad-agent\vaultpilot-dc-agent.log` |
+| Agent logu | `%ProgramData%\VaultPilot\ad-agent\vaultpilot-ad-agent.log` |
+
+`%ProgramData%` fallback çalışması sırasında yazılabilir değilse script agent logunu `%LOCALAPPDATA%\VaultPilot\ad-agent\vaultpilot-ad-agent.log` altında yazar.
 
 ## Kayıt Akışı
 
@@ -24,7 +26,7 @@ Screenshot notu: bu görsel PassMan compatibility line'dan geçici layout refera
 4. Ajan makinesinde Administrator PowerShell ile kurulum komutunu çalıştırın.
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\vaultpilot-dc-agent.ps1 -InstallService -PassManUrl "<VAULTPILOT_URL>" -AgentId "<AGENT_ID>" -AgentToken "<AGENT_TOKEN>"
+powershell -NoProfile -ExecutionPolicy Bypass -File "$env:USERPROFILE\Downloads\vaultpilot-dc-agent.ps1" -InstallService -PassManUrl "<VAULTPILOT_URL>" -AgentId "<AGENT_ID>" -AgentToken "<AGENT_TOKEN>" -TrustPassManCertificate
 ```
 
 Üretilen 2.0 komutu hâlâ `-PassManUrl` ve `-TrustPassManCertificate` gibi flag adları kullanabilir. Bunları mevcut agent script yüzeyinden gelen compatibility flag adları olarak ele alın; release script VaultPilot alias'ları eklemeden bu adları elle değiştirmeyin.

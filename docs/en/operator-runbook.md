@@ -37,6 +37,7 @@ This runbook is the recurring operating rhythm for VaultPilot after go-live. It 
 | Area | Evidence |
 | --- | --- |
 | Certificate lifecycle | Certificate expiry date, SAN coverage and browser validation. |
+| Server System settings | Public host, port, HTTPS state, notification test, log retention and audit retention. |
 | License lifecycle | Expiry date, user cap and read-only risk. |
 | Update trust | Manifest signature, asset hash and signer thumbprint for current release. |
 | Incident readiness | Support evidence pack still matches the current environment. |
@@ -57,6 +58,7 @@ Use a planned change window for:
 
 - MSI upgrades.
 - Public host or certificate changes.
+- Server System host, notification, retention or maintenance changes.
 - License replacement.
 - AD provider or DC Agent changes.
 - Extension Chrome Web Store rollout changes.
@@ -67,6 +69,7 @@ Before the change, export a backup and record current version, service state and
 Related:
 
 - [Release asset verification](release-asset-verification.md)
+- [Server System settings](server-system.md)
 - [Update Center](update-center.md)
 - [Backups and restore](backups-and-restore.md)
 - [Troubleshooting](troubleshooting.md)
