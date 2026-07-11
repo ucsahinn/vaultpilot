@@ -44,7 +44,7 @@ Two tab-level routes intentionally override their base workspace:
 
 These guides live in a public GitHub repository. Use placeholders or synthetic data only. Never add real vault contents, passwords or tokens, `.pfx`/`.p12` packages, private keys, certificate passwords, credential-bearing logs, API client secrets, private license material, customer names, internal IP/host names, or customer screenshots to these pages or to public issues.
 
-To report an inaccurate guide, share the screen name, VaultPilot version, visible state label, and a redacted error summary. If explaining the problem requires a secret value or identifying infrastructure, leave the public channel and use your organization?s approved private support process.
+To report an inaccurate guide, share the screen name, VaultPilot version, visible state label, and a redacted error summary. If explaining the problem requires a secret value or identifying infrastructure, leave the public channel and use your organization’s approved private support process.
 
 ## Related Documentation
 

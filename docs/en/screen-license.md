@@ -1,6 +1,6 @@
 # License Screen
 
-The topbar `?` opens this guide for the License screen. It answers more than ?is a license installed?? by bringing together the verified plan, active-user capacity, remaining term, write availability, and included capabilities.
+The topbar `?` opens this guide for the License screen. It answers more than “is a license installed?” by bringing together the verified plan, active-user capacity, remaining term, write availability, and included capabilities.
 
 The **Owner** is the operator of this screen. Admin, Auditor, and User roles may experience locked modules or read-only behavior, but they cannot open the License workspace or manage the license record. Hand activation and clearing to an Owner; do not bypass the role boundary with another identity or a direct API request.
 
@@ -79,7 +79,7 @@ Do not clear the current license before applying a ready replacement. As the Own
 
 ## When to Stop and Escalate
 
-Stop changing the license when signature verification fails, the license identifies another customer, capacity differs from the purchased value, or recovery access is uncertain in read-only mode. Open a private case with visible state, redacted error code, plan family, and term window?never the license code or signed payload.
+Stop changing the license when signature verification fails, the license identifies another customer, capacity differs from the purchased value, or recovery access is uncertain in read-only mode. Open a private case with visible state, redacted error code, plan family, and term window—never the license code or signed payload.
 
 ## Operator Notes
 

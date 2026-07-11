@@ -1,92 +1,92 @@
-# Lisans Ekran?
+# Lisans Ekranı
 
-?st ?ubuktaki `?` simgesi Lisans ekran?na ait bu rehberi a?ar. Burada yaln?z ?lisans var m??? sorusunun cevab? de?il; do?rulanan plan, aktif kullan?c? kapasitesi, kalan s?re, yazma durumu ve kullan?labilir mod?ller birlikte g?r?l?r.
+Üst çubuktaki `?` simgesi Lisans ekranına ait bu rehberi açar. Burada yalnız “lisans var mı?” sorusunun cevabı değil; doğrulanan plan, aktif kullanıcı kapasitesi, kalan süre, yazma durumu ve kullanılabilir modüller birlikte görülür.
 
-Bu ekran?n operat?r? **Sahip (Owner)** rol?d?r. Y?netici, Denet?i ve Kullan?c? rolleri lisans?n etkisini kilitli mod?ller veya salt okunur davran?? ?zerinden g?rebilir, ancak Lisans ?al??ma alan?n? a?amaz ve lisans kayd?n? y?netemez. Lisans etkinle?tirme ya da temizleme gerekti?inde i?lemi Sahip kullan?c?ya aktar?n. Rol s?n?r?n? ba?ka bir hesap veya do?rudan API iste?iyle a?maya ?al??may?n.
+Bu ekranın operatörü **Sahip (Owner)** rolüdür. Yönetici, Denetçi ve Kullanıcı rolleri lisansın etkisini kilitli modüller veya salt okunur davranış üzerinden görebilir, ancak Lisans çalışma alanını açamaz ve lisans kaydını yönetemez. Lisans etkinleştirme ya da temizleme gerektiğinde işlemi Sahip kullanıcıya aktarın. Rol sınırını başka bir hesap veya doğrudan API isteğiyle aşmaya çalışmayın.
 
-## Burada Ne Yap?l?r
+## Burada Ne Yapılır
 
-- Durum rozetini **Aktif kullan?c?**, **Plan**, **Kalan g?n**, kapasite ?ubu?u ve **Plan yetenekleri** ile birlikte okuyun.
-- Deneme s?r?m?ndeki 30 g?n ve 3 kullan?c? s?n?r?n?, imzal? lisans?n m??teri ve kullan?c? limitiyle kar??t?rmay?n.
-- Men? g?r?n?r olsa bile mevcut plana dahil olmayan mod?l?n kilitli kalabilece?ini unutmay?n.
-- **Mevcut lisans? temizle** i?leminin kasa verisini, kullan?c?lar?, oturumlar? veya denetim kan?t?n? de?il, sunucuda saklanan t?m lisans kay?tlar?n? kald?rd???n? bilin.
+- Durum rozetini **Aktif kullanıcı**, **Plan**, **Kalan gün**, kapasite çubuğu ve **Plan yetenekleri** ile birlikte okuyun.
+- Deneme sürümündeki 30 gün ve 3 kullanıcı sınırını, imzalı lisansın müşteri ve kullanıcı limitiyle karıştırmayın.
+- Menü görünür olsa bile mevcut plana dahil olmayan modülün kilitli kalabileceğini unutmayın.
+- **Mevcut lisansı temizle** işleminin kasa verisini, kullanıcıları, oturumları veya denetim kanıtını değil, sunucuda saklanan tüm lisans kayıtlarını kaldırdığını bilin.
 
-## Ekran? Nas?l Okumal?s?n?z
+## Ekranı Nasıl Okumalısınız
 
-?st b?l?mdeki rozet lisans modunu, kapasite ?ubu?u aktif kullan?c?lar?n limite oran?n? g?sterir. **Yazma durumu** salt okunur oldu?unda kasa kay?tlar?n? de?i?tirme, yeni kullan?c? ve kasa olu?turma, payla??m, eklenti e?le?tirme, Discovery y?netimi ve i?e aktar?m?, dizin ajan? de?i?iklikleri ile g?ncelleme kurulumu gibi yazma ve y?netim i?lemleri kapan?r. Mevcut ?ifreli veriyi okuma ve kurtarma yollar? korunur. ?zin verilen kesin i?lemler i?in salt okunur mod rehberini izleyin. **Plan yetenekleri** b?l?m?ndeki a??k ve s?n?rl? kartlar, bir mod?l?n neden kullan?labildi?ini ya da kilitli kald???n? a??klar.
+Üst bölümdeki rozet lisans modunu, kapasite çubuğu aktif kullanıcıların limite oranını gösterir. **Yazma durumu** salt okunur olduğunda kasa kayıtlarını değiştirme, yeni kullanıcı ve kasa oluşturma, paylaşım, eklenti eşleştirme, Discovery yönetimi ve içe aktarımı, dizin ajanı değişiklikleri ile güncelleme kurulumu gibi yazma ve yönetim işlemleri kapanır. Mevcut şifreli veriyi okuma ve kurtarma yolları korunur. İzin verilen kesin işlemler için salt okunur mod rehberini izleyin. **Plan yetenekleri** bölümündeki açık ve sınırlı kartlar, bir modülün neden kullanılabildiğini ya da kilitli kaldığını açıklar.
 
-**Lisans ya?am d?ng?s?** band?, yenilemenin ne kadar acil oldu?unu 60, 30 ve 7 g?nl?k pencerelerle belirtir. Yaln?z rozet rengine bakmay?n; m??teri, plan, kalan g?n, kapasite ve yetenek listesinin birbiriyle tutarl? oldu?undan emin olun.
+**Lisans yaşam döngüsü** bandı, yenilemenin ne kadar acil olduğunu 60, 30 ve 7 günlük pencerelerle belirtir. Yalnız rozet rengine bakmayın; müşteri, plan, kalan gün, kapasite ve yetenek listesinin birbiriyle tutarlı olduğundan emin olun.
 
-## ?nerilen ?? Ak??lar?
+## Önerilen İş Akışları
 
-### Lisans durumunu a??klama
+### Lisans durumunu açıklama
 
-1. Modu, yazma durumunu ve kalan g?n? okuyun.
-2. Aktif kullan?c? say?s?n? lisans limitiyle kar??la?t?r?n.
-3. Kullan?lmak istenen mod?l? **Plan yetenekleri** i?inde bulun.
-4. Son olarak kullan?c?n?n rol?n?n o i?lemi yapmaya izin verip vermedi?ini kontrol edin.
+1. Modu, yazma durumunu ve kalan günü okuyun.
+2. Aktif kullanıcı sayısını lisans limitiyle karşılaştırın.
+3. Kullanılmak istenen modülü **Plan yetenekleri** içinde bulun.
+4. Son olarak kullanıcının rolünün o işlemi yapmaya izin verip vermediğini kontrol edin.
 
-Beklenen sonu?, sorunun s?re, kapasite, plan kapsam? veya rol kaynakl? oldu?unun a??k?a ayr?lmas?d?r. Ekran verisi y?klenmiyorsa lisans kodunu yeniden girmeyin; sayfay? yenileyin ve sunucu sa?l???n? do?rulay?n.
+Beklenen sonuç, sorunun süre, kapasite, plan kapsamı veya rol kaynaklı olduğunun açıkça ayrılmasıdır. Ekran verisi yüklenmiyorsa lisans kodunu yeniden girmeyin; sayfayı yenileyin ve sunucu sağlığını doğrulayın.
 
-### ?mzal? lisans? etkinle?tirme
+### İmzalı lisansı etkinleştirme
 
-1. Sahip hesab?yla oturum a??n.
-2. Kodun do?ru m??teriye ve sat?n al?nan plana ait oldu?unu ?zel kanaldan do?rulay?n.
-3. Kodu **Lisans kodu** alan?na yap??t?r?p **Lisans? etkinle?tir** d??mesini kullan?n.
-4. Do?rulama sonras? m??teri, plan, limit, kalan g?n, yazma durumu ve yetenek listesini yeniden okuyun.
+1. Sahip hesabıyla oturum açın.
+2. Kodun doğru müşteriye ve satın alınan plana ait olduğunu özel kanaldan doğrulayın.
+3. Kodu **Lisans kodu** alanına yapıştırıp **Lisansı etkinleştir** düğmesini kullanın.
+4. Doğrulama sonrası müşteri, plan, limit, kalan gün, yazma durumu ve yetenek listesini yeniden okuyun.
 
-Ba?ar?l? i?lemde imzal? lisans bilgileri g?r?n?r ve yaln?z sat?n al?nan yetenekler a??l?r. Ekran **Lisans kodu do?rulanamad?** hatas? verirse art arda denemeyin; alan? temizleyin, hata metnini hassas ayr?nt?lar? ??kararak kaydedin ve ?zel deste?e ge?in. Aktivasyon tamamlan?r ancak m??teri, plan veya kapasite bekledi?iniz de?erle uyu?mazsa yeni bir de?i?iklik yapmadan durun.
+Başarılı işlemde imzalı lisans bilgileri görünür ve yalnız satın alınan yetenekler açılır. Ekran **Lisans kodu doğrulanamadı** hatası verirse art arda denemeyin; alanı temizleyin, hata metnini hassas ayrıntıları çıkararak kaydedin ve özel desteğe geçin. Aktivasyon tamamlanır ancak müşteri, plan veya kapasite beklediğiniz değerle uyuşmazsa yeni bir değişiklik yapmadan durun.
 
 ### Yenileme ve kapasite planlama
 
-Kalan s?re 60, 30 veya 7 g?n band?na geldi?inde yenileme sorumlusunu ve hedef tarihi belirleyin. Kapasite y?zde 90'a yakla??yorsa yeni kullan?c? a?madan ?nce aktif kullan?c? listesini sat?n al?nan limitle uzla?t?r?n. Yeni kod haz?r de?ilse mevcut lisans? temizlemeyin; temizleme bir geri alma mekanizmas? de?ildir ve sunucuyu deneme ya da salt okunur davran???na ta??yabilir.
+Kalan süre 60, 30 veya 7 gün bandına geldiğinde yenileme sorumlusunu ve hedef tarihi belirleyin. Kapasite yüzde 90'a yaklaşıyorsa yeni kullanıcı açmadan önce aktif kullanıcı listesini satın alınan limitle uzlaştırın. Yeni kod hazır değilse mevcut lisansı temizlemeyin; temizleme bir geri alma mekanizması değildir ve sunucuyu deneme ya da salt okunur davranışına taşıyabilir.
 
-### Lisans? yenileme veya de?i?tirme
+### Lisansı yenileme veya değiştirme
 
-Yeni kod haz?r oldu?unda mevcut lisans? ?nceden temizlemeyin. Sahip hesab?yla yeni kodu do?rudan **Lisans? etkinle?tir** alan?ndan uygulay?n. En son etkinle?tirilen lisans kayd? g?ncel kay?t olur. M??teri, plan, kullan?c? limiti, kalan g?n, yazma durumu ve ?zelliklerin beklenen de?erleri g?sterdi?ini do?rulay?n. Sonu? farkl?ysa ikinci bir kod denemeden durun.
+Yeni kod hazır olduğunda mevcut lisansı önceden temizlemeyin. Sahip hesabıyla yeni kodu doğrudan **Lisansı etkinleştir** alanından uygulayın. En son etkinleştirilen lisans kaydı güncel kayıt olur. Müşteri, plan, kullanıcı limiti, kalan gün, yazma durumu ve özelliklerin beklenen değerleri gösterdiğini doğrulayın. Sonuç farklıysa ikinci bir kod denemeden durun.
 
-### Mevcut lisans? temizleme
+### Mevcut lisansı temizleme
 
-**Mevcut lisans? temizle**, yenileme veya geri alma d??mesi de?ildir. Sunucuda saklanan t?m lisans kay?tlar?n? a??k?a kald?rmak ve kurulum tarihine g?re deneme veya salt okunur durumunun yeniden hesaplanmas?n? kabul etmek istedi?inizde kullan?n. Onay penceresini okuyun. ??lemden sonra kasa verisinin, kullan?c?lar?n, oturumlar?n ve denetim kan?t?n?n korundu?unu, lisans modunun ise beklenen duruma ge?ti?ini do?rulay?n.
+**Mevcut lisansı temizle**, yenileme veya geri alma düğmesi değildir. Sunucuda saklanan tüm lisans kayıtlarını açıkça kaldırmak ve kurulum tarihine göre deneme veya salt okunur durumunun yeniden hesaplanmasını kabul etmek istediğinizde kullanın. Onay penceresini okuyun. İşlemden sonra kasa verisinin, kullanıcıların, oturumların ve denetim kanıtının korunduğunu, lisans modunun ise beklenen duruma geçtiğini doğrulayın.
 
-## Ekran Durumlar?
+## Ekran Durumları
 
-| Durum | Operat?r cevab? |
+| Durum | Operatör cevabı |
 | --- | --- |
-| Lisansl? | A??k ?zelliklerin sat?n al?nan planla e?le?ti?ini do?rulay?n. |
-| Deneme | 30 g?nl?k s?reyi, 3 kullan?c? s?n?r?n? ve kilitli mod?lleri planlay?n. |
-| Salt okunur | Kurtarma eri?imini koruyun ve de?i?iklikten ?nce salt okunur mod rehberini izleyin. |
-| Kapasite kullan?labilir | Kullan?m? izleyin; i?lem gerekmez. |
-| Kapasite dolmak ?zere | Yeni kullan?c? a?madan ?nce aktif kullan?c? say?s?n? ve sat?n al?nan limiti uzla?t?r?n. |
-| Ya?am d?ng?s? uyar?s? | 60, 30 veya 7 g?nl?k yenileme e?i?ine g?re onay sahibini ve hedef tarihi belirleyin. |
-| Aktivasyon do?rulanamad? | Tekrar tekrar denemeyin; hata metnini hassas ayr?nt?lar? ??kararak kaydedip ?zel destek isteyin. |
-| Y?kleniyor | Kod girmeden ?nce k?sa s?re bekleyin; gerekirse sayfay? yenileyip sunucu eri?imini do?rulay?n. |
+| Lisanslı | Açık özelliklerin satın alınan planla eşleştiğini doğrulayın. |
+| Deneme | 30 günlük süreyi, 3 kullanıcı sınırını ve kilitli modülleri planlayın. |
+| Salt okunur | Kurtarma erişimini koruyun ve değişiklikten önce salt okunur mod rehberini izleyin. |
+| Kapasite kullanılabilir | Kullanımı izleyin; işlem gerekmez. |
+| Kapasite dolmak üzere | Yeni kullanıcı açmadan önce aktif kullanıcı sayısını ve satın alınan limiti uzlaştırın. |
+| Yaşam döngüsü uyarısı | 60, 30 veya 7 günlük yenileme eşiğine göre onay sahibini ve hedef tarihi belirleyin. |
+| Aktivasyon doğrulanamadı | Tekrar tekrar denemeyin; hata metnini hassas ayrıntıları çıkararak kaydedip özel destek isteyin. |
+| Yükleniyor | Kod girmeden önce kısa süre bekleyin; gerekirse sayfayı yenileyip sunucu erişimini doğrulayın. |
 
-## ??lemden ?nce
+## İşlemden Önce
 
-- Eksik bir ?zelli?i ara?t?rmadan ?nce lisans durumunu, plan?, biti? tarihini, kapasiteyi ve a??k mod?lleri do?rulay?n.
-- Lisans de?i?iminden ?nce Sahip hesab?yla oturum a?abildi?inizi ve yedek d??a aktarma yolunun eri?ilebilir oldu?unu do?rulay?n.
-- Lisans kodlar?n?, imzal? lisans i?eri?ini ve m??teriye ait kullan?m haklar?n? herkese a??k destek kanallar?ndan uzak tutun.
-- Kurumdaki de?i?iklik onay sahibini ve etkilenen payda?lar? belirleyin; yeni kodun haz?r oldu?unu do?rulay?n.
-- De?i?iklikten sonra yaln?z rozetin rengini de?il, yazma durumunu ve plan yeteneklerini de yeniden kontrol edin.
+- Eksik bir özelliği araştırmadan önce lisans durumunu, planı, bitiş tarihini, kapasiteyi ve açık modülleri doğrulayın.
+- Lisans değişiminden önce Sahip hesabıyla oturum açabildiğinizi ve yedek dışa aktarma yolunun erişilebilir olduğunu doğrulayın.
+- Lisans kodlarını, imzalı lisans içeriğini ve müşteriye ait kullanım haklarını herkese açık destek kanallarından uzak tutun.
+- Kurumdaki değişiklik onay sahibini ve etkilenen paydaşları belirleyin; yeni kodun hazır olduğunu doğrulayın.
+- Değişiklikten sonra yalnız rozetin rengini değil, yazma durumunu ve plan yeteneklerini de yeniden kontrol edin.
 
-## G?venli Kan?t
+## Güvenli Kanıt
 
-- Payla??labilir: lisans durumu, genel plan grubu, s?re penceresi, a??k ?zellik kategorisi ve hassas ayr?nt?lar? ??kar?lm?? hata kodu.
-- Gizli kalmal?: lisans kodu, imzal? lisans i?eri?i, lisans? d?zenleyen tarafa ait ?zel imza materyali, m??teriye ait kullan?m haklar? ve m??teri ad?n? g?steren ekran g?r?nt?leri.
-- Lisans kodu do?rulanam?yorsa, kapasite sat?n al?nan de?erle uyu?muyorsa veya kurtarma eri?imi belirsizse ?zel destek kullan?n.
-- Ekran g?r?nt?s? gerekiyorsa m??teri ad? ve e-posta alanlar?n? tamamen maskeleyin; yaln?z k?rpmak yeterli de?ildir.
+- Paylaşılabilir: lisans durumu, genel plan grubu, süre penceresi, açık özellik kategorisi ve hassas ayrıntıları çıkarılmış hata kodu.
+- Gizli kalmalı: lisans kodu, imzalı lisans içeriği, lisansı düzenleyen tarafa ait özel imza materyali, müşteriye ait kullanım hakları ve müşteri adını gösteren ekran görüntüleri.
+- Lisans kodu doğrulanamıyorsa, kapasite satın alınan değerle uyuşmuyorsa veya kurtarma erişimi belirsizse özel destek kullanın.
+- Ekran görüntüsü gerekiyorsa müşteri adı ve e-posta alanlarını tamamen maskeleyin; yalnız kırpmak yeterli değildir.
 
-## Ne Zaman Durmal? ve Destek ?stemelisiniz
+## Ne Zaman Durmalı ve Destek İstemelisiniz
 
-Lisans kodu do?rulanam?yorsa, etkinle?tirme sonras? lisans ba?ka bir m??teriyi g?steriyorsa, kapasite sat?n al?nan de?erle uyu?muyorsa veya salt okunur durumda kurtarma eri?imi belirsizse de?i?iklik yapmay? b?rak?n. Lisans kodunu ya da imzal? i?eri?i g?ndermeden g?r?n?r durumu, hassas ayr?nt?lar? ??kar?lm?? hata kodunu, genel plan grubunu ve s?re penceresini i?eren ?zel destek kayd? a??n.
+Lisans kodu doğrulanamıyorsa, etkinleştirme sonrası lisans başka bir müşteriyi gösteriyorsa, kapasite satın alınan değerle uyuşmuyorsa veya salt okunur durumda kurtarma erişimi belirsizse değişiklik yapmayı bırakın. Lisans kodunu ya da imzalı içeriği göndermeden görünür durumu, hassas ayrıntıları çıkarılmış hata kodunu, genel plan grubunu ve süre penceresini içeren özel destek kaydı açın.
 
-## Operat?r Notlar?
+## Operatör Notları
 
-Lisans kodu, ?zel lisans materyali, imzal? lisans i?eri?i veya m??teriye ait kullan?m haklar?n? g?steren ekran g?r?nt?s? yay?nlamay?n.
+Lisans kodu, özel lisans materyali, imzalı lisans içeriği veya müşteriye ait kullanım haklarını gösteren ekran görüntüsü yayınlamayın.
 
-## ?lgili
+## İlgili
 
-- [Lisans ya?am d?ng?s?](license-lifecycle.md)
+- [Lisans yaşam döngüsü](license-lifecycle.md)
 - [Lisans salt okunur mod rehberi](../../kb/tr/license-read-only.md)
-- [?lk kurulum, Sahip kullan?c? ve lisans](first-run-owner-license.md)
+- [İlk kurulum, Sahip kullanıcı ve lisans](first-run-owner-license.md)

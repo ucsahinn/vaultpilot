@@ -1,6 +1,6 @@
 # Security Command Center Screen
 
-The `?` button in the top bar opens this guide while Security Command Center is active. This is where VaultPilot answers ?what needs attention first?? by bringing the security score, priority recommendations, server readiness, and operational signals into one workspace. Every system role can open it, while visible data and destination actions narrow by role. It is not an incident report or change approval by itself.
+The `?` button in the top bar opens this guide while Security Command Center is active. This is where VaultPilot answers “what needs attention first?” by bringing the security score, priority recommendations, server readiness, and operational signals into one workspace. Every system role can open it, while visible data and destination actions narrow by role. It is not an incident report or change approval by itself.
 
 Command Center is primarily a routing surface. Selecting a recommendation or factor opens the relevant Passwords, Active Directory Records, Sign-In Security, Integrations, License, or Update Center view and prepares a useful filter when one is available.
 
@@ -39,9 +39,9 @@ Open the recommendation, verify the affected record or subsystem, and capture it
 | State | Operator response |
 | --- | --- |
 | Loading | Wait for the cards to settle before interpreting a score or count; refresh once if loading is unusually long. |
-| 82?100 | The score is in the green band; still inspect open recommendations and each factor?s weight. |
-| 62?81 | The score is in the warning band; verify the highest-impact row at its destination. |
-| 0?61 | The score is in the critical band; contain direct access risks first and move the case to the private process. |
+| 82–100 | The score is in the green band; still inspect open recommendations and each factor’s weight. |
+| 62–81 | The score is in the warning band; verify the highest-impact row at its destination. |
+| 0–61 | The score is in the critical band; contain direct access risks first and move the case to the private process. |
 | More recommendations | Open the hidden queue; the first four rows may not represent all outstanding work. |
 | Readiness signal missing | Open Profile, Active vault, 2FA, License, Extension, or Update Center and verify the source. |
 | Permission limited | If a destination or action is unavailable, verify the role and vault membership through the normal access process. |
@@ -63,7 +63,7 @@ Open the recommendation, verify the affected record or subsystem, and capture it
 
 ## When to Stop or Escalate
 
-Escalate internally when a critical signal returns after a verified fix, score sources cannot load, dashboard summaries conflict with audit evidence, or a risk affects several users. A support package should contain version, timezone-qualified timestamps, component, steps taken, and redacted errors?never secret values.
+Escalate internally when a critical signal returns after a verified fix, score sources cannot load, dashboard summaries conflict with audit evidence, or a risk affects several users. A support package should contain version, timezone-qualified timestamps, component, steps taken, and redacted errors—never secret values.
 
 ## Operator Notes
 

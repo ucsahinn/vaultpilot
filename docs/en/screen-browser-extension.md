@@ -122,7 +122,7 @@ Two skeleton rows appear while the device list loads. There is no dedicated list
 
 ## When to Stop and Escalate
 
-Stop if the request owner cannot be verified, the device name or last-four hint does not match, an unexpected vault count would be granted, the request repeatedly expires, a revoked device still obtains snapshots, the list looks empty despite known devices, or audit events do not match the operation. Open a private support case with the general state, broad time window, redacted error text, and last safe step?without pairing material or vault data.
+Stop if the request owner cannot be verified, the device name or last-four hint does not match, an unexpected vault count would be granted, the request repeatedly expires, a revoked device still obtains snapshots, the list looks empty despite known devices, or audit events do not match the operation. Open a private support case with the general state, broad time window, redacted error text, and last safe step—without pairing material or vault data.
 
 ## Operator Notes
 

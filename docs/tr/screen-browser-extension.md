@@ -1,137 +1,137 @@
-# Taray?c? Eklentisi Ekran?
+# Tarayıcı Eklentisi Ekranı
 
-?st ?ubuktaki `?`, **Entegrasyonlar > Taray?c? eklentisi** sekmesi a??kken bu ba?lama ?zel rehberi a?ar. D?? API veya Active Directory sekmesinde ayn? d??me genel Entegrasyonlar rehberine gider. Bu ekran? Chrome Web Store kanal?n? incelemek, k?sa ?m?rl? e?le?tirme isteklerini onaylamak, kasa yetkisi say?lar?n? g?rmek ve onayl? taray?c? profillerinin eri?imini iptal etmek i?in kullan?n.
+Üst çubuktaki `?`, **Entegrasyonlar > Tarayıcı eklentisi** sekmesi açıkken bu bağlama özel rehberi açar. Dış API veya Active Directory sekmesinde aynı düğme genel Entegrasyonlar rehberine gider. Bu ekranı Chrome Web Store kanalını incelemek, kısa ömürlü eşleştirme isteklerini onaylamak, kasa yetkisi sayılarını görmek ve onaylı tarayıcı profillerinin erişimini iptal etmek için kullanın.
 
-## Eri?im, Rol ve Lisans S?n?r?
+## Erişim, Rol ve Lisans Sınırı
 
-**Entegrasyonlar** men? yolu yaln?z **Sahip** rol?ne a??kt?r ve lisans?n **Entegrasyon** yetene?ini ister. Eklentiye ?zel k?sayol farkl? ?al???r: Sahip rol?n? ve ayr? **Eklenti** yetene?ini kontrol eder, ancak Entegrasyon yetene?ini yeniden denetlemez. Entegrasyonlar ekran? zaten a??ld?ktan sonra sayfa i?indeki **Taray?c? eklentisi** sekmesine ge?i? de Eklenti yetene?ini yeniden kontrol etmez. Bu nedenle sekmenin g?r?nmesi iki yetene?in de lisansl? oldu?unu kan?tlamaz. Y?netici, Denet?i ve Kullan?c? rolleri mevcut men?den bu y?netim paneline ula?amaz.
+**Entegrasyonlar** menü yolu yalnız **Sahip** rolüne açıktır ve lisansın **Entegrasyon** yeteneğini ister. Eklentiye özel kısayol farklı çalışır: Sahip rolünü ve ayrı **Eklenti** yeteneğini kontrol eder, ancak Entegrasyon yeteneğini yeniden denetlemez. Entegrasyonlar ekranı zaten açıldıktan sonra sayfa içindeki **Tarayıcı eklentisi** sekmesine geçiş de Eklenti yeteneğini yeniden kontrol etmez. Bu nedenle sekmenin görünmesi iki yeteneğin de lisanslı olduğunu kanıtlamaz. Yönetici, Denetçi ve Kullanıcı rolleri mevcut menüden bu yönetim paneline ulaşamaz.
 
-Eklenti kayna??ndan ?a?r?lan e?le?tirme ba?lang?? ucu konsol oturumuyla ?al??maz; etkin bir Sahip, Y?netici veya Kullan?c? ad?n? hedefleyebilir. Kimlik do?rulamas? isteyen listeleme, onaylama ve iptal u?lar? Sahip, Y?netici ve Kullan?c? rollerini kabul eder, Denet?i'yi reddeder ve yaln?z oturum kullan?c?s?na ait cihaz kay?tlar?n? i?ler. Desteklenen aray?z ak??? olarak bu panelde Sahip i?lemini esas al?n; ba?ka bir yerde kullan?c? ad? g?rmek o ki?inin e?le?tirme iste?ini y?netme yetkisi vermez.
+Eklenti kaynağından çağrılan eşleştirme başlangıç ucu konsol oturumuyla çalışmaz; etkin bir Sahip, Yönetici veya Kullanıcı adını hedefleyebilir. Kimlik doğrulaması isteyen listeleme, onaylama ve iptal uçları Sahip, Yönetici ve Kullanıcı rollerini kabul eder, Denetçi'yi reddeder ve yalnız oturum kullanıcısına ait cihaz kayıtlarını işler. Desteklenen arayüz akışı olarak bu panelde Sahip işlemini esas alın; başka bir yerde kullanıcı adı görmek o kişinin eşleştirme isteğini yönetme yetkisi vermez.
 
-E?le?tirmeyi ba?latmak veya onaylamak i?in lisans yaz?labilir olmal?d?r. Salt okunur modda cihaz listesi incelenebilir ve g?venlik amac?yla mevcut onayl? cihaz?n eri?imi iptal edilebilir; bekleyen istek onaylanamaz. Onaydan ?nce etkin profilde en az bir kasan?n kilidi a??k olmal?d?r.
+Eşleştirmeyi başlatmak veya onaylamak için lisans yazılabilir olmalıdır. Salt okunur modda cihaz listesi incelenebilir ve güvenlik amacıyla mevcut onaylı cihazın erişimi iptal edilebilir; bekleyen istek onaylanamaz. Onaydan önce etkin profilde en az bir kasanın kilidi açık olmalıdır.
 
-## Burada Ne Yap?l?r
+## Burada Ne Yapılır
 
-- Desteklenen VaultPilot Browser Vault Extension ma?aza kayd?n? Chrome Web Store'da a??n.
-- Son eklenti e?itlemesini ve onayl?/bekleyen cihaz ?zetlerini yenileyin.
-- Bekleyen cihaz ad? ve kodun son d?rt karakterini, ayr? kanaldan do?rulanm?? kullan?c? iste?iyle e?le?tirin.
-- Eklenti a??l?r penceresindeki tam kodu girip bu profilde o anda a??k olan kasalara eri?im verin.
-- Etkin cihazlarla iptal edilmi? veya s?resi dolmu? ar?iv kay?tlar?n? ayr? inceleyin.
-- Kaybolan, kullan?lmayan, beklenmeyen veya art?k g?venilmeyen onayl? taray?c? profilinin eri?imini iptal edin.
+- Desteklenen VaultPilot Browser Vault Extension mağaza kaydını Chrome Web Store'da açın.
+- Son eklenti eşitlemesini ve onaylı/bekleyen cihaz özetlerini yenileyin.
+- Bekleyen cihaz adı ve kodun son dört karakterini, ayrı kanaldan doğrulanmış kullanıcı isteğiyle eşleştirin.
+- Eklenti açılır penceresindeki tam kodu girip bu profilde o anda açık olan kasalara erişim verin.
+- Etkin cihazlarla iptal edilmiş veya süresi dolmuş arşiv kayıtlarını ayrı inceleyin.
+- Kaybolan, kullanılmayan, beklenmeyen veya artık güvenilmeyen onaylı tarayıcı profilinin erişimini iptal edin.
 
-Bu panel eklentiyi uzaktan kurmaz veya kald?rmaz; taray?c? politikas?n? da??tmaz, Web Store g?ncellemesini zorlamaz, ba?ka bir taray?c?y? y?netmez ve bir sayfada otomatik doldurman?n ?al??t???n? kan?tlamaz. Yaln?z sunucu taraf?ndaki e?le?tirme ve kasa yetkilerini y?netir. Otomatik doldurma; kullan?c? i?lemi, etkin site, eklenti oturumu, taray?c? politikas? ve e?le?me kurallar?na ba?l? ayr? bir eklenti davran???d?r.
+Bu panel eklentiyi uzaktan kurmaz veya kaldırmaz; tarayıcı politikasını dağıtmaz, Web Store güncellemesini zorlamaz, başka bir tarayıcıyı yönetmez ve bir sayfada otomatik doldurmanın çalıştığını kanıtlamaz. Yalnız sunucu tarafındaki eşleştirme ve kasa yetkilerini yönetir. Otomatik doldurma; kullanıcı işlemi, etkin site, eklenti oturumu, tarayıcı politikası ve eşleşme kurallarına bağlı ayrı bir eklenti davranışıdır.
 
 ## Chrome Web Store ve Merkezi Kurulum
 
-**Chrome Web Store'da a?**, `hjkbedlaieikhkoplgpiohlaakgebobi` kimlikli desteklenen ma?aza kayd?n? a?ar. Normal m??teri kurulumu ve g?ncellemeleri bu ma?aza kanal?ndan yap?l?r. Ma?aza kurulumunda ZIP indirme, Geli?tirici Modu veya **Paketlenmemi? ??e y?kle** gerekmez.
+**Chrome Web Store'da aç**, `hjkbedlaieikhkoplgpiohlaakgebobi` kimlikli desteklenen mağaza kaydını açar. Normal müşteri kurulumu ve güncellemeleri bu mağaza kanalından yapılır. Mağaza kurulumunda ZIP indirme, Geliştirici Modu veya **Paketlenmemiş öğe yükle** gerekmez.
 
-Merkezi y?netilen Chrome veya Edge cihazlar?nda ayn? Web Store eklenti kimli?ini kurumun taray?c? politikas?yla da??t?n. Bu i?lem VaultPilot ekran?nda de?il, taray?c? y?netim platformunda yap?l?r. Chrome otomatik g?ncelleme kontrollerini kendi y?r?t?r; eklentinin Hakk?nda g?r?n?m? Web Store kontrol? isteyebilir, ancak Chromium iste?i s?n?rlayabilir ve g?ncellemeyi yaln?z taray?c? haz?r olarak bildirdi?inde uygular.
+Merkezi yönetilen Chrome veya Edge cihazlarında aynı Web Store eklenti kimliğini kurumun tarayıcı politikasıyla dağıtın. Bu işlem VaultPilot ekranında değil, tarayıcı yönetim platformunda yapılır. Chrome otomatik güncelleme kontrollerini kendi yürütür; eklentinin Hakkında görünümü Web Store kontrolü isteyebilir, ancak Chromium isteği sınırlayabilir ve güncellemeyi yalnız tarayıcı hazır olarak bildirdiğinde uygular.
 
-Yay?n ZIP'i ar?iv, yerel geli?tirme, laboratuvar do?rulamas? veya acil geri d?n?? i?indir; ola?an merkezi kurulum yolu de?ildir. Paketlenmemi? veya geri d?n?? ama?l? bir derleme i?in ayr?ca izin verilen eklenti kayna?? gerekebilir. Ma?aza kimli?ini veya ?retim izin listesini geli?ig?zel de?i?tirmeyin.
+Yayın ZIP'i arşiv, yerel geliştirme, laboratuvar doğrulaması veya acil geri dönüş içindir; olağan merkezi kurulum yolu değildir. Paketlenmemiş veya geri dönüş amaçlı bir derleme için ayrıca izin verilen eklenti kaynağı gerekebilir. Mağaza kimliğini veya üretim izin listesini gelişigüzel değiştirmeyin.
 
-## E?le?tirme Ya?am D?ng?s?
+## Eşleştirme Yaşam Döngüsü
 
-### 1. Eklenti a??l?r penceresinden ba?latma
+### 1. Eklenti açılır penceresinden başlatma
 
-A??l?r pencerede VaultPilot sunucu adresini, VaultPilot kullan?c? ad?n?, ay?rt edilebilir bir cihaz ad?n? ve eklenti PIN'ini girip **E?le?tirmeyi ba?lat** se?ene?ini kullan?n. PIN, eklenti ?zel anahtar?yla e?le?tirme belirtecini bu taray?c? profilinde korur; VaultPilot ana parolas? de?ildir.
+Açılır pencerede VaultPilot sunucu adresini, VaultPilot kullanıcı adını, ayırt edilebilir bir cihaz adını ve eklenti PIN'ini girip **Eşleştirmeyi başlat** seçeneğini kullanın. PIN, eklenti özel anahtarıyla eşleştirme belirtecini bu tarayıcı profilinde korur; VaultPilot ana parolası değildir.
 
-Eklenti; cihaz ad?n?, iste?e ba?l? kullan?c? ad?n? ve a??k anahtar?n? e?le?tirme ba?lang?? ucuna g?nderir. Sunucu etkin ve Denet?i olmayan profili se?er; e?le?tirme kimli?i ve belirteci ?retir, on dakika sonra s?resi dolan `XXXX-XXXX` kodunu d?nd?r?r. ?stek ayr?ca kabul edilen eklenti kayna??na ba?lan?r. Tam kod yaln?z eklenti a??l?r penceresinde g?sterilir; sunucudaki cihaz sat?r?ndan geri okunmaz.
+Eklenti; cihaz adını, isteğe bağlı kullanıcı adını ve açık anahtarını eşleştirme başlangıç ucuna gönderir. Sunucu etkin ve Denetçi olmayan profili seçer; eşleştirme kimliği ve belirteci üretir, on dakika sonra süresi dolan `XXXX-XXXX` kodunu döndürür. İstek ayrıca kabul edilen eklenti kaynağına bağlanır. Tam kod yalnız eklenti açılır penceresinde gösterilir; sunucudaki cihaz satırından geri okunmaz.
 
-### 2. Bekleyen durumu inceleme ve onay? kontrol etme
+### 2. Bekleyen durumu inceleme ve onayı kontrol etme
 
-Eklenti e?le?tirme kimli?ini, belirtecini ve kodu yerel olarak tutar; **Onay? kontrol et** i?lemini sunar. Durum sorgusu e?le?tirme kimli?i ve belirteciyle do?rulan?r, kabul edilen eklenti kayna??ndan gelmelidir. Bekleyen istek onaylanmadan kullan?lamaz. On dakikal?k s?re biterse sorgu s?re dolumu hatas? verir ve sunucu listesi kayd? Ar?iv alt?nda s?n?fland?r?r.
+Eklenti eşleştirme kimliğini, belirtecini ve kodu yerel olarak tutar; **Onayı kontrol et** işlemini sunar. Durum sorgusu eşleştirme kimliği ve belirteciyle doğrulanır, kabul edilen eklenti kaynağından gelmelidir. Bekleyen istek onaylanmadan kullanılamaz. On dakikalık süre biterse sorgu süre dolumu hatası verir ve sunucu listesi kaydı Arşiv altında sınıflandırır.
 
-Bu ekrandaki **Aktif cihazlar**, getirilen kay?t aral???ndaki bekleyen ve onayl? sat?rlar? i?erir. Bekleyen sat?rda kullan?c?n?n girdi?i cihaz ad?, e?le?tirme kodunun yaln?z son d?rt karakteri ve mevcut kasa yetkisi say?s? g?r?n?r. Tam kod, kullan?c? ad?, taray?c? profili, istek kayna??, eklenti kimli?i, a??k anahtar, e?le?tirme belirteci veya cihaz kimli?i g?sterilmez. Cihaz ad? kullan?c? taraf?ndan yaz?lan bir etikettir; do?rulanm?? cihaz kimli?i de?ildir.
+Bu ekrandaki **Aktif cihazlar**, getirilen kayıt aralığındaki bekleyen ve onaylı satırları içerir. Bekleyen satırda kullanıcının girdiği cihaz adı, eşleştirme kodunun yalnız son dört karakteri ve mevcut kasa yetkisi sayısı görünür. Tam kod, kullanıcı adı, tarayıcı profili, istek kaynağı, eklenti kimliği, açık anahtar, eşleştirme belirteci veya cihaz kimliği gösterilmez. Cihaz adı kullanıcı tarafından yazılan bir etikettir; doğrulanmış cihaz kimliği değildir.
 
 ### 3. Onaylama ve kasa yetkisi verme
 
-Onaydan ?nce iste?in sahibini ve taray?c? profilini kurum i?i kanaldan do?rulay?n. A??l?r penceredeki tam kodu beklenen istekle ve sat?rdaki son d?rt karakter ipucuyla kar??la?t?r?n; ard?ndan kodun tamam?n? `XXXX-XXXX` bi?iminde girin.
+Onaydan önce isteğin sahibini ve tarayıcı profilini kurum içi kanaldan doğrulayın. Açılır penceredeki tam kodu beklenen istekle ve satırdaki son dört karakter ipucuyla karşılaştırın; ardından kodun tamamını `XXXX-XXXX` biçiminde girin.
 
-Onay i?in yaz?labilir lisans ve en az bir a??k kasa gerekir. VaultPilot, **onaylayan profilde o anda a??k olan b?t?n kasalar?n** anahtarlar?n? bekleyen cihaz?n a??k anahtar? i?in sarar; bu ekranda kasa ba??na yetki se?ici yoktur. Sat?rdaki kasa yetkisi say?s? ka? sar?lm?? kasa anahtar? verildi?ini g?sterir. Onay `EXTENSION_PAIR` olay? yazar, cihaz listesini ve Denetim Ge?mi?ini yeniler, yaz?lan kod alan?n? temizler.
+Onay için yazılabilir lisans ve en az bir açık kasa gerekir. VaultPilot, **onaylayan profilde o anda açık olan bütün kasaların** anahtarlarını bekleyen cihazın açık anahtarı için sarar; bu ekranda kasa başına yetki seçici yoktur. Satırdaki kasa yetkisi sayısı kaç sarılmış kasa anahtarı verildiğini gösterir. Onay `EXTENSION_PAIR` olayı yazar, cihaz listesini ve Denetim Geçmişini yeniler, yazılan kod alanını temizler.
 
-Onaydan sonra eklenti a??l?r penceresinde **Onay? kontrol et** se?ene?ini kullan?n. Eklenti yaln?z onayl? yetkileri i?in ?ifreli kasa snapshot'? isteyebilir ve bunu korunan ?al??ma alan?nda ??zebilir. E?le?tirme, ana parolay? veya d?z metin kasa kay?tlar?n? cihaz listesinde g?stermez.
+Onaydan sonra eklenti açılır penceresinde **Onayı kontrol et** seçeneğini kullanın. Eklenti yalnız onaylı yetkileri için şifreli kasa snapshot'ı isteyebilir ve bunu korunan çalışma alanında çözebilir. Eşleştirme, ana parolayı veya düz metin kasa kayıtlarını cihaz listesinde göstermez.
 
-## Cihaz Listesi, E?itleme ve ?ptal
+## Cihaz Listesi, Eşitleme ve İptal
 
-Cihaz sorgusu oturum kullan?c?s?na ait yaln?z olu?turulma zaman?na g?re en yeni 50 kayd? getirir. ?zetteki e?itleme zaman? ve onayl?/bekleyen say?lar? ile **Aktif cihazlar**/**Ar?iv** ayr?m? yaln?z bu kay?t aral???ndan hesaplan?r; tam cihaz ge?mi?i de?ildir. Daha eski e?le?tirme, iptal ve e?itleme hareketlerini Denetim Ge?mi?inde ara?t?r?n. **Yenile** ve ?zet kontrolleri listeyi tekrar sorgular; ekran a??kken liste yakla??k be? saniyede bir de yenilenir.
+Cihaz sorgusu oturum kullanıcısına ait yalnız oluşturulma zamanına göre en yeni 50 kaydı getirir. Özetteki eşitleme zamanı ve onaylı/bekleyen sayıları ile **Aktif cihazlar**/**Arşiv** ayrımı yalnız bu kayıt aralığından hesaplanır; tam cihaz geçmişi değildir. Daha eski eşleştirme, iptal ve eşitleme hareketlerini Denetim Geçmişinde araştırın. **Yenile** ve özet kontrolleri listeyi tekrar sorgular; ekran açıkken liste yaklaşık beş saniyede bir de yenilenir.
 
-Konsol **?ptal et** d??mesini yaln?z `APPROVED` durumundaki sat?rda g?sterir. D??me ikinci bir onay penceresi g?stermeden hemen ?al???r; cihaz? iptal durumuna ge?irir, saklanan sar?lm?? kasa yetkilerini kald?r?r, `EXTENSION_REVOKE` olay? yazar ve kayd? Ar?ive ta??r. Yaln?z onayl? sat?rda g?r?nme kural? konsol d??mesine aittir. Alttaki iptal ucunda yaz?labilir lisans veya cihaz durumu kontrol? yoktur; kimli?i do?rulanm?? Sahip, Y?netici veya Kullan?c? kendi kayd?yla e?le?en sat?r? mevcut durumundan ba??ms?z olarak iptal edebilir. Desteklenen operat?r ak???nda ekrandaki i?lemi kullan?n. ?ptalden sonra eklenti art?k onayl? ?ifreli kasa snapshot'? alamaz. Sunucu eri?imini iptal etmek eklentiyi kald?rmaz veya taray?c? profilini silmez; gerekirse yerel e?le?tirmeyi veya eklentiyi o taray?c?da ayr?ca kald?r?n.
+Konsol **İptal et** düğmesini yalnız `APPROVED` durumundaki satırda gösterir. Düğme ikinci bir onay penceresi göstermeden hemen çalışır; cihazı iptal durumuna geçirir, saklanan sarılmış kasa yetkilerini kaldırır, `EXTENSION_REVOKE` olayı yazar ve kaydı Arşive taşır. Yalnız onaylı satırda görünme kuralı konsol düğmesine aittir. Alttaki iptal ucunda yazılabilir lisans veya cihaz durumu kontrolü yoktur; kimliği doğrulanmış Sahip, Yönetici veya Kullanıcı kendi kaydıyla eşleşen satırı mevcut durumundan bağımsız olarak iptal edebilir. Desteklenen operatör akışında ekrandaki işlemi kullanın. İptalden sonra eklenti artık onaylı şifreli kasa snapshot'ı alamaz. Sunucu erişimini iptal etmek eklentiyi kaldırmaz veya tarayıcı profilini silmez; gerekirse yerel eşleştirmeyi veya eklentiyi o tarayıcıda ayrıca kaldırın.
 
-Her ba?ar?l? ?ifreli kasa snapshot'? al?m? son g?r?lme zaman?n? g?nceller ve `EXTENSION_SYNC` olay? yazar. G?rme, kopyalama ve doldurma i?lemlerinin ayr? eklenti denetim yolu vard?r; ancak bu y?netim ekran? sayfa d?zeyinde otomatik doldurma kan?t? g?stermez. Olaylar? Denetim Ge?mi?inde inceleyin ve cihaz ili?kisini gizli tutun.
+Her başarılı şifreli kasa snapshot'ı alımı son görülme zamanını günceller ve `EXTENSION_SYNC` olayı yazar. Görme, kopyalama ve doldurma işlemlerinin ayrı eklenti denetim yolu vardır; ancak bu yönetim ekranı sayfa düzeyinde otomatik doldurma kanıtı göstermez. Olayları Denetim Geçmişinde inceleyin ve cihaz ilişkisini gizli tutun.
 
-## Ar?iv, S?re Dolumu ve Hatalar
+## Arşiv, Süre Dolumu ve Hatalar
 
-**Ar?iv**, en yeni 50 cihazl?k kay?t aral???ndaki iptal edilmi? ve s?resi dolmu? sat?rlar? i?erir. Tam ge?mi? de?ildir; daha eski olaylar i?in Denetim Ge?mi?ini kullan?n. S?resi dolan istek onaylanamaz; eklenti a??l?r penceresinden yeni istek ba?lat?n. Ar?iv sat?rlar?nda konsol onaylama veya iptal i?lemi yoktur. Bu kay?tlar ?zel incelemede i?e yarar, ancak eklentinin taray?c?dan yerel olarak kald?r?ld???n? kan?tlamaz.
+**Arşiv**, en yeni 50 cihazlık kayıt aralığındaki iptal edilmiş ve süresi dolmuş satırları içerir. Tam geçmiş değildir; daha eski olaylar için Denetim Geçmişini kullanın. Süresi dolan istek onaylanamaz; eklenti açılır penceresinden yeni istek başlatın. Arşiv satırlarında konsol onaylama veya iptal işlemi yoktur. Bu kayıtlar özel incelemede işe yarar, ancak eklentinin tarayıcıdan yerel olarak kaldırıldığını kanıtlamaz.
 
-Onay hatas? kodun ve s?renin kontrol edilmesini isteyen genel bir mesaj g?sterir. Ayr?ca lisans?n yaz?labilirli?ini, etkin profili, en az bir a??k kasay?, istek sahipli?ini ve sat?r?n h?l? bekliyor olmas?n? denetleyin. ?ptal hatas? da genel bir eri?im iptali mesaj?d?r; eski durumla i?lem yapmamak i?in yeniden denemeden ?nce listeyi yenileyin.
+Onay hatası kodun ve sürenin kontrol edilmesini isteyen genel bir mesaj gösterir. Ayrıca lisansın yazılabilirliğini, etkin profili, en az bir açık kasayı, istek sahipliğini ve satırın hâlâ bekliyor olmasını denetleyin. İptal hatası da genel bir erişim iptali mesajıdır; eski durumla işlem yapmamak için yeniden denemeden önce listeyi yenileyin.
 
-Cihaz listesi y?klenirken iki iskelet sat?r? g?r?n?r. Liste sorgusu i?in ayr? bir hata kart? yoktur. Saklanm?? veri bulunmad???nda ba?ar?s?z sorgu ilgili bo? durum gibi g?r?nebilir. Oturumu, sunucu ba?lant?s?n? ve **Yenile** sonucunu kontrol etmeden **Hen?z e?le?tirme iste?i yok** mesaj?n? veya bo? Ar?ivi kesin kan?t saymay?n.
+Cihaz listesi yüklenirken iki iskelet satırı görünür. Liste sorgusu için ayrı bir hata kartı yoktur. Saklanmış veri bulunmadığında başarısız sorgu ilgili boş durum gibi görünebilir. Oturumu, sunucu bağlantısını ve **Yenile** sonucunu kontrol etmeden **Henüz eşleştirme isteği yok** mesajını veya boş Arşivi kesin kanıt saymayın.
 
-## ?nerilen ?? Ak??lar?
+## Önerilen İş Akışları
 
-### Yeni merkezi y?netilen taray?c? profilini onaylama
+### Yeni merkezi yönetilen tarayıcı profilini onaylama
 
-1. Taray?c?n?n desteklenen Web Store eklenti kimli?ini onayl? kullan?c? veya politika kanal?ndan ald???n? do?rulay?n.
-2. A??l?r pencerede do?ru HTTPS sunucu adresini, kullan?c? ad?n?, cihaz ad?n? ve yeni eklenti PIN'ini girip e?le?tirmeyi ba?lat?n.
-3. Kodu okumadan veya girmeden ?nce iste?i yapan ki?iyi ve taray?c? profilini kurum i?i kanaldan do?rulay?n.
-4. Bu ekranda cihaz ad?n? ve son d?rt karakter ipucunu e?le?tirin; iste?in h?l? bekledi?ini kontrol edin.
-5. Yaln?z yetki verilecek kasalar? a??k b?rak?n; a??k olan her kasan?n kapsama girece?ini unutmay?n.
-6. Tam `XXXX-XXXX` kodunu girip **Onayla** se?ene?ini bir kez kullan?n.
-7. A??l?r pencerede onay? kontrol edip e?itleyin; `EXTENSION_PAIR` ve beklenen ilk `EXTENSION_SYNC` olay?n? ?zel kan?tta do?rulay?n.
+1. Tarayıcının desteklenen Web Store eklenti kimliğini onaylı kullanıcı veya politika kanalından aldığını doğrulayın.
+2. Açılır pencerede doğru HTTPS sunucu adresini, kullanıcı adını, cihaz adını ve yeni eklenti PIN'ini girip eşleştirmeyi başlatın.
+3. Kodu okumadan veya girmeden önce isteği yapan kişiyi ve tarayıcı profilini kurum içi kanaldan doğrulayın.
+4. Bu ekranda cihaz adını ve son dört karakter ipucunu eşleştirin; isteğin hâlâ beklediğini kontrol edin.
+5. Yalnız yetki verilecek kasaları açık bırakın; açık olan her kasanın kapsama gireceğini unutmayın.
+6. Tam `XXXX-XXXX` kodunu girip **Onayla** seçeneğini bir kez kullanın.
+7. Açılır pencerede onayı kontrol edip eşitleyin; `EXTENSION_PAIR` ve beklenen ilk `EXTENSION_SYNC` olayını özel kanıtta doğrulayın.
 
-### Kaybolan veya g?venilmeyen taray?c? profilini iptal etme
+### Kaybolan veya güvenilmeyen tarayıcı profilini iptal etme
 
-1. Aktif cihazlar? yenileyin; onayl? sat?r? yaln?z cihaz ad?na g?re de?il, ?zel envanter kan?t?yla belirleyin.
-2. Kod, kimlik veya kasa ayr?nt?s? kopyalamadan genel iptal nedenini ve beklenen etkiyi kaydedin.
-3. ?kinci onay olmad???n? bilerek **?ptal et** se?ene?ini bir kez kullan?n.
-4. Sat?r?n Ar?ive ta??nd???n?, kasa yetkisi say?s?n?n temizlendi?ini ve `EXTENSION_REVOKE` olay?n? do?rulay?n.
-5. Taray?c?ya eri?ilebiliyorsa yerel e?le?tirmeyi kald?rma veya eklentiyi kald?rma i?lemini taray?c? y?netim kanal?nda ayr?ca y?r?t?n.
+1. Aktif cihazları yenileyin; onaylı satırı yalnız cihaz adına göre değil, özel envanter kanıtıyla belirleyin.
+2. Kod, kimlik veya kasa ayrıntısı kopyalamadan genel iptal nedenini ve beklenen etkiyi kaydedin.
+3. İkinci onay olmadığını bilerek **İptal et** seçeneğini bir kez kullanın.
+4. Satırın Arşive taşındığını, kasa yetkisi sayısının temizlendiğini ve `EXTENSION_REVOKE` olayını doğrulayın.
+5. Tarayıcıya erişilebiliyorsa yerel eşleştirmeyi kaldırma veya eklentiyi kaldırma işlemini tarayıcı yönetim kanalında ayrıca yürütün.
 
-## Ekran Durumlar?
+## Ekran Durumları
 
-| Durum | Operat?r cevab? |
+| Durum | Operatör cevabı |
 | --- | --- |
-| Cihazlar y?kleniyor | ?ki iskelet sat?r?n? bekleyin; gerekirse sunucu oturumunu kontrol edip Yenile kullan?n. |
-| Hen?z e?le?tirme iste?i yok | Desteklenen eklenti a??l?r penceresinden ba?lay?n; konsolda yapay istek olu?turmay?n. |
-| Onay bekliyor | Onaydan ?nce iste?i yapan ki?iyi, taray?c? profilini, cihaz ad?n? ve kodu ayr? kanallardan do?rulay?n. |
-| E?le?tirme kodu ge?ersiz | A??l?r penceredeki tam `XXXX-XXXX` kodunu yeniden girin; son d?rt karakterden kod tahmin etmeyin. |
-| E?le?tirme s?resi doldu | Kayd? Ar?ivde bulun ve a??l?r pencereden yeni on dakikal?k istek ba?lat?n. |
-| A??k kasa yok | Onaydan ?nce ama?lanan kasalar? a??n; b?t?n a??k kasalara yetki verilece?ini unutmay?n. |
-| Salt okunur lisans | E?le?tirme ba?latmay?n veya onaylamay?n; mevcut onayl? cihaz g?venlik amac?yla iptal edilebilir. |
-| E?le?ti | Kasa yetkisi say?s?n?, beklenen e?itlemeyi ve ?zel denetim kan?t?n? kontrol edin. |
-| ?ptal edildi | Sunucu yetkilerini kald?r?lm?? say?n; yerel eklenti temizli?ini ayr?ca y?r?t?n. |
-| Ar?iv bo? | Ba?lant?y? do?rulay?p yenileyin; eski iptal veya s?re dolumu ge?mi?i olmad??? sonucuna varmadan ?nce en yeni 50 kay?t s?n?r?n? ve Denetim Ge?mi?ini kontrol edin. |
-| Onay ba?ar?s?z | Sahiplik, bekleyen durum, tam kod, s?re, yaz?labilir lisans ve a??k kasalar? kontrol edin. |
-| ?ptal ba?ar?s?z | Listeyi yenileyin, ge?erli onayl? sat?r? ve sunucu oturumunu do?rulay?p bir kez daha deneyin. |
+| Cihazlar yükleniyor | İki iskelet satırını bekleyin; gerekirse sunucu oturumunu kontrol edip Yenile kullanın. |
+| Henüz eşleştirme isteği yok | Desteklenen eklenti açılır penceresinden başlayın; konsolda yapay istek oluşturmayın. |
+| Onay bekliyor | Onaydan önce isteği yapan kişiyi, tarayıcı profilini, cihaz adını ve kodu ayrı kanallardan doğrulayın. |
+| Eşleştirme kodu geçersiz | Açılır penceredeki tam `XXXX-XXXX` kodunu yeniden girin; son dört karakterden kod tahmin etmeyin. |
+| Eşleştirme süresi doldu | Kaydı Arşivde bulun ve açılır pencereden yeni on dakikalık istek başlatın. |
+| Açık kasa yok | Onaydan önce amaçlanan kasaları açın; bütün açık kasalara yetki verileceğini unutmayın. |
+| Salt okunur lisans | Eşleştirme başlatmayın veya onaylamayın; mevcut onaylı cihaz güvenlik amacıyla iptal edilebilir. |
+| Eşleşti | Kasa yetkisi sayısını, beklenen eşitlemeyi ve özel denetim kanıtını kontrol edin. |
+| İptal edildi | Sunucu yetkilerini kaldırılmış sayın; yerel eklenti temizliğini ayrıca yürütün. |
+| Arşiv boş | Bağlantıyı doğrulayıp yenileyin; eski iptal veya süre dolumu geçmişi olmadığı sonucuna varmadan önce en yeni 50 kayıt sınırını ve Denetim Geçmişini kontrol edin. |
+| Onay başarısız | Sahiplik, bekleyen durum, tam kod, süre, yazılabilir lisans ve açık kasaları kontrol edin. |
+| İptal başarısız | Listeyi yenileyin, geçerli onaylı satırı ve sunucu oturumunu doğrulayıp bir kez daha deneyin. |
 
-## ??lemden ?nce
+## İşlemden Önce
 
-- Konsol oturumunun Sahip rol?nde oldu?unu, Entegrasyon ve Eklenti yeteneklerinin ama?lanan yolu kapsad???n? do?rulay?n.
-- ??lemin Web Store da??t?m?, e?le?tirme onay?, e?itleme incelemesi veya iptal oldu?unu ay?r?n; bu ekran d?rd?n? de uzaktan yapmaz.
-- Kullan?c?y? ve taray?c? profilini kurum i?i istek kanal?ndan do?rulay?n; cihaz sat?r? bunlar? kan?tlamaz.
-- Onaydan ?nce yetki kapsam?na girmemesi gereken kasalar? kilitleyin.
-- Tam kodu, son d?rt karakter ipucunu, cihaz ad?n? ve zaman? birlikte hassas ili?kilendirme verisi say?n.
-- **?ptal et** i?leminin ikinci onay? olmad???n?, eklentiyi kald?rmad???n? ve taray?c? profilini temizlemedi?ini unutmay?n.
+- Konsol oturumunun Sahip rolünde olduğunu, Entegrasyon ve Eklenti yeteneklerinin amaçlanan yolu kapsadığını doğrulayın.
+- İşlemin Web Store dağıtımı, eşleştirme onayı, eşitleme incelemesi veya iptal olduğunu ayırın; bu ekran dördünü de uzaktan yapmaz.
+- Kullanıcıyı ve tarayıcı profilini kurum içi istek kanalından doğrulayın; cihaz satırı bunları kanıtlamaz.
+- Onaydan önce yetki kapsamına girmemesi gereken kasaları kilitleyin.
+- Tam kodu, son dört karakter ipucunu, cihaz adını ve zamanı birlikte hassas ilişkilendirme verisi sayın.
+- **İptal et** işleminin ikinci onayı olmadığını, eklentiyi kaldırmadığını ve tarayıcı profilini temizlemediğini unutmayın.
 
-## G?venli Kan?t
+## Güvenli Kanıt
 
-- Payla??labilir: sekme ad?, Chrome Web Store kanal?, bekliyor/e?le?ti/iptal/s?resi doldu gibi genel durum, en yeni 50 kay?t aral???na ait oldu?u a??k?a belirtilmi? toplu onayl? ve bekleyen say?lar?, geni? zaman aral??? ve genel hata s?n?f?.
-- Gizli kalmal?: tam veya k?smi e?le?tirme kodu, cihaz ad?, cihaz/e?le?tirme kimli?i ve belirteci, a??k ya da ?zel anahtar materyali, eklenti kayna??, kullan?c?/hesap, tam zaman damgas?, kasa ad?, kasa yetkisi say?s?, ?ifreli kasa snapshot'? ve herhangi bir gizli de?er veya otomatik doldurmada g?r?nen veri.
-- E?le?tirme kodu veya belirteci a???a ??kt?ysa genel payla??m? durdurun. ?ste?in s?resinin dolmas?n? bekleyin ya da onayl? cihaz? iptal edin; sonra ?zel kanaldan yeni e?le?tirme ba?lat?n.
-- Cihaz ad?, kod ipucu, yetki say?s? ve zaman?n ili?kilendirilebildi?i ekran g?r?nt?s?nde sat?r?n tamam?n? maskeleyin. Tek alan? k?rpmak yeterli de?ildir.
+- Paylaşılabilir: sekme adı, Chrome Web Store kanalı, bekliyor/eşleşti/iptal/süresi doldu gibi genel durum, en yeni 50 kayıt aralığına ait olduğu açıkça belirtilmiş toplu onaylı ve bekleyen sayıları, geniş zaman aralığı ve genel hata sınıfı.
+- Gizli kalmalı: tam veya kısmi eşleştirme kodu, cihaz adı, cihaz/eşleştirme kimliği ve belirteci, açık ya da özel anahtar materyali, eklenti kaynağı, kullanıcı/hesap, tam zaman damgası, kasa adı, kasa yetkisi sayısı, şifreli kasa snapshot'ı ve herhangi bir gizli değer veya otomatik doldurmada görünen veri.
+- Eşleştirme kodu veya belirteci açığa çıktıysa genel paylaşımı durdurun. İsteğin süresinin dolmasını bekleyin ya da onaylı cihazı iptal edin; sonra özel kanaldan yeni eşleştirme başlatın.
+- Cihaz adı, kod ipucu, yetki sayısı ve zamanın ilişkilendirilebildiği ekran görüntüsünde satırın tamamını maskeleyin. Tek alanı kırpmak yeterli değildir.
 
-## Ne Zaman Durmal? ve Destek ?stemelisiniz
+## Ne Zaman Durmalı ve Destek İstemelisiniz
 
-?ste?in sahibi do?rulanam?yorsa, cihaz ad? veya son d?rt karakter uyu?muyorsa, beklenmeyen say?da kasaya yetki verilecekse, istek s?rekli zaman a??m?na u?ruyorsa, iptal edilen cihaz h?l? ?ifreli kasa snapshot'? alabiliyorsa, bilinen cihazlara ra?men liste bo? g?r?n?yorsa ya da denetim olaylar? i?lemle e?le?miyorsa durun. E?le?tirme materyali veya kasa verisi eklemeden genel durum, geni? zaman aral???, gizli de?erleri ??kar?lm?? hata metni ve son g?venli ad?mla ?zel destek kayd? a??n.
+İsteğin sahibi doğrulanamıyorsa, cihaz adı veya son dört karakter uyuşmuyorsa, beklenmeyen sayıda kasaya yetki verilecekse, istek sürekli zaman aşımına uğruyorsa, iptal edilen cihaz hâlâ şifreli kasa snapshot'ı alabiliyorsa, bilinen cihazlara rağmen liste boş görünüyorsa ya da denetim olayları işlemle eşleşmiyorsa durun. Eşleştirme materyali veya kasa verisi eklemeden genel durum, geniş zaman aralığı, gizli değerleri çıkarılmış hata metni ve son güvenli adımla özel destek kaydı açın.
 
-## Operat?r Notlar?
+## Operatör Notları
 
-E?le?tirme, onayl? cihaz ve sar?lm?? anahtar g?ven karar?d?r; uzaktan taray?c? y?netimi de?ildir. Chrome Web Store da??t?m?, kurum politikas?, sunucu yetkileri, yerel eklenti durumu ve sayfa d?zeyindeki otomatik doldurma ayr? s?n?rlard?r. Yaln?z onay verildi diye eklentinin kuruldu?unu, g?ncellemenin uyguland???n?, yerel verinin silindi?ini veya otomatik doldurman?n garanti edildi?ini s?ylemeyin.
+Eşleştirme, onaylı cihaz ve sarılmış anahtar güven kararıdır; uzaktan tarayıcı yönetimi değildir. Chrome Web Store dağıtımı, kurum politikası, sunucu yetkileri, yerel eklenti durumu ve sayfa düzeyindeki otomatik doldurma ayrı sınırlardır. Yalnız onay verildi diye eklentinin kurulduğunu, güncellemenin uygulandığını, yerel verinin silindiğini veya otomatik doldurmanın garanti edildiğini söylemeyin.
 
-## ?lgili
+## İlgili
 
-- [Taray?c? eklentisi](browser-extension.md)
-- [Entegrasyonlar ekran?](screen-integrations.md)
-- [Chrome Web Store ma?aza kayd? ve gizlilik](chrome-web-store-listing.md)
-- [Eklenti e?le?tirme KB](../../kb/tr/extension-pairing.md)
-- [Denetim Ge?mi?i ekran?](screen-audit-log.md)
+- [Tarayıcı eklentisi](browser-extension.md)
+- [Entegrasyonlar ekranı](screen-integrations.md)
+- [Chrome Web Store mağaza kaydı ve gizlilik](chrome-web-store-listing.md)
+- [Eklenti eşleştirme KB](../../kb/tr/extension-pairing.md)
+- [Denetim Geçmişi ekranı](screen-audit-log.md)

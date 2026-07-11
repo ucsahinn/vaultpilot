@@ -85,7 +85,7 @@ For suspected unauthorized access, an unexplained role change, or unexpected has
 
 ## When to Stop and Escalate
 
-Stop administrative changes when hashes cannot be reconciled with adjacent raw events, actor or target cannot be reconciled, exports omit expected events, or an active security incident is underway. Open a private case with category, action type, search term, narrow time range, redacted actor role, and event hashes?never raw customer data.
+Stop administrative changes when hashes cannot be reconciled with adjacent raw events, actor or target cannot be reconciled, exports omit expected events, or an active security incident is underway. Open a private case with category, action type, search term, narrow time range, redacted actor role, and event hashes—never raw customer data.
 
 ## Operator Notes
 

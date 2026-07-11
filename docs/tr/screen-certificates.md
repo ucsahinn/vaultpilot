@@ -1,99 +1,99 @@
-# Sertifikalar Ekran?
+# Sertifikalar Ekranı
 
-?st ?ubuktaki `?` simgesi Sertifikalar ekran?na ait bu rehberi a?ar. Bu ekran, se?ili kasada tutulan sertifika, sertifika paketi ve ?zel anahtar kay?tlar? i?indir. VaultPilot sunucusunun HTTPS sertifikas?n? kurmaz veya de?i?tirmez; canl? yay?n sertifikas? **Sunucu ayarlar?** i?indeki ayr? ak??tan y?netilir.
+Üst çubuktaki `?` simgesi Sertifikalar ekranına ait bu rehberi açar. Bu ekran, seçili kasada tutulan sertifika, sertifika paketi ve özel anahtar kayıtları içindir. VaultPilot sunucusunun HTTPS sertifikasını kurmaz veya değiştirmez; canlı yayın sertifikası **Sunucu ayarları** içindeki ayrı akıştan yönetilir.
 
-Denet?i rol? gizli kay?tlara ve kasa anahtar?na eri?emez. Sahip, Y?netici ve Kullan?c? rolleri yaln?z kendilerine a??lm?? kasalar? kullan?r. Se?ili kasadaki **G?r?nt?leyici** kayd? okuyabilir, gizli materyali ge?ici g?sterebilir, kopyalayabilir ve varsa ?zg?n dosyay? indirebilir. **D?zenleyici** ile kasa **Y?neticisi**, lisans yaz?labilir durumdayken kay?t olu?turabilir, ?o?altabilir, d?zenleyebilir ve silebilir.
+Denetçi rolü gizli kayıtlara ve kasa anahtarına erişemez. Sahip, Yönetici ve Kullanıcı rolleri yalnız kendilerine açılmış kasaları kullanır. Seçili kasadaki **Görüntüleyici** kaydı okuyabilir, gizli materyali geçici gösterebilir, kopyalayabilir ve varsa özgün dosyayı indirebilir. **Düzenleyici** ile kasa **Yöneticisi**, lisans yazılabilir durumdayken kayıt oluşturabilir, çoğaltabilir, düzenleyebilir ve silebilir.
 
-## Burada Ne Yap?l?r
+## Burada Ne Yapılır
 
-- **Sertifikalarda ara** ile ba?l?k, sahip/servis, u? nokta, kategori, etiket, imzalayan, Subject/CN ve seri numaras? i?inde aray?n.
-- **Yenileme**, **S?resi doldu**, **Tarih yok** ve **?ptal / pasif** h?zl? filtrelerini; ge?erlilik aral???, sertifika otoritesi ve organizasyon gibi ak?ll? filtrelerle birle?tirin. H?zl? filtre d??mesi yaln?z ilgili kay?t say?s? s?f?rdan b?y?kse g?r?n?r.
-- Kart veya tablo g?r?n?m?n? se?in ve yenile d??mesiyle se?ili kasay? yeniden sorgulay?n.
-- Yazma yetkiniz varsa **Yeni sertifika** ile edit?r? a??n; edit?rdeki **Sertifika dosyas?n? i?e aktar** alan?n? kullan?n veya sertifika/?zel anahtar materyalini metin olarak yap??t?r?n.
-- Sat?r eylemleriyle gizli materyali g?sterin, ?zg?n dosyay? indirin veya men?den ayr?nt?lar? a??n, gizli de?eri kopyalay?n, kay?t kopyas? olu?turun, d?zenleyin ya da silin.
+- **Sertifikalarda ara** ile başlık, sahip/servis, uç nokta, kategori, etiket, imzalayan, Subject/CN ve seri numarası içinde arayın.
+- **Yenileme**, **Süresi doldu**, **Tarih yok** ve **İptal / pasif** hızlı filtrelerini; geçerlilik aralığı, sertifika otoritesi ve organizasyon gibi akıllı filtrelerle birleştirin. Hızlı filtre düğmesi yalnız ilgili kayıt sayısı sıfırdan büyükse görünür.
+- Kart veya tablo görünümünü seçin ve yenile düğmesiyle seçili kasayı yeniden sorgulayın.
+- Yazma yetkiniz varsa **Yeni sertifika** ile editörü açın; editördeki **Sertifika dosyasını içe aktar** alanını kullanın veya sertifika/özel anahtar materyalini metin olarak yapıştırın.
+- Satır eylemleriyle gizli materyali gösterin, özgün dosyayı indirin veya menüden ayrıntıları açın, gizli değeri kopyalayın, kayıt kopyası oluşturun, düzenleyin ya da silin.
 
-## Ekran? Nas?l Okumal?s?n?z
+## Ekranı Nasıl Okumalısınız
 
-Liste sat?r? ba?l??? ve son g?ncelleme zaman?n? g?sterir. ??e aktar?lm?? kay?tlarda dosya ad?, bi?im, boyut, kalan s?re, Subject/CN, imzalayan ve SHA-256 ?zetinin k?sa b?l?m? de g?r?nebilir. Bunlar kasa a??ld?ktan sonra kayd? tan?mlayan meta verilerdir; sertifika g?vdesi, ?zel anahtar veya paket i?eri?i de?ildir.
+Liste satırı başlığı ve son güncelleme zamanını gösterir. İçe aktarılmış kayıtlarda dosya adı, biçim, boyut, kalan süre, Subject/CN, imzalayan ve SHA-256 özetinin kısa bölümü de görünebilir. Bunlar kasa açıldıktan sonra kaydı tanımlayan meta verilerdir; sertifika gövdesi, özel anahtar veya paket içeriği değildir.
 
-**Sertifika ayr?nt?lar?n? a?** yan paneli kaynak, risk, kay?t durumu, hesap/servis, hedef, kategori, sahip, etiket ve son g?ncelleme gibi ba?lam? g?sterir. Gizli materyali veya ?zg?n dosyay? a???a ??karmaz ve tek ba??na `VIEW` denetim olay? yazmaz.
+**Sertifika ayrıntılarını aç** yan paneli kaynak, risk, kayıt durumu, hesap/servis, hedef, kategori, sahip, etiket ve son güncelleme gibi bağlamı gösterir. Gizli materyali veya özgün dosyayı açığa çıkarmaz ve tek başına `VIEW` denetim olayı yazmaz.
 
-G?z d??mesi onaydan sonra materyali ?nce taray?c? oturumunda g?r?n?r yapar, ard?ndan `VIEW` olay?n? yazmay? dener. **Gizli de?eri kopyala** ?nce t?m gizli alan? panoya al?r, ard?ndan `COPY` olay?n? yazmay? dener. **Sertifika dosyas?n? indir** yaln?z indirilebilir ?zg?n dosya bulunan kay?tlarda etkinle?ir; dosyay? ?nce indirir, ard?ndan `EXPORT` olay?n? yazmay? dener. Sunucunun denetim iste?ini reddetmesi tamamlanm?? yerel g?sterme, kopyalama veya indirme i?lemini geri almaz; aray?z hata g?sterebilir ve operat?r sonucu denetim kayd?yla uzla?t?rmal?d?r. Gizleme de?eri yeniden maskeler.
+Göz düğmesi onaydan sonra materyali önce tarayıcı oturumunda görünür yapar, ardından `VIEW` olayını yazmayı dener. **Gizli değeri kopyala** önce tüm gizli alanı panoya alır, ardından `COPY` olayını yazmayı dener. **Sertifika dosyasını indir** yalnız indirilebilir özgün dosya bulunan kayıtlarda etkinleşir; dosyayı önce indirir, ardından `EXPORT` olayını yazmayı dener. Sunucunun denetim isteğini reddetmesi tamamlanmış yerel gösterme, kopyalama veya indirme işlemini geri almaz; arayüz hata gösterebilir ve operatör sonucu denetim kaydıyla uzlaştırmalıdır. Gizleme değeri yeniden maskeler.
 
-### Meta veri ile gizli materyal s?n?r?
+### Meta veri ile gizli materyal sınırı
 
-Ba?l?k, sahip/servis, u? nokta, not, ge?erlilik tarihi, Subject/CN ve sertifika otoritesi s?n?fland?rmas? kasa a??kken g?r?n?r kay?t ba?lam?d?r. Bunlar da ?ifreli kay?t y?k?nde saklan?r, ancak g?r?nt?lenmeleri i?in ayr?ca gizli de?eri g?sterme onay? gerekmez.
+Başlık, sahip/servis, uç nokta, not, geçerlilik tarihi, Subject/CN ve sertifika otoritesi sınıflandırması kasa açıkken görünür kayıt bağlamıdır. Bunlar da şifreli kayıt yükünde saklanır, ancak görüntülenmeleri için ayrıca gizli değeri gösterme onayı gerekmez.
 
-**Sertifika veya ?zel anahtar** alan? zorunlu gizli de?erdir ve varsay?lan olarak maskelenir. Dosya i?e aktar?ld???nda ?zg?n dosya baytlar? ile haz?rlanan materyal ?ifreli kay?t y?k?ne al?n?r. PFX/P12 parolas? i?in ayr? alan yoktur. Paket parolas?n? ba?l?k, sahip/servis, u? nokta veya not alan?na yazmay?n; gerekiyorsa ayr? bir parola kayd?nda y?netin.
+**Sertifika veya özel anahtar** alanı zorunlu gizli değerdir ve varsayılan olarak maskelenir. Dosya içe aktarıldığında özgün dosya baytları ile hazırlanan materyal şifreli kayıt yüküne alınır. PFX/P12 parolası için ayrı alan yoktur. Paket parolasını başlık, sahip/servis, uç nokta veya not alanına yazmayın; gerekiyorsa ayrı bir parola kaydında yönetin.
 
-Sertifika otoritesi kartlar?nda sa?lay?c? ad?, sinyal a??klamas? ve eri?im bi?imi etiketi g?sterilir. Bir kart se?ildi?inde ?nceki tan?nan sertifika otoritesi etiketi de?i?tirilir, kategori `Certificate` yap?l?r, kaynak bo?sa `manual` atan?r ve `certificate` etiketiyle se?ilen otorite etiketi eklenir. DigiCert, GoDaddy, GlobalSign, Let?s Encrypt, Microsoft CA veya Self-signed se?mek d?? hizmete ba?lanmaz; sertifika d?zenleme, yenileme, yeniden anahtarlama veya iptal i?lemi ba?latmaz.
+Sertifika otoritesi kartlarında sağlayıcı adı, sinyal açıklaması ve erişim biçimi etiketi gösterilir. Bir kart seçildiğinde önceki tanınan sertifika otoritesi etiketi değiştirilir, kategori `Certificate` yapılır, kaynak boşsa `manual` atanır ve `certificate` etiketiyle seçilen otorite etiketi eklenir. DigiCert, GoDaddy, GlobalSign, Let’s Encrypt, Microsoft CA veya Self-signed seçmek dış hizmete bağlanmaz; sertifika düzenleme, yenileme, yeniden anahtarlama veya iptal işlemi başlatmaz.
 
-## ?nerilen ?? Ak??lar?
+## Önerilen İş Akışları
 
-### Dosyadan sertifika kayd? olu?turma
+### Dosyadan sertifika kaydı oluşturma
 
-1. Yazma yetkili kasay? a??p **Yeni sertifika** se?ene?ini kullan?n.
-2. Zorunlu ba?l??? girin; sahip/servis ile ilgili u? noktay? kay?t ba?lam? olarak doldurun.
-3. **Sertifika dosyas?n? i?e aktar** alan?ndan PEM, CRT, CER, DER, P7B/P7C, PFX/P12, PKCS12, P8/P8E/PK8 veya KEY dosyas? se?in. Dosya s?n?r? 10 MB?t?r.
-4. Dosya ad?, bi?im, boyut, i?e aktar?m zaman?, SHA-256 ve bulunabildiyse ge?erlilik/Subject bilgilerini kontrol edin.
-5. Gerekiyorsa **Ge?erlilik biti?i** ile **Subject / CN** alanlar?n? d?zeltip sertifika otoritesi s?n?fland?rmas?n? se?in.
-6. Gizli alan?n do?ru materyali i?erdi?ini do?rulay?p kayd? saklay?n.
+1. Yazma yetkili kasayı açıp **Yeni sertifika** seçeneğini kullanın.
+2. Zorunlu başlığı girin; sahip/servis ile ilgili uç noktayı kayıt bağlamı olarak doldurun.
+3. **Sertifika dosyasını içe aktar** alanından PEM, CRT, CER, DER, P7B/P7C, PFX/P12, PKCS12, P8/P8E/PK8 veya KEY dosyası seçin. Dosya sınırı 10 MB’tır.
+4. Dosya adı, biçim, boyut, içe aktarım zamanı, SHA-256 ve bulunabildiyse geçerlilik/Subject bilgilerini kontrol edin.
+5. Gerekiyorsa **Geçerlilik bitişi** ile **Subject / CN** alanlarını düzeltip sertifika otoritesi sınıflandırmasını seçin.
+6. Gizli alanın doğru materyali içerdiğini doğrulayıp kaydı saklayın.
 
-Metin dosyalar?nda Subject, imzalayan, seri numaras? ve biti? zaman? yaln?z tan?nan sat?rlardan ??kar?labilir. ?kili paketlerde bu alanlar otomatik dolmayabilir. Bo? meta veri tek ba??na ge?ersiz paket kan?t? de?ildir; kayna?? ?zel kanaldan do?rulay?n.
+Metin dosyalarında Subject, imzalayan, seri numarası ve bitiş zamanı yalnız tanınan satırlardan çıkarılabilir. İkili paketlerde bu alanlar otomatik dolmayabilir. Boş meta veri tek başına geçersiz paket kanıtı değildir; kaynağı özel kanaldan doğrulayın.
 
-### Materyali elle ekleme veya kayd? yenileme
+### Materyali elle ekleme veya kaydı yenileme
 
-Dosya se?meden ba?l?k girip PEM, sertifika g?vdesi veya ?zel anahtar materyalini zorunlu gizli alana yap??t?rabilirsiniz. Ge?erlilik biti?i ile Subject/CN elle eklenebilir. Elle olu?turulan kay?tta indirilebilir ?zg?n dosya bulunmaz; indirme gerekiyorsa kayd? **D?zenle** ile a??p yetkili kaynak dosyas?n? yeniden i?e aktar?n.
+Dosya seçmeden başlık girip PEM, sertifika gövdesi veya özel anahtar materyalini zorunlu gizli alana yapıştırabilirsiniz. Geçerlilik bitişi ile Subject/CN elle eklenebilir. Elle oluşturulan kayıtta indirilebilir özgün dosya bulunmaz; indirme gerekiyorsa kaydı **Düzenle** ile açıp yetkili kaynak dosyasını yeniden içe aktarın.
 
-Yenileme incelemesinde ?nce **Yenileme**, **S?resi doldu** ve **Tarih yok** filtrelerini kontrol edin; gerekirse ge?erlilik aral??? veya sertifika otoritesi filtresi ekleyin. Yenilemeyi ilgili sertifika otoritesi ya da kurum s?recinde tamamlay?n. Yeni dosya haz?r oldu?unda mevcut kayd? **D?zenle** ?zerinden g?ncelleyin; s?n?fland?rma kart?n?n yenileme yapmad???n? unutmay?n.
+Yenileme incelemesinde önce **Yenileme**, **Süresi doldu** ve **Tarih yok** filtrelerini kontrol edin; gerekirse geçerlilik aralığı veya sertifika otoritesi filtresi ekleyin. Yenilemeyi ilgili sertifika otoritesi ya da kurum sürecinde tamamlayın. Yeni dosya hazır olduğunda mevcut kaydı **Düzenle** üzerinden güncelleyin; sınıflandırma kartının yenileme yapmadığını unutmayın.
 
-### Materyali g?r?nt?leme, kopyalama veya indirme
+### Materyali görüntüleme, kopyalama veya indirme
 
-Gizli de?eri yaln?z ihtiya? an?nda ve ekran payla??m? kapal?yken g?sterin. Kopyalama sonras? 30 saniyelik pano temizli?i en iyi ?aba yakla??m?yla ?al???r: VaultPilot yaln?z izinler elverirse panoyu okuyabilir ve de?er h?l? ayn?ysa temizleyebilir. ?zin hatas? veya arada panoya yaz?lan farkl? bir de?er temizli?i engeller; ?nceki kopyalama geri al?nm?? olmaz. ?ndirme d??mesi kapal?ysa kay?t elle girilmi? materyal veya indirilebilir ?zg?n dosyas? olmayan eski bir paket i?eriyor olabilir. Dosyay? yetkili kaynaktan yeniden i?e aktar?n; ekranda olmayan bir d?n??t?rme ya da paket parolas? ??zme i?lemi varsaymay?n.
+Gizli değeri yalnız ihtiyaç anında ve ekran paylaşımı kapalıyken gösterin. Kopyalama sonrası 30 saniyelik pano temizliği en iyi çaba yaklaşımıyla çalışır: VaultPilot yalnız izinler elverirse panoyu okuyabilir ve değer hâlâ aynıysa temizleyebilir. İzin hatası veya arada panoya yazılan farklı bir değer temizliği engeller; önceki kopyalama geri alınmış olmaz. İndirme düğmesi kapalıysa kayıt elle girilmiş materyal veya indirilebilir özgün dosyası olmayan eski bir paket içeriyor olabilir. Dosyayı yetkili kaynaktan yeniden içe aktarın; ekranda olmayan bir dönüştürme ya da paket parolası çözme işlemi varsaymayın.
 
-## Ekran Durumlar?
+## Ekran Durumları
 
-| Durum | Operat?r cevab? |
+| Durum | Operatör cevabı |
 | --- | --- |
-| Y?kleniyor | ?skelet sat?rlar tamamlanmadan sonu? ??karmay?n. |
-| Kay?t yok | Yazma yetkiniz varsa ilk kayd? olu?turun; yoksa do?ru kasa ve rol? do?rulay?n. |
-| E?le?me yok | Aramay? ve aktif ak?ll? filtreleri temizleyin. |
-| Ge?erli | Kalan s?reyi, kullan?lan u? noktay? ve yenileme sorumlusunu yine de do?rulay?n. |
-| Yenileme aral???nda | 30 g?n veya daha az kalan kayd? kurumun yenileme s?recine al?n. |
-| S?resi doldu | Materyali kullan?ma vermeyin; kaynak durumunu ve yerine ge?en sertifikay? do?rulay?n. |
-| Tarih yok | Biti? tarihini yetkili kaynaktan tamamlay?n; bo? de?eri s?n?rs?z ge?erlilik saymay?n. |
-| ?ptal / pasif | Kayd? etkin sertifika gibi kullanmay?n; kaynak sistemle uzla?t?r?n. |
-| Sertifika okunuyor | ??e aktar?m bitmeden kaydetmeyin veya ikinci dosya se?meyin. |
-| Dosya ?ok b?y?k / okunamad? | 10 MB s?n?r?n? ve desteklenen bi?imi do?rulay?n; dosyay? a??k kanala y?klemeyin. |
-| ?ndirme kapal? | ?ndirilebilir ?zg?n dosya yoktur; gerekiyorsa yetkili kaynaktan yeniden i?e aktar?n. |
-| Yazma kapal? | Kasa rol?n? ve lisans?n salt okunur durumunu kontrol edin. |
+| Yükleniyor | İskelet satırlar tamamlanmadan sonuç çıkarmayın. |
+| Kayıt yok | Yazma yetkiniz varsa ilk kaydı oluşturun; yoksa doğru kasa ve rolü doğrulayın. |
+| Eşleşme yok | Aramayı ve aktif akıllı filtreleri temizleyin. |
+| Geçerli | Kalan süreyi, kullanılan uç noktayı ve yenileme sorumlusunu yine de doğrulayın. |
+| Yenileme aralığında | 30 gün veya daha az kalan kaydı kurumun yenileme sürecine alın. |
+| Süresi doldu | Materyali kullanıma vermeyin; kaynak durumunu ve yerine geçen sertifikayı doğrulayın. |
+| Tarih yok | Bitiş tarihini yetkili kaynaktan tamamlayın; boş değeri sınırsız geçerlilik saymayın. |
+| İptal / pasif | Kaydı etkin sertifika gibi kullanmayın; kaynak sistemle uzlaştırın. |
+| Sertifika okunuyor | İçe aktarım bitmeden kaydetmeyin veya ikinci dosya seçmeyin. |
+| Dosya çok büyük / okunamadı | 10 MB sınırını ve desteklenen biçimi doğrulayın; dosyayı açık kanala yüklemeyin. |
+| İndirme kapalı | İndirilebilir özgün dosya yoktur; gerekiyorsa yetkili kaynaktan yeniden içe aktarın. |
+| Yazma kapalı | Kasa rolünü ve lisansın salt okunur durumunu kontrol edin. |
 
-## ??lemden ?nce
+## İşlemden Önce
 
-- Se?ili kasay? ve kasa rol?n?z?n yapmak istedi?iniz i?leme izin verdi?ini do?rulay?n.
-- Kay?t yazmadan ?nce lisans?n salt okunur olmad???n? kontrol edin.
-- ??lemin kasa kayd?n? m? yoksa sunucunun canl? HTTPS sertifikas?n? m? hedefledi?ini kesinle?tirin.
-- Dosya kayna??n?, beklenen SHA-256 ?zetini, Subject/CN bilgisini, imzalayan? ve biti? tarihini g?venilir kanaldan do?rulay?n.
-- G?sterme, kopyalama ve indirme i?lemlerinin s?ras?yla `VIEW`, `COPY` ve `EXPORT` denetim olaylar? istedi?ini hesaba kat?n.
-- Toplu kategori, etiket, ar?ivleme, pasifle?tirme, not, d?zenleme ve silme eylemlerinin D?zenleyici/Y?netici kasa rol? istedi?ini do?rulay?n.
+- Seçili kasayı ve kasa rolünüzün yapmak istediğiniz işleme izin verdiğini doğrulayın.
+- Kayıt yazmadan önce lisansın salt okunur olmadığını kontrol edin.
+- İşlemin kasa kaydını mı yoksa sunucunun canlı HTTPS sertifikasını mı hedeflediğini kesinleştirin.
+- Dosya kaynağını, beklenen SHA-256 özetini, Subject/CN bilgisini, imzalayanı ve bitiş tarihini güvenilir kanaldan doğrulayın.
+- Gösterme, kopyalama ve indirme işlemlerinin sırasıyla `VIEW`, `COPY` ve `EXPORT` denetim olayları istediğini hesaba katın.
+- Toplu kategori, etiket, arşivleme, pasifleştirme, not, düzenleme ve silme eylemlerinin Düzenleyici/Yönetici kasa rolü istediğini doğrulayın.
 
-## G?venli Kan?t
+## Güvenli Kanıt
 
-- **Payla??labilir:** sertifika durum s?n?f?, genel ge?erlilik aral???, dosya bi?imi ve boyutu, sertifika otoritesi s?n?f? ve SHA-256 ?zetinin k?sa b?l?m?.
-- **Gizli kalmal?:** sertifika veya ?zel anahtar materyali, ?zg?n PEM/KEY/PFX/P12 paketi, paket parolas?, tam seri numaras? ve parmak izi, i? sistem ad?, tam Subject/issuer bilgisi, m??teri u? noktas? ve a??k kay?t ekran g?r?nt?s?.
-- Deste?e g?nderilen g?r?nt?de ba?l?k, sahip/servis, URL, Subject/CN, imzalayan ve tam SHA-256 de?erini maskeleyin.
-- ?zel anahtar veya paket parolas? a???a ??kt?ysa kopyalama ve yeniden paketlemeyi b?rak?p kurumun olay m?dahale ve sertifika otoritesi s?recini ?zel kanaldan ba?lat?n.
+- **Paylaşılabilir:** sertifika durum sınıfı, genel geçerlilik aralığı, dosya biçimi ve boyutu, sertifika otoritesi sınıfı ve SHA-256 özetinin kısa bölümü.
+- **Gizli kalmalı:** sertifika veya özel anahtar materyali, özgün PEM/KEY/PFX/P12 paketi, paket parolası, tam seri numarası ve parmak izi, iç sistem adı, tam Subject/issuer bilgisi, müşteri uç noktası ve açık kayıt ekran görüntüsü.
+- Desteğe gönderilen görüntüde başlık, sahip/servis, URL, Subject/CN, imzalayan ve tam SHA-256 değerini maskeleyin.
+- Özel anahtar veya paket parolası açığa çıktıysa kopyalama ve yeniden paketlemeyi bırakıp kurumun olay müdahale ve sertifika otoritesi sürecini özel kanaldan başlatın.
 
-## Ne Zaman Durmal? ve Destek ?stemelisiniz
+## Ne Zaman Durmalı ve Destek İstemelisiniz
 
-Dosyan?n SHA-256 ?zeti beklenen de?erle uyu?muyorsa, Subject/issuer veya biti? tarihi kaynak kay?ttan farkl?ysa, ?zg?n dosyan?n kayna?? do?rulanam?yorsa, gizli materyal yanl?? ki?iye g?sterildiyse ya da kasa kayd? canl? sunucu sertifikas? san?l?yorsa durun. Gizli materyali g?ndermeden; kay?t kimli?i, genel bi?im ve boyut, k?sa SHA-256 b?l?m?, hassas ayr?nt?lar? ??kar?lm?? hata ve denenen ad?mlarla ?zel destek kayd? a??n.
+Dosyanın SHA-256 özeti beklenen değerle uyuşmuyorsa, Subject/issuer veya bitiş tarihi kaynak kayıttan farklıysa, özgün dosyanın kaynağı doğrulanamıyorsa, gizli materyal yanlış kişiye gösterildiyse ya da kasa kaydı canlı sunucu sertifikası sanılıyorsa durun. Gizli materyali göndermeden; kayıt kimliği, genel biçim ve boyut, kısa SHA-256 bölümü, hassas ayrıntıları çıkarılmış hata ve denenen adımlarla özel destek kaydı açın.
 
-## Operat?r Notlar?
+## Operatör Notları
 
-Kasa sertifika kayd? bir da??t?m arac? veya sertifika otoritesi istemcisi de?ildir. Dosya i?e aktarmak VaultPilot sunucusunun HTTPS ba??n? de?i?tirmez; canl? yay?n sertifikas? yaln?z **Sunucu ayarlar?** ak???nda y?netilir. Yenileme, sertifika otoritesi ve da??t?m notlar? operasyon ba?lam?d?r, otomatik i?lem de?ildir.
+Kasa sertifika kaydı bir dağıtım aracı veya sertifika otoritesi istemcisi değildir. Dosya içe aktarmak VaultPilot sunucusunun HTTPS bağını değiştirmez; canlı yayın sertifikası yalnız **Sunucu ayarları** akışında yönetilir. Yenileme, sertifika otoritesi ve dağıtım notları operasyon bağlamıdır, otomatik işlem değildir.
 
-## ?lgili
+## İlgili
 
-- [Sertifika Paneli ekran?](screen-certificate-dashboard.md)
-- [Sunucu ayarlar? ekran?](screen-server-settings.md)
-- [Genel eri?im adresi ve HTTPS](public-host-https-certificate.md)
+- [Sertifika Paneli ekranı](screen-certificate-dashboard.md)
+- [Sunucu ayarları ekranı](screen-server-settings.md)
+- [Genel erişim adresi ve HTTPS](public-host-https-certificate.md)

@@ -1,172 +1,172 @@
-# Yeni Kay?t Ekran?
+# Yeni Kayıt Ekranı
 
-Genel ?st ?ubuktaki **Yeni kay?t ekle** denetimi Parola, API anahtar?, G?venli not, Sertifika ve Dosya se?eneklerini a?ar; se?ilen t?r? yerel Yeni kay?t d?zenleyicisinde g?sterir. D?zenleyicideki `?` bu k?lavuzu a?ar. Ba?ar?l? kaydetme, ?ifreli kayd? o anda aktif olan kasada olu?turur. D?zenleyicide otomatik kay?t, taslak saklama, ?ablon se?ici veya otomatik rotasyon i?lemi yoktur.
+Genel üst çubuktaki **Yeni kayıt ekle** denetimi Parola, API anahtarı, Güvenli not, Sertifika ve Dosya seçeneklerini açar; seçilen türü yerel Yeni kayıt düzenleyicisinde gösterir. Düzenleyicideki `?` bu kılavuzu açar. Başarılı kaydetme, şifreli kaydı o anda aktif olan kasada oluşturur. Düzenleyicide otomatik kayıt, taslak saklama, şablon seçici veya otomatik rotasyon işlemi yoktur.
 
-## Eri?im, Aktif Kasa ve Lisans S?n?r?
+## Erişim, Aktif Kasa ve Lisans Sınırı
 
-Genel se?ici ve yerel d?zenleyici Auditor rol?yle a??labilir; bu durum yazma yetkisi vermez. Kaydetmek i?in kilidi a??k bir aktif kasa ve bu kasan?n taray?c?da tutulan anahtar? gerekir. Oturum a?an ki?i sistem d?zeyinde Owner, Admin veya User olmal?; ayr?ca aktif kasada **Editor** ya da **Manager** yetkisine sahip olmal?d?r. Auditor, kasa **Viewer** rol? ve salt okunur lisans durumunda Kaydet denetimi devre d???d?r. ?stemci denetimi a??lmaya ?al???lsa bile sunucu oturumu, lisans?, kasay? ve rol? ba??ms?z olarak do?rular.
+Genel seçici ve yerel düzenleyici Auditor rolüyle açılabilir; bu durum yazma yetkisi vermez. Kaydetmek için kilidi açık bir aktif kasa ve bu kasanın tarayıcıda tutulan anahtarı gerekir. Oturum açan kişi sistem düzeyinde Owner, Admin veya User olmalı; ayrıca aktif kasada **Editor** ya da **Manager** yetkisine sahip olmalıdır. Auditor, kasa **Viewer** rolü ve salt okunur lisans durumunda Kaydet denetimi devre dışıdır. İstemci denetimi aşılmaya çalışılsa bile sunucu oturumu, lisansı, kasayı ve rolü bağımsız olarak doğrular.
 
-Yeni kay?t ekran?nda kasa se?ici yoktur. Kay?t, **?ifreli kayd? kaydet** se?ildi?i s?rada aktif olan kasaya yaz?l?r. Hassas bilgi girmeden ?nce aktif kasay? ba?ka bir ekrandan do?rulay?n. Elle olu?turulan Parola, API anahtar?, G?venli not, Sertifika ve Dosya kay?tlar? i?in yazmaya a??k lisans d???nda ayr? bir ?zellik lisans? aranmaz.
+Yeni kayıt ekranında kasa seçici yoktur. Kayıt, **Şifreli kaydı kaydet** seçildiği sırada aktif olan kasaya yazılır. Hassas bilgi girmeden önce aktif kasayı başka bir ekrandan doğrulayın. Elle oluşturulan Parola, API anahtarı, Güvenli not, Sertifika ve Dosya kayıtları için yazmaya açık lisans dışında ayrı bir özellik lisansı aranmaz.
 
-## Elle Olu?turulabilen Kay?t T?rleri
+## Elle Oluşturulabilen Kayıt Türleri
 
-T?r ?eridinde be? se?enek bulunur:
+Tür şeridinde beş seçenek bulunur:
 
-| T?r | Kaydetmek i?in zorunlu | ?ste?e ba?l? ba?lam |
+| Tür | Kaydetmek için zorunlu | İsteğe bağlı bağlam |
 | --- | --- | --- |
-| Parola | Ba?l?k ve Parola. | Kullan?c? ad?/e-posta, oturum a?ma adresi, not. |
-| API anahtar? | Ba?l?k ve API anahtar? ya da token. | ?stemci/sahip/servis hesab?, konsol adresi, kapsam veya rotasyon notu. |
-| G?venli not | Ba?l?k ile ?ifreli not veya ?ste?e ba?l? gizli de?er alanlar?ndan en az biri. | Sahip/ekip ve ilgili sistem bilgisi. |
-| Sertifika | Ba?l?k ile sertifika veya ?zel anahtar materyali. | Sahip/servis, u? nokta, not, sona erme tarihi, Subject/CN ve sertifika yetkilisi s?n?f?. |
-| Dosya | Ba?l?k ve yeni kay?t i?in se?ilmi? tek dosya. | Sahip/al?c?, ilgili sistem/talep ve dosya notu. |
+| Parola | Başlık ve Parola. | Kullanıcı adı/e-posta, oturum açma adresi, not. |
+| API anahtarı | Başlık ve API anahtarı ya da token. | İstemci/sahip/servis hesabı, konsol adresi, kapsam veya rotasyon notu. |
+| Güvenli not | Başlık ile Şifreli not veya İsteğe bağlı gizli değer alanlarından en az biri. | Sahip/ekip ve ilgili sistem bilgisi. |
+| Sertifika | Başlık ile sertifika veya özel anahtar materyali. | Sahip/servis, uç nokta, not, sona erme tarihi, Subject/CN ve sertifika yetkilisi sınıfı. |
+| Dosya | Başlık ve yeni kayıt için seçilmiş tek dosya. | Sahip/alıcı, ilgili sistem/talep ve dosya notu. |
 
-`CREDENTIAL`, saklanabilen bir s?r t?r?d?r ancak elle se?im ?eridinde bilerek g?sterilmez. Yeni Active Directory kimlik bilgisi kay?tlar? ajan e?itlemesiyle olu?turulur. Elle kimlik bilgisi olu?turma giri?imi reddedilir ve form **Entegrasyonlar > Active Directory** b?l?m?ne y?nlendirir. Yeni kay?t ekran?n? RDP veya SSH kimlik bilgisi olu?turuyormu? gibi anlatmay?n.
+`CREDENTIAL`, saklanabilen bir sır türüdür ancak elle seçim şeridinde bilerek gösterilmez. Yeni Active Directory kimlik bilgisi kayıtları ajan eşitlemesiyle oluşturulur. Elle kimlik bilgisi oluşturma girişimi reddedilir ve form **Entegrasyonlar > Active Directory** bölümüne yönlendirir. Yeni kayıt ekranını RDP veya SSH kimlik bilgisi oluşturuyormuş gibi anlatmayın.
 
-Bu formda genel bir Sahip veya Etiketler denetimi yoktur. Hesap alan? t?re ?zg? ba?lamd?r; her durumda sahip alan? say?lmaz. Sertifika yetkilisi se?imi denetimli sertifika etiketleri ekler, di?er genel etiketler burada d?zenlenmez.
+Bu formda genel bir Sahip veya Etiketler denetimi yoktur. Hesap alanı türe özgü bağlamdır; her durumda sahip alanı sayılmaz. Sertifika yetkilisi seçimi denetimli sertifika etiketleri ekler, diğer genel etiketler burada düzenlenmez.
 
-## Burada Ne Yap?l?r
+## Burada Ne Yapılır
 
-- Zorunlu de?eri girmeden ?nce elle olu?turulabilen be? kay?t t?r?nden birini se?in.
-- A??k bir ba?l?k yaz?n; yaln?z kayd? g?venle bulmak ve i?letmek i?in gereken ba?lam alanlar?n? doldurun.
-- De?eri ?retin veya yap??t?r?n. Sunuluyorsa ve kurum ilkesi izin veriyorsa iste?e ba?l? s?z?nt? kontrol?n? ayr?ca ?al??t?r?n.
-- Sertifika materyalini i?e aktar?n ya da belgelenen s?n?rlar i?inde tek dosya se?in.
-- **?ifreli kayd? kaydet** se?ene?ine basmadan ?nce aktif kasay? ve yazma yetkisini yeniden kontrol edin.
-- Mevcut formu silip se?ili t?r?n listesine d?nmek i?in geri okunu kullan?n.
+- Zorunlu değeri girmeden önce elle oluşturulabilen beş kayıt türünden birini seçin.
+- Açık bir başlık yazın; yalnız kaydı güvenle bulmak ve işletmek için gereken bağlam alanlarını doldurun.
+- Değeri üretin veya yapıştırın. Sunuluyorsa ve kurum ilkesi izin veriyorsa isteğe bağlı sızıntı kontrolünü ayrıca çalıştırın.
+- Sertifika materyalini içe aktarın ya da belgelenen sınırlar içinde tek dosya seçin.
+- **Şifreli kaydı kaydet** seçeneğine basmadan önce aktif kasayı ve yazma yetkisini yeniden kontrol edin.
+- Mevcut formu silip seçili türün listesine dönmek için geri okunu kullanın.
 
-## T?r De?i?ikli?i ve Ortak Taslak Alanlar?
+## Tür Değişikliği ve Ortak Taslak Alanları
 
-Be? elle kay?t t?r? aras?nda ge?i? yapmak etiketleri ve ?zel denetimleri de?i?tirir; ayr? ve ba??ms?z yeni bir taslak ba?latmaz. Ba?l?k, hesap, gizli de?er, adres, not, sertifika bilgileri, dosya bilgisi veya se?imi, kategori, kaynak ve etiketler ortak form durumunda kalabilir; yaln?z kimlik bilgisine ?zg? ba?lant? alanlar? ??kar?l?r. Bu nedenle sertifika, dosya veya s?n?fland?rma verisi ba?ka bir t?rde gizlenebilir, yeniden g?r?nebilir ya da sonraki kaydetmeyi etkileyebilir.
+Beş elle kayıt türü arasında geçiş yapmak etiketleri ve özel denetimleri değiştirir; ayrı ve bağımsız yeni bir taslak başlatmaz. Başlık, hesap, gizli değer, adres, not, sertifika bilgileri, dosya bilgisi veya seçimi, kategori, kaynak ve etiketler ortak form durumunda kalabilir; yalnız kimlik bilgisine özgü bağlantı alanları çıkarılır. Bu nedenle sertifika, dosya veya sınıflandırma verisi başka bir türde gizlenebilir, yeniden görünebilir ya da sonraki kaydetmeyi etkileyebilir.
 
-Materyal girmeden ?nce genel se?iciden do?ru t?r? a??n. Sertifika i?e aktard?ktan, dosya se?tikten veya sertifika yetkilisi s?n?f? belirledikten sonra t?r de?i?tiyse en g?venli yol formu s?f?rlamak ya da geri d?nmek, do?ru t?r? yeniden a?mak ve g?ncel materyali yeniden girmek veya se?mektir. T?r? bilerek de?i?tirdiyseniz Kaydet ?ncesinde hem g?r?nen alanlar? hem daha ?nce girilmi? gizli veriyi yeniden kontrol edin. Form g?nderilene kadar hi?bir alan kaydedilmez; otomatik kay?t veya kay?tl? taslak listesi yoktur.
+Materyal girmeden önce genel seçiciden doğru türü açın. Sertifika içe aktardıktan, dosya seçtikten veya sertifika yetkilisi sınıfı belirledikten sonra tür değiştiyse en güvenli yol formu sıfırlamak ya da geri dönmek, doğru türü yeniden açmak ve güncel materyali yeniden girmek veya seçmektir. Türü bilerek değiştirdiyseniz Kaydet öncesinde hem görünen alanları hem daha önce girilmiş gizli veriyi yeniden kontrol edin. Form gönderilene kadar hiçbir alan kaydedilmez; otomatik kayıt veya kayıtlı taslak listesi yoktur.
 
-## De?er ?retme, G?? ve S?z?nt? Kontrol?
+## Değer Üretme, Güç ve Sızıntı Kontrolü
 
-Parola ?retici, Dosya d???ndaki b?t?n elle kay?t t?rlerinde kullan?labilir. K???k harfler se?im havuzunda her zaman bulunur; B?y?k harf, Rakam ve Sembol se?enekleri kendi k?melerini bu havuza ekler. Birle?ik havuzdan rastgele se?im, k???k harf dahil herhangi bir k?meden en az bir karakter gelece?ini garanti etmez. G?r?nen uzunluk ayar? 12?64 karakter aral???ndad?r; varsay?lan de?er 24't?r ve ?? se?enek de a??kt?r. ?retim taray?c?n?n kriptografik rastgeleli?ini kullan?r, mevcut gizli de?er alan?n?n ?zerine yazar ve kayd? kendili?inden kaydetmez.
+Parola üretici, Dosya dışındaki bütün elle kayıt türlerinde kullanılabilir. Küçük harfler seçim havuzunda her zaman bulunur; Büyük harf, Rakam ve Sembol seçenekleri kendi kümelerini bu havuza ekler. Birleşik havuzdan rastgele seçim, küçük harf dahil herhangi bir kümeden en az bir karakter geleceğini garanti etmez. Görünen uzunluk ayarı 12–64 karakter aralığındadır; varsayılan değer 24'tür ve üç seçenek de açıktır. Üretim tarayıcının kriptografik rastgeleliğini kullanır, mevcut gizli değer alanının üzerine yazar ve kaydı kendiliğinden kaydetmez.
 
-**K?sa / Haz?r / G??l?** g?stergesi yaln?z uzunlu?a g?re bilgi verir: 16 karakterden az, 16?23 veya 24 ve ?zeri. ?lke karar?, entropi kan?t?, s?z?nt? sonucu ya da kaydetme ko?ulu de?ildir.
+**Kısa / Hazır / Güçlü** göstergesi yalnız uzunluğa göre bilgi verir: 16 karakterden az, 16–23 veya 24 ve üzeri. İlke kararı, entropi kanıtı, sızıntı sonucu ya da kaydetme koşulu değildir.
 
-S?z?nt? d??mesi g?sterildi?inde kontrol ancak operat?r d??meye bast?ktan sonra ?al???r. Taray?c? de?erin SHA-1 ?zetini al?r ve HIBP Pwned Passwords aral?k servisine yaln?z ilk be? ?zet karakterini g?nderir; tam de?er g?nderilmez. Formdaki sonu? mevcut alan?n ?zetiyle ba?l? tutulmaz: kontrol sonras?nda de?er ?retmek, yap??t?rmak veya d?zenlemek eski sonucu ekranda b?rakabilir; bu sonu?, Dosya d???ndaki ba?ar?l? kay?ttan sonra kayd?n taray?c?daki yerel s?z?nt? durumuna aktar?labilir. ?nce son de?eri belirleyin, ard?ndan Kaydet'e basmadan hemen ?nce s?z?nt? kontrol?n? yeniden ?al??t?r?n. Kontrol hatas? kayd? kaydetmez veya de?i?tirmez; ekrandaki eski sonucun g?ncel de?erle e?le?ti?ini de kan?tlamaz.
+Sızıntı düğmesi gösterildiğinde kontrol ancak operatör düğmeye bastıktan sonra çalışır. Tarayıcı değerin SHA-1 özetini alır ve HIBP Pwned Passwords aralık servisine yalnız ilk beş özet karakterini gönderir; tam değer gönderilmez. Formdaki sonuç mevcut alanın özetiyle bağlı tutulmaz: kontrol sonrasında değer üretmek, yapıştırmak veya düzenlemek eski sonucu ekranda bırakabilir; bu sonuç, Dosya dışındaki başarılı kayıttan sonra kaydın tarayıcıdaki yerel sızıntı durumuna aktarılabilir. Önce son değeri belirleyin, ardından Kaydet'e basmadan hemen önce sızıntı kontrolünü yeniden çalıştırın. Kontrol hatası kaydı kaydetmez veya değiştirmez; ekrandaki eski sonucun güncel değerle eşleştiğini de kanıtlamaz.
 
-## Sertifika ??leme
+## Sertifika İşleme
 
-Sertifika materyali **Sertifika veya ?zel anahtar** alan?na yap??t?r?labilir ya da dosyadan i?e aktar?labilir. Dosya se?ici PEM, CRT, CER, DER, P7B/P7C, PFX/P12/PKCS12, P8/P8E/PK8 ve KEY bi?imlerini sunar. Se?ilen sertifika dosyas? en fazla 10 MB olabilir.
+Sertifika materyali **Sertifika veya özel anahtar** alanına yapıştırılabilir ya da dosyadan içe aktarılabilir. Dosya seçici PEM, CRT, CER, DER, P7B/P7C, PFX/P12/PKCS12, P8/P8E/PK8 ve KEY biçimlerini sunar. Seçilen sertifika dosyası en fazla 10 MB olabilir.
 
-??e aktarma s?ras?nda taray?c? SHA-256 ?zetini hesaplar ve dosyan?n ?zg?n baytlar?n? ?ifreli kay?t y?k?n?n i?ine koyar. Metin bi?imleri ??z?mlenir; bulundu?unda basit `Subject`, `Issuer`, `Serial` ve sona erme etiketleri okunur. ?kili bi?imler base64 materyali olarak sar?l?r. Bu i?lem envantere i?e aktarmad?r; sertifika zinciri veya ?zel anahtar i?in tam do?rulama de?ildir. **Sertifika dosyas? ?ifreli kay?t alan?na al?nd?.** bildirimi, materyalin mevcut formda bulundu?u anlam?na gelir; Kaydet ba?ar?l? olana kadar kay?t kal?c? de?ildir.
+İçe aktarma sırasında tarayıcı SHA-256 özetini hesaplar ve dosyanın özgün baytlarını şifreli kayıt yükünün içine koyar. Metin biçimleri çözümlenir; bulunduğunda basit `Subject`, `Issuer`, `Serial` ve sona erme etiketleri okunur. İkili biçimler base64 materyali olarak sarılır. Bu işlem envantere içe aktarmadır; sertifika zinciri veya özel anahtar için tam doğrulama değildir. **Sertifika dosyası şifreli kayıt alanına alındı.** bildirimi, materyalin mevcut formda bulunduğu anlamına gelir; Kaydet başarılı olana kadar kayıt kalıcı değildir.
 
-Sona erme tarihi ve Subject/CN formda d?zeltilebilir. DigiCert, GoDaddy, GlobalSign, Let's Encrypt, Microsoft CA veya Self-signed se?mek yaln?z kayd?n sertifika kategorisini ve s?n?fland?rma etiketlerini de?i?tirir. ?lgili sertifika yetkilisine ba?lanmaz; hesab? do?rulamaz; sertifika sipari? etmez, yenilemez, yeniden d?zenlemez, iptal etmez veya da??tmaz.
+Sona erme tarihi ve Subject/CN formda düzeltilebilir. DigiCert, GoDaddy, GlobalSign, Let's Encrypt, Microsoft CA veya Self-signed seçmek yalnız kaydın sertifika kategorisini ve sınıflandırma etiketlerini değiştirir. İlgili sertifika yetkilisine bağlanmaz; hesabı doğrulamaz; sertifika sipariş etmez, yenilemez, yeniden düzenlemez, iptal etmez veya dağıtmaz.
 
-## Dosya ??leme ve S?n?rlar
+## Dosya İşleme ve Sınırlar
 
-Yeni Dosya kayd? i?in tek dosya se?ilmelidir. Se?im form t?r?n? Dosya olarak de?i?tirir, Ba?l?k h?l? bo?sa dosya ad?n? ba?l?k olarak doldurur, gizli de?er alan?n? temizler ve boyut ile par?a say?s?n? g?sterir. Parola ?retici ve gizli de?er d?zenleyicisi Dosya t?r?nde bulunmaz.
+Yeni Dosya kaydı için tek dosya seçilmelidir. Seçim form türünü Dosya olarak değiştirir, Başlık hâlâ boşsa dosya adını başlık olarak doldurur, gizli değer alanını temizler ve boyut ile parça sayısını gösterir. Parola üretici ve gizli değer düzenleyicisi Dosya türünde bulunmaz.
 
-Dosya boyutu ve depolama tavan?, aktif kasada kullan?c? ba??na 1 GB'dir. Dosyalar en fazla 2 MB'lik par?alara ayr?l?r ve en ?ok 512 par?a olabilir. Kaydet s?ras?nda taray?c? ?nce b?t?n dosyan?n SHA-256 ?zetini hesaplar, ?ifreli Dosya kayd?n? olu?turur, o kayd?n varsa mevcut par?alar?n? temizler; ard?ndan her par?ay? aktif kasa anahtar?yla ?ifreleyip y?kler. Sunucu kota uygulamak i?in ?ifreli par?alarla birlikte boyut ve par?a konumu bilgisini saklar; d?z metin dosya baytlar?n? almaz.
+Dosya boyutu ve depolama tavanı, aktif kasada kullanıcı başına 1 GB'dir. Dosyalar en fazla 2 MB'lik parçalara ayrılır ve en çok 512 parça olabilir. Kaydet sırasında tarayıcı önce bütün dosyanın SHA-256 özetini hesaplar, şifreli Dosya kaydını oluşturur, o kaydın varsa mevcut parçalarını temizler; ardından her parçayı aktif kasa anahtarıyla şifreleyip yükler. Sunucu kota uygulamak için şifreli parçalarla birlikte boyut ve parça konumu bilgisini saklar; düz metin dosya baytlarını almaz.
 
-Dosya kayd?n?n olu?turulmas? ve par?alar?n y?klenmesi ayr? i?lemlerdir. Kay?t olu?turulduktan veya baz? par?alar kabul edildikten sonra y?kleme ba?ar?s?z olursa otomatik i?lem geri alma yoktur. Yeniden denemeden ya da kayd? de?i?tirmeden ?nce Dosyalar ekran?n? yenileyip kay?t ile par?alar?n kullan?labilirli?ini do?rulay?n. Hata bildiriminin hi? kay?t veya k?smi y?kleme kalmad???n? kan?tlad???n? varsaymay?n.
+Dosya kaydının oluşturulması ve parçaların yüklenmesi ayrı işlemlerdir. Kayıt oluşturulduktan veya bazı parçalar kabul edildikten sonra yükleme başarısız olursa otomatik işlem geri alma yoktur. Yeniden denemeden ya da kaydı değiştirmeden önce Dosyalar ekranını yenileyip kayıt ile parçaların kullanılabilirliğini doğrulayın. Hata bildiriminin hiç kayıt veya kısmi yükleme kalmadığını kanıtladığını varsaymayın.
 
-## Taray?c? ?ifrelemesi, Kaydetme ve Denetim Sonucu
+## Tarayıcı Şifrelemesi, Kaydetme ve Denetim Sonucu
 
-Dosya d???ndaki kay?tlar i?in taray?c? form y?k?n?n tamam?n? serile?tirir ve sunucuyu ?a??rmadan ?nce aktif kasa anahtar?yla AES-GCM kullanarak ?ifreler. Sunucu ?ifreli zarf?, kay?t t?r?n?, kasa kimli?ini, oturum rol?n?, lisans kipini ve kasa yazma yetkisini do?rular; d?z metin ba?l?k, hesap, de?er, adres, not veya sertifika materyalini almaz.
+Dosya dışındaki kayıtlar için tarayıcı form yükünün tamamını serileştirir ve sunucuyu çağırmadan önce aktif kasa anahtarıyla AES-GCM kullanarak şifreler. Sunucu şifreli zarfı, kayıt türünü, kasa kimliğini, oturum rolünü, lisans kipini ve kasa yazma yetkisini doğrular; düz metin başlık, hesap, değer, adres, not veya sertifika materyalini almaz.
 
-Taray?c?n?n yerle?ik zorunlu alan do?rulamas?; g?nderme i?leyicisinden, taray?c? ?ifrelemesinden ve sunucu iste?inden ?nce ?al???r. Bu do?rulama ge?erse g?nderme i?leyicisi a?a??daki ko?ullar? s?rayla kontrol eder:
+Tarayıcının yerleşik zorunlu alan doğrulaması; gönderme işleyicisinden, tarayıcı şifrelemesinden ve sunucu isteğinden önce çalışır. Bu doğrulama geçerse gönderme işleyicisi aşağıdaki koşulları sırayla kontrol eder:
 
-1. Aktif kasa ve taray?c?daki kasa anahtar? bulunmal?d?r.
-2. Lisans ve aktif kasa rol? yazmaya izin vermelidir.
-3. Yeni Active Directory kimlik bilgisi bu ekrandan olu?turulamaz.
-4. Her t?r i?in Ba?l?k zorunludur.
-5. Parola, API anahtar? ve Sertifika i?in gizli de?er bo? b?rak?lamaz.
-6. G?venli not i?in not i?eri?i veya iste?e ba?l? gizli de?er bulunmal?d?r.
-7. Yeni Dosya i?in se?ilmi? ya da formda kalm?? dosya bilgisi bulunmal?; yeni se?ilen dosya 1 GB s?n?r?n? a?mamal?d?r.
+1. Aktif kasa ve tarayıcıdaki kasa anahtarı bulunmalıdır.
+2. Lisans ve aktif kasa rolü yazmaya izin vermelidir.
+3. Yeni Active Directory kimlik bilgisi bu ekrandan oluşturulamaz.
+4. Her tür için Başlık zorunludur.
+5. Parola, API anahtarı ve Sertifika için gizli değer boş bırakılamaz.
+6. Güvenli not için not içeriği veya isteğe bağlı gizli değer bulunmalıdır.
+7. Yeni Dosya için seçilmiş ya da formda kalmış dosya bilgisi bulunmalı; yeni seçilen dosya 1 GB sınırını aşmamalıdır.
 
-Bu taray?c? kontrolleri operat?re geri bildirim sa?lar; yetkilendirme s?n?r? de?ildir. ??leyici y?k? ?ifreledikten sonra sunucu oturumu, ?ifreli zarf?, kay?t t?r?n?, kasa kimli?ini, lisans kipini ve kasa yazma rol?n? ba??ms?z olarak do?rular. Eri?imi korumak i?in yerel Kaydet d??mesine veya yerel zorunlu alanlara g?venmez.
+Bu tarayıcı kontrolleri operatöre geri bildirim sağlar; yetkilendirme sınırı değildir. İşleyici yükü şifreledikten sonra sunucu oturumu, şifreli zarfı, kayıt türünü, kasa kimliğini, lisans kipini ve kasa yazma rolünü bağımsız olarak doğrular. Erişimi korumak için yerel Kaydet düğmesine veya yerel zorunlu alanlara güvenmez.
 
-Sertifika i?e aktarma, ?ifreleme, kaydetme veya dosya y?kleme s?rerken g?nderme denetimi devre d??? kal?r ve ilerleme g?sterilir. Aktif kaydetme veya y?kleme i?lemi i?in form i?inde iptal d??mesi yoktur.
+Sertifika içe aktarma, şifreleme, kaydetme veya dosya yükleme sürerken gönderme denetimi devre dışı kalır ve ilerleme gösterilir. Aktif kaydetme veya yükleme işlemi için form içinde iptal düğmesi yoktur.
 
-Ba?ar?l? olu?turmadan sonra Parola, API anahtar? ve G?venli not `CREATE`; Sertifika ve Dosya ise `IMPORT` denetim olay? yazar. Dosya par?alar?n? haz?rlama, kayd?n mevcut par?a k?mesini temizledi?i i?in ayr?ca `EDIT` denetim olay? ?retir. Form s?f?rlan?r, ilgili kay?t listesi a??l?r, s?r ve denetim sorgular? yenilenir. Ba?ar? bildirimi sunucuda ?ifreli saklamay? do?rular; kimlik bilgisinin s?nand???n?, sertifikan?n da??t?ld???n? veya dosyan?n ba?ar?yla a??ld???n? g?stermez.
+Başarılı oluşturmadan sonra Parola, API anahtarı ve Güvenli not `CREATE`; Sertifika ve Dosya ise `IMPORT` denetim olayı yazar. Dosya parçalarını hazırlama, kaydın mevcut parça kümesini temizlediği için ayrıca `EDIT` denetim olayı üretir. Form sıfırlanır, ilgili kayıt listesi açılır, sır ve denetim sorguları yenilenir. Başarı bildirimi sunucuda şifreli saklamayı doğrular; kimlik bilgisinin sınandığını, sertifikanın dağıtıldığını veya dosyanın başarıyla açıldığını göstermez.
 
-## ?ptal ve Hata Davran???
+## İptal ve Hata Davranışı
 
-- Geri oku yerel formu s?f?rlar ve kaydedilmemi? de?i?iklik onay? g?stermeden se?ili t?r?n listesine d?ner. Gezinme, ba?lam?? sertifika okuma, kaydetme veya y?kleme i?ini durdurmaz. Gezinmeyi iptal y?ntemi olarak kullanmay?n; tamamlanma ya da hatay? bekleyip listeyi ve Denetim G?nl???n? uzla?t?r?n.
-- Yeni kay?t i?in ayr? ?ptal d??mesi yoktur. **D?zenlemeyi iptal et** yaln?z mevcut ve d?zenlenebilir bir kay?tta g?r?n?r; se?ildi?inde d?zenleme kipini kapat?r ve kay?t listesine d?nmek yerine Yeni kay?t ekran?nda bo? bir Parola tasla?? b?rak?r.
-- S?n?r? a?an Dosya reddedildi?inde o anki se?ici temizlenir ancak ?nceki dosya bilgisi ortak formda kalabilir. S?n?r? a?an veya okunamayan sertifika dosya giri?ini temizler ancak ?nceki sertifika materyali, bilgileri veya s?n?fland?rma etiketleri kalabilir. Bu hatalardan sonra formu s?f?rlay?n ya da Yeni kay?ttan ??k?p yeniden a??n; do?ru t?r? ve g?ncel dosyay? yeniden se?ip Kaydet ?ncesinde ?zeti do?rulay?n.
-- ?o?u do?rulama ve kaydetme hatas?nda form, operat?r?n d?zeltme yapabilmesi i?in bellekte kal?r. Sayfay? yenileme, kilitleme, gezinme s?f?rlamas? veya geri okunun tasla?? saklayaca??n? d???nmeyin.
-- Ba?ar?s?z kaydetme ekranda hata ve canl? uygulama bildirimi ?retir. Yan?t?n tamam?n? veya form i?eri?ini herkese a??k deste?e yap??t?rmay?n.
-- Dosya y?kleme kay?t olu?turulduktan sonra ba?ar?s?z olabilir; yeniden denemeye karar vermeden ?nce Dosyalar ve Denetim G?nl??? ekranlar?n? kontrol edin.
+- Geri oku yerel formu sıfırlar ve kaydedilmemiş değişiklik onayı göstermeden seçili türün listesine döner. Gezinme, başlamış sertifika okuma, kaydetme veya yükleme işini durdurmaz. Gezinmeyi iptal yöntemi olarak kullanmayın; tamamlanma ya da hatayı bekleyip listeyi ve Denetim Günlüğünü uzlaştırın.
+- Yeni kayıt için ayrı İptal düğmesi yoktur. **Düzenlemeyi iptal et** yalnız mevcut ve düzenlenebilir bir kayıtta görünür; seçildiğinde düzenleme kipini kapatır ve kayıt listesine dönmek yerine Yeni kayıt ekranında boş bir Parola taslağı bırakır.
+- Sınırı aşan Dosya reddedildiğinde o anki seçici temizlenir ancak önceki dosya bilgisi ortak formda kalabilir. Sınırı aşan veya okunamayan sertifika dosya girişini temizler ancak önceki sertifika materyali, bilgileri veya sınıflandırma etiketleri kalabilir. Bu hatalardan sonra formu sıfırlayın ya da Yeni kayıttan çıkıp yeniden açın; doğru türü ve güncel dosyayı yeniden seçip Kaydet öncesinde özeti doğrulayın.
+- Çoğu doğrulama ve kaydetme hatasında form, operatörün düzeltme yapabilmesi için bellekte kalır. Sayfayı yenileme, kilitleme, gezinme sıfırlaması veya geri okunun taslağı saklayacağını düşünmeyin.
+- Başarısız kaydetme ekranda hata ve canlı uygulama bildirimi üretir. Yanıtın tamamını veya form içeriğini herkese açık desteğe yapıştırmayın.
+- Dosya yükleme kayıt oluşturulduktan sonra başarısız olabilir; yeniden denemeye karar vermeden önce Dosyalar ve Denetim Günlüğü ekranlarını kontrol edin.
 
-## ?nerilen ?? Ak??lar?
+## Önerilen İş Akışları
 
-### Parola, API anahtar? veya G?venli not olu?turma
+### Parola, API anahtarı veya Güvenli not oluşturma
 
-1. Aktif kasay? ve Editor ya da Manager rol?n? do?rulay?n.
-2. Kesin kay?t t?r?n? se?ip Ba?l?k girin.
-3. Zorunlu de?eri ekleyin; G?venli not i?in not i?eri?i, gizli de?er veya ikisini birden kullan?n.
-4. Yaln?z gerekli hesap, adres ve i?letim ba?lam?n? ekleyin.
-5. ?sterseniz de?er ?retin. Son de?eri belirledikten sonra Kaydet'e basmadan hemen ?nce s?z?nt? kontrol?n? ?al??t?r?n; bu i?lemlerin hi?biri otomatik kaydetmez.
-6. **?ifreli kayd? kaydet** se?ene?ine bas?n, tamamlanmas?n? bekleyin ve beklenen liste ile denetim olay?n? do?rulay?n.
+1. Aktif kasayı ve Editor ya da Manager rolünü doğrulayın.
+2. Kesin kayıt türünü seçip Başlık girin.
+3. Zorunlu değeri ekleyin; Güvenli not için not içeriği, gizli değer veya ikisini birden kullanın.
+4. Yalnız gerekli hesap, adres ve işletim bağlamını ekleyin.
+5. İsterseniz değer üretin. Son değeri belirledikten sonra Kaydet'e basmadan hemen önce sızıntı kontrolünü çalıştırın; bu işlemlerin hiçbiri otomatik kaydetmez.
+6. **Şifreli kaydı kaydet** seçeneğine basın, tamamlanmasını bekleyin ve beklenen liste ile denetim olayını doğrulayın.
 
-### Sertifika kayd? i?e aktarma
+### Sertifika kaydı içe aktarma
 
-1. Sertifika t?r?n? se?ip hassas olmayan bir ba?l?k girin.
-2. Onayl? materyali yap??t?r?n veya 10 MB'yi a?mayan destekli bir dosya se?in.
-3. SHA-256, bi?im, sona erme tarihi, Subject/CN ve sertifika yetkilisi s?n?f?n? inceleyin. ??e aktar?ld? bildirimi, do?ruland? veya kaydedildi anlam?na gelmez.
-4. Kaydedin ve `IMPORT` denetim olay?n? do?rulay?n.
-5. Envanter incelemesi i?in Sertifikalar ekran?n?, VaultPilot HTTPS paketi i?in Sunucu ayarlar?n? kullan?n; bu ekran da??t?m yapmaz.
+1. Sertifika türünü seçip hassas olmayan bir başlık girin.
+2. Onaylı materyali yapıştırın veya 10 MB'yi aşmayan destekli bir dosya seçin.
+3. SHA-256, biçim, sona erme tarihi, Subject/CN ve sertifika yetkilisi sınıfını inceleyin. İçe aktarıldı bildirimi, doğrulandı veya kaydedildi anlamına gelmez.
+4. Kaydedin ve `IMPORT` denetim olayını doğrulayın.
+5. Envanter incelemesi için Sertifikalar ekranını, VaultPilot HTTPS paketi için Sunucu ayarlarını kullanın; bu ekran dağıtım yapmaz.
 
 ### Dosya saklama
 
-1. Kullan?c? ve kasa ba??na kullan?labilir kotay? do?rulay?n; 1 GB'yi a?mayan bir dosya se?in.
-2. Otomatik ?nerilen ba?l???, dosya ad?n?, boyutu, par?a say?s?n? ve hedef kasay? inceleyin.
-3. Kaydedin; ?zet alma, ?ifreleme ve y?kleme tamamlan?rken sayfay? a??k tutun.
-4. Y?klemeyi tamamlanm?? saymadan ?nce Dosyalar ekran?n? a??n ve kayd?n geri al?nabildi?ini do?rulay?n.
-5. Hata olu?tuysa yeniden denemeden ?nce Dosyalar ve Denetim G?nl???nde olu?turulmu? kay?t veya k?smi par?a durumu bulunup bulunmad???n? inceleyin.
+1. Kullanıcı ve kasa başına kullanılabilir kotayı doğrulayın; 1 GB'yi aşmayan bir dosya seçin.
+2. Otomatik önerilen başlığı, dosya adını, boyutu, parça sayısını ve hedef kasayı inceleyin.
+3. Kaydedin; özet alma, şifreleme ve yükleme tamamlanırken sayfayı açık tutun.
+4. Yüklemeyi tamamlanmış saymadan önce Dosyalar ekranını açın ve kaydın geri alınabildiğini doğrulayın.
+5. Hata oluştuysa yeniden denemeden önce Dosyalar ve Denetim Günlüğünde oluşturulmuş kayıt veya kısmi parça durumu bulunup bulunmadığını inceleyin.
 
-## Ekran Durumlar?
+## Ekran Durumları
 
-| Durum | Operat?r cevab? |
+| Durum | Operatör cevabı |
 | --- | --- |
-| Yeni taslak | T?r? se?ip zorunlu alanlar? tamamlay?n; hen?z hi?bir ?ey kal?c? de?ildir. |
-| Kilidi a??k aktif kasa yok | Materyal girmeden veya kaydetmeden ?nce hedef kasay? se?ip kilidini a??n. |
-| Viewer / Auditor | Se?ici veya d?zenleyici a??labilir ancak Kaydet devre d???d?r ve sunucu yazmay? korur. Editor veya Manager kasa yetkisine sahip bir Owner, Admin ya da User hesab? kullan?n. |
-| Salt okunur lisans | G?r?nt?leme s?rebilir ancak Kaydet kapal? kal?r. |
-| T?r de?i?tirildi | Sertifika, dosya veya etiket i?lemi sonras?nda s?f?rlay?p yeniden a?may? tercih edin; aksi durumda ortak ve gizli verinin tamam?n? yeniden kontrol edin. |
-| Ba?l?k veya de?er eksik | Se?ili t?r?n kesin zorunlu alanlar?n? tamamlay?n. |
-| Sertifika i?e aktar?l?yor | Taray?c?n?n okuma ve ?zet alma i?lemini bekleyin; hen?z kaydedilmi? kay?t de?ildir. |
-| Sertifika b?y?k / okunam?yor | ?nceki materyal veya bilgiler kalabilir. S?f?rlay?p yeniden a??n; ard?ndan 10 MB s?n?r?ndaki onayl? dosyay? se?in veya do?rulanm?? metni yap??t?r?n. |
-| Dosya se?ilmedi | Yeni Dosya kayd?n? kaydetmeden ?nce tek dosya se?in. |
-| Dosya b?y?k / kota a??ld? | ?nceki dosya bilgisi kalabilir. S?f?rlay?p yeniden a??n; ard?ndan aktif kasadaki kullan?c? toplam?n? 1 GB i?inde tutan dosyay? se?in. |
-| ?ifreleniyor / y?kleniyor | Sayfay? a??k tutun; devam eden i?lem i?in iptal denetimi yoktur ve gezinme i?i durdurmaz. |
-| Kaydetme ba?ar?l? | Hedef listeyi ve `CREATE` ya da `IMPORT` denetim kan?t?n? do?rulay?n. |
-| Kaydetme ba?ar?s?z | Gizli ayr?nt?lar? koruyun, formu d?zeltin ve Dosya kayd? veya k?smi par?alar?n olu?up olu?mad???n? kontrol edin. |
+| Yeni taslak | Türü seçip zorunlu alanları tamamlayın; henüz hiçbir şey kalıcı değildir. |
+| Kilidi açık aktif kasa yok | Materyal girmeden veya kaydetmeden önce hedef kasayı seçip kilidini açın. |
+| Viewer / Auditor | Seçici veya düzenleyici açılabilir ancak Kaydet devre dışıdır ve sunucu yazmayı korur. Editor veya Manager kasa yetkisine sahip bir Owner, Admin ya da User hesabı kullanın. |
+| Salt okunur lisans | Görüntüleme sürebilir ancak Kaydet kapalı kalır. |
+| Tür değiştirildi | Sertifika, dosya veya etiket işlemi sonrasında sıfırlayıp yeniden açmayı tercih edin; aksi durumda ortak ve gizli verinin tamamını yeniden kontrol edin. |
+| Başlık veya değer eksik | Seçili türün kesin zorunlu alanlarını tamamlayın. |
+| Sertifika içe aktarılıyor | Tarayıcının okuma ve özet alma işlemini bekleyin; henüz kaydedilmiş kayıt değildir. |
+| Sertifika büyük / okunamıyor | Önceki materyal veya bilgiler kalabilir. Sıfırlayıp yeniden açın; ardından 10 MB sınırındaki onaylı dosyayı seçin veya doğrulanmış metni yapıştırın. |
+| Dosya seçilmedi | Yeni Dosya kaydını kaydetmeden önce tek dosya seçin. |
+| Dosya büyük / kota aşıldı | Önceki dosya bilgisi kalabilir. Sıfırlayıp yeniden açın; ardından aktif kasadaki kullanıcı toplamını 1 GB içinde tutan dosyayı seçin. |
+| Şifreleniyor / yükleniyor | Sayfayı açık tutun; devam eden işlem için iptal denetimi yoktur ve gezinme işi durdurmaz. |
+| Kaydetme başarılı | Hedef listeyi ve `CREATE` ya da `IMPORT` denetim kanıtını doğrulayın. |
+| Kaydetme başarısız | Gizli ayrıntıları koruyun, formu düzeltin ve Dosya kaydı veya kısmi parçaların oluşup oluşmadığını kontrol edin. |
 
-## ??lemden ?nce
+## İşlemden Önce
 
-- Aktif kasay? do?rulay?n; bu ekranda kasa se?ici yoktur.
-- Yazmaya a??k lisans? ve o kasadaki Editor ya da Manager eri?imini do?rulay?n.
-- Yeni RDP/SSH kimlik bilgisi kay?tlar? i?in Yeni kay?t yerine Active Directory e?itlemesini kullan?n.
-- Hassas materyal girmeden ?nce t?r? se?in. Sertifika, dosya veya etiket i?leminden sonra t?r de?i?tiyse s?f?rlay?p yeniden a??n; aksi durumda gizli ortak durumu yeniden kontrol edin.
-- Sertifika ve dosyalarda kaynak yetkisini, s?n?fland?rmay?, saklama s?resini, boyutu ve hedefi do?rulay?n.
-- ?retme, s?z?nt? kontrol?, sertifika i?e aktarma ve sertifika yetkilisi se?iminin hi?bir ?eyi kaydetmedi?ini veya da??tmad???n? unutmay?n. Son de?er de?i?ikli?inden sonra, Kaydet'e basmadan hemen ?nce s?z?nt? kontrol?n? yeniden ?al??t?r?n.
+- Aktif kasayı doğrulayın; bu ekranda kasa seçici yoktur.
+- Yazmaya açık lisansı ve o kasadaki Editor ya da Manager erişimini doğrulayın.
+- Yeni RDP/SSH kimlik bilgisi kayıtları için Yeni kayıt yerine Active Directory eşitlemesini kullanın.
+- Hassas materyal girmeden önce türü seçin. Sertifika, dosya veya etiket işleminden sonra tür değiştiyse sıfırlayıp yeniden açın; aksi durumda gizli ortak durumu yeniden kontrol edin.
+- Sertifika ve dosyalarda kaynak yetkisini, sınıflandırmayı, saklama süresini, boyutu ve hedefi doğrulayın.
+- Üretme, sızıntı kontrolü, sertifika içe aktarma ve sertifika yetkilisi seçiminin hiçbir şeyi kaydetmediğini veya dağıtmadığını unutmayın. Son değer değişikliğinden sonra, Kaydet'e basmadan hemen önce sızıntı kontrolünü yeniden çalıştırın.
 
-## G?venli Kan?t
+## Güvenli Kanıt
 
-- Payla??labilir: se?ili elle kay?t t?r?, genel do?rulama durumu, boyut aral???, par?a say?s?, genel denetim eylemi ve yer tutuculu alan haritas?.
-- Gizli kalmal?: ba?l?k, hesap, adres, not, sahip/ekip ba?lam?, sertifika konusu/yay?nc?s?/seri numaras?/?zeti, dosya ad?, kesin boyut ve i? sistem ya da talep bilgisi.
-- Asla payla?may?n: parolalar, API anahtarlar?, tokenlar, sertifika veya ?zel anahtar materyali, PFX/P12 i?eri?i ya da parolas?, dosya i?eri?i, ?ifreli y?kler, kasa anahtarlar? veya formun tam ekran g?r?nt?s?.
-- Ger?ek bir de?er herkese a??k kan?ta girdiyse a???a ??km?? kabul edin; ilgili sistem ?zerinden d?nd?r?n veya iptal edin.
+- Paylaşılabilir: seçili elle kayıt türü, genel doğrulama durumu, boyut aralığı, parça sayısı, genel denetim eylemi ve yer tutuculu alan haritası.
+- Gizli kalmalı: başlık, hesap, adres, not, sahip/ekip bağlamı, sertifika konusu/yayıncısı/seri numarası/özeti, dosya adı, kesin boyut ve iç sistem ya da talep bilgisi.
+- Asla paylaşmayın: parolalar, API anahtarları, tokenlar, sertifika veya özel anahtar materyali, PFX/P12 içeriği ya da parolası, dosya içeriği, şifreli yükler, kasa anahtarları veya formun tam ekran görüntüsü.
+- Gerçek bir değer herkese açık kanıta girdiyse açığa çıkmış kabul edin; ilgili sistem üzerinden döndürün veya iptal edin.
 
-## Ne Zaman Durmal? ve Destek ?stemelisiniz
+## Ne Zaman Durmalı ve Destek İstemelisiniz
 
-Aktif kasa belirsizse, yazma eri?imi beklenmedikse, sertifika veya dosyan?n kayna?? bilinmiyorsa, ?zel anahtar?n a???a ??kt???ndan ??pheleniliyorsa, y?kleme k?smen ilerledikten sonra ba?ar?s?z oluyorsa, kota durumu aray?zle ?eli?iyorsa ya da denetim ve liste sonu?lar? uyu?muyorsa durun. Gizli materyal eklemeden kay?t t?r?n?, genel boyutu, genel hata kodunu, yakla??k zaman aral???n? ve son g?venli ad?m? i?eren ?zel destek kayd? a??n.
+Aktif kasa belirsizse, yazma erişimi beklenmedikse, sertifika veya dosyanın kaynağı bilinmiyorsa, özel anahtarın açığa çıktığından şüpheleniliyorsa, yükleme kısmen ilerledikten sonra başarısız oluyorsa, kota durumu arayüzle çelişiyorsa ya da denetim ve liste sonuçları uyuşmuyorsa durun. Gizli materyal eklemeden kayıt türünü, genel boyutu, genel hata kodunu, yaklaşık zaman aralığını ve son güvenli adımı içeren özel destek kaydı açın.
 
-## Operat?r Notlar?
+## Operatör Notları
 
-Yeni kay?t, istemci taraf?nda ?ifreleme yapan bir formdur; i? ak??? motoru de?ildir. Otomatik kaydetmez, sayfa yenilemeleri aras?nda taslak tutmaz, kimlik bilgilerini s?namaz, Active Directory kay?tlar?n? elle olu?turmaz, sertifika g?venini do?rulamaz, sertifika da??tmaz, dosya taramaz veya d?? sistemlerde rotasyon yapmaz.
+Yeni kayıt, istemci tarafında şifreleme yapan bir formdur; iş akışı motoru değildir. Otomatik kaydetmez, sayfa yenilemeleri arasında taslak tutmaz, kimlik bilgilerini sınamaz, Active Directory kayıtlarını elle oluşturmaz, sertifika güvenini doğrulamaz, sertifika dağıtmaz, dosya taramaz veya dış sistemlerde rotasyon yapmaz.
 
-## ?lgili
+## İlgili
 
-- [Parolalar ekran?](screen-passwords.md)
-- [API anahtarlar? ekran?](screen-api-keys.md)
-- [G?venli notlar ekran?](screen-secure-notes.md)
-- [Sertifikalar ekran?](screen-certificates.md)
-- [Dosyalar ekran?](screen-files.md)
-- [Active Directory kay?tlar? ekran?](screen-active-directory-records.md)
-- [Denetim G?nl??? ekran?](screen-audit-log.md)
+- [Parolalar ekranı](screen-passwords.md)
+- [API anahtarları ekranı](screen-api-keys.md)
+- [Güvenli notlar ekranı](screen-secure-notes.md)
+- [Sertifikalar ekranı](screen-certificates.md)
+- [Dosyalar ekranı](screen-files.md)
+- [Active Directory kayıtları ekranı](screen-active-directory-records.md)
+- [Denetim Günlüğü ekranı](screen-audit-log.md)

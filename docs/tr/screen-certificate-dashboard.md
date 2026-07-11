@@ -1,161 +1,161 @@
-# Sertifika Paneli Ekran?
+# Sertifika Paneli Ekranı
 
-?st ?ubuktaki `?` simgesi Sertifika Paneli ekran?na ait bu rehberi a?ar. Panel, etkin kasadaki sertifika kay?tlar?n? ge?erlilik s?resi, durum, sertifika otoritesi, kaynak ve organizasyon k?r?l?mlar?yla ?zetler. Buradan sertifika materyali y?klenmez, sunucunun HTTPS sertifikas? de?i?tirilmez ve a? taramas? ba?lat?lmaz.
+Üst çubuktaki `?` simgesi Sertifika Paneli ekranına ait bu rehberi açar. Panel, etkin kasadaki sertifika kayıtlarını geçerlilik süresi, durum, sertifika otoritesi, kaynak ve organizasyon kırılımlarıyla özetler. Buradan sertifika materyali yüklenmez, sunucunun HTTPS sertifikası değiştirilmez ve ağ taraması başlatılmaz.
 
-## Veri Kayna?? ve Eri?im
+## Veri Kaynağı ve Erişim
 
-Panelin kayna??, oturum a?an kullan?c?n?n okuma yetkisi bulunan etkin kasadaki ?ifreli `CERTIFICATE` kay?tlar?d?r. Kay?tlar etkin kasa anahtar?yla taray?c?da ??z?ld?kten sonra say?lar ve grafikler bu g?r?n?r kay?tlar ?zerinden hesaplan?r. Ba?ka kasalardaki, Sunucu ayarlar?ndaki veya Discovery bulgular?ndaki sertifikalar bu toplama kendili?inden kat?lmaz.
+Panelin kaynağı, oturum açan kullanıcının okuma yetkisi bulunan etkin kasadaki şifreli `CERTIFICATE` kayıtlarıdır. Kayıtlar etkin kasa anahtarıyla tarayıcıda çözüldükten sonra sayılar ve grafikler bu görünür kayıtlar üzerinden hesaplanır. Başka kasalardaki, Sunucu ayarlarındaki veya Discovery bulgularındaki sertifikalar bu toplama kendiliğinden katılmaz.
 
-Sahip, Y?netici ve Kullan?c? sistem rolleri, etkin kasada okuma yetkileri varsa bu envanteri g?rebilir. Denet?i rol? kasa s?rlar?n? okuyamad??? i?in Sertifika Panelindeki kay?t verisini kullanamaz. Panelde g?r?len **Sahip** alan? bir sertifika kayd?n?n sorumlu bilgisidir; VaultPilot sistem rol? olan **Sahip** ile kar??t?r?lmamal?d?r.
+Sahip, Yönetici ve Kullanıcı sistem rolleri, etkin kasada okuma yetkileri varsa bu envanteri görebilir. Denetçi rolü kasa sırlarını okuyamadığı için Sertifika Panelindeki kayıt verisini kullanamaz. Panelde görülen **Sahip** alanı bir sertifika kaydının sorumlu bilgisidir; VaultPilot sistem rolü olan **Sahip** ile karıştırılmamalıdır.
 
-## Burada Ne Yap?l?r
+## Burada Ne Yapılır
 
-- S?resi dolmu?, 30 g?nl?k yenileme aral???na girmi?, iptal edilmi? veya ge?erlilik tarihi eksik kay?tlar? ay?r?n.
-- Sertifika otoritesi ve kalan g?n ili?kisini radarda inceleyip ilgili kayd?n yaln?z meta verisini a??n.
-- Ge?erlilik, durum, kaynak, sertifika otoritesi veya organizasyon sat?r?ndan Sertifikalar ekran?na haz?r filtreyle ge?in.
-- Uyar?n?n kasa envanterine mi, VaultPilot sunucusunun taray?c? HTTPS eri?imine mi, yoksa Discovery taramas?na m? ait oldu?unu belirleyin.
-- Panel ara?lar?ndan veriyi yenileyin veya bile?en yerle?imini d?zenleyin. Yerle?im de?i?ikli?i yaln?z g?r?n?m? etkiler; sertifika kay?tlar?n? de?i?tirmez.
+- Süresi dolmuş, 30 günlük yenileme aralığına girmiş, iptal edilmiş veya geçerlilik tarihi eksik kayıtları ayırın.
+- Sertifika otoritesi ve kalan gün ilişkisini radarda inceleyip ilgili kaydın yalnız meta verisini açın.
+- Geçerlilik, durum, kaynak, sertifika otoritesi veya organizasyon satırından Sertifikalar ekranına hazır filtreyle geçin.
+- Uyarının kasa envanterine mi, VaultPilot sunucusunun tarayıcı HTTPS erişimine mi, yoksa Discovery taramasına mı ait olduğunu belirleyin.
+- Panel araçlarından veriyi yenileyin veya bileşen yerleşimini düzenleyin. Yerleşim değişikliği yalnız görünümü etkiler; sertifika kayıtlarını değiştirmez.
 
-## Bile?enleri Nas?l Okumal?s?n?z
+## Bileşenleri Nasıl Okumalısınız
 
-### Sertifika risk radar?
+### Sertifika risk radarı
 
-Radar?n sekt?rleri, etkin kasadaki kay?tlardan ??kar?lan sertifika otoritelerini; merkeze uzakl?k ise 90 g?ne kadar kalan s?reyi g?sterir. Renk bantlar? **0?15 g?n**, **16?30 g?n**, **31?60 g?n**, **60+ g?n** ve **Tarih yok** ayr?m?n? kullan?r. Kritik say?; 15 g?n veya daha az kalan kay?tlar?n yan?nda s?resi dolmu? ve iptal edilmi? kay?tlar? da kapsar.
+Radarın sektörleri, etkin kasadaki kayıtlardan çıkarılan sertifika otoritelerini; merkeze uzaklık ise 90 güne kadar kalan süreyi gösterir. Renk bantları **0–15 gün**, **16–30 gün**, **31–60 gün**, **60+ gün** ve **Tarih yok** ayrımını kullanır. Kritik sayı; 15 gün veya daha az kalan kayıtların yanında süresi dolmuş ve iptal edilmiş kayıtları da kapsar.
 
-Bir radar noktas?n? se?mek ayr?nt? penceresini a?ar. Burada kay?t say?s?, en yak?n biti?, durum, otorite ve imzalayan, konu, alan ad?, kay?t sorumlusu, ortam, kaynak, bi?im, kategori, i?e aktar?m tarihi ile k?salt?lm?? parmak izi ve seri numaras? g?r?l?r. Bu pencere kayd? de?i?tirmez ve sertifika de?erini g?stermez.
+Bir radar noktasını seçmek ayrıntı penceresini açar. Burada kayıt sayısı, en yakın bitiş, durum, otorite ve imzalayan, konu, alan adı, kayıt sorumlusu, ortam, kaynak, biçim, kategori, içe aktarım tarihi ile kısaltılmış parmak izi ve seri numarası görülür. Bu pencere kaydı değiştirmez ve sertifika değerini göstermez.
 
-Ekrandaki **Canl? tarama** ifadesi, eldeki envanter noktalar?n?n g?rsel radar hareketidir. A? hedeflerine ba?lanmaz, TLS el s?k??mas? yapmaz ve Discovery ?al??t?rmaz.
+Ekrandaki **Canlı tarama** ifadesi, eldeki envanter noktalarının görsel radar hareketidir. Ağ hedeflerine bağlanmaz, TLS el sıkışması yapmaz ve Discovery çalıştırmaz.
 
-### Sertifika ge?erlilik takvimi
+### Sertifika geçerlilik takvimi
 
-Takvim yaln?z s?resi dolmam??, iptal edilmemi? ve ge?erlilik tarihi bulunan kay?tlar? sayar. G?r?nen s?tun etiketi ile kapsad??? ger?ek kalan s?re ??yledir:
+Takvim yalnız süresi dolmamış, iptal edilmemiş ve geçerlilik tarihi bulunan kayıtları sayar. Görünen sütun etiketi ile kapsadığı gerçek kalan süre şöyledir:
 
-| G?r?nen etiket | Ger?ek kalan s?re |
+| Görünen etiket | Gerçek kalan süre |
 | --- | --- |
-| 180+ g?n | 181 g?n ve ?zeri |
-| 180 g?n | 91?180 g?n |
-| 90 g?n | 61?90 g?n |
-| 60 g?n | 31?60 g?n |
-| 30 g?n | 16?30 g?n |
-| 15 g?n | 8?15 g?n |
-| 7 g?n | 2?7 g?n |
-| 1 g?n | 1 g?n |
-| Bug?n | 0 g?n |
+| 180+ gün | 181 gün ve üzeri |
+| 180 gün | 91–180 gün |
+| 90 gün | 61–90 gün |
+| 60 gün | 31–60 gün |
+| 30 gün | 16–30 gün |
+| 15 gün | 8–15 gün |
+| 7 gün | 2–7 gün |
+| 1 gün | 1 gün |
+| Bugün | 0 gün |
 
-Ba?l?ktaki ilk say? bu aral?klara girebilen kay?tlar?, ikinci say? etkin kasadaki toplam sertifika kayd?n? g?sterir. S?resi dolmu? ve tarihi olmayan kay?tlar burada de?il, durum bile?eninde izlenir.
+Başlıktaki ilk sayı bu aralıklara girebilen kayıtları, ikinci sayı etkin kasadaki toplam sertifika kaydını gösterir. Süresi dolmuş ve tarihi olmayan kayıtlar burada değil, durum bileşeninde izlenir.
 
-### Sertifika durumlar?
+### Sertifika durumları
 
-Durum bile?eni t?m sertifika kay?tlar?n? be? s?n?fa ay?r?r:
+Durum bileşeni tüm sertifika kayıtlarını beş sınıfa ayırır:
 
 | Durum | Hesaplama |
 | --- | --- |
-| Ge?erli | 30 g?nden fazla s?resi kalan kay?t. |
-| Yenileme aral???nda | Bug?n dahil 30 g?n veya daha az s?resi kalan kay?t. |
-| S?resi doldu | Biti? tarihi ge?mi? kay?t. |
-| ?ptal / pasif | Kay?t durumu iptal veya pasif olarak i?aretlenmi? kay?t; biti? tarihinden ?nce de?erlendirilir. |
-| Tarih yok | Okunabilir bir biti? tarihi bulunmayan kay?t. |
+| Geçerli | 30 günden fazla süresi kalan kayıt. |
+| Yenileme aralığında | Bugün dahil 30 gün veya daha az süresi kalan kayıt. |
+| Süresi doldu | Bitiş tarihi geçmiş kayıt. |
+| İptal / pasif | Kayıt durumu iptal veya pasif olarak işaretlenmiş kayıt; bitiş tarihinden önce değerlendirilir. |
+| Tarih yok | Okunabilir bir bitiş tarihi bulunmayan kayıt. |
 
-Durum hesab?nda **?ptal / pasif** ?nceliklidir. Bu nedenle iptal edilmi? bir kay?t, biti? tarihi ge?mi? veya eksik olsa bile **S?resi doldu** ya da **Tarih yok** yerine **?ptal / pasif** alt?nda say?l?r.
+Durum hesabında **İptal / pasif** önceliklidir. Bu nedenle iptal edilmiş bir kayıt, bitiş tarihi geçmiş veya eksik olsa bile **Süresi doldu** ya da **Tarih yok** yerine **İptal / pasif** altında sayılır.
 
-**Dikkat** say?s?, ge?erli d???ndaki d?rt s?n?f?n toplam?d?r. Toplam sertifika d??mesi Sertifikalar ekran?ndaki t?m sertifikalar? a?ar; belirli bir durum sat?r? yaln?z o durumla filtrelenmi? listeyi a?ar. **Dikkat** halkas? da t?klanabilir, ancak dikkat say?s? s?f?rdan b?y?k oldu?unda her zaman **Yenileme aral???nda** filtresine gider. Dikkat yaln?z s?resi dolmu?, iptal/pasif veya tarihi eksik kay?tlardan geliyorsa sonu? bo? olabilir. Kesin inceleme i?in adland?r?lm?? durum sat?r?n? se?in. Dikkat say?s? s?f?rsa halka **Ge?erli** filtresini a?ar.
+**Dikkat** sayısı, geçerli dışındaki dört sınıfın toplamıdır. Toplam sertifika düğmesi Sertifikalar ekranındaki tüm sertifikaları açar; belirli bir durum satırı yalnız o durumla filtrelenmiş listeyi açar. **Dikkat** halkası da tıklanabilir, ancak dikkat sayısı sıfırdan büyük olduğunda her zaman **Yenileme aralığında** filtresine gider. Dikkat yalnız süresi dolmuş, iptal/pasif veya tarihi eksik kayıtlardan geliyorsa sonuç boş olabilir. Kesin inceleme için adlandırılmış durum satırını seçin. Dikkat sayısı sıfırsa halka **Geçerli** filtresini açar.
 
-### Sertifika da??l?m?
+### Sertifika dağılımı
 
-Da??l?m alan? kay?tlar? ?? y?nden gruplar:
+Dağılım alanı kayıtları üç yönden gruplar:
 
-- **Kaynak:** Manuel, ??e aktar?lan, AD sync ve Di?er. **Di?er** yaln?z ?zet grubudur; ayr? bir kaynak filtresi yoktur.
-- **CA:** Kay?t meta verisinden s?n?fland?r?lan sertifika otoritesi.
-- **Organizasyon:** Kay?tlardan ??kar?lan ilk d?rt organizasyon grubu.
+- **Kaynak:** Manuel, İçe aktarılan, AD sync ve Diğer. **Diğer** yalnız özet grubudur; ayrı bir kaynak filtresi yoktur.
+- **CA:** Kayıt meta verisinden sınıflandırılan sertifika otoritesi.
+- **Organizasyon:** Kayıtlardan çıkarılan ilk dört organizasyon grubu.
 
-**Manuel**, **??e aktar?lan** ve **AD sync** kaynak sat?rlar? ile CA ve organizasyon sat?rlar? Sertifikalar ekran?n? ilgili filtreyle a?ar. **Di?er** kaynak sat?r? ayr? bir kaynak de?erine ba?l? de?ildir; se?ildi?inde g?venilir bir ?Di?er kaynak? ayr?nt?s? a?maz ve organizasyon filtresine d??ebilir. Di?er kaynaklar? incelemek i?in Sertifikalar ekran?n? do?rudan a??p kay?tlar?n kaynak alan?n? g?zden ge?irin. ?stteki ?zet g?rseli gruptaki ilk dolu b?l?m? a?ar; Kaynak grubunda ilk b?l?m **Di?er** ise ayn? s?n?rlama ge?erlidir.
+**Manuel**, **İçe aktarılan** ve **AD sync** kaynak satırları ile CA ve organizasyon satırları Sertifikalar ekranını ilgili filtreyle açar. **Diğer** kaynak satırı ayrı bir kaynak değerine bağlı değildir; seçildiğinde güvenilir bir “Diğer kaynak” ayrıntısı açmaz ve organizasyon filtresine düşebilir. Diğer kaynakları incelemek için Sertifikalar ekranını doğrudan açıp kayıtların kaynak alanını gözden geçirin. Üstteki özet görseli gruptaki ilk dolu bölümü açar; Kaynak grubunda ilk bölüm **Diğer** ise aynı sınırlama geçerlidir.
 
-## Filtreler ve Ayr?nt?ya ?nme
+## Filtreler ve Ayrıntıya İnme
 
-- Ge?erlilik takvimindeki dolu bir s?tun, o s?re aral???n? **Sertifikalar** ekran?nda ak?ll? filtre olarak a?ar.
-- Durum sat?rlar? **Ge?erli**, **Yenileme aral???nda**, **S?resi doldu**, **?ptal / pasif** veya **Tarih yok** filtresine gider.
-- Manuel, ??e aktar?lan ve AD sync kaynak sat?rlar? ile CA ve organizasyon sat?rlar? ayn? de?erle filtrelenmi? sertifika envanterine gider. **Di?er** kaynak sat?r? bu garantinin d???ndad?r.
-- Radar noktas? Sertifika Panelinden ayr?lmadan meta veri penceresi a?ar; kay?t d?zenleyicisini a?maz.
-- Bir filtre beklenenden az sonu? g?steriyorsa etkin kasay? kontrol edin. Panel ve ayr?nt? listesi yaln?z se?ili kasan?n okunabilir kay?tlar?n? kullan?r.
+- Geçerlilik takvimindeki dolu bir sütun, o süre aralığını **Sertifikalar** ekranında akıllı filtre olarak açar.
+- Durum satırları **Geçerli**, **Yenileme aralığında**, **Süresi doldu**, **İptal / pasif** veya **Tarih yok** filtresine gider.
+- Manuel, İçe aktarılan ve AD sync kaynak satırları ile CA ve organizasyon satırları aynı değerle filtrelenmiş sertifika envanterine gider. **Diğer** kaynak satırı bu garantinin dışındadır.
+- Radar noktası Sertifika Panelinden ayrılmadan meta veri penceresi açar; kayıt düzenleyicisini açmaz.
+- Bir filtre beklenenden az sonuç gösteriyorsa etkin kasayı kontrol edin. Panel ve ayrıntı listesi yalnız seçili kasanın okunabilir kayıtlarını kullanır.
 
-## Envanter, HTTPS ve Discovery Ayr?m?
+## Envanter, HTTPS ve Discovery Ayrımı
 
-| Y?zey | Veri kayna?? | Ne anlat?r | ??lem yeri |
+| Yüzey | Veri kaynağı | Ne anlatır | İşlem yeri |
 | --- | --- | --- | --- |
-| Sertifika Paneli | Etkin kasadaki sertifika kay?tlar? | Kay?tl? ge?erlilik, durum, otorite, kaynak ve organizasyon meta verisi | Sertifikalar ekran? |
-| Taray?c? HTTPS eri?imi | VaultPilot sunucusunun etkin HTTPS yap?land?rmas? | Taray?c?n?n ba?land??? sunucu sertifikas?, g?ven zinciri ve genel sunucu ad? | Sunucu ayarlar? ve Public host/HTTPS rehberi |
-| Discovery | Yetkilendirilmi?, onayl? ?zel hedeflere yap?lan s?n?rl? aktif TLS ba?lant?s? | S?re, hen?z ge?erli olmama, kendinden imzal? sertifika, hostname uyumsuzlu?u ve yinelenen parmak izi bulgular? | Discovery ekran? |
+| Sertifika Paneli | Etkin kasadaki sertifika kayıtları | Kayıtlı geçerlilik, durum, otorite, kaynak ve organizasyon meta verisi | Sertifikalar ekranı |
+| Tarayıcı HTTPS erişimi | VaultPilot sunucusunun etkin HTTPS yapılandırması | Tarayıcının bağlandığı sunucu sertifikası, güven zinciri ve genel sunucu adı | Sunucu ayarları ve Public host/HTTPS rehberi |
+| Discovery | Yetkilendirilmiş, onaylı özel hedeflere yapılan sınırlı aktif TLS bağlantısı | Süre, henüz geçerli olmama, kendinden imzalı sertifika, hostname uyumsuzluğu ve yinelenen parmak izi bulguları | Discovery ekranı |
 
-Bir kasa kayd?n?n konusu ile alan ad? farkl? g?r?n?yor diye Sertifika Paneli tek ba??na **hostname uyumsuzlu?u** karar? vermez. Bu karar, beklenen hedef ad? ile sunulan SAN/CN bilgisini kar??la?t?ran Discovery bulgusundan veya taray?c?n?n ba?land??? ger?ek HTTPS u? noktas?ndan gelmelidir.
+Bir kasa kaydının konusu ile alan adı farklı görünüyor diye Sertifika Paneli tek başına **hostname uyumsuzluğu** kararı vermez. Bu karar, beklenen hedef adı ile sunulan SAN/CN bilgisini karşılaştıran Discovery bulgusundan veya tarayıcının bağlandığı gerçek HTTPS uç noktasından gelmelidir.
 
-## ?nerilen ?? Ak??lar?
+## Önerilen İş Akışları
 
-### S?resi dolmu? veya yenileme aral???ndaki kayd? inceleme
+### Süresi dolmuş veya yenileme aralığındaki kaydı inceleme
 
-1. **Sertifika durumlar?** i?inden **S?resi doldu** veya **Yenileme aral???nda** sat?r?n? se?in.
-2. Sertifikalar ekran?ndaki filtreli kay?tlar?n biti? tarihini, ortam?n?, sorumlusunu ve kullan?m ba?lam?n? do?rulay?n.
-3. Yenileme onay sahibini ve hedef tarihi kurum i?i de?i?iklik kayd?nda belirleyin.
-4. Yeni materyali bu panelden y?klemeyin. Envanter kayd? i?in Sertifikalar ekran?n?, sunucu HTTPS paketi i?in Sunucu ayarlar?n? kullan?n.
-5. De?i?iklikten sonra paneli yenileyip durum ve s?re aral???n?n beklendi?i gibi g?ncellendi?ini do?rulay?n.
+1. **Sertifika durumları** içinden **Süresi doldu** veya **Yenileme aralığında** satırını seçin.
+2. Sertifikalar ekranındaki filtreli kayıtların bitiş tarihini, ortamını, sorumlusunu ve kullanım bağlamını doğrulayın.
+3. Yenileme onay sahibini ve hedef tarihi kurum içi değişiklik kaydında belirleyin.
+4. Yeni materyali bu panelden yüklemeyin. Envanter kaydı için Sertifikalar ekranını, sunucu HTTPS paketi için Sunucu ayarlarını kullanın.
+5. Değişiklikten sonra paneli yenileyip durum ve süre aralığının beklendiği gibi güncellendiğini doğrulayın.
 
-S?resi dolmu? kay?t takvimde g?r?nmez; **S?resi doldu** durum sat?r?nda kal?r. Takvim s?tununun bo? olmas?, s?resi dolmu? kay?t olmad??? anlam?na gelmez.
+Süresi dolmuş kayıt takvimde görünmez; **Süresi doldu** durum satırında kalır. Takvim sütununun boş olması, süresi dolmuş kayıt olmadığı anlamına gelmez.
 
-### Hostname uyumsuzlu?unu ele alma
+### Hostname uyumsuzluğunu ele alma
 
-1. Uyar?n?n adres ?ubu?undaki VaultPilot HTTPS ba?lant?s?ndan m?, Discovery bulgusundan m? geldi?ini belirleyin.
-2. Taray?c? uyar?s?ysa kullan?lan URL ile Sunucu ayarlar?ndaki genel sunucu ad?n? ve etkin sertifika kayna??n? kar??la?t?r?n.
-3. Discovery bulgusuysa beklenen hedefi, ba?lant? noktas?n? ve hassas ayr?nt?lar? ??kar?lm?? SAN/CN ?zetini ?zel kay?tta do?rulay?n.
-4. Yaln?z envanter kayd?nda ad farkl?l??? g?r?yorsan?z bunu do?rulanm?? hostname uyumsuzlu?u diye raporlamay?n; ger?ek u? nokta kan?t? isteyin.
-5. ?zel anahtar, sertifika parolas? veya PFX/P12 paketi olmadan ??z?lemeyecek bir durumda ?zel destek kanal?na ge?in.
+1. Uyarının adres çubuğundaki VaultPilot HTTPS bağlantısından mı, Discovery bulgusundan mı geldiğini belirleyin.
+2. Tarayıcı uyarısıysa kullanılan URL ile Sunucu ayarlarındaki genel sunucu adını ve etkin sertifika kaynağını karşılaştırın.
+3. Discovery bulgusuysa beklenen hedefi, bağlantı noktasını ve hassas ayrıntıları çıkarılmış SAN/CN özetini özel kayıtta doğrulayın.
+4. Yalnız envanter kaydında ad farklılığı görüyorsanız bunu doğrulanmış hostname uyumsuzluğu diye raporlamayın; gerçek uç nokta kanıtı isteyin.
+5. Özel anahtar, sertifika parolası veya PFX/P12 paketi olmadan çözülemeyecek bir durumda özel destek kanalına geçin.
 
-### Ge?erlilik tarihi eksik kayd? d?zeltme
+### Geçerlilik tarihi eksik kaydı düzeltme
 
-1. **Tarih yok** durum sat?r?n? se?in.
-2. Kayd?n yaln?z meta veri tutmak ?zere olu?turulmu? bir sertifika kayd? m?, yoksa eksik meta verili bir sertifika i?e aktar?m? m? oldu?unu do?rulay?n.
-3. Yetkili ve yaz?labilir durumda kayd? Sertifikalar ekran?ndan d?zeltin veya onayl? kaynaktan yeniden i?e aktar?n.
-4. Paneli yenileyip kayd?n do?ru s?re aral???na ve duruma ge?ti?ini kontrol edin.
+1. **Tarih yok** durum satırını seçin.
+2. Kaydın yalnız meta veri tutmak üzere oluşturulmuş bir sertifika kaydı mı, yoksa eksik meta verili bir sertifika içe aktarımı mı olduğunu doğrulayın.
+3. Yetkili ve yazılabilir durumda kaydı Sertifikalar ekranından düzeltin veya onaylı kaynaktan yeniden içe aktarın.
+4. Paneli yenileyip kaydın doğru süre aralığına ve duruma geçtiğini kontrol edin.
 
-## Ekran Durumlar?
+## Ekran Durumları
 
-| Durum | Operat?r cevab? |
+| Durum | Operatör cevabı |
 | --- | --- |
-| Yenileniyor | Panelin yenilenmesi tamamlanana kadar ikinci bir yenileme ba?latmay?n. |
-| Sertifika kayd? yok | Etkin kasay? ve kasa okuma yetkisini do?rulay?n; ba?ka y?zeylerdeki sertifikalar?n burada g?r?nmesi beklenmez. |
-| Ge?erli kay?tlar | 60+ g?n band?n? sakin izleyin; sorumlu ve ortam meta verisinin g?ncel kald???n? do?rulay?n. |
-| Yenileme aral??? | 30 g?n ve alt?ndaki kay?tlar i?in onay sahibi ve hedef tarih belirleyin. |
-| S?resi dolmu? | ?lgili kullan?m? do?rulay?n; yenileme veya kontroll? kullan?m d??? b?rakma karar? verin. |
-| ?ptal / pasif | Kayd?n bilerek pasifle?tirildi?ini ve art?k etkin kullan?m kan?t? olmad???n? do?rulay?n. |
-| Tarih yok | Meta veriyi do?rulamadan kayd? sa?l?kl? kabul etmeyin. |
-| Salt okunur lisans | Grafik, meta veri penceresi ve filtreli liste kullan?labilir; kay?t ekleme, d?zenleme, iptal etme ve silme kapal?d?r. |
+| Yenileniyor | Panelin yenilenmesi tamamlanana kadar ikinci bir yenileme başlatmayın. |
+| Sertifika kaydı yok | Etkin kasayı ve kasa okuma yetkisini doğrulayın; başka yüzeylerdeki sertifikaların burada görünmesi beklenmez. |
+| Geçerli kayıtlar | 60+ gün bandını sakin izleyin; sorumlu ve ortam meta verisinin güncel kaldığını doğrulayın. |
+| Yenileme aralığı | 30 gün ve altındaki kayıtlar için onay sahibi ve hedef tarih belirleyin. |
+| Süresi dolmuş | İlgili kullanımı doğrulayın; yenileme veya kontrollü kullanım dışı bırakma kararı verin. |
+| İptal / pasif | Kaydın bilerek pasifleştirildiğini ve artık etkin kullanım kanıtı olmadığını doğrulayın. |
+| Tarih yok | Meta veriyi doğrulamadan kaydı sağlıklı kabul etmeyin. |
+| Salt okunur lisans | Grafik, meta veri penceresi ve filtreli liste kullanılabilir; kayıt ekleme, düzenleme, iptal etme ve silme kapalıdır. |
 
-## ??lemden ?nce
+## İşlemden Önce
 
-- Do?ru kasan?n se?ili ve kilidinin a??k oldu?unu do?rulay?n.
-- Envanter kayd?, taray?c? HTTPS sertifikas? ve Discovery bulgusu aras?ndaki i?lem s?n?r?n? belirleyin.
-- Biti? tarihi, otorite, konu, ortam, kay?t sorumlusu ve kullan?m ba?lam?n? birlikte kontrol edin.
-- Sertifika kayd?n? de?i?tirmek i?in kasada D?zenleyici veya Y?netici yetkisi ve yaz?labilir lisans gerekti?ini unutmay?n.
-- Sunucu HTTPS de?i?ikli?i ?ncesinde onayl? bak?m penceresi, geri d?n?? yolu ve yeni paketin kullan?labilir oldu?unu do?rulay?n.
+- Doğru kasanın seçili ve kilidinin açık olduğunu doğrulayın.
+- Envanter kaydı, tarayıcı HTTPS sertifikası ve Discovery bulgusu arasındaki işlem sınırını belirleyin.
+- Bitiş tarihi, otorite, konu, ortam, kayıt sorumlusu ve kullanım bağlamını birlikte kontrol edin.
+- Sertifika kaydını değiştirmek için kasada Düzenleyici veya Yönetici yetkisi ve yazılabilir lisans gerektiğini unutmayın.
+- Sunucu HTTPS değişikliği öncesinde onaylı bakım penceresi, geri dönüş yolu ve yeni paketin kullanılabilir olduğunu doğrulayın.
 
-## G?venli Kan?t
+## Güvenli Kanıt
 
-- Payla??labilir: kay?t say?s?, durum s?n?f?, geni? s?re aral??? ve onayl? genel CA s?n?f?.
-- Gizli kalmal?: alan ad?, konu/SAN ?zeti, organizasyon, ortam, kay?t sorumlusu, dosya ad?, imzalayan ile k?salt?lm?? parmak izi ve seri numaras?. Bunlar? yaln?z ?zel destek veya kurum i?i kay?tta kullan?n; i? sunucu adlar?n? ve m??teri kimli?ini maskeleyin.
-- Asla payla?may?n: ?zel anahtar, sertifika parolas?, kay?t i?indeki gizli de?er, `.pfx`, `.p12`, `.pkcs12`, parola korumal? paket veya ?zel anahtar i?eren PEM/KEY i?eri?i.
-- Tam sertifika ve zincir ?zel anahtar i?ermese bile i? alan adlar?n? ve kurum topolojisini a???a ??karabilir; a??k kanala koymadan ?nce kurum onay? ve tam redaksiyon uygulay?n.
-- Ekran g?r?nt?s?nde m??teri ad?, i? alan ad?, e-posta, dosya yolu, parmak izi ve seri numaras?n? yaln?z k?rpmay?n; tamamen maskeleyin.
+- Paylaşılabilir: kayıt sayısı, durum sınıfı, geniş süre aralığı ve onaylı genel CA sınıfı.
+- Gizli kalmalı: alan adı, konu/SAN özeti, organizasyon, ortam, kayıt sorumlusu, dosya adı, imzalayan ile kısaltılmış parmak izi ve seri numarası. Bunları yalnız özel destek veya kurum içi kayıtta kullanın; iç sunucu adlarını ve müşteri kimliğini maskeleyin.
+- Asla paylaşmayın: özel anahtar, sertifika parolası, kayıt içindeki gizli değer, `.pfx`, `.p12`, `.pkcs12`, parola korumalı paket veya özel anahtar içeren PEM/KEY içeriği.
+- Tam sertifika ve zincir özel anahtar içermese bile iç alan adlarını ve kurum topolojisini açığa çıkarabilir; açık kanala koymadan önce kurum onayı ve tam redaksiyon uygulayın.
+- Ekran görüntüsünde müşteri adı, iç alan adı, e-posta, dosya yolu, parmak izi ve seri numarasını yalnız kırpmayın; tamamen maskeleyin.
 
-## Ne Zaman Durmal? ve Destek ?stemelisiniz
+## Ne Zaman Durmalı ve Destek İstemelisiniz
 
-Uyar?n?n hangi y?zeye ait oldu?u belirlenemiyorsa, yenilenen sertifika yanl?? alan ad?n? g?steriyorsa, g?ven zinciri bilinmiyorsa, ?zel anahtar?n d??ar? ??km?? olabilece?inden ??pheleniyorsan?z veya de?i?iklik i?in gerekli paket ve parola do?rulanam?yorsa i?lem yapmay? b?rak?n. Gizli materyali eklemeden; y?zeyi, genel hata s?n?f?n?, redakte hedefi, s?re aral???n? ve uygulanan son g?venli ad?m? i?eren ?zel destek kayd? a??n.
+Uyarının hangi yüzeye ait olduğu belirlenemiyorsa, yenilenen sertifika yanlış alan adını gösteriyorsa, güven zinciri bilinmiyorsa, özel anahtarın dışarı çıkmış olabileceğinden şüpheleniyorsanız veya değişiklik için gerekli paket ve parola doğrulanamıyorsa işlem yapmayı bırakın. Gizli materyali eklemeden; yüzeyi, genel hata sınıfını, redakte hedefi, süre aralığını ve uygulanan son güvenli adımı içeren özel destek kaydı açın.
 
-## Operat?r Notlar?
+## Operatör Notları
 
-Sertifika Paneli bir envanter ve ?nceliklendirme ekran?d?r. Buradaki renkler, kay?t meta verisine g?re risk s?ralar; ger?ek u? nokta g?venini, Windows sertifika deposunu veya taray?c? zincir do?rulamas?n? kan?tlamaz.
+Sertifika Paneli bir envanter ve önceliklendirme ekranıdır. Buradaki renkler, kayıt meta verisine göre risk sıralar; gerçek uç nokta güvenini, Windows sertifika deposunu veya tarayıcı zincir doğrulamasını kanıtlamaz.
 
-## ?lgili
+## İlgili
 
-- [Sertifikalar ekran?](screen-certificates.md)
-- [Discovery ekran?](screen-discovery.md)
-- [Sunucu ayarlar?](screen-server-settings.md)
+- [Sertifikalar ekranı](screen-certificates.md)
+- [Discovery ekranı](screen-discovery.md)
+- [Sunucu ayarları](screen-server-settings.md)
 - [Public host ve HTTPS](public-host-https-certificate.md)
-- [HTTPS sertifika uyar?s?](../../kb/tr/certificate-warning.md)
+- [HTTPS sertifika uyarısı](../../kb/tr/certificate-warning.md)

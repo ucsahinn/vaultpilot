@@ -138,7 +138,7 @@ This live list is not persisted to the server database and is not expected to re
 
 ## When to Stop and Escalate
 
-Stop if you cannot confirm that loaded values are current, expected recipients disappear, a test goes to the wrong address, SMTP credentials reach a public channel, critical events exist in Audit Log but no queue/mail evidence appears, or one rule produces unexpectedly high email volume. Open a private support case with general SMTP state, redacted event name, delivery policy, broad time window, error code, and last safe step?without secret material.
+Stop if you cannot confirm that loaded values are current, expected recipients disappear, a test goes to the wrong address, SMTP credentials reach a public channel, critical events exist in Audit Log but no queue/mail evidence appears, or one rule produces unexpectedly high email volume. Open a private support case with general SMTP state, redacted event name, delivery policy, broad time window, error code, and last safe step—without secret material.
 
 ## Operator Notes
 

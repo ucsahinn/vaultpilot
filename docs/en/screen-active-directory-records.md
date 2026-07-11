@@ -153,7 +153,7 @@ Treat the record row, detail drawer, action notice, Integrations action history,
 
 ## When to Stop and Escalate
 
-Stop when the active vault or source provider is uncertain, the target no longer resolves, privilege state is unexpected, agent capability or health conflicts with the UI, an action remains in review-required state, AD reports success but the vault password update is unconfirmed, the VaultPilot identity state disagrees with provider login selection, or audit evidence is missing. Do not retry sign-in enrollment until Users/sign-in state, provider selection, and Audit Log have been reconciled. Open a private case with broad record type, provider-health class, capability, action type/status, approximate time, and redacted error?without DN, account, password, token, or exported payload.
+Stop when the active vault or source provider is uncertain, the target no longer resolves, privilege state is unexpected, agent capability or health conflicts with the UI, an action remains in review-required state, AD reports success but the vault password update is unconfirmed, the VaultPilot identity state disagrees with provider login selection, or audit evidence is missing. Do not retry sign-in enrollment until Users/sign-in state, provider selection, and Audit Log have been reconciled. Open a private case with broad record type, provider-health class, capability, action type/status, approximate time, and redacted error—without DN, account, password, token, or exported payload.
 
 ## Operator Notes
 

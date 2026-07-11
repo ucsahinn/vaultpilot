@@ -1,6 +1,6 @@
 # Passwords Screen
 
-The topbar `?` opens this context-specific guide while Passwords is active. This screen is for finding and reviewing password records in the active vault, and editing them when your access permits it. Generate, copy, and ?prepare autofill? actions here do not change the account in the target system by themselves.
+The topbar `?` opens this context-specific guide while Passwords is active. This screen is for finding and reviewing password records in the active vault, and editing them when your access permits it. Generate, copy, and “prepare autofill” actions here do not change the account in the target system by themselves.
 
 ## Access, Vault Role, and License
 
@@ -55,7 +55,7 @@ Password, username, URL, and fill-package copies are written to the operating-sy
 
 Clipboard writing and reveal happen before the audit request. If the later audit write fails, the value may still be on screen or on the clipboard. Missing audit evidence does not prove that the sensitive value was never exposed.
 
-### ?Prepare autofill? boundary
+### “Prepare autofill” boundary
 
 On this screen, **Prepare autofill** copies the username and password as one tab-separated string and writes a `COPY` event. The operator pastes it into the target page's username field. This does not remotely run the browser extension and does not guarantee that fields were found, filled, or accepted. The VaultPilot Browser Vault Extension page-fill flow is a separate trust boundary.
 
@@ -85,7 +85,7 @@ The generator defaults to 24 characters. The UI offers a 12-64 character range a
 
 ## Duplicate, Delete, Bulk Actions, and Sharing
 
-**Create a copy** creates a new record in the same vault and adds ?copy? to its title. It does not create another account in the external system. Write access is required, and the new record leaves a `CREATE` event.
+**Create a copy** creates a new record in the same vault and adds “copy” to its title. It does not create another account in the external system. Write access is required, and the new record leaves a `CREATE` event.
 
 **Delete secret** requires a second confirmation for an irreversible operation and emits `DELETE` when successful. It removes only the VaultPilot record; it does not disable the target account or change its password.
 

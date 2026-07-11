@@ -12,9 +12,9 @@ The workspace refreshes about every ten seconds while open. Loading uses a three
 
 ## Three-Step Workflow
 
-1. **Run** ? compose and save approved scope, select checks, record a Preview, or perform a Run.
-2. **Findings** ? filter redacted signals, inspect evidence, and make review decisions.
-3. **Import** ? optionally add a narrow class of reviewed file findings to the active vault.
+1. **Run** — compose and save approved scope, select checks, record a Preview, or perform a Run.
+2. **Findings** — filter redacted signals, inspect evidence, and make review decisions.
+3. **Import** — optionally add a narrow class of reviewed file findings to the active vault.
 
 Import is optional. A network surface, certificate issue, or weak file signal can remain an operator finding without becoming a vault record.
 
@@ -56,9 +56,9 @@ Presets can expand across eligible local Windows profiles. What can actually be 
 
 Additional scope accepts approved absolute drive paths or normal UNC paths. The saved policy resolves at most 32 paths. Drive roots, traversal paths, device paths, most Windows system paths, VaultPilot/legacy PassMan data paths, symbolic links, generated directories/files, unsupported extensions, inaccessible entries, and oversized files are skipped or rejected.
 
-The policy permits at most 80 allowed extensions. Default maximum file size is 5 MB; the hard limit is 25 MB. Timeout is 250?15,000 ms and concurrency is 1?16.
+The policy permits at most 80 allowed extensions. Default maximum file size is 5 MB; the hard limit is 25 MB. Timeout is 250–15,000 ms and concurrency is 1–16.
 
-File inspection can transiently read supported text, configuration, scripts, VPN/RDP, registry, Terraform, package-manager credential files, certificate/key files, and supported Office/Excel OOXML content into server process memory. Persistent Discovery data contains detector metadata, masked paths, hashes, reason codes, and a redacted preview?not the source secret value. Source files are never changed, moved, quarantined, cleaned, or deleted.
+File inspection can transiently read supported text, configuration, scripts, VPN/RDP, registry, Terraform, package-manager credential files, certificate/key files, and supported Office/Excel OOXML content into server process memory. Persistent Discovery data contains detector metadata, masked paths, hashes, reason codes, and a redacted preview—not the source secret value. Source files are never changed, moved, quarantined, cleaned, or deleted.
 
 ### Explicit approval and policy behavior
 
@@ -140,7 +140,7 @@ Discovery writes audit events for policy save; Preview/Run start; run cancellati
 | Run active | Follow persisted progress; the same policy cannot start another job. |
 | Cancellation requested | Wait for runner acknowledgement; do not assume scanning stopped immediately. |
 | Run Failed | Open job detail, preserve redacted error evidence, correct the approved policy, and restart deliberately. |
-| No findings | Check whether a real Run?not Preview?completed and whether the selected checks had valid scope. |
+| No findings | Check whether a real Run—not Preview—completed and whether the selected checks had valid scope. |
 | No findings match | Reset filters; the default view itself hides non-Open and non-High findings. |
 | Import queue empty | Review eligible file findings, load older pages if needed, and mark confirmed material Ready to import. |
 | Import locked | Unlock a writable active vault where the Owner is Editor or Manager. |
@@ -165,7 +165,7 @@ Discovery writes audit events for policy save; Preview/Run start; run cancellati
 
 ## When to Stop and Escalate
 
-Stop when scope ownership is unclear, a public or unexpected target appears, presets resolve outside the approved area, file access is broader than intended, a run remains active without progress, cancellation is not acknowledged, findings expose more context than expected, suppression hides an unexplained class of signals, material changes during import, sequential import partially succeeds, or a remediated/revoked decision conflicts with audit evidence. Open a private support case with role, general state, scan kind, broad time window, compact hashes, sanitized error, and last safe step?without real scope or secret material.
+Stop when scope ownership is unclear, a public or unexpected target appears, presets resolve outside the approved area, file access is broader than intended, a run remains active without progress, cancellation is not acknowledged, findings expose more context than expected, suppression hides an unexplained class of signals, material changes during import, sequential import partially succeeds, or a remediated/revoked decision conflicts with audit evidence. Open a private support case with role, general state, scan kind, broad time window, compact hashes, sanitized error, and last safe step—without real scope or secret material.
 
 ## Operator Notes
 

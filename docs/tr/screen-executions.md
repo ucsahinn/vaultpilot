@@ -1,158 +1,158 @@
-# ??lemler Ekran?
+# İşlemler Ekranı
 
-?st ?ubuktaki `?`, ??lemler ekran?na ait bu rehberi a?ar. Bu ekran; g?ncelleme i?leri, AD ajan i?lemleri ve se?ili kal?c? denetim olaylar?n? tek bir zaman s?ral? g?r?n?mde birle?tirir. Bir g?revi ba?latma veya genel ama?l? yeniden deneme ekran? de?ildir.
+Üst çubuktaki `?`, İşlemler ekranına ait bu rehberi açar. Bu ekran; güncelleme işleri, AD ajan işlemleri ve seçili kalıcı denetim olaylarını tek bir zaman sıralı görünümde birleştirir. Bir görevi başlatma veya genel amaçlı yeniden deneme ekranı değildir.
 
-## Eri?im, Rol ve Lisans S?n?r?
+## Erişim, Rol ve Lisans Sınırı
 
-Sahip, Y?netici ve Denet?i sistem rolleri ??lemler ekran?n? a?abilir. Kullan?c? rol? sistem g?r?n?m?ne eri?emez. Ekran? kullanmak i?in kasa kilidinin a??lm?? ve sunucu oturumunun do?rulanm?? olmas? gerekir.
+Sahip, Yönetici ve Denetçi sistem rolleri İşlemler ekranını açabilir. Kullanıcı rolü sistem görünümüne erişemez. Ekranı kullanmak için kasa kilidinin açılmış ve sunucu oturumunun doğrulanmış olması gerekir.
 
-G?r?nt?leme ayr? bir lisans ?zelli?ine ba?l? de?ildir; salt okunur lisans mevcut kay?tlar? g?rmeyi tek ba??na engellemez. Yaln?z **Sahip**, uygun bir AD ajan i?leminde **??lemi durdur** se?ene?ini g?r?r. Durdurma sunucuda yazma say?ld??? i?in salt okunur lisans bu iste?i reddeder. **Kayna?? a?** ile gidilen G?ncelleme Merkezi veya Entegrasyonlar gibi ekranlarda ayr?ca rol ve ilgili lisans ?zelli?i denetlenebilir.
+Görüntüleme ayrı bir lisans özelliğine bağlı değildir; salt okunur lisans mevcut kayıtları görmeyi tek başına engellemez. Yalnız **Sahip**, uygun bir AD ajan işleminde **İşlemi durdur** seçeneğini görür. Durdurma sunucuda yazma sayıldığı için salt okunur lisans bu isteği reddeder. **Kaynağı aç** ile gidilen Güncelleme Merkezi veya Entegrasyonlar gibi ekranlarda ayrıca rol ve ilgili lisans özelliği denetlenebilir.
 
-## Burada Ne Yap?l?r
+## Burada Ne Yapılır
 
-- Y?klenen i?lemleri kategori ve durum grubuna g?re daralt?n.
-- ??lem ?zetini, durumunu, ilerleme oran?n?, kayna??n?, hedefini, akt?r?n? ve son g?ncelleme zaman?n? okuyun.
-- Varsa ad?mlar? ve s?n?rl? log ?zetini a?arak sorunun hangi a?amada oldu?unu belirleyin.
-- **Yenile** ile anl?k g?r?n?m? tekrar al?n; ekran a??kken liste yakla??k 2,5 saniyede bir kendili?inden de yenilenir.
-- **Kayna?? a?** ile G?ncelleme Merkezi, Entegrasyonlar veya Denetim Ge?mi?i ba?lam?na ge?in.
-- Yaln?z bekleyen veya ajan taraf?ndan al?nm?? AD ajan i?lemini, Sahip rol?yle ve onay vererek durdurun.
+- Yüklenen işlemleri kategori ve durum grubuna göre daraltın.
+- İşlem özetini, durumunu, ilerleme oranını, kaynağını, hedefini, aktörünü ve son güncelleme zamanını okuyun.
+- Varsa adımları ve sınırlı log özetini açarak sorunun hangi aşamada olduğunu belirleyin.
+- **Yenile** ile anlık görünümü tekrar alın; ekran açıkken liste yaklaşık 2,5 saniyede bir kendiliğinden de yenilenir.
+- **Kaynağı aç** ile Güncelleme Merkezi, Entegrasyonlar veya Denetim Geçmişi bağlamına geçin.
+- Yalnız bekleyen veya ajan tarafından alınmış AD ajan işlemini, Sahip rolüyle ve onay vererek durdurun.
 
-Bu ekranda genel **Yeniden dene** d??mesi yoktur. G?ncelleme, Discovery, bak?m veya ba?ar?s?z AD i?lemini buradan yeniden ba?latmay?n; ?nce kayna?? ve kan?t? inceleyin, ard?ndan yaln?z ilgili kaynak ekran? b?yle bir i?lem sunuyorsa oradan yeni bir ?al??ma ba?lat?n.
+Bu ekranda genel **Yeniden dene** düğmesi yoktur. Güncelleme, Discovery, bakım veya başarısız AD işlemini buradan yeniden başlatmayın; önce kaynağı ve kanıtı inceleyin, ardından yalnız ilgili kaynak ekranı böyle bir işlem sunuyorsa oradan yeni bir çalışma başlatın.
 
-## Veri Kaynaklar? ve Kapsam
+## Veri Kaynakları ve Kapsam
 
-Sunucu en fazla 80 kayd? son g?ncellenen ?nce olacak ?ekilde birle?tirir:
+Sunucu en fazla 80 kaydı son güncellenen önce olacak şekilde birleştirir:
 
-| Kaynak | Ekrandaki kaynak etiketi | Ne g?sterir | **Kayna?? a?** hedefi |
+| Kaynak | Ekrandaki kaynak etiketi | Ne gösterir | **Kaynağı aç** hedefi |
 | --- | --- | --- | --- |
-| G?ncelleme i?i | `Update job` | Sunucu veya taray?c? eklentisi g?ncellemesinin canl? durum, ad?m ve mesajlar?n? | G?ncelleme Merkezi |
-| Dizin ajan i?lemi | `AD ajan i?lemi` | Bekleyen, ajan taraf?ndan al?nan veya tamamlanan AD eylemini | Entegrasyonlar |
-| Denetim olay? | `Denetim olay?` | Payla??m, g?venlik, Discovery, kasa, entegrasyon ve sistem i?lemlerinin kal?c? kayd?n? | Denetim Ge?mi?i |
+| Güncelleme işi | `Update job` | Sunucu veya tarayıcı eklentisi güncellemesinin canlı durum, adım ve mesajlarını | Güncelleme Merkezi |
+| Dizin ajan işlemi | `AD ajan işlemi` | Bekleyen, ajan tarafından alınan veya tamamlanan AD eylemini | Entegrasyonlar |
+| Denetim olayı | `Denetim olayı` | Paylaşım, güvenlik, Discovery, kasa, entegrasyon ve sistem işlemlerinin kalıcı kaydını | Denetim Geçmişi |
 
-Discovery taramas?n?n canl? i?i bu listeye ayr? bir Discovery ?al??ma kayd? olarak eklenmez. Politika kaydetme, tarama ba?latma, bulgu bast?rma, i?e aktar?m haz?rlama/tamamlama ve iyile?tirme tamamlama gibi se?ili Discovery olaylar? **Kaydedildi** durumunda denetim kayd? olarak g?r?n?r. Canl? ilerleme, iptal ve tamamlanm?? ?al??ma y?netimi i?in Discovery ekran?n? kullan?n.
+Discovery taramasının canlı işi bu listeye ayrı bir Discovery çalışma kaydı olarak eklenmez. Politika kaydetme, tarama başlatma, bulgu bastırma, içe aktarım hazırlama/tamamlama ve iyileştirme tamamlama gibi seçili Discovery olayları **Kaydedildi** durumunda denetim kaydı olarak görünür. Canlı ilerleme, iptal ve tamamlanmış çalışma yönetimi için Discovery ekranını kullanın.
 
-Sunucu ayar? kaydetme, yeniden ba?latma ve bak?m temizli?i gibi izlenen bak?m olaylar? da **Sistem** kategorisinde kal?c? denetim kayd? olabilir. ??lem kay?tlar?n? yedekleyip temizleme veya geri y?kleme bu ekranda yap?lmaz; **Sunucu ayarlar? > Operasyonlar** kullan?l?r. Bak?m temizli?i tamamlanm?? g?ncelleme ve dizin i?lem kay?tlar?n? kald?rabilir, aktif i?lemleri korur ve kendi bak?m denetim kayd?n? ?retir.
+Sunucu ayarı kaydetme, yeniden başlatma ve bakım temizliği gibi izlenen bakım olayları da **Sistem** kategorisinde kalıcı denetim kaydı olabilir. İşlem kayıtlarını yedekleyip temizleme veya geri yükleme bu ekranda yapılmaz; **Sunucu ayarları > Operasyonlar** kullanılır. Bakım temizliği tamamlanmış güncelleme ve dizin işlem kayıtlarını kaldırabilir, aktif işlemleri korur ve kendi bakım denetim kaydını üretir.
 
 ## Filtreler
 
-Kategori ve durum filtreleri sat?rlar? birlikte daralt?r. Ancak d??melerdeki say?lar kesi?imi g?stermez: kategori say?lar? se?ili durum filtresinden ba??ms?z, durum say?lar? da se?ili kategori filtresinden ba??ms?z olarak y?klenmi? anl?k g?r?n?m?n tamam?ndan hesaplan?r.
+Kategori ve durum filtreleri satırları birlikte daraltır. Ancak düğmelerdeki sayılar kesişimi göstermez: kategori sayıları seçili durum filtresinden bağımsız, durum sayıları da seçili kategori filtresinden bağımsız olarak yüklenmiş anlık görünümün tamamından hesaplanır.
 
-| Kategori | ??erik |
+| Kategori | İçerik |
 | --- | --- |
-| **T?m?** | Y?klenen b?t?n kaynaklar. |
-| **G?ncelleme** | Canl? g?ncelleme i?leri ile g?ncelleme denetim olaylar?. |
-| **Dizin ajan?** | Canl? AD ajan i?lemleri ve bunlar?n se?ili denetim kay?tlar?. |
-| **Payla??m** | Payla?ma ve payla??m? geri ?ekme denetim olaylar?. |
-| **G?venlik** | Kullan?c?/oturum/2FA ve Discovery g?venlik olaylar?. |
-| **Entegrasyon** | Dizin, entegrasyon ve eklenti denetim olaylar?. |
-| **Kasa** | Silme, d??a/i?e aktarma ve tamamlanan Discovery i?e aktar?m? gibi kasa olaylar?. |
-| **Sistem** | Bak?m, yeniden ba?latma, lisans ve di?er sistem denetim olaylar?. |
+| **Tümü** | Yüklenen bütün kaynaklar. |
+| **Güncelleme** | Canlı güncelleme işleri ile güncelleme denetim olayları. |
+| **Dizin ajanı** | Canlı AD ajan işlemleri ve bunların seçili denetim kayıtları. |
+| **Paylaşım** | Paylaşma ve paylaşımı geri çekme denetim olayları. |
+| **Güvenlik** | Kullanıcı/oturum/2FA ve Discovery güvenlik olayları. |
+| **Entegrasyon** | Dizin, entegrasyon ve eklenti denetim olayları. |
+| **Kasa** | Silme, dışa/içe aktarma ve tamamlanan Discovery içe aktarımı gibi kasa olayları. |
+| **Sistem** | Bakım, yeniden başlatma, lisans ve diğer sistem denetim olayları. |
 
-| Durum filtresi | Dahil etti?i sat?r durumlar? |
+| Durum filtresi | Dahil ettiği satır durumları |
 | --- | --- |
-| **T?m durumlar** | B?t?n durumlar. |
-| **Aktif** | **Bekliyor** ve **?al???yor**. |
-| **Sorunlu** | **Ba?ar?s?z**, **Engellendi** ve **?nceleme**. |
-| **Tamamlanan** | **Ba?ar?l?**, **Kaydedildi** ve **?ptal**. |
+| **Tüm durumlar** | Bütün durumlar. |
+| **Aktif** | **Bekliyor** ve **Çalışıyor**. |
+| **Sorunlu** | **Başarısız**, **Engellendi** ve **İnceleme**. |
+| **Tamamlanan** | **Başarılı**, **Kaydedildi** ve **İptal**. |
 
-**?ptal** sat?rlar?n?n **Tamamlanan** filtresinde bulunmas?, ba?ar?l? olduklar? anlam?na gelmez; yaln?z art?k aktif olmad?klar?n? g?sterir. Filtrelenmi? g?r?n?mde sat?r yoksa **Bu filtrede i?lem kayd? yok** g?sterilir. Bu mesaj, ba?ka bir filtrede veya 80 kay?tl?k g?r?n?m s?n?r?n?n d???nda kay?t bulunmad???n? kan?tlamaz.
+**İptal** satırlarının **Tamamlanan** filtresinde bulunması, başarılı oldukları anlamına gelmez; yalnız artık aktif olmadıklarını gösterir. Filtrelenmiş görünümde satır yoksa **Bu filtrede işlem kaydı yok** gösterilir. Bu mesaj, başka bir filtrede veya 80 kayıtlık görünüm sınırının dışında kayıt bulunmadığını kanıtlamaz.
 
-## Sat?r, Ad?m ve Log Ayr?nt?lar?
+## Satır, Adım ve Log Ayrıntıları
 
-Her kartta i?lem ad?, ?zet, durum rozeti ve y?zde ilerleme bulunur. Meta sat?r? kaynak, hedef, akt?r ve **G?ncellendi** zaman?n? g?sterir. Kaynakta bulunmayan hedef veya akt?r `-` olarak g?r?n?r.
+Her kartta işlem adı, özet, durum rozeti ve yüzde ilerleme bulunur. Meta satırı kaynak, hedef, aktör ve **Güncellendi** zamanını gösterir. Kaynakta bulunmayan hedef veya aktör `-` olarak görünür.
 
-Kart, varsa ilk be? ad?m? g?sterir. Her ad?mda etiket, ayr?nt? veya genel durum kar??l??? ve y?zde bulunur. Ad?m durumlar? `PENDING`, `RUNNING`, `DONE`, `BLOCKED` veya `FAILED` olabilir. Daha fazla ad?m varsa bu ekranda g?sterilmez.
+Kart, varsa ilk beş adımı gösterir. Her adımda etiket, ayrıntı veya genel durum karşılığı ve yüzde bulunur. Adım durumları `PENDING`, `RUNNING`, `DONE`, `BLOCKED` veya `FAILED` olabilir. Daha fazla adım varsa bu ekranda gösterilmez.
 
-**Loglar** b?l?m? varsa ilk alt? kay?t g?r?n?r. Her kay?tta seviye (**Bilgi**, **Ba?ar?l?**, **Uyar?**, **Hata**), mesaj, zaman ve varsa teknik ayr?nt? yer al?r. Log b?l?m? **?al???yor**, **Ba?ar?s?z** ve **Engellendi** sat?rlar?nda varsay?lan olarak a??kt?r; di?er durumlarda elle a??l?r. Bu ?zet tam sunucu logu veya teslim/?al??t?rma makbuzu de?ildir.
+**Loglar** bölümü varsa ilk altı kayıt görünür. Her kayıtta seviye (**Bilgi**, **Başarılı**, **Uyarı**, **Hata**), mesaj, zaman ve varsa teknik ayrıntı yer alır. Log bölümü **Çalışıyor**, **Başarısız** ve **Engellendi** satırlarında varsayılan olarak açıktır; diğer durumlarda elle açılır. Bu özet tam sunucu logu veya teslim/çalıştırma makbuzu değildir.
 
-Kart, i?lem kimli?ini, ba?lang?? zaman?n? veya tamamlanma zaman?n? ayr? alan olarak g?stermez. Destek kan?t?nda g?r?nmeyen bir i?lem kimli?i bulundu?unu varsaymay?n; kimli?i ancak g?venilir ?zel kaynak kan?t?nda ger?ekten mevcutsa kullan?n.
+Kart, işlem kimliğini, başlangıç zamanını veya tamamlanma zamanını ayrı alan olarak göstermez. Destek kanıtında görünmeyen bir işlem kimliği bulunduğunu varsaymayın; kimliği ancak güvenilir özel kaynak kanıtında gerçekten mevcutsa kullanın.
 
-## Durumlar?n Anlam?
+## Durumların Anlamı
 
-| G?r?nen durum | Kaynak durumu ve yorum |
+| Görünen durum | Kaynak durumu ve yorum |
 | --- | --- |
-| **Bekliyor** | Kuyru?a al?nm?? veya haz?r g?ncelleme i?i ya da bekleyen AD ajan i?lemi. Hen?z ajan/i??i taraf?ndan y?r?t?l?yor saymay?n. |
-| **?al???yor** | G?ncelleme ?al???yor veya AD ajan? i?lemi y?r?tmek ?zere teslim alm??. ?lerleme y?zdesi tek ba??na canl?l?k kan?t? de?ildir; g?ncellenme zaman?n? da izleyin. |
-| **Ba?ar?l?** | G?ncelleme tamamlanm?? ya da AD ajan i?lemi ba?ar?yla sonu?lanm??. Kaynak ekran?ndaki sonucu ayr?ca do?rulay?n. |
-| **Ba?ar?s?z** | AD ajan i?lemi hata ile sonu?lanm??. Mesaj? ve redakte log ayr?nt?s?n? koruyun; bu ekranda yeniden deneme yoktur. |
-| **Engellendi** | G?ncelleme i?i ilerleyememi?. Ad?m ve log ayr?nt?s?n? inceleyip G?ncelleme Merkezine ge?in. |
-| **?ptal** | AD ajan i?lemi Sahip taraf?ndan durdurulmu?. Tamamlanm?? i?lem ve denetim kan?t? silinmez. |
-| **?nceleme** | Dizin ajan?ndaki `STALE_REVIEW_REQUIRED` durumu. Ba?ar? veya s?radan kuyruk beklemesi saymay?n; ajan sa?l???n? ve hedef i?lemi inceleyin. |
-| **Kaydedildi** | ?zlenen bir denetim olay? kal?c? olarak yaz?lm??. Bu, ili?kili d?? i?lemin ba?ar?l? teslim edildi?ini veya tamamland???n? tek ba??na kan?tlamaz. |
+| **Bekliyor** | Kuyruğa alınmış veya hazır güncelleme işi ya da bekleyen AD ajan işlemi. Henüz ajan/işçi tarafından yürütülüyor saymayın. |
+| **Çalışıyor** | Güncelleme çalışıyor veya AD ajanı işlemi yürütmek üzere teslim almış. İlerleme yüzdesi tek başına canlılık kanıtı değildir; güncellenme zamanını da izleyin. |
+| **Başarılı** | Güncelleme tamamlanmış ya da AD ajan işlemi başarıyla sonuçlanmış. Kaynak ekranındaki sonucu ayrıca doğrulayın. |
+| **Başarısız** | AD ajan işlemi hata ile sonuçlanmış. Mesajı ve redakte log ayrıntısını koruyun; bu ekranda yeniden deneme yoktur. |
+| **Engellendi** | Güncelleme işi ilerleyememiş. Adım ve log ayrıntısını inceleyip Güncelleme Merkezine geçin. |
+| **İptal** | AD ajan işlemi Sahip tarafından durdurulmuş. Tamamlanmış işlem ve denetim kanıtı silinmez. |
+| **İnceleme** | Dizin ajanındaki `STALE_REVIEW_REQUIRED` durumu. Başarı veya sıradan kuyruk beklemesi saymayın; ajan sağlığını ve hedef işlemi inceleyin. |
+| **Kaydedildi** | İzlenen bir denetim olayı kalıcı olarak yazılmış. Bu, ilişkili dış işlemin başarılı teslim edildiğini veya tamamlandığını tek başına kanıtlamaz. |
 
 ## Yenileme, Durdurma ve Yeniden Deneme
 
-**Yenile**, yeni bir i?lem ba?latmadan yaln?z liste sorgusunu tekrarlar. Sorgu s?rerken d??me devre d??? kal?r ve **Yenileniyor** olarak i?aretlenir. Yetkili ve kilidi a??k oturumda ??lemler g?r?n?m? a??kken otomatik sorgu yakla??k 2,5 saniyede bir ?al???r.
+**Yenile**, yeni bir işlem başlatmadan yalnız liste sorgusunu tekrarlar. Sorgu sürerken düğme devre dışı kalır ve **Yenileniyor** olarak işaretlenir. Yetkili ve kilidi açık oturumda İşlemler görünümü açıkken otomatik sorgu yaklaşık 2,5 saniyede bir çalışır.
 
-**??lemi durdur** yaln?z kayna?? `AD ajan i?lemi` olan **Bekliyor** veya **?al???yor** sat?r?nda ve yaln?z Sahip i?in g?sterilir. Onaydan sonra bekleyen ya da ajan taraf?ndan al?nm?? eylem `CANCELLED` durumuna ge?irilir. Tamamlanm?? i?lemler ile denetim kay?tlar? silinmez. G?ncelleme i?leri ve denetim olay? sat?rlar? ??lemler ekran?ndan durdurulamaz.
+**İşlemi durdur** yalnız kaynağı `AD ajan işlemi` olan **Bekliyor** veya **Çalışıyor** satırında ve yalnız Sahip için gösterilir. Onaydan sonra bekleyen ya da ajan tarafından alınmış eylem `CANCELLED` durumuna geçirilir. Tamamlanmış işlemler ile denetim kayıtları silinmez. Güncelleme işleri ve denetim olayı satırları İşlemler ekranından durdurulamaz.
 
-Bu ekranda yeniden deneme yoktur. **Kayna?? a?**, i?lemi tekrar ?al??t?rmaz; yaln?z ilgili ?al??ma alan?na gider. ?zellikle **Kaydedildi** durumundaki Discovery veya bak?m kayd? canl? bir i?i iptal etme ya da yeniden ba?latma denetimi de?ildir.
+Bu ekranda yeniden deneme yoktur. **Kaynağı aç**, işlemi tekrar çalıştırmaz; yalnız ilgili çalışma alanına gider. Özellikle **Kaydedildi** durumundaki Discovery veya bakım kaydı canlı bir işi iptal etme ya da yeniden başlatma denetimi değildir.
 
-## ?nerilen ?? Ak??lar?
+## Önerilen İş Akışları
 
-### Sorunlu bir i?lemi inceleme
+### Sorunlu bir işlemi inceleme
 
-1. **Sorunlu** filtresini a??n ve ilgili kategoriyi se?in.
-2. Durumun **Ba?ar?s?z**, **Engellendi** veya **?nceleme** oldu?unu ay?r?n.
-3. Son g?ncelleme zaman?n?, ilerlemeyi, ad?mlar? ve ilk alt? log sat?r?n? inceleyin.
-4. Akt?r, hedef, Dizin DN'si, host, dosya yolu ve hata ayr?nt?s?n? payla?madan ?nce redakte edin.
-5. **Kayna?? a?** ile do?ru ?al??ma alan?na ge?in; kaynak ekranda yeni eylem ba?latmadan ?nce ayn? i?in h?l? aktif olmad???n? do?rulay?n.
+1. **Sorunlu** filtresini açın ve ilgili kategoriyi seçin.
+2. Durumun **Başarısız**, **Engellendi** veya **İnceleme** olduğunu ayırın.
+3. Son güncelleme zamanını, ilerlemeyi, adımları ve ilk altı log satırını inceleyin.
+4. Aktör, hedef, Dizin DN'si, host, dosya yolu ve hata ayrıntısını paylaşmadan önce redakte edin.
+5. **Kaynağı aç** ile doğru çalışma alanına geçin; kaynak ekranda yeni eylem başlatmadan önce aynı işin hâlâ aktif olmadığını doğrulayın.
 
-### Aktif bir AD ajan i?lemini durdurma
+### Aktif bir AD ajan işlemini durdurma
 
-1. **Dizin ajan?** ve **Aktif** filtrelerini se?in.
-2. Hedefi, akt?r?, son g?ncelleme zaman?n? ve ajan sa?l???n? do?rulay?n.
-3. ??lemin ger?ekten **Bekliyor** veya **?al???yor** oldu?unu ve yanl?? hedef se?ilmedi?ini kontrol edin.
-4. Sahip rol?yle **??lemi durdur** se?ene?ini kullan?p onay? okuyun.
-5. Liste yenilendi?inde **?ptal** durumunu ve ilgili denetim kan?t?n? do?rulay?n.
+1. **Dizin ajanı** ve **Aktif** filtrelerini seçin.
+2. Hedefi, aktörü, son güncelleme zamanını ve ajan sağlığını doğrulayın.
+3. İşlemin gerçekten **Bekliyor** veya **Çalışıyor** olduğunu ve yanlış hedef seçilmediğini kontrol edin.
+4. Sahip rolüyle **İşlemi durdur** seçeneğini kullanıp onayı okuyun.
+5. Liste yenilendiğinde **İptal** durumunu ve ilgili denetim kanıtını doğrulayın.
 
-## Ekran Durumlar?
+## Ekran Durumları
 
-| Durum | Operat?r cevab? |
+| Durum | Operatör cevabı |
 | --- | --- |
-| Y?kleniyor | Be? sat?rl?k iskelet g?r?n?r; varsay?lan bo? g?r?n?m? kesin sonu? saymay?n. |
-| Filtrede kay?t yok | Kategoriyi veya durum filtresini geni?letin; 80 kay?t s?n?r?n? ve kaynak ekran?n? ayr?ca kontrol edin. |
-| Yenileniyor | Ayn? anda ikinci yenileme ba?latmay?n; mevcut sorgunun bitmesini bekleyin. |
-| Liste yenilenemedi | Ekranda ayr? hata kart? olmayabilir. Oturum/kasa kilidi, rol ve sunucu ba?lant?s?n? do?rulay?p tekrar yenileyin; bo? g?r?n?m? kay?t yok kan?t? saymay?n. |
-| Bekliyor | ??in kuyru?a al?nd???n? g?sterir; kaynak ekran?nda yinelenen ikinci i? ba?latmay?n. |
-| ?al???yor | Son g?ncelleme zaman? ilerliyorsa bekleyin; sabitse kaynak ekran? ve servis/ajan sa?l???n? inceleyin. |
-| Ba?ar?s?z | Redakte hata kan?t?n? koruyun; buradan yeniden deneyemezsiniz. |
-| Engellendi | Engellenen ad?m? ve log ayr?nt?s?n? okuyup G?ncelleme Merkezine ge?in. |
-| ?nceleme | Dizin ajan? eylemini ba?ar? saymay?n; ajan/ba?lant? ve hedef durumunu inceleyin. |
-| Ba?ar?l? | Kaynak ekran?ndaki hedef sonucu do?rulay?n; y?zde 100 tek ba??na d?? etki kan?t? de?ildir. |
-| Kaydedildi | Kal?c? denetim kayd? vard?r; ili?kili i?in canl? veya ba?ar?l? oldu?unu buradan ??karmay?n. |
-| ?ptal | Eylem aktif de?ildir; kay?t **Tamamlanan** filtresinde kal?r ve denetim kan?t? korunur. |
-| Durdurma g?r?nm?yor | Sat?r AD ajan i?lemi de?ildir, art?k aktif de?ildir veya rol Sahip de?ildir. Salt okunur lisansta d??me g?r?nebilir ancak sunucu iste?i reddeder; kontrol? a?maya ?al??may?n. |
+| Yükleniyor | Beş satırlık iskelet görünür; varsayılan boş görünümü kesin sonuç saymayın. |
+| Filtrede kayıt yok | Kategoriyi veya durum filtresini genişletin; 80 kayıt sınırını ve kaynak ekranını ayrıca kontrol edin. |
+| Yenileniyor | Aynı anda ikinci yenileme başlatmayın; mevcut sorgunun bitmesini bekleyin. |
+| Liste yenilenemedi | Ekranda ayrı hata kartı olmayabilir. Oturum/kasa kilidi, rol ve sunucu bağlantısını doğrulayıp tekrar yenileyin; boş görünümü kayıt yok kanıtı saymayın. |
+| Bekliyor | İşin kuyruğa alındığını gösterir; kaynak ekranında yinelenen ikinci iş başlatmayın. |
+| Çalışıyor | Son güncelleme zamanı ilerliyorsa bekleyin; sabitse kaynak ekranı ve servis/ajan sağlığını inceleyin. |
+| Başarısız | Redakte hata kanıtını koruyun; buradan yeniden deneyemezsiniz. |
+| Engellendi | Engellenen adımı ve log ayrıntısını okuyup Güncelleme Merkezine geçin. |
+| İnceleme | Dizin ajanı eylemini başarı saymayın; ajan/bağlantı ve hedef durumunu inceleyin. |
+| Başarılı | Kaynak ekranındaki hedef sonucu doğrulayın; yüzde 100 tek başına dış etki kanıtı değildir. |
+| Kaydedildi | Kalıcı denetim kaydı vardır; ilişkili işin canlı veya başarılı olduğunu buradan çıkarmayın. |
+| İptal | Eylem aktif değildir; kayıt **Tamamlanan** filtresinde kalır ve denetim kanıtı korunur. |
+| Durdurma görünmüyor | Satır AD ajan işlemi değildir, artık aktif değildir veya rol Sahip değildir. Salt okunur lisansta düğme görünebilir ancak sunucu isteği reddeder; kontrolü aşmaya çalışmayın. |
 
-## ??lemden ?nce
+## İşlemden Önce
 
-- Oturum rol?n? ve lisans?n yaz?labilir durumunu kontrol edin; g?r?nt?leme ile durdurma yetkisini birbirine kar??t?rmay?n.
-- Kategori ile durum filtresini not edin; filtrelenmi? bo? g?r?n?m? tam ge?mi? olarak yorumlamay?n.
-- Son g?ncelleme zaman?n?n de?i?ip de?i?medi?ini ve ayn? kaynakta mevcut aktif i? olup olmad???n? kontrol edin.
-- Durdurma ?ncesinde hedef ve akt?r?n do?ru oldu?unu do?rulay?n; ajan taraf?ndan al?nm?? AD eyleminin etkisi ba?lam?? olabilir.
-- G?ncelleme, Discovery ve bak?m kay?tlar?nda **Kaydedildi** ile ger?ek i? sonucu aras?ndaki fark? koruyun.
-- ??lem kayd? bak?m temizli?i veya geri y?kleme kapsam?ndaysa ?nce ?zel kan?t? ve onayl? yedek ak???n? tamamlay?n.
+- Oturum rolünü ve lisansın yazılabilir durumunu kontrol edin; görüntüleme ile durdurma yetkisini birbirine karıştırmayın.
+- Kategori ile durum filtresini not edin; filtrelenmiş boş görünümü tam geçmiş olarak yorumlamayın.
+- Son güncelleme zamanının değişip değişmediğini ve aynı kaynakta mevcut aktif iş olup olmadığını kontrol edin.
+- Durdurma öncesinde hedef ve aktörün doğru olduğunu doğrulayın; ajan tarafından alınmış AD eyleminin etkisi başlamış olabilir.
+- Güncelleme, Discovery ve bakım kayıtlarında **Kaydedildi** ile gerçek iş sonucu arasındaki farkı koruyun.
+- İşlem kaydı bakım temizliği veya geri yükleme kapsamındaysa önce özel kanıtı ve onaylı yedek akışını tamamlayın.
 
-## G?venli Kan?t
+## Güvenli Kanıt
 
-- Payla??labilir: kaynak ve kategori s?n?f?, g?r?nen durum, yakla??k ilerleme y?zdesi, geni? zaman aral???, redakte i?lem/ad?m ad?, log seviyesi ve genel hata kategorisi.
-- Gizli kalmal?: akt?r/kullan?c? ad?, ger?ek hedef etiketi ve Dizin DN'si, host/domain, yerel yol, dosya/paket ad? ve konumu, tam log mesaj?/ayr?nt?s?, tam denetim karma de?eri, yedek dosya ad?/?zet de?eri ve makineye ?zg? iz.
-- Ekran g?r?nt?s?nde kart ba?l???n?n g?venli oldu?unu varsaymay?n; ?zet, hedef, akt?r, ad?m ayr?nt?s? ve log sat?rlar?n? ayr? ayr? inceleyip maskeleyin.
-- Destek i?in m?mk?nse kategori, durum, geni? zaman aral??? ve redakte hata kodunu payla??n. Ham logu veya Dizin hedefini yaln?z onayl? ?zel kanalda ve gerekli en dar kapsamla iletin.
+- Paylaşılabilir: kaynak ve kategori sınıfı, görünen durum, yaklaşık ilerleme yüzdesi, geniş zaman aralığı, redakte işlem/adım adı, log seviyesi ve genel hata kategorisi.
+- Gizli kalmalı: aktör/kullanıcı adı, gerçek hedef etiketi ve Dizin DN'si, host/domain, yerel yol, dosya/paket adı ve konumu, tam log mesajı/ayrıntısı, tam denetim karma değeri, yedek dosya adı/özet değeri ve makineye özgü iz.
+- Ekran görüntüsünde kart başlığının güvenli olduğunu varsaymayın; özet, hedef, aktör, adım ayrıntısı ve log satırlarını ayrı ayrı inceleyip maskeleyin.
+- Destek için mümkünse kategori, durum, geniş zaman aralığı ve redakte hata kodunu paylaşın. Ham logu veya Dizin hedefini yalnız onaylı özel kanalda ve gerekli en dar kapsamla iletin.
 
-## Ne Zaman Durmal? ve Destek ?stemelisiniz
+## Ne Zaman Durmalı ve Destek İstemelisiniz
 
-?al??an sat?r?n g?ncellenme zaman? ilerlemiyorsa, ayn? i?lem tekrar tekrar olu?uyorsa, **?nceleme** durumunun nedeni belirsizse, g?ncelleme **Engellendi** kal?yorsa, durdurulan AD eylemi hedefte etkisini s?rd?r?yorsa veya liste kaynak ekran?yla ?eli?iyorsa yeni g?rev ba?latmay? b?rak?n. Redakte kaynak, kategori, durum, geni? zaman aral???, son g?r?nen ad?m ve genel hata koduyla ?zel destek kayd? a??n.
+Çalışan satırın güncellenme zamanı ilerlemiyorsa, aynı işlem tekrar tekrar oluşuyorsa, **İnceleme** durumunun nedeni belirsizse, güncelleme **Engellendi** kalıyorsa, durdurulan AD eylemi hedefte etkisini sürdürüyorsa veya liste kaynak ekranıyla çelişiyorsa yeni görev başlatmayı bırakın. Redakte kaynak, kategori, durum, geniş zaman aralığı, son görünen adım ve genel hata koduyla özel destek kaydı açın.
 
-## Operat?r Notlar?
+## Operatör Notları
 
-??lemler, farkl? ya?am d?ng?lerini tek g?r?n?mde toplar; her sat?r ayn? t?rden bir ?al??ma de?ildir. **Kaydedildi** denetim olay?, **Ba?ar?l?** i? sonucu ve **?ptal** terminal durumu birbirinin yerine kullan?lamaz. Kartta g?sterilen ad?m ve log say?s? s?n?rl?d?r; g?r?nmeyen ayr?nt?y? yok saymay?n veya tahmin etmeyin.
+İşlemler, farklı yaşam döngülerini tek görünümde toplar; her satır aynı türden bir çalışma değildir. **Kaydedildi** denetim olayı, **Başarılı** iş sonucu ve **İptal** terminal durumu birbirinin yerine kullanılamaz. Kartta gösterilen adım ve log sayısı sınırlıdır; görünmeyen ayrıntıyı yok saymayın veya tahmin etmeyin.
 
-## ?lgili
+## İlgili
 
 - [Operasyon runbook](operator-runbook.md)
-- [G?ncelleme Merkezi](update-center.md)
-- [Discovery ekran?](screen-discovery.md)
-- [Entegrasyonlar ekran?](screen-integrations.md)
-- [Denetim Ge?mi?i ekran?](screen-audit-log.md)
-- [Sunucu ayarlar? ekran?](screen-server-settings.md)
+- [Güncelleme Merkezi](update-center.md)
+- [Discovery ekranı](screen-discovery.md)
+- [Entegrasyonlar ekranı](screen-integrations.md)
+- [Denetim Geçmişi ekranı](screen-audit-log.md)
+- [Sunucu ayarları ekranı](screen-server-settings.md)

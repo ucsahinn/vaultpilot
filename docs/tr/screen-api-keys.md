@@ -1,129 +1,129 @@
-# API Anahtarlar? Ekran?
+# API Anahtarları Ekranı
 
-?st ?ubuktaki `?`, API Anahtarlar? ?al??ma alan? a??kken bu ba?lama ?zel rehberi a?ar. Bu ekran; servis anahtar?, eri?im belirteci ve benzeri makineden makineye gizli de?erleri aktif kasada bulmak, incelemek ve yetkiniz varsa g?ncellemek i?indir. VaultPilot?taki bir kayd? ?iptal? durumuna almak, sa?lay?c?daki ger?ek anahtar? iptal etmez.
+Üst çubuktaki `?`, API Anahtarları çalışma alanı açıkken bu bağlama özel rehberi açar. Bu ekran; servis anahtarı, erişim belirteci ve benzeri makineden makineye gizli değerleri aktif kasada bulmak, incelemek ve yetkiniz varsa güncellemek içindir. VaultPilot’taki bir kaydı “iptal” durumuna almak, sağlayıcıdaki gerçek anahtarı iptal etmez.
 
-## Eri?im, Kasa Rol? ve Lisans
+## Erişim, Kasa Rolü ve Lisans
 
-- Sahip, Y?netici ve Kullan?c? sistem rolleri, kendilerine okunabilir kasa eri?imi verildiyse API anahtar? ?al??ma alan?n? kullanabilir. Denet?i gizli kay?t ?al??ma alan?na giremez.
-- Kay?tlar?n ??z?lebilmesi i?in aktif kasan?n kilidi a??k ve kasa anahtar?n?n taray?c? oturumunda kullan?labilir olmas? gerekir.
-- Listeleme, g?sterme ve kopyalama okunabilir kasa eri?imi ister. Olu?turma, kopya ?retme, d?zenleme, silme ve yazan toplu i?lemler i?in aktif kasada **Editor** veya **Manager** rol? ve salt okunur olmayan lisans gerekir.
-- Sistem rol? tek ba??na kasa yetkisi vermez. ??lemden ?nce do?ru aktif kasay? ve bu kasadaki rol?n?z? do?rulay?n.
+- Sahip, Yönetici ve Kullanıcı sistem rolleri, kendilerine okunabilir kasa erişimi verildiyse API anahtarı çalışma alanını kullanabilir. Denetçi gizli kayıt çalışma alanına giremez.
+- Kayıtların çözülebilmesi için aktif kasanın kilidi açık ve kasa anahtarının tarayıcı oturumunda kullanılabilir olması gerekir.
+- Listeleme, gösterme ve kopyalama okunabilir kasa erişimi ister. Oluşturma, kopya üretme, düzenleme, silme ve yazan toplu işlemler için aktif kasada **Editor** veya **Manager** rolü ve salt okunur olmayan lisans gerekir.
+- Sistem rolü tek başına kasa yetkisi vermez. İşlemden önce doğru aktif kasayı ve bu kasadaki rolünüzü doğrulayın.
 
-## Burada Ne Yap?l?r
+## Burada Ne Yapılır
 
-- Ba?l?k, istemci/sahip/servis hesab?, sa?lay?c? konsol URL?si, API anahtar? veya token de?eri ve kapsam/rotasyon notu i?eren ?ifreli kay?t olu?turulur.
-- Arama, h?zl? filtreler ve ak?ll? filtrelerle g?r?n?r kay?t k?mesi daralt?l?r.
-- Gizli de?er kopyalan?r veya onaydan sonra ekranda g?sterilir; ge?erli HTTP/HTTPS adresi varsa sa?lay?c? konsolu a??l?r.
-- Kay?t kopyalan?r, d?zenlenir, silinir, payla??m ak???na haz?rlan?r ya da kontroll? toplu i?leme al?n?r.
+- Başlık, istemci/sahip/servis hesabı, sağlayıcı konsol URL’si, API anahtarı veya token değeri ve kapsam/rotasyon notu içeren şifreli kayıt oluşturulur.
+- Arama, hızlı filtreler ve akıllı filtrelerle görünür kayıt kümesi daraltılır.
+- Gizli değer kopyalanır veya onaydan sonra ekranda gösterilir; geçerli HTTP/HTTPS adresi varsa sağlayıcı konsolu açılır.
+- Kayıt kopyalanır, düzenlenir, silinir, paylaşım akışına hazırlanır ya da kontrollü toplu işleme alınır.
 
-## Arama, Filtreler ve G?r?n?m
+## Arama, Filtreler ve Görünüm
 
-Metin aramas?; ba?l?k, istemci/sahip alan?, URL, sunucu ad?, etki alan?, kategori, kaynak, risk ve etiketlerde ?al???r. Gizli anahtar de?erinin i?inde arama yap?lmaz.
+Metin araması; başlık, istemci/sahip alanı, URL, sunucu adı, etki alanı, kategori, kaynak, risk ve etiketlerde çalışır. Gizli anahtar değerinin içinde arama yapılmaz.
 
-H?zl? filtreler veriye g?re **T?m?**, **Kritik**, **Uyar?**, **??e aktar?ld?** ve en s?k ?r?n, kategori veya etiket se?eneklerinden en fazla yedisini g?sterir. **Ak?ll? filtre ekle** ile birden fazla ko?ul se?ildi?inde kay?t b?t?n ko?ullarla e?le?melidir. **T?m?** t?r, risk ve ak?ll? filtreleri varsay?lana d?nd?r?r; arama metnini ayr?ca temizlemeniz gerekebilir.
+Hızlı filtreler veriye göre **Tümü**, **Kritik**, **Uyarı**, **İçe aktarıldı** ve en sık ürün, kategori veya etiket seçeneklerinden en fazla yedisini gösterir. **Akıllı filtre ekle** ile birden fazla koşul seçildiğinde kayıt bütün koşullarla eşleşmelidir. **Tümü** tür, risk ve akıllı filtreleri varsayılana döndürür; arama metnini ayrıca temizlemeniz gerekebilir.
 
-**Kart** g?r?n?m? daha geni? kay?t kartlar?, **Tablo** g?r?n?m? s?k? kolon d?zeni kullan?r. **Yenile** kay?t sorgusunu tekrar ?al??t?r?r. Kay?tlar son g?ncellenen ?nce gelecek ?ekilde al?n?r.
+**Kart** görünümü daha geniş kayıt kartları, **Tablo** görünümü sıkı kolon düzeni kullanır. **Yenile** kayıt sorgusunu tekrar çalıştırır. Kayıtlar son güncellenen önce gelecek şekilde alınır.
 
-### Se?im kapsam?
+### Seçim kapsamı
 
-- Bir filtre kayd? gizlese bile daha ?nce i?aretlenen kay?t bellekte se?ili kalabilir.
-- **T?m?n? se?**, o anda g?r?n?r kay?tlar? yeni se?im yapar. G?r?n?rlerin tamam? se?iliyse **Se?imi temizle** b?t?n se?imi bo?alt?r.
-- ?stteki say? g?r?n?r se?imi sayarken baz? toplu i?lemler bellekte kalan g?r?nmez kimlikleri de kullan?r. Filtre de?i?tirdikten sonra se?imi a??k?a temizleyip yeniden kurun.
+- Bir filtre kaydı gizlese bile daha önce işaretlenen kayıt bellekte seçili kalabilir.
+- **Tümünü seç**, o anda görünür kayıtları yeni seçim yapar. Görünürlerin tamamı seçiliyse **Seçimi temizle** bütün seçimi boşaltır.
+- Üstteki sayı görünür seçimi sayarken bazı toplu işlemler bellekte kalan görünmez kimlikleri de kullanır. Filtre değiştirdikten sonra seçimi açıkça temizleyip yeniden kurun.
 
-## Kay?t Sat?r? ??lemleri
+## Kayıt Satırı İşlemleri
 
-Birincil i?lemler **Gizli de?eri kopyala** ve ge?erli bir HTTP/HTTPS adresi varsa **Konsolu a?**t?r. **Di?er i?lemler** men?s?nde ?unlar bulunur:
+Birincil işlemler **Gizli değeri kopyala** ve geçerli bir HTTP/HTTPS adresi varsa **Konsolu aç**tır. **Diğer işlemler** menüsünde şunlar bulunur:
 
-- **Gizli de?eri g?ster / gizle**
-- **URL?yi kopyala**
-- **Kopya olu?tur**
-- **Kayd? d?zenle**
-- **Kayd? sil**
+- **Gizli değeri göster / gizle**
+- **URL’yi kopyala**
+- **Kopya oluştur**
+- **Kaydı düzenle**
+- **Kaydı sil**
 
-**Konsolu a?** yaln?z do?rulanabilen HTTP/HTTPS adresini yeni ba?lamda a?ar ve `VIEW` olay? yazmay? dener. Sa?lay?c?ya giri? yapmaz, anahtar? do?rulamaz ve ger?ek kapsam? sorgulamaz.
+**Konsolu aç** yalnız doğrulanabilen HTTP/HTTPS adresini yeni bağlamda açar ve `VIEW` olayı yazmayı dener. Sağlayıcıya giriş yapmaz, anahtarı doğrulamaz ve gerçek kapsamı sorgulamaz.
 
-## G?sterme, Kopyalama ve Denetim
+## Gösterme, Kopyalama ve Denetim
 
-**Gizli de?eri g?ster** ?nce hassas de?er uyar?s? ister. De?er kartta g?r?n?r ve ard?ndan `VIEW` olay? yaz?lmaya ?al???l?r. G?sterim k?sa bir saya?la otomatik kapanmaz; siz gizleyene, ba?ka kay?t g?sterene, kasay? kilitleyene veya 15 dakikal?k hareketsizlik kilidi ?al??ana kadar a??k kalabilir.
+**Gizli değeri göster** önce hassas değer uyarısı ister. Değer kartta görünür ve ardından `VIEW` olayı yazılmaya çalışılır. Gösterim kısa bir sayaçla otomatik kapanmaz; siz gizleyene, başka kayıt gösterene, kasayı kilitleyene veya 15 dakikalık hareketsizlik kilidi çalışana kadar açık kalabilir.
 
-Anahtar veya URL panoya yaz?ld?ktan sonra `COPY` olay? olu?turulmaya ?al???l?r. Pano temizleme zamanlay?c?s? 30 saniye sonra, pano h?l? ayn? de?eri i?eriyorsa bo? de?er yazmay? dener. Taray?c? kapanmas?, pano izni, i?letim sistemi veya pano y?neticisi temizli?i engelleyebilir. Zamanlay?c?y? eri?imin geri al?nd??? garantisi saymay?n.
+Anahtar veya URL panoya yazıldıktan sonra `COPY` olayı oluşturulmaya çalışılır. Pano temizleme zamanlayıcısı 30 saniye sonra, pano hâlâ aynı değeri içeriyorsa boş değer yazmayı dener. Tarayıcı kapanması, pano izni, işletim sistemi veya pano yöneticisi temizliği engelleyebilir. Zamanlayıcıyı erişimin geri alındığı garantisi saymayın.
 
-Pano yaz?m? ve ekranda g?sterme, denetim iste?inden ?nce ger?ekle?ir. Denetim yaz?lamasa bile de?er ekranda veya panoda bulunabilir; eksik olay, de?erin a??lmad???n? kan?tlamaz.
+Pano yazımı ve ekranda gösterme, denetim isteğinden önce gerçekleşir. Denetim yazılamasa bile değer ekranda veya panoda bulunabilir; eksik olay, değerin açılmadığını kanıtlamaz.
 
-## Yeni Kay?t ve D?zenleme
+## Yeni Kayıt ve Düzenleme
 
-**Yeni API anahtar?** d?zenleyicisi zorunlu ba?l?k ile gizli de?er; iste?e ba?l? istemci/sahip/servis hesab?, konsol URL?si ve kapsam/rotasyon notu sunar. Taslak de?er d?zenleme s?ras?nda taray?c?da d?z metin olarak bulunur. Ekran payla??m?n? ve omuz ?zerinden g?r?nt?lemeyi y?netin.
+**Yeni API anahtarı** düzenleyicisi zorunlu başlık ile gizli değer; isteğe bağlı istemci/sahip/servis hesabı, konsol URL’si ve kapsam/rotasyon notu sunar. Taslak değer düzenleme sırasında tarayıcıda düz metin olarak bulunur. Ekran paylaşımını ve omuz üzerinden görüntülemeyi yönetin.
 
-Kaydetme s?ras?nda veri aktif kasa anahtar?yla taray?c?da ?ifrelenir. Yeni kay?t `CREATE`, g?ncelleme `EDIT` olay? ?retir. **D?zenle** yaln?z VaultPilot kayd?n? de?i?tirir; sa?lay?c?daki token de?eri, kapsam?, s?resi veya istemci ayarlar? de?i?mez.
+Kaydetme sırasında veri aktif kasa anahtarıyla tarayıcıda şifrelenir. Yeni kayıt `CREATE`, güncelleme `EDIT` olayı üretir. **Düzenle** yalnız VaultPilot kaydını değiştirir; sağlayıcıdaki token değeri, kapsamı, süresi veya istemci ayarları değişmez.
 
-### De?er ?retici ve sona erme meta verisi
+### Değer üretici ve sona erme meta verisi
 
-D?zenleyicideki ?retici taray?c?da ?al???r; varsay?lan uzunluk 24, aral?k 12?64 karakterdir. K???k harfler her zaman havuzdad?r; b?y?k harf, rakam ve sembol se?enekleri havuzu geni?letir. ?retilen de?er yaln?z form alan?n? doldurur. Sa?lay?c?da anahtar ?retmez, do?rulamaz, d?nd?rmez veya iptal etmez; ger?ek anahtar? ?nce sa?lay?c?n?n onayl? ak???nda olu?turun.
+Düzenleyicideki üretici tarayıcıda çalışır; varsayılan uzunluk 24, aralık 12–64 karakterdir. Küçük harfler her zaman havuzdadır; büyük harf, rakam ve sembol seçenekleri havuzu genişletir. Üretilen değer yalnız form alanını doldurur. Sağlayıcıda anahtar üretmez, doğrulamaz, döndürmez veya iptal etmez; gerçek anahtarı önce sağlayıcının onaylı akışında oluşturun.
 
-Manuel d?zenleyicide ayr? bir sona erme tarihi alan? yoktur. `API Keys` Excel sayfas?yla i?e aktar?lan `expiresAt`, ?ifreli kay?t meta verisi olur; otomatik rotasyon/iptal planlamaz ve sa?lay?c?daki ger?ek sona erme durumunu kan?tlamaz. ??e aktarma kayna?? `imported`, durumu `ACTIVE` yapar; risk yaln?z i?e aktarma an?nda tarih ge?mi?se `expired`, aksi halde `unknown` olarak atan?r. Bu s?n?fland?rmay? kendili?inden ilerleyen canl? s?re takibi saymay?n.
+Manuel düzenleyicide ayrı bir sona erme tarihi alanı yoktur. `API Keys` Excel sayfasıyla içe aktarılan `expiresAt`, şifreli kayıt meta verisi olur; otomatik rotasyon/iptal planlamaz ve sağlayıcıdaki gerçek sona erme durumunu kanıtlamaz. İçe aktarma kaynağı `imported`, durumu `ACTIVE` yapar; risk yalnız içe aktarma anında tarih geçmişse `expired`, aksi halde `unknown` olarak atanır. Bu sınıflandırmayı kendiliğinden ilerleyen canlı süre takibi saymayın.
 
-Bir anahtar rotasyonunda g?venli s?ra ?udur:
+Bir anahtar rotasyonunda güvenli sıra şudur:
 
-1. Sa?lay?c?da yeni anahtar? en az gerekli kapsamla ?retin.
-2. T?keten sistemi kontroll? bak?m penceresinde yeni de?ere ge?irin ve i?levi do?rulay?n.
-3. Eski anahtar? sa?lay?c?da iptal edin.
-4. VaultPilot kayd?n? ve operasyon notunu g?ncelleyin; denetim izini uzla?t?r?n.
+1. Sağlayıcıda yeni anahtarı en az gerekli kapsamla üretin.
+2. Tüketen sistemi kontrollü bakım penceresinde yeni değere geçirin ve işlevi doğrulayın.
+3. Eski anahtarı sağlayıcıda iptal edin.
+4. VaultPilot kaydını ve operasyon notunu güncelleyin; denetim izini uzlaştırın.
 
-VaultPilot sa?lay?c?ya ba?lan?p bu ad?mlar? otomatik uygulamaz.
+VaultPilot sağlayıcıya bağlanıp bu adımları otomatik uygulamaz.
 
-## Kopya, Silme ve Toplu ??lemler
+## Kopya, Silme ve Toplu İşlemler
 
-**Kopya olu?tur** ayn? kasada yeni bir ?ifreli kay?t ?retir; sa?lay?c?da yeni anahtar olu?turmaz. **Kayd? sil** ikinci onaydan sonra VaultPilot kayd?n? geri al?namaz bi?imde kald?r?r; sa?lay?c?daki anahtar ?al??maya devam edebilir.
+**Kopya oluştur** aynı kasada yeni bir şifreli kayıt üretir; sağlayıcıda yeni anahtar oluşturmaz. **Kaydı sil** ikinci onaydan sonra VaultPilot kaydını geri alınamaz biçimde kaldırır; sağlayıcıdaki anahtar çalışmaya devam edebilir.
 
-Toplu men?; Excel ?ablonu/i?e aktarma, d?z metin d??a aktarma, kategori ve etiket atama, ar?ivleme, pasifle?tirme/iptal, g?venlik kontrol?, denetim raporu, payla??m, not ekleme, ilk se?iliyi d?zenleme ve onayl? silme i?lemlerini i?erir.
+Toplu menü; Excel şablonu/içe aktarma, düz metin dışa aktarma, kategori ve etiket atama, arşivleme, pasifleştirme/iptal, güvenlik kontrolü, denetim raporu, paylaşım, not ekleme, ilk seçiliyi düzenleme ve onaylı silme işlemlerini içerir.
 
-- **Pasifle?tir / iptal et**, se?ili API anahtarlar?n?n ?ifreli meta verisini `REVOKED`, kaynak alan?n? `revoked` ve riski `warning` yapar. Sa?lay?c?ya iptal iste?i g?ndermez.
-- **Se?ilenleri d??a aktar**, ??z?lm?? tam kay?tlar? ve anahtar de?erlerini d?z metin JSON dosyas?na yazar. Dosya ayr? bir hassas veri kopyas?d?r; indirme sonras? otomatik silinmez.
-- **Denetim raporuna ekle**, gizli de?er yerine kay?t meta verisini CSV?ye yazar.
-- Toplu g?ncelleme ve silme kay?tlar? s?rayla i?ler. Ortadaki hata ?nceki ba?ar?lar? geri almaz; yenileyip ger?ek kapsam? ve denetim olaylar?n? uzla?t?rmadan tekrar ?al??t?rmay?n.
-- **Toplu payla?**, se?imi Payla??m ekran?n?n y?ntem ad?m?na ta??r; paket hen?z g?nderilmez ve se?im yetki kazand?rmaz. Dahili al?c? paketi i?in Sahip/Y?netici sistem rol?, aktif kasada **Manager** ve yaz?labilir lisans; harici paket i?in aktif kasada **Manager** ve yaz?labilir lisans gerekir.
-- ?G?venlik kontrol?? HIBP parola denetim mekanizmas?n? gizli de?ere uygulayabilir; bir API anahtar?n?n sa?lay?c?da ge?erli, do?ru kapsaml? veya s?zmam?? oldu?unu kan?tlamaz.
+- **Pasifleştir / iptal et**, seçili API anahtarlarının şifreli meta verisini `REVOKED`, kaynak alanını `revoked` ve riski `warning` yapar. Sağlayıcıya iptal isteği göndermez.
+- **Seçilenleri dışa aktar**, çözülmüş tam kayıtları ve anahtar değerlerini düz metin JSON dosyasına yazar. Dosya ayrı bir hassas veri kopyasıdır; indirme sonrası otomatik silinmez.
+- **Denetim raporuna ekle**, gizli değer yerine kayıt meta verisini CSV’ye yazar.
+- Toplu güncelleme ve silme kayıtları sırayla işler. Ortadaki hata önceki başarıları geri almaz; yenileyip gerçek kapsamı ve denetim olaylarını uzlaştırmadan tekrar çalıştırmayın.
+- **Toplu paylaş**, seçimi Paylaşım ekranının yöntem adımına taşır; paket henüz gönderilmez ve seçim yetki kazandırmaz. Dahili alıcı paketi için Sahip/Yönetici sistem rolü, aktif kasada **Manager** ve yazılabilir lisans; harici paket için aktif kasada **Manager** ve yazılabilir lisans gerekir.
+- “Güvenlik kontrolü” HIBP parola denetim mekanizmasını gizli değere uygulayabilir; bir API anahtarının sağlayıcıda geçerli, doğru kapsamlı veya sızmamış olduğunu kanıtlamaz.
 
-## Ekran Durumlar?
+## Ekran Durumları
 
-| Durum | Operat?r cevab? |
+| Durum | Operatör cevabı |
 | --- | --- |
-| Kay?tlar y?kleniyor | ?skelet sat?rlar? kaybolana kadar bekleyin; gerekirse oturumu ve aktif kasay? do?rulay?p **Yenile** kullan?n. |
-| Kay?t yok | Do?ru kasa ve kilit durumunu do?rulay?n; yazma yetkiniz varsa **Yeni API anahtar?** ile ba?lay?n. |
-| E?le?en kay?t yok | Aramay?, h?zl? filtreyi ve ak?ll? filtre ?iplerini ayr? ayr? temizleyin. |
-| Salt okunur | G?sterme ve kopyalama m?mk?n olabilir; kay?t de?i?tiren i?lemler kapal?d?r. |
-| `REVOKED` | Yaln?z VaultPilot meta verisidir. Sa?lay?c? konsolunda ger?ek iptal durumunu ayr?ca do?rulay?n. |
-| Pano veya denetim hatas? | De?er zaten a??lm?? olabilir. Panoyu elle temizleyin, g?sterimi kapat?n ve olay? ayr? kanaldan uzla?t?r?n. |
-| Toplu i?lem yar?m kald? | K?rlemesine tekrar etmeyin; gizli se?imi, de?i?en kay?tlar? ve sa?lay?c?daki ger?ek durumu kar??la?t?r?n. |
+| Kayıtlar yükleniyor | İskelet satırları kaybolana kadar bekleyin; gerekirse oturumu ve aktif kasayı doğrulayıp **Yenile** kullanın. |
+| Kayıt yok | Doğru kasa ve kilit durumunu doğrulayın; yazma yetkiniz varsa **Yeni API anahtarı** ile başlayın. |
+| Eşleşen kayıt yok | Aramayı, hızlı filtreyi ve akıllı filtre çiplerini ayrı ayrı temizleyin. |
+| Salt okunur | Gösterme ve kopyalama mümkün olabilir; kayıt değiştiren işlemler kapalıdır. |
+| `REVOKED` | Yalnız VaultPilot meta verisidir. Sağlayıcı konsolunda gerçek iptal durumunu ayrıca doğrulayın. |
+| Pano veya denetim hatası | Değer zaten açılmış olabilir. Panoyu elle temizleyin, gösterimi kapatın ve olayı ayrı kanaldan uzlaştırın. |
+| Toplu işlem yarım kaldı | Körlemesine tekrar etmeyin; gizli seçimi, değişen kayıtları ve sağlayıcıdaki gerçek durumu karşılaştırın. |
 
-## ??lemden ?nce
+## İşlemden Önce
 
-- Anahtar?n sahibini, t?keten uygulamalar?, ortam?n?, kapsam?n? ve bak?m penceresini belirleyin.
-- Aktif kasay? ve se?ili kay?tlar? do?rulay?n; filtre de?i?tiyse se?imi temizleyip yeniden kurun.
-- G?sterme, kopyalama veya d??a aktarma ?ncesinde ekran payla??m?n? ve pano y?neticilerini kapat?n.
-- Sa?lay?c?da iptal/rotasyon yetkiniz ve geri d?n?? plan?n?z olmadan VaultPilot meta verisini ?iptal edildi? diye de?i?tirmeyin.
-- Payla??mda al?c?y?, s?reyi, kullan?m s?n?r?n? ve teslim kanal?n? Payla??m ekran?nda yeniden kontrol edin.
+- Anahtarın sahibini, tüketen uygulamaları, ortamını, kapsamını ve bakım penceresini belirleyin.
+- Aktif kasayı ve seçili kayıtları doğrulayın; filtre değiştiyse seçimi temizleyip yeniden kurun.
+- Gösterme, kopyalama veya dışa aktarma öncesinde ekran paylaşımını ve pano yöneticilerini kapatın.
+- Sağlayıcıda iptal/rotasyon yetkiniz ve geri dönüş planınız olmadan VaultPilot meta verisini “iptal edildi” diye değiştirmeyin.
+- Paylaşımda alıcıyı, süreyi, kullanım sınırını ve teslim kanalını Paylaşım ekranında yeniden kontrol edin.
 
-## G?venli Kan?t
+## Güvenli Kanıt
 
-- Payla??labilir: ekran ad?, geni? zaman aral???, genel sa?lay?c? t?r?, kay?t say?s?, redakte edilmi? hata s?n?f?, genel rotasyon durumu ve yazma yetkisinin bulunup bulunmad???.
-- Gizli kalmal?: API anahtar?/token de?eri, tam istemci kimli?i, ba?l?k ile URL e?le?mesi, kapsam ayr?nt?s?, kasa ad?/kimli?i, tam zaman damgas?, se?ili kay?tlar, pano i?eri?i, d?z metin d??a aktar?m ve de?er g?steren ekran g?r?nt?s?.
-- Bir de?er genel kanala girdiyse panoyu temizlemek yeterli de?ildir. Sa?lay?c?da anahtar? iptal edin, yeni anahtar ?retin, t?keticileri g?ncelleyin ve ancak sonra kasa kayd?n? uzla?t?r?n.
+- Paylaşılabilir: ekran adı, geniş zaman aralığı, genel sağlayıcı türü, kayıt sayısı, redakte edilmiş hata sınıfı, genel rotasyon durumu ve yazma yetkisinin bulunup bulunmadığı.
+- Gizli kalmalı: API anahtarı/token değeri, tam istemci kimliği, başlık ile URL eşleşmesi, kapsam ayrıntısı, kasa adı/kimliği, tam zaman damgası, seçili kayıtlar, pano içeriği, düz metin dışa aktarım ve değer gösteren ekran görüntüsü.
+- Bir değer genel kanala girdiyse panoyu temizlemek yeterli değildir. Sağlayıcıda anahtarı iptal edin, yeni anahtar üretin, tüketicileri güncelleyin ve ancak sonra kasa kaydını uzlaştırın.
 
-## Ne Zaman Durmal?
+## Ne Zaman Durmalı
 
-Aktif kasa, anahtar sahibi veya t?keten sistem belirsizse; sa?lay?c?da ger?ek rotasyon/iptal yetkisi yoksa; gizli toplu se?imden ??pheleniyorsan?z; pano ya da ekran kayd? kontrol?n?z d???nda ise; denetim izi i?lemle ?eli?iyorsa; toplu i?lem yar?m kald?ysa veya yaln?z VaultPilot kayd?n? de?i?tirerek d?? sistemde rotasyon tamamland? san?lacaksa durun. Son g?venli ad?m? ?zel kanalda uzla?t?rmadan i?lemi tekrarlamay?n.
+Aktif kasa, anahtar sahibi veya tüketen sistem belirsizse; sağlayıcıda gerçek rotasyon/iptal yetkisi yoksa; gizli toplu seçimden şüpheleniyorsanız; pano ya da ekran kaydı kontrolünüz dışında ise; denetim izi işlemle çelişiyorsa; toplu işlem yarım kaldıysa veya yalnız VaultPilot kaydını değiştirerek dış sistemde rotasyon tamamlandı sanılacaksa durun. Son güvenli adımı özel kanalda uzlaştırmadan işlemi tekrarlamayın.
 
-## Operat?r Notlar?
+## Operatör Notları
 
-VaultPilot API anahtar? kayd?n? diskte ?ifreli saklar; kilidi a??k taray?c? g?sterme, d?zenleme, kopyalama ve d??a aktarma i?in de?eri ge?ici olarak d?z metne ?evirir. Ekran, pano ve indirilen JSON ayr? g?ven s?n?rlar?d?r. `REVOKED`, `ARCHIVED` veya silinmi? bir VaultPilot kayd?n? sa?lay?c?daki anahtar?n durumuna ili?kin kan?t olarak raporlamay?n.
+VaultPilot API anahtarı kaydını diskte şifreli saklar; kilidi açık tarayıcı gösterme, düzenleme, kopyalama ve dışa aktarma için değeri geçici olarak düz metne çevirir. Ekran, pano ve indirilen JSON ayrı güven sınırlarıdır. `REVOKED`, `ARCHIVED` veya silinmiş bir VaultPilot kaydını sağlayıcıdaki anahtarın durumuna ilişkin kanıt olarak raporlamayın.
 
-## ?lgili
+## İlgili
 
-- [G?venlik ve g?ven modeli](security-and-trust-model.md)
-- [Payla??m ekran?](screen-sharing.md)
-- [Denetim Ge?mi?i ekran?](screen-audit-log.md)
-- [Public API referans?](public-api-reference.md)
-- [Entegrasyon API client'lar?](api-clients.md)
-- [API client eri?imi KB](../../kb/tr/api-client-401.md)
-- [G?venli destek kan?t?](support-evidence-pack.md)
+- [Güvenlik ve güven modeli](security-and-trust-model.md)
+- [Paylaşım ekranı](screen-sharing.md)
+- [Denetim Geçmişi ekranı](screen-audit-log.md)
+- [Public API referansı](public-api-reference.md)
+- [Entegrasyon API client'ları](api-clients.md)
+- [API client erişimi KB](../../kb/tr/api-client-401.md)
+- [Güvenli destek kanıtı](support-evidence-pack.md)

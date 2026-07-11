@@ -140,7 +140,7 @@ To approve a pending request, enter the eight-character code from the extension 
 
 ## When to Stop and Escalate
 
-Stop if expected clients disappear from the ledger, a second provider is about to be created for the same AD source, an agent token or client secret was pasted into the wrong system, the owner of a pairing request cannot be verified, the agent remains `STALE`, `OFFLINE`, or `REVOKED`, or vault import includes unexpected users. Open a private support case with the tab, general state, redacted record ID, time, last safe step, and error text?without secret material.
+Stop if expected clients disappear from the ledger, a second provider is about to be created for the same AD source, an agent token or client secret was pasted into the wrong system, the owner of a pairing request cannot be verified, the agent remains `STALE`, `OFFLINE`, or `REVOKED`, or vault import includes unexpected users. Open a private support case with the tab, general state, redacted record ID, time, last safe step, and error text—without secret material.
 
 ## Operator Notes
 

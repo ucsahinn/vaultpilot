@@ -1,182 +1,182 @@
-# G?ncellemeler Ekran?
+# Güncellemeler Ekranı
 
-?st ?ubuktaki `?`, G?ncellemeler ekran?na ait bu rehberi a?ar. Bu ekran VaultPilot sunucu MSI paketinin yerel veya imzal? uzak kan?t?n? denetler, uygun pakette kurulum i?i ba?lat?r ve Windows Installer ile servis yeniden ba?latma ilerlemesini izler. Bir yay?n olu?turma, etiketleme, dosya y?kleme veya yay?mlama arac? de?ildir.
+Üst çubuktaki `?`, Güncellemeler ekranına ait bu rehberi açar. Bu ekran VaultPilot sunucu MSI paketinin yerel veya imzalı uzak kanıtını denetler, uygun pakette kurulum işi başlatır ve Windows Installer ile servis yeniden başlatma ilerlemesini izler. Bir yayın oluşturma, etiketleme, dosya yükleme veya yayımlama aracı değildir.
 
-## Eri?im, Rol ve Lisans S?n?r?
+## Erişim, Rol ve Lisans Sınırı
 
-**Otomatik g?ncelleme** ?zelli?i, G?ncellemeler g?r?n?m? i?in istemci aray?z?ndeki gezinme kap?s?d?r. ?zellik a??ksa Sahip, Y?netici ve Denet?i ekran? ve mevcut sunucu durumunu g?rebilir; Kullan?c? sistem g?r?n?m?ne eri?emez. Salt okunur lisans ?zellik g?r?n?m?n? a?mad??? i?in bu modda normal gezinme de engellenir. Mevcut durum, i?, kontrol ve ba?latma API u?lar? `auto-update` ?zelli?ini ayr?ca sunucu taraf?nda denetlemez; bu uygulama ayr?nt?s? eri?im kap?s?n? a?ma yetkisi vermez.
+**Otomatik güncelleme** özelliği, Güncellemeler görünümü için istemci arayüzündeki gezinme kapısıdır. Özellik açıksa Sahip, Yönetici ve Denetçi ekranı ve mevcut sunucu durumunu görebilir; Kullanıcı sistem görünümüne erişemez. Salt okunur lisans özellik görünümünü açmadığı için bu modda normal gezinme de engellenir. Mevcut durum, iş, kontrol ve başlatma API uçları `auto-update` özelliğini ayrıca sunucu tarafında denetlemez; bu uygulama ayrıntısı erişim kapısını aşma yetkisi vermez.
 
-**Canl? denetle** uzak GitHub manifestini okumak i?in Sahip veya Y?netici rol? ister ve on dakikada en fazla on istek kabul eder. Kontrol API ucu salt okunur lisans? ayr?ca reddetmez. Yaln?z durum ba?ar?yla d?nd?kten sonra `UPDATE_CHECK` denetim olay? yaz?l?r; manifest indirme veya ayr??t?rma hatas? sonu? ?retmez ve bu denetim olay?n? olu?turmaz. Normal ?zellik kap?s?n? do?rudan istekle a?maya ?al??may?n.
+**Canlı denetle** uzak GitHub manifestini okumak için Sahip veya Yönetici rolü ister ve on dakikada en fazla on istek kabul eder. Kontrol API ucu salt okunur lisansı ayrıca reddetmez. Yalnız durum başarıyla döndükten sonra `UPDATE_CHECK` denetim olayı yazılır; manifest indirme veya ayrıştırma hatası sonuç üretmez ve bu denetim olayını oluşturmaz. Normal özellik kapısını doğrudan istekle aşmaya çalışmayın.
 
-Sunucu MSI kurulumunda sunucu taraf?ndaki kesin yetki **Sahip** rol?d?r. Aray?zde bir d??me g?r?nse bile Y?netici sunucu kurulumunu ba?latmaya yetkili say?lmaz. Lisans salt okunursa Sahip i?in de kurulum ba?lang?c? reddedilir. Denet?i yaln?z g?r?nt?ler; paket kontrol? veya kurulum ba?latamaz.
+Sunucu MSI kurulumunda sunucu tarafındaki kesin yetki **Sahip** rolüdür. Arayüzde bir düğme görünse bile Yönetici sunucu kurulumunu başlatmaya yetkili sayılmaz. Lisans salt okunursa Sahip için de kurulum başlangıcı reddedilir. Denetçi yalnız görüntüler; paket kontrolü veya kurulum başlatamaz.
 
-## Burada Ne Yap?l?r
+## Burada Ne Yapılır
 
-- Yerel sunucu s?r?m?n?, hedef s?r?m?, kart?n g?sterdi?i paket/URL ad?n?, boyutu, SHA-256 ?zetini ve do?rulama ad?mlar?n? inceleyin.
-- **Do?rulama ad?mlar?** ile paketin neden **G?ncel**, **Haz?r** veya **??lem gerekli** oldu?unu okuyun.
-- **Canl? denetle** ile yap?land?r?lm?? uzak g?ncelleme manifestini yeniden al?n ve imza/paket kan?t?n? do?rulay?n.
-- Kan?t uygunsa Sahip rol?yle **Sunucu MSI kur** se?ene?ini kullan?n.
-- Kurulum s?ras?nda y?zde, son kay?ttan bu yana ge?en s?re, hedef s?r?m, ad?mlar ve **Geli?mi? teknik log** ?zetini izleyin.
-- Kurulum tamamlan?nca ?al??an s?r?m?n hedef s?r?mle e?le?mesini ve konsolun yeniden ba?lanmas?n? do?rulay?n.
+- Yerel sunucu sürümünü, hedef sürümü, kartın gösterdiği paket/URL adını, boyutu, SHA-256 özetini ve doğrulama adımlarını inceleyin.
+- **Doğrulama adımları** ile paketin neden **Güncel**, **Hazır** veya **İşlem gerekli** olduğunu okuyun.
+- **Canlı denetle** ile yapılandırılmış uzak güncelleme manifestini yeniden alın ve imza/paket kanıtını doğrulayın.
+- Kanıt uygunsa Sahip rolüyle **Sunucu MSI kur** seçeneğini kullanın.
+- Kurulum sırasında yüzde, son kayıttan bu yana geçen süre, hedef sürüm, adımlar ve **Gelişmiş teknik log** özetini izleyin.
+- Kurulum tamamlanınca çalışan sürümün hedef sürümle eşleşmesini ve konsolun yeniden bağlanmasını doğrulayın.
 
-Bu ekranda g?ncelleme i?ini iptal etme d??mesi veya genel **Yeniden dene** i?lemi yoktur. Engellenmi? i? korunur. K?k nedeni d?zeltip kan?t? yeniden do?rulad?ktan sonra kurulum d??mesini tekrar kullanmak, eski i?i devam ettirmek yerine yeni bir i? ba?lat?r.
+Bu ekranda güncelleme işini iptal etme düğmesi veya genel **Yeniden dene** işlemi yoktur. Engellenmiş iş korunur. Kök nedeni düzeltip kanıtı yeniden doğruladıktan sonra kurulum düğmesini tekrar kullanmak, eski işi devam ettirmek yerine yeni bir iş başlatır.
 
-## Bile?en ve S?r?m Y?zeyleri
+## Bileşen ve Sürüm Yüzeyleri
 
-Ekrandaki tek kurulum kart? **VaultPilot server** MSI hatt?d?r. Kart; **Artefakt**, **G?ncel s?r?m**, **Paket boyutu** ve varsa SHA-256 g?sterir. **Artefakt** metni bilinen `fileName` alan?ndan de?il `packageUrl` adresinin son b?l?m?nden t?retilir; URL yoksa sunucu dosya ad?n? biliyor olsa bile **Paket yolu bekleniyor** g?r?n?r. Normal sunucu durumunda ayr? bir manifest adresi sat?r? yoktur. Paket URL'si a??lm??sa **MSI indir** ba?lant?s? g?r?n?r.
+Ekrandaki tek kurulum kartı **VaultPilot server** MSI hattıdır. Kart; **Artefakt**, **Güncel sürüm**, **Paket boyutu** ve varsa SHA-256 gösterir. **Artefakt** metni bilinen `fileName` alanından değil `packageUrl` adresinin son bölümünden türetilir; URL yoksa sunucu dosya adını biliyor olsa bile **Paket yolu bekleniyor** görünür. Normal sunucu durumunda ayrı bir manifest adresi satırı yoktur. Paket URL'si açılmışsa **MSI indir** bağlantısı görünür.
 
-Taray?c? eklentisi m??teri kurulum ve g?ncellemelerini Chrome Web Store ?zerinden al?r; bu ekran ayr? bir eklenti kurulum i?i olu?turmaz. Offline Share Decrypter, DC Agent ve ba?ka bile?enler g?m?l? **S?r?m notlar?** i?inde an?labilir, ancak burada ayr? kurulum kart? veya i? hatt? de?ildir.
+Tarayıcı eklentisi müşteri kurulum ve güncellemelerini Chrome Web Store üzerinden alır; bu ekran ayrı bir eklenti kurulum işi oluşturmaz. Offline Share Decrypter, DC Agent ve başka bileşenler gömülü **Sürüm notları** içinde anılabilir, ancak burada ayrı kurulum kartı veya iş hattı değildir.
 
-**S?r?m notlar?** bu konsol paketine g?m?l? zaman ?izelgesidir; s?r?m, bile?en ve not say?lar?n? g?sterir. ?st ?ubuktaki en son GitHub s?r?m ?zeti ayr?, bilgilendirici bir sorgudur. GitHub yan?t? yokken ?st ?ubuktaki s?r?m ak??? yerel uygulama s?r?m?n? kullan?p **yay?nland?** diyebilir; bu yedek metin d?? yay?n kan?t? de?ildir. G?m?l? not, ?st ?ubuk ak???, en son s?r?m ?zeti veya **Canl? denetle** sonucu tek ba??na bir yay?n?n olu?turuldu?unu, yay?mland???n? ya da b?t?n dosyalar?n?n haz?r oldu?unu kan?tlamaz.
+**Sürüm notları** bu konsol paketine gömülü zaman çizelgesidir; sürüm, bileşen ve not sayılarını gösterir. Üst çubuktaki en son GitHub sürüm özeti ayrı, bilgilendirici bir sorgudur. GitHub yanıtı yokken üst çubuktaki sürüm akışı yerel uygulama sürümünü kullanıp **yayınlandı** diyebilir; bu yedek metin dış yayın kanıtı değildir. Gömülü not, üst çubuk akışı, en son sürüm özeti veya **Canlı denetle** sonucu tek başına bir yayının oluşturulduğunu, yayımlandığını ya da bütün dosyalarının hazır olduğunu kanıtlamaz.
 
-## Yerel Durum ve Canl? Denetim
+## Yerel Durum ve Canlı Denetim
 
 Ekran ilk olarak sunucudaki yerel durumu okur:
 
-- S?r?ml?, uygun bir MSI yoksa ?al??an s?r?m? **G?ncel** g?sterir ve kurulum ba?latmaz.
-- Daha yeni, s?r?m? belirli yerel MSI bulundu?unda paket boyutu ve SHA-256 de?eri hesaplan?r; s?r?m amac? uygunsa paket **Haz?r** olabilir. Bu yaln?z yerel ?n denetimdir.
-- Daha eski paket, s?r?m? belirlenemeyen paket veya ayn? s?r?m onar?m paketi otomatik kurulum i?in **??lem gerekli** durumuna al?n?r. Ayn? s?r?m onar?m? manuel MSI Repair ak???na aittir.
+- Sürümlü, uygun bir MSI yoksa çalışan sürümü **Güncel** gösterir ve kurulum başlatmaz.
+- Daha yeni, sürümü belirli yerel MSI bulunduğunda paket boyutu ve SHA-256 değeri hesaplanır; sürüm amacı uygunsa paket **Hazır** olabilir. Bu yalnız yerel ön denetimdir.
+- Daha eski paket, sürümü belirlenemeyen paket veya aynı sürüm onarım paketi otomatik kurulum için **İşlem gerekli** durumuna alınır. Aynı sürüm onarımı manuel MSI Repair akışına aittir.
 
-**Canl? denetle**, yap?land?r?lm?? HTTPS GitHub manifestini sunucudan okur. Ba?ar?l? denetim, imzal? manifestin do?ruland???n? ve sunucu MSI varl???n?n/uygunlu?unun de?erlendirildi?ini g?sterir. ?mza anahtar? eksik veya do?rulama ba?ar?s?zsa uzak paket adresleri a??lmaz ve indirme ad?m? engellenir. Yerel paket bulundu?una dair bilgi paneli g?r?nebilir; ancak uzak durum `BLOCKED` iken ekran ayr? bir yerel paket kart? veya indirme ba?lant?s? olu?turmaz.
+**Canlı denetle**, yapılandırılmış HTTPS GitHub manifestini sunucudan okur. Başarılı denetim, imzalı manifestin doğrulandığını ve sunucu MSI varlığının/uygunluğunun değerlendirildiğini gösterir. İmza anahtarı eksik veya doğrulama başarısızsa uzak paket adresleri açılmaz ve indirme adımı engellenir. Yerel paket bulunduğuna dair bilgi paneli görünebilir; ancak uzak durum `BLOCKED` iken ekran ayrı bir yerel paket kartı veya indirme bağlantısı oluşturmaz.
 
-Uzak ba?lant? veya en son s?r?m sorgusu ba?ar?s?z oldu?unda ekran yay?n olu?turmaz, manifesti de?i?tirmez ve yerel paketi otomatik olarak uzak paket saymaz. Yerel paket kendi s?r?m/SHA ?n denetimi ve kurulum i?i i?indeki Authenticode kontrol?yle ayr? de?erlendirilir.
+Uzak bağlantı veya en son sürüm sorgusu başarısız olduğunda ekran yayın oluşturmaz, manifesti değiştirmez ve yerel paketi otomatik olarak uzak paket saymaz. Yerel paket kendi sürüm/SHA ön denetimi ve kurulum işi içindeki Authenticode kontrolüyle ayrı değerlendirilir.
 
-## Paket ve ?mza Do?rulamas?
+## Paket ve İmza Doğrulaması
 
-Uzak otomatik kurulumda s?ral? g?venlik s?n?r? ??yledir:
+Uzak otomatik kurulumda sıralı güvenlik sınırı şöyledir:
 
-1. Manifest, yap?land?r?lm?? veya paketle gelen yay?n a??k anahtar?yla Ed25519 imzas? ?zerinden do?rulan?r.
-2. Sunucu varl???, manifestteki izinli HTTPS adresi, dosya ad?, s?r?m ve beklenen boyutla e?le?tirilir.
-3. ?ndirme sunucuda s?n?rl? boyutla yap?l?r ve hesaplanan SHA-256, manifestteki tam de?erle kar??la?t?r?l?r.
-4. MSI Authenticode bilgisi Windows ?zerinde okunur. Manifest imzalayan sertifikan?n SHA-1 parmak izini sabitlemi?se MSI imzac?s? bununla e?le?melidir; sabitlenmemi? uzak pakette Windows imza durumu ge?erli olmal?d?r.
-5. Bu denetimler ge?meden sessiz Windows Installer ad?m? ba?lat?lmaz.
+1. Manifest, yapılandırılmış veya paketle gelen yayın açık anahtarıyla Ed25519 imzası üzerinden doğrulanır.
+2. Sunucu varlığı, manifestteki izinli HTTPS adresi, dosya adı, sürüm ve beklenen boyutla eşleştirilir.
+3. İndirme sunucuda sınırlı boyutla yapılır ve hesaplanan SHA-256, manifestteki tam değerle karşılaştırılır.
+4. MSI Authenticode bilgisi Windows üzerinde okunur. Manifest imzalayan sertifikanın SHA-1 parmak izini sabitlemişse MSI imzacısı bununla eşleşmelidir; sabitlenmemiş uzak pakette Windows imza durumu geçerli olmalıdır.
+5. Bu denetimler geçmeden sessiz Windows Installer adımı başlatılmaz.
 
-Yerel haz?rlanm?? MSI'?n kart durumu s?r?m amac?n?, dosya varl???n?/boyutunu ve hesaplanan SHA-256 de?erini ?nceden denetler. Bu yerel `READY` de?erlendirmesi manifest Ed25519 imzas? do?rulamaz ve MSI Authenticode imzas?n? hen?z kontrol etmez; Authenticode, kurulum i?i ba?lad?ktan sonra do?rulan?r. ?retim ortam?nda imzas?z kurulum i?in belge veya ekran ?zerinden bir atlama yolu yoktur. Yerel **Haz?r**, yaln?z bu ?n ko?ullar?n ge?ti?ini g?sterir; kurulum veya imza do?rulamas? tamamland? anlam?na gelmez.
+Yerel hazırlanmış MSI'ın kart durumu sürüm amacını, dosya varlığını/boyutunu ve hesaplanan SHA-256 değerini önceden denetler. Bu yerel `READY` değerlendirmesi manifest Ed25519 imzası doğrulamaz ve MSI Authenticode imzasını henüz kontrol etmez; Authenticode, kurulum işi başladıktan sonra doğrulanır. Üretim ortamında imzasız kurulum için belge veya ekran üzerinden bir atlama yolu yoktur. Yerel **Hazır**, yalnız bu ön koşulların geçtiğini gösterir; kurulum veya imza doğrulaması tamamlandı anlamına gelmez.
 
-Kart SHA-256 de?erinin yaln?z ba?lang?? b?l?m?n? g?r?n?r metinde g?sterir; tam de?er ??e ayr?nt?s?nda bulunabilir. G?r?nen k?saltmay? tam e?le?me kan?t? saymay?n.
+Kart SHA-256 değerinin yalnız başlangıç bölümünü görünür metinde gösterir; tam değer öğe ayrıntısında bulunabilir. Görünen kısaltmayı tam eşleşme kanıtı saymayın.
 
-## Paket ve ?? Durumlar?
+## Paket ve İş Durumları
 
 ### Paket durumu
 
-| Durum | Anlam? |
+| Durum | Anlamı |
 | --- | --- |
-| **G?ncel** (`CURRENT`) | ?al??an s?r?m i?in kurulabilir yeni yerel/uzak MSI yoktur. |
-| **Haz?r** (`READY`) | Uzak pakette imzal? manifest kan?t?, yerel pakette ise s?r?m ve SHA-256 ?n denetimi uygundur. Yerel Authenticode denetimi i? s?ras?nda yap?l?r. |
-| **??lem gerekli** (`ACTION_REQUIRED`) | ?mza anahtar?, manifest, varl?k, s?r?m amac? veya ba?ka paket kan?t? eksik/uygunsuzdur. Engelli ad?m? okuyun. |
+| **Güncel** (`CURRENT`) | Çalışan sürüm için kurulabilir yeni yerel/uzak MSI yoktur. |
+| **Hazır** (`READY`) | Uzak pakette imzalı manifest kanıtı, yerel pakette ise sürüm ve SHA-256 ön denetimi uygundur. Yerel Authenticode denetimi iş sırasında yapılır. |
+| **İşlem gerekli** (`ACTION_REQUIRED`) | İmza anahtarı, manifest, varlık, sürüm amacı veya başka paket kanıtı eksik/uygunsuzdur. Engelli adımı okuyun. |
 
-### G?ncelleme i?i durumu
+### Güncelleme işi durumu
 
-| Durum | Anlam? |
+| Durum | Anlamı |
 | --- | --- |
-| `QUEUED` | ?ema ve eski/kay?tl? i? uyumlulu?u i?in tan?n?r; g?ncel ba?latma ak??? bu durumu ?retmez. G?r?l?rse aktif kabul edilir. |
-| `RUNNING` | ?ndirme, do?rulama, MSI veya yeniden ba?latma a?amas? ilerliyor. |
-| `BLOCKED` | Bir g?venlik, paket, Windows Installer, UAC veya yeniden ba?lanma ad?m? i?i durdurdu. Bu ak??ta ayr? `FAILED` i? durumu yoktur. |
-| `READY` | ?ema uyumlulu?u i?in tan?n?r; g?ncel ba?latma ak??? bu i? durumunu ?retmez ve kurulum tamamland? anlam?na gelmez. |
-| `COMPLETED` | ?al??an VaultPilot s?r?m? hedef s?r?mle e?le?ecek ?ekilde i? tamamland?. |
+| `QUEUED` | Şema ve eski/kayıtlı iş uyumluluğu için tanınır; güncel başlatma akışı bu durumu üretmez. Görülürse aktif kabul edilir. |
+| `RUNNING` | İndirme, doğrulama, MSI veya yeniden başlatma aşaması ilerliyor. |
+| `BLOCKED` | Bir güvenlik, paket, Windows Installer, UAC veya yeniden bağlanma adımı işi durdurdu. Bu akışta ayrı `FAILED` iş durumu yoktur. |
+| `READY` | Şema uyumluluğu için tanınır; güncel başlatma akışı bu iş durumunu üretmez ve kurulum tamamlandı anlamına gelmez. |
+| `COMPLETED` | Çalışan VaultPilot sürümü hedef sürümle eşleşecek şekilde iş tamamlandı. |
 
-G?ncel ba?latma yolu yeni i?i do?rudan `RUNNING`, `BLOCKED` veya `COMPLETED` olarak yazar. ?? ba?lang?c? iste?i kay?t olu?turulmadan hata verirse ekranda **G?ncelleme i?lemi ba?lat?lamad?** g?r?n?r; bu, kal?c? bir `FAILED` i? sat?r? de?ildir. Sunucu en fazla 12 g?ncelleme i?ini listeler; aktif i?ler ?nce, ard?ndan son g?ncellenen tamamlanm?? veya engellenmi? i?ler gelir.
+Güncel başlatma yolu yeni işi doğrudan `RUNNING`, `BLOCKED` veya `COMPLETED` olarak yazar. İş başlangıcı isteği kayıt oluşturulmadan hata verirse ekranda **Güncelleme işlemi başlatılamadı** görünür; bu, kalıcı bir `FAILED` iş satırı değildir. Sunucu en fazla 12 güncelleme işini listeler; aktif işler önce, ardından son güncellenen tamamlanmış veya engellenmiş işler gelir.
 
-## Ad?mlar ve Teknik Log
+## Adımlar ve Teknik Log
 
-Do?rulama ve i? ad?mlar? `DONE`, `RUNNING`, `PENDING` veya `BLOCKED` olabilir. Sunucu MSI ak???nda g?r?lebilecek ad?mlar ?unlar? kapsar:
+Doğrulama ve iş adımları `DONE`, `RUNNING`, `PENDING` veya `BLOCKED` olabilir. Sunucu MSI akışında görülebilecek adımlar şunları kapsar:
 
-- kurulu s?r?m? okuma ve hedef s?r?m? kabul etme,
-- yerel paketi se?me veya do?rulanm?? MSI'? sunucuya indirme,
-- indirilen SHA-256 de?erini do?rulama,
-- MSI Authenticode imzas?n? do?rulama ve durumunu kaydetme,
-- sessiz Windows Installer ?al??t?rma,
-- VaultPilotServer servisini yeniden ba?latma ve hedef s?r?m? bekleme.
+- kurulu sürümü okuma ve hedef sürümü kabul etme,
+- yerel paketi seçme veya doğrulanmış MSI'ı sunucuya indirme,
+- indirilen SHA-256 değerini doğrulama,
+- MSI Authenticode imzasını doğrulama ve durumunu kaydetme,
+- sessiz Windows Installer çalıştırma,
+- VaultPilotServer servisini yeniden başlatma ve hedef sürümü bekleme.
 
-Karttaki **Do?rulama ad?mlar?** paket durumuna veya se?ili i?in ad?mlar?na dayan?r. Aktif i? varsa ayr?ca **Geli?mi? teknik log** b?t?n i? ad?mlar?n? durum, etiket ve iste?e ba?l? ayr?nt?yla listeler. Bu b?l?m ham PowerShell, MSI veya Windows Event Log de?ildir. Yerel yollar?n sunucu yan?t?na s?zmas?n? azaltmak i?in baz? y?kleyici ayr?nt?lar? redakte edilir; yine de her sat?r? payla?madan ?nce inceleyin.
+Karttaki **Doğrulama adımları** paket durumuna veya seçili işin adımlarına dayanır. Aktif iş varsa ayrıca **Gelişmiş teknik log** bütün iş adımlarını durum, etiket ve isteğe bağlı ayrıntıyla listeler. Bu bölüm ham PowerShell, MSI veya Windows Event Log değildir. Yerel yolların sunucu yanıtına sızmasını azaltmak için bazı yükleyici ayrıntıları redakte edilir; yine de her satırı paylaşmadan önce inceleyin.
 
-## Kurulum, UAC ve Servis Yeniden Ba?latma
+## Kurulum, UAC ve Servis Yeniden Başlatma
 
-Sunucu kurulumu sessiz `msiexec` ak???n? yeniden ba?latma istemlerini bast?rarak ?al??t?r?r, ard?ndan VaultPilotServer servisini ayr? bir yard?mc?yla yeniden ba?lat?r. Kurulum s?ras?nda taray?c? ba?lant?s? kesilebilir. Konsol, sa?l?k ve s?r?m sinyali geri geldi?inde hedef s?r?mle otomatik yeniden y?klenmeye ?al???r.
+Sunucu kurulumu sessiz `msiexec` akışını yeniden başlatma istemlerini bastırarak çalıştırır, ardından VaultPilotServer servisini ayrı bir yardımcıyla yeniden başlatır. Kurulum sırasında tarayıcı bağlantısı kesilebilir. Konsol, sağlık ve sürüm sinyali geri geldiğinde hedef sürümle otomatik yeniden yüklenmeye çalışır.
 
-Y?kleyici yard?mc?s? y?netici yetkisi gerektirirse sunucu Windows UAC y?kseltmesi isteyebilir. Bu istem taray?c?da de?il Windows sunucu oturumunda g?r?l?r. Onay verilmezse veya y?kseltilmi? yard?mc? ba?lat?lamazsa i? yakla??k MSI a?amas?nda **BLOCKED** olur. Kurulumu yetkili bir Windows y?netici oturumu ve onayl? bak?m penceresi olmadan ba?latmay?n.
+Yükleyici yardımcısı yönetici yetkisi gerektirirse sunucu Windows UAC yükseltmesi isteyebilir. Bu istem tarayıcıda değil Windows sunucu oturumunda görülür. Onay verilmezse veya yükseltilmiş yardımcı başlatılamazsa iş yaklaşık MSI aşamasında **BLOCKED** olur. Kurulumu yetkili bir Windows yönetici oturumu ve onaylı bakım penceresi olmadan başlatmayın.
 
-G?ncellemeler ekran? bak?m penceresi planlamaz, yedek olu?turmaz ve kullan?c? oturumlar?n? koordine etmez. Ba?latmadan ?nce onayl? yede?i, k?sa servis kesintisini, kullan?c? ileti?imini ve geri d?n?? yolunu i?letim prosed?r?n?zde haz?rlay?n.
+Güncellemeler ekranı bakım penceresi planlamaz, yedek oluşturmaz ve kullanıcı oturumlarını koordine etmez. Başlatmadan önce onaylı yedeği, kısa servis kesintisini, kullanıcı iletişimini ve geri dönüş yolunu işletim prosedürünüzde hazırlayın.
 
 ## Engellenme ve Kurtarma
 
-Kal?c? g?ncelleme i?leri sayfa yenilendi?inde veya servis geri geldi?inde yeniden okunur. Sunucu ?al??an `RUNNING` i?i y?kleyici yard?mc?s? g?nl??? ve ?al??an s?r?mle uzla?t?r?r:
+Kalıcı güncelleme işleri sayfa yenilendiğinde veya servis geri geldiğinde yeniden okunur. Sunucu çalışan `RUNNING` işi yükleyici yardımcısı günlüğü ve çalışan sürümle uzlaştırır:
 
-- Hedef s?r?m zaten ?al???yorsa i? `COMPLETED` yap?labilir.
-- MSI tamamlanm?? ancak servis hedef s?r?mle d?nmemi?se yeniden ba?latma ad?m? bekler; zaman a??m?nda `BLOCKED` olur.
-- Y?kleyici yard?mc?s? ba?lang?? sinyali yazmazsa i? yakla??k `%76` d?zeyinde engellenebilir.
-- Yard?mc? ba?lam?? ancak MSI tamamlanma/??k?? kodu gelmemi?se i? yakla??k `%82` d?zeyinde engellenebilir.
-- MSI tamamland?ktan sonra hedef s?r?m zaman?nda do?rulanamazsa i? yakla??k `%96` d?zeyinde engellenebilir.
+- Hedef sürüm zaten çalışıyorsa iş `COMPLETED` yapılabilir.
+- MSI tamamlanmış ancak servis hedef sürümle dönmemişse yeniden başlatma adımı bekler; zaman aşımında `BLOCKED` olur.
+- Yükleyici yardımcısı başlangıç sinyali yazmazsa iş yaklaşık `%76` düzeyinde engellenebilir.
+- Yardımcı başlamış ancak MSI tamamlanma/çıkış kodu gelmemişse iş yaklaşık `%82` düzeyinde engellenebilir.
+- MSI tamamlandıktan sonra hedef sürüm zamanında doğrulanamazsa iş yaklaşık `%96` düzeyinde engellenebilir.
 
-Y?zdenin birka? dakika ayn? kalmas? tek ba??na tak?lma kan?t? de?ildir. Son kay?ttan bu yana ge?en s?re k?sa ve yeni sinyal geliyorsa i?i bekleyin. Sayfa yenilendikten sonra kurtar?lan aktif i? kartta g?r?nebilir, ancak oturum i?i aktif i? sinyali yeniden kurulmad?ysa otomatik sorgulama kendili?inden devam etmeyebilir. Pencereye yeniden odaklan?n veya taray?c? sayfas?n? yenileyerek yeni i? anl?k g?r?nt?s?n? al?n; **Canl? denetle** paket kontrol?d?r, i? yenileme d??mesi de?ildir. Yeni i? ba?latmadan ?nce G?ncellemeler ve ??lemler ekranlar?nda aktif kay?t bulunmad???n? do?rulay?n.
+Yüzdenin birkaç dakika aynı kalması tek başına takılma kanıtı değildir. Son kayıttan bu yana geçen süre kısa ve yeni sinyal geliyorsa işi bekleyin. Sayfa yenilendikten sonra kurtarılan aktif iş kartta görünebilir, ancak oturum içi aktif iş sinyali yeniden kurulmadıysa otomatik sorgulama kendiliğinden devam etmeyebilir. Pencereye yeniden odaklanın veya tarayıcı sayfasını yenileyerek yeni iş anlık görüntüsünü alın; **Canlı denetle** paket kontrolüdür, iş yenileme düğmesi değildir. Yeni iş başlatmadan önce Güncellemeler ve İşlemler ekranlarında aktif kayıt bulunmadığını doğrulayın.
 
-?ptal denetimi yoktur. `BLOCKED` i?i veritaban?ndan d?zenlemeyin, paketi do?rulamas?z de?i?tirmeyin ve imza kontrol?n? atlamay?n. Kan?t? koruyun, k?k nedeni d?zeltin, **Canl? denetle** veya yerel kan?tla durumu yeniden do?rulay?n ve yaln?z sonra yeni bir kurulum i?i ba?lat?n.
+İptal denetimi yoktur. `BLOCKED` işi veritabanından düzenlemeyin, paketi doğrulamasız değiştirmeyin ve imza kontrolünü atlamayın. Kanıtı koruyun, kök nedeni düzeltin, **Canlı denetle** veya yerel kanıtla durumu yeniden doğrulayın ve yalnız sonra yeni bir kurulum işi başlatın.
 
-## ?nerilen ?? Ak??lar?
+## Önerilen İş Akışları
 
-### Uzak imzal? MSI kurulumunu do?rulama
+### Uzak imzalı MSI kurulumunu doğrulama
 
-1. Bak?m penceresi, yedek, geri d?n?? ve sunucu y?netici eri?imini haz?rlay?n.
-2. **Canl? denetle** kullan?n; manifest imzas? ve paket ad?mlar?n?n engellenmedi?ini do?rulay?n.
-3. Dosya ad?, hedef s?r?m, boyut, tam SHA-256 ve imzac? kan?t?n? ba??ms?z yay?n kan?t?yla kar??la?t?r?n.
-4. Paket **Haz?r** ise Sahip rol?yle **Sunucu MSI kur** se?ene?ini kullan?n.
-5. ?ndirme, SHA-256, Authenticode, MSI ve yeniden ba?latma ad?mlar?n? izleyin.
-6. Konsol geri geldi?inde ?al??an s?r?m?, servis sa?l???n? ve terminal i? durumunu do?rulay?n.
+1. Bakım penceresi, yedek, geri dönüş ve sunucu yönetici erişimini hazırlayın.
+2. **Canlı denetle** kullanın; manifest imzası ve paket adımlarının engellenmediğini doğrulayın.
+3. Dosya adı, hedef sürüm, boyut, tam SHA-256 ve imzacı kanıtını bağımsız yayın kanıtıyla karşılaştırın.
+4. Paket **Hazır** ise Sahip rolüyle **Sunucu MSI kur** seçeneğini kullanın.
+5. İndirme, SHA-256, Authenticode, MSI ve yeniden başlatma adımlarını izleyin.
+6. Konsol geri geldiğinde çalışan sürümü, servis sağlığını ve terminal iş durumunu doğrulayın.
 
-### Engellenmi? i?i inceleme
+### Engellenmiş işi inceleme
 
-1. `BLOCKED` i?te ilk engellenen ad?m? ve son kay?t zaman?n? belirleyin.
-2. Manifest/imza/hash engeli ile Windows Installer/UAC/servis engelini birbirinden ay?r?n.
-3. Paket veya g?ven ayar?n? de?i?tirmeden ?nce redakte kan?t? koruyun.
-4. Gerekirse y?zde 76 bilgi bankas?n? ve Windows Installer/VaultPilot servis kan?t?n? kullan?n.
-5. K?k neden d?zelmeden yeni i? ba?latmay?n; d?zeltme sonras? durumu yeniden denetleyin.
+1. `BLOCKED` işte ilk engellenen adımı ve son kayıt zamanını belirleyin.
+2. Manifest/imza/hash engeli ile Windows Installer/UAC/servis engelini birbirinden ayırın.
+3. Paket veya güven ayarını değiştirmeden önce redakte kanıtı koruyun.
+4. Gerekirse yüzde 76 bilgi bankasını ve Windows Installer/VaultPilot servis kanıtını kullanın.
+5. Kök neden düzelmeden yeni iş başlatmayın; düzeltme sonrası durumu yeniden denetleyin.
 
-## Ekran Durumlar?
+## Ekran Durumları
 
-| Durum | Operat?r cevab? |
+| Durum | Operatör cevabı |
 | --- | --- |
-| Y?kleniyor | ?ki iskelet sat?r? g?r?n?r; ge?ici bo?lu?u kesin paket durumu saymay?n. |
-| G?ncelleme durumu okunamad? | Kasa/oturum, rol, otomatik g?ncelleme lisans? ve sunucu ba?lant?s?n? do?rulay?n. |
-| G?ncel | Yeni otomatik MSI i?i yoktur; g?m?l? s?r?m notunu yay?n kan?t? saymay?n. |
-| Haz?r | S?r?m, manifest, tam SHA-256, imzac? ve bak?m penceresini do?rulad?ktan sonra Sahip ba?latabilir. |
-| ??lem gerekli | ?lk `BLOCKED` do?rulama ad?m?n? giderin; indirme veya kurulumu zorlamay?n. |
-| Kontrol ?al???yor | ?kinci canl? denetim ba?latmay?n; sonu? veya uyar?y? bekleyin. |
-| Kurulum s?r?yor | Y?zde ile birlikte son kay?ttan bu yana ge?en s?reyi izleyin; servis ba?lant? kesintisine haz?r olun. |
-| UAC bekleniyor | Windows sunucu oturumunda onay? de?erlendirin; beklenmeyen istemi kabul etmeyin. |
-| Y?zde 76/82 civar?nda sabit | Yeni kay?t geliyorsa bekleyin; zaman a??m? veya `BLOCKED` olu?ursa ilgili y?kleyici kan?t?n? inceleyin. |
-| Y?zde 96 civar?nda sabit | MSI sonucu ile ?al??an servis s?r?m?n? kar??la?t?r?n; hedef s?r?m gelmeden tamamland? saymay?n. |
-| Blocked | Engellenen ad?m? ve redakte ayr?nt?y? koruyun; otomatik yeniden deneme beklemeyin. |
-| Completed | ?al??an s?r?m ve servis sa?l??? hedefle e?le?iyorsa tamamland? kabul edin. |
-| Konsol ba?lant?s? kesildi | Beklenen bak?m penceresinde sa?l?k sinyalini bekleyin; ba?lant? gelince pencereye odaklan?n veya sayfay? yenileyin, hemen ikinci kurulum ba?latmay?n. |
+| Yükleniyor | İki iskelet satırı görünür; geçici boşluğu kesin paket durumu saymayın. |
+| Güncelleme durumu okunamadı | Kasa/oturum, rol, otomatik güncelleme lisansı ve sunucu bağlantısını doğrulayın. |
+| Güncel | Yeni otomatik MSI işi yoktur; gömülü sürüm notunu yayın kanıtı saymayın. |
+| Hazır | Sürüm, manifest, tam SHA-256, imzacı ve bakım penceresini doğruladıktan sonra Sahip başlatabilir. |
+| İşlem gerekli | İlk `BLOCKED` doğrulama adımını giderin; indirme veya kurulumu zorlamayın. |
+| Kontrol çalışıyor | İkinci canlı denetim başlatmayın; sonuç veya uyarıyı bekleyin. |
+| Kurulum sürüyor | Yüzde ile birlikte son kayıttan bu yana geçen süreyi izleyin; servis bağlantı kesintisine hazır olun. |
+| UAC bekleniyor | Windows sunucu oturumunda onayı değerlendirin; beklenmeyen istemi kabul etmeyin. |
+| Yüzde 76/82 civarında sabit | Yeni kayıt geliyorsa bekleyin; zaman aşımı veya `BLOCKED` oluşursa ilgili yükleyici kanıtını inceleyin. |
+| Yüzde 96 civarında sabit | MSI sonucu ile çalışan servis sürümünü karşılaştırın; hedef sürüm gelmeden tamamlandı saymayın. |
+| Blocked | Engellenen adımı ve redakte ayrıntıyı koruyun; otomatik yeniden deneme beklemeyin. |
+| Completed | Çalışan sürüm ve servis sağlığı hedefle eşleşiyorsa tamamlandı kabul edin. |
+| Konsol bağlantısı kesildi | Beklenen bakım penceresinde sağlık sinyalini bekleyin; bağlantı gelince pencereye odaklanın veya sayfayı yenileyin, hemen ikinci kurulum başlatmayın. |
 
-## ??lemden ?nce
+## İşlemden Önce
 
-- Sahip rol?n?, otomatik g?ncelleme lisans ?zelli?ini ve lisans?n yaz?labilir oldu?unu do?rulay?n.
-- Onayl? bak?m penceresi, g?ncel yedek, geri d?n?? y?ntemi ve Windows y?netici eri?imini haz?rlay?n.
-- Yerel ve uzak kaynaklar? kar??t?rmay?n; karttaki `LOCAL` veya `GITHUB_RELEASE` kayna??n? ve hedef s?r?m? do?rulay?n.
-- Uzak pakette manifest imzas?n?, izinli paket adresini, dosya ad?n?/boyutunu, tam SHA-256 de?erini ve Authenticode imzac?s?n? birlikte de?erlendirin; yerel `READY` durumunda Authenticode'un i? s?ras?nda do?rulanaca??n? unutmay?n.
-- Aktif `QUEUED` veya `RUNNING` i? olmad???n? G?ncellemeler ve ??lemler ekranlar?nda kontrol edin.
-- Canl? denetim, s?r?m notu veya en son s?r?m ?zetinin yay?n olu?turmad???n? ve kurulum ba?ar?s?n? kan?tlamad???n? unutmay?n.
+- Sahip rolünü, otomatik güncelleme lisans özelliğini ve lisansın yazılabilir olduğunu doğrulayın.
+- Onaylı bakım penceresi, güncel yedek, geri dönüş yöntemi ve Windows yönetici erişimini hazırlayın.
+- Yerel ve uzak kaynakları karıştırmayın; karttaki `LOCAL` veya `GITHUB_RELEASE` kaynağını ve hedef sürümü doğrulayın.
+- Uzak pakette manifest imzasını, izinli paket adresini, dosya adını/boyutunu, tam SHA-256 değerini ve Authenticode imzacısını birlikte değerlendirin; yerel `READY` durumunda Authenticode'un iş sırasında doğrulanacağını unutmayın.
+- Aktif `QUEUED` veya `RUNNING` iş olmadığını Güncellemeler ve İşlemler ekranlarında kontrol edin.
+- Canlı denetim, sürüm notu veya en son sürüm özetinin yayın oluşturmadığını ve kurulum başarısını kanıtlamadığını unutmayın.
 
-## G?venli Kan?t
+## Güvenli Kanıt
 
-- Payla??labilir: genel kaynak t?r?, bile?en, s?r?m/etiket, herkese a??k paket ad? ve boyutu, beklenen/g?zlenen SHA-256 e?le?me durumu, Authenticode durumu veya imzac? ?zeti, ad?m durumu, geni? zaman aral??? ve redakte hata kategorisi.
-- Gizli kalmal?: yerel indirme/haz?rlama yolu, sunucu ad? ve kullan?c? ad?, i? kimli?i, ?zel manifest veya destek ba?lant?s?, kopyalanm?? MSI, ham PowerShell/MSI/Windows olay g?nl?kleri, destek paketi, ortam de?erleri, lisans verisi ve imzalama ?zel anahtar?/sertifika dosyas?.
-- Herkese a??k bir yay?n dosyas?n?n tam SHA-256 de?eri ve imzac? parmak izi payla??labilir kan?t olabilir; bunun ger?ekten herkese a??k varl??a ait oldu?unu do?rulamadan dahili paket kan?t?n? yay?mlamay?n.
-- Ekran g?r?nt?s?nde paket URL'sinden t?retilen artefakt metnini, teknik ad?m ayr?nt?s?n? ve son kay?t zaman?n? ayr? ayr? inceleyip gerekli alanlar? maskeleyin; normal kartta manifest adresi bulundu?unu varsaymay?n.
+- Paylaşılabilir: genel kaynak türü, bileşen, sürüm/etiket, herkese açık paket adı ve boyutu, beklenen/gözlenen SHA-256 eşleşme durumu, Authenticode durumu veya imzacı özeti, adım durumu, geniş zaman aralığı ve redakte hata kategorisi.
+- Gizli kalmalı: yerel indirme/hazırlama yolu, sunucu adı ve kullanıcı adı, iş kimliği, özel manifest veya destek bağlantısı, kopyalanmış MSI, ham PowerShell/MSI/Windows olay günlükleri, destek paketi, ortam değerleri, lisans verisi ve imzalama özel anahtarı/sertifika dosyası.
+- Herkese açık bir yayın dosyasının tam SHA-256 değeri ve imzacı parmak izi paylaşılabilir kanıt olabilir; bunun gerçekten herkese açık varlığa ait olduğunu doğrulamadan dahili paket kanıtını yayımlamayın.
+- Ekran görüntüsünde paket URL'sinden türetilen artefakt metnini, teknik adım ayrıntısını ve son kayıt zamanını ayrı ayrı inceleyip gerekli alanları maskeleyin; normal kartta manifest adresi bulunduğunu varsaymayın.
 
-## Ne Zaman Durmal? ve Destek ?stemelisiniz
+## Ne Zaman Durmalı ve Destek İstemelisiniz
 
-Manifest imzas? do?rulanm?yorsa, SHA-256 veya boyut uyu?muyorsa, Authenticode imzac?s? beklenen kan?tla e?le?miyorsa, beklenmeyen UAC istemi ??k?yorsa, MSI geri al?n?yorsa, servis hedef s?r?mle d?nm?yorsa veya i? uzla?t?rma sonras? `BLOCKED` kal?yorsa kurulumu durdurun. Paket de?i?tirmeden veya yeni i? ba?latmadan; s?r?m, kaynak s?n?f?, ad?m ad?, geni? zaman aral???, genel hata kodu ve redakte imza/SHA-256 durumuyla ?zel destek kayd? a??n.
+Manifest imzası doğrulanmıyorsa, SHA-256 veya boyut uyuşmuyorsa, Authenticode imzacısı beklenen kanıtla eşleşmiyorsa, beklenmeyen UAC istemi çıkıyorsa, MSI geri alınıyorsa, servis hedef sürümle dönmüyorsa veya iş uzlaştırma sonrası `BLOCKED` kalıyorsa kurulumu durdurun. Paket değiştirmeden veya yeni iş başlatmadan; sürüm, kaynak sınıfı, adım adı, geniş zaman aralığı, genel hata kodu ve redakte imza/SHA-256 durumuyla özel destek kaydı açın.
 
-## Operat?r Notlar?
+## Operatör Notları
 
-G?ncellemeler ekran? t?ketici taraftaki do?rulama ve kurulum y?zeyidir. GitHub s?r?m?, manifesti, MSI'? veya ba?ka bile?en varl???n? olu?turmaz, imzalamaz, y?klemez, etiketlemez ya da yay?mlamaz. G?m?l? s?r?m notlar? da d?? yay?n durumunun canl? kayna?? de?ildir.
+Güncellemeler ekranı tüketici taraftaki doğrulama ve kurulum yüzeyidir. GitHub sürümü, manifesti, MSI'ı veya başka bileşen varlığını oluşturmaz, imzalamaz, yüklemez, etiketlemez ya da yayımlamaz. Gömülü sürüm notları da dış yayın durumunun canlı kaynağı değildir.
 
-## ?lgili
+## İlgili
 
-- [G?ncelleme Merkezi](update-center.md)
-- [Yay?n dosyas? do?rulama](release-asset-verification.md)
-- [??lemler ekran?](screen-executions.md)
-- [Sunucu ayarlar? ekran?](screen-server-settings.md)
-- [Update y?zde 76 civar?nda tak?l?yor KB](../../kb/tr/update-stuck-76.md)
+- [Güncelleme Merkezi](update-center.md)
+- [Yayın dosyası doğrulama](release-asset-verification.md)
+- [İşlemler ekranı](screen-executions.md)
+- [Sunucu ayarları ekranı](screen-server-settings.md)
+- [Update yüzde 76 civarında takılıyor KB](../../kb/tr/update-stuck-76.md)

@@ -1,6 +1,6 @@
 # API Keys Screen
 
-The topbar `?` opens this context-specific guide while the API Keys workspace is active. Use this screen to find, review, and?when your access permits?update service keys, access tokens, and similar machine-to-machine secrets in the active vault. Marking a VaultPilot record revoked does not revoke the real key at its provider.
+The topbar `?` opens this context-specific guide while the API Keys workspace is active. Use this screen to find, review, and—when your access permits—update service keys, access tokens, and similar machine-to-machine secrets in the active vault. Marking a VaultPilot record revoked does not revoke the real key at its provider.
 
 ## Access, Vault Role, and License
 
@@ -58,7 +58,7 @@ On save, the browser encrypts the record with the active vault key. A new record
 
 ### Value generator and expiry metadata
 
-The editor?s generator runs in the browser, defaults to 24 characters, and supports 12?64. Lowercase is always in the alphabet; uppercase, digit, and symbol toggles expand it. The result only fills the form. It does not issue, validate, rotate, or revoke a provider key; create the real key through the provider?s approved flow first.
+The editor’s generator runs in the browser, defaults to 24 characters, and supports 12–64. Lowercase is always in the alphabet; uppercase, digit, and symbol toggles expand it. The result only fills the form. It does not issue, validate, rotate, or revoke a provider key; create the real key through the provider’s approved flow first.
 
 The manual editor has no separate expiry field. An `expiresAt` value imported through the `API Keys` Excel sheet becomes encrypted record metadata; it does not schedule rotation or revocation and does not prove provider-side expiry. Import sets source to `imported`, status to `ACTIVE`, and risk once at import: `expired` only when the date is already past, otherwise `unknown`. Do not treat that classification as continuously advancing expiry monitoring.
 
@@ -81,7 +81,7 @@ The bulk menu includes Excel template/import, plaintext export, category and tag
 - **Export selected** writes complete decrypted records and key values to a plaintext JSON file. The downloaded file is a separate sensitive copy and is not deleted automatically.
 - **Add to audit report** writes record metadata rather than secret values to CSV.
 - Bulk updates and deletes process records sequentially. A mid-run failure does not roll back earlier successes. Refresh and reconcile the actual scope and audit events before retrying.
-- **Bulk share** moves the selection to Sharing?s method step; it has not sent a package and selection grants no permission. An internal-recipient bundle requires Owner/Admin, **Manager** on the active vault, and a writable license. An external package requires **Manager** on the active vault and a writable license.
+- **Bulk share** moves the selection to Sharing’s method step; it has not sent a package and selection grants no permission. An internal-recipient bundle requires Owner/Admin, **Manager** on the active vault, and a writable license. An external package requires **Manager** on the active vault and a writable license.
 - **Run security check** can apply the HIBP password-check mechanism to a secret value. It does not prove that an API key is valid, least-privileged, or unexposed at its provider.
 
 ## Screen States
@@ -94,7 +94,7 @@ The bulk menu includes Excel template/import, plaintext export, category and tag
 | Read-only | Reveal and copy may remain available, but record-changing actions are disabled. |
 | `REVOKED` | This is VaultPilot metadata only. Verify the actual revocation state in the provider console. |
 | Clipboard or audit error | The value may already be exposed. Clear the clipboard manually, hide the value, and reconcile the event separately. |
-| Bulk action stopped partway through | Do not retry blindly. Compare hidden selection, changed records, and the provider?s real state. |
+| Bulk action stopped partway through | Do not retry blindly. Compare hidden selection, changed records, and the provider’s real state. |
 
 ## Before You Act
 

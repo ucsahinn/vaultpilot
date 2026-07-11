@@ -15,7 +15,7 @@ The dashboard has no separate license gate. A read-only license permits viewing 
 ## Work Here
 
 - Compare credential inventory with directory password actions and matching audit records.
-- Separate 61?90 day review candidates, records older than 90 days, and records without a readable age source.
+- Separate 61–90 day review candidates, records older than 90 days, and records without a readable age source.
 - Open prepared credential-state or execution filters from supported flow cards.
 - Review event evidence without exposing generated, current, or previous passwords.
 - Compare the top six site groups without treating the displayed date range as an active filter.
@@ -45,9 +45,9 @@ Every readable `CREDENTIAL` record is assigned to one fixed password-age band:
 
 | Visible band | Calculation |
 | --- | --- |
-| 0?30 days | 30 days or less. |
-| 31?60 days | More than 30 and no more than 60 days. |
-| 61?90 days | More than 60 and no more than 90 days; the dashboard's due band. |
+| 0–30 days | 30 days or less. |
+| 31–60 days | More than 30 and no more than 60 days. |
+| 61–90 days | More than 60 and no more than 90 days; the dashboard's due band. |
 | 90+ days | More than 90 days; the overdue band. |
 | No date | No readable source timestamp. |
 
@@ -93,7 +93,7 @@ The dashboard does not prove that a credential is still used, that a target acce
 
 ### Review due, overdue, and missing-date credentials
 
-1. Read **61?90 days**, **90+ days**, and **No date** separately.
+1. Read **61–90 days**, **90+ days**, and **No date** separately.
 2. Use the five-row oldest table only as a starting point.
 3. On Credentials, verify owner, account, target, source, actual last-change evidence, dependencies, and rollback.
 4. Use the organization's approved change process; this dashboard does not schedule or execute rotation.
@@ -119,7 +119,7 @@ The dashboard does not prove that a credential is still used, that a target acce
 | --- | --- |
 | Refreshing | Wait; source queries can finish independently. |
 | No credential records | Verify active vault and vault-read access. The integration feature is not required for these metrics; Password and API-key records do not populate SLA. |
-| 61?90 days | Treat as due for review, then verify the organization's actual policy. |
+| 61–90 days | Treat as due for review, then verify the organization's actual policy. |
 | 90+ days | Treat as overdue for review; do not rotate without owner, dependency, and rollback context. |
 | No date | Verify `passwordLastSetAt`, import time, and update time. There is no next-rotation-date field. |
 | Missing owner | Resolve owner, directory account, or username metadata before assigning work. |
@@ -149,7 +149,7 @@ The dashboard does not prove that a credential is still used, that a target acce
 
 ## When to Stop and Escalate
 
-Stop when ownership is unknown, age sources conflict, a future or malformed timestamp changes priority, action and audit evidence disagree, a generated password may be exposed, the target cannot be tested safely, or rollback is unknown. Open a private case with broad age band, redacted action state, general error class, broad time window, and last safe step?without secret material.
+Stop when ownership is unknown, age sources conflict, a future or malformed timestamp changes priority, action and audit evidence disagree, a generated password may be exposed, the target cannot be tested safely, or rollback is unknown. Open a private case with broad age band, redacted action state, general error class, broad time window, and last safe step—without secret material.
 
 ## Operator Notes
 

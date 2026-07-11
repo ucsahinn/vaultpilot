@@ -1,6 +1,6 @@
 # Sign-In Security Screen
 
-The topbar `?` opens this guide for **Server settings > Sign-in security**. This tab manages the unlocked personal profile's master-password change, TOTP-based 2FA binding, and?when the role is Owner?active server sessions. VaultPilot sign-in uses username, master password, and an authenticator code when 2FA is enabled. There is no email link, emailed password reset, external IdP/SSO, or recovery-code flow here.
+The topbar `?` opens this guide for **Server settings > Sign-in security**. This tab manages the unlocked personal profile's master-password change, TOTP-based 2FA binding, and—when the role is Owner—active server sessions. VaultPilot sign-in uses username, master password, and an authenticator code when 2FA is enabled. There is no email link, emailed password reset, external IdP/SSO, or recovery-code flow here.
 
 ## Access, Role, and Server-Settings Context
 
@@ -136,7 +136,7 @@ The current browser flow has no email password reset, recovery code, SMS, IdP re
 
 ## When to Stop and Escalate
 
-Stop making security changes when 2FA is enabled but remains **Check**, server verification material is missing, the profile private key cannot be opened after password change, other sessions remain active after a change, the session list shows an unexpected user, or automatic lock does not clear expected sensitive state. Open a private support case with role class, general state, broad time window, error code, and last safe step?without secret values.
+Stop making security changes when 2FA is enabled but remains **Check**, server verification material is missing, the profile private key cannot be opened after password change, other sessions remain active after a change, the session list shows an unexpected user, or automatic lock does not clear expected sensitive state. Open a private support case with role class, general state, broad time window, error code, and last safe step—without secret values.
 
 ## Operator Notes
 

@@ -41,9 +41,9 @@ Choose the intended type from the global chooser before entering material. If th
 
 ## Value Generation, Strength, and Breach Check
 
-The password generator is available for every manual type except File. Lowercase characters are always present in the selection pool; Uppercase, Digits, and Symbols can add their character sets to that pool. Random selection from the combined pool does not guarantee that the generated value contains at least one character from any particular set, including lowercase. The visible length control allows 12?64 characters and defaults to 24 with all three options enabled. Generation uses browser cryptographic randomness and replaces the current hidden-value field; it does not save the record.
+The password generator is available for every manual type except File. Lowercase characters are always present in the selection pool; Uppercase, Digits, and Symbols can add their character sets to that pool. Random selection from the combined pool does not guarantee that the generated value contains at least one character from any particular set, including lowercase. The visible length control allows 12–64 characters and defaults to 24 with all three options enabled. Generation uses browser cryptographic randomness and replaces the current hidden-value field; it does not save the record.
 
-The **Short / Ready / Strong** pill is length-only feedback: under 16, 16?23, or 24+ characters. It is not a policy verdict, entropy proof, breach result, or save requirement.
+The **Short / Ready / Strong** pill is length-only feedback: under 16, 16–23, or 24+ characters. It is not a policy verdict, entropy proof, breach result, or save requirement.
 
 When the breach button is present, it runs only after the operator selects it. The browser hashes the value with SHA-1 and sends only the first five hash characters to the HIBP Pwned Passwords range service; the full value is not sent. The displayed form result is not bound to a hash of the current field: generating, pasting, or editing the value afterward can leave a stale result visible, and that result can be copied to the saved record's browser-local breach status after a successful non-file save. Finish the value first, then run the breach check again immediately before Save. A breach-check error does not save or change the record and does not prove that an older displayed result matches the current value.
 
@@ -155,7 +155,7 @@ After successful creation, Password, API key, and Secure note write a `CREATE` a
 
 ## When to Stop and Escalate
 
-Stop when the active vault is uncertain, write access is unexpected, certificate or file provenance is unknown, private-key exposure is suspected, an upload fails after partial progress, quota state conflicts with the UI, or audit and list outcomes disagree. Open a private case with record type, broad size, general error code, broad time window, and last safe step?without secret material.
+Stop when the active vault is uncertain, write access is unexpected, certificate or file provenance is unknown, private-key exposure is suspected, an upload fails after partial progress, quota state conflicts with the UI, or audit and list outcomes disagree. Open a private case with record type, broad size, general error code, broad time window, and last safe step—without secret material.
 
 ## Operator Notes
 

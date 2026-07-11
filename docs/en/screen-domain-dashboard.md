@@ -24,9 +24,9 @@ This widget is derived from Active Directory credential records in the vault and
 
 ## Access, Data, and Agent Capabilities
 
-The directory-provider query is enabled only for Owners. If an Admin, Auditor, or User reaches the dashboard shell, empty or zero values mean **data was not loaded because of permission**, not ?no agent exists.? Even as Owner, wait for the query to complete before interpreting an empty state.
+The directory-provider query is enabled only for Owners. If an Admin, Auditor, or User reaches the dashboard shell, empty or zero values mean **data was not loaded because of permission**, not “no agent exists.” Even as Owner, wait for the query to complete before interpreting an empty state.
 
-Capabilities advertised by the agent constrain both data and actions. Inventory requires `READ_INVENTORY`; password-state information requires `READ_PASSWORD_STATE`. Unlock, require-password-change, and temporary-password operations require `UNLOCK_ACCOUNT`, `REQUIRE_PASSWORD_CHANGE`, and `RESET_TEMP_PASSWORD` respectively. When a capability is absent, zero or missing data does not mean healthy?it may not have been collected. Sensitive actions also require a `CONNECTED` agent, writable license, Owner role, and a target that is not marked privileged.
+Capabilities advertised by the agent constrain both data and actions. Inventory requires `READ_INVENTORY`; password-state information requires `READ_PASSWORD_STATE`. Unlock, require-password-change, and temporary-password operations require `UNLOCK_ACCOUNT`, `REQUIRE_PASSWORD_CHANGE`, and `RESET_TEMP_PASSWORD` respectively. When a capability is absent, zero or missing data does not mean healthy—it may not have been collected. Sensitive actions also require a `CONNECTED` agent, writable license, Owner role, and a target that is not marked privileged.
 
 ## Recommended Review Workflows
 

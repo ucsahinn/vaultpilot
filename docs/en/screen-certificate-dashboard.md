@@ -20,7 +20,7 @@ Owner, Admin, and User system roles can see this inventory when they have read a
 
 ### Certificate risk radar
 
-Radar sectors represent certificate authorities derived from records in the active vault. Distance from the center represents up to 90 days of remaining validity. Color bands distinguish **0?15 days**, **16?30 days**, **31?60 days**, **60+ days**, and **No date**. The Critical count also includes expired and revoked records, in addition to records with 15 days or less remaining.
+Radar sectors represent certificate authorities derived from records in the active vault. Distance from the center represents up to 90 days of remaining validity. Color bands distinguish **0–15 days**, **16–30 days**, **31–60 days**, **60+ days**, and **No date**. The Critical count also includes expired and revoked records, in addition to records with 15 days or less remaining.
 
 Selecting a radar point opens a detail dialog. It shows record count, nearest expiry, status, authority and issuer, subject, domain, recorded owner, environment, origin, format, category, import date, and shortened fingerprint and serial fragments. The dialog does not edit the record or reveal its stored certificate value.
 
@@ -33,12 +33,12 @@ The timeline counts non-expired, non-revoked records with readable expiry dates.
 | Visible label | Actual remaining validity |
 | --- | --- |
 | More than 180 days | 181 days or more |
-| 180 days | 91?180 days |
-| 90 days | 61?90 days |
-| 60 days | 31?60 days |
-| 30 days | 16?30 days |
-| 15 days | 8?15 days |
-| 7 days | 2?7 days |
+| 180 days | 91–180 days |
+| 90 days | 61–90 days |
+| 60 days | 31–60 days |
+| 30 days | 16–30 days |
+| 15 days | 8–15 days |
+| 7 days | 2–7 days |
 | 1 day | 1 day |
 | Today | 0 days |
 
@@ -68,7 +68,7 @@ The distribution area groups records in three ways:
 - **CA:** Certificate authority classified from record metadata.
 - **Organization:** The first four organization groups derived from the records.
 
-The **Manual**, **Imported**, and **AD sync** origin rows, plus CA and organization rows, open the Certificates screen with the matching filter. The **Other** origin row is not bound to a distinct source value; selecting it does not provide a reliable ?Other origin? drilldown and can fall through to an organization filter. Open the Certificates screen directly and review record origins instead. The summary visual opens the first non-empty segment in its group; the same limitation applies when **Other** is first in the Origin group.
+The **Manual**, **Imported**, and **AD sync** origin rows, plus CA and organization rows, open the Certificates screen with the matching filter. The **Other** origin row is not bound to a distinct source value; selecting it does not provide a reliable “Other origin” drilldown and can fall through to an organization filter. Open the Certificates screen directly and review record origins instead. The summary visual opens the first non-empty segment in its group; the same limitation applies when **Other** is first in the Origin group.
 
 ## Filters and Drilldowns
 
@@ -146,7 +146,7 @@ Expired records do not appear in the expiry timeline; they remain under the **Ex
 
 ## When to Stop and Escalate
 
-Stop when you cannot identify the warning's source surface, the replacement presents the wrong hostname, the trust chain is unknown, private-key exposure is suspected, or the required package and password cannot be verified. Open a private case with the surface, general error class, redacted target, validity window, and last safe step?without attaching private material.
+Stop when you cannot identify the warning's source surface, the replacement presents the wrong hostname, the trust chain is unknown, private-key exposure is suspected, or the required package and password cannot be verified. Open a private case with the surface, general error class, redacted target, validity window, and last safe step—without attaching private material.
 
 ## Operator Notes
 

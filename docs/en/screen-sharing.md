@@ -42,7 +42,7 @@ The same selection and policy finish through exactly one of the internal or exte
 
 ## Internal Sharing
 
-In **Internal recipient**, choose the target VaultPilot user and select **Send selected items**. The browser creates a new AES-GCM bundle key, encrypts the selected records with it, and wraps that key to the recipient's registered public key. The server stores ciphertext, the wrapped key, selection hashes, and policy metadata?not plaintext records or the unwrapped bundle key.
+In **Internal recipient**, choose the target VaultPilot user and select **Send selected items**. The browser creates a new AES-GCM bundle key, encrypts the selected records with it, and wraps that key to the recipient's registered public key. The server stores ciphertext, the wrapped key, selection hashes, and policy metadata—not plaintext records or the unwrapped bundle key.
 
 An internal bundle containing files is a multi-request operation:
 
@@ -146,7 +146,7 @@ Stop when selection scope is uncertain, the target user or key cannot be verifie
 
 ## Operator Notes
 
-Internal sharing is a bounded, server-tracked encrypted delivery queue; acceptance creates independent copies in the recipient vault. External sharing is an offline file handoff; after distribution, control depends on manifest expiry, the recipient device clock, a local browser counter, and disciplined secret rotation. Do not describe both models as one continuing ?active share.?
+Internal sharing is a bounded, server-tracked encrypted delivery queue; acceptance creates independent copies in the recipient vault. External sharing is an offline file handoff; after distribution, control depends on manifest expiry, the recipient device clock, a local browser counter, and disciplined secret rotation. Do not describe both models as one continuing “active share.”
 
 ## Related
 

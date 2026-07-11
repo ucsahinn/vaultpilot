@@ -1,6 +1,6 @@
 # Certificates Screen
 
-The topbar `?` opens this guide for the Certificates screen. This workspace manages certificate, certificate-package, and private-key records in the selected vault. It does not install or replace the VaultPilot server?s HTTPS certificate; the live public certificate is managed through the separate flow in **Server settings**.
+The topbar `?` opens this guide for the Certificates screen. This workspace manages certificate, certificate-package, and private-key records in the selected vault. It does not install or replace the VaultPilot server’s HTTPS certificate; the live public certificate is managed through the separate flow in **Server settings**.
 
 Auditors cannot access secret records or vault keys. Owner, Admin, and User accounts can use only vaults assigned to them. A **Viewer** in the selected vault can read records, temporarily reveal or copy secret material, and download an original file when one exists. Vault **Editors** and **Managers** can create, duplicate, edit, and delete records while the license remains writable.
 
@@ -26,7 +26,7 @@ Title, owner/service, endpoint, note, expiry date, Subject/CN, and certificate-a
 
 The **Certificate or private key** field is the required secret value and remains masked by default. Importing a file puts both its original bytes and prepared material inside the encrypted record payload. This screen has no separate PFX/P12 passphrase field. Do not put a package passphrase in title, owner/service, endpoint, or note; use a separate password record when it must be retained.
 
-Certificate-authority cards show the provider name, signal description, and access-mode label. Selecting one replaces any recognized CA tag, sets category to `Certificate`, defaults an empty source to `manual`, and adds both the `certificate` tag and the selected authority tag. Selecting DigiCert, GoDaddy, GlobalSign, Let?s Encrypt, Microsoft CA, or Self-signed does not connect to an external service or start issuance, renewal, rekey, or revocation.
+Certificate-authority cards show the provider name, signal description, and access-mode label. Selecting one replaces any recognized CA tag, sets category to `Certificate`, defaults an empty source to `manual`, and adds both the `certificate` tag and the selected authority tag. Selecting DigiCert, GoDaddy, GlobalSign, Let’s Encrypt, Microsoft CA, or Self-signed does not connect to an external service or start issuance, renewal, rekey, or revocation.
 
 ## Recommended Workflows
 
@@ -59,7 +59,7 @@ Reveal only when needed and after stopping screen sharing. The 30-second clipboa
 | No records | If you have write access, create the first record; otherwise confirm the vault and role. |
 | No matches | Clear search and active smart filters. |
 | Valid | Still verify remaining term, endpoint, and renewal owner. |
-| Renewal window | Put records with 30 days or less into the organization?s renewal process. |
+| Renewal window | Put records with 30 days or less into the organization’s renewal process. |
 | Expired | Do not distribute the material; verify source state and its replacement. |
 | No date | Complete expiry from an authoritative source; do not treat missing as unlimited validity. |
 | Revoked / disabled | Do not use the record as an active certificate; reconcile it with the source system. |
@@ -82,15 +82,15 @@ Reveal only when needed and after stopping screen sharing. The 30-second clipboa
 - **Safe to share:** certificate state class, broad validity window, file format and size, certificate-authority class, and a short SHA-256 prefix.
 - **Keep private:** certificate or private-key material, original PEM/KEY/PFX/P12 package, package passphrase, full serial number and fingerprint, internal system name, complete Subject/issuer values, customer endpoint, and unmasked record screenshots.
 - Mask title, owner/service, URL, Subject/CN, issuer, and full SHA-256 in screenshots sent to support.
-- If a private key or package passphrase is exposed, stop copying or repackaging it and start the organization?s incident-response and certificate-authority process privately.
+- If a private key or package passphrase is exposed, stop copying or repackaging it and start the organization’s incident-response and certificate-authority process privately.
 
 ## When to Stop and Escalate
 
-Stop when the file?s SHA-256 differs from the expected value, Subject/issuer or expiry differs from the source record, the original file cannot be traced to an authorized source, secret material was shown to the wrong person, or a vault record is being mistaken for the live server certificate. Open a private support case with record ID, broad format and size, short SHA-256 prefix, redacted error, and attempted steps?never the secret material.
+Stop when the file’s SHA-256 differs from the expected value, Subject/issuer or expiry differs from the source record, the original file cannot be traced to an authorized source, secret material was shown to the wrong person, or a vault record is being mistaken for the live server certificate. Open a private support case with record ID, broad format and size, short SHA-256 prefix, redacted error, and attempted steps—never the secret material.
 
 ## Operator Notes
 
-A vault certificate record is not a deployment tool or certificate-authority client. Importing a file does not change the VaultPilot server?s HTTPS binding; the live public certificate is managed only through **Server settings**. Renewal, certificate-authority, and deployment notes are operational context, not automatic actions.
+A vault certificate record is not a deployment tool or certificate-authority client. Importing a file does not change the VaultPilot server’s HTTPS binding; the live public certificate is managed only through **Server settings**. Renewal, certificate-authority, and deployment notes are operational context, not automatic actions.
 
 ## Related
 

@@ -1,145 +1,145 @@
-# Parolalar Ekran?
+# Parolalar Ekranı
 
-?st ?ubuktaki `?`, Parolalar ekran? a??kken bu ba?lama ?zel rehberi a?ar. Bu ekran, aktif kasadaki parola kay?tlar?n? bulmak, incelemek ve yetkiniz varsa d?zenlemek i?indir. Buradaki ?retme, kopyalama ve ?otomatik doldurma paketi? i?lemleri hedef sistem hesab?n? kendili?inden de?i?tirmez.
+Üst çubuktaki `?`, Parolalar ekranı açıkken bu bağlama özel rehberi açar. Bu ekran, aktif kasadaki parola kayıtlarını bulmak, incelemek ve yetkiniz varsa düzenlemek içindir. Buradaki üretme, kopyalama ve “otomatik doldurma paketi” işlemleri hedef sistem hesabını kendiliğinden değiştirmez.
 
-## Eri?im, Kasa Rol? ve Lisans
+## Erişim, Kasa Rolü ve Lisans
 
-- Sahip, Y?netici ve Kullan?c? sistem rolleri, kendilerine okunabilir kasa eri?imi verildiyse parola ?al??ma alan?n? kullanabilir. Denet?i gizli kay?t ?al??ma alan?na giremez.
-- Kay?tlar?n ??z?lebilmesi i?in aktif kasan?n kilidi a??k ve kasa anahtar?n?n taray?c? oturumunda kullan?labilir olmas? gerekir.
-- G?r?nt?leme okunabilir kasa eri?imi ister. Olu?turma, kopya ?retme, d?zenleme, silme ve yazan toplu i?lemler i?in aktif kasada **Editor** veya **Manager** rol? ve salt okunur olmayan lisans gerekir.
-- Salt okunur lisans listeleme, g?sterme, kopyalama ve yerel s?z?nt? kontrol?ne engel de?ildir; kasa verisini de?i?tiren i?lemler kapal?d?r.
-- Sistem rol? tek ba??na kasa yetkisi vermez. Her i?lemden ?nce do?ru aktif kasay? ve o kasadaki rol?n?z? do?rulay?n.
+- Sahip, Yönetici ve Kullanıcı sistem rolleri, kendilerine okunabilir kasa erişimi verildiyse parola çalışma alanını kullanabilir. Denetçi gizli kayıt çalışma alanına giremez.
+- Kayıtların çözülebilmesi için aktif kasanın kilidi açık ve kasa anahtarının tarayıcı oturumunda kullanılabilir olması gerekir.
+- Görüntüleme okunabilir kasa erişimi ister. Oluşturma, kopya üretme, düzenleme, silme ve yazan toplu işlemler için aktif kasada **Editor** veya **Manager** rolü ve salt okunur olmayan lisans gerekir.
+- Salt okunur lisans listeleme, gösterme, kopyalama ve yerel sızıntı kontrolüne engel değildir; kasa verisini değiştiren işlemler kapalıdır.
+- Sistem rolü tek başına kasa yetkisi vermez. Her işlemden önce doğru aktif kasayı ve o kasadaki rolünüzü doğrulayın.
 
-## Burada Ne Yap?l?r
+## Burada Ne Yapılır
 
-- Ba?l?k, kullan?c? ad?/e-posta, giri? URL'si, parola ve not i?eren kay?tlar olu?turulur veya yeniden ?ifrelenerek g?ncellenir.
-- Arama, h?zl? filtreler ve birle?tirilebilir ak?ll? filtrelerle g?r?n?r kay?t k?mesi daralt?l?r.
-- Kart veya tablo g?r?n?m?nde parola, kullan?c? ad? ve URL ayr? i?lemlerle kopyalan?r.
-- HIBP Pwned Passwords ?zerinden iste?e ba?l? s?z?nt? kontrol? ?al??t?r?l?r.
-- Se?ili kay?tlar payla??m ekran?na veya toplu d?zenleme, rapor, d??a aktarma ve silme i?lemlerine haz?rlan?r.
+- Başlık, kullanıcı adı/e-posta, giriş URL'si, parola ve not içeren kayıtlar oluşturulur veya yeniden şifrelenerek güncellenir.
+- Arama, hızlı filtreler ve birleştirilebilir akıllı filtrelerle görünür kayıt kümesi daraltılır.
+- Kart veya tablo görünümünde parola, kullanıcı adı ve URL ayrı işlemlerle kopyalanır.
+- HIBP Pwned Passwords üzerinden isteğe bağlı sızıntı kontrolü çalıştırılır.
+- Seçili kayıtlar paylaşım ekranına veya toplu düzenleme, rapor, dışa aktarma ve silme işlemlerine hazırlanır.
 
-## Arama, Filtreler ve G?r?n?m
+## Arama, Filtreler ve Görünüm
 
-Metin aramas?; ba?l?k, kullan?c? ad?, URL, sunucu ad?, etki alan?, sahip, kategori, kaynak, risk ve etiket alanlar?nda ?al???r. Parola de?erinin i?inde arama yap?lmaz.
+Metin araması; başlık, kullanıcı adı, URL, sunucu adı, etki alanı, sahip, kategori, kaynak, risk ve etiket alanlarında çalışır. Parola değerinin içinde arama yapılmaz.
 
-H?zl? filtre band? veriye g?re **T?m?**, **S?z?nt? g?r?ld?**, **Kontrol bekliyor**, **Uyar?** ve en s?k ?r?n/servis ya da kategori se?eneklerinden en fazla yedisini g?sterir. **Ak?ll? filtre ekle** men?s?nde kullan?c? ad? veya sahip, ?r?n/servis, kategori, etiket ve s?z?nt? durumu se?enekleri bulunabilir. Birden fazla ak?ll? filtre birlikte se?ildi?inde kay?t b?t?n ko?ullarla e?le?melidir.
+Hızlı filtre bandı veriye göre **Tümü**, **Sızıntı görüldü**, **Kontrol bekliyor**, **Uyarı** ve en sık ürün/servis ya da kategori seçeneklerinden en fazla yedisini gösterir. **Akıllı filtre ekle** menüsünde kullanıcı adı veya sahip, ürün/servis, kategori, etiket ve sızıntı durumu seçenekleri bulunabilir. Birden fazla akıllı filtre birlikte seçildiğinde kayıt bütün koşullarla eşleşmelidir.
 
-Bir filtre ?ipine basmak yaln?z o filtreyi, **Temizle** b?t?n ak?ll? filtreleri kald?r?r. **T?m?** h?zl? filtresi t?r, risk ve ak?ll? filtre durumunu varsay?lana d?nd?r?r; arama metnini ayr?ca temizlemeniz gerekebilir.
+Bir filtre çipine basmak yalnız o filtreyi, **Temizle** bütün akıllı filtreleri kaldırır. **Tümü** hızlı filtresi tür, risk ve akıllı filtre durumunu varsayılana döndürür; arama metnini ayrıca temizlemeniz gerekebilir.
 
-**Kart** daha geni? kay?t kartlar?, **Tablo** kolon ba?l?kl? s?k? yerle?im kullan?r. **Yenile** kay?t sorgusunu tekrar ?al??t?r?r. Kay?tlar son g?ncellenen ?nce gelecek ?ekilde al?n?r.
+**Kart** daha geniş kayıt kartları, **Tablo** kolon başlıklı sıkı yerleşim kullanır. **Yenile** kayıt sorgusunu tekrar çalıştırır. Kayıtlar son güncellenen önce gelecek şekilde alınır.
 
-### Se?im kapsam?
+### Seçim kapsamı
 
-- Tek tek i?aretlenen kay?tlar filtre de?i?ti?inde g?r?n?m d???nda kalabilir ama se?ili kalabilir.
-- **T?m?n? se?**, o anda g?r?n?r kay?tlar? se?im olarak yazar; ?nceki gizli se?imi korumaz. G?r?n?rlerin t?m? se?iliyse **Se?imi temizle** b?t?n se?imi bo?alt?r.
-- ?stteki se?ili say?s? yaln?z g?r?n?r se?imi sayar; baz? toplu i?lemler bellekte se?ili kalan g?r?nmez kay?tlar? da kullan?r. Filtre de?i?tirdikten sonra se?imi a??k?a temizleyip yeniden kurun.
+- Tek tek işaretlenen kayıtlar filtre değiştiğinde görünüm dışında kalabilir ama seçili kalabilir.
+- **Tümünü seç**, o anda görünür kayıtları seçim olarak yazar; önceki gizli seçimi korumaz. Görünürlerin tümü seçiliyse **Seçimi temizle** bütün seçimi boşaltır.
+- Üstteki seçili sayısı yalnız görünür seçimi sayar; bazı toplu işlemler bellekte seçili kalan görünmez kayıtları da kullanır. Filtre değiştirdikten sonra seçimi açıkça temizleyip yeniden kurun.
 
-## Kay?t Sat?r? ??lemleri
+## Kayıt Satırı İşlemleri
 
-Parola sat?r?n?n birincil i?lemleri **Gizli de?eri kopyala** ve ge?erli HTTP/HTTPS adresi varsa **Siteyi a?**t?r. Di?er i?lemler men?s?nde ?unlar bulunur:
+Parola satırının birincil işlemleri **Gizli değeri kopyala** ve geçerli HTTP/HTTPS adresi varsa **Siteyi aç**tır. Diğer işlemler menüsünde şunlar bulunur:
 
-- **Otomatik doldurma paketi haz?rla**
-- **S?z?nt? kontrol?**
-- **Kullan?c? ad?n? kopyala**
-- **Gizli de?eri g?ster / gizle**
+- **Otomatik doldurma paketi hazırla**
+- **Sızıntı kontrolü**
+- **Kullanıcı adını kopyala**
+- **Gizli değeri göster / gizle**
 - **URL'yi kopyala**
-- **Kopya olu?tur**, **Kayd? d?zenle** ve **Kayd? sil**
+- **Kopya oluştur**, **Kaydı düzenle** ve **Kaydı sil**
 
-**Siteyi a?** yaln?z do?rulanabilen HTTP/HTTPS adresini a?ar ve `VIEW` olay? yazmay? dener. Giri? yapmaz ve sayfadaki alanlar? doldurmaz.
+**Siteyi aç** yalnız doğrulanabilen HTTP/HTTPS adresini açar ve `VIEW` olayı yazmayı dener. Giriş yapmaz ve sayfadaki alanları doldurmaz.
 
-## G?sterme, Kopyalama ve Denetim
+## Gösterme, Kopyalama ve Denetim
 
-**Gizli de?eri g?ster** ?nce uyar? onay? ister. De?er ard?ndan taray?c?daki kartta g?r?n?r ve `VIEW` olay? yaz?l?r. G?sterim sabit k?sa bir saya?la kapanmaz; d??meyle gizleyene, ba?ka bir kayd? g?sterene, kasay? kilitleyene veya 15 dakikal?k hareketsizlik kilidi devreye girene kadar a??k kalabilir.
+**Gizli değeri göster** önce uyarı onayı ister. Değer ardından tarayıcıdaki kartta görünür ve `VIEW` olayı yazılır. Gösterim sabit kısa bir sayaçla kapanmaz; düğmeyle gizleyene, başka bir kaydı gösterene, kasayı kilitleyene veya 15 dakikalık hareketsizlik kilidi devreye girene kadar açık kalabilir.
 
-Parola, kullan?c? ad?, URL ve doldurma paketi i?letim sistemi panosuna yaz?l?r; ard?ndan `COPY` olay? olu?turulur. Pano temizleme zamanlay?c?s? 30 saniyedir ve yaln?z pano h?l? ayn? de?eri i?eriyorsa bo? yazmay? dener. Taray?c?n?n kapanmas?, pano izni, i?letim sistemi veya pano y?neticisi bu temizli?i engelleyebilir; zamanlay?c? eri?imin geri al?nd???na dair garanti de?ildir.
+Parola, kullanıcı adı, URL ve doldurma paketi işletim sistemi panosuna yazılır; ardından `COPY` olayı oluşturulur. Pano temizleme zamanlayıcısı 30 saniyedir ve yalnız pano hâlâ aynı değeri içeriyorsa boş yazmayı dener. Tarayıcının kapanması, pano izni, işletim sistemi veya pano yöneticisi bu temizliği engelleyebilir; zamanlayıcı erişimin geri alındığına dair garanti değildir.
 
-Pano yaz?m? ve g?r?n?r k?lma, denetim iste?inden ?nce ger?ekle?ir. Denetim yaz?m? sonradan ba?ar?s?z olsa bile de?er ekranda veya panoda bulunabilir. Denetim olay?n?n olmamas? hassas de?erin hi? a??lmad???n? kan?tlamaz.
+Pano yazımı ve görünür kılma, denetim isteğinden önce gerçekleşir. Denetim yazımı sonradan başarısız olsa bile değer ekranda veya panoda bulunabilir. Denetim olayının olmaması hassas değerin hiç açılmadığını kanıtlamaz.
 
-### ?Otomatik doldurma paketi? s?n?r?
+### “Otomatik doldurma paketi” sınırı
 
-Bu ekrandaki **Otomatik doldurma paketi haz?rla**, kullan?c? ad? ile parolay? sekmeyle ayr?lm?? tek metin olarak panoya kopyalar ve `COPY` olay? yazar. Kullan?c? bu metni hedef sayfan?n kullan?c? ad? alan?na yap??t?r?r. Bu i?lem taray?c? eklentisini uzaktan ?al??t?rmaz; alanlar? buldu?unu, doldurdu?unu veya giri?in ba?ar?l? oldu?unu garanti etmez. VaultPilot Browser Vault Extension'?n sayfa i?i doldurma ak??? ayr? bir g?ven s?n?r?d?r.
+Bu ekrandaki **Otomatik doldurma paketi hazırla**, kullanıcı adı ile parolayı sekmeyle ayrılmış tek metin olarak panoya kopyalar ve `COPY` olayı yazar. Kullanıcı bu metni hedef sayfanın kullanıcı adı alanına yapıştırır. Bu işlem tarayıcı eklentisini uzaktan çalıştırmaz; alanları bulduğunu, doldurduğunu veya girişin başarılı olduğunu garanti etmez. VaultPilot Browser Vault Extension'ın sayfa içi doldurma akışı ayrı bir güven sınırıdır.
 
-## HIBP S?z?nt? Kontrol?
+## HIBP Sızıntı Kontrolü
 
-Tek kay?t veya d?zenleyicideki **S?z?nt? kontrol?**, parolan?n SHA-1 ?zetini taray?c?da hesaplar. Yaln?z ?zetin ilk be? karakteri `api.pwnedpasswords.com/range` adresine g?nderilir; tam parola ve tam ?zet g?nderilmez. D?nen son ekler taray?c?da kar??la?t?r?l?r ve istek dolgu ba?l??? kullan?r.
+Tek kayıt veya düzenleyicideki **Sızıntı kontrolü**, parolanın SHA-1 özetini tarayıcıda hesaplar. Yalnız özetin ilk beş karakteri `api.pwnedpasswords.com/range` adresine gönderilir; tam parola ve tam özet gönderilmez. Dönen son ekler tarayıcıda karşılaştırılır ve istek dolgu başlığı kullanır.
 
-Sonu? **S?z?nt? g?r?ld?** veya **Bulunmad?** olarak, g?r?lme say?s? ve kontrol zaman? ile g?sterilir. **Bulunmad?**, parolan?n g??l?, benzersiz veya g?venli oldu?unu kan?tlamaz. **S?z?nt? g?r?ld?** sonucunda ?nce ger?ek sistemde parolay? de?i?tirin, sonra kasa kayd?n? g?ncelleyin.
+Sonuç **Sızıntı görüldü** veya **Bulunmadı** olarak, görülme sayısı ve kontrol zamanı ile gösterilir. **Bulunmadı**, parolanın güçlü, benzersiz veya güvenli olduğunu kanıtlamaz. **Sızıntı görüldü** sonucunda önce gerçek sistemde parolayı değiştirin, sonra kasa kaydını güncelleyin.
 
-Tek kay?t kontrol? ?zel bir sunucu denetim olay? yazmaz. Toplu **G?venlik kontrol? ba?lat**, ba?ar?yla kontrol etti?i her kay?t i?in `VIEW` olay? yazmay? dener.
+Tek kayıt kontrolü özel bir sunucu denetim olayı yazmaz. Toplu **Güvenlik kontrolü başlat**, başarıyla kontrol ettiği her kayıt için `VIEW` olayı yazmayı dener.
 
-Sonu?lar parola olmadan; kay?t kimli?i, durum, g?r?lme say?s? ve zaman bilgisiyle bu taray?c? profilinin `localStorage` alan?nda tutulur. Ba?ka taray?c? veya temizlenmi? depolama farkl? sonu? k?mesi g?sterir. Kay?t parolas? de?i?tiyse eski sonu? g?ncel de?eri temsil etmeyebilir; karar vermeden ?nce yeniden kontrol edin.
+Sonuçlar parola olmadan; kayıt kimliği, durum, görülme sayısı ve zaman bilgisiyle bu tarayıcı profilinin `localStorage` alanında tutulur. Başka tarayıcı veya temizlenmiş depolama farklı sonuç kümesi gösterir. Kayıt parolası değiştiyse eski sonuç güncel değeri temsil etmeyebilir; karar vermeden önce yeniden kontrol edin.
 
-## Yeni Kay?t ve D?zenleyici
+## Yeni Kayıt ve Düzenleyici
 
-**Yeni parola** d?zenleyicisi zorunlu ba?l?k ve parola; iste?e ba?l? kullan?c? ad?/e-posta, giri? URL'si ve not alanlar? sunar. Parola tasla?? d?zenleyicide d?z metin g?r?nen bir metin alan?ndad?r; ekran payla??m? ve omuz ?zerinden g?r?nt?leme riskini y?netin.
+**Yeni parola** düzenleyicisi zorunlu başlık ve parola; isteğe bağlı kullanıcı adı/e-posta, giriş URL'si ve not alanları sunar. Parola taslağı düzenleyicide düz metin görünen bir metin alanındadır; ekran paylaşımı ve omuz üzerinden görüntüleme riskini yönetin.
 
-Kaydetme s?ras?nda kay?t aktif kasa anahtar?yla taray?c?da ?ifrelenir. Yeni kay?t `CREATE`, g?ncelleme `EDIT` olay? ?retir. **D?zenle** mevcut kayd? Yeni kay?t ekran?na ta??r; **Kaydet** hedef sistem hesab?n? de?il yaln?z ?ifreli kasa kayd?n? g?nceller.
+Kaydetme sırasında kayıt aktif kasa anahtarıyla tarayıcıda şifrelenir. Yeni kayıt `CREATE`, güncelleme `EDIT` olayı üretir. **Düzenle** mevcut kaydı Yeni kayıt ekranına taşır; **Kaydet** hedef sistem hesabını değil yalnız şifreli kasa kaydını günceller.
 
-### Parola ?retici
+### Parola üretici
 
-?retici varsay?lan olarak 24 karakter kullan?r. Aray?z 12-64 karakter aral??? ile b?y?k harf, rakam ve sembol se?enekleri sunar; k???k harf k?mesi her zaman etkindir. ?retim taray?c?da `crypto.getRandomValues` ile yap?l?r. Etkin s?n?flar olas? karakter havuzuna eklenir; her etkin s?n?ftan mutlaka bir karakter gelmesi garanti edilmez.
+Üretici varsayılan olarak 24 karakter kullanır. Arayüz 12-64 karakter aralığı ile büyük harf, rakam ve sembol seçenekleri sunar; küçük harf kümesi her zaman etkindir. Üretim tarayıcıda `crypto.getRandomValues` ile yapılır. Etkin sınıflar olası karakter havuzuna eklenir; her etkin sınıftan mutlaka bir karakter gelmesi garanti edilmez.
 
-**K?sa**, **Haz?r** ve **G??l?** g?stergeleri yaln?z uzunlu?a bakar: 16 karakterden k?sa, 16-23 ve en az 24. Bunlar hedef sistem politikas?n?, benzersizli?i veya s?z?nt? durumunu do?rulamaz.
+**Kısa**, **Hazır** ve **Güçlü** göstergeleri yalnız uzunluğa bakar: 16 karakterden kısa, 16-23 ve en az 24. Bunlar hedef sistem politikasını, benzersizliği veya sızıntı durumunu doğrulamaz.
 
-S?z?nt?l? karttaki **Yeni parola ?ret**, ge?erli ayarlarla yeni de?er olu?turup d?zenleyiciyi a?ar. Siz **Kaydet** demeden kasa kayd?na yaz?lmaz; hedef sistem parolas?n? hi?bir zaman otomatik de?i?tirmez.
+Sızıntılı karttaki **Yeni parola üret**, geçerli ayarlarla yeni değer oluşturup düzenleyiciyi açar. Siz **Kaydet** demeden kasa kaydına yazılmaz; hedef sistem parolasını hiçbir zaman otomatik değiştirmez.
 
-## Kopya, Silme, Toplu ??lem ve Payla??m
+## Kopya, Silme, Toplu İşlem ve Paylaşım
 
-**Kopya olu?tur**, ayn? kasada yeni kay?t ?retir ve ba?l??a ?kopyas?? ekler. D?? sistemde ikinci hesap olu?turmaz. Yazma yetkisi gerekir ve yeni kay?t `CREATE` olay? b?rak?r.
+**Kopya oluştur**, aynı kasada yeni kayıt üretir ve başlığa “kopyası” ekler. Dış sistemde ikinci hesap oluşturmaz. Yazma yetkisi gerekir ve yeni kayıt `CREATE` olayı bırakır.
 
-**Kayd? sil**, geri al?namaz i?lem i?in ikinci onay ister ve ba?ar?l? oldu?unda `DELETE` olay? ?retir. Yaln?z kasa kayd?n? kald?r?r; hedef sistem hesab?n? kapatmaz veya parolas?n? de?i?tirmez.
+**Kaydı sil**, geri alınamaz işlem için ikinci onay ister ve başarılı olduğunda `DELETE` olayı üretir. Yalnız kasa kaydını kaldırır; hedef sistem hesabını kapatmaz veya parolasını değiştirmez.
 
-Toplu i?lemler men?s?nde Excel ?ablonu indirme/i?e aktarma, d??a aktarma, kategori veya etiket atama, ar?ivleme, pasifle?tirme, g?venlik kontrol?, denetim raporu, payla??m, not ekleme, ilk se?iliyi d?zenleme ve onayl? silme bulunur.
+Toplu işlemler menüsünde Excel şablonu indirme/içe aktarma, dışa aktarma, kategori veya etiket atama, arşivleme, pasifleştirme, güvenlik kontrolü, denetim raporu, paylaşım, not ekleme, ilk seçiliyi düzenleme ve onaylı silme bulunur.
 
-- Kategori, etiket, ar?iv, pasifle?tirme, not, d?zenleme, i?e aktarma ve silme yazma yetkisi ister.
-- **Pasifle?tir / iptal et**, parola kayd?n?n ?ifreli meta verisini `DISABLED` yapar; hedef hesab? devre d??? b?rakmaz.
-- **Se?ilenleri d??a aktar**, ??z?len tam kay?tlar? ve parolalar? d?z metin JSON dosyas?na yazar; tehlikeli i?lem onay? ister. Denetim olaylar? sonradan en iyi ?abayla yaz?l?r.
-- **Denetim raporuna ekle**, parola de?erini de?il kay?t meta verilerini CSV dosyas?na yazar.
-- Toplu d?zenleme ve silme kay?tlar? s?rayla i?ler; ortadaki hata ?nceki ba?ar?l? de?i?iklikleri geri almaz. Kasay? yenileyip kay?tlar? ve denetim izini uzla?t?r?n.
-- **Toplu payla?**, se?ili kimlikleri Payla??m ekran?n?n y?ntem ad?m?na ta??r; hen?z paket g?ndermez. Ger?ek g?nderim Payla??m ?zelli?i, Manager rol?, yaz?labilir lisans ve se?ilen y?ntemin ayr? kurallar?na tabidir.
+- Kategori, etiket, arşiv, pasifleştirme, not, düzenleme, içe aktarma ve silme yazma yetkisi ister.
+- **Pasifleştir / iptal et**, parola kaydının şifreli meta verisini `DISABLED` yapar; hedef hesabı devre dışı bırakmaz.
+- **Seçilenleri dışa aktar**, çözülen tam kayıtları ve parolaları düz metin JSON dosyasına yazar; tehlikeli işlem onayı ister. Denetim olayları sonradan en iyi çabayla yazılır.
+- **Denetim raporuna ekle**, parola değerini değil kayıt meta verilerini CSV dosyasına yazar.
+- Toplu düzenleme ve silme kayıtları sırayla işler; ortadaki hata önceki başarılı değişiklikleri geri almaz. Kasayı yenileyip kayıtları ve denetim izini uzlaştırın.
+- **Toplu paylaş**, seçili kimlikleri Paylaşım ekranının yöntem adımına taşır; henüz paket göndermez. Gerçek gönderim Paylaşım özelliği, Manager rolü, yazılabilir lisans ve seçilen yöntemin ayrı kurallarına tabidir.
 
-## Ekran Durumlar?
+## Ekran Durumları
 
-| Durum | Operat?r cevab? |
+| Durum | Operatör cevabı |
 | --- | --- |
-| Kay?tlar y?kleniyor | D?rt iskelet sat?r? kaybolana kadar bekleyin; gerekirse oturumu do?rulay?p **Yenile** kullan?n. |
-| Kasada kay?t yok | Aktif kasay? ve kilit durumunu do?rulay?n; yazma yetkiniz varsa **Yeni parola** ile ba?lay?n. |
-| E?le?en kay?t yok | Arama metnini, h?zl? filtreyi ve ak?ll? filtre ?iplerini ayr? ayr? temizleyin. |
-| Liste bo? ama kay?t bekleniyor | Ayr? sorgu hata kart? yoktur. Oturumu, sunucu ba?lant?s?n?, aktif kasay? ve a? iste?ini kontrol edin. |
-| Salt okunur | G?sterme ve kopyalama m?mk?n olabilir; olu?turma, kopya, d?zenleme, silme ve yazan toplu i?lemler kapal?d?r. |
-| Pano hatas? | De?er panoya yaz?lm?? olabilir. Panoyu elle temizleyip `COPY` denetim izini kontrol edin. |
-| G?sterim denetimi yaz?lamad? | De?er g?r?n?r kalabilir. Hemen gizleyin veya kasay? kilitleyin; denetimi ayr?ca uzla?t?r?n. |
-| S?z?nt? kontrol? kullan?lam?yor | A?, taray?c? politikas? veya HIBP eri?imini kontrol edin; sonucu ?temiz? saymay?n. |
-| S?z?nt? g?r?ld? | Hedef sistemde ger?ek parolay? de?i?tirin, sonra kasa kayd?n? g?ncelleyip yeniden kontrol edin. |
-| Toplu i?lem yar?m kald? | K?rlemesine tekrarlamay?n; g?r?n?r/gizli se?imi, kasa durumunu ve denetim olaylar?n? kar??la?t?r?n. |
+| Kayıtlar yükleniyor | Dört iskelet satırı kaybolana kadar bekleyin; gerekirse oturumu doğrulayıp **Yenile** kullanın. |
+| Kasada kayıt yok | Aktif kasayı ve kilit durumunu doğrulayın; yazma yetkiniz varsa **Yeni parola** ile başlayın. |
+| Eşleşen kayıt yok | Arama metnini, hızlı filtreyi ve akıllı filtre çiplerini ayrı ayrı temizleyin. |
+| Liste boş ama kayıt bekleniyor | Ayrı sorgu hata kartı yoktur. Oturumu, sunucu bağlantısını, aktif kasayı ve ağ isteğini kontrol edin. |
+| Salt okunur | Gösterme ve kopyalama mümkün olabilir; oluşturma, kopya, düzenleme, silme ve yazan toplu işlemler kapalıdır. |
+| Pano hatası | Değer panoya yazılmış olabilir. Panoyu elle temizleyip `COPY` denetim izini kontrol edin. |
+| Gösterim denetimi yazılamadı | Değer görünür kalabilir. Hemen gizleyin veya kasayı kilitleyin; denetimi ayrıca uzlaştırın. |
+| Sızıntı kontrolü kullanılamıyor | Ağ, tarayıcı politikası veya HIBP erişimini kontrol edin; sonucu “temiz” saymayın. |
+| Sızıntı görüldü | Hedef sistemde gerçek parolayı değiştirin, sonra kasa kaydını güncelleyip yeniden kontrol edin. |
+| Toplu işlem yarım kaldı | Körlemesine tekrarlamayın; görünür/gizli seçimi, kasa durumunu ve denetim olaylarını karşılaştırın. |
 
-## ??lemden ?nce
+## İşlemden Önce
 
-- Do?ru aktif kasa, kay?t ba?l???, kullan?c? ad? ve URL'nin ayn? hesaba ait oldu?unu do?rulay?n.
-- G?sterme, kopyalama veya d??a aktarma ?ncesinde ekran payla??m?n? ve pano y?neticilerini kapat?n.
-- Filtre de?i?tirdiyseniz gizli kalm?? toplu se?imi temizleyip kapsam? yeniden kurun.
-- Yeni parolay? ?nce hedef sistemde uygulama, ard?ndan kasa kayd?n? g?ncelleme s?ras?n? planlay?n.
-- Payla??mda al?c?y?, s?reyi, kullan?m hakk?n? ve teslim s?n?r?n? Payla??m ekran?nda yeniden do?rulay?n.
+- Doğru aktif kasa, kayıt başlığı, kullanıcı adı ve URL'nin aynı hesaba ait olduğunu doğrulayın.
+- Gösterme, kopyalama veya dışa aktarma öncesinde ekran paylaşımını ve pano yöneticilerini kapatın.
+- Filtre değiştirdiyseniz gizli kalmış toplu seçimi temizleyip kapsamı yeniden kurun.
+- Yeni parolayı önce hedef sistemde uygulama, ardından kasa kaydını güncelleme sırasını planlayın.
+- Paylaşımda alıcıyı, süreyi, kullanım hakkını ve teslim sınırını Paylaşım ekranında yeniden doğrulayın.
 
-## G?venli Kan?t
+## Güvenli Kanıt
 
-- Payla??labilir: ekran ad?, genel kart/tablo g?r?n?m?, geni? zaman aral???, kay?t say?s?, genel filtre t?r?, hesapla ili?kilendirilemeyen s?z?nt? durumu, genel hata s?n?f? ve rol/lisans?n yaz?labilir olup olmad???.
-- Gizli kalmal?: parola, kullan?c? ad? ile URL e?le?mesi, kay?t ba?l???, not, kasa ad?/kimli?i, tam zaman damgas?, belirli hesapla ili?kili HIBP say?s?, se?ili kay?t k?mesi, pano i?eri?i, d?z metin JSON d??a aktar?m? ve de?er g?steren ekran g?r?nt?s?.
-- Parola veya doldurma paketi genel kanala girdiyse panonun temizlenmesini beklemekle yetinmeyin; hedef sistemde parolay? de?i?tirin ve kasa kayd?n? ard?ndan g?ncelleyin.
+- Paylaşılabilir: ekran adı, genel kart/tablo görünümü, geniş zaman aralığı, kayıt sayısı, genel filtre türü, hesapla ilişkilendirilemeyen sızıntı durumu, genel hata sınıfı ve rol/lisansın yazılabilir olup olmadığı.
+- Gizli kalmalı: parola, kullanıcı adı ile URL eşleşmesi, kayıt başlığı, not, kasa adı/kimliği, tam zaman damgası, belirli hesapla ilişkili HIBP sayısı, seçili kayıt kümesi, pano içeriği, düz metin JSON dışa aktarımı ve değer gösteren ekran görüntüsü.
+- Parola veya doldurma paketi genel kanala girdiyse panonun temizlenmesini beklemekle yetinmeyin; hedef sistemde parolayı değiştirin ve kasa kaydını ardından güncelleyin.
 
-## Ne Zaman Durmal?
+## Ne Zaman Durmalı
 
-Aktif kasa belirsizse, kay?t ile hedef URL e?le?miyorsa, gizli toplu se?imden ??pheleniyorsan?z, pano veya ekran kayd? kontrol?n?z d???nda ise, denetim olay? i?lemle ?eli?iyorsa, s?z?nt? sonucu eski olabilecekse, toplu i?lem yar?m kald?ysa ya da yeni parola hedef sistemde uygulanmadan yaln?z kasa kayd? de?i?tirilecekse durun. Kapsam? ve son g?venli ad?m? ?zel kanalda uzla?t?rmadan i?lemi tekrarlamay?n.
+Aktif kasa belirsizse, kayıt ile hedef URL eşleşmiyorsa, gizli toplu seçimden şüpheleniyorsanız, pano veya ekran kaydı kontrolünüz dışında ise, denetim olayı işlemle çelişiyorsa, sızıntı sonucu eski olabilecekse, toplu işlem yarım kaldıysa ya da yeni parola hedef sistemde uygulanmadan yalnız kasa kaydı değiştirilecekse durun. Kapsamı ve son güvenli adımı özel kanalda uzlaştırmadan işlemi tekrarlamayın.
 
-## Operat?r Notlar?
+## Operatör Notları
 
-VaultPilot parola kayd?n? ?ifreli saklar; ancak kilidi a??k taray?c? oturumu g?sterme, d?zenleme, HIBP kontrol?, d??a aktarma ve pano i?lemleri i?in de?eri ge?ici olarak d?z metne ?evirir. Ekran, pano ve indirilen d?z metin dosya bu anda ayr? g?ven s?n?rlar?d?r. VaultPilot'taki ?pasif?, ?yeni parola? veya ?otomatik doldurma paketi? i?lemlerini hedef sistemde tamamlanm?? hesap de?i?ikli?i olarak raporlamay?n.
+VaultPilot parola kaydını şifreli saklar; ancak kilidi açık tarayıcı oturumu gösterme, düzenleme, HIBP kontrolü, dışa aktarma ve pano işlemleri için değeri geçici olarak düz metne çevirir. Ekran, pano ve indirilen düz metin dosya bu anda ayrı güven sınırlarıdır. VaultPilot'taki “pasif”, “yeni parola” veya “otomatik doldurma paketi” işlemlerini hedef sistemde tamamlanmış hesap değişikliği olarak raporlamayın.
 
-## ?lgili
+## İlgili
 
-- [G?venlik ve g?ven modeli](security-and-trust-model.md)
-- [Payla??m ekran?](screen-sharing.md)
-- [Taray?c? eklentisi ekran?](screen-browser-extension.md)
-- [Denetim Ge?mi?i ekran?](screen-audit-log.md)
-- [G?venli destek kan?t?](support-evidence-pack.md)
-- [Operat?r ?al??ma k?lavuzu](operator-runbook.md)
+- [Güvenlik ve güven modeli](security-and-trust-model.md)
+- [Paylaşım ekranı](screen-sharing.md)
+- [Tarayıcı eklentisi ekranı](screen-browser-extension.md)
+- [Denetim Geçmişi ekranı](screen-audit-log.md)
+- [Güvenli destek kanıtı](support-evidence-pack.md)
+- [Operatör çalışma kılavuzu](operator-runbook.md)

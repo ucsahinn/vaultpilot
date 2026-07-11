@@ -1,157 +1,157 @@
-# Payla??m Ekran?
+# Paylaşım Ekranı
 
-?st ?ubuktaki `?`, Payla??m ekran?ndan bu rehberi a?ar. Bu ekran, aktif kasadaki se?ili kay?tlar? ba?ka bir VaultPilot kullan?c?s?n?n kendi kasas?na alabilece?i ?ifreli bir dahili paket olarak veya VaultPilot d???nda ?evrimd??? a??lacak parola korumal? bir dosya olarak haz?rlar.
+Üst çubuktaki `?`, Paylaşım ekranından bu rehberi açar. Bu ekran, aktif kasadaki seçili kayıtları başka bir VaultPilot kullanıcısının kendi kasasına alabileceği şifreli bir dahili paket olarak veya VaultPilot dışında çevrimdışı açılacak parola korumalı bir dosya olarak hazırlar.
 
-D?? payla??m bar?nd?r?lan bir portal, herkese a??k ba?lant? veya merkezi PAM teslim hizmeti de?ildir. VaultPilot d?? paketi sunucuda saklamaz; al?c? hesab?, d?? paket ge?mi?i veya da??t?lm?? d?? paketi merkezi olarak geri alma i?lemi olu?turmaz.
+Dış paylaşım barındırılan bir portal, herkese açık bağlantı veya merkezi PAM teslim hizmeti değildir. VaultPilot dış paketi sunucuda saklamaz; alıcı hesabı, dış paket geçmişi veya dağıtılmış dış paketi merkezi olarak geri alma işlemi oluşturmaz.
 
-## Eri?im, Roller ve Lisans
+## Erişim, Roller ve Lisans
 
-- Payla??m?n normal gezinmede g?r?nmesi i?in lisans?n `sharing` ?zelli?ini i?ermesi ve salt okunur olmamas? gerekir. Auditor gizli kay?t ?al??ma alanlar?n? kullanamaz.
-- Kay?tlar? g?rmek ve paketlemek i?in aktif kasan?n kilidi a??k, kasa anahtar? taray?c?da kullan?labilir olmal?d?r.
-- **Dahili paket g?ndermek** i?in sistem rol? Owner veya Admin, kaynak kasada Manager rol? ve yaz?labilir lisans gerekir.
-- **D?? paket olu?turmak** i?in kaynak kasada Manager rol? ve yaz?labilir lisans gerekir. Sistem User, kasada Manager ise bu yerel ak??? kullanabilir.
-- **Gelen paketi kendi kasana kaydetmek** i?in hedef aktif kasada Editor veya Manager rol? ve yaz?labilir lisans gerekir. Bu i?lem kaynak kasaya eri?im vermez.
-- Dahili al?c?; ayn? organizasyonda, aktif, g?nderen d???nda, Auditor olmayan ve kullan?labilir a??k anahtar? bulunan bir kullan?c? olmal?d?r. Listede g?r?nen 2FA durumu bilgilendirmedir; al?c? se?im ko?ulu de?ildir.
+- Paylaşımın normal gezinmede görünmesi için lisansın `sharing` özelliğini içermesi ve salt okunur olmaması gerekir. Auditor gizli kayıt çalışma alanlarını kullanamaz.
+- Kayıtları görmek ve paketlemek için aktif kasanın kilidi açık, kasa anahtarı tarayıcıda kullanılabilir olmalıdır.
+- **Dahili paket göndermek** için sistem rolü Owner veya Admin, kaynak kasada Manager rolü ve yazılabilir lisans gerekir.
+- **Dış paket oluşturmak** için kaynak kasada Manager rolü ve yazılabilir lisans gerekir. Sistem User, kasada Manager ise bu yerel akışı kullanabilir.
+- **Gelen paketi kendi kasana kaydetmek** için hedef aktif kasada Editor veya Manager rolü ve yazılabilir lisans gerekir. Bu işlem kaynak kasaya erişim vermez.
+- Dahili alıcı; aynı organizasyonda, aktif, gönderen dışında, Auditor olmayan ve kullanılabilir açık anahtarı bulunan bir kullanıcı olmalıdır. Listede görünen 2FA durumu bilgilendirmedir; alıcı seçim koşulu değildir.
 
-Salt okunur veya ?zellik d??? durumda eski/a??k ekran durumunu yazma izni saymay?n. Normal ak??? yeniden a??n ve rol, kasa ile lisans durumunu do?rulay?n.
+Salt okunur veya özellik dışı durumda eski/açık ekran durumunu yazma izni saymayın. Normal akışı yeniden açın ve rol, kasa ile lisans durumunu doğrulayın.
 
-## ?? Ad?ml? Ak??
+## Üç Adımlı Akış
 
-Ad?m g?stergesi **Se?**, **G?nder** ve **Sonu?** a?amalar?ndan olu?ur. Ad?mlar aras?nda geri d?nebilirsiniz; ancak ekranda g?r?nen se?im ?zeti son kontrold?r.
+Adım göstergesi **Seç**, **Gönder** ve **Sonuç** aşamalarından oluşur. Adımlar arasında geri dönebilirsiniz; ancak ekranda görünen seçim özeti son kontroldür.
 
-### 1. Kay?tlar? se?in
+### 1. Kayıtları seçin
 
-Parola, Active Directory kimlik bilgisi, API anahtar?, not, sertifika ve dosya kay?tlar? se?ilebilir. Arama; ba?l?k, kullan?c? ad?, URL, host, domain ve kay?t t?r? etiketinde ?al???r. **T?m?** veya t?r sekmeleriyle listeyi daraltabilir; tek kay?t, g?r?n?r kay?tlar?n t?m? ya da g?r?n?r t?r grubu se?ilebilir.
+Parola, Active Directory kimlik bilgisi, API anahtarı, not, sertifika ve dosya kayıtları seçilebilir. Arama; başlık, kullanıcı adı, URL, host, domain ve kayıt türü etiketinde çalışır. **Tümü** veya tür sekmeleriyle listeyi daraltabilir; tek kayıt, görünür kayıtların tümü ya da görünür tür grubu seçilebilir.
 
-Filtre d???na ??kan se?ili kay?tlar se?ili kalabilir. **T?m?n? se?** yaln?z o an g?r?n?r kay?tlar? mevcut se?ime ekler. ?stteki **Se?imi temizle**, filtre arkas?nda kalanlar dahil b?t?n se?imi siler; **Grubu ??kar** ise yaln?z o grupta o anda g?r?n?r kay?tlar? kald?r?r. G?ndermeden ?nce toplam se?ili say?s?n? ve t?r ?zetini kontrol edin; gizli kalm?? bir kayd? fark etmeden pakete eklemeyin.
+Filtre dışına çıkan seçili kayıtlar seçili kalabilir. **Tümünü seç** yalnız o an görünür kayıtları mevcut seçime ekler. Üstteki **Seçimi temizle**, filtre arkasında kalanlar dahil bütün seçimi siler; **Grubu çıkar** ise yalnız o grupta o anda görünür kayıtları kaldırır. Göndermeden önce toplam seçili sayısını ve tür özetini kontrol edin; gizli kalmış bir kaydı fark etmeden pakete eklemeyin.
 
-Dosya kay?tlar?n?n par?alar? yaln?z taray?c?da ??z?l?r ve payla??m anahtar?yla yeniden ?ifrelenir. Dosya bilgisi veya par?alardan biri eksikse paket olu?turulmaz.
+Dosya kayıtlarının parçaları yalnız tarayıcıda çözülür ve paylaşım anahtarıyla yeniden şifrelenir. Dosya bilgisi veya parçalardan biri eksikse paket oluşturulmaz.
 
-### 2. S?re ve kullan?m hakk?n? belirleyin
+### 2. Süre ve kullanım hakkını belirleyin
 
-Ge?erlilik s?resi 1 saat ile 720 saat (30 g?n), kullan?m hakk? 1 ile 25 aras?ndad?r. Aray?z 1 saat, 24 saat, 3 g?n, 7 g?n ve 30 g?n k?sayollar? sunar.
+Geçerlilik süresi 1 saat ile 720 saat (30 gün), kullanım hakkı 1 ile 25 arasındadır. Arayüz 1 saat, 24 saat, 3 gün, 7 gün ve 30 gün kısayolları sunar.
 
-- Dahili pakette s?re, kullan?m sayac? ve durum sunucuda uygulan?r.
-- D?? pakette s?re do?rulanm?? manifestten ve al?c? cihaz?n?n saatinden kontrol edilir.
-- D?? paketin kullan?m hakk?, manifest hash'iyle o taray?c? profilinin `localStorage` alan?nda tutulan yerel saya?t?r. Ba?ka taray?c?/profil veya temizlenmi? taray?c? depolamas? yeni bir saya?la ba?lar. Bu de?er organizasyon genelinde limit, denetim veya geri alma s?n?r? de?ildir.
-- D?? ??zme i?lemi ba?ar?l? oldu?unda bir yerel hak, i?erik g?sterilmeden ?nce t?ketilir. Sonraki dosya indirme hatas? bu hakk? geri vermez.
+- Dahili pakette süre, kullanım sayacı ve durum sunucuda uygulanır.
+- Dış pakette süre doğrulanmış manifestten ve alıcı cihazının saatinden kontrol edilir.
+- Dış paketin kullanım hakkı, manifest hash'iyle o tarayıcı profilinin `localStorage` alanında tutulan yerel sayaçtır. Başka tarayıcı/profil veya temizlenmiş tarayıcı depolaması yeni bir sayaçla başlar. Bu değer organizasyon genelinde limit, denetim veya geri alma sınırı değildir.
+- Dış çözme işlemi başarılı olduğunda bir yerel hak, içerik gösterilmeden önce tüketilir. Sonraki dosya indirme hatası bu hakkı geri vermez.
 
-### 3. G?nderim y?ntemini se?in
+### 3. Gönderim yöntemini seçin
 
-Ayn? se?im ve politika, a?a??daki dahili veya d?? ak??lardan yaln?z biriyle tamamlan?r. Bu iki yolun saklama, kullan?m ve geri alma s?n?rlar? farkl?d?r.
+Aynı seçim ve politika, aşağıdaki dahili veya dış akışlardan yalnız biriyle tamamlanır. Bu iki yolun saklama, kullanım ve geri alma sınırları farklıdır.
 
-## Dahili Payla??m
+## Dahili Paylaşım
 
-**Dahili al?c?** b?l?m?nde hedef VaultPilot kullan?c?s?n? se?ip **Se?ili kay?tlar? g?nder** i?lemini ba?lat?n. Taray?c? yeni bir AES-GCM paket anahtar? ?retir, se?ili kay?tlar? bu anahtarla ?ifreler ve anahtar? al?c?n?n kay?tl? a??k anahtar?yla sarar. Sunucu d?z metin kay?t veya paket anahtar? yerine ?ifreli paket, sar?lm?? anahtar, se?im hash'leri ve politika meta verisini saklar.
+**Dahili alıcı** bölümünde hedef VaultPilot kullanıcısını seçip **Seçili kayıtları gönder** işlemini başlatın. Tarayıcı yeni bir AES-GCM paket anahtarı üretir, seçili kayıtları bu anahtarla şifreler ve anahtarı alıcının kayıtlı açık anahtarıyla sarar. Sunucu düz metin kayıt veya paket anahtarı yerine şifreli paket, sarılmış anahtar, seçim hash'leri ve politika meta verisini saklar.
 
-Dosya i?eren dahili paket ?ok ad?ml?d?r:
+Dosya içeren dahili paket çok adımlıdır:
 
-1. Paket kayd? ?nce `PENDING` ve `packageReady=false` olarak olu?turulur.
-2. Dosya par?alar? taray?c?da yeniden ?ifrelenip sunucuya tek tek y?klenir.
-3. Say? ve byte toplam? e?le?ince paket haz?r olarak i?aretlenir.
+1. Paket kaydı önce `PENDING` ve `packageReady=false` olarak oluşturulur.
+2. Dosya parçaları tarayıcıda yeniden şifrelenip sunucuya tek tek yüklenir.
+3. Sayı ve byte toplamı eşleşince paket hazır olarak işaretlenir.
 
-Al?c? yaln?z haz?r, `PENDING`, s?resi ge?memi? ve kullan?m hakk? kalm?? paketleri **Gelen payla??mlar** alt?nda g?r?r. **Kendi kasama kaydet**, paketi al?c?n?n ?zel anahtar?yla taray?c?da a?ar; her kayd? ve dosya par?as?n? o anda aktif olan yaz?labilir hedef kasan?n anahtar?yla yeniden ?ifreleyerek yeni kay?tlar olu?turur. T?m yaz?mlar bittikten sonra sunucudaki kullan?m say?s? art?r?l?r. Limit hen?z dolmad?ysa paket `PENDING` kalabilir ve yeniden kullan?labilir; dolunca `ACCEPTED` olur.
+Alıcı yalnız hazır, `PENDING`, süresi geçmemiş ve kullanım hakkı kalmış paketleri **Gelen paylaşımlar** altında görür. **Kendi kasama kaydet**, paketi alıcının özel anahtarıyla tarayıcıda açar; her kaydı ve dosya parçasını o anda aktif olan yazılabilir hedef kasanın anahtarıyla yeniden şifreleyerek yeni kayıtlar oluşturur. Tüm yazımlar bittikten sonra sunucudaki kullanım sayısı artırılır. Limit henüz dolmadıysa paket `PENDING` kalabilir ve yeniden kullanılabilir; dolunca `ACCEPTED` olur.
 
-Bu bir kaynak kasaya ?yelik veya canl? senkronizasyon de?ildir. Sonradan de?i?en kaynak kay?tlar kopyaya aktar?lmaz.
+Bu bir kaynak kasaya üyelik veya canlı senkronizasyon değildir. Sonradan değişen kaynak kayıtlar kopyaya aktarılmaz.
 
-Active Directory kimlik bilgisi se?im listesinde g?r?n?r; ancak mevcut kabul ak??? yeni kayd? olu?tururken zorunlu dizin sa?lay?c?s?/DN kaynak alanlar?n? iletmez. Bu t?r bir kay?t hedef kasaya al?n?rken sunucu taraf?ndan reddedilebilir. Ba?ar?l? oldu?u do?rulanmadan Active Directory kayd?n? dahili payla??m teslimat? olarak planlamay?n.
+Active Directory kimlik bilgisi seçim listesinde görünür; ancak mevcut kabul akışı yeni kaydı oluştururken zorunlu dizin sağlayıcısı/DN kaynak alanlarını iletmez. Bu tür bir kayıt hedef kasaya alınırken sunucu tarafından reddedilebilir. Başarılı olduğu doğrulanmadan Active Directory kaydını dahili paylaşım teslimatı olarak planlamayın.
 
 ### Gelen ve giden listeleri
 
-- **Gelen payla??mlar** ge?mi? de?ildir; yaln?z al?nabilir durumdaki haz?r paketleri g?sterir. Kabul edilmi?, geri al?nm??, s?resi dolmu?, hakk? bitmi? veya h?l? haz?rlanmakta olan paketler burada g?r?nmez.
-- **Son g?nderilenler** yaln?z en yeni alt? dahili paketi g?sterir. Sunucu, kullan?c?ya ait en yeni 100 gelen/giden paketi d?nd?r?r; daha eski paketler bu ekran?n g?r?n?r ge?mi?i de?ildir.
-- Durumlar **Haz?rlan?yor**, **Bekliyor**, **Kullan?ld?**, **S?resi doldu** ve **Geri al?nd?** olabilir.
-- Mevcut aray?z, **Geri al** d??mesini yaln?z g?nderenin kendi `PENDING`, s?resi ge?memi? ve hakk? kalm?? paketi i?in g?sterir. Bu ko?ul yaln?z d??menin g?r?n?rl???n? belirler; sunucudaki geri alma yolu ?u anda oturum a?m?? g?nderene ait her paketi durumuna, s?resine veya kalan hakk?na bakmadan kabul eder. Geri alma paketi `REVOKED` durumuna ge?irir ve sonraki a??l??lar? engeller; al?c?n?n daha ?nce kendi kasas?na kaydetti?i kopyalar? veya kaynak kay?tlar? silmez.
+- **Gelen paylaşımlar** geçmiş değildir; yalnız alınabilir durumdaki hazır paketleri gösterir. Kabul edilmiş, geri alınmış, süresi dolmuş, hakkı bitmiş veya hâlâ hazırlanmakta olan paketler burada görünmez.
+- **Son gönderilenler** yalnız en yeni altı dahili paketi gösterir. Sunucu, kullanıcıya ait en yeni 100 gelen/giden paketi döndürür; daha eski paketler bu ekranın görünür geçmişi değildir.
+- Durumlar **Hazırlanıyor**, **Bekliyor**, **Kullanıldı**, **Süresi doldu** ve **Geri alındı** olabilir.
+- Mevcut arayüz, **Geri al** düğmesini yalnız gönderenin kendi `PENDING`, süresi geçmemiş ve hakkı kalmış paketi için gösterir. Bu koşul yalnız düğmenin görünürlüğünü belirler; sunucudaki geri alma yolu şu anda oturum açmış gönderene ait her paketi durumuna, süresine veya kalan hakkına bakmadan kabul eder. Geri alma paketi `REVOKED` durumuna geçirir ve sonraki açılışları engeller; alıcının daha önce kendi kasasına kaydettiği kopyaları veya kaynak kayıtları silmez.
 
-## D?? Parola Paketi
+## Dış Parola Paketi
 
-**D?? paket olu?tur**, taray?c?da 28 karakterlik g??l? bir payla??m parolas? ?retir. Se?ili y?k AES-256-GCM ile ?ifrelenir; parola anahtar? PBKDF2-SHA-256 ile t?retilir ve s?re, kullan?m hakk?, kapsam ile dosya bilgileri do?rulanm?? manifeste ba?lan?r.
+**Dış paket oluştur**, tarayıcıda 28 karakterlik güçlü bir paylaşım parolası üretir. Seçili yük AES-256-GCM ile şifrelenir; parola anahtarı PBKDF2-SHA-256 ile türetilir ve süre, kullanım hakkı, kapsam ile dosya bilgileri doğrulanmış manifeste bağlanır.
 
-- Dosyas?z yeni paket `.json`, dosyal? paket `.pmshare` olarak indirilir.
-- Paket ve parola yaln?z canl? sonu? durumunda g?r?n?r; d?? paket sunucu ge?mi?ine veya **Son g?nderilenler** listesine eklenmez.
-- **Paketi kopyala** veya **Paketi indir** ile korumal? dosyay? al?n. **??zme arac?n? indir**, `vaultpilot-share-decrypter.zip` dosyas?n? verir.
-- Do?rudan teslimatta paket, payla??m parolas? ve ??zme arac?n? onayl? ayr? kanallarla ula?t?r?n. En az?ndan paket ile parolay? hi?bir zaman ayn? kanalda g?ndermeyin.
-- **Tamamla** veya **Yeni payla??m** canl? paket, parola ve se?im durumunu temizler. Paketi g?venli konuma almadan tamamlamay?n; ekran kilidini tek ba??na payla??m materyali temizli?i saymay?n. Ak??tan vazge?iyorsan?z sayfay? tamamen yenileyin.
+- Dosyasız yeni paket `.json`, dosyalı paket `.pmshare` olarak indirilir.
+- Paket ve parola yalnız canlı sonuç durumunda görünür; dış paket sunucu geçmişine veya **Son gönderilenler** listesine eklenmez.
+- **Paketi kopyala** veya **Paketi indir** ile korumalı dosyayı alın. **Çözme aracını indir**, `vaultpilot-share-decrypter.zip` dosyasını verir.
+- Doğrudan teslimatta paket, paylaşım parolası ve çözme aracını onaylı ayrı kanallarla ulaştırın. En azından paket ile parolayı hiçbir zaman aynı kanalda göndermeyin.
+- **Tamamla** veya **Yeni paylaşım** canlı paket, parola ve seçim durumunu temizler. Paketi güvenli konuma almadan tamamlamayın; ekran kilidini tek başına paylaşım materyali temizliği saymayın. Akıştan vazgeçiyorsanız sayfayı tamamen yenileyin.
 
-D?? paket da??t?ld?ktan sonra VaultPilot'ta geri alma i?lemi yoktur. Yeni paket ?retmek eskisini ge?ersiz k?lmaz. Paket veya parola yanl?? ki?iye gittiyse paketi s?re sonuna kadar a??labilir kabul edin ve i?indeki s?rlar? kendi sahiplik prosed?rleriyle de?i?tirin ya da iptal edin.
+Dış paket dağıtıldıktan sonra VaultPilot'ta geri alma işlemi yoktur. Yeni paket üretmek eskisini geçersiz kılmaz. Paket veya parola yanlış kişiye gittiyse paketi süre sonuna kadar açılabilir kabul edin ve içindeki sırları kendi sahiplik prosedürleriyle değiştirin ya da iptal edin.
 
-### SMTP ile g?nderim
+### SMTP ile gönderim
 
-Sonu? ekran?ndaki SMTP i?lemi, yap?land?r?lm?? VaultPilot SMTP hizmeti ?zerinden tek al?c?ya paket dosyas?n?, ??zme arac? ZIP'ini ve k?sa y?nergeyi g?nderir. Payla??m parolas? e-postaya eklenmez. ?stemci `confirmPassphraseSeparate: true` de?erini sabit g?nderir; aray?z parolan?n ayr? kanaldan iletilmesi gerekti?ini a??klar ancak onay kutusu veya ayr?ca bir operat?r onay? sunmaz. Bu istek alan?, parolan?n ger?ekte hangi kanaldan g?nderildi?ini kan?tlamaz.
+Sonuç ekranındaki SMTP işlemi, yapılandırılmış VaultPilot SMTP hizmeti üzerinden tek alıcıya paket dosyasını, çözme aracı ZIP'ini ve kısa yönergeyi gönderir. Paylaşım parolası e-postaya eklenmez. İstemci `confirmPassphraseSeparate: true` değerini sabit gönderir; arayüz parolanın ayrı kanaldan iletilmesi gerektiğini açıklar ancak onay kutusu veya ayrıca bir operatör onayı sunmaz. Bu istek alanı, parolanın gerçekte hangi kanaldan gönderildiğini kanıtlamaz.
 
-SMTP kullan?ld???nda d?? paket teslimat i?in VaultPilot sunucusuna ge?ici olarak g?nderilir ve yap?land?r?lm?? SMTP hizmetinden ge?er; bu nedenle ?paket sunucuya hi? gitmez? ifadesi do?ru de?ildir. Buna ra?men VaultPilot paketi bar?nd?r?lan d?? payla??m kayd? olarak saklamaz.
+SMTP kullanıldığında dış paket teslimat için VaultPilot sunucusuna geçici olarak gönderilir ve yapılandırılmış SMTP hizmetinden geçer; bu nedenle “paket sunucuya hiç gitmez” ifadesi doğru değildir. Buna rağmen VaultPilot paketi barındırılan dış paylaşım kaydı olarak saklamaz.
 
-## Boyut ve ?stek S?n?rlar?
+## Boyut ve İstek Sınırları
 
-| Yol | Uygulanan s?n?r |
+| Yol | Uygulanan sınır |
 | --- | --- |
-| Dahili paket | En fazla 250 kay?t, toplam 512 dosya par?as? ve 1 GiB d?z metin dosya boyutu. |
-| Dahili dosya par?as? | Her par?a en fazla 2 MiB; par?a y?kleme iste?i en fazla 8 MiB. |
-| Dahili paket olu?turma iste?i | En fazla 1,5 MB istek g?vdesi. B?y?k ?ifreli kay?t y?kleri dosya olmasa da bu s?n?ra tak?labilir. |
-| D?? paket do?rudan indirme | Se?ili dosyalar?n toplam? en fazla 1 GiB; mevcut 2 MiB dosya par?alar? kullan?l?r. Dahili 250 kay?t/512 toplam par?a ?emas? yerel indirmeye uygulanmaz. |
-| SMTP ile d?? paket | Paket i?eri?i en fazla 12 MiB olabilir; SMTP meta verisindeki kay?t say?s? 250 ile s?n?rl?d?r. Daha b?y?k yerel paket SMTP ile g?nderilemez; onayl? manuel teslimat kullan?n. |
+| Dahili paket | En fazla 250 kayıt, toplam 512 dosya parçası ve 1 GiB düz metin dosya boyutu. |
+| Dahili dosya parçası | Her parça en fazla 2 MiB; parça yükleme isteği en fazla 8 MiB. |
+| Dahili paket oluşturma isteği | En fazla 1,5 MB istek gövdesi. Büyük şifreli kayıt yükleri dosya olmasa da bu sınıra takılabilir. |
+| Dış paket doğrudan indirme | Seçili dosyaların toplamı en fazla 1 GiB; mevcut 2 MiB dosya parçaları kullanılır. Dahili 250 kayıt/512 toplam parça şeması yerel indirmeye uygulanmaz. |
+| SMTP ile dış paket | Paket içeriği en fazla 12 MiB olabilir; SMTP meta verisindeki kayıt sayısı 250 ile sınırlıdır. Daha büyük yerel paket SMTP ile gönderilemez; onaylı manuel teslimat kullanın. |
 
-## ??lem B?t?nl??? D???ndaki ve K?smi Durumlar
+## İşlem Bütünlüğü Dışındaki ve Kısmi Durumlar
 
-Payla??m?n t?m ad?mlar? tek bir atomik i?lem i?inde y?r?t?lmez:
+Paylaşımın tüm adımları tek bir atomik işlem içinde yürütülmez:
 
-- **Dahili olu?turma yar?m kal?rsa:** Paket kayd? ve baz? ?ifreli dosya par?alar? ger?ekten olu?turulmu? olabilir. G?nderen listesinde **Haz?rlan?yor** g?r?n?rken al?c? listesinde g?r?nmez. Yeniden deneme eski paketi s?rd?rmez, yeni paket olu?turur. ?nce mevcut giden paketi ve Denetim G?nl???n? uzla?t?r?n; gerekiyorsa yar?m paketi geri al?n.
-- **Gelen paket yar?m al?n?rsa:** Kay?tlar ve dosya par?alar? hedef kasaya tek tek yaz?l?r, kullan?m say?s? en son g?ncellenir. Hata baz? yeni kay?tlar? veya eksik dosyay? kasada b?rakabilir; paket h?l? `PENDING` ve hakk? kullan?lmam?? g?r?nebilir. K?rlemesine yeniden deneme kopya kay?tlar olu?turabilir. Hedef kasay?, gelen/giden durumu ve denetimi kar??la?t?r?n.
-- **E?zamanl? kabul:** Kullan?m sayac? ile hedef kasaya yap?lan yaz?mlar ayn? i?lem b?t?nl??? i?inde de?ildir. ?ift t?klama veya iki oturum ayn? paketi e?zamanl? a?arsa limit g?ncellenmeden birden fazla kopya olu?abilir. Tek operat?r ve tek oturumla ilerleyin.
-- **D?? olu?turma ve denetim ayr?l?r:** Taray?c? paket ile parolay? olu?turup sonu? alan?na koyduktan sonra genel `SHARE` denetim olay? yaz?l?r. Denetim yaz?m? ba?ar?s?zsa aray?z olu?turma hatas? g?sterebilir ama paket ve parola h?l? bellekte bulunabilir. Sonu? alan?n? ve denetimi kontrol etmeden yeniden ?retmeyin.
-- **SMTP denetimi iki a?amal?d?r:** Kal?c? g?nderim-niyeti olay? SMTP'den ?nce yaz?l?r; bu yaz?m ba?ar?s?zsa e-posta g?nderilmez. SMTP kabul?nden sonraki teslimat kan?t? en iyi ?aba ile yaz?l?r ve ba?ar?s?z olsa bile e-posta g?nderilmi? olabilir. Niyet olay? tek ba??na teslimat kan?t? de?ildir; teslimat denetimi eksik diye ayn? paketi hemen tekrar g?ndermeyin.
+- **Dahili oluşturma yarım kalırsa:** Paket kaydı ve bazı şifreli dosya parçaları gerçekten oluşturulmuş olabilir. Gönderen listesinde **Hazırlanıyor** görünürken alıcı listesinde görünmez. Yeniden deneme eski paketi sürdürmez, yeni paket oluşturur. Önce mevcut giden paketi ve Denetim Günlüğünü uzlaştırın; gerekiyorsa yarım paketi geri alın.
+- **Gelen paket yarım alınırsa:** Kayıtlar ve dosya parçaları hedef kasaya tek tek yazılır, kullanım sayısı en son güncellenir. Hata bazı yeni kayıtları veya eksik dosyayı kasada bırakabilir; paket hâlâ `PENDING` ve hakkı kullanılmamış görünebilir. Körlemesine yeniden deneme kopya kayıtlar oluşturabilir. Hedef kasayı, gelen/giden durumu ve denetimi karşılaştırın.
+- **Eşzamanlı kabul:** Kullanım sayacı ile hedef kasaya yapılan yazımlar aynı işlem bütünlüğü içinde değildir. Çift tıklama veya iki oturum aynı paketi eşzamanlı açarsa limit güncellenmeden birden fazla kopya oluşabilir. Tek operatör ve tek oturumla ilerleyin.
+- **Dış oluşturma ve denetim ayrılır:** Tarayıcı paket ile parolayı oluşturup sonuç alanına koyduktan sonra genel `SHARE` denetim olayı yazılır. Denetim yazımı başarısızsa arayüz oluşturma hatası gösterebilir ama paket ve parola hâlâ bellekte bulunabilir. Sonuç alanını ve denetimi kontrol etmeden yeniden üretmeyin.
+- **SMTP denetimi iki aşamalıdır:** Kalıcı gönderim-niyeti olayı SMTP'den önce yazılır; bu yazım başarısızsa e-posta gönderilmez. SMTP kabulünden sonraki teslimat kanıtı en iyi çaba ile yazılır ve başarısız olsa bile e-posta gönderilmiş olabilir. Niyet olayı tek başına teslimat kanıtı değildir; teslimat denetimi eksik diye aynı paketi hemen tekrar göndermeyin.
 
-## Denetim ve Kan?t
+## Denetim ve Kanıt
 
-- Dahili paket olu?turma `SHARE`; dosya finalizasyonu ayr?nt?l? ikinci `SHARE`; ba?ar?l? kabul `IMPORT`; geri alma `SHARE_REVOKE` ?retir. Hedef kasada olu?an kay?tlar kendi `CREATE`/`IMPORT` izlerini de b?rakabilir.
-- Yerel d?? paket olu?turma yaln?z genel `SHARE` olay? yazmay? dener; sunucuda d?? paket sat?r? olu?turmaz.
-- SMTP niyet ve teslimat olaylar?; manifest ?zeti, kay?t/kullan?m say?s?, boyut, s?re, kabul say?s? ve mesaj kimli?i gibi gizli alanlar? ??kar?lm?? meta veriler ta??r. Paket i?eri?i, parola, al?c? adresi ve dosya ad? denetim meta verisine yaz?lmaz.
-- Denetim olay?n?n bulunmamas? i?lemin hi? ger?ekle?medi?ini; niyet olay?n?n bulunmas? da e-postan?n teslim edildi?ini tek ba??na kan?tlamaz.
+- Dahili paket oluşturma `SHARE`; dosya finalizasyonu ayrıntılı ikinci `SHARE`; başarılı kabul `IMPORT`; geri alma `SHARE_REVOKE` üretir. Hedef kasada oluşan kayıtlar kendi `CREATE`/`IMPORT` izlerini de bırakabilir.
+- Yerel dış paket oluşturma yalnız genel `SHARE` olayı yazmayı dener; sunucuda dış paket satırı oluşturmaz.
+- SMTP niyet ve teslimat olayları; manifest özeti, kayıt/kullanım sayısı, boyut, süre, kabul sayısı ve mesaj kimliği gibi gizli alanları çıkarılmış meta veriler taşır. Paket içeriği, parola, alıcı adresi ve dosya adı denetim meta verisine yazılmaz.
+- Denetim olayının bulunmaması işlemin hiç gerçekleşmediğini; niyet olayının bulunması da e-postanın teslim edildiğini tek başına kanıtlamaz.
 
-## Ekran Durumlar?
+## Ekran Durumları
 
-| Durum | Operat?r cevab? |
+| Durum | Operatör cevabı |
 | --- | --- |
-| Kay?tlar veya paket listesi y?kleniyor | Panel ?zel iskelet g?stermeyebilir. On saniyelik yenilemeyi ve genel sorgu durumunu bekleyin. |
-| Payla??lacak kay?t yok | Aktif kasay?, kilit durumunu, arama ve t?r filtresini do?rulay?n. |
-| Payla??labilir dahili kullan?c? yok | Kendi hesab?n?z, kapal? kullan?c?lar, Auditor ve ge?erli a??k anahtar? olmayan kullan?c?lar listelenmez. Kullan?c? durumunu ?zel olarak do?rulay?n. |
-| Gelen/giden listesi bo? | ?zel sorgu hata kart? yoktur; istek hatas? bo? dizi gibi g?r?nebilir. Bo?lu?u ba?ar? kan?t? saymadan oturumu ve a? iste?ini do?rulay?n. |
-| Haz?rlan?yor | Dahili paket kayd? vard?r fakat dosya par?alar? tamamlanmam??t?r. Yeni paket olu?turmadan ?nce uzla?t?r?n veya geri al?n. |
-| Bekliyor | Dahili paket haz?rd?r ve al?c? i?in en az bir kullan?m hakk? kalm??t?r. |
-| Kullan?ld? / S?resi doldu / Geri al?nd? | Paket yeni kabul i?in kullan?lamaz. Daha ?nce al?nm?? hedef kasa kopyalar? etkilenmez. |
-| Gelen payla??m a??lamad? | Hedef kasada k?smi kay?t veya par?a bulunabilece?ini varsay?n; yeniden denemeden ?nce kasay? inceleyin. |
-| D?? paket olu?turma hatas? | Sonu? alan?nda paket/parola kalm?? olabilir. Yeni paket ?retmeden ?nce canl? durumu ve denetimi kontrol edin. |
-| SMTP hatas? veya belirsiz sonu? | Niyet, UI kabul sonucu, mesaj kimli?i ve ?zel SMTP kan?t?n? uzla?t?r?n; k?r yeniden g?nderim yapmay?n. |
-| Decrypter hatas? | Yanl?? parola, de?i?tirilmi? manifest, s?re, yerel hak, taray?c? depolamas? ve s?r?m hatalar?n? ay?r?n; ??z?lm?? i?erik ekran g?r?nt?s? istemeyin. |
+| Kayıtlar veya paket listesi yükleniyor | Panel özel iskelet göstermeyebilir. On saniyelik yenilemeyi ve genel sorgu durumunu bekleyin. |
+| Paylaşılacak kayıt yok | Aktif kasayı, kilit durumunu, arama ve tür filtresini doğrulayın. |
+| Paylaşılabilir dahili kullanıcı yok | Kendi hesabınız, kapalı kullanıcılar, Auditor ve geçerli açık anahtarı olmayan kullanıcılar listelenmez. Kullanıcı durumunu özel olarak doğrulayın. |
+| Gelen/giden listesi boş | Özel sorgu hata kartı yoktur; istek hatası boş dizi gibi görünebilir. Boşluğu başarı kanıtı saymadan oturumu ve ağ isteğini doğrulayın. |
+| Hazırlanıyor | Dahili paket kaydı vardır fakat dosya parçaları tamamlanmamıştır. Yeni paket oluşturmadan önce uzlaştırın veya geri alın. |
+| Bekliyor | Dahili paket hazırdır ve alıcı için en az bir kullanım hakkı kalmıştır. |
+| Kullanıldı / Süresi doldu / Geri alındı | Paket yeni kabul için kullanılamaz. Daha önce alınmış hedef kasa kopyaları etkilenmez. |
+| Gelen paylaşım açılamadı | Hedef kasada kısmi kayıt veya parça bulunabileceğini varsayın; yeniden denemeden önce kasayı inceleyin. |
+| Dış paket oluşturma hatası | Sonuç alanında paket/parola kalmış olabilir. Yeni paket üretmeden önce canlı durumu ve denetimi kontrol edin. |
+| SMTP hatası veya belirsiz sonuç | Niyet, UI kabul sonucu, mesaj kimliği ve özel SMTP kanıtını uzlaştırın; kör yeniden gönderim yapmayın. |
+| Decrypter hatası | Yanlış parola, değiştirilmiş manifest, süre, yerel hak, tarayıcı depolaması ve sürüm hatalarını ayırın; çözülmüş içerik ekran görüntüsü istemeyin. |
 
-## ??lemden ?nce
+## İşlemden Önce
 
-- Do?ru aktif kasay?, sistem ve kasa rol?n?, `sharing` ?zelli?ini ve yaz?labilir lisans? do?rulay?n.
-- Toplam se?ili say?s?n?, t?r ?zetini ve filtre arkas?nda kalan se?imleri inceleyin.
-- Dosya toplam?, par?a say?s?, paket boyutu, ge?erlilik ve kullan?m hakk?n? teslim y?ntemine g?re kontrol edin.
-- Dahili al?c?n?n aktif kimli?ini ve a??k anahtar?n? ?zel kanaldan do?rulay?n; hedef kasay? al?c? a?ar.
-- D?? pakette merkezi geri alma olmad???n? ve kullan?m hakk?n?n yaln?z yerel saya? oldu?unu i?in sorumlusuna a??klay?n.
-- Paket, parola ve ??zme arac? i?in onayl? teslim kanallar?n? ?nceden belirleyin; SMTP kullan?yorsan?z parolay? e-postaya koymay?n.
-- Yar?m kalm?? giden paket veya hedef kasa yaz?m? varsa yeniden denemeden ?nce paket listesi, hedef kasa ve Denetim G?nl???n? uzla?t?r?n.
+- Doğru aktif kasayı, sistem ve kasa rolünü, `sharing` özelliğini ve yazılabilir lisansı doğrulayın.
+- Toplam seçili sayısını, tür özetini ve filtre arkasında kalan seçimleri inceleyin.
+- Dosya toplamı, parça sayısı, paket boyutu, geçerlilik ve kullanım hakkını teslim yöntemine göre kontrol edin.
+- Dahili alıcının aktif kimliğini ve açık anahtarını özel kanaldan doğrulayın; hedef kasayı alıcı açar.
+- Dış pakette merkezi geri alma olmadığını ve kullanım hakkının yalnız yerel sayaç olduğunu işin sorumlusuna açıklayın.
+- Paket, parola ve çözme aracı için onaylı teslim kanallarını önceden belirleyin; SMTP kullanıyorsanız parolayı e-postaya koymayın.
+- Yarım kalmış giden paket veya hedef kasa yazımı varsa yeniden denemeden önce paket listesi, hedef kasa ve Denetim Günlüğünü uzlaştırın.
 
-## G?venli Kan?t
+## Güvenli Kanıt
 
-- Payla??labilir: dahili/d?? yol, genel paket durumu, yakla??k zaman, kay?t ve par?a say?s?, toplam boyut s?n?f?, s?re/kullan?m politikas?, redakte hata kategorisi, k?salt?lm?? paket/manifest kimli?i, SMTP niyet veya kabul durumu.
-- Gizli kalmal?: paket JSON/PMShare i?eri?i, payla??m parolas?, ??z?lm?? i?erik, kay?t ba?l?klar? ve kullan?c? adlar?, dosya adlar?/par?alar?, al?c? ad? ve e-posta adresi, tam paket kimli?i/manifest ?zeti, sar?lm?? anahtar, ?ifreli kay?t i?eri?i, kasa ad?/kimli?i, ?zel SMTP mesaj? ve tam ekran g?r?nt?s?.
-- Asla parola ile paketi ayn? kan?ta eklemeyin. Paket veya parola herkese a??k kanala girdiyse d?? paketi geri al?nabilir saymay?n; i?erdi?i s?rlar? de?i?tirin ya da iptal edin.
+- Paylaşılabilir: dahili/dış yol, genel paket durumu, yaklaşık zaman, kayıt ve parça sayısı, toplam boyut sınıfı, süre/kullanım politikası, redakte hata kategorisi, kısaltılmış paket/manifest kimliği, SMTP niyet veya kabul durumu.
+- Gizli kalmalı: paket JSON/PMShare içeriği, paylaşım parolası, çözülmüş içerik, kayıt başlıkları ve kullanıcı adları, dosya adları/parçaları, alıcı adı ve e-posta adresi, tam paket kimliği/manifest özeti, sarılmış anahtar, şifreli kayıt içeriği, kasa adı/kimliği, özel SMTP mesajı ve tam ekran görüntüsü.
+- Asla parola ile paketi aynı kanıta eklemeyin. Paket veya parola herkese açık kanala girdiyse dış paketi geri alınabilir saymayın; içerdiği sırları değiştirin ya da iptal edin.
 
-## Ne Zaman Durmal?
+## Ne Zaman Durmalı
 
-Se?im kapsam? belirsizse, hedef kullan?c?/anahtar do?rulanam?yorsa, dosya par?alar? eksikse, Active Directory kimlik bilgisi dahili kabuldeyse, mevcut paket **Haz?rlan?yor** durumundaysa, hedef kasada k?smi kabul ??phesi varsa, d?? paket sonucu denetimle ?eli?iyorsa, SMTP sonucu belirsizse veya paket/parola ayn? kanala girdiyse durun. Yeni paket ya da ikinci kabul ?retmeden ?nce redakte kimlikler, zaman, durum ve denetim kan?t?yla ?zel inceleme yap?n.
+Seçim kapsamı belirsizse, hedef kullanıcı/anahtar doğrulanamıyorsa, dosya parçaları eksikse, Active Directory kimlik bilgisi dahili kabuldeyse, mevcut paket **Hazırlanıyor** durumundaysa, hedef kasada kısmi kabul şüphesi varsa, dış paket sonucu denetimle çelişiyorsa, SMTP sonucu belirsizse veya paket/parola aynı kanala girdiyse durun. Yeni paket ya da ikinci kabul üretmeden önce redakte kimlikler, zaman, durum ve denetim kanıtıyla özel inceleme yapın.
 
-## Operat?r Notlar?
+## Operatör Notları
 
-Dahili payla??m, sunucuda s?n?rl? ve geri al?nabilir bir ?ifreli teslim kuyru?udur; kabul edildi?inde al?c? kasas?nda ba??ms?z kopyalar ?retir. D?? payla??m ise ?evrimd??? dosya teslimidir; da??t?mdan sonra kontrol manifest s?resi, al?c? cihaz?n?n saati, yerel saya? ve s?r rotasyonu disiplinine dayan?r. Bu iki g?ven modelini ayn? ?aktif payla??m? olarak de?erlendirmeyin.
+Dahili paylaşım, sunucuda sınırlı ve geri alınabilir bir şifreli teslim kuyruğudur; kabul edildiğinde alıcı kasasında bağımsız kopyalar üretir. Dış paylaşım ise çevrimdışı dosya teslimidir; dağıtımdan sonra kontrol manifest süresi, alıcı cihazının saati, yerel sayaç ve sır rotasyonu disiplinine dayanır. Bu iki güven modelini aynı “aktif paylaşım” olarak değerlendirmeyin.
 
-## ?lgili
+## İlgili
 
-- [Payla??m ve ?evrimd??? ??zme arac?](sharing-and-offline-decrypter.md)
-- [D?? payla??m paketi a??lam?yor](../../kb/tr/external-share-fails.md)
-- [Denetim G?nl??? ekran?](screen-audit-log.md)
-- [??lemler ekran?](screen-executions.md)
-- [G?venli destek kan?t?](support-evidence-pack.md)
+- [Paylaşım ve çevrimdışı çözme aracı](sharing-and-offline-decrypter.md)
+- [Dış paylaşım paketi açılamıyor](../../kb/tr/external-share-fails.md)
+- [Denetim Günlüğü ekranı](screen-audit-log.md)
+- [İşlemler ekranı](screen-executions.md)
+- [Güvenli destek kanıtı](support-evidence-pack.md)

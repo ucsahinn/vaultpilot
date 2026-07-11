@@ -1,179 +1,179 @@
-# Discovery Ekran?
+# Discovery Ekranı
 
-?st ?ubuktaki `?`, **Operasyon > Discovery** ekran?ndan bu rehberi a?ar. Discovery; onayl? ?zel a?, TLS ve dosya maruziyeti kontrolleri i?in denetimli bir inceleme alan?d?r. Operat?r?n de?erlendirece?i sinyaller ve maskelenmi? kan?t ?retir; zafiyet taray?c?s?, kimlik bilgisi deneme arac?, varl?k envanteri veya otomatik temizlik servisi de?ildir.
+Üst çubuktaki `?`, **Operasyon > Discovery** ekranından bu rehberi açar. Discovery; onaylı özel ağ, TLS ve dosya maruziyeti kontrolleri için denetimli bir inceleme alanıdır. Operatörün değerlendireceği sinyaller ve maskelenmiş kanıt üretir; zafiyet tarayıcısı, kimlik bilgisi deneme aracı, varlık envanteri veya otomatik temizlik servisi değildir.
 
-## Eri?im, Rol ve Lisans S?n?r?
+## Erişim, Rol ve Lisans Sınırı
 
-Lisans **Discovery** yetene?ini i?eriyorsa Sahip, Y?netici ve Denet?i ekran? a?abilir. Y?netici ve Denet?i; tarama kurallar?n?, ?al??malar?, bulgular?, bast?rmalar? ve i?e aktar?m durumunu salt okunur g?r?r. Kullan?c? rol? bu ekrana ula?amaz.
+Lisans **Discovery** yeteneğini içeriyorsa Sahip, Yönetici ve Denetçi ekranı açabilir. Yönetici ve Denetçi; tarama kurallarını, çalışmaları, bulguları, bastırmaları ve içe aktarım durumunu salt okunur görür. Kullanıcı rolü bu ekrana ulaşamaz.
 
-Her de?i?iklik Sahip rol?, Discovery yetene?i ve yaz?labilir lisans ister. Tarama kaydetme, ?nizleme veya Tarama ?al??t?rma, i?i durdurma/yeniden ba?latma/logunu silme, bulgu inceleme veya bast?rma, i?e aktar?m materyali haz?rlama ve i?e aktar?m? tamamlama bu s?n?ra dahildir. ??e aktar?m i?in ayr?ca Sahip'in D?zenleyici veya Y?netici oldu?u etkin ve kilidi a??k bir kasa gerekir.
+Her değişiklik Sahip rolü, Discovery yeteneği ve yazılabilir lisans ister. Tarama kaydetme, Önizleme veya Tarama çalıştırma, işi durdurma/yeniden başlatma/logunu silme, bulgu inceleme veya bastırma, içe aktarım materyali hazırlama ve içe aktarımı tamamlama bu sınıra dahildir. İçe aktarım için ayrıca Sahip'in Düzenleyici veya Yönetici olduğu etkin ve kilidi açık bir kasa gerekir.
 
-?al??ma alan? a??kken yakla??k on saniyede bir yenilenir. Y?kleme s?ras?nda ?? sat?rl? iskelet, sorgu ba?ar?s?zl???nda ayr? hata paneli g?r?n?r.
+Çalışma alanı açıkken yaklaşık on saniyede bir yenilenir. Yükleme sırasında üç satırlı iskelet, sorgu başarısızlığında ayrı hata paneli görünür.
 
-## ?? Ad?ml? ?? Ak???
+## Üç Adımlı İş Akışı
 
-1. **?al??t?r** ? onayl? kapsam? olu?turup kaydedin, kontrolleri se?in, ?nizleme kayd? al?n veya ger?ek tarama ?al??t?r?n.
-2. **Bulgular** ? maskelenmi? sinyalleri filtreleyin, kan?t? inceleyin ve karar verin.
-3. **??e aktar** ? uygun ve incelenmi? s?n?rl? say?daki dosya bulgusunu iste?e ba?l? olarak etkin kasaya al?n.
+1. **Çalıştır** — onaylı kapsamı oluşturup kaydedin, kontrolleri seçin, Önizleme kaydı alın veya gerçek tarama çalıştırın.
+2. **Bulgular** — maskelenmiş sinyalleri filtreleyin, kanıtı inceleyin ve karar verin.
+3. **İçe aktar** — uygun ve incelenmiş sınırlı sayıdaki dosya bulgusunu isteğe bağlı olarak etkin kasaya alın.
 
-??e aktar?m zorunlu de?ildir. A? y?zeyi, sertifika sorunu veya zay?f dosya sinyali kasa kayd?na d?n??meden operat?r bulgusu olarak kalabilir.
+İçe aktarım zorunlu değildir. Ağ yüzeyi, sertifika sorunu veya zayıf dosya sinyali kasa kaydına dönüşmeden operatör bulgusu olarak kalabilir.
 
-## ?al??t?r: Onayl? Tarama Haz?rlama
+## Çalıştır: Onaylı Tarama Hazırlama
 
-### Kontrolleri se?me
+### Kontrolleri seçme
 
-Yaln?z se?ilen ve kapsam? bulunan kontroller ?al???r:
+Yalnız seçilen ve kapsamı bulunan kontroller çalışır:
 
-| Kontrol | Ger?ek davran?? | Gerekli kay?tl? kapsam |
+| Kontrol | Gerçek davranış | Gerekli kayıtlı kapsam |
 | --- | --- | --- |
-| Giri? y?zeyleri | Se?ili portlara ba?lan?r; bilinen ve ayn? kaynaktan bulunan giri? yollar?na s?n?rl? HTTP/HTTPS `GET` istekleri g?nderir. Form veya kimlik bilgisi g?ndermez. | En az bir kabul edilmi? ?zel IPv4 hedefi. |
-| SSL/TLS sertifikalar? | TLS ba?lant?s? a??p ge?erlilik, ana makine/parmak izi, kendinden imzal?/i? CA, tekrarl? parmak izi ve AD CS web kan?t?n? okur. | En az bir kabul edilmi? ?zel IPv4 hedefi. |
-| Dosyalarda a??k gizli de?erler | Onayl? dosyalar? ge?ici olarak okur; desteklenen gizli de?er, kimlik bilgisi, sertifika ve anahtar sinyalleri i?in yaln?z metadata ve maskelenmi? bulgu olu?turur. | En az bir ??z?mlenmi? haz?r klas?r veya onayl? yol. |
+| Giriş yüzeyleri | Seçili portlara bağlanır; bilinen ve aynı kaynaktan bulunan giriş yollarına sınırlı HTTP/HTTPS `GET` istekleri gönderir. Form veya kimlik bilgisi göndermez. | En az bir kabul edilmiş özel IPv4 hedefi. |
+| SSL/TLS sertifikaları | TLS bağlantısı açıp geçerlilik, ana makine/parmak izi, kendinden imzalı/iç CA, tekrarlı parmak izi ve AD CS web kanıtını okur. | En az bir kabul edilmiş özel IPv4 hedefi. |
+| Dosyalarda açık gizli değerler | Onaylı dosyaları geçici olarak okur; desteklenen gizli değer, kimlik bilgisi, sertifika ve anahtar sinyalleri için yalnız metadata ve maskelenmiş bulgu oluşturur. | En az bir çözümlenmiş hazır klasör veya onaylı yol. |
 
-H?zl? se?imler uygun t?m kontrolleri, yaln?z dosyalar? veya A? + SSL/TLS'yi se?er. A? ve dosya kontrolleri birlikte se?ilebilir. ?ki kol e?zamanl? ?al???r; herhangi birindeki hata b?t?n ?al??may? ba?ar?s?z yapar.
+Hızlı seçimler uygun tüm kontrolleri, yalnız dosyaları veya Ağ + SSL/TLS'yi seçer. Ağ ve dosya kontrolleri birlikte seçilebilir. İki kol eşzamanlı çalışır; herhangi birindeki hata bütün çalışmayı başarısız yapar.
 
-### ?zel a? kapsam?
+### Özel ağ kapsamı
 
-A? kapsam? tek RFC1918 IPv4 adresi, CIDR veya a??k IPv4 aral??? kabul eder. Genel IP, ana makine ad?, IPv6, loopback ve link-local hedef kabul edilmez. Birle?ik s?n?r 512 hedeftir; a??k aral?k tek `/24` i?inde kalmal?d?r. Dolu bir kapsamda tek bir reddedilen giri? bulunmas? bile kayd? engeller.
+Ağ kapsamı tek RFC1918 IPv4 adresi, CIDR veya açık IPv4 aralığı kabul eder. Genel IP, ana makine adı, IPv6, loopback ve link-local hedef kabul edilmez. Birleşik sınır 512 hedeftir; açık aralık tek `/24` içinde kalmalıdır. Dolu bir kapsamda tek bir reddedilen giriş bulunması bile kaydı engeller.
 
-Hedef ?nizlemesi kabul edilen adresleri geni?letir, reddedilen giri?leri g?sterir ve kalanlar? ?zetlemeden ?nce en fazla 64 e?le?en hedefi listeler. Bu yerel bir kapsam ?nizlemesidir; eri?ilebilirlik testi de?ildir.
+Hedef önizlemesi kabul edilen adresleri genişletir, reddedilen girişleri gösterir ve kalanları özetlemeden önce en fazla 64 eşleşen hedefi listeler. Bu yerel bir kapsam önizlemesidir; erişilebilirlik testi değildir.
 
-Port planlar? d???k g?r?lt?l? yayg?n k?meler sunar: Premium varsay?lan, Web login, Windows kimlik ve Dar TLS. Tarama kural? en fazla 32 benzersiz port kabul eder. Varsay?lan k?me `443, 8443, 9443, 636, 3269, 5986, 80, 8080` de?erleridir.
+Port planları düşük gürültülü yaygın kümeler sunar: Premium varsayılan, Web login, Windows kimlik ve Dar TLS. Tarama kuralı en fazla 32 benzersiz port kabul eder. Varsayılan küme `443, 8443, 9443, 636, 3269, 5986, 80, 8080` değerleridir.
 
-A? kontrolleri ger?ek trafik ?retir: TCP ba?lant?s?, TLS el s?k??mas? ve s?n?rl? HTTP/HTTPS GET istekleri. Giri? veya AD CS kan?t?n? s?n?fland?rmak i?in HTTP yan?t g?vdesinin en fazla 64 KiB b?l?m? okunabilir; ayn? kaynaktaki s?n?rl? say?daki giri? ba?lant?s? takip edilebilir. Kullan?c? ad?, parola, kimlik do?rulama formu, exploit, kaba kuvvet veya parola p?sk?rtme g?nderilmez.
+Ağ kontrolleri gerçek trafik üretir: TCP bağlantısı, TLS el sıkışması ve sınırlı HTTP/HTTPS GET istekleri. Giriş veya AD CS kanıtını sınıflandırmak için HTTP yanıt gövdesinin en fazla 64 KiB bölümü okunabilir; aynı kaynaktaki sınırlı sayıdaki giriş bağlantısı takip edilebilir. Kullanıcı adı, parola, kimlik doğrulama formu, exploit, kaba kuvvet veya parola püskürtme gönderilmez.
 
-TLS kontrol?, ge?ersiz veya g?venilmeyen sertifikan?n metadata bilgisini okuyabilmek i?in g?ven zinciri reddine tak?lmaz. IP adresi bi?imindeki hedeflerde SNI g?nderilmez. Sertifika bulgusu risk kan?t?d?r; g?venilir TLS ba?lant?s?n?n ba?ar?yla kuruldu?unu kan?tlamaz.
+TLS kontrolü, geçersiz veya güvenilmeyen sertifikanın metadata bilgisini okuyabilmek için güven zinciri reddine takılmaz. IP adresi biçimindeki hedeflerde SNI gönderilmez. Sertifika bulgusu risk kanıtıdır; güvenilir TLS bağlantısının başarıyla kurulduğunu kanıtlamaz.
 
-### Dosya kapsam? ve haz?r klas?rler
+### Dosya kapsamı ve hazır klasörler
 
-Haz?r kaynak gruplar? VaultPilot sunucusunda ??z?mlenir:
+Hazır kaynak grupları VaultPilot sunucusunda çözümlenir:
 
-- Windows klas?rleri: Masa?st?, Belgeler, ?ndirilenler, OneDrive, Ortak Masa?st? ve Ortak Belgeler.
-- Sunucu uygulamalar?: IIS yap?land?rma/site/log konumlar? ile Nginx veya Apache yap?land?rma yollar?.
-- DevOps ve y?netim: uygun `.ssh`, `.kube`, `.docker`, `.aws`, Azure ve gcloud profil klas?rleri.
+- Windows klasörleri: Masaüstü, Belgeler, İndirilenler, OneDrive, Ortak Masaüstü ve Ortak Belgeler.
+- Sunucu uygulamaları: IIS yapılandırma/site/log konumları ile Nginx veya Apache yapılandırma yolları.
+- DevOps ve yönetim: uygun `.ssh`, `.kube`, `.docker`, `.aws`, Azure ve gcloud profil klasörleri.
 
-Haz?r se?imler uygun yerel Windows profillerine geni?leyebilir. Ger?ekte hangi yollar?n okunabildi?ini VaultPilot sunucu servis hesab?n?n dosya sistemi izinleri belirler. Eksik veya eri?ilemeyen haz?r yol, a??k hata vermeden hi? dosya ?retmeyebilir.
+Hazır seçimler uygun yerel Windows profillerine genişleyebilir. Gerçekte hangi yolların okunabildiğini VaultPilot sunucu servis hesabının dosya sistemi izinleri belirler. Eksik veya erişilemeyen hazır yol, açık hata vermeden hiç dosya üretmeyebilir.
 
-Ek kapsam; onayl? mutlak s?r?c? yolu veya normal UNC yolu kabul eder. Kay?tl? tarama en fazla 32 ??z?lm?? yol tutar. S?r?c? k?k?, ?st dizine ??kma i?eren yol, cihaz yolu, ?o?u Windows sistem yolu, VaultPilot/eski PassMan veri yolu, sembolik ba?lant?, olu?turulmu? dizin/dosya, desteklenmeyen uzant?, eri?ilemeyen kay?t ve boyut s?n?r?n? a?an dosya atlan?r veya reddedilir.
+Ek kapsam; onaylı mutlak sürücü yolu veya normal UNC yolu kabul eder. Kayıtlı tarama en fazla 32 çözülmüş yol tutar. Sürücü kökü, üst dizine çıkma içeren yol, cihaz yolu, çoğu Windows sistem yolu, VaultPilot/eski PassMan veri yolu, sembolik bağlantı, oluşturulmuş dizin/dosya, desteklenmeyen uzantı, erişilemeyen kayıt ve boyut sınırını aşan dosya atlanır veya reddedilir.
 
-Kural en fazla 80 izinli uzant? kabul eder. Varsay?lan azami dosya boyutu 5 MB, kesin ?st s?n?r 25 MB'dir. Zaman a??m? 250?15.000 ms, e?zamanl?l?k 1?16 aral???ndad?r.
+Kural en fazla 80 izinli uzantı kabul eder. Varsayılan azami dosya boyutu 5 MB, kesin üst sınır 25 MB'dir. Zaman aşımı 250–15.000 ms, eşzamanlılık 1–16 aralığındadır.
 
-Dosya incelemesi; desteklenen metin, yap?land?rma, betik, VPN/RDP, kay?t defteri, Terraform, paket y?neticisi kimlik bilgisi, sertifika/anahtar ve desteklenen Office/Excel OOXML i?eri?ini sunucu i?lemi belle?ine ge?ici olarak okuyabilir. Kal?c? Discovery verisi kaynak gizli de?eri de?il; dedekt?r metadatas?, maskeli yol, karmalar, gerek?e kodlar? ve maskelenmi? ?nizleme i?erir. Kaynak dosya de?i?tirilmez, ta??nmaz, karantinaya al?nmaz, temizlenmez veya silinmez.
+Dosya incelemesi; desteklenen metin, yapılandırma, betik, VPN/RDP, kayıt defteri, Terraform, paket yöneticisi kimlik bilgisi, sertifika/anahtar ve desteklenen Office/Excel OOXML içeriğini sunucu işlemi belleğine geçici olarak okuyabilir. Kalıcı Discovery verisi kaynak gizli değeri değil; dedektör metadatası, maskeli yol, karmalar, gerekçe kodları ve maskelenmiş önizleme içerir. Kaynak dosya değiştirilmez, taşınmaz, karantinaya alınmaz, temizlenmez veya silinmez.
 
-### A??k onay ve tarama kural? davran???
+### Açık onay ve tarama kuralı davranışı
 
-A? kapsam? **Bu ?zel hedefleri tarama yetkim var**, dosya kapsam? **Bu dosya yollar? salt okunur tarama i?in onayl?** se?imini ister. Kapsam de?i?tirildi?inde ilgili onay s?f?rlan?r. Ge?erli ?zel a? kapsam?, onayl? dosya kapsam? veya ikisinden biri olmadan tarama kaydedilemez.
+Ağ kapsamı **Bu özel hedefleri tarama yetkim var**, dosya kapsamı **Bu dosya yolları salt okunur tarama için onaylı** seçimini ister. Kapsam değiştirildiğinde ilgili onay sıfırlanır. Geçerli özel ağ kapsamı, onaylı dosya kapsamı veya ikisinden biri olmadan tarama kaydedilemez.
 
-**Taramay? kaydet** her seferinde yeni tarama kural? olu?turur; mevcut ekranda kay?tl? kural? d?zenleme veya silme i?lemi yoktur. **Bu tarama aktif** kapal? kaydedilirse kural Devre d??? olur. Tarama d??mesi kapan?r; mevcut aray?zde ?nizleme etkin g?r?nebilse de sunucu Devre d??? kural i?in hem ?nizleme hem Taramay? reddeder.
+**Taramayı kaydet** her seferinde yeni tarama kuralı oluşturur; mevcut ekranda kayıtlı kuralı düzenleme veya silme işlemi yoktur. **Bu tarama aktif** kapalı kaydedilirse kural Devre dışı olur. Tarama düğmesi kapanır; mevcut arayüzde Önizleme etkin görünebilse de sunucu Devre dışı kural için hem Önizleme hem Taramayı reddeder.
 
-## ?nizleme, Tarama ve ?? Kontrolleri
+## Önizleme, Tarama ve İş Kontrolleri
 
-?nizleme ile Tarama ayn? de?ildir:
+Önizleme ile Tarama aynı değildir:
 
-- **?nizleme**, hemen tamamlanm?? bir `PREVIEW` i?i ve denetim olay? kaydeder. TCP, TLS, HTTP veya dosya kontrol? yapmaz ve bulgu olu?turmaz.
-- **Tarama**, se?ilen kontrolleri ger?ekten y?r?t?r. Birka? dakika s?rebilir; istek i? son duruma ula??nca tamamlan?r, bu s?rada periyodik sorgular kaydedilmi? ilerlemeyi g?sterebilir.
+- **Önizleme**, hemen tamamlanmış bir `PREVIEW` işi ve denetim olayı kaydeder. TCP, TLS, HTTP veya dosya kontrolü yapmaz ve bulgu oluşturmaz.
+- **Tarama**, seçilen kontrolleri gerçekten yürütür. Birkaç dakika sürebilir; istek iş son duruma ulaşınca tamamlanır, bu sırada periyodik sorgular kaydedilmiş ilerlemeyi gösterebilir.
 
-Bir tarama kural? i?in ayn? anda yaln?z bir i? etkin olabilir. ?? durumlar? S?rada, ?al???yor, ?ptal bekleniyor, Tamamland?, ?ptal edildi ve Ba?ar?s?z de?erleridir. ?lerleme; taranan hedef, taranan dosya, i?lenen bulgu ve son g?ncelleme bilgisini g?sterir.
+Bir tarama kuralı için aynı anda yalnız bir iş etkin olabilir. İş durumları Sırada, Çalışıyor, İptal bekleniyor, Tamamlandı, İptal edildi ve Başarısız değerleridir. İlerleme; taranan hedef, taranan dosya, işlenen bulgu ve son güncelleme bilgisini gösterir.
 
-**Durdur** iptal iste?ini kaydeder. ?ptal anl?k de?ildir; ?al??t?r?c? onaylayana kadar kural etkin kal?r ve yeni i? ba?lat?lamaz. **Sil**, yaln?z son duruma ula?m?? i?te onaydan sonra kullan?labilir; ?al??ma logunu siler, ilgili bulgular? korur. **Tekrar**, kay?tl? kural? ve o anda se?ili kontrolleri kullan?r; eski i?in kontrol se?iminin de?i?mez kopyas?n? yeniden oynatmaz.
+**Durdur** iptal isteğini kaydeder. İptal anlık değildir; çalıştırıcı onaylayana kadar kural etkin kalır ve yeni iş başlatılamaz. **Sil**, yalnız son duruma ulaşmış işte onaydan sonra kullanılabilir; çalışma logunu siler, ilgili bulguları korur. **Tekrar**, kayıtlı kuralı ve o anda seçili kontrolleri kullanır; eski işin kontrol seçiminin değişmez kopyasını yeniden oynatmaz.
 
-??lem logu en yeni alt? i?i g?sterir. Geni?letilmi? tarama ge?mi?i d?nen b?t?n i?leri listeler. Sunucu yeniden ba?larsa yar?m kalan etkin i? daha sonra kesintiye u?ram?? veya iptal edilmi? olarak kurtar?labilir.
+İşlem logu en yeni altı işi gösterir. Genişletilmiş tarama geçmişi dönen bütün işleri listeler. Sunucu yeniden başlarsa yarım kalan etkin iş daha sonra kesintiye uğramış veya iptal edilmiş olarak kurtarılabilir.
 
-Ekrandaki bulgu say?s? o ?al??mada i?lenen veya g?ncellenen sinyalleri g?sterir; yaln?z yepyeni benzersiz bulgu sat?r? say?s? oldu?u garanti edilmez.
+Ekrandaki bulgu sayısı o çalışmada işlenen veya güncellenen sinyalleri gösterir; yalnız yepyeni benzersiz bulgu satırı sayısı olduğu garanti edilmez.
 
-## Bulgular: Maskelenmi? Sinyalleri ?nceleme
+## Bulgular: Maskelenmiş Sinyalleri İnceleme
 
-?lk Bulgular g?r?n?m? bilerek **G??l? sinyal + A??k** filtreleriyle ba?lar. Varsay?lan g?r?n?m? geri y?klemek b?t?n bulgular? de?il bu filtreleri getirir. Arama ve geli?mi? filtreler; g?ven, durum, ?nem, kaynak t?r?, aday tipi, varl?k kimli?i, gerek?e kodu, maskeli yol ve karmalar? kapsar.
+İlk Bulgular görünümü bilerek **Güçlü sinyal + Açık** filtreleriyle başlar. Varsayılan görünümü geri yüklemek bütün bulguları değil bu filtreleri getirir. Arama ve gelişmiş filtreler; güven, durum, önem, kaynak türü, aday tipi, varlık kimliği, gerekçe kodu, maskeli yol ve karmaları kapsar.
 
-?lk sayfa 200 bulgu y?kler. **Daha fazla bulgu y?kle** eski sayfalar? getirir; API sayfa ba??na en fazla 500 kay?t kabul eder. Filtreler, toplu se?im, inceleme say?lar? ve ??e aktar yaln?z taray?c?ya y?klenmi? bulgular ?zerinde ?al???r. Filtre d???nda kalan se?imler temizlenene kadar se?ili kalabilir.
+İlk sayfa 200 bulgu yükler. **Daha fazla bulgu yükle** eski sayfaları getirir; API sayfa başına en fazla 500 kayıt kabul eder. Filtreler, toplu seçim, inceleme sayıları ve İçe aktar yalnız tarayıcıya yüklenmiş bulgular üzerinde çalışır. Filtre dışında kalan seçimler temizlenene kadar seçili kalabilir.
 
-Tablo ve detay paneli; ?nem, g?ven, aday tipi, varl?k kimli?i, maskelenmi? ?nizleme, dedekt?r, gerek?e kodlar?, durum, k?salt?lm?? kan?t karmas?, iste?e ba?l? maskeli yol/yol karmas? ve g?ncelleme zaman? g?sterir. Maskelenmi? kan?t bile i? sistemi tan?mlayabilir; bilin?li bi?imde g?venli hale getirilmeden ?zel kanalda tutun.
+Tablo ve detay paneli; önem, güven, aday tipi, varlık kimliği, maskelenmiş önizleme, dedektör, gerekçe kodları, durum, kısaltılmış kanıt karması, isteğe bağlı maskeli yol/yol karması ve güncelleme zamanı gösterir. Maskelenmiş kanıt bile iç sistemi tanımlayabilir; bilinçli biçimde güvenli hale getirilmeden özel kanalda tutun.
 
-### Bulgu ya?am d?ng?s?
+### Bulgu yaşam döngüsü
 
-| Ge?erli durum | Kullan?labilir kararlar |
+| Geçerli durum | Kullanılabilir kararlar |
 | --- | --- |
-| A??k | ?ncelemeye al, Yok say, Bast?r |
-| ?ncelemede | Uygun dosya materyalini Kasaya al?nabilir yap, Yok say, Bast?r, A???a d?nd?r |
-| Kasaya al?nabilir | Uygun materyal i?in ??e aktar ekran?n? a? veya A???a d?nd?r |
-| Kasaya aktar?ld? | Temizli?i i?aretle |
-| Temizli?i do?ruland? | A???a d?nd?r |
-| Yok say?ld? | A???a d?nd?r veya Bast?r |
-| Bast?r?ld? | A???a d?nd?r |
+| Açık | İncelemeye al, Yok say, Bastır |
+| İncelemede | Uygun dosya materyalini Kasaya alınabilir yap, Yok say, Bastır, Açığa döndür |
+| Kasaya alınabilir | Uygun materyal için İçe aktar ekranını aç veya Açığa döndür |
+| Kasaya aktarıldı | Temizliği işaretle |
+| Temizliği doğrulandı | Açığa döndür |
+| Yok sayıldı | Açığa döndür veya Bastır |
+| Bastırıldı | Açığa döndür |
 
-Yok say yaln?z o bulguyu kapat?r. Bast?r; dedekt?r ve bast?rma anahtar? i?in kal?c? kural olu?turur, gelecekteki benzer sinyaller Bast?r?ld? durumunda saklan?r. Ge?erli aray?z bast?rma nedeni istemez veya g?ndermez; kural normalde **Not yok** g?sterir. Bast?r?lm?? bulguyu A???a d?nd?rmek kal?c? bast?rma kural?n? silmez; bu ekranda bast?rma kural? silme kontrol? yoktur.
+Yok say yalnız o bulguyu kapatır. Bastır; dedektör ve bastırma anahtarı için kalıcı kural oluşturur, gelecekteki benzer sinyaller Bastırıldı durumunda saklanır. Geçerli arayüz bastırma nedeni istemez veya göndermez; kural normalde **Not yok** gösterir. Bastırılmış bulguyu Açığa döndürmek kalıcı bastırma kuralını silmez; bu ekranda bastırma kuralı silme kontrolü yoktur.
 
-Bulgu i?lemleri onay penceresi g?stermez. Toplu **?ncelemeye al**, yaln?z g?r?n?r ve se?ili A??k bulgular? etkiler. Ge?erli aray?z bulguyu mevcut kasa kayd?na ba?lamaz.
+Bulgu işlemleri onay penceresi göstermez. Toplu **İncelemeye al**, yalnız görünür ve seçili Açık bulguları etkiler. Geçerli arayüz bulguyu mevcut kasa kaydına bağlamaz.
 
-Tamamlanan dosya taramas?, daha ?nce g?r?len kan?t ba?ar?yla taranm?? yollardan kaybolursa A??k, ?ncelemede veya Kasaya al?nabilir durumundaki eski dosya bulgusunu otomatik olarak Temizli?i do?ruland? durumuna alabilir. Yok say?ld?, Bast?r?ld? ve Kasaya aktar?ld? durumlar? bu ge?i?le otomatik temizlenmez.
+Tamamlanan dosya taraması, daha önce görülen kanıt başarıyla taranmış yollardan kaybolursa Açık, İncelemede veya Kasaya alınabilir durumundaki eski dosya bulgusunu otomatik olarak Temizliği doğrulandı durumuna alabilir. Yok sayıldı, Bastırıldı ve Kasaya aktarıldı durumları bu geçişle otomatik temizlenmez.
 
-## ??e Aktar: K?sa ?m?rl? Materyal Aktar?m?
+## İçe Aktar: Kısa Ömürlü Materyal Aktarımı
 
-Yaln?z dar kapsaml? dosya bulgusu i?e aktar?labilir. Bulgu Kasaya al?nabilir ve `FILE_EXPOSURE` t?r?nde olmal?; yol karmas? ve materyal konumu bulunmal?; Parola, API anahtar?, Sertifika veya Kimlik bilgisi aday? olarak s?n?fland?r?lmal?d?r. A? y?zeyi, TLS bulgusu, not ve genel dosya kan?t? yaln?z sinyaldir.
+Yalnız dar kapsamlı dosya bulgusu içe aktarılabilir. Bulgu Kasaya alınabilir ve `FILE_EXPOSURE` türünde olmalı; yol karması ve materyal konumu bulunmalı; Parola, API anahtarı, Sertifika veya Kimlik bilgisi adayı olarak sınıflandırılmalıdır. Ağ yüzeyi, TLS bulgusu, not ve genel dosya kanıtı yalnız sinyaldir.
 
-??e aktar?m adaylar? y?klenmi? bulgulardan olu?ur. Beklenen eski aday g?r?nm?yorsa ?nce Bulgular ekran?nda daha eski sayfalar? y?kleyin.
+İçe aktarım adayları yüklenmiş bulgulardan oluşur. Beklenen eski aday görünmüyorsa önce Bulgular ekranında daha eski sayfaları yükleyin.
 
-Her i?e aktar?mda:
+Her içe aktarımda:
 
-1. VaultPilot onayl? kayna?? yeniden okur; yol karmas?, dedekt?r, aday tipi, kan?t karmas? ve materyal parmak izini do?rular.
-2. D?z metin de?er yaln?z kullan?c?ya ba?l?, be? dakikal?k k?sa aktar?m i?in d?ner.
-3. Taray?c? kayd? olu?turup etkin kasa anahtar?yla ?ifreler.
-4. Sunucu belirteci, kan?t?, kasa yazma yetkisini ve aday tipini do?rular; ?ifreli kayd? saklay?p bulguyu Kasaya aktar?ld? durumuna ge?irir.
+1. VaultPilot onaylı kaynağı yeniden okur; yol karması, dedektör, aday tipi, kanıt karması ve materyal parmak izini doğrular.
+2. Düz metin değer yalnız kullanıcıya bağlı, beş dakikalık kısa aktarım için döner.
+3. Tarayıcı kaydı oluşturup etkin kasa anahtarıyla şifreler.
+4. Sunucu belirteci, kanıtı, kasa yazma yetkisini ve aday tipini doğrular; şifreli kaydı saklayıp bulguyu Kasaya aktarıldı durumuna geçirir.
 
-Kaynak materyal de?i?tiyse, ta??nd?ysa, kaybolduysa veya kan?tla art?k e?le?miyorsa i?e aktar?m durur ve bulgu yeniden incelenmelidir. Sunucu d?z metin kaynak de?eri kal?c? olarak saklamaz.
+Kaynak materyal değiştiyse, taşındıysa, kaybolduysa veya kanıtla artık eşleşmiyorsa içe aktarım durur ve bulgu yeniden incelenmelidir. Sunucu düz metin kaynak değeri kalıcı olarak saklamaz.
 
-Se?ili i?e aktar?mlar s?rayla ?al???r; tek atomik i?lem de?ildir. Sonraki kay?t ba?ar?s?z olursa daha ?nce ba?ar?yla aktar?lanlar kasada kal?r. ??e aktar?m kayna?? temizlemez; **Temizli?i i?aretle** yaln?z bulgu i? ak??? durumunu de?i?tirir.
+Seçili içe aktarımlar sırayla çalışır; tek atomik işlem değildir. Sonraki kayıt başarısız olursa daha önce başarıyla aktarılanlar kasada kalır. İçe aktarım kaynağı temizlemez; **Temizliği işaretle** yalnız bulgu iş akışı durumunu değiştirir.
 
-## Denetim ?zi
+## Denetim İzi
 
-Discovery; tarama kural? kayd?, ?nizleme/Tarama ba?lang?c?, ?al??ma iptali ve log silme, bulgu inceleme/Yok say/Bast?r, i?e aktar?m haz?rlama ve materyal okuma, genel kasa `IMPORT`, i?e aktar?m tamamlama ve elle temizlik i?aretleme olaylar?n? denetime yazar. ?? logunu silmek bulgular? silmez. Eski dosya bulgular?n?n otomatik temizli?i tamamlanan dosya taramas?n?n par?as?d?r; her sat?r i?in ayr? elle temizlik denetim olay? olarak anlat?lmamal?d?r.
+Discovery; tarama kuralı kaydı, Önizleme/Tarama başlangıcı, çalışma iptali ve log silme, bulgu inceleme/Yok say/Bastır, içe aktarım hazırlama ve materyal okuma, genel kasa `IMPORT`, içe aktarım tamamlama ve elle temizlik işaretleme olaylarını denetime yazar. İş logunu silmek bulguları silmez. Eski dosya bulgularının otomatik temizliği tamamlanan dosya taramasının parçasıdır; her satır için ayrı elle temizlik denetim olayı olarak anlatılmamalıdır.
 
-## Ekran Durumlar?
+## Ekran Durumları
 
-| Durum | Operat?r cevab? |
+| Durum | Operatör cevabı |
 | --- | --- |
-| Discovery y?kleniyor | ?skelet tamamlanana kadar bekleyin; durum bilinmeden ikinci tarama kural? olu?turmay?n. |
-| Discovery verisi al?namad? | Oturumu, Discovery yetene?ini ve sunucu ba?lant?s?n? kontrol edin; g?venli hale getirilmi? hatay? koruyun. |
-| Salt okunur rol veya lisans | Yaln?z inceleyin. B?t?n i?lemler Sahip ve yaz?labilir Discovery lisans? ister. |
-| Kapsam reddedildi | Kapsam? geni?letmeyin veya denetimi a?may?n; ?zel IPv4 kapsam?n? d?zeltin ya da yaln?z dosya taramas? i?in a? alan?n? bo?alt?n. |
-| Kural Devre d??? | ?nizleme d??mesinin g?r?n?m?ne g?venmeyin; ?al??ma gerekiyorsa etkin yeni kural olu?turun. |
-| Tarama ?al???yor | Kaydedilmi? ilerlemeyi izleyin; ayn? kural ikinci i?i ba?latamaz. |
-| ?ptal bekleniyor | ?al??t?r?c? onay?n? bekleyin; taraman?n hemen durdu?unu varsaymay?n. |
-| Tarama ba?ar?s?z | ?? detay?n? a??n, gizli de?erleri ??kar?lm?? hata kan?t?n? koruyun, onayl? kural? d?zeltip bilin?li yeniden ba?lat?n. |
-| Bulgu yok | ?nizleme de?il ger?ek Tarama tamamland? m? ve se?ilen kontrollerin ge?erli kapsam? var m? kontrol edin. |
-| Filtreye uyan bulgu yok | Filtreleri s?f?rlay?n; varsay?lan g?r?n?m bile A??k olmayan ve G??l? olmayan bulgular? gizler. |
-| ??e aktar?m kuyru?u bo? | Uygun dosya bulgular?n? inceleyin, gerekiyorsa eski sayfalar? y?kleyin ve do?rulanan materyali Kasaya al?nabilir yap?n. |
-| ??e aktar?m kilitli | Sahip'in D?zenleyici veya Y?netici oldu?u yaz?labilir etkin kasay? a??n. |
-| ??e aktar?m kan?t? de?i?ti | Durup kayna?? yeniden inceleyin; karma veya parmak izi do?rulamas?n? atlamay?n. |
+| Discovery yükleniyor | İskelet tamamlanana kadar bekleyin; durum bilinmeden ikinci tarama kuralı oluşturmayın. |
+| Discovery verisi alınamadı | Oturumu, Discovery yeteneğini ve sunucu bağlantısını kontrol edin; güvenli hale getirilmiş hatayı koruyun. |
+| Salt okunur rol veya lisans | Yalnız inceleyin. Bütün işlemler Sahip ve yazılabilir Discovery lisansı ister. |
+| Kapsam reddedildi | Kapsamı genişletmeyin veya denetimi aşmayın; özel IPv4 kapsamını düzeltin ya da yalnız dosya taraması için ağ alanını boşaltın. |
+| Kural Devre dışı | Önizleme düğmesinin görünümüne güvenmeyin; çalışma gerekiyorsa etkin yeni kural oluşturun. |
+| Tarama çalışıyor | Kaydedilmiş ilerlemeyi izleyin; aynı kural ikinci işi başlatamaz. |
+| İptal bekleniyor | Çalıştırıcı onayını bekleyin; taramanın hemen durduğunu varsaymayın. |
+| Tarama başarısız | İş detayını açın, gizli değerleri çıkarılmış hata kanıtını koruyun, onaylı kuralı düzeltip bilinçli yeniden başlatın. |
+| Bulgu yok | Önizleme değil gerçek Tarama tamamlandı mı ve seçilen kontrollerin geçerli kapsamı var mı kontrol edin. |
+| Filtreye uyan bulgu yok | Filtreleri sıfırlayın; varsayılan görünüm bile Açık olmayan ve Güçlü olmayan bulguları gizler. |
+| İçe aktarım kuyruğu boş | Uygun dosya bulgularını inceleyin, gerekiyorsa eski sayfaları yükleyin ve doğrulanan materyali Kasaya alınabilir yapın. |
+| İçe aktarım kilitli | Sahip'in Düzenleyici veya Yönetici olduğu yazılabilir etkin kasayı açın. |
+| İçe aktarım kanıtı değişti | Durup kaynağı yeniden inceleyin; karma veya parmak izi doğrulamasını atlamayın. |
 
-## ??lemden ?nce
+## İşlemden Önce
 
-- Her ?zel hedef, UNC payla??m?, s?r?c? yolu ve haz?r se?imle geni?leyen profil alan? i?in a??k yetki al?n.
-- VaultPilot sunucu hesab?n?n yaln?z ama?lanan okuma yetkisine sahip oldu?unu do?rulay?n; haz?r se?imler dosya sistemi yetkisi vermez.
-- Soruyu yan?tlayan en k???k hedef, port, yol, uzant?, boyut, zaman a??m? ve e?zamanl?l?k kapsam?n? se?in.
-- ?nizlemeyi yaln?z kay?tl? plan say?n; ger?ek kan?t gerekti?inde Tarama kullan?n.
-- HTTP kontrollerinin GET trafi?i ?retti?ini, dosya kontrollerinin kaynak i?eri?i ge?ici olarak okudu?unu unutmay?n.
-- Yok say, Bast?r veya ??e aktar karar?ndan ?nce durum, g?ven, dedekt?r, maskeli yol, gerek?e kodlar? ve sahipli?i inceleyin.
-- ??e aktarmadan ?nce etkin kasa, yazma rol?, kay?t sahibi, hedef kategori ve kaynak d?zeltme plan?n? do?rulay?n.
+- Her özel hedef, UNC paylaşımı, sürücü yolu ve hazır seçimle genişleyen profil alanı için açık yetki alın.
+- VaultPilot sunucu hesabının yalnız amaçlanan okuma yetkisine sahip olduğunu doğrulayın; hazır seçimler dosya sistemi yetkisi vermez.
+- Soruyu yanıtlayan en küçük hedef, port, yol, uzantı, boyut, zaman aşımı ve eşzamanlılık kapsamını seçin.
+- Önizlemeyi yalnız kayıtlı plan sayın; gerçek kanıt gerektiğinde Tarama kullanın.
+- HTTP kontrollerinin GET trafiği ürettiğini, dosya kontrollerinin kaynak içeriği geçici olarak okuduğunu unutmayın.
+- Yok say, Bastır veya İçe aktar kararından önce durum, güven, dedektör, maskeli yol, gerekçe kodları ve sahipliği inceleyin.
+- İçe aktarmadan önce etkin kasa, yazma rolü, kayıt sahibi, hedef kategori ve kaynak düzeltme planını doğrulayın.
 
-## G?venli Kan?t
+## Güvenli Kanıt
 
-- Payla??labilir: genel kontrol t?r?, tarama kural?/i? durumu, yakla??k hedef/dosya/bulgu say?lar?, ?nem, g?ven, aday tipi, dedekt?r kimli?i, geni? zaman aral???, g?venli hale getirilmi? hata s?n?f? ve bilin?li maskelenmi? yol veya ana makine bi?imi.
-- Gizli kalmal?: ger?ek IP/CIDR/port envanteri, ana makine ad?, UNC veya yerel yol, kullan?c? ad?, tam varl?k kimli?i, bast?rma anahtar?, kesin zaman damgas?, ham veya ili?kilendirilebilir ?nizleme, kaynak dosya, kaynak de?er, ?zel anahtar/sertifika materyali, i?e aktar?m belirteci, kasa ad?, veritaban?/yedek/d??a aktar?m ve i?e aktar?lan kay?t i?eri?i.
-- Kan?t ve yol karmalar? raporlar aras?nda sistemleri ili?kilendirebilir. ?zel destekte tam kar??la?t?rma gerekmiyorsa k?salt?lm?? veya tamamen maskelenmi? de?er payla??n.
-- Kaynak dosyay? eklemeyin ve ke?fedilen d?z metni destek kayd?nda yeniden yazmay?n. Maskelenmi? bulgu metadatas? ve ?zel destek kanal? kullan?n.
+- Paylaşılabilir: genel kontrol türü, tarama kuralı/iş durumu, yaklaşık hedef/dosya/bulgu sayıları, önem, güven, aday tipi, dedektör kimliği, geniş zaman aralığı, güvenli hale getirilmiş hata sınıfı ve bilinçli maskelenmiş yol veya ana makine biçimi.
+- Gizli kalmalı: gerçek IP/CIDR/port envanteri, ana makine adı, UNC veya yerel yol, kullanıcı adı, tam varlık kimliği, bastırma anahtarı, kesin zaman damgası, ham veya ilişkilendirilebilir önizleme, kaynak dosya, kaynak değer, özel anahtar/sertifika materyali, içe aktarım belirteci, kasa adı, veritabanı/yedek/dışa aktarım ve içe aktarılan kayıt içeriği.
+- Kanıt ve yol karmaları raporlar arasında sistemleri ilişkilendirebilir. Özel destekte tam karşılaştırma gerekmiyorsa kısaltılmış veya tamamen maskelenmiş değer paylaşın.
+- Kaynak dosyayı eklemeyin ve keşfedilen düz metni destek kaydında yeniden yazmayın. Maskelenmiş bulgu metadatası ve özel destek kanalı kullanın.
 
-## Ne Zaman Durmal? ve Destek ?stemelisiniz
+## Ne Zaman Durmalı ve Destek İstemelisiniz
 
-Kapsam sahipli?i belirsizse, genel veya beklenmeyen hedef g?r?n?yorsa, haz?r se?im onay d??? alana ??z?l?yorsa, dosya eri?imi ama?lanandan geni?se, ?al??ma ilerlemeden etkin kal?yorsa, iptal onaylanm?yorsa, bulgular beklenenden fazla ba?lam a???a ??kar?yorsa, bast?rma a??klanmam?? sinyal s?n?f?n? gizliyorsa, materyal i?e aktar?m s?ras?nda de?i?iyorsa, s?ral? i?e aktar?m k?smen ba?ar?l? oluyorsa veya temizlik/iptal karar? denetim kan?t?yla ?eli?iyorsa durun. Ger?ek kapsam veya gizli materyal eklemeden rol, genel durum, kontrol t?r?, geni? zaman aral???, k?salt?lm?? karmalar, g?venli hata metni ve son g?venli ad?mla ?zel destek kayd? a??n.
+Kapsam sahipliği belirsizse, genel veya beklenmeyen hedef görünüyorsa, hazır seçim onay dışı alana çözülüyorsa, dosya erişimi amaçlanandan genişse, çalışma ilerlemeden etkin kalıyorsa, iptal onaylanmıyorsa, bulgular beklenenden fazla bağlam açığa çıkarıyorsa, bastırma açıklanmamış sinyal sınıfını gizliyorsa, materyal içe aktarım sırasında değişiyorsa, sıralı içe aktarım kısmen başarılı oluyorsa veya temizlik/iptal kararı denetim kanıtıyla çelişiyorsa durun. Gerçek kapsam veya gizli materyal eklemeden rol, genel durum, kontrol türü, geniş zaman aralığı, kısaltılmış karmalar, güvenli hata metni ve son güvenli adımla özel destek kaydı açın.
 
-## Operat?r Notlar?
+## Operatör Notları
 
-Discovery kan?t toplama ve inceleme arac?d?r; ihlal kan?t? veya hi?bir sorun bulunmad???n?n garantisi de?ildir. Temiz sonu? yaln?z se?ilen kontrolleri, kabul edilen kapsam?, okunabilen dosyalar?, desteklenen bi?imleri, limitleri ve o Taraman?n zaman?n? kapsar. Bulguyu Temizli?i do?ruland? durumuna almak kayna?? de?i?tirmez. Bast?rma kal?c?d?r; yaln?z gelecekteki benzer sinyaller bilin?li olarak gizlenecekse kullan?lmal?d?r.
+Discovery kanıt toplama ve inceleme aracıdır; ihlal kanıtı veya hiçbir sorun bulunmadığının garantisi değildir. Temiz sonuç yalnız seçilen kontrolleri, kabul edilen kapsamı, okunabilen dosyaları, desteklenen biçimleri, limitleri ve o Taramanın zamanını kapsar. Bulguyu Temizliği doğrulandı durumuna almak kaynağı değiştirmez. Bastırma kalıcıdır; yalnız gelecekteki benzer sinyaller bilinçli olarak gizlenecekse kullanılmalıdır.
 
-## ?lgili
+## İlgili
 
 - [Discovery rehberi](discovery.md)
 - [Discovery bulgu inceleme KB](../../kb/tr/discovery-finding-review.md)
 - [Public issue redaction KB](../../kb/tr/public-issue-redaction.md)
-- [Denetim Ge?mi?i ekran?](screen-audit-log.md)
+- [Denetim Geçmişi ekranı](screen-audit-log.md)

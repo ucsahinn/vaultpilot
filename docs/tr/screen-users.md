@@ -1,175 +1,175 @@
-# Kullan?c?lar Ekran?
+# Kullanıcılar Ekranı
 
-?st ?ubuktaki `?` bu sayfay? Kullan?c?lar ekran?ndan a?ar. Bu ekran; yerel ve Active Directory kaynakl? kullan?c?lar?, genel rolleri, hesap ve 2FA durumunu ve kasa eri?imi say?s?n? birlikte incelemek i?in kullan?l?r.
+Üst çubuktaki `?` bu sayfayı Kullanıcılar ekranından açar. Bu ekran; yerel ve Active Directory kaynaklı kullanıcıları, genel rolleri, hesap ve 2FA durumunu ve kasa erişimi sayısını birlikte incelemek için kullanılır.
 
-Yaln?zca **Owner** ve **Admin** bu ekran? a?abilir. Auditor ile User kullan?c? listesini g?remez. Lisans salt okunur durumdaysa liste ve detaylar incelenebilir, fakat kullan?c?y? de?i?tiren i?lemler kapal?d?r.
+Yalnızca **Owner** ve **Admin** bu ekranı açabilir. Auditor ile User kullanıcı listesini göremez. Lisans salt okunur durumdaysa liste ve detaylar incelenebilir, fakat kullanıcıyı değiştiren işlemler kapalıdır.
 
-## Burada Ne Yap?l?r
+## Burada Ne Yapılır
 
-- Yerel kullan?c? olu?turulur; ge?ici ana parola ve ilk rol atan?r.
-- Kullan?c? ad? ile g?r?nen ad d?zenlenir.
-- Owner olmayan kullan?c?ya Admin, Auditor veya User rol? verilir.
-- Kullan?c? kapat?l?r, kapasite uygunsa tekrar a??l?r veya kapal? kullan?c? kal?c? silinir.
-- Yaln?z kurucu Owner, ba?ka bir Owner olmayan kullan?c? i?in ge?ici parola belirleyebilir veya 2FA kayd?n? s?f?rlayabilir.
+- Yerel kullanıcı oluşturulur; geçici ana parola ve ilk rol atanır.
+- Kullanıcı adı ile görünen ad düzenlenir.
+- Owner olmayan kullanıcıya Admin, Auditor veya User rolü verilir.
+- Kullanıcı kapatılır, kapasite uygunsa tekrar açılır veya kapalı kullanıcı kalıcı silinir.
+- Yalnız kurucu Owner, başka bir Owner olmayan kullanıcı için geçici parola belirleyebilir veya 2FA kaydını sıfırlayabilir.
 
-Bu ekran yeni bir Owner olu?turmaz. Normal olu?turma ve rol de?i?tirme se?eneklerinde yaln?z **Admin**, **Auditor** ve **User** vard?r.
+Bu ekran yeni bir Owner oluşturmaz. Normal oluşturma ve rol değiştirme seçeneklerinde yalnız **Admin**, **Auditor** ve **User** vardır.
 
-## Listeyi ve Detay? Okuma
+## Listeyi ve Detayı Okuma
 
-Kullan?c?lar olu?turulma s?ras?yla listelenir. Her sat?rda rol ve kaynak rozeti, g?r?nen ad/kullan?c? ad?, kasa eri?imi say?s?, k?sa public key izi, 2FA ve `ACTIVE`/`DISABLED` durumu g?r?n?r.
+Kullanıcılar oluşturulma sırasıyla listelenir. Her satırda rol ve kaynak rozeti, görünen ad/kullanıcı adı, kasa erişimi sayısı, kısa public key izi, 2FA ve `ACTIVE`/`DISABLED` durumu görünür.
 
-**Detay? g?r** ?ekmecesi ayn? bilgileri d?zenli bi?imde sunar. Oturumlar?, kullan?c?ya ait audit zaman ?izelgesini, olu?turulma tarihini, Active Directory DN bilgisini veya tam public key'i g?stermez.
+**Detayı gör** çekmecesi aynı bilgileri düzenli biçimde sunar. Oturumları, kullanıcıya ait audit zaman çizelgesini, oluşturulma tarihini, Active Directory DN bilgisini veya tam public key'i göstermez.
 
 Kaynak rozetleri:
 
-- **Lokal:** VaultPilot i?inde olu?turulan `LOCAL` kullan?c?.
-- **E?itleme:** `DIRECTORY` kullan?c?s?; sa?lay?c? bulunursa ad? a??klamada g?r?n?r.
-- **Active Directory:** ?ifreli bir AD credential kayd?na ba?l? `CREDENTIAL` kullan?c?.
+- **Lokal:** VaultPilot içinde oluşturulan `LOCAL` kullanıcı.
+- **Eşitleme:** `DIRECTORY` kullanıcısı; sağlayıcı bulunursa adı açıklamada görünür.
+- **Active Directory:** Şifreli bir AD credential kaydına bağlı `CREDENTIAL` kullanıcı.
 
-Bir `LOCAL` kullan?c?n?n ad? se?ili bir directory nesnesiyle e?le?irse aray?z onu sezgisel olarak **E?itleme** etiketiyle g?sterebilir. Bu rozet tek ba??na kesin login source kan?t? de?ildir.
+Bir `LOCAL` kullanıcının adı seçili bir directory nesnesiyle eşleşirse arayüz onu sezgisel olarak **Eşitleme** etiketiyle gösterebilir. Bu rozet tek başına kesin login source kanıtı değildir.
 
-`ACTIVE` kullan?c? oturum a?abilir ve aktif lisans say?m?na dahildir. `DISABLED` kullan?c? oturum a?amaz ve aktif kapasiteyi t?ketmez; kayd? hen?z silinmemi?tir. Y?klemede iskelet sat?rlar, hi? kullan?c? yoksa bo? durum g?r?n?r.
+`ACTIVE` kullanıcı oturum açabilir ve aktif lisans sayımına dahildir. `DISABLED` kullanıcı oturum açamaz ve aktif kapasiteyi tüketmez; kaydı henüz silinmemiştir. Yüklemede iskelet satırlar, hiç kullanıcı yoksa boş durum görünür.
 
-## Yerel Kullan?c? Olu?turma
+## Yerel Kullanıcı Oluşturma
 
-1. **Yeni kullan?c? olu?tur** panelini a??n.
-2. En az iki karakterli, benzersiz kullan?c? ad? girin.
-3. ?ste?e ba?l? g?r?nen ad? girin.
-4. Admin, Auditor veya User rol?n? se?in.
-5. En az 14 karakterli ge?ici ana parolay? iki alana ayn? yaz?n.
-6. **Kullan?c? olu?tur** ile kaydedin.
+1. **Yeni kullanıcı oluştur** panelini açın.
+2. En az iki karakterli, benzersiz kullanıcı adı girin.
+3. İsteğe bağlı görünen adı girin.
+4. Admin, Auditor veya User rolünü seçin.
+5. En az 14 karakterli geçici ana parolayı iki alana aynı yazın.
+6. **Kullanıcı oluştur** ile kaydedin.
 
-Owner veya Admin rol?, yaz?labilir lisans ve bo? aktif kullan?c? kapasitesi gerekir. Kapasite doluysa lisans? y?kseltin veya art?k giri? yapmamas? gereken kullan?c?y? kapat?n.
+Owner veya Admin rolü, yazılabilir lisans ve boş aktif kullanıcı kapasitesi gerekir. Kapasite doluysa lisansı yükseltin veya artık giriş yapmaması gereken kullanıcıyı kapatın.
 
-Taray?c? ge?ici ana paroladan auth do?rulay?c?s?, kullan?c? anahtar ?ifti ve ki?isel kasa anahtar malzemesi t?retir; sunucuya d?z metin parola g?nderilmez. Sunucu kullan?c?y? `ACTIVE` ve `LOCAL` olarak olu?turur, ki?isel kasay? a?ar ve kullan?c?ya bu kasada Manager eri?imi verir.
+Tarayıcı geçici ana paroladan auth doğrulayıcısı, kullanıcı anahtar çifti ve kişisel kasa anahtar malzemesi türetir; sunucuya düz metin parola gönderilmez. Sunucu kullanıcıyı `ACTIVE` ve `LOCAL` olarak oluşturur, kişisel kasayı açar ve kullanıcıya bu kasada Manager erişimi verir.
 
-Ge?ici parolay? audit notuna, destek kayd?na veya ekran g?r?nt?s?ne yazmay?n. Yaln?z g?venilir ve ayr? bir kanaldan iletin.
+Geçici parolayı audit notuna, destek kaydına veya ekran görüntüsüne yazmayın. Yalnız güvenilir ve ayrı bir kanaldan iletin.
 
-## Kullan?c? Bilgisi ve Roller
+## Kullanıcı Bilgisi ve Roller
 
-Owner ve Admin etkin kullan?c?lar?n kullan?c? ad? ile g?r?nen ad?n? d?zenleyebilir. Owner kullan?c? ad? de?i?tirilemez; Admin bir Owner kayd?n? d?zenleyemez. Owner kendi g?r?nen ad?n? de?i?tirebilir.
+Owner ve Admin etkin kullanıcıların kullanıcı adı ile görünen adını düzenleyebilir. Owner kullanıcı adı değiştirilemez; Admin bir Owner kaydını düzenleyemez. Owner kendi görünen adını değiştirebilir.
 
 | Rol | Konsoldaki kapsam |
 | --- | --- |
-| Admin | Kullan?c?lar? ve kasalar? y?netir; lisans? y?netemez. |
-| Auditor | Audit ve sistem durumunu g?r?r; gizli de?erlere veya kasa anahtarlar?na eri?emez. |
-| User | Yaln?z atanan kasalar?, o kasadaki Manager/Editor/Viewer rol?ne g?re kullan?r. |
+| Admin | Kullanıcıları ve kasaları yönetir; lisansı yönetemez. |
+| Auditor | Audit ve sistem durumunu görür; gizli değerlere veya kasa anahtarlarına erişemez. |
+| User | Yalnız atanan kasaları, o kasadaki Manager/Editor/Viewer rolüne göre kullanır. |
 
-Kullan?c? kendi genel rol?n? de?i?tiremez ve Owner rol? de?i?tirilemez. Aray?z kapal? kullan?c?da d?zenleme ve rol se?imini devre d??? b?rak?r; konsoldan de?i?tirmek i?in ?nce tekrar a??n.
+Kullanıcı kendi genel rolünü değiştiremez ve Owner rolü değiştirilemez. Arayüz kapalı kullanıcıda düzenleme ve rol seçimini devre dışı bırakır; konsoldan değiştirmek için önce tekrar açın.
 
-Genel kullan?c? rol? ile kasa rol?n? kar??t?rmay?n. Sat?rdaki kasa say?s?, her kasadaki yetki seviyesini g?stermez.
+Genel kullanıcı rolü ile kasa rolünü karıştırmayın. Satırdaki kasa sayısı, her kasadaki yetki seviyesini göstermez.
 
-## Active Directory Giri? Eri?imi
+## Active Directory Giriş Erişimi
 
-AD giri? eri?imi Kullan?c?lar sat?r?ndan verilmez. ?lgili Active Directory kayd?n?n men?s?ndeki **VaultPilot giri?ine al** veya **VaultPilot giri?inden ??kar** eylemi kullan?l?r.
+AD giriş erişimi Kullanıcılar satırından verilmez. İlgili Active Directory kaydının menüsündeki **VaultPilot girişine al** veya **VaultPilot girişinden çıkar** eylemi kullanılır.
 
-Bu ak?? yaln?z Owner rol?ne a??kt?r ve yaz?labilir lisans ister. Directory kayna?? i?in sa?lay?c? ile DN, credential kayna?? i?in kaynak secret kayd? gerekir. Yeni y?netilen kullan?c? User rol?yle a??l?r; mevcut Admin veya Auditor rol? korunabilir.
+Bu akış yalnız Owner rolüne açıktır ve yazılabilir lisans ister. Directory kaynağı için sağlayıcı ile DN, credential kaynağı için kaynak secret kaydı gerekir. Yeni yönetilen kullanıcı User rolüyle açılır; mevcut Admin veya Auditor rolü korunabilir.
 
-VaultPilot her giri?te LDAP bind yapmaz. Eri?im verildi?inde mevcut ?ifreli AD credential parolas?ndan yerel VaultPilot do?rulay?c?s? ve anahtar malzemesi t?retilir. AD parolas? d??ar?da de?i?irse otomatik e?itlenmez. Se?ili OU veya kullan?c?lar da yaln?z se?im yap?ld??? i?in otomatik olu?turulmaz.
+VaultPilot her girişte LDAP bind yapmaz. Erişim verildiğinde mevcut şifreli AD credential parolasından yerel VaultPilot doğrulayıcısı ve anahtar malzemesi türetilir. AD parolası dışarıda değişirse otomatik eşitlenmez. Seçili OU veya kullanıcılar da yalnız seçim yapıldığı için otomatik oluşturulmaz.
 
-Mevcut y?netilen kullan?c?n?n ortak kasa eri?imi varsa giri? malzemesini bu ak??la yenileme reddedilir. Giri? eri?imini kapatmak kullan?c?y? `DISABLED` yapar ve oturumlar?n? iptal eder.
+Mevcut yönetilen kullanıcının ortak kasa erişimi varsa giriş malzemesini bu akışla yenileme reddedilir. Giriş erişimini kapatmak kullanıcıyı `DISABLED` yapar ve oturumlarını iptal eder.
 
-Kullan?c? durumu ile directory sa?lay?c? se?imi ayr? isteklerde kaydedilir. ?lk i?lem ba?ar?l?, ikinci i?lem ba?ar?s?z olabilir. Hata sonras? Kullan?c?lar listesini ve AD se?im ekran?n? ayr? ayr? yenileyin.
+Kullanıcı durumu ile directory sağlayıcı seçimi ayrı isteklerde kaydedilir. İlk işlem başarılı, ikinci işlem başarısız olabilir. Hata sonrası Kullanıcılar listesini ve AD seçim ekranını ayrı ayrı yenileyin.
 
-## Parola Belirleme ve 2FA S?f?rlama
+## Parola Belirleme ve 2FA Sıfırlama
 
-Bu i?lemler yaln?z kurucu Owner hesab?na a??kt?r. Yeni kurulumda kullan?c? ad? `VpAdm`'dir; eski `administrator` kurucu hesab? uyumluluk i?in tan?n?r. ??lemler kendi hesab?na veya herhangi bir Owner'a uygulanamaz.
+Bu işlemler yalnız kurucu Owner hesabına açıktır. Yeni kurulumda kullanıcı adı `VpAdm`'dir; eski `administrator` kurucu hesabı uyumluluk için tanınır. İşlemler kendi hesabına veya herhangi bir Owner'a uygulanamaz.
 
-### Ge?ici parola belirleme
+### Geçici parola belirleme
 
-- Yeni parola en az 14 karakter olmal? ve onay? e?le?melidir.
-- Auth do?rulay?c?s? ile kullan?c? anahtar ?ifti yenilenir.
-- 2FA kayd? s?f?rlan?r ve a??k oturumlar iptal edilir.
-- `USER_PASSWORD_SET` yaz?l?r; d?z metin parola audit'e yaz?lmaz.
+- Yeni parola en az 14 karakter olmalı ve onayı eşleşmelidir.
+- Auth doğrulayıcısı ile kullanıcı anahtar çifti yenilenir.
+- 2FA kaydı sıfırlanır ve açık oturumlar iptal edilir.
+- `USER_PASSWORD_SET` yazılır; düz metin parola audit'e yazılmaz.
 
-> **Durma ko?ulu:** Bu eylemi kay?ps?z kasa kurtarma veya s?radan parola rotasyonu olarak kullanmay?n. Uygulama yeni ki?isel kasa anahtar? ?retir ve yaln?z kurucu Owner'?n o anda a?abildi?i ortak kasalardaki e?le?en eri?imleri yeni anahtara sarabilir. Mevcut ki?isel kasa i?eri?i veya yeniden sar?lmayan ortak kasa eri?imleri okunamaz hale gelebilir. ??erik ve kasa eri?im envanteri do?rulanmadan devam etmeyin.
+> **Durma koşulu:** Bu eylemi kayıpsız kasa kurtarma veya sıradan parola rotasyonu olarak kullanmayın. Uygulama yeni kişisel kasa anahtarı üretir ve yalnız kurucu Owner'ın o anda açabildiği ortak kasalardaki eşleşen erişimleri yeni anahtara sarabilir. Mevcut kişisel kasa içeriği veya yeniden sarılmayan ortak kasa erişimleri okunamaz hale gelebilir. İçerik ve kasa erişim envanteri doğrulanmadan devam etmeyin.
 
-### 2FA kayd?n? s?f?rlama
+### 2FA kaydını sıfırlama
 
-Mevcut authenticator ba?? kald?r?l?r, `TWO_FACTOR_DISABLE` yaz?l?r ve a??k oturumlar iptal edilir. Kullan?c? sonraki ba?ar?l? giri?inden sonra 2FA'y? yeni cihazla yeniden kurabilir. Aktif 2FA yoksa i?lem yap?lmaz.
+Mevcut authenticator bağı kaldırılır, `TWO_FACTOR_DISABLE` yazılır ve açık oturumlar iptal edilir. Kullanıcı sonraki başarılı girişinden sonra 2FA'yı yeni cihazla yeniden kurabilir. Aktif 2FA yoksa işlem yapılmaz.
 
-## Kapatma, Tekrar A?ma ve Kal?c? Silme
+## Kapatma, Tekrar Açma ve Kalıcı Silme
 
-### Kullan?c?y? kapatma
+### Kullanıcıyı kapatma
 
-Owner veya Admin, kendi hesab? ve Owner d???ndaki etkin kullan?c?y? kapatabilir. Durum `DISABLED` olur, oturumlar iptal edilir, aktif lisans say?m? azal?r ve `USER_DISABLE` yaz?l?r. Aray?z hi?bir Owner'? kapatmaya izin vermez.
+Owner veya Admin, kendi hesabı ve Owner dışındaki etkin kullanıcıyı kapatabilir. Durum `DISABLED` olur, oturumlar iptal edilir, aktif lisans sayımı azalır ve `USER_DISABLE` yazılır. Arayüz hiçbir Owner'ı kapatmaya izin vermez.
 
-### Kullan?c?y? tekrar a?ma
+### Kullanıcıyı tekrar açma
 
-**Tekrar a?** yaln?z kapal? kullan?c?da g?r?n?r. Yaz?labilir lisans ve bo? aktif kullan?c? kapasitesi gerekir. Ba?ar? kullan?c?y? `ACTIVE` yapar ve `USER_UPDATE` yazar.
+**Tekrar aç** yalnız kapalı kullanıcıda görünür. Yazılabilir lisans ve boş aktif kullanıcı kapasitesi gerekir. Başarı kullanıcıyı `ACTIVE` yapar ve `USER_UPDATE` yazar.
 
-### Kullan?c?y? kal?c? silme
+### Kullanıcıyı kalıcı silme
 
-Yaln?z ?nceden kapat?lm??, kendi hesab?n?z olmayan ve Owner rol?nde olmayan kullan?c? silinebilir. ??lem geri al?namaz.
+Yalnız önceden kapatılmış, kendi hesabınız olmayan ve Owner rolünde olmayan kullanıcı silinebilir. İşlem geri alınamaz.
 
-> **Durma ko?ulu:** Ki?isel kasa, ortak kasa eri?imleri ve kullan?c?ya ba?l? operasyon kay?tlar? i?in sahiplik devri tamamlanmadan silmeyin. Veritaban? ili?kileri; kullan?c? taraf?ndan olu?turulan audit sat?rlar?, extension cihazlar?, API istemcileri, directory sa?lay?c?lar?/i?lemleri, discovery kay?tlar?, dosya par?alar? ve g?nderilen/al?nan payla??m paketleri gibi ba?l? kay?tlar? da kald?rabilir.
+> **Durma koşulu:** Kişisel kasa, ortak kasa erişimleri ve kullanıcıya bağlı operasyon kayıtları için sahiplik devri tamamlanmadan silmeyin. Veritabanı ilişkileri; kullanıcı tarafından oluşturulan audit satırları, extension cihazları, API istemcileri, directory sağlayıcıları/işlemleri, discovery kayıtları, dosya parçaları ve gönderilen/alınan paylaşım paketleri gibi bağlı kayıtları da kaldırabilir.
 
-Silmeden hemen ?nce `USER_DELETE` olu?turulur. Metadata hedef kullan?c? kimli?i ve rol?, ki?isel kasa say?s? ve silinecek kullan?c? audit ge?mi?inin say?/son hash ?zetini ta??r. Bu, kullan?c?n?n b?t?n eski audit sat?rlar?n?n korundu?u anlam?na gelmez.
+Silmeden hemen önce `USER_DELETE` oluşturulur. Metadata hedef kullanıcı kimliği ve rolü, kişisel kasa sayısı ve silinecek kullanıcı audit geçmişinin sayı/son hash özetini taşır. Bu, kullanıcının bütün eski audit satırlarının korunduğu anlamına gelmez.
 
-## Audit ve ??lem S?n?r?
+## Audit ve İşlem Sınırı
 
-| ??lem | Audit olay? |
+| İşlem | Audit olayı |
 | --- | --- |
-| Kullan?c? olu?turma | `USER_CREATE` |
-| Bilgi d?zenleme | `USER_UPDATE` |
-| Rol de?i?tirme | `USER_ROLE_UPDATE` |
-| Kapatma / AD giri?inden ??karma | `USER_DISABLE` |
-| Tekrar a?ma / y?netilen eri?imi yenileme | `USER_UPDATE` |
-| Kurucu Owner'?n parola belirlemesi | `USER_PASSWORD_SET` |
-| 2FA s?f?rlama | `TWO_FACTOR_DISABLE` |
-| Kal?c? silme | `USER_DELETE` |
+| Kullanıcı oluşturma | `USER_CREATE` |
+| Bilgi düzenleme | `USER_UPDATE` |
+| Rol değiştirme | `USER_ROLE_UPDATE` |
+| Kapatma / AD girişinden çıkarma | `USER_DISABLE` |
+| Tekrar açma / yönetilen erişimi yenileme | `USER_UPDATE` |
+| Kurucu Owner'ın parola belirlemesi | `USER_PASSWORD_SET` |
+| 2FA sıfırlama | `TWO_FACTOR_DISABLE` |
+| Kalıcı silme | `USER_DELETE` |
 
-Her olay etkilenen kullan?c?ya ayn? ayr?nt?yla ba?lanmaz. Olu?turma, bilgi/rol de?i?ikli?i, kapatma, tekrar a?ma ve parola olaylar?n?n ?o?u ayr? hedef kullan?c? kimli?i ta??maz. Akt?r, zaman, eylem ve varsa target/metadata birlikte incelenmelidir.
+Her olay etkilenen kullanıcıya aynı ayrıntıyla bağlanmaz. Oluşturma, bilgi/rol değişikliği, kapatma, tekrar açma ve parola olaylarının çoğu ayrı hedef kullanıcı kimliği taşımaz. Aktör, zaman, eylem ve varsa target/metadata birlikte incelenmelidir.
 
-Kullan?c? de?i?ikli?i, audit yaz?m? ve oturum iptali tek atomik i?lem de?ildir. Ge? bir audit veya oturum temizleme hatas?, kullan?c? de?i?tikten sonra g?r?lebilir. Hata sonras? listeyi, hesap durumunu, oturumlar? ve Audit ekran?n? yenileyin; i?lemi k?rlemesine tekrarlamay?n.
+Kullanıcı değişikliği, audit yazımı ve oturum iptali tek atomik işlem değildir. Geç bir audit veya oturum temizleme hatası, kullanıcı değiştikten sonra görülebilir. Hata sonrası listeyi, hesap durumunu, oturumları ve Audit ekranını yenileyin; işlemi körlemesine tekrarlamayın.
 
-## Ekran Durumlar?
+## Ekran Durumları
 
-| Durum | Operat?r cevab? |
+| Durum | Operatör cevabı |
 | --- | --- |
-| Y?kleniyor | ?skelet sat?rlar kaybolana kadar i?lem ba?latmay?n. |
-| Liste bo? | Sunucu profili ve oturumu do?rulay?n; kurucu Owner'?n g?r?nmemesi normal de?ildir. |
-| Lisans salt okunur | Yaln?z inceleyin; kullan?c? de?i?tiren i?lem ba?latmay?n. |
-| Kapasite dolu | Kullan?c? olu?turmay?n/tekrar a?may?n; kapasite a??n veya lisans? y?kseltin. |
-| Kaynak rozeti beklenmedik | Ger?ek login source ile AD se?imini ayr? kontrol edin. |
-| ??lem sonras? hata | Kullan?c?, lisans, oturum ve audit durumunu yenileyip do?rulay?n. |
-| Parola kurtarma | ??erik ve anahtar eri?im envanteri yoksa durun. |
-| Kal?c? silme | Sahiplik devri ve ba??ml?l?k envanteri tamamlanmad?ysa durun. |
+| Yükleniyor | İskelet satırlar kaybolana kadar işlem başlatmayın. |
+| Liste boş | Sunucu profili ve oturumu doğrulayın; kurucu Owner'ın görünmemesi normal değildir. |
+| Lisans salt okunur | Yalnız inceleyin; kullanıcı değiştiren işlem başlatmayın. |
+| Kapasite dolu | Kullanıcı oluşturmayın/tekrar açmayın; kapasite açın veya lisansı yükseltin. |
+| Kaynak rozeti beklenmedik | Gerçek login source ile AD seçimini ayrı kontrol edin. |
+| İşlem sonrası hata | Kullanıcı, lisans, oturum ve audit durumunu yenileyip doğrulayın. |
+| Parola kurtarma | İçerik ve anahtar erişim envanteri yoksa durun. |
+| Kalıcı silme | Sahiplik devri ve bağımlılık envanteri tamamlanmadıysa durun. |
 
-## ??lemden ?nce
+## İşlemden Önce
 
-- Do?ru sunucu profili ve kullan?c? sat?r?nda oldu?unuzu do?rulay?n.
-- Genel rol ile kasa rol?n? ayr? inceleyin.
-- AD kullan?c?s?nda AD kay?t durumunu ve VaultPilot hesap durumunu ayr? kontrol edin.
-- Parola/2FA hedefinin kendi hesab?n?z veya Owner olmad???n? do?rulay?n.
-- Kapatma ?ncesi a??k i? ve entegrasyon sahipli?ini devredin.
-- Silme ?ncesi kasa, payla??m, API istemcisi, directory/discovery ve audit ba??ml?l?klar?n? ??kar?n.
-- Olu?turma veya tekrar a?ma ?ncesi aktif kullan?c? kapasitesini kontrol edin.
-- Onay penceresindeki kullan?c? ad?n? son kez do?rulay?n.
+- Doğru sunucu profili ve kullanıcı satırında olduğunuzu doğrulayın.
+- Genel rol ile kasa rolünü ayrı inceleyin.
+- AD kullanıcısında AD kayıt durumunu ve VaultPilot hesap durumunu ayrı kontrol edin.
+- Parola/2FA hedefinin kendi hesabınız veya Owner olmadığını doğrulayın.
+- Kapatma öncesi açık iş ve entegrasyon sahipliğini devredin.
+- Silme öncesi kasa, paylaşım, API istemcisi, directory/discovery ve audit bağımlılıklarını çıkarın.
+- Oluşturma veya tekrar açma öncesi aktif kullanıcı kapasitesini kontrol edin.
+- Onay penceresindeki kullanıcı adını son kez doğrulayın.
 
-## G?venli Kan?t
+## Güvenli Kanıt
 
-- Payla??labilir: rol kategorisi, `ACTIVE`/`DISABLED`, 2FA a??k/kapal? ?zeti ve redakte kasa eri?im say?s?.
-- Audit olay t?r?, zaman damgas? ve k?salt?lm?? b?t?nl?k hash'i kullan?labilir.
-- Lisans kan?t?nda yaln?z aktif kullan?c? toplam? ve limiti g?sterin.
-- Gizli kalmal?: ger?ek kullan?c? ad?, g?r?nen ad, e-posta/UPN, DN, public key, ki?isel kasa ad? ve kullan?c? listesi ekran g?r?nt?leri.
-- Ge?ici ana parola, TOTP secret, authenticator QR/kurtarma bilgisi veya kasa anahtar? kan?ta eklenmemelidir.
-- Private support ekran g?r?nt?s?nde kullan?c? adlar?n? ve anahtar izlerini redakte edin; dolu parola alan?n? ?ekmeyin.
+- Paylaşılabilir: rol kategorisi, `ACTIVE`/`DISABLED`, 2FA açık/kapalı özeti ve redakte kasa erişim sayısı.
+- Audit olay türü, zaman damgası ve kısaltılmış bütünlük hash'i kullanılabilir.
+- Lisans kanıtında yalnız aktif kullanıcı toplamı ve limiti gösterin.
+- Gizli kalmalı: gerçek kullanıcı adı, görünen ad, e-posta/UPN, DN, public key, kişisel kasa adı ve kullanıcı listesi ekran görüntüleri.
+- Geçici ana parola, TOTP secret, authenticator QR/kurtarma bilgisi veya kasa anahtarı kanıta eklenmemelidir.
+- Private support ekran görüntüsünde kullanıcı adlarını ve anahtar izlerini redakte edin; dolu parola alanını çekmeyin.
 
-## Operat?r Notlar?
+## Operatör Notları
 
-- Ekran son giri? veya son aktivite g?stermez; burada incelenmi? gibi raporlamay?n.
-- **Parola belirle** d?? sa?lay?c? parolas?n? de?i?tirmez ve otomatik rotasyon de?ildir.
-- AD giri? eri?imi ger?ek zamanl? LDAP do?rulamas? de?ildir; se?ili AD nesneleri otomatik kullan?c? ?retmez.
-- Kapatma veriyi silmez; kal?c? silme geri al?namaz ve geni? ba?l?-kay?t etkisine sahiptir.
-- Kullan?c? de?i?ikli?i ile audit/oturum temizli?i ayn? atomik s?n?rda de?ildir.
-- Yeni Owner olu?turma veya Owner rol?n? devretme kontrol? bu ekranda yoktur.
+- Ekran son giriş veya son aktivite göstermez; burada incelenmiş gibi raporlamayın.
+- **Parola belirle** dış sağlayıcı parolasını değiştirmez ve otomatik rotasyon değildir.
+- AD giriş erişimi gerçek zamanlı LDAP doğrulaması değildir; seçili AD nesneleri otomatik kullanıcı üretmez.
+- Kapatma veriyi silmez; kalıcı silme geri alınamaz ve geniş bağlı-kayıt etkisine sahiptir.
+- Kullanıcı değişikliği ile audit/oturum temizliği aynı atomik sınırda değildir.
+- Yeni Owner oluşturma veya Owner rolünü devretme kontrolü bu ekranda yoktur.
 
-## ?lgili
+## İlgili
 
-- [?lk kurulum, owner ve lisans](first-run-owner-license.md)
-- [G?venlik ve g?ven modeli](security-and-trust-model.md)
-- [Denetim kayd? ekran?](screen-audit-log.md)
-- [Active Directory kay?tlar? ekran?](screen-active-directory-records.md)
-- [Payla??m ekran?](screen-sharing.md)
-- [Lisans ekran?](screen-license.md)
+- [İlk kurulum, owner ve lisans](first-run-owner-license.md)
+- [Güvenlik ve güven modeli](security-and-trust-model.md)
+- [Denetim kaydı ekranı](screen-audit-log.md)
+- [Active Directory kayıtları ekranı](screen-active-directory-records.md)
+- [Paylaşım ekranı](screen-sharing.md)
+- [Lisans ekranı](screen-license.md)

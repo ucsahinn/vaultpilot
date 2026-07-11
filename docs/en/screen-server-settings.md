@@ -136,7 +136,7 @@ After an ambiguous error, do not immediately repeat the action. Refresh the rele
 - Validate an enterprise certificate's origin, hostname coverage, expiry, private key, and recovery copy outside the browser console.
 - For SMTP, confirm the sender, test recipient, recipient list, event rules, and whether the blank password field should preserve the saved credential.
 - Use VaultPilot Backup Tool to create a full recovery backup before whole-profile import or other high-impact server work.
-- Before maintenance cleanup, name the category, capture its visible count, and confirm that the automatic maintenance backup?not a full profile backup?is the intended recovery scope.
+- Before maintenance cleanup, name the category, capture its visible count, and confirm that the automatic maintenance backup—not a full profile backup—is the intended recovery scope.
 - Before restore, compare the backup category, creation time, record count, and digest, and identify newer records that can be replaced.
 - Before migration, unlock the intended vault, clear unrelated selections, choose the conflict rule, and review every invalid or duplicate row.
 

@@ -1,98 +1,98 @@
-# Etki Alan?
+# Etki Alanı
 
-?st ?ubuktaki `?` simgesi bu yard?m? Etki Alan? a??kken getirir. Bu ekran farkl? kaynaklardan gelen d?rt ?zeti bir araya getirir: DC Agent'?n e?itleme anl?k g?r?nt?s? ve se?ilmi? dizin kapsam?, kasadaki RDP/SSH kimlik bilgileri, eri?im denetim kay?tlar?, dizin i? kuyru?u ve daha ?nce y?klenmi? olabilecek taray?c? oturumlar?. Bu veriler ayn? kapsama veya ayn? yenilenme zaman?na sahip de?ildir; ekrandaki toplamlar? Active Directory'nin eksiksiz envanteri olarak yorumlamay?n.
+Üst çubuktaki `?` simgesi bu yardımı Etki Alanı açıkken getirir. Bu ekran farklı kaynaklardan gelen dört özeti bir araya getirir: DC Agent'ın eşitleme anlık görüntüsü ve seçilmiş dizin kapsamı, kasadaki RDP/SSH kimlik bilgileri, erişim denetim kayıtları, dizin iş kuyruğu ve daha önce yüklenmiş olabilecek tarayıcı oturumları. Bu veriler aynı kapsama veya aynı yenilenme zamanına sahip değildir; ekrandaki toplamları Active Directory'nin eksiksiz envanteri olarak yorumlamayın.
 
-Etki Alan? ekran? ?o?unlukla bir inceleme y?zeyidir. Baz? kartlar filtreli ayr?nt? ekran? a?ar, baz? metrikler ise yaln?z bilgi verir. Dolu bir bile?ende genel bir **?lgili ekrana git** men?s? bulunmaz; bu ?a?r? yaln?z bile?enin k???k bo? durumunda g?r?nebilir. Dolu g?r?n?mde yaln?z d??me olarak sunulan karta bas?n veya sol gezinmeden ilgili ?al??ma alan?na ge?in.
+Etki Alanı ekranı çoğunlukla bir inceleme yüzeyidir. Bazı kartlar filtreli ayrıntı ekranı açar, bazı metrikler ise yalnız bilgi verir. Dolu bir bileşende genel bir **İlgili ekrana git** menüsü bulunmaz; bu çağrı yalnız bileşenin küçük boş durumunda görünebilir. Dolu görünümde yalnız düğme olarak sunulan karta basın veya sol gezinmeden ilgili çalışma alanına geçin.
 
-## Ekrandaki D?rt Bile?en
+## Ekrandaki Dört Bileşen
 
-### Etki alan? envanteri
+### Etki alanı envanteri
 
-Canl? ajan oran?, kullan?c?, grup/OU ve risk sinyali metriklerini; sa?lay?c? ad?, son g?r?lme/e?itleme zaman? ve se?ilmi? oturum a?ma/kimlik bilgisi say?lar?n? g?sterir. Kayna??, yaln?z Sahip rol?nde ?al??an dizin sa?lay?c?s? sorgusudur. Bu bile?enin i?indeki topoloji, metrikler ve sa?lay?c? sat?rlar? salt okunurdur; ayr?nt? i?in sol gezinmeden Entegrasyonlar > Active Directory ekran?na ge?in.
+Canlı ajan oranı, kullanıcı, grup/OU ve risk sinyali metriklerini; sağlayıcı adı, son görülme/eşitleme zamanı ve seçilmiş oturum açma/kimlik bilgisi sayılarını gösterir. Kaynağı, yalnız Sahip rolünde çalışan dizin sağlayıcısı sorgusudur. Bu bileşenin içindeki topoloji, metrikler ve sağlayıcı satırları salt okunurdur; ayrıntı için sol gezinmeden Entegrasyonlar > Active Directory ekranına geçin.
 
-### Etki alan? e?itleme sa?l???
+### Etki alanı eşitleme sağlığı
 
-Nesne da??l?m?ndaki t?klanabilir **Kullan?c?**, **Grup** ve **OU** sat?rlar? Entegrasyonlar'da kar??l?k gelen a?a? filtresini a?ar; say? s?f?rsa veya Sahip yetkisi yoksa pasiftir. **Cihaz**, **Ayr?cal?kl?** ve **Eski nesne** sat?rlar? salt okunurdur. **Ajan kuyru?u** kart?, bekleyen/kiralanm?? dizin i?i say?s?n? kullan?r ve de?er s?f?rdan b?y?kken sistem g?r?n?rl??? olan rolleri ??lemler ekran?na g?t?r?r. Di?er kapsam kartlar? ile ajan sa?l?k sat?rlar? bilgi ama?l?d?r.
+Nesne dağılımındaki tıklanabilir **Kullanıcı**, **Grup** ve **OU** satırları Entegrasyonlar'da karşılık gelen ağaç filtresini açar; sayı sıfırsa veya Sahip yetkisi yoksa pasiftir. **Cihaz**, **Ayrıcalıklı** ve **Eski nesne** satırları salt okunurdur. **Ajan kuyruğu** kartı, bekleyen/kiralanmış dizin işi sayısını kullanır ve değer sıfırdan büyükken sistem görünürlüğü olan rolleri İşlemler ekranına götürür. Diğer kapsam kartları ile ajan sağlık satırları bilgi amaçlıdır.
 
 ### Uzak oturumlar
 
-T?klanabilir RDP ve SSH kartlar?, kasadaki kimlik bilgisi kay?tlar?n?n say?s?n? ve bu kay?tlara ait denetim eri?imlerini birle?tirir; Active Directory Kay?tlar? ekran?n? ilgili protokole g?re filtreler. **AD oturum a?ma** kart? sa?lay?c?daki se?ilmi? oturum a?ma kapsam?n? g?sterir ve salt okunurdur. **Ajan kuyru?u** kart? dizin i?lerinden gelir ve ??lemler ekran?na gidebilir. Eri?im grafi?i denetim kay?tlar?ndan, taray?c? oturumu sat?rlar? ise oturum sorgusundan beslenir. Etki Alan? bu oturum sorgusunu ayr?ca ?al??t?rmad??? i?in yaln?z daha ?nce yetkili bir g?venlik ekran?nda y?klenmi? ?nbellek g?r?nebilir; g?ncel inceleme i?in Giri? G?venli?i ekran?n? kullan?n.
+Tıklanabilir RDP ve SSH kartları, kasadaki kimlik bilgisi kayıtlarının sayısını ve bu kayıtlara ait denetim erişimlerini birleştirir; Active Directory Kayıtları ekranını ilgili protokole göre filtreler. **AD oturum açma** kartı sağlayıcıdaki seçilmiş oturum açma kapsamını gösterir ve salt okunurdur. **Ajan kuyruğu** kartı dizin işlerinden gelir ve İşlemler ekranına gidebilir. Erişim grafiği denetim kayıtlarından, tarayıcı oturumu satırları ise oturum sorgusundan beslenir. Etki Alanı bu oturum sorgusunu ayrıca çalıştırmadığı için yalnız daha önce yetkili bir güvenlik ekranında yüklenmiş önbellek görünebilir; güncel inceleme için Giriş Güvenliği ekranını kullanın.
 
-### Kimlik bilgisi ya?am d?ng?s?
+### Kimlik bilgisi yaşam döngüsü
 
-Bu bile?en kasadaki Active Directory kimlik bilgileri ile bunlara ait denetim eri?imlerinden ?retilir; dizin se?imi toplamlar?n? kullanmaz. **Kimlik bilgileri**, **Y?netilen**, **S?resi dolan** ve **Bilgi eksik** kartlar? t?klanabilir ve Active Directory Kay?tlar? ekran?n? ilgili durum filtresiyle a?ar. **Kullan?mda** ve **G?ncellenen** kartlar? salt okunurdur. ?Y?netilmeyen? adl? bir ya?am d?ng?s? kart? yoktur. Eri?im grafikleri ile cihaz, kimlik bilgisi, son eri?im ve toplam s?tunlar?n? g?steren tablo da salt okunurdur.
+Bu bileşen kasadaki Active Directory kimlik bilgileri ile bunlara ait denetim erişimlerinden üretilir; dizin seçimi toplamlarını kullanmaz. **Kimlik bilgileri**, **Yönetilen**, **Süresi dolan** ve **Bilgi eksik** kartları tıklanabilir ve Active Directory Kayıtları ekranını ilgili durum filtresiyle açar. **Kullanımda** ve **Güncellenen** kartları salt okunurdur. “Yönetilmeyen” adlı bir yaşam döngüsü kartı yoktur. Erişim grafikleri ile cihaz, kimlik bilgisi, son erişim ve toplam sütunlarını gösteren tablo da salt okunurdur.
 
 ## Yetki, Veri ve Ajan Yetenekleri
 
-Etki alan? sa?lay?c? sorgusu yaln?z **Sahip** rol?nde etkinle?ir. **Y?netici**, **Denet?i** veya **Kullan?c?** ekran kabu?una ula?sa bile bo? ya da s?f?r de?erler ?ajan yok? anlam?na gelmez; bu durum **yetki nedeniyle veri y?klenmedi** olarak de?erlendirilmelidir. Sahip oturumunda da ?nce sorgunun tamamland???n? do?rulay?n.
+Etki alanı sağlayıcı sorgusu yalnız **Sahip** rolünde etkinleşir. **Yönetici**, **Denetçi** veya **Kullanıcı** ekran kabuğuna ulaşsa bile boş ya da sıfır değerler “ajan yok” anlamına gelmez; bu durum **yetki nedeniyle veri yüklenmedi** olarak değerlendirilmelidir. Sahip oturumunda da önce sorgunun tamamlandığını doğrulayın.
 
-Ajan?n ilan etti?i yetenekler g?sterilebilecek veri ve yap?labilecek i?lemleri s?n?rlar. Envanter i?in `READ_INVENTORY`, parola durumu i?in `READ_PASSWORD_STATE`; hesap a?ma, sonraki giri?te parola de?i?ikli?i isteme ve ge?ici parola atama i?in ilgili `UNLOCK_ACCOUNT`, `REQUIRE_PASSWORD_CHANGE` ve `RESET_TEMP_PASSWORD` yetenekleri gerekir. Bir yetenek yoksa s?f?r veya eksik metrik ?risk yok? demek de?ildir; veri toplanmam?? olabilir. Hassas dizin eylemleri ayr?ca ajan?n `CONNECTED` olmas?n?, lisans?n yaz?labilir kalmas?n?, Sahip rol?n? ve hedef hesab?n ayr?cal?kl? olmamas?n? gerektirir.
+Ajanın ilan ettiği yetenekler gösterilebilecek veri ve yapılabilecek işlemleri sınırlar. Envanter için `READ_INVENTORY`, parola durumu için `READ_PASSWORD_STATE`; hesap açma, sonraki girişte parola değişikliği isteme ve geçici parola atama için ilgili `UNLOCK_ACCOUNT`, `REQUIRE_PASSWORD_CHANGE` ve `RESET_TEMP_PASSWORD` yetenekleri gerekir. Bir yetenek yoksa sıfır veya eksik metrik “risk yok” demek değildir; veri toplanmamış olabilir. Hassas dizin eylemleri ayrıca ajanın `CONNECTED` olmasını, lisansın yazılabilir kalmasını, Sahip rolünü ve hedef hesabın ayrıcalıklı olmamasını gerektirir.
 
-## ?nerilen ?nceleme Ak??lar?
+## Önerilen İnceleme Akışları
 
-### Ajan sa?l???n? do?rulama
+### Ajan sağlığını doğrulama
 
-1. Etki alan? envanterindeki canl? ajan oran?n?, sa?lay?c? durumunu ve son g?r?lme/e?itleme zaman?n? okuyun.
-2. Durum etiketinin ?nceli?ini do?ru okuyun: ajan sa?l??? `CONNECTED` de?ilse ?nce `STALE`, `OFFLINE`, `AWAITING` veya `REVOKED` g?r?n?r. Ajan ba?l?yken hata varsa **HATA**, ard?ndan etkin e?itleme varsa **E??TLEN?YOR**, yaln?z bunlar yokken bekleyen komut varsa **E??TLEME KUYRUKTA** g?sterilir.
-3. Ba?l? olmayan veya hata g?steren sa?lay?c? i?in sol gezinmeden Entegrasyonlar > Active Directory ekran?n? a??n ve sa?lay?c? kart?n? inceleyin.
+1. Etki alanı envanterindeki canlı ajan oranını, sağlayıcı durumunu ve son görülme/eşitleme zamanını okuyun.
+2. Durum etiketinin önceliğini doğru okuyun: ajan sağlığı `CONNECTED` değilse önce `STALE`, `OFFLINE`, `AWAITING` veya `REVOKED` görünür. Ajan bağlıyken hata varsa **HATA**, ardından etkin eşitleme varsa **EŞİTLENİYOR**, yalnız bunlar yokken bekleyen komut varsa **EŞİTLEME KUYRUKTA** gösterilir.
+3. Bağlı olmayan veya hata gösteren sağlayıcı için sol gezinmeden Entegrasyonlar > Active Directory ekranını açın ve sağlayıcı kartını inceleyin.
 
-Beklenen sonu? `CONNECTED` durumu ile ilerleyen son g?r?lme ve e?itleme zaman?d?r. Zaman ilerlemiyorsa yeni kimlik bilgisi aktar?m? veya kapsam de?i?ikli?i ba?latmay?n.
+Beklenen sonuç `CONNECTED` durumu ile ilerleyen son görülme ve eşitleme zamanıdır. Zaman ilerlemiyorsa yeni kimlik bilgisi aktarımı veya kapsam değişikliği başlatmayın.
 
-### Se?im kapsam?n? say?larla kar??la?t?rma
+### Seçim kapsamını sayılarla karşılaştırma
 
-Etki alan? e?itleme sa?l???ndaki t?klanabilir **Kullan?c?**, **Grup** veya **OU** sat?r?n? a??n ve Entegrasyonlar'daki haz?rlanm?? filtreyi kontrol edin. Bilgisayar say?s? salt okunurdur; bilgisayar kapsam? i?in Entegrasyonlar'a sol gezinmeden ge?in. Beklenmeyen art?? veya d????te son ba?ar?l? e?itlemeyi ve ajan yeteneklerini kar??la?t?r?n. Tamamlanma ?l??t?, de?i?imin onayl? kapsam g?ncellemesiyle veya kaynak sistemde do?rulanm?? bir sorunla a??klanmas?d?r.
+Etki alanı eşitleme sağlığındaki tıklanabilir **Kullanıcı**, **Grup** veya **OU** satırını açın ve Entegrasyonlar'daki hazırlanmış filtreyi kontrol edin. Bilgisayar sayısı salt okunurdur; bilgisayar kapsamı için Entegrasyonlar'a sol gezinmeden geçin. Beklenmeyen artış veya düşüşte son başarılı eşitlemeyi ve ajan yeteneklerini karşılaştırın. Tamamlanma ölçütü, değişimin onaylı kapsam güncellemesiyle veya kaynak sistemde doğrulanmış bir sorunla açıklanmasıdır.
 
 ### RDP/SSH sinyalini inceleme
 
-De?eri olan RDP ya da SSH kart?n? se?in; a??lan Active Directory Kay?tlar? ekran?nda protokol filtresinin uyguland???n? do?rulay?n. Kay?t kayna??n?, risk etiketini ve son e?itleme zaman?n? inceleyin. Taray?c? oturumu sat?r?n? veya eri?im grafi?ini t?klayarak ayr?nt? beklemeyin; bu b?l?mler yaln?z ?zet sunar.
+Değeri olan RDP ya da SSH kartını seçin; açılan Active Directory Kayıtları ekranında protokol filtresinin uygulandığını doğrulayın. Kayıt kaynağını, risk etiketini ve son eşitleme zamanını inceleyin. Tarayıcı oturumu satırını veya erişim grafiğini tıklayarak ayrıntı beklemeyin; bu bölümler yalnız özet sunar.
 
-### Ya?am d?ng?s? durumunu inceleme
+### Yaşam döngüsü durumunu inceleme
 
-Yaln?z **Kimlik bilgileri**, **Y?netilen**, **S?resi dolan** veya **Bilgi eksik** d??melerinden birini a??n. **Kullan?mda**, **G?ncellenen** ve eri?im tablosu yaln?z ?zet sunar. Kayna?? `ad_sync` olan bir kayd? elle yeniden olu?turmay?n. Kay?t ile dizin nesnesi uyu?muyorsa e?itleme tamamlanana kadar toplu i?lem ba?latmay?n.
+Yalnız **Kimlik bilgileri**, **Yönetilen**, **Süresi dolan** veya **Bilgi eksik** düğmelerinden birini açın. **Kullanımda**, **Güncellenen** ve erişim tablosu yalnız özet sunar. Kaynağı `ad_sync` olan bir kaydı elle yeniden oluşturmayın. Kayıt ile dizin nesnesi uyuşmuyorsa eşitleme tamamlanana kadar toplu işlem başlatmayın.
 
-## Ekran Durumlar?
+## Ekran Durumları
 
-| Durum | Operat?r cevab? |
+| Durum | Operatör cevabı |
 | --- | --- |
-| Y?kleniyor | Sahip rol?ne ait sa?lay?c? sorgusu tamamlanmadan toplamlar? ve bo? durumlar? yorumlamay?n. |
-| Ba?l? (`CONNECTED`) | Hata, etkin e?itleme veya bekleyen komut yoksa son g?r?lme/e?itleme zamanlar?n? ve gerekli yetenekleri do?rulay?n. |
-| HATA | Ba?l? ajan ?zerindeki hata, e?itleme ve kuyruk etiketlerinden ?nce g?sterilir; sa?lay?c? kart?ndaki son hatay? inceleyin. |
-| E??TLEN?YOR (`SYNCING`) | Yaln?z ba?l? ve hatas?z ajanda g?r?n?r; i?lemin tamamlanmas?n? bekleyin. |
-| E??TLEME KUYRUKTA | Yaln?z ba?l?, hatas?z ve e?itleme ?al??mayan ajanda g?r?n?r; bekleyen i?i ??lemler ekran?nda izleyin. |
-| Bekliyor (`AWAITING`) | ?lk ajan yoklamas? tamamlanana kadar aktar?m ve hassas i?lem ba?latmay?n. |
-| Bayat (`STALE`) | Ajan servisini, sunucu eri?imini ve sa?lay?c? kart?ndaki son hatay? kontrol edin. |
-| ?evrimd??? (`OFFLINE`) | Yeni dizin i?lemlerini durdurun; servis ve ba?lant? kan?t?n? ?zel olarak toplay?n. |
-| ?ptal edilmi? (`REVOKED`) | Eski ajan anahtar?n? kullanmay?n; Sahip onayl? yeniden kay?t veya onar?m ak???n? izleyin. |
-| Yetki nedeniyle bo? | Sahip olmayan rolde s?f?r de?eri ?ajan yok? diye raporlamay?n; incelemeyi Sahip kullan?c?ya aktar?n. |
-| Yetenek eksik | ?lgili veri veya eylemi desteklenmiyor kabul edin; eksik metri?i sa?l?kl? sonu? olarak yorumlamay?n. |
-| Hata | Son ba?ar?l? e?itleme zaman?n? koruyun; art arda kapsam de?i?tirerek ilk hatay? g?lgelemeyin. |
+| Yükleniyor | Sahip rolüne ait sağlayıcı sorgusu tamamlanmadan toplamları ve boş durumları yorumlamayın. |
+| Bağlı (`CONNECTED`) | Hata, etkin eşitleme veya bekleyen komut yoksa son görülme/eşitleme zamanlarını ve gerekli yetenekleri doğrulayın. |
+| HATA | Bağlı ajan üzerindeki hata, eşitleme ve kuyruk etiketlerinden önce gösterilir; sağlayıcı kartındaki son hatayı inceleyin. |
+| EŞİTLENİYOR (`SYNCING`) | Yalnız bağlı ve hatasız ajanda görünür; işlemin tamamlanmasını bekleyin. |
+| EŞİTLEME KUYRUKTA | Yalnız bağlı, hatasız ve eşitleme çalışmayan ajanda görünür; bekleyen işi İşlemler ekranında izleyin. |
+| Bekliyor (`AWAITING`) | İlk ajan yoklaması tamamlanana kadar aktarım ve hassas işlem başlatmayın. |
+| Bayat (`STALE`) | Ajan servisini, sunucu erişimini ve sağlayıcı kartındaki son hatayı kontrol edin. |
+| Çevrimdışı (`OFFLINE`) | Yeni dizin işlemlerini durdurun; servis ve bağlantı kanıtını özel olarak toplayın. |
+| İptal edilmiş (`REVOKED`) | Eski ajan anahtarını kullanmayın; Sahip onaylı yeniden kayıt veya onarım akışını izleyin. |
+| Yetki nedeniyle boş | Sahip olmayan rolde sıfır değeri “ajan yok” diye raporlamayın; incelemeyi Sahip kullanıcıya aktarın. |
+| Yetenek eksik | İlgili veri veya eylemi desteklenmiyor kabul edin; eksik metriği sağlıklı sonuç olarak yorumlamayın. |
+| Hata | Son başarılı eşitleme zamanını koruyun; art arda kapsam değiştirerek ilk hatayı gölgelemeyin. |
 
-## ??lemden ?nce
+## İşlemden Önce
 
-- Rol?n Sahip oldu?unu, sa?lay?c? sorgusunun tamamland???n? ve g?sterilen tarih-saat bilgilerinin g?ncel oldu?unu do?rulay?n.
-- Ajan sa?l?k durumu ile son ba?ar?l? e?itleme zaman?n? birlikte de?erlendirin.
-- ?htiya? duyulan veri veya eylem i?in gerekli ajan yetene?inin ilan edildi?ini kontrol edin.
-- Ekrandaki salt-okunur metrik ile t?klanabilir filtre kart?n? birbirinden ay?r?n.
-- Kimlik bilgisi aktar?m? i?in aktif kasan?n a??k, yaz?labilir ve kasa anahtar?n?n eri?ilebilir oldu?unu do?rulay?n.
-- Ayr?cal?kl? hesaplarda hassas eylemleri zorlamay?n; kurumun onayl? Active Directory y?netim yolunu kullan?n.
+- Rolün Sahip olduğunu, sağlayıcı sorgusunun tamamlandığını ve gösterilen tarih-saat bilgilerinin güncel olduğunu doğrulayın.
+- Ajan sağlık durumu ile son başarılı eşitleme zamanını birlikte değerlendirin.
+- İhtiyaç duyulan veri veya eylem için gerekli ajan yeteneğinin ilan edildiğini kontrol edin.
+- Ekrandaki salt-okunur metrik ile tıklanabilir filtre kartını birbirinden ayırın.
+- Kimlik bilgisi aktarımı için aktif kasanın açık, yazılabilir ve kasa anahtarının erişilebilir olduğunu doğrulayın.
+- Ayrıcalıklı hesaplarda hassas eylemleri zorlamayın; kurumun onaylı Active Directory yönetim yolunu kullanın.
 
-## G?venli Kan?t
+## Güvenli Kanıt
 
-- **Payla??labilir:** ajan sa?l?k kategorisi, son g?r?lme/e?itleme ya??, nesne t?r?ne g?re kimliksizle?tirilmi? toplam, kuyruk durumu, ilan edilen yetenek ad? ve ki?isel veri i?ermeyen hata kodu.
-- **Gizli kalmal?:** etki alan? ve etki alan? denetleyicisi adlar?, distinguished name, OU/grup yolu, bind kullan?c?s?, ajan anahtar?, ger?ek kullan?c? listesi, RDP/SSH hedefi ve dizin a?ac? ekran g?r?nt?s?.
-- G?nl?k gerekiyorsa kullan?c?, etki alan?, IP, anahtar ve LDAP ayr?nt?lar?n? ??kar?n. Tam maskeleme m?mk?n de?ilse yaln?z ?zel destek kullan?n.
+- **Paylaşılabilir:** ajan sağlık kategorisi, son görülme/eşitleme yaşı, nesne türüne göre kimliksizleştirilmiş toplam, kuyruk durumu, ilan edilen yetenek adı ve kişisel veri içermeyen hata kodu.
+- **Gizli kalmalı:** etki alanı ve etki alanı denetleyicisi adları, distinguished name, OU/grup yolu, bind kullanıcısı, ajan anahtarı, gerçek kullanıcı listesi, RDP/SSH hedefi ve dizin ağacı ekran görüntüsü.
+- Günlük gerekiyorsa kullanıcı, etki alanı, IP, anahtar ve LDAP ayrıntılarını çıkarın. Tam maskeleme mümkün değilse yalnız özel destek kullanın.
 
-## Ne Zaman Y?kseltmelisiniz
+## Ne Zaman Yükseltmelisiniz
 
-Ajan `CONNECTED` durumuna d?nemiyorsa, e?itleme veya kuyruk ilerlemiyorsa, se?ilmi? kapsam beklenmedik bi?imde de?i?iyorsa, gerekli yetenek kaybolmu?sa ya da bu ekran Active Directory Kay?tlar? ile ?eli?iyorsa konuyu dizin y?netimi ekibine aktar?n. Ajan s?r?m?n?, genel sa?l?k durumunu, saat dilimi belirtilmi? tarih ve saati, hassas ayr?nt?lar? ??kar?lm?? hatay? ve denenen ?n kontrol ad?mlar?n? ekleyin.
+Ajan `CONNECTED` durumuna dönemiyorsa, eşitleme veya kuyruk ilerlemiyorsa, seçilmiş kapsam beklenmedik biçimde değişiyorsa, gerekli yetenek kaybolmuşsa ya da bu ekran Active Directory Kayıtları ile çelişiyorsa konuyu dizin yönetimi ekibine aktarın. Ajan sürümünü, genel sağlık durumunu, saat dilimi belirtilmiş tarih ve saati, hassas ayrıntıları çıkarılmış hatayı ve denenen ön kontrol adımlarını ekleyin.
 
-## Operat?r Notlar?
+## Operatör Notları
 
-Nesne say?lar? kapasite ve sa?l?k sinyalidir; herkese a??k kimlik envanteri de?ildir. Active Directory ve ajan, dizin kaynakl? kimlik bilgisi kay?tlar?n?n as?l kayna??d?r. Ayn? kayd? elle olu?turmak kopya ve yanl?? rotasyon riski do?urur.
+Nesne sayıları kapasite ve sağlık sinyalidir; herkese açık kimlik envanteri değildir. Active Directory ve ajan, dizin kaynaklı kimlik bilgisi kayıtlarının asıl kaynağıdır. Aynı kaydı elle oluşturmak kopya ve yanlış rotasyon riski doğurur.
 
-## ?lgili
+## İlgili
 
-- [Active Directory ajan?](active-directory-agent.md)
-- [Active Directory kay?tlar? ekran?](screen-active-directory-records.md)
-- [Giri? g?venli?i ekran?](screen-sign-in-security.md)
+- [Active Directory ajanı](active-directory-agent.md)
+- [Active Directory kayıtları ekranı](screen-active-directory-records.md)
+- [Giriş güvenliği ekranı](screen-sign-in-security.md)
 - [DC Agent sorun giderme](../../kb/tr/dc-agent-service.md)

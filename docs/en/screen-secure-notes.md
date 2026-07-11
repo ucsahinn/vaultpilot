@@ -1,6 +1,6 @@
 # Secure Notes Screen
 
-The top-bar `?` button opens this guide from **Secure Notes**. Use this record type for protected operational text that does not belong in a password, API key, certificate, or file record?for example, private recovery steps or environment-specific maintenance instructions.
+The top-bar `?` button opens this guide from **Secure Notes**. Use this record type for protected operational text that does not belong in a password, API key, certificate, or file record—for example, private recovery steps or environment-specific maintenance instructions.
 
 You need access to an unlocked vault to read notes. Creating, editing, duplicating, or deleting a note also requires write access to that vault and a license mode that permits changes.
 
