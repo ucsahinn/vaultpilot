@@ -1,38 +1,54 @@
 # In-App Screen Help
 
-Every VaultPilot workspace screen has a topbar `?` button. The button opens the public-safe Markdown page for the current screen and language, so operators can read the right procedure without leaving the context of the task.
+Every workspace shown after sign-in has a `?` button in the top bar. Some dashboard menus expose the same link as **Open documentation**. Both use the active screen and language to open the matching public help page in a new tab.
 
-Use this index when you are reviewing whether the application shell and public documentation are still aligned.
+These pages are operator guides, not product brochures. They explain what must be ready before an action, what the visible states mean, how to proceed safely, and which evidence can be shared when something goes wrong.
 
-Two tab-level routes are intentionally more specific than the base workspace route. When the Integrations screen is open on the browser-extension tab, the `?` button opens [screen-browser-extension.md](screen-browser-extension.md). When Server settings is open on the sign-in and session-security tab, the `?` button opens [screen-sign-in-security.md](screen-sign-in-security.md).
+## Find the Right Help Page
 
-| Screen | Help page | Primary decision |
+The table below maps each screen to its guide and the decision that guide supports. If you open a guide directly from this index, verify the active screen and tab in VaultPilot before acting. When implementation and documentation disagree, preserve a redacted screen summary and report documentation drift; do not change a production setting based on an assumption in the guide.
+
+Two tab-level routes intentionally override their base workspace:
+
+- With **Integrations > Browser extension** active, `?` opens [Browser Extension Screen](screen-browser-extension.md), not the general Integrations guide.
+- With **Server Settings > Sign-in security** active, `?` opens [Sign-In Security Screen](screen-sign-in-security.md), not the general Server Settings guide.
+
+| Screen | Help page | Use this guide when... |
 | --- | --- | --- |
-| Security Command Center | [screen-security-command-center.md](screen-security-command-center.md) | Decide which operational signal needs attention first. |
-| Security dashboard | [screen-security-dashboard.md](screen-security-dashboard.md) | Read posture, 2FA, license and audit-risk signals together. |
-| Domain dashboard | [screen-domain-dashboard.md](screen-domain-dashboard.md) | Check directory-sync health before credential work. |
-| Certificate dashboard | [screen-certificate-dashboard.md](screen-certificate-dashboard.md) | Track TLS and stored certificate risk. |
-| Rotation dashboard | [screen-rotation-dashboard.md](screen-rotation-dashboard.md) | Plan credential rotation without losing custody evidence. |
-| New item | [screen-new-item.md](screen-new-item.md) | Choose the correct secret type before saving. |
-| Passwords | [screen-passwords.md](screen-passwords.md) | Work with login records safely. |
-| API keys | [screen-api-keys.md](screen-api-keys.md) | Store API credentials without publishing or logging them. |
-| Secure notes | [screen-secure-notes.md](screen-secure-notes.md) | Keep sensitive text structured and searchable. |
-| Certificates | [screen-certificates.md](screen-certificates.md) | Store certificate metadata and encrypted package notes. |
-| Files | [screen-files.md](screen-files.md) | Attach approved files without turning the vault into a dump. |
-| Active Directory records | [screen-active-directory-records.md](screen-active-directory-records.md) | Review directory-origin credentials and custody state. |
-| Sharing | [screen-sharing.md](screen-sharing.md) | Share only the intended records with limits and expiry. |
-| Sign-in security | [screen-sign-in-security.md](screen-sign-in-security.md) | Review lock, 2FA and session controls. |
-| Discovery | [screen-discovery.md](screen-discovery.md) | Run approved exposure checks and import only confirmed findings. |
-| Users | [screen-users.md](screen-users.md) | Manage accounts, roles and access changes. |
-| License | [screen-license.md](screen-license.md) | Understand feature gates, trial and read-only state. |
-| Audit log | [screen-audit-log.md](screen-audit-log.md) | Prove who did what and preserve the chain. |
-| Integrations | [screen-integrations.md](screen-integrations.md) | Configure API clients, extension state and directory connectors. |
-| Notifications | [screen-notifications.md](screen-notifications.md) | Route important events without leaking secrets. |
-| Executions | [screen-executions.md](screen-executions.md) | Watch active jobs and recover stuck work. |
-| Updates | [screen-updates.md](screen-updates.md) | Verify release packages before running updates. |
-| Server settings | [screen-server-settings.md](screen-server-settings.md) | Change host, HTTPS, SMTP, maintenance and retention settings. |
-| Browser extension | [screen-browser-extension.md](screen-browser-extension.md) | Pair, approve and revoke browser devices. |
+| Security Command Center | [Security Command Center](screen-security-command-center.md) | Several operational signals compete for attention and you need to choose the first verified action. |
+| Security | [Security](screen-security-dashboard.md) | You are correlating coverage, exposure, behavior, audit, and access signals. |
+| Domain | [Domain Dashboard](screen-domain-dashboard.md) | You are checking directory connection, agent health, or managed-account state. |
+| Certificate dashboard | [Certificate Dashboard](screen-certificate-dashboard.md) | You are prioritizing expired, approaching, invalid, or host-mismatched certificates. |
+| Rotation | [Rotation Dashboard](screen-rotation-dashboard.md) | You are planning password or key renewal with ownership and expiry context. |
+| New record | [New Record](screen-new-item.md) | You need to choose the correct record type and understand what save actually changes. |
+| Passwords | [Passwords](screen-passwords.md) | You are finding, editing, copying, checking, or rotating sign-in records. |
+| API keys | [API Keys](screen-api-keys.md) | You are storing, rotating, or marking token and API credential records inactive. |
+| Secure notes | [Secure Notes](screen-secure-notes.md) | You are keeping sensitive operational text structured, bounded, and searchable. |
+| Certificates | [Certificates](screen-certificates.md) | You are storing certificate metadata or an encrypted certificate package. |
+| Files | [Files](screen-files.md) | You are adding, downloading, sharing, or removing approved sensitive files. |
+| Active Directory records | [Active Directory Records](screen-active-directory-records.md) | You are reviewing custody, risk, sync, or account actions for directory-origin records. |
+| Sharing | [Sharing](screen-sharing.md) | You are preparing internal or external delivery, setting limits, or revoking a package. |
+| Sign-in security | [Sign-In Security](screen-sign-in-security.md) | You are evaluating 2FA, sessions, automatic locking, or account-recovery effects. |
+| Discovery | [Discovery](screen-discovery.md) | You are running approved exposure checks or importing a verified file finding. |
+| Users | [Users](screen-users.md) | You are changing an account, role, sign-in access, password, or 2FA state. |
+| License | [License](screen-license.md) | You need to understand feature gates, trial state, capacity, or read-only mode. |
+| Audit Log | [Audit Log](screen-audit-log.md) | You are determining who did what, checking integrity, or building an event timeline. |
+| Integrations | [Integrations](screen-integrations.md) | You are managing API clients, directory connectivity, or general integration health. |
+| Notifications | [Notifications](screen-notifications.md) | You are deciding which events reach whom or investigating delivery behavior. |
+| Executions | [Executions](screen-executions.md) | You are monitoring active, completed, failed, cancelled, or apparently stuck jobs. |
+| Updates | [Updates](screen-updates.md) | You are checking a release, starting an update, or verifying the post-restart state. |
+| Server settings | [Server Settings](screen-server-settings.md) | You are changing access, HTTPS, SMTP, backup, migration, restart, or maintenance controls. |
+| Browser extension | [Browser Extension](screen-browser-extension.md) | You are pairing a browser, approving a request, or revoking device access. |
 
-Public safety rule: help pages must use placeholders and synthetic examples only. Never add real vault contents, PFX/P12 files, private keys, logs with credentials, API client secrets, license private material or customer screenshots.
+## Public Documentation Security Boundary
 
-Related: [Documentation gateway](../README.md), [Public repository boundary](public-repository-boundary.md), [Public language glossary](public-language-glossary.md).
+These guides live in a public GitHub repository. Use placeholders or synthetic data only. Never add real vault contents, passwords or tokens, `.pfx`/`.p12` packages, private keys, certificate passwords, credential-bearing logs, API client secrets, private license material, customer names, internal IP/host names, or customer screenshots to these pages or to public issues.
+
+To report an inaccurate guide, share the screen name, VaultPilot version, visible state label, and a redacted error summary. If explaining the problem requires a secret value or identifying infrastructure, leave the public channel and use your organization?s approved private support process.
+
+## Related Documentation
+
+- [Documentation gateway](../README.md)
+- [Public repository boundary](public-repository-boundary.md)
+- [Public language glossary](public-language-glossary.md)
+- [Safe support evidence](support-evidence-pack.md)

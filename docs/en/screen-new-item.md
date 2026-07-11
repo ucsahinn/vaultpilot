@@ -1,39 +1,172 @@
 # New Item Screen
 
-The topbar `?` opens this page from the New item screen. Use it when deciding which record type to create and how much metadata to add.
+The global topbar **Add new record** control opens a chooser for Password, API key, Secure note, Certificate, and File, then opens the selected type in the local New item editor. The editor's `?` opens this guide. A successful save creates the encrypted record in the currently active vault. The editor has no autosave, draft persistence, template picker, or automatic rotation action.
+
+## Access, Active Vault, and License Boundary
+
+The global chooser and local editor can open for an Auditor, but that does not grant write access. Saving requires an unlocked active vault and its browser-held vault key. The signed-in user must be Owner, Admin, or User at the system level and have **Editor** or **Manager** access to that vault. The Save control is disabled for Auditor, vault **Viewer**, and read-only license states. The server independently enforces session, license, vault, and role checks if a client-side control is bypassed.
+
+The New item page does not contain a vault picker. The record is written to the vault that was active when **Save encrypted record** was selected. Confirm the active vault elsewhere before entering sensitive material. Manual Password, API key, Secure note, Certificate, and File records do not require a separate feature license beyond a writable license.
+
+## Supported Manual Record Types
+
+The type rail exposes five types:
+
+| Type | Required to save | Optional context |
+| --- | --- | --- |
+| Password | Title and Password. | Username/email, sign-in URL, note. |
+| API key | Title and API key or token. | Client/owner/service account, console URL, scope or rotation note. |
+| Secure note | Title and at least one of Encrypted note or Optional hidden value. | Owner/team and related-system reference. |
+| Certificate | Title and Certificate or private key material. | Owner/service, endpoint, note, expiry, Subject/CN, and CA classification. |
+| File | Title and one selected file for a new record. | Owner/recipient, related system/ticket, and file note. |
+
+`CREDENTIAL` is a supported stored secret type, but it is deliberately absent from the manual type rail. New Active Directory credential records are created through agent sync. If manual credential creation is attempted, the form rejects it and routes to **Integrations > Active Directory**. Do not describe the New item page as creating RDP or SSH credentials.
+
+There is no general Owner or Tags control on this form. The account field is type-specific context, not a guaranteed owner field. Certificate authority selection adds controlled certificate tags; other generic tags are not edited here.
 
 ## Work Here
 
-- Choose the narrowest record type: password, API key, credential, certificate, secure note or file.
-- Put searchable ownership and system context in metadata fields; keep the secret value only in the encrypted value field.
-- Add tags only when they help future review or rotation.
+- Select one of the five manual record types before entering its required value.
+- Enter a clear title and only the context fields needed to find and operate the record safely.
+- Generate or paste a value, then use the optional breach check when it is offered and organizational policy permits it.
+- Import certificate material or select one file within the documented limits.
+- Review the active vault and write eligibility before selecting **Save encrypted record**.
+- Use the back arrow to discard the current form and return to the list for the selected type.
+
+## Type Changes and Shared Draft Fields
+
+Changing among the five manual types changes labels and special controls but does not start a new independent draft. Title, account, hidden value, URL, note, certificate metadata, file metadata or selection, category, source, and tags can remain in shared form state; only credential-specific connection fields are removed. Certificate, file, or classification data can therefore become hidden when another type is selected and reappear or affect a later save.
+
+Choose the intended type from the global chooser before entering material. If the type changes after a certificate import, file selection, or authority classification, the safest path is to reset or go back, reopen the intended type, and re-enter or reselect the current material. Otherwise, recheck both visible fields and any previously entered hidden data before Save. No field is saved until the form is submitted, and there is no autosave or saved-draft list.
+
+## Value Generation, Strength, and Breach Check
+
+The password generator is available for every manual type except File. Lowercase characters are always present in the selection pool; Uppercase, Digits, and Symbols can add their character sets to that pool. Random selection from the combined pool does not guarantee that the generated value contains at least one character from any particular set, including lowercase. The visible length control allows 12?64 characters and defaults to 24 with all three options enabled. Generation uses browser cryptographic randomness and replaces the current hidden-value field; it does not save the record.
+
+The **Short / Ready / Strong** pill is length-only feedback: under 16, 16?23, or 24+ characters. It is not a policy verdict, entropy proof, breach result, or save requirement.
+
+When the breach button is present, it runs only after the operator selects it. The browser hashes the value with SHA-1 and sends only the first five hash characters to the HIBP Pwned Passwords range service; the full value is not sent. The displayed form result is not bound to a hash of the current field: generating, pasting, or editing the value afterward can leave a stale result visible, and that result can be copied to the saved record's browser-local breach status after a successful non-file save. Finish the value first, then run the breach check again immediately before Save. A breach-check error does not save or change the record and does not prove that an older displayed result matches the current value.
+
+## Certificate Handling
+
+Certificate material can be pasted into **Certificate or private key** or imported from a file. The file picker advertises PEM, CRT, CER, DER, P7B/P7C, PFX/P12/PKCS12, P8/P8E/PK8, and KEY formats. A selected certificate file is limited to 10 MB.
+
+On import, the browser calculates SHA-256 and stores the original file bytes inside the encrypted record payload. Text formats are decoded and simple `Subject`, `Issuer`, `Serial`, and expiry labels are read when present. Binary formats are wrapped as base64 material. This is inventory import, not full certificate-chain or private-key validation. **Certificate file imported into the encrypted record** means the material is in the current form; the record is not persisted until Save succeeds.
+
+Expiry and Subject/CN can be corrected in the form. Selecting DigiCert, GoDaddy, GlobalSign, Let's Encrypt, Microsoft CA, or Self-signed changes the record's certificate category and classification tags only. It does not contact that CA, validate an account, order, renew, reissue, revoke, or deploy a certificate.
+
+## File Handling and Limits
+
+A new File record requires one selected file. Selecting it changes the form type to File, fills Title from the file name only when Title is still blank, clears the hidden-value field, and shows size and chunk count. The password generator and hidden-value editor are not available for File.
+
+The file size and storage ceiling are 1 GB per user in the active vault. Files are split into chunks of at most 2 MB, with at most 512 chunks. On Save, the browser first calculates the full-file SHA-256 hash, creates the encrypted File record, clears any existing chunks for that record, then encrypts and uploads each chunk with the active vault key. The server stores encrypted chunks plus size and chunk-position data for quota enforcement; it does not receive plaintext file bytes.
+
+File record creation and chunk upload are separate operations. If upload fails after the record was created or after some chunks were accepted, there is no automatic transaction rollback. Refresh Files and verify the record and chunk availability before retrying or replacing it. Do not assume an error notice proves that no record or partial upload exists.
+
+## Browser Encryption, Save, and Audit Outcome
+
+For non-file records, the browser serializes the complete form payload and encrypts it with AES-GCM using the active vault key before calling the server. The server validates the encrypted envelope, record type, vault ID, session role, license mode, and vault write access; it does not receive the plaintext title, account, value, URL, note, or certificate material.
+
+Browser-native required-field validation runs before the submit handler, browser encryption, and server request. If that validation passes, the submit handler checks the following conditions in order:
+
+1. Active vault and browser vault key must exist.
+2. The license and active-vault role must permit writes.
+3. New Active Directory credentials are rejected from this page.
+4. Title is required for every type.
+5. Password, API key, and Certificate require a non-blank hidden value.
+6. Secure note requires either note content or an optional hidden value.
+7. A new File requires selected or retained file metadata, and a newly selected file must remain within the 1 GB limit.
+
+These browser checks are operator feedback, not the authorization boundary. After the handler encrypts the payload, the server independently validates the session, encrypted envelope, record type, vault ID, license mode, and vault write role. It does not rely on the local Save button or local required controls for access protection.
+
+While certificate import, encryption, save, or file upload is active, the submit control is disabled and progress is shown. There is no in-form cancel button for an active save or upload.
+
+After successful creation, Password, API key, and Secure note write a `CREATE` audit event. Certificate and File write an `IMPORT` event. File chunk preparation also writes an `EDIT` audit event for clearing the record's existing chunk set. The form resets, the matching record list opens, and secret and audit queries are refreshed. A success notice confirms encrypted server storage, not that a credential was tested, a certificate was deployed, or a file was opened successfully.
+
+## Cancellation and Error Behavior
+
+- The back arrow resets the local form and returns to the selected type's list without an unsaved-change confirmation. Navigation does not abort certificate reading, save, or upload work that has already started. Do not navigate away as a cancellation method; wait for completion or failure, then reconcile the list and Audit Log.
+- There is no separate Cancel button for a new record. **Cancel edit** appears only for an existing editable record; selecting it ends edit mode and leaves a blank Password draft on the New item screen rather than returning to the record list.
+- Rejecting an oversized File clears the current picker selection but can leave earlier file metadata in the shared form. An oversized or unreadable certificate clears its file input but can leave earlier certificate material, metadata, or classification tags. After any of these errors, reset or leave and reopen New item, reselect the intended type and current file, and verify the summary before Save.
+- Most validation and save errors leave the current form in memory so the operator can correct it. A page reload, lock, navigation reset, or back-arrow reset should not be treated as draft storage.
+- A failed save produces an on-screen error and live application notification. Do not paste the full response or form contents into public support.
+- A file upload can fail after record creation; verify Files and Audit Log before deciding whether to retry.
+
+## Recommended Workflows
+
+### Create a Password, API key, or Secure note
+
+1. Confirm the active vault and Editor or Manager role.
+2. Choose the exact type and enter Title.
+3. Add the required value; for Secure note, add note content, hidden value, or both.
+4. Add only necessary account, URL, and operational context.
+5. Optionally generate a value. After the final value is set, run the breach check immediately before Save; neither action saves automatically.
+6. Select **Save encrypted record**, wait for completion, and confirm the expected list and audit event.
+
+### Import a certificate record
+
+1. Choose Certificate and enter a non-sensitive title.
+2. Paste approved material or choose a supported file no larger than 10 MB.
+3. Review SHA-256, format, expiry, Subject/CN, and authority classification. Imported does not mean validated or saved.
+4. Select Save and confirm an `IMPORT` audit event.
+5. Use the Certificates screen for inventory review and Server settings for the VaultPilot HTTPS package; this page does not deploy it.
+
+### Store a file
+
+1. Confirm available per-user, per-vault quota and choose a file no larger than 1 GB.
+2. Review the inferred title, file name, size, chunk count, and destination vault.
+3. Save and keep the page open while hashing, encryption, and upload complete.
+4. Open Files and confirm the record can be retrieved before treating the upload as complete.
+5. If an error occurred, inspect Files and Audit Log for a created record or partial chunk state before retrying.
 
 ## Screen States
 
 | State | Operator response |
 | --- | --- |
-| Draft | Finish ownership, vault and type decisions before adding secret values. |
-| Validation error | Fix labels and required metadata without copying secret fields into support text. |
-| Save blocked | Check license, role and vault access before retrying. |
+| New draft | Select a type and complete required fields; nothing is persisted yet. |
+| No unlocked active vault | Unlock and select the intended vault before entering or saving material. |
+| Viewer / Auditor | The chooser or editor may open, but Save is disabled and the server protects writes. Use an authorized Owner, Admin, or User with Editor or Manager vault access. |
+| Read-only license | Viewing may continue, but Save remains blocked. |
+| Type changed | Prefer reset and reopen after certificate, file, or tag work; otherwise recheck all shared and hidden data. |
+| Missing title or value | Complete the exact required fields for the selected type. |
+| Certificate importing | Wait for browser read and hash completion; this is not yet a saved record. |
+| Certificate too large / unreadable | Prior payload or metadata can remain. Reset and reopen, then select an approved file within 10 MB or paste verified text material. |
+| No file selected | Choose one file before saving a new File record. |
+| File too large / quota exceeded | Prior file metadata can remain. Reset and reopen, then select a file that keeps the active-vault user total within 1 GB. |
+| Encrypting / uploading | Keep the page open; there is no active-operation cancel control, and navigation does not abort the work. |
+| Save succeeded | Confirm the destination list and `CREATE` or `IMPORT` audit evidence. |
+| Save failed | Keep secret details private, correct the form, and verify whether a File record or partial chunks already exist. |
 
 ## Before You Act
 
-- Choose the item type first; changing type later can hide fields that need review.
-- Confirm the target vault and owner before entering any sensitive value.
-- Use placeholders in examples and never paste production secrets into public notes.
+- Confirm the active vault; this page has no vault picker.
+- Confirm a writable license and Editor or Manager access to that vault.
+- Use Active Directory sync, not New item, for new RDP/SSH credential records.
+- Choose the type before entering sensitive material. After certificate, file, or tag work, reset and reopen rather than relying on a type switch; otherwise recheck hidden shared state.
+- For certificates and files, verify source authorization, classification, retention, size, and destination.
+- Remember that Generate, breach check, certificate import, and CA selection do not save or deploy anything. Re-run the breach check after the final value change and immediately before Save.
 
 ## Safe Evidence
 
-- Safe to share: intended item type, target vault category, owner role, validation code and placeholder field names.
-- Keep private: secret values, usernames paired with passwords, API keys, certificate material, file contents and copied form screenshots.
-- Use placeholders for examples and rotate any real value that was pasted into public evidence.
+- Safe to share: selected manual type, broad validation state, size band, chunk count, general audit action, and a placeholder field map.
+- Keep private: title, account, URL, note, owner/team context, certificate subject/issuer/serial/hash, file name, exact size, and internal system or ticket references.
+- Never share: passwords, API keys, tokens, certificate or private-key material, PFX/P12 contents or passwords, file contents, encrypted payloads, vault keys, or full form screenshots.
+- If a real value entered public evidence, treat it as exposed and rotate or revoke it through the owning system.
+
+## When to Stop and Escalate
+
+Stop when the active vault is uncertain, write access is unexpected, certificate or file provenance is unknown, private-key exposure is suspected, an upload fails after partial progress, quota state conflicts with the UI, or audit and list outcomes disagree. Open a private case with record type, broad size, general error code, broad time window, and last safe step?without secret material.
 
 ## Operator Notes
 
-Do not paste test secrets into public examples. Use placeholders such as `<SERVICE_NAME>`, `<ACCOUNT_NAME>` and `<REDACTED_SECRET>`.
+New item is a client-side encryption form, not a workflow engine. It does not autosave, preserve drafts across reloads, test credentials, create Active Directory records manually, validate certificate trust, deploy certificates, scan files, or rotate external systems.
 
 ## Related
 
 - [Passwords screen](screen-passwords.md)
 - [API keys screen](screen-api-keys.md)
+- [Secure notes screen](screen-secure-notes.md)
+- [Certificates screen](screen-certificates.md)
 - [Files screen](screen-files.md)
+- [Active Directory records screen](screen-active-directory-records.md)
+- [Audit Log screen](screen-audit-log.md)

@@ -1,38 +1,54 @@
-# Uygulama İçi Ekran Yardımı
+# Uygulama ??i Ekran Yard?m?
 
-VaultPilot içinde her workspace ekranının üst barında bir `?` butonu vardır. Bu buton, operatörü o an açık olan ekranın herkese açık paylaşım için güvenli Markdown sayfasına ve seçili dile götürür; böylece işlem akışı bozulmadan doğru prosedür okunabilir.
+VaultPilot'ta oturum a?t?ktan sonra g?rd???n?z her ?al??ma ekran?n?n ?st ?ubu?unda bir `?` d??mesi bulunur. Baz? dashboard men?lerinde ayn? ba?lant? **Dok?man? a?** ad?yla g?sterilir. Her iki se?enek de bulundu?unuz ekran? ve se?ili dili dikkate alarak ilgili yard?m sayfas?n? yeni sekmede a?ar.
 
-Uygulama kabuğu ile herkese açık dokümantasyonun hizalı kalıp kalmadığını denetlerken bu indeksi kullanın.
+Bu sayfalar ?r?n tan?t?m? de?ildir. Bir i?lemi yapmadan ?nce hangi bilginin haz?r olmas? gerekti?ini, ekrandaki durumlar?n ne anlama geldi?ini, g?venli bi?imde nas?l ilerleyece?inizi ve sorun ya?ad???n?zda hangi kan?tlar? payla?abilece?inizi anlatan operat?r rehberleridir.
 
-İki sekme düzeyindeki yönlendirme özellikle daha nettir. Entegrasyonlar ekranı tarayıcı eklentisi sekmesindeyken `?` butonu [screen-browser-extension.md](screen-browser-extension.md) sayfasını açar. Sunucu ayarları ekranı giriş ve oturum güvenliği sekmesindeyken `?` butonu [screen-sign-in-security.md](screen-sign-in-security.md) sayfasını açar.
+## Do?ru Yard?m Sayfas?n? Bulma
 
-| Ekran | Yardım sayfası | Temel karar |
+A?a??daki tabloda ekrandaki ad?, a??lan belgeyi ve belgeye hangi durumda ba?vurman?z gerekti?ini g?rebilirsiniz. Yard?m sayfas?n? do?rudan bu listeden a?t?ysan?z i?lem yapmadan ?nce uygulamada do?ru ekran ve sekmede oldu?unuzu kontrol edin. Ekrandaki de?erler ile belgedeki a??klama uyu?muyorsa gizli bilgi i?ermeyen bir ekran ?zetiyle dok?mantasyon bildirimi a??n; belgedeki varsay?ma dayanarak ?retim ayar?n? de?i?tirmeyin.
+
+?ki sekme i?in y?nlendirme daha ?zeldir:
+
+- **Entegrasyonlar > Taray?c? eklentisi** a??kken `?`, genel Entegrasyonlar belgesi yerine [Taray?c? Eklentisi Ekran?](screen-browser-extension.md) yard?m?n? a?ar.
+- **Sunucu Ayarlar? > Giri? g?venli?i** a??kken `?`, genel Sunucu Ayarlar? belgesi yerine [Giri? G?venli?i Ekran?](screen-sign-in-security.md) yard?m?n? a?ar.
+
+| Ekran | Yard?m sayfas? | Bu belgeyi ne zaman kullanmal?s?n?z? |
 | --- | --- | --- |
-| Güvenlik Komuta Merkezi | [screen-security-command-center.md](screen-security-command-center.md) | Önce hangi operasyon sinyalinin aksiyon istediğini seçin. |
-| Güvenlik dashboard'u | [screen-security-dashboard.md](screen-security-dashboard.md) | Güvenlik duruşunu, 2FA'yı, lisansı ve audit riskini birlikte okuyun. |
-| Etki Alanı dashboard'u | [screen-domain-dashboard.md](screen-domain-dashboard.md) | Kimlik bilgisi işinden önce dizin eşitleme sağlığını kontrol edin. |
-| Sertifika Paneli | [screen-certificate-dashboard.md](screen-certificate-dashboard.md) | TLS ve kayıtlı sertifika riskini takip edin. |
-| Rotasyon | [screen-rotation-dashboard.md](screen-rotation-dashboard.md) | Kimlik bilgisi rotasyon planını sahiplik kanıtını kaybetmeden yapın. |
-| Yeni kayıt | [screen-new-item.md](screen-new-item.md) | Kaydetmeden önce doğru gizli değer türünü seçin. |
-| Parolalar | [screen-passwords.md](screen-passwords.md) | Login kayıtlarıyla güvenli çalışın. |
-| API anahtarları | [screen-api-keys.md](screen-api-keys.md) | API kimlik bilgilerini loglamadan ve yayınlamadan saklayın. |
-| Güvenli notlar | [screen-secure-notes.md](screen-secure-notes.md) | Hassas metni yapılandırılmış ve aranabilir tutun. |
-| Sertifikalar | [screen-certificates.md](screen-certificates.md) | Sertifika meta verisini ve şifreli paket notlarını yönetin. |
-| Dosyalar | [screen-files.md](screen-files.md) | Onaylı dosyaları kasayı çöp kutusuna çevirmeden ekleyin. |
-| Active Directory kayıtları | [screen-active-directory-records.md](screen-active-directory-records.md) | Dizin kaynaklı kimlik bilgisini ve sahiplik durumunu inceleyin. |
-| Paylaşım | [screen-sharing.md](screen-sharing.md) | Sadece gereken kayıtları limit ve süre sonu ile paylaşın. |
-| Giriş güvenliği | [screen-sign-in-security.md](screen-sign-in-security.md) | Kilit, 2FA ve oturum kontrollerini inceleyin. |
-| Discovery | [screen-discovery.md](screen-discovery.md) | Onaylı maruziyet kontrollerini çalıştırın ve yalnız doğrulanmış bulguları içe aktarın. |
-| Kullanıcılar | [screen-users.md](screen-users.md) | Hesap, rol ve erişim değişikliklerini yönetin. |
-| Lisans | [screen-license.md](screen-license.md) | Özellik erişimini, deneme durumunu ve salt okunur sınırı anlayın. |
-| Denetim kaydı | [screen-audit-log.md](screen-audit-log.md) | Kimin ne yaptığını ve audit chain'i kanıtlayın. |
-| Entegrasyonlar | [screen-integrations.md](screen-integrations.md) | API istemcisi, eklenti durumu ve dizin connector sağlığını yönetin. |
-| Bildirimler | [screen-notifications.md](screen-notifications.md) | Önemli olayları secret sızdırmadan yönlendirin. |
-| İşlemler | [screen-executions.md](screen-executions.md) | Aktif işleri izleyin ve takılan işleri kanıtla toparlayın. |
-| Güncellemeler | [screen-updates.md](screen-updates.md) | Güncelleme çalıştırmadan önce release paketlerini doğrulayın. |
-| Sunucu ayarları | [screen-server-settings.md](screen-server-settings.md) | Host, HTTPS, SMTP, bakım ve saklama ayarlarını değiştirin. |
-| Tarayıcı eklentisi | [screen-browser-extension.md](screen-browser-extension.md) | Tarayıcı cihaz eşleştirme, onay ve erişim iptali akışını yönetin. |
+| G?venlik Komuta Merkezi | [G?venlik Komuta Merkezi](screen-security-command-center.md) | Birden fazla operasyon sinyali varken ?nce hangisine m?dahale edece?inizi belirlerken. |
+| G?venlik dashboard'u | [G?venlik Dashboard](screen-security-dashboard.md) | 2FA, kullan?c?, lisans ve denetim sinyallerini birlikte yorumlarken. |
+| Etki Alan? dashboard'u | [Etki Alan? Dashboard](screen-domain-dashboard.md) | Dizin ba?lant?s?, agent sa?l??? ve y?netilen hesap durumunu incelerken. |
+| Sertifika Paneli | [Sertifika Paneli](screen-certificate-dashboard.md) | S?resi dolan, yakla?an veya ana bilgisayarla e?le?meyen sertifikalar? ?nceliklendirirken. |
+| Rotasyon | [Rotasyon Dashboard](screen-rotation-dashboard.md) | Parola ve anahtar yenilemelerini sahiplik ve son kullan?m bilgisiyle planlarken. |
+| Yeni kay?t | [Yeni Kay?t](screen-new-item.md) | Do?ru kay?t t?r?n? se?ip g?venli bir kay?t olu?turmadan ?nce. |
+| Parolalar | [Parolalar](screen-passwords.md) | Kullan?c? ad? ve parola i?eren giri? kay?tlar?n? ararken, d?zenlerken veya kopyalarken. |
+| API anahtarlar? | [API Anahtarlar?](screen-api-keys.md) | Token ve API kimlik bilgilerini kaydederken, yenilerken veya kullan?m d??? b?rak?rken. |
+| G?venli notlar | [G?venli Notlar](screen-secure-notes.md) | Hassas operasyon notlar?n? anla??l?r, s?n?rl? ve aranabilir bi?imde tutarken. |
+| Sertifikalar | [Sertifikalar](screen-certificates.md) | Sertifika meta verisini veya ?ifreli sertifika paketini kaydederken. |
+| Dosyalar | [Dosyalar](screen-files.md) | Onayl? hassas dosyalar? kasaya eklerken, indirirken veya temizlerken. |
+| Active Directory kay?tlar? | [Active Directory Kay?tlar?](screen-active-directory-records.md) | Dizin kaynakl? hesaplar?n sahiplik, risk ve e?itleme durumunu incelerken. |
+| Payla??m | [Payla??m](screen-sharing.md) | Dahili veya harici payla??m haz?rlarken, kullan?m s?n?r? koyarken ya da paketi iptal ederken. |
+| Giri? g?venli?i | [Giri? G?venli?i](screen-sign-in-security.md) | 2FA, oturum, otomatik kilit ve hesap kurtarma etkilerini de?erlendirirken. |
+| Discovery | [Discovery](screen-discovery.md) | Yetkili kapsamda maruziyet taramas? ?al??t?r?rken ve do?rulanm?? bulgular? i?e aktar?rken. |
+| Kullan?c?lar | [Kullan?c?lar](screen-users.md) | Hesap, rol, giri? eri?imi veya 2FA durumunda de?i?iklik yaparken. |
+| Lisans | [Lisans](screen-license.md) | Lisans?n hangi ?zellikleri a?t???n?, deneme veya salt okunur durumunu anlamaya ?al???rken. |
+| Denetim kayd? | [Denetim Kayd?](screen-audit-log.md) | Bir i?lemin kim taraf?ndan ve ne zaman yap?ld???n? ara?t?r?rken ya da olay zaman ?izelgesi haz?rlarken. |
+| Entegrasyonlar | [Entegrasyonlar](screen-integrations.md) | API istemcisi, dizin ba?lant?s? veya genel entegrasyon sa?l???n? y?netirken. |
+| Bildirimler | [Bildirimler](screen-notifications.md) | Hangi olaylar?n kime iletilece?ini belirlerken veya teslimat sorununu incelerken. |
+| ??lemler | [??lemler](screen-executions.md) | Devam eden, tamamlanan, ba?ar?s?z olan veya tak?ld??? d???n?len i?leri izlerken. |
+| G?ncellemeler | [G?ncellemeler](screen-updates.md) | Bir s?r?m? denetlerken, g?ncelleme ba?lat?rken veya yeniden ba?latma sonras?n? do?rularken. |
+| Sunucu ayarlar? | [Sunucu Ayarlar?](screen-server-settings.md) | Eri?im, HTTPS, SMTP, bak?m, yedek veya saklama ayarlar?n? de?i?tirirken. |
+| Taray?c? eklentisi | [Taray?c? Eklentisi](screen-browser-extension.md) | Taray?c? cihaz? e?lerken, iste?i onaylarken veya cihaz eri?imini kald?r?rken. |
 
-Herkese açık güvenlik kuralı: yardım sayfaları yalnız yer tutucu ve sentetik örnek kullanır. Gerçek vault içeriği, PFX/P12 dosyası, private key, credential içeren log, API client secret, lisans private materyali veya müşteri ekran görüntüsü eklemeyin.
+## Herkese A??k Belgelerde G?venlik S?n?r?
 
-İlgili: [Dokümantasyon gateway](../README.md), [Public repo sınırı](public-repository-boundary.md), [Public dil sözlüğü](public-language-glossary.md).
+Bu yard?m sayfalar? herkese a??k GitHub deposunda tutulur. ?rnek verirken yaln?zca yer tutucu veya sentetik veri kullan?n. Ger?ek kasa i?eri?ini, parola ya da token de?erini, `.pfx`/`.p12` paketini, ?zel anahtar?, sertifika parolas?n?, kimlik bilgisi i?eren logu, API istemci gizli anahtar?n?, lisans?n ?zel materyalini, m??teri ad?n?, i? IP/ana bilgisayar ad?n? veya m??teriye ait ekran g?r?nt?s?n? bu belgelere ve herkese a??k issue'lara eklemeyin.
+
+Bir yard?m belgesinin hatal? veya eksik oldu?unu bildirmeniz gerekiyorsa ekran ad?, VaultPilot s?r?m?, g?r?nen durum etiketi ve redakte edilmi? hata ?zetini payla??n. Sorunu anlatmak i?in gizli de?er gerekiyorsa herkese a??k kanal? kullanmay?n; kurumunuzun onayl? ?zel destek s?recine ge?in.
+
+## ?lgili Belgeler
+
+- [Dok?mantasyon ana sayfas?](../README.md)
+- [Herkese a??k depo s?n?r?](public-repository-boundary.md)
+- [T?rk?e ve ?ngilizce terim s?zl???](public-language-glossary.md)
+- [Destek i?in g?venli kan?t paketi](support-evidence-pack.md)
