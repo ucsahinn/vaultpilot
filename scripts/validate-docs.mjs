@@ -1621,11 +1621,11 @@ function validateReleaseContract() {
   ])
   forbidText('docs/en/release-asset-verification.md', [
     `Prepared VaultPilot ${target.server} Candidate`,
-    `This matrix is a release-preparation contract, not evidence that \`v${target.server}\` is public. Until the release is published and independently checked, use the verified \`v${target.server}\` asset set below for customer downloads.`
+    'This matrix is a release-preparation contract, not evidence that'
   ])
   forbidText('docs/tr/release-asset-verification.md', [
     `Hazırlanan VaultPilot ${target.server} Adayı`,
-    `Bu tablo yayın hazırlığı sözleşmesidir; \`v${target.server}\` sürümünün herkese açık olduğu anlamına gelmez. Yayın tamamlanıp bağımsız olarak doğrulanana kadar müşteri indirmelerinde aşağıdaki doğrulanmış \`v${target.server}\` dosya setini kullanın.`
+    'Bu tablo yayın hazırlığı sözleşmesidir'
   ])
 }
 

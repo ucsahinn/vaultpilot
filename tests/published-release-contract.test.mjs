@@ -11,7 +11,7 @@ const repositoryRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url))
 const stalePublishedWordingCases = [
   {
     relativePath: 'README.md',
-    snippet: 'This matrix describes the next prepared release set. It is not a claim that `v2.2.0` is already public; the latest verified public GitHub release remains `v2.0.0` until publication is completed and checked.'
+    snippet: 'This matrix describes the next prepared release set. It is not a claim that `v2.2.1` is already public; the latest verified public GitHub release remains `v2.0.0` until publication is completed and checked.'
   },
   {
     relativePath: 'RELEASES.md',
@@ -19,11 +19,11 @@ const stalePublishedWordingCases = [
   },
   {
     relativePath: 'docs/en/release-asset-verification.md',
-    snippet: 'This matrix is a release-preparation contract, not evidence that `v2.2.0` is public. Until the release is published and independently checked, use the verified `v2.2.0` asset set below for customer downloads.'
+    snippet: 'This matrix is a release-preparation contract, not evidence that `v2.2.1` is public. Until the release is published and independently checked, use the verified `v2.2.1` asset set below for customer downloads.'
   },
   {
     relativePath: 'docs/tr/release-asset-verification.md',
-    snippet: 'Bu tablo yayın hazırlığı sözleşmesidir; `v2.2.0` sürümünün herkese açık olduğu anlamına gelmez. Yayın tamamlanıp bağımsız olarak doğrulanana kadar müşteri indirmelerinde aşağıdaki doğrulanmış `v2.2.0` dosya setini kullanın.'
+    snippet: 'Bu tablo yayın hazırlığı sözleşmesidir; `v2.2.1` sürümünün herkese açık olduğu anlamına gelmez. Yayın tamamlanıp bağımsız olarak doğrulanana kadar müşteri indirmelerinde aşağıdaki doğrulanmış `v2.2.1` dosya setini kullanın.'
   }
 ]
 

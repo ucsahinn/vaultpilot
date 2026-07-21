@@ -1,8 +1,8 @@
 # VaultPilot Release Notes
 
-Latest public release: **VaultPilot 2.2.0**.
+Latest public release: **VaultPilot 2.2.1**.
 
-Latest published GitHub Release: **VaultPilot 2.2.0**.
+Latest published GitHub Release: **VaultPilot 2.2.1**.
 
 VaultPilot is the canonical product name for new work. PassMan remains the compatibility name for older installed services, data paths, environment variables, cookies, headers, update aliases, extension protocol names, and release artifacts that existing customers may still depend on.
 
@@ -18,6 +18,32 @@ This page is a selected public release history for customer-facing milestones an
 | Security | Green | Zero-knowledge, validation, signing, pairing, diagnostics, or secret-handling boundary. |
 | Compatibility | Gold | Legacy alias, migration, rollback, or old-client behavior intentionally kept. |
 | Removed | Red | A visible action or old path intentionally removed from the daily flow. |
+
+## VaultPilot 2.2.1
+
+Status: published and independently verified against GitHub Release `v2.2.1`.
+
+Release date: 2026-07-21
+
+Distribution note: the MSI is Authenticode-signed with the manifest-pinned VaultPilot development signer and has no RFC3161 timestamp. Windows trust and SmartScreen reputation are therefore environment-dependent. Commit-bound artifact evidence and elevated Repair/Health verification passed against the published MSI hash. A hash-bound Windows Sandbox package was prepared, but physical Sandbox Install/Health was explicitly deferred because `WindowsSandbox.exe` was unavailable on the release host.
+
+| Component | Published version |
+| --- | ---: |
+| VaultPilot Enterprise Vault Console | 2.2.1 |
+| Chromium Browser Extension | 1.3.3 |
+| Offline Share Decrypter | 1.2.1 |
+| VaultPilot DC Agent Service | 1.2.21 |
+| VaultPilot Backup Tool | 1.0.1 |
+| VaultPilot Log Collector | 1.0.1 |
+
+### Hotfix highlights
+
+- Prevents LocalSystem environment values such as `USERNAME=SERVER$` from creating an unapproved machine-account grant on the managed certificate directory.
+- Uses the actual Windows process SID for certificate and production log ACL access without deriving principals from mutable account-name environment variables.
+- Keeps an update job blocked when MSI reports `1603` or another failure, even if the candidate runtime temporarily answers with the target version.
+- Resolves the registered active payload and versioned runtime correctly in the detached restart helper.
+- Preserves actionable ACL, custom-action and installer-health failure details across long rollback logs.
+- Retains the existing SQLite database, vault data, users, certificates, configuration and PassMan compatibility paths during upgrade.
 
 ## VaultPilot 2.2.0
 
