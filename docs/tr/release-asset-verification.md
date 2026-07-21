@@ -37,18 +37,18 @@ Public GitHub Release şu müşteri güvenli teslim dosyalarını içerir. Bu ta
 
 | Asset | Boyut | SHA-256 |
 | --- | ---: | --- |
-| `VaultPilot-2.2.1-x64.msi` | 65,622,016 | `262cae77935ea3ca6d9ae52ace6356669da052ee46f00be378a9c7442db0a33c` |
-| `vaultpilot-update.json` | 1,375 | `523f8df117deb51449cfd8faa6de347850d489417aaadee6369e645a2ac64e07` |
+| `VaultPilot-2.2.1-x64.msi` | 65,626,112 | `9e65f41f5b581bd38ee247e1acaab44dd3dd36744328b88766218442168ec062` |
+| `vaultpilot-update.json` | 1,375 | `f8f51799fb743bdef6c02dfb120ec0f8349ad1dc257eedd25241116c8829e264` |
 | `vaultpilot-share-decrypter.zip` | 102,628 | `3f2475e96ecbcb4606878fcf3646c106f49f30be9a666cd23310ba250261d449` |
 | `vaultpilot-share-decrypter.json` | 219 | `aa2d71a8209399c50e0b1b16ba2f8eed83e42161c500d17853b85b87d328fca4` |
-| `vaultpilot-dc-agent.ps1` | 235,246 | `1e4cdccdf08b577360f38c09b29720928ac90749904b6a5749505178e5280e36` |
-| `vaultpilot-dc-agent.json` | 213 | `e92fefcb1df68959de94786877a7bbcf9ec4895af309afaabd819a7acfcde2aa` |
-| `PassMan-2.2.1-x64.msi` | 65,622,016 | `262cae77935ea3ca6d9ae52ace6356669da052ee46f00be378a9c7442db0a33c` |
-| `passman-update.json` | 1,357 | `d1aa006e486406a1f9b3f63d5df84eec2d0aecb096c9ff8626f01e8cc4015f17` |
+| `vaultpilot-dc-agent.ps1` | 235,272 | `b5af74774d205dc5e07bd7f59a63d21d9b9dd5905427c98eb568684949e32199` |
+| `vaultpilot-dc-agent.json` | 213 | `5deab881826b79f8c77c37f0b0eac34339f0ac10ba5739da6ccf7489871c0e8a` |
+| `PassMan-2.2.1-x64.msi` | 65,626,112 | `9e65f41f5b581bd38ee247e1acaab44dd3dd36744328b88766218442168ec062` |
+| `passman-update.json` | 1,357 | `a6c68d58d43dcf7d9c6404969185c2c2203f288c4e8a18bba64adbc92cb7a158` |
 | `passman-share-decrypter.zip` | 102,628 | `3f2475e96ecbcb4606878fcf3646c106f49f30be9a666cd23310ba250261d449` |
 | `passman-share-decrypter.json` | 216 | `d9490a761c5413ef957bd08e1e4ae1ad6c5e7c6f7df59cc38bb600e0f27c6304` |
-| `passman-ad-agent.ps1` | 235,246 | `1e4cdccdf08b577360f38c09b29720928ac90749904b6a5749505178e5280e36` |
-| `passman-ad-agent.json` | 210 | `ce9b9dd52f73a9c0f2e461891127ff49a8a0dc5f3a340ec32e1c215f0b88bb1f` |
+| `passman-ad-agent.ps1` | 235,272 | `b5af74774d205dc5e07bd7f59a63d21d9b9dd5905427c98eb568684949e32199` |
+| `passman-ad-agent.json` | 210 | `f769bea81748093b34d54ad89f685d2a749993988b43f0cede3f462e5f82db0c` |
 
 Chrome Web Store listelemesi tarayıcı eklentisi için birincil müşteri kurulum ve güncelleme kanalıdır ve GitHub Release'den bağımsız ilerleyebilir. Canlı mağaza `1.3.3` gösterir; varsayılan `v2.2.1` güncelleme manifestosu extension ZIP yayımlamaz.
 
