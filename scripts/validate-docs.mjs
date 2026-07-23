@@ -6,7 +6,7 @@ import path from 'node:path'
 
 const workspaceRoot = process.cwd()
 const validateStaged = process.argv.includes('--staged')
-const sourceAppPath = path.resolve(workspaceRoot, '..', '..', 'src', 'components', 'PassmanApp.tsx')
+const sourceAppPath = path.resolve(workspaceRoot, '..', '..', 'src', 'components', 'VaultPilotApp.tsx')
 let stagedTempRoot = null
 let root = workspaceRoot
 
@@ -790,8 +790,8 @@ function validateRequiredPublicReferences() {
     ]],
     ['docs/en/public-external-surface-drift.md', [
       'hjkbedlaieikhkoplgpiohlaakgebobi',
-      'v2.0.0',
-      'Release-body correction is not currently tracked',
+      'v3.0.2',
+      'Recheck the redirect and asset metadata',
       'Chrome Web Store publisher dashboard',
       'Documentation Gateway',
       'Knowledge Base Gateway',
@@ -814,8 +814,8 @@ function validateRequiredPublicReferences() {
     ]],
     ['docs/tr/public-external-surface-drift.md', [
       'hjkbedlaieikhkoplgpiohlaakgebobi',
-      'v2.0.0',
-      'Release-body düzeltmesi şu anda takip edilmiyor',
+      'v3.0.2',
+      'yönlendirmeyi ve asset metadata',
       'Chrome Web Store publisher dashboard',
       'Documentation Gateway',
       'Knowledge Base Gateway',

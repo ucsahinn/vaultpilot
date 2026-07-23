@@ -62,11 +62,11 @@
 </p>
 
 <p align="center">
-  <strong>Current verified public release:</strong> VaultPilot Enterprise Vault Console 2.2.1, published as GitHub Release <a href="https://github.com/ucsahinn/vaultpilot/releases/tag/v2.2.1">v2.2.1</a> on July 21, 2026.
+  <strong>Current verified public release:</strong> VaultPilot Enterprise Vault Console 3.0.2, published as GitHub Release <a href="https://github.com/ucsahinn/vaultpilot/releases/tag/v3.0.2">v3.0.2</a> on July 23, 2026.
 </p>
 
 <p align="center">
-  <code>VaultPilot 2.2.1</code>
+  <code>VaultPilot 3.0.2</code>
   &nbsp;
   <code>Windows MSI</code>
   &nbsp;
@@ -81,7 +81,7 @@
   <tr>
     <td align="center" width="25%">
       <a href="https://github.com/ucsahinn/vaultpilot/releases/latest"><img src="assets/icons/download.svg" width="46" alt="Download icon"><br><strong>Open latest published release</strong></a><br>
-      <sub>Current public release: VaultPilot 2.2.1.</sub>
+      <sub>Current public release: VaultPilot 3.0.2.</sub>
     </td>
     <td align="center" width="25%">
       <a href="docs/en/README.md"><img src="assets/icons/docs.svg" width="46" alt="Documentation icon"><br><strong>Read operator docs</strong></a><br>
@@ -147,13 +147,13 @@ Use this repository as the public front desk for the supported VaultPilot applic
 
 ## <img src="assets/icons/vault.svg" width="22" alt=""> What This Repository Is
 
-This is the public GitHub home for VaultPilot Enterprise Vault Console. VaultPilot is the current product name for new releases; PassMan remains a compatibility name for older installed services, data paths, environment variables, cookies, headers, update aliases and extension protocol names. This repository contains customer-safe documentation, how-to guides, knowledge-base articles, sanitized product screenshots, release notes and links to GitHub Release assets.
+This is the public GitHub home for VaultPilot Enterprise Vault Console. VaultPilot is the only active product, installer, service, data-path, update-manifest, and release-artifact identity. This repository contains customer-safe documentation, how-to guides, knowledge-base articles, sanitized product screenshots, release notes and links to GitHub Release assets.
 
 This repository does not contain private source code, internal signing material, customer data, databases, backups, certificates or release binaries committed into git.
 
 ## <img src="assets/icons/update.svg" width="22" alt=""> Operator Path
 
-1. Download the published MSI from GitHub Release `v2.2.1`.
+1. Download the published MSI from GitHub Release `v3.0.2`.
 2. Install it as Administrator on the approved Windows host.
 3. Open `https://<SERVER_HOST>:1903` to verify the service responds. If no trusted certificate is configured yet, expect a managed self-signed certificate warning until the operator installs a PFX/P12 package.
 4. Apply the license and confirm the public host, HTTPS and Server System settings.
@@ -161,30 +161,31 @@ This repository does not contain private source code, internal signing material,
 6. Install the Chrome Web Store extension, then pair approved browsers.
 7. Configure VaultPilot DC Agent Service if AD scope is needed, then review backup, restore, update and support-evidence procedures.
 
-## <img src="assets/icons/release.svg" width="22" alt=""> VaultPilot 2.2.1 Release Assets
+## <img src="assets/icons/release.svg" width="22" alt=""> VaultPilot 3.0.2 Release Assets
 
 | Type | Asset | Purpose | Delivery |
 | --- | --- | --- | --- |
-| ![Windows icon](assets/icons/windows.svg) | `VaultPilot-2.2.1-x64.msi` | Installs or upgrades VaultPilot Server on Windows. | GitHub Release `v2.2.1` |
-| ![Update icon](assets/icons/update.svg) | `vaultpilot-update.json` | Signed update manifest verified by VaultPilot. | GitHub Release `v2.2.1` |
+| ![Windows icon](assets/icons/windows.svg) | `VaultPilot-3.0.2-x64.msi` | Installs or upgrades VaultPilot Server on Windows. | GitHub Release `v3.0.2` |
+| ![Update icon](assets/icons/update.svg) | `vaultpilot-update.json` | Signed update manifest verified by VaultPilot. | GitHub Release `v3.0.2` |
 | ![Extension icon](assets/icons/extension.svg) | [Chrome Web Store listing](https://chromewebstore.google.com/detail/vaultpilot-browser-vault/hjkbedlaieikhkoplgpiohlaakgebobi) | Primary browser extension install and update channel. | Chrome Web Store |
-| ![Share icon](assets/icons/share.svg) | `vaultpilot-share-decrypter.zip` | Offline external-share opening tool. | GitHub Release `v2.2.1` |
-| ![Share icon](assets/icons/share.svg) | `vaultpilot-share-decrypter.json` | Offline decrypter update metadata. | GitHub Release `v2.2.1` |
-| ![Directory icon](assets/icons/directory.svg) | `vaultpilot-dc-agent.ps1` | VaultPilot DC Agent Service installer and repair script. | GitHub Release `v2.2.1` |
-| ![Directory icon](assets/icons/directory.svg) | `vaultpilot-dc-agent.json` | DC Agent release metadata. | GitHub Release `v2.2.1` |
+| ![Share icon](assets/icons/share.svg) | `vaultpilot-share-decrypter.zip` | Offline external-share opening tool. | GitHub Release `v3.0.2` |
+| ![Share icon](assets/icons/share.svg) | `vaultpilot-share-decrypter.json` | Offline decrypter update metadata. | GitHub Release `v3.0.2` |
+| ![Directory icon](assets/icons/directory.svg) | `vaultpilot-dc-agent.ps1` | VaultPilot DC Agent Service installer and repair script. | GitHub Release `v3.0.2` |
+| ![Directory icon](assets/icons/directory.svg) | `vaultpilot-dc-agent.json` | DC Agent release metadata. | GitHub Release `v3.0.2` |
+| ![Windows icon](assets/icons/windows.svg) | `VpUninstallTool-3.0.2-x64.msi` | Removes VaultPilot from disposable or retired test hosts. | GitHub Release `v3.0.2` |
 
 VaultPilot-managed updates verify the signed manifest, release asset metadata, SHA-256 checksum and MSI signer thumbprint before starting the MSI flow. A global CA chain is not required for VaultPilot-managed update trust when the signed manifest pins the local release signer thumbprint. CA-backed or trusted-signing certificates remain recommended for Windows reputation and broad OS-level trust. Older Chrome Web Store URLs may redirect from a historical store slug, but the supported extension identity is the published extension ID `hjkbedlaieikhkoplgpiohlaakgebobi`. Before internal redistribution, verify the GitHub asset list, manifest, SHA-256 values, MSI signer evidence and file sizes against the release page.
 
-## <img src="assets/icons/update.svg" width="22" alt=""> VaultPilot 2.2.1 Component Versions
+## <img src="assets/icons/update.svg" width="22" alt=""> VaultPilot 3.0.2 Component Versions
 
-This matrix records the component versions independently verified for the public `v2.2.1` release.
+This matrix records the component versions independently verified for the public `v3.0.2` release.
 
 | Component | Version | Update path |
 | --- | ---: | --- |
-| VaultPilot Enterprise Vault Console | 2.2.1 | Windows MSI / Update Center |
+| VaultPilot Enterprise Vault Console | 3.0.2 | Windows MSI / Update Center |
 | Chromium Browser Extension | 1.3.3 | Chrome Web Store |
 | Offline Share Decrypter | 1.2.1 | Bundled support component and release ZIP |
-| VaultPilot DC Agent Service | 1.2.21 | Bundled support component and release script |
+| VaultPilot DC Agent Service | 1.2.22 | Bundled support component and release script |
 | VaultPilot Backup Tool | 1.0.3 | Independently versioned tool bundled in the MSI |
 | VaultPilot Log Collector | 1.0.3 | Independently versioned tool bundled in the MSI |
 

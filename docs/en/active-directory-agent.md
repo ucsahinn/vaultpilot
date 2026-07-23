@@ -43,7 +43,7 @@ Passwords and the agent token are accepted only through the local secure PowerSh
 
 ## Version and Readiness Check
 
-Prepared VaultPilot 2.2.1 ships DC Agent `1.2.21`; the current supported state expects both the service wrapper and PowerShell worker to report `1.2.21` and `ready`. A successful directory sync does not upgrade the agent. The identity-bound action protocol minimum remains `1.2.20`, so agents from `1.2.15` through `1.2.19` can still sync while unlock, require-password-change, random-password assignment, and account disable remain safely unavailable. Version 1.2.20 introduced target binding through `objectGUID` and `objectSid` plus AD-constructed `tokenGroups` and `primaryGroupID`; 1.2.21 preserves that boundary while hardening custom configuration-path recovery, idempotent mutation-result delivery, audited review for ambiguous delivery, and bounded diagnostics. Missing or drifting identity evidence keeps sensitive actions fail-closed.
+VaultPilot 3.0.2 ships DC Agent `1.2.22`; the current supported state expects both the service wrapper and PowerShell worker to report `1.2.22` and `ready`. A successful directory sync does not upgrade the agent. The identity-bound action protocol minimum remains `1.2.20`, so agents from `1.2.15` through `1.2.19` can still sync while unlock, require-password-change, random-password assignment, and account disable remain safely unavailable. Version 1.2.20 introduced target binding through `objectGUID` and `objectSid` plus AD-constructed `tokenGroups` and `primaryGroupID`; 1.2.22 preserves that boundary while hardening custom configuration-path recovery, idempotent mutation-result delivery, audited review for ambiguous delivery, certificate trust handling, protected-directory validation, and bounded diagnostics. Missing or drifting identity evidence keeps sensitive actions fail-closed.
 
 The current candidate package uses `vaultpilot-dc-agent.ps1`. If an installed server still downloads an older script, verify its static download asset and cache first; do not infer the service version from sync success.
 
@@ -85,7 +85,7 @@ After sync, the Active Directory tab shows:
 
 The agent collects only OU, group, and user metadata. It never reads or sends AD passwords, password hashes, Kerberos tickets, vault keys, or plaintext secrets.
 
-A ready `1.2.20` or newer agent can advertise identity-bound capabilities for unlocking an account, requiring a password change at next sign-in, assigning a random password under the global password policy, and disabling an account. The prepared release ships `1.2.21` for its additional recovery and result-delivery hardening. Built-in identities and the agent bind identity are always protected. Automated rotation of a privileged but non-built-in target additionally requires an explicit durable policy approval; a manual action keeps its own second confirmation.
+A ready `1.2.20` or newer agent can advertise identity-bound capabilities for unlocking an account, requiring a password change at next sign-in, assigning a random password under the global password policy, and disabling an account. The current release ships `1.2.22` for its additional recovery, trust, and result-delivery hardening. Built-in identities and the agent bind identity are always protected. Automated rotation of a privileged but non-built-in target additionally requires an explicit durable policy approval; a manual action keeps its own second confirmation.
 
 <a id="managed-credential-reconciliation"></a>
 

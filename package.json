@@ -1,6 +1,6 @@
 {
   "name": "vaultpilot-public-docs",
-  "version": "2.2.1",
+  "version": "3.0.2",
   "private": true,
   "description": "Public GitHub documentation and release hub for VaultPilot Enterprise Vault Console.",
   "repository": {

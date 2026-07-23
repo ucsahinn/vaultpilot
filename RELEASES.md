@@ -1,10 +1,10 @@
 # VaultPilot Release Notes
 
-Latest public release: **VaultPilot 2.2.1**.
+Latest public release: **VaultPilot 3.0.2**.
 
-Latest published GitHub Release: **VaultPilot 2.2.1**.
+Latest published GitHub Release: **VaultPilot 3.0.2**.
 
-VaultPilot is the canonical product name for new work. PassMan remains the compatibility name for older installed services, data paths, environment variables, cookies, headers, update aliases, extension protocol names, and release artifacts that existing customers may still depend on.
+VaultPilot is the only active product, installer, service, data-path, update-manifest, and release-artifact identity.
 
 This page is a selected public release history for customer-facing milestones and compatibility notes. The GitHub Releases page remains the public source of truth for every retired patch build, asset upload, timestamp, and digest.
 
@@ -18,6 +18,32 @@ This page is a selected public release history for customer-facing milestones an
 | Security | Green | Zero-knowledge, validation, signing, pairing, diagnostics, or secret-handling boundary. |
 | Compatibility | Gold | Legacy alias, migration, rollback, or old-client behavior intentionally kept. |
 | Removed | Red | A visible action or old path intentionally removed from the daily flow. |
+
+## VaultPilot 3.0.2
+
+Status: published as GitHub Release `v3.0.2`.
+
+Release date: 2026-07-23
+
+Distribution note: the MSI is Authenticode-signed with the manifest-pinned VaultPilot development signer and has no RFC3161 timestamp. VaultPilot-managed update verification binds the signed manifest, exact MSI SHA-256, signer thumbprint, commit-bound standalone payload, and managed-component evidence. Fresh local Health, elevated Repair/Health, and physical Windows Sandbox Install/Health evidence were not rerun for this exact hotfix MSI; the structural MSI, payload, manifest, artifact, browser, and automated test gates passed.
+
+| Component | Published version |
+| --- | ---: |
+| VaultPilot Enterprise Vault Console | 3.0.2 |
+| Chromium Browser Extension | 1.3.3 |
+| Offline Share Decrypter | 1.2.1 |
+| VaultPilot DC Agent Service | 1.2.22 |
+| VaultPilot Backup Tool | 1.0.3 |
+| VaultPilot Log Collector | 1.0.3 |
+
+### Hotfix highlights
+
+- Shows the `Legacy` label only for release-note versions older than `2.0.0`.
+- Keeps the installed VaultPilot version authoritative when GitHub latest-release metadata is older.
+- Removes the redundant vault-management/shared-vault creation card from Sharing and keeps the Select, Send, and Result flow.
+- Updates Next.js from `16.2.10` to security-patched `16.2.11`.
+- Publishes DC Agent `1.2.22` with the current server package.
+- Keeps the independently versioned Backup Tool and Log Collector at `1.0.3`.
 
 ## VaultPilot 2.2.1
 

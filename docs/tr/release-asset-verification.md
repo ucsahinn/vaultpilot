@@ -4,49 +4,50 @@ Bir VaultPilot yayın dosyasını kurmadan veya kurum içinde dağıtmadan önce
 
 ## Release Durumu
 
-Güncel doğrulanmış public release, 21 Temmuz 2026'da yayınlanan GitHub Release [`v2.2.1`](https://github.com/ucsahinn/vaultpilot/releases/tag/v2.2.1).
+Güncel doğrulanmış public release, 23 Temmuz 2026'da yayınlanan GitHub Release [`v3.0.2`](https://github.com/ucsahinn/vaultpilot/releases/tag/v3.0.2).
 
 Herkese açık doğrulama kaynağı olarak GitHub Release asset metadata'sını esas alın. Yayınlanmamış build çıktısı, kopyalanmış paketler, destek eki veya sohbet üzerinden gelen dosyalar release kanıtı değildir.
 
-## VaultPilot 2.2.1 Bileşenleri
+## VaultPilot 3.0.2 Bileşenleri
 
 | Bileşen | Sürüm | Asset |
 | --- | ---: | --- |
-| VaultPilot Enterprise Vault Console | 2.2.1 | `VaultPilot-2.2.1-x64.msi` |
-| Chromium Browser Extension | Chrome Web Store 1.3.3; v2.2.1 arşivi 1.3.3 | Chrome Web Store listing; varsayılan manifestoda ZIP yok |
+| VaultPilot Enterprise Vault Console | 3.0.2 | `VaultPilot-3.0.2-x64.msi` |
+| Chromium Browser Extension | Chrome Web Store 1.3.3; v3.0.2 arşivi 1.3.3 | Chrome Web Store listing; varsayılan manifestoda ZIP yok |
 | Offline Share Decrypter | 1.2.1 | `vaultpilot-share-decrypter.zip` |
-| VaultPilot DC Agent Service | 1.2.21 | `vaultpilot-dc-agent.ps1` |
-| Update manifest | 2.2.1 channel metadata | `vaultpilot-update.json` |
+| VaultPilot DC Agent Service | 1.2.22 | `vaultpilot-dc-agent.ps1` |
+| Update manifest | 3.0.2 channel metadata | `vaultpilot-update.json` |
 
-## VaultPilot 2.2.1 Yayın Kanıtı
+## VaultPilot 3.0.2 Yayın Kanıtı
 
-Bu tablo, müşteri indirmelerinde kullanılan ve bağımsız olarak doğrulanan public `v2.2.1` dosya setini kaydeder.
+Bu tablo, müşteri indirmelerinde kullanılan ve bağımsız olarak doğrulanan public `v3.0.2` dosya setini kaydeder.
 
 | Bileşen | Sürüm | Teslim yolu |
 | --- | ---: | --- |
-| VaultPilot Enterprise Vault Console | 2.2.1 | Sürümlü Windows MSI ve imzalı güncelleme manifesti |
+| VaultPilot Enterprise Vault Console | 3.0.2 | Sürümlü Windows MSI ve imzalı güncelleme manifesti |
 | Chromium Browser Extension | 1.3.3 | Chrome Web Store sürümü; bu yayında extension ZIP yok |
 | Offline Share Decrypter | 1.2.1 | Sürümlü yayın arşivi ve imzalı bileşen manifesti |
-| VaultPilot DC Agent Service | 1.2.21 | Sürümlü PowerShell dosyası ve imzalı bileşen manifesti |
+| VaultPilot DC Agent Service | 1.2.22 | Sürümlü PowerShell dosyası ve imzalı bileşen manifesti |
 | VaultPilot Backup Tool | 1.0.3 | Sunucuyla gelen destek bileşeni; ayrı GitHub Release dosyası değildir |
 | VaultPilot Log Collector | 1.0.3 | Sunucuyla gelen destek bileşeni; ayrı GitHub Release dosyası değildir |
 
 ## Public Asset Seti
 
-Public GitHub Release şu müşteri güvenli teslim dosyalarını içerir. Bu tablo 21 Temmuz 2026 tarihinde yayımlanan ve yerelde doğrulanan dosya setini kaydeder:
+Public GitHub Release şu müşteri güvenli teslim dosyalarını içerir. Bu tablo 23 Temmuz 2026 tarihinde yayımlanan ve yerelde doğrulanan dosya setini kaydeder:
 
 | Asset | Boyut | SHA-256 |
 | --- | ---: | --- |
-| `VaultPilot-2.2.1-x64.msi` | 65,622,016 | `182dc5de611175cd559d6ec54b5567a5f07dac54b02130be1d69ef792d18147b` |
-| `vaultpilot-update.json` | 1,375 | `8aa83c62b7cddab5de8e451f87c429194e92b22663b2e8cd0eafe9676421d909` |
-| `vaultpilot-share-decrypter.zip` | 102,628 | `3f2475e96ecbcb4606878fcf3646c106f49f30be9a666cd23310ba250261d449` |
-| `vaultpilot-share-decrypter.json` | 219 | `aa2d71a8209399c50e0b1b16ba2f8eed83e42161c500d17853b85b87d328fca4` |
-| `vaultpilot-dc-agent.ps1` | 235,272 | `b5af74774d205dc5e07bd7f59a63d21d9b9dd5905427c98eb568684949e32199` |
-| `vaultpilot-dc-agent.json` | 213 | `5deab881826b79f8c77c37f0b0eac34339f0ac10ba5739da6ccf7489871c0e8a` |
+| `VaultPilot-3.0.2-x64.msi` | 65,441,792 | `33f43c95379b53122c92674ad6bef973ad29f6a29a44dd761d2ebd263a6e249e` |
+| `vaultpilot-update.json` | 1,374 | `25dba9059350152c37d687b7061a5ad254f70fc57aef4814a473e8a9a6842397` |
+| `vaultpilot-share-decrypter.zip` | 51,566 | `e72cef76a1a8389339ea75469e6467b908cd51cd7e8f6381fcb61910eb9af756` |
+| `vaultpilot-share-decrypter.json` | 218 | `5d4af2cd0be93f7d553a37def1446d71962c9d0f5a8403038455197659ba7da8` |
+| `vaultpilot-dc-agent.ps1` | 234,224 | `1db27b19a7417b00da5102cebc39e85529ea07f0b957e76d63c7fed4b9e8f8a8` |
+| `vaultpilot-dc-agent.json` | 213 | `ebaaeed49bf1be99df8f3607addea5adc60cc9c339204c69dd16b37a23362ea3` |
+| `VpUninstallTool-3.0.2-x64.msi` | 69,632 | `bca790aa016ed4627fcf7cdba49768dde27d6fb6b8c3740f407cc26ed131558e` |
 
-Chrome Web Store listelemesi tarayıcı eklentisi için birincil müşteri kurulum ve güncelleme kanalıdır ve GitHub Release'den bağımsız ilerleyebilir. Canlı mağaza `1.3.3` gösterir; varsayılan `v2.2.1` güncelleme manifestosu extension ZIP yayımlamaz.
+Chrome Web Store listelemesi tarayıcı eklentisi için birincil müşteri kurulum ve güncelleme kanalıdır ve GitHub Release'den bağımsız ilerleyebilir. Canlı mağaza `1.3.3` gösterir; varsayılan `v3.0.2` güncelleme manifestosu extension ZIP yayımlamaz.
 
-MSI, manifestoda sabitlenen VaultPilot geliştirme imzalayıcısıyla Authenticode imzalıdır ve RFC3161 zaman damgası yoktur. VaultPilot yönetimli güncellemeler imzalı manifestoyu, kesin SHA-256 değerini ve signer thumbprint'ini doğrular; ancak Windows güveni ve SmartScreen itibarı ortama bağlıdır. Yayımlanan MSI hash'i için commit-bound final artifact, elevated Repair ve kimliği doğrulanmış Health kanıtı geçti. Hash-bağlı Sandbox paketi hazırlandı; fiziksel Windows Sandbox Install/Health, release hostunda `WindowsSandbox.exe` bulunmadığı için açıkça ertelendi.
+MSI, manifestoda sabitlenen VaultPilot geliştirme imzalayıcısıyla Authenticode imzalıdır ve RFC3161 zaman damgası yoktur. VaultPilot yönetimli güncellemeler imzalı manifestoyu, kesin SHA-256 değerini ve signer thumbprint'ini doğrular; ancak Windows güveni ve SmartScreen itibarı ortama bağlıdır. Yayımlanan MSI hash'i için commit-bound final artifact, standalone payload ve managed-component kanıtları geçti. Bu hotfix MSI için yeni yerel Health, elevated Repair/Health ve fiziksel Windows Sandbox Install/Health kanıtı yeniden çalıştırılmadı.
 
 Legacy uyumluluk dosyaları yalnız kurulu migration ve rollback yollarında kalabilir; yeni public release'ler sadece VaultPilot adlı müşteri varlıklarını içerir.
 
@@ -54,11 +55,11 @@ Git tree içinde MSI, ZIP, EXE, PFX, P12, DB, SQLite, backup veya signing-key do
 
 ## Doğrulama Adımları
 
-1. GitHub Release [`v2.2.1`](https://github.com/ucsahinn/vaultpilot/releases/tag/v2.2.1) sayfasını aç.
-2. Release tag değerinin `v2.2.1` olduğunu ve kurum politikanız özellikle izin vermedikçe draft/prerelease olmadığını doğrula.
+1. GitHub Release [`v3.0.2`](https://github.com/ucsahinn/vaultpilot/releases/tag/v3.0.2) sayfasını aç.
+2. Release tag değerinin `v3.0.2` olduğunu ve kurum politikanız özellikle izin vermedikçe draft/prerelease olmadığını doğrula.
 3. O release içinden `vaultpilot-update.json` indir.
-4. Manifestin server version olarak `2.2.1` gösterdiğini doğrula.
-5. MSI dosya adının `VaultPilot-2.2.1-x64.msi` olduğunu doğrula.
+4. Manifestin server version olarak `3.0.2` gösterdiğini doğrula.
+5. MSI dosya adının `VaultPilot-3.0.2-x64.msi` olduğunu doğrula.
 6. Asset URL'lerinin onaylı public GitHub Release hostunu kullandığını doğrula.
 7. İndirilen dosya boyutlarını ve SHA-256 değerlerini yukarıdaki tabloyla ve ilgili bileşen manifestte yer alıyorsa manifest ile karşılaştır.
 8. MSI Authenticode signer metadata değerini manifest signer thumbprint ile karşılaştır.
@@ -69,16 +70,16 @@ Git tree içinde MSI, ZIP, EXE, PFX, P12, DB, SQLite, backup veya signing-key do
 Bu komutları indirilmiş release dosyalarını içeren geçici bir klasörden çalıştırın. Çıktıyı kurum içi release kanıtıyla saklayın; herkese açık paylaşmadan önce lokal path veya hostname değerlerini redakte edin.
 
 ```powershell
-gh release view v2.2.1 --repo ucsahinn/vaultpilot --json tagName,name,isDraft,isPrerelease,publishedAt,assets,url
+gh release view v3.0.2 --repo ucsahinn/vaultpilot --json tagName,name,isDraft,isPrerelease,publishedAt,assets,url
 
 Get-ChildItem -File |
-  Where-Object { $_.Name -like 'VaultPilot-2.2.1-x64.msi' -or $_.Name -like 'vaultpilot-*' } |
+  Where-Object { $_.Name -like 'VaultPilot-3.0.2-x64.msi' -or $_.Name -like 'vaultpilot-*' -or $_.Name -like 'VpUninstallTool-*' } |
   Select-Object Name,Length
 
-Get-FileHash .\VaultPilot-2.2.1-x64.msi -Algorithm SHA256
+Get-FileHash .\VaultPilot-3.0.2-x64.msi -Algorithm SHA256
 Get-FileHash .\vaultpilot-* -Algorithm SHA256
 
-Get-AuthenticodeSignature .\VaultPilot-2.2.1-x64.msi |
+Get-AuthenticodeSignature .\VaultPilot-3.0.2-x64.msi |
   Format-List Status,StatusMessage,SignerCertificate
 ```
 
